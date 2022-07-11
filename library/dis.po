@@ -1,0 +1,1899 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2023, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-29 16:50+0000\n"
+"PO-Revision-Date: 2021-06-28 01:04+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2023\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../library/dis.rst:2
+msgid ":mod:`dis` --- Disassembler for Python bytecode"
+msgstr ":mod:`dis` --- Дизасемблер для байт-коду Python"
+
+#: ../../library/dis.rst:7
+msgid "**Source code:** :source:`Lib/dis.py`"
+msgstr "**Вихідний код:** :source:`Lib/dis.py`"
+
+#: ../../library/dis.rst:17
+msgid ""
+"The :mod:`dis` module supports the analysis of CPython :term:`bytecode` by "
+"disassembling it. The CPython bytecode which this module takes as an input "
+"is defined in the file :file:`Include/opcode.h` and used by the compiler and"
+" the interpreter."
+msgstr ""
+"Модуль :mod:`dis` підтримує аналіз :term:`bytecode` CPython шляхом його "
+"розбирання. Байт-код CPython, який цей модуль приймає як вхідні дані, "
+"визначається у файлі :file:`Include/opcode.h` і використовується "
+"компілятором та інтерпретатором."
+
+#: ../../library/dis.rst:24
+msgid ""
+"Bytecode is an implementation detail of the CPython interpreter.  No "
+"guarantees are made that bytecode will not be added, removed, or changed "
+"between versions of Python.  Use of this module should not be considered to "
+"work across Python VMs or Python releases."
+msgstr ""
+"Байт-код — це деталь реалізації інтерпретатора CPython. Немає гарантій, що "
+"байт-код не буде додано, видалено або змінено між версіями Python. "
+"Використання цього модуля не слід вважати таким, що працює на віртуальних "
+"машинах Python або випусках Python."
+
+#: ../../library/dis.rst:29
+msgid ""
+"Use 2 bytes for each instruction. Previously the number of bytes varied by "
+"instruction."
+msgstr ""
+"Використовуйте 2 байти для кожної інструкції. Раніше кількість байтів "
+"змінювалася залежно від інструкції."
+
+#: ../../library/dis.rst:33
+msgid ""
+"The argument of jump, exception handling and loop instructions is now the "
+"instruction offset rather than the byte offset."
+msgstr ""
+
+#: ../../library/dis.rst:37
+msgid ""
+"Some instructions are accompanied by one or more inline cache entries, which"
+" take the form of :opcode:`CACHE` instructions. These instructions are "
+"hidden by default, but can be shown by passing ``show_caches=True`` to any "
+":mod:`dis` utility. Furthermore, the interpreter now adapts the bytecode to "
+"specialize it for different runtime conditions. The adaptive bytecode can be"
+" shown by passing ``adaptive=True``."
+msgstr ""
+
+#: ../../library/dis.rst:46
+msgid "Example: Given the function :func:`myfunc`::"
+msgstr "Приклад: Дано функцію :func:`myfunc`::"
+
+#: ../../library/dis.rst:51
+msgid ""
+"the following command can be used to display the disassembly of "
+":func:`myfunc`:"
+msgstr ""
+
+#: ../../library/dis.rst:64
+msgid "(The \"2\" is a line number)."
+msgstr "(\"2\" — це номер рядка)."
+
+#: ../../library/dis.rst:67
+msgid "Bytecode analysis"
+msgstr "Аналіз байт-коду"
+
+#: ../../library/dis.rst:71
+msgid ""
+"The bytecode analysis API allows pieces of Python code to be wrapped in a "
+":class:`Bytecode` object that provides easy access to details of the "
+"compiled code."
+msgstr ""
+"API аналізу байт-коду дозволяє обернути фрагменти коду Python в об’єкт "
+":class:`Bytecode`, який забезпечує легкий доступ до деталей скомпільованого "
+"коду."
+
+#: ../../library/dis.rst:78
+msgid ""
+"Analyse the bytecode corresponding to a function, generator, asynchronous "
+"generator, coroutine, method, string of source code, or a code object (as "
+"returned by :func:`compile`)."
+msgstr ""
+"Проаналізуйте байт-код, що відповідає функції, генератору, асинхронному "
+"генератору, співпрограмі, методу, рядку вихідного коду або об’єкту коду (як "
+"повертає :func:`compile`)."
+
+#: ../../library/dis.rst:82
+msgid ""
+"This is a convenience wrapper around many of the functions listed below, "
+"most notably :func:`get_instructions`, as iterating over a :class:`Bytecode`"
+" instance yields the bytecode operations as :class:`Instruction` instances."
+msgstr ""
+"Це зручна обгортка для багатьох функцій, перелічених нижче, особливо "
+":func:`get_instructions`, оскільки ітерація над екземпляром "
+":class:`Bytecode` дає операції з байт-кодом як екземпляри "
+":class:`Instruction`."
+
+#: ../../library/dis.rst:86 ../../library/dis.rst:274
+msgid ""
+"If *first_line* is not ``None``, it indicates the line number that should be"
+" reported for the first source line in the disassembled code.  Otherwise, "
+"the source line information (if any) is taken directly from the disassembled"
+" code object."
+msgstr ""
+"Якщо *first_line* не є ``None``, це вказує номер рядка, який має бути "
+"повідомлено для першого вихідного рядка в дизассембленому коді. В іншому "
+"випадку інформація про вихідний рядок (якщо така є) береться безпосередньо з"
+" розібраного об’єкта коду."
+
+#: ../../library/dis.rst:91
+msgid ""
+"If *current_offset* is not ``None``, it refers to an instruction offset in "
+"the disassembled code. Setting this means :meth:`.dis` will display a "
+"\"current instruction\" marker against the specified opcode."
+msgstr ""
+"Якщо *current_offset* не є ``None``, це стосується зсуву інструкції в "
+"дизассембленому коді. Якщо встановити це значення, :meth:`.dis` "
+"відображатиме маркер \"поточна інструкція\" проти вказаного коду операції."
+
+#: ../../library/dis.rst:95
+msgid ""
+"If *show_caches* is ``True``, :meth:`.dis` will display inline cache entries"
+" used by the interpreter to specialize the bytecode."
+msgstr ""
+
+#: ../../library/dis.rst:98
+msgid ""
+"If *adaptive* is ``True``, :meth:`.dis` will display specialized bytecode "
+"that may be different from the original bytecode."
+msgstr ""
+
+#: ../../library/dis.rst:103
+msgid ""
+"Construct a :class:`Bytecode` instance from the given traceback, setting "
+"*current_offset* to the instruction responsible for the exception."
+msgstr ""
+"Створіть екземпляр :class:`Bytecode` із заданого трасування, встановивши "
+"*current_offset* для інструкції, відповідальної за виняток."
+
+#: ../../library/dis.rst:108
+msgid "The compiled code object."
+msgstr "Об’єкт скомпільованого коду."
+
+#: ../../library/dis.rst:112
+msgid "The first source line of the code object (if available)"
+msgstr "Перший вихідний рядок об'єкта коду (якщо доступний)"
+
+#: ../../library/dis.rst:116
+msgid ""
+"Return a formatted view of the bytecode operations (the same as printed by "
+":func:`dis.dis`, but returned as a multi-line string)."
+msgstr ""
+"Повертає відформатований вигляд операцій байт-коду (те саме, що надруковано "
+":func:`dis.dis`, але повертається як багаторядковий рядок)."
+
+#: ../../library/dis.rst:121
+msgid ""
+"Return a formatted multi-line string with detailed information about the "
+"code object, like :func:`code_info`."
+msgstr ""
+"Повертає відформатований багаторядковий рядок із детальною інформацією про "
+"об’єкт коду, наприклад :func:`code_info`."
+
+#: ../../library/dis.rst:124 ../../library/dis.rst:164
+#: ../../library/dis.rst:216
+msgid "This can now handle coroutine and asynchronous generator objects."
+msgstr ""
+"Тепер це може обробляти об’єкти співпрограми та асинхронного генератора."
+
+#: ../../library/dis.rst:127 ../../library/dis.rst:219
+#: ../../library/dis.rst:235 ../../library/dis.rst:262
+#: ../../library/dis.rst:283
+msgid "Added the *show_caches* and *adaptive* parameters."
+msgstr ""
+
+#: ../../library/dis.rst:130
+msgid "Example:"
+msgstr "приклад:"
+
+#: ../../library/dis.rst:146
+msgid "Analysis functions"
+msgstr "Функції аналізу"
+
+#: ../../library/dis.rst:148
+msgid ""
+"The :mod:`dis` module also defines the following analysis functions that "
+"convert the input directly to the desired output. They can be useful if only"
+" a single operation is being performed, so the intermediate analysis object "
+"isn't useful:"
+msgstr ""
+"Модуль :mod:`dis` також визначає наступні функції аналізу, які перетворюють "
+"вхідні дані безпосередньо в бажані вивідні дані. Вони можуть бути корисними,"
+" якщо виконується лише одна операція, тому проміжний об’єкт аналізу не "
+"корисний:"
+
+#: ../../library/dis.rst:154
+msgid ""
+"Return a formatted multi-line string with detailed code object information "
+"for the supplied function, generator, asynchronous generator, coroutine, "
+"method, source code string or code object."
+msgstr ""
+"Повертає відформатований багаторядковий рядок із детальною інформацією про "
+"об’єкт коду для наданої функції, генератора, асинхронного генератора, "
+"співпрограми, методу, рядка вихідного коду чи об’єкта коду."
+
+#: ../../library/dis.rst:158
+msgid ""
+"Note that the exact contents of code info strings are highly implementation "
+"dependent and they may change arbitrarily across Python VMs or Python "
+"releases."
+msgstr ""
+"Зауважте, що точний вміст інформаційних рядків коду сильно залежить від "
+"реалізації та може довільно змінюватися на різних віртуальних машинах Python"
+" або випусках Python."
+
+#: ../../library/dis.rst:170
+msgid ""
+"Print detailed code object information for the supplied function, method, "
+"source code string or code object to *file* (or ``sys.stdout`` if *file* is "
+"not specified)."
+msgstr ""
+"Вивести детальну інформацію про об’єкт коду для наданої функції, методу, "
+"рядка вихідного коду або об’єкта коду у *файл* (або ``sys.stdout``, якщо "
+"*файл* не вказано)."
+
+#: ../../library/dis.rst:174
+msgid ""
+"This is a convenient shorthand for ``print(code_info(x), file=file)``, "
+"intended for interactive exploration at the interpreter prompt."
+msgstr ""
+"Це зручне скорочення для ``print(code_info(x), file=file)``, призначене для "
+"інтерактивного дослідження під час підказки інтерпретатора."
+
+#: ../../library/dis.rst:179 ../../library/dis.rst:210
+#: ../../library/dis.rst:232 ../../library/dis.rst:259
+msgid "Added *file* parameter."
+msgstr "Додано параметр *file*."
+
+#: ../../library/dis.rst:185
+msgid ""
+"Disassemble the *x* object.  *x* can denote either a module, a class, a "
+"method, a function, a generator, an asynchronous generator, a coroutine, a "
+"code object, a string of source code or a byte sequence of raw bytecode. For"
+" a module, it disassembles all functions. For a class, it disassembles all "
+"methods (including class and static methods). For a code object or sequence "
+"of raw bytecode, it prints one line per bytecode instruction. It also "
+"recursively disassembles nested code objects. These can include generator "
+"expressions, nested functions, the bodies of nested classes, and the code "
+"objects used for :ref:`annotation scopes <annotation-scopes>`. Strings are "
+"first compiled to code objects with the :func:`compile` built-in function "
+"before being disassembled.  If no object is provided, this function "
+"disassembles the last traceback."
+msgstr ""
+
+#: ../../library/dis.rst:198 ../../library/dis.rst:229
+#: ../../library/dis.rst:256
+msgid ""
+"The disassembly is written as text to the supplied *file* argument if "
+"provided and to ``sys.stdout`` otherwise."
+msgstr ""
+"Розбирання записується як текст до наданого аргументу *file*, якщо він "
+"надається, та до ``sys.stdout`` інакше."
+
+#: ../../library/dis.rst:201
+msgid ""
+"The maximal depth of recursion is limited by *depth* unless it is ``None``. "
+"``depth=0`` means no recursion."
+msgstr ""
+"Максимальна глибина рекурсії обмежена параметром *depth*, якщо не "
+"встановлено ``None``. ``depth=0`` означає відсутність рекурсії."
+
+#: ../../library/dis.rst:204
+msgid ""
+"If *show_caches* is ``True``, this function will display inline cache "
+"entries used by the interpreter to specialize the bytecode."
+msgstr ""
+
+#: ../../library/dis.rst:207
+msgid ""
+"If *adaptive* is ``True``, this function will display specialized bytecode "
+"that may be different from the original bytecode."
+msgstr ""
+
+#: ../../library/dis.rst:213
+msgid "Implemented recursive disassembling and added *depth* parameter."
+msgstr "Реалізовано рекурсивне розбирання та додано параметр *depth*."
+
+#: ../../library/dis.rst:225
+msgid ""
+"Disassemble the top-of-stack function of a traceback, using the last "
+"traceback if none was passed.  The instruction causing the exception is "
+"indicated."
+msgstr ""
+"Розберіть функцію top-of-stack зворотного трасування, використовуючи останню"
+" трасування, якщо жодного не було передано. Вказується інструкція, що "
+"спричиняє виняток."
+
+#: ../../library/dis.rst:242
+msgid ""
+"Disassemble a code object, indicating the last instruction if *lasti* was "
+"provided.  The output is divided in the following columns:"
+msgstr ""
+"Розберіть об’єкт коду, вказавши останню інструкцію, якщо було надано "
+"*lasti*. Результат поділено на такі стовпці:"
+
+#: ../../library/dis.rst:245
+msgid "the line number, for the first instruction of each line"
+msgstr "номер рядка для першої інструкції кожного рядка"
+
+#: ../../library/dis.rst:246
+msgid "the current instruction, indicated as ``-->``,"
+msgstr "поточна інструкція, позначена як ``-->``,"
+
+#: ../../library/dis.rst:247
+msgid "a labelled instruction, indicated with ``>>``,"
+msgstr "маркована інструкція, позначена ``>>``,"
+
+#: ../../library/dis.rst:248
+msgid "the address of the instruction,"
+msgstr "адреса інструкції,"
+
+#: ../../library/dis.rst:249
+msgid "the operation code name,"
+msgstr "кодова назва операції,"
+
+#: ../../library/dis.rst:250
+msgid "operation parameters, and"
+msgstr "параметри роботи, і"
+
+#: ../../library/dis.rst:251
+msgid "interpretation of the parameters in parentheses."
+msgstr "інтерпретація параметрів у дужках."
+
+#: ../../library/dis.rst:253
+msgid ""
+"The parameter interpretation recognizes local and global variable names, "
+"constant values, branch targets, and compare operators."
+msgstr ""
+"Інтерпретація параметрів розпізнає імена локальних і глобальних змінних, "
+"постійні значення, цілі розгалужень і оператори порівняння."
+
+#: ../../library/dis.rst:268
+msgid ""
+"Return an iterator over the instructions in the supplied function, method, "
+"source code string or code object."
+msgstr ""
+"Повертає ітератор над інструкціями в наданій функції, методі, рядку "
+"вихідного коду або об’єкті коду."
+
+#: ../../library/dis.rst:271
+msgid ""
+"The iterator generates a series of :class:`Instruction` named tuples giving "
+"the details of each operation in the supplied code."
+msgstr ""
+"Ітератор генерує ряд іменованих кортежів :class:`Instruction`, що надає "
+"деталі кожної операції в наданому коді."
+
+#: ../../library/dis.rst:279
+msgid ""
+"The *show_caches* and *adaptive* parameters work as they do in :func:`dis`."
+msgstr ""
+
+#: ../../library/dis.rst:289
+msgid ""
+"This generator function uses the ``co_lines`` method of the code object "
+"*code* to find the offsets which are starts of lines in the source code.  "
+"They are generated as ``(offset, lineno)`` pairs."
+msgstr ""
+
+#: ../../library/dis.rst:293
+msgid "Line numbers can be decreasing. Before, they were always increasing."
+msgstr "Номери рядків можуть зменшуватися. Раніше вони постійно зростали."
+
+#: ../../library/dis.rst:296
+msgid ""
+"The :pep:`626` ``co_lines`` method is used instead of the ``co_firstlineno``"
+" and ``co_lnotab`` attributes of the code object."
+msgstr ""
+
+#: ../../library/dis.rst:303
+msgid ""
+"Detect all offsets in the raw compiled bytecode string *code* which are jump"
+" targets, and return a list of these offsets."
+msgstr ""
+"Виявлення всіх зсувів у необробленому скомпільованому рядку *code* байт-"
+"коду, які є цілями переходу, і повернення списку цих зсувів."
+
+#: ../../library/dis.rst:309
+msgid "Compute the stack effect of *opcode* with argument *oparg*."
+msgstr "Обчисліть ефект стека *opcode* з аргументом *oparg*."
+
+#: ../../library/dis.rst:311
+msgid ""
+"If the code has a jump target and *jump* is ``True``, :func:`~stack_effect` "
+"will return the stack effect of jumping.  If *jump* is ``False``, it will "
+"return the stack effect of not jumping. And if *jump* is ``None`` (default),"
+" it will return the maximal stack effect of both cases."
+msgstr ""
+"Якщо код має ціль переходу і *jump* має значення ``True``, "
+":func:`~stack_effect` поверне ефект стека стрибка. Якщо *jump* має значення "
+"``False``, він поверне ефект стека без стрибка. І якщо *jump* має значення "
+"``None`` (за замовчуванням), він поверне максимальний ефект стека в обох "
+"випадках."
+
+#: ../../library/dis.rst:318
+msgid "Added *jump* parameter."
+msgstr "Додано параметр *jump*."
+
+#: ../../library/dis.rst:325
+msgid "Python Bytecode Instructions"
+msgstr "Інструкції щодо байт-коду Python"
+
+#: ../../library/dis.rst:327
+msgid ""
+"The :func:`get_instructions` function and :class:`Bytecode` class provide "
+"details of bytecode instructions as :class:`Instruction` instances:"
+msgstr ""
+"Функція :func:`get_instructions` і клас :class:`Bytecode` надають деталі "
+"інструкцій байт-коду як екземпляри :class:`Instruction`:"
+
+#: ../../library/dis.rst:332
+msgid "Details for a bytecode operation"
+msgstr "Подробиці для операції байт-коду"
+
+#: ../../library/dis.rst:336
+msgid ""
+"numeric code for operation, corresponding to the opcode values listed below "
+"and the bytecode values in the :ref:`opcode_collections`."
+msgstr ""
+"числовий код для операції, що відповідає значенням коду операції, наведеним "
+"нижче, і значенням байт-коду в :ref:`opcode_collections`."
+
+#: ../../library/dis.rst:342
+msgid "human readable name for operation"
+msgstr "зрозуміла для людини назва операції"
+
+#: ../../library/dis.rst:347
+msgid "numeric argument to operation (if any), otherwise ``None``"
+msgstr "числовий аргумент операції (якщо є), інакше ``None``"
+
+#: ../../library/dis.rst:352
+msgid "resolved arg value (if any), otherwise ``None``"
+msgstr ""
+
+#: ../../library/dis.rst:357
+msgid ""
+"human readable description of operation argument (if any), otherwise an "
+"empty string."
+msgstr ""
+
+#: ../../library/dis.rst:363
+msgid "start index of operation within bytecode sequence"
+msgstr "початковий індекс операції в послідовності байт-коду"
+
+#: ../../library/dis.rst:368
+msgid "line started by this opcode (if any), otherwise ``None``"
+msgstr "рядок починається цим кодом операції (якщо є), інакше ``None``"
+
+#: ../../library/dis.rst:373
+msgid "``True`` if other code jumps to here, otherwise ``False``"
+msgstr "``True``, якщо інший код переходить сюди, інакше ``False``"
+
+#: ../../library/dis.rst:378
+msgid ""
+":class:`dis.Positions` object holding the start and end locations that are "
+"covered by this instruction."
+msgstr ""
+
+#: ../../library/dis.rst:385
+msgid "Field ``positions`` is added."
+msgstr ""
+
+#: ../../library/dis.rst:390
+msgid ""
+"In case the information is not available, some fields might be ``None``."
+msgstr ""
+
+#: ../../library/dis.rst:400
+msgid ""
+"The Python compiler currently generates the following bytecode instructions."
+msgstr "Наразі компілятор Python генерує наступні інструкції байт-коду."
+
+#: ../../library/dis.rst:403
+msgid "**General instructions**"
+msgstr "**Загальні інструкції**"
+
+#: ../../library/dis.rst:405
+msgid ""
+"In the following, We will refer to the interpreter stack as ``STACK`` and "
+"describe operations on it as if it was a Python list. The top of the stack "
+"corresponds to ``STACK[-1]`` in this language."
+msgstr ""
+
+#: ../../library/dis.rst:411
+msgid ""
+"Do nothing code.  Used as a placeholder by the bytecode optimizer, and to "
+"generate line tracing events."
+msgstr ""
+
+#: ../../library/dis.rst:417
+msgid "Removes the top-of-stack item::"
+msgstr ""
+
+#: ../../library/dis.rst:424
+msgid ""
+"Removes the top two values from the stack. Equivalent to ``POP_TOP``; "
+"``POP_TOP``. Used to clean up at the end of loops, hence the name."
+msgstr ""
+
+#: ../../library/dis.rst:433
+msgid ""
+"Push the i-th item to the top of the stack without removing it from its "
+"original location::"
+msgstr ""
+
+#: ../../library/dis.rst:444
+msgid "Swap the top of the stack with the i-th element::"
+msgstr ""
+
+#: ../../library/dis.rst:453
+msgid ""
+"Rather than being an actual instruction, this opcode is used to mark extra "
+"space for the interpreter to cache useful data directly in the bytecode "
+"itself. It is automatically hidden by all ``dis`` utilities, but can be "
+"viewed with ``show_caches=True``."
+msgstr ""
+
+#: ../../library/dis.rst:458
+msgid ""
+"Logically, this space is part of the preceding instruction. Many opcodes "
+"expect to be followed by an exact number of caches, and will instruct the "
+"interpreter to skip over them at runtime."
+msgstr ""
+
+#: ../../library/dis.rst:462
+msgid ""
+"Populated caches can look like arbitrary instructions, so great care should "
+"be taken when reading or modifying raw, adaptive bytecode containing "
+"quickened data."
+msgstr ""
+
+#: ../../library/dis.rst:469
+msgid "**Unary operations**"
+msgstr "**Унарні операції**"
+
+#: ../../library/dis.rst:471
+msgid ""
+"Unary operations take the top of the stack, apply the operation, and push "
+"the result back on the stack."
+msgstr ""
+"Унарні операції займають вершину стека, застосовують операцію та повертають "
+"результат назад у стек."
+
+#: ../../library/dis.rst:477
+msgid "Implements ``STACK[-1] = -STACK[-1]``."
+msgstr ""
+
+#: ../../library/dis.rst:482
+msgid "Implements ``STACK[-1] = not STACK[-1]``."
+msgstr ""
+
+#: ../../library/dis.rst:487
+msgid "Implements ``STACK[-1] = ~STACK[-1]``."
+msgstr ""
+
+#: ../../library/dis.rst:492
+msgid "Implements ``STACK[-1] = iter(STACK[-1])``."
+msgstr ""
+
+#: ../../library/dis.rst:497
+msgid ""
+"If ``STACK[-1]`` is a :term:`generator iterator` or :term:`coroutine` object"
+" it is left as is.  Otherwise, implements ``STACK[-1] = iter(STACK[-1])``."
+msgstr ""
+
+#: ../../library/dis.rst:503
+msgid "**Binary and in-place operations**"
+msgstr ""
+
+#: ../../library/dis.rst:505
+msgid ""
+"Binary operations remove the top two items from the stack (``STACK[-1]`` and"
+" ``STACK[-2]``). They perform the operation, then put the result back on the"
+" stack."
+msgstr ""
+
+#: ../../library/dis.rst:508
+msgid ""
+"In-place operations are like binary operations, but the operation is done "
+"in-place when ``STACK[-2]`` supports it, and the resulting ``STACK[-1]`` may"
+" be (but does not have to be) the original ``STACK[-2]``."
+msgstr ""
+
+#: ../../library/dis.rst:515
+msgid ""
+"Implements the binary and in-place operators (depending on the value of "
+"*op*)::"
+msgstr ""
+
+#: ../../library/dis.rst:527 ../../library/dis.rst:536
+#: ../../library/dis.rst:546 ../../library/dis.rst:554
+#: ../../library/dis.rst:566 ../../library/dis.rst:654
+#: ../../library/dis.rst:664 ../../library/dis.rst:674
+#: ../../library/dis.rst:893 ../../library/dis.rst:903
+#: ../../library/dis.rst:1002 ../../library/dis.rst:1014
+#: ../../library/dis.rst:1026
+msgid "Implements::"
+msgstr ""
+
+#: ../../library/dis.rst:577
+msgid "**Coroutine opcodes**"
+msgstr "**Коди операцій співпрограми**"
+
+#: ../../library/dis.rst:581
+msgid ""
+"Implements ``STACK[-1] = get_awaitable(STACK[-1])``, where "
+"``get_awaitable(o)`` returns ``o`` if ``o`` is a coroutine object or a "
+"generator object with the :data:`~inspect.CO_ITERABLE_COROUTINE` flag, or "
+"resolves ``o.__await__``."
+msgstr ""
+
+#: ../../library/dis.rst:586
+msgid ""
+"If the ``where`` operand is nonzero, it indicates where the instruction "
+"occurs:"
+msgstr ""
+
+#: ../../library/dis.rst:589
+msgid "``1``: After a call to ``__aenter__``"
+msgstr ""
+
+#: ../../library/dis.rst:590
+msgid "``2``: After a call to ``__aexit__``"
+msgstr ""
+
+#: ../../library/dis.rst:594
+msgid "Previously, this instruction did not have an oparg."
+msgstr ""
+
+#: ../../library/dis.rst:600
+msgid "Implements ``STACK[-1] = STACK[-1].__aiter__()``."
+msgstr ""
+
+#: ../../library/dis.rst:603
+msgid "Returning awaitable objects from ``__aiter__`` is no longer supported."
+msgstr ""
+"Повернення очікуваних об’єктів із ``__aiter__`` більше не підтримується."
+
+#: ../../library/dis.rst:610
+msgid ""
+"Implement ``STACK.append(get_awaitable(STACK[-1].__anext__()))`` to the "
+"stack. See ``GET_AWAITABLE`` for details about ``get_awaitable``."
+msgstr ""
+
+#: ../../library/dis.rst:618
+msgid ""
+"Terminates an :keyword:`async for` loop.  Handles an exception raised when "
+"awaiting a next item. The stack contains the async iterable in ``STACK[-2]``"
+" and the raised exception in ``STACK[-1]``. Both are popped. If the "
+"exception is not :exc:`StopAsyncIteration`, it is re-raised."
+msgstr ""
+
+#: ../../library/dis.rst:625 ../../library/dis.rst:730
+#: ../../library/dis.rst:741
+msgid ""
+"Exception representation on the stack now consist of one, not three, items."
+msgstr ""
+
+#: ../../library/dis.rst:631
+msgid ""
+"Handles an exception raised during a :meth:`~generator.throw` or "
+":meth:`~generator.close` call through the current frame.  If ``STACK[-1]`` "
+"is an instance of :exc:`StopIteration`, pop three values from the stack and "
+"push its ``value`` member.  Otherwise, re-raise ``STACK[-1]``."
+msgstr ""
+
+#: ../../library/dis.rst:641
+msgid ""
+"Resolves ``__aenter__`` and ``__aexit__`` from ``STACK[-1]``. Pushes "
+"``__aexit__`` and result of ``__aenter__()`` to the stack::"
+msgstr ""
+
+#: ../../library/dis.rst:650
+msgid "**Miscellaneous opcodes**"
+msgstr "**Різні коди операцій**"
+
+#: ../../library/dis.rst:659
+msgid "Used to implement set comprehensions."
+msgstr ""
+
+#: ../../library/dis.rst:669
+msgid "Used to implement list comprehensions."
+msgstr ""
+
+#: ../../library/dis.rst:680
+msgid "Used to implement dict comprehensions."
+msgstr ""
+
+#: ../../library/dis.rst:683
+msgid ""
+"Map value is ``STACK[-1]`` and map key is ``STACK[-2]``. Before, those were "
+"reversed."
+msgstr ""
+
+#: ../../library/dis.rst:687
+msgid ""
+"For all of the :opcode:`SET_ADD`, :opcode:`LIST_APPEND` and "
+":opcode:`MAP_ADD` instructions, while the added value or key/value pair is "
+"popped off, the container object remains on the stack so that it is "
+"available for further iterations of the loop."
+msgstr ""
+"Для всіх інструкцій :opcode:`SET_ADD`, :opcode:`LIST_APPEND` і "
+":opcode:`MAP_ADD`, поки додане значення або пара ключ/значення видаляється, "
+"об’єкт-контейнер залишається в стеку, тому він доступний для подальших "
+"ітерацій циклу."
+
+#: ../../library/dis.rst:695
+msgid "Returns with ``STACK[-1]`` to the caller of the function."
+msgstr ""
+
+#: ../../library/dis.rst:700
+msgid "Returns with ``co_consts[consti]`` to the caller of the function."
+msgstr ""
+
+#: ../../library/dis.rst:707
+msgid "Yields ``STACK.pop()`` from a :term:`generator`."
+msgstr ""
+
+#: ../../library/dis.rst:709
+msgid "oparg set to be the stack depth."
+msgstr ""
+
+#: ../../library/dis.rst:712
+msgid ""
+"oparg set to be the exception block depth, for efficient closing of "
+"generators."
+msgstr ""
+
+#: ../../library/dis.rst:718
+msgid ""
+"Checks whether ``__annotations__`` is defined in ``locals()``, if not it is "
+"set up to an empty ``dict``. This opcode is only emitted if a class or "
+"module body contains :term:`variable annotations <variable annotation>` "
+"statically."
+msgstr ""
+"Перевіряє, чи визначено ``__annotations__`` в ``locals()``, якщо ні, воно "
+"встановлюється на порожній ``dict``. Цей код операції видається, лише якщо "
+"тіло класу або модуля містить :term:`анотації змінних <variable annotation>`"
+" статично."
+
+#: ../../library/dis.rst:728
+msgid ""
+"Pops a value from the stack, which is used to restore the exception state."
+msgstr ""
+
+#: ../../library/dis.rst:735
+msgid ""
+"Re-raises the exception currently on top of the stack. If oparg is non-zero,"
+" pops an additional value from the stack which is used to set ``f_lasti`` of"
+" the current frame."
+msgstr ""
+
+#: ../../library/dis.rst:746
+msgid ""
+"Pops a value from the stack. Pushes the current exception to the top of the "
+"stack. Pushes the value originally popped back to the stack. Used in "
+"exception handlers."
+msgstr ""
+
+#: ../../library/dis.rst:754
+msgid ""
+"Performs exception matching for ``except``. Tests whether the ``STACK[-2]`` "
+"is an exception matching ``STACK[-1]``. Pops ``STACK[-1]`` and pushes the "
+"boolean result of the test."
+msgstr ""
+
+#: ../../library/dis.rst:762
+msgid ""
+"Performs exception matching for ``except*``. Applies ``split(STACK[-1])`` on"
+" the exception group representing ``STACK[-2]``."
+msgstr ""
+
+#: ../../library/dis.rst:765
+msgid ""
+"In case of a match, pops two items from the stack and pushes the non-"
+"matching subgroup (``None`` in case of full match) followed by the matching "
+"subgroup. When there is no match, pops one item (the match type) and pushes "
+"``None``."
+msgstr ""
+
+#: ../../library/dis.rst:774
+msgid ""
+"Calls the function in position 4 on the stack with arguments (type, val, tb)"
+" representing the exception at the top of the stack. Used to implement the "
+"call ``context_manager.__exit__(*exc_info())`` when an exception has "
+"occurred in a :keyword:`with` statement."
+msgstr ""
+
+#: ../../library/dis.rst:781
+msgid ""
+"The ``__exit__`` function is in position 4 of the stack rather than 7. "
+"Exception representation on the stack now consist of one, not three, items."
+msgstr ""
+
+#: ../../library/dis.rst:788
+msgid ""
+"Pushes :exc:`AssertionError` onto the stack.  Used by the :keyword:`assert` "
+"statement."
+msgstr ""
+"Поміщає :exc:`AssertionError` у стек. Використовується оператором "
+":keyword:`assert`."
+
+#: ../../library/dis.rst:796
+msgid ""
+"Pushes :func:`builtins.__build_class__` onto the stack.  It is later called "
+"to construct a class."
+msgstr ""
+
+#: ../../library/dis.rst:802
+msgid ""
+"This opcode performs several operations before a with block starts.  First, "
+"it loads :meth:`~object.__exit__` from the context manager and pushes it "
+"onto the stack for later use by :opcode:`WITH_EXCEPT_START`.  Then, "
+":meth:`~object.__enter__` is called. Finally, the result of calling the "
+"``__enter__()`` method is pushed onto the stack."
+msgstr ""
+
+#: ../../library/dis.rst:813
+msgid "Perform ``STACK.append(len(STACK[-1]))``."
+msgstr ""
+
+#: ../../library/dis.rst:820
+msgid ""
+"If ``STACK[-1]`` is an instance of :class:`collections.abc.Mapping` (or, "
+"more technically: if it has the :const:`Py_TPFLAGS_MAPPING` flag set in its "
+":c:member:`~PyTypeObject.tp_flags`), push ``True`` onto the stack.  "
+"Otherwise, push ``False``."
+msgstr ""
+
+#: ../../library/dis.rst:830
+msgid ""
+"If ``STACK[-1]`` is an instance of :class:`collections.abc.Sequence` and is "
+"*not* an instance of :class:`str`/:class:`bytes`/:class:`bytearray` (or, "
+"more technically: if it has the :const:`Py_TPFLAGS_SEQUENCE` flag set in its"
+" :c:member:`~PyTypeObject.tp_flags`), push ``True`` onto the stack.  "
+"Otherwise, push ``False``."
+msgstr ""
+
+#: ../../library/dis.rst:840
+msgid ""
+"``STACK[-1]`` is a tuple of mapping keys, and ``STACK[-2]`` is the match "
+"subject. If ``STACK[-2]`` contains all of the keys in ``STACK[-1]``, push a "
+":class:`tuple` containing the corresponding values. Otherwise, push "
+"``None``."
+msgstr ""
+
+#: ../../library/dis.rst:846 ../../library/dis.rst:1461
+msgid ""
+"Previously, this instruction also pushed a boolean value indicating success "
+"(``True``) or failure (``False``)."
+msgstr ""
+
+#: ../../library/dis.rst:853
+msgid ""
+"Implements ``name = STACK.pop()``. *namei* is the index of *name* in the "
+"attribute :attr:`co_names` of the code object. The compiler tries to use "
+":opcode:`STORE_FAST` or :opcode:`STORE_GLOBAL` if possible."
+msgstr ""
+
+#: ../../library/dis.rst:860
+msgid ""
+"Implements ``del name``, where *namei* is the index into :attr:`co_names` "
+"attribute of the code object."
+msgstr ""
+"Реалізує ``del name``, де *namei* є індексом атрибута :attr:`co_names` "
+"об’єкта коду."
+
+#: ../../library/dis.rst:866
+msgid ""
+"Unpacks ``STACK[-1]`` into *count* individual values, which are put onto the"
+" stack right-to-left::"
+msgstr ""
+
+#: ../../library/dis.rst:874
+msgid ""
+"Implements assignment with a starred target: Unpacks an iterable in "
+"``STACK[-1]`` into individual values, where the total number of values can "
+"be smaller than the number of items in the iterable: one of the new values "
+"will be a list of all leftover items."
+msgstr ""
+
+#: ../../library/dis.rst:879
+msgid ""
+"The number of values before and after the list value is limited to 255."
+msgstr ""
+
+#: ../../library/dis.rst:881
+msgid ""
+"The number of values before the list value is encoded in the argument of the"
+" opcode. The number of values after the list if any is encoded using an "
+"``EXTENDED_ARG``. As a consequence, the argument can be seen as a two bytes "
+"values where the low byte of *counts* is the number of values before the "
+"list value, the high byte of *counts* the number of values after it."
+msgstr ""
+
+#: ../../library/dis.rst:887
+msgid ""
+"The extracted values are put onto the stack right-to-left, i.e. ``a, *b, c ="
+" d`` will be stored after execution as ``STACK.extend((a, b, c))``."
+msgstr ""
+
+#: ../../library/dis.rst:899
+msgid "where *namei* is the index of name in :attr:`co_names`."
+msgstr ""
+
+#: ../../library/dis.rst:908
+msgid "where *namei* is the index of name into :attr:`co_names`."
+msgstr ""
+
+#: ../../library/dis.rst:913
+msgid "Works as :opcode:`STORE_NAME`, but stores the name as a global."
+msgstr "Працює як :opcode:`STORE_NAME`, але зберігає назву як глобальну."
+
+#: ../../library/dis.rst:918
+msgid "Works as :opcode:`DELETE_NAME`, but deletes a global name."
+msgstr "Працює як :opcode:`DELETE_NAME`, але видаляє глобальне ім’я."
+
+#: ../../library/dis.rst:923
+msgid "Pushes ``co_consts[consti]`` onto the stack."
+msgstr "Поміщає ``co_consts[consti]`` в стек."
+
+#: ../../library/dis.rst:928
+msgid ""
+"Pushes the value associated with ``co_names[namei]`` onto the stack. The "
+"name is looked up within the locals, then the globals, then the builtins."
+msgstr ""
+
+#: ../../library/dis.rst:934
+msgid ""
+"Pushes a reference to the locals dictionary onto the stack.  This is used to"
+" prepare namespace dictionaries for :opcode:`LOAD_FROM_DICT_OR_DEREF` and "
+":opcode:`LOAD_FROM_DICT_OR_GLOBALS`."
+msgstr ""
+
+#: ../../library/dis.rst:943
+msgid ""
+"Pops a mapping off the stack and looks up the value for ``co_names[namei]``."
+" If the name is not found there, looks it up in the globals and then the "
+"builtins, similar to :opcode:`LOAD_GLOBAL`. This is used for loading global "
+"variables in :ref:`annotation scopes <annotation-scopes>` within class "
+"bodies."
+msgstr ""
+
+#: ../../library/dis.rst:954
+msgid ""
+"Creates a tuple consuming *count* items from the stack, and pushes the "
+"resulting tuple onto the stack.::"
+msgstr ""
+
+#: ../../library/dis.rst:964
+msgid "Works as :opcode:`BUILD_TUPLE`, but creates a list."
+msgstr "Працює як :opcode:`BUILD_TUPLE`, але створює список."
+
+#: ../../library/dis.rst:969
+msgid "Works as :opcode:`BUILD_TUPLE`, but creates a set."
+msgstr "Працює як :opcode:`BUILD_TUPLE`, але створює набір."
+
+#: ../../library/dis.rst:974
+msgid ""
+"Pushes a new dictionary object onto the stack.  Pops ``2 * count`` items so "
+"that the dictionary holds *count* entries: ``{..., STACK[-4]: STACK[-3], "
+"STACK[-2]: STACK[-1]}``."
+msgstr ""
+
+#: ../../library/dis.rst:978
+msgid ""
+"The dictionary is created from stack items instead of creating an empty "
+"dictionary pre-sized to hold *count* items."
+msgstr ""
+"Словник створюється з елементів стека замість створення порожнього словника "
+"попереднього розміру для *кількості* елементів."
+
+#: ../../library/dis.rst:985
+msgid ""
+"The version of :opcode:`BUILD_MAP` specialized for constant keys. Pops the "
+"top element on the stack which contains a tuple of keys, then starting from "
+"``STACK[-2]``, pops *count* values to form values in the built dictionary."
+msgstr ""
+
+#: ../../library/dis.rst:994
+msgid ""
+"Concatenates *count* strings from the stack and pushes the resulting string "
+"onto the stack."
+msgstr "З’єднує *count* рядки зі стеку та надихає отриманий рядок у стек."
+
+#: ../../library/dis.rst:1007
+msgid "Used to build lists."
+msgstr ""
+
+#: ../../library/dis.rst:1019
+msgid "Used to build sets."
+msgstr ""
+
+#: ../../library/dis.rst:1031
+msgid "Used to build dicts."
+msgstr ""
+
+#: ../../library/dis.rst:1038
+msgid "Like :opcode:`DICT_UPDATE` but raises an exception for duplicate keys."
+msgstr ""
+"Подібно до :opcode:`DICT_UPDATE`, але створює виняток для дублікатів ключів."
+
+#: ../../library/dis.rst:1045
+msgid ""
+"If the low bit of ``namei`` is not set, this replaces ``STACK[-1]`` with "
+"``getattr(STACK[-1], co_names[namei>>1])``."
+msgstr ""
+
+#: ../../library/dis.rst:1048
+msgid ""
+"If the low bit of ``namei`` is set, this will attempt to load a method named"
+" ``co_names[namei>>1]`` from the ``STACK[-1]`` object. ``STACK[-1]`` is "
+"popped. This bytecode distinguishes two cases: if ``STACK[-1]`` has a method"
+" with the correct name, the bytecode pushes the unbound method and "
+"``STACK[-1]``. ``STACK[-1]`` will be used as the first argument (``self``) "
+"by :opcode:`CALL` when calling the unbound method. Otherwise, ``NULL`` and "
+"the object returned by the attribute lookup are pushed."
+msgstr ""
+
+#: ../../library/dis.rst:1056
+msgid ""
+"If the low bit of ``namei`` is set, then a ``NULL`` or ``self`` is pushed to"
+" the stack before the attribute or unbound method respectively."
+msgstr ""
+
+#: ../../library/dis.rst:1063
+msgid ""
+"This opcode implements :func:`super` (e.g. ``super().method()`` and "
+"``super().attr``). It works the same as :opcode:`LOAD_ATTR`, except that "
+"``namei`` is shifted left by 2 bits instead of 1, and instead of expecting a"
+" single receiver on the stack, it expects three objects (from top of stack "
+"down): ``self`` (the first argument to the current method), ``cls`` (the "
+"class within which the current method was defined), and the global "
+"``super``."
+msgstr ""
+
+#: ../../library/dis.rst:1070
+msgid ""
+"The low bit of ``namei`` signals to attempt a method load, as with "
+":opcode:`LOAD_ATTR`."
+msgstr ""
+
+#: ../../library/dis.rst:1073
+msgid ""
+"The second-low bit of ``namei``, if set, means that this was a two-argument "
+"call to :func:`super` (unset means zero-argument)."
+msgstr ""
+
+#: ../../library/dis.rst:1081
+msgid ""
+"Performs a Boolean operation.  The operation name can be found in "
+"``cmp_op[opname]``."
+msgstr ""
+"Виконує логічні операції. Ім'я операції можна знайти в ``cmp_op[opname]``."
+
+#: ../../library/dis.rst:1087
+msgid "Performs ``is`` comparison, or ``is not`` if ``invert`` is 1."
+msgstr "Виконує порівняння ``is`` або ``is not``, якщо ``invert`` дорівнює 1."
+
+#: ../../library/dis.rst:1094
+msgid "Performs ``in`` comparison, or ``not in`` if ``invert`` is 1."
+msgstr "Виконує порівняння ``in`` або ``not in``, якщо ``invert`` дорівнює 1."
+
+#: ../../library/dis.rst:1101
+msgid ""
+"Imports the module ``co_names[namei]``.  ``STACK[-1]`` and ``STACK[-2]`` are"
+" popped and provide the *fromlist* and *level* arguments of "
+":func:`__import__`. The module object is pushed onto the stack.  The current"
+" namespace is not affected: for a proper import statement, a subsequent "
+":opcode:`STORE_FAST` instruction modifies the namespace."
+msgstr ""
+
+#: ../../library/dis.rst:1109
+msgid ""
+"Loads the attribute ``co_names[namei]`` from the module found in "
+"``STACK[-1]``. The resulting object is pushed onto the stack, to be "
+"subsequently stored by a :opcode:`STORE_FAST` instruction."
+msgstr ""
+
+#: ../../library/dis.rst:1116
+msgid "Increments bytecode counter by *delta*."
+msgstr "Збільшує лічильник байт-коду на *delta*."
+
+#: ../../library/dis.rst:1121
+msgid "Decrements bytecode counter by *delta*. Checks for interrupts."
+msgstr ""
+
+#: ../../library/dis.rst:1128
+msgid "Decrements bytecode counter by *delta*. Does not check for interrupts."
+msgstr ""
+
+#: ../../library/dis.rst:1135
+msgid ""
+"If ``STACK[-1]`` is true, increments the bytecode counter by *delta*. "
+"``STACK[-1]`` is popped."
+msgstr ""
+
+#: ../../library/dis.rst:1138 ../../library/dis.rst:1151
+msgid ""
+"The oparg is now a relative delta rather than an absolute target. This "
+"opcode is a pseudo-instruction, replaced in final bytecode by the directed "
+"versions (forward/backward)."
+msgstr ""
+
+#: ../../library/dis.rst:1143 ../../library/dis.rst:1156
+#: ../../library/dis.rst:1169 ../../library/dis.rst:1183
+msgid "This is no longer a pseudo-instruction."
+msgstr ""
+
+#: ../../library/dis.rst:1148
+msgid ""
+"If ``STACK[-1]`` is false, increments the bytecode counter by *delta*. "
+"``STACK[-1]`` is popped."
+msgstr ""
+
+#: ../../library/dis.rst:1161
+msgid ""
+"If ``STACK[-1]`` is not ``None``, increments the bytecode counter by "
+"*delta*. ``STACK[-1]`` is popped."
+msgstr ""
+
+#: ../../library/dis.rst:1164 ../../library/dis.rst:1178
+msgid ""
+"This opcode is a pseudo-instruction, replaced in final bytecode by the "
+"directed versions (forward/backward)."
+msgstr ""
+
+#: ../../library/dis.rst:1175
+msgid ""
+"If ``STACK[-1]`` is ``None``, increments the bytecode counter by *delta*. "
+"``STACK[-1]`` is popped."
+msgstr ""
+
+#: ../../library/dis.rst:1188
+msgid ""
+"``STACK[-1]`` is an :term:`iterator`.  Call its :meth:`~iterator.__next__` "
+"method. If this yields a new value, push it on the stack (leaving the "
+"iterator below it).  If the iterator indicates it is exhausted then the byte"
+" code counter is incremented by *delta*."
+msgstr ""
+
+#: ../../library/dis.rst:1193
+msgid "Up until 3.11 the iterator was popped when it was exhausted."
+msgstr ""
+
+#: ../../library/dis.rst:1198
+msgid "Loads the global named ``co_names[namei>>1]`` onto the stack."
+msgstr ""
+
+#: ../../library/dis.rst:1200
+msgid ""
+"If the low bit of ``namei`` is set, then a ``NULL`` is pushed to the stack "
+"before the global variable."
+msgstr ""
+
+#: ../../library/dis.rst:1206
+msgid ""
+"Pushes a reference to the local ``co_varnames[var_num]`` onto the stack."
+msgstr "Надсилає посилання на локальні ``co_var_names[var_num]`` у стек."
+
+#: ../../library/dis.rst:1208
+msgid ""
+"This opcode is now only used in situations where the local variable is "
+"guaranteed to be initialized. It cannot raise :exc:`UnboundLocalError`."
+msgstr ""
+
+#: ../../library/dis.rst:1214
+msgid ""
+"Pushes a reference to the local ``co_varnames[var_num]`` onto the stack, "
+"raising an :exc:`UnboundLocalError` if the local variable has not been "
+"initialized."
+msgstr ""
+
+#: ../../library/dis.rst:1222
+msgid ""
+"Pushes a reference to the local ``co_varnames[var_num]`` onto the stack (or "
+"pushes ``NULL`` onto the stack if the local variable has not been "
+"initialized) and sets ``co_varnames[var_num]`` to ``NULL``."
+msgstr ""
+
+#: ../../library/dis.rst:1230
+msgid "Stores ``STACK.pop()`` into the local ``co_varnames[var_num]``."
+msgstr ""
+
+#: ../../library/dis.rst:1235
+msgid "Deletes local ``co_varnames[var_num]``."
+msgstr "Видаляє локальні ``co_var_names[var_num]``."
+
+#: ../../library/dis.rst:1240
+msgid ""
+"Creates a new cell in slot ``i``.  If that slot is nonempty then that value "
+"is stored into the new cell."
+msgstr ""
+
+#: ../../library/dis.rst:1248
+msgid ""
+"Pushes a reference to the cell contained in slot ``i`` of the \"fast "
+"locals\" storage.  The name of the variable is ``co_fastlocalnames[i]``."
+msgstr ""
+
+#: ../../library/dis.rst:1251
+msgid ""
+"Note that ``LOAD_CLOSURE`` is effectively an alias for ``LOAD_FAST``. It "
+"exists to keep bytecode a little more readable."
+msgstr ""
+
+#: ../../library/dis.rst:1254 ../../library/dis.rst:1263
+#: ../../library/dis.rst:1285 ../../library/dis.rst:1296
+msgid "``i`` is no longer offset by the length of ``co_varnames``."
+msgstr ""
+
+#: ../../library/dis.rst:1260
+msgid ""
+"Loads the cell contained in slot ``i`` of the \"fast locals\" storage. "
+"Pushes a reference to the object the cell contains on the stack."
+msgstr ""
+
+#: ../../library/dis.rst:1269
+msgid ""
+"Pops a mapping off the stack and looks up the name associated with slot "
+"``i`` of the \"fast locals\" storage in this mapping. If the name is not "
+"found there, loads it from the cell contained in slot ``i``, similar to "
+":opcode:`LOAD_DEREF`. This is used for loading free variables in class "
+"bodies (which previously used :opcode:`!LOAD_CLASSDEREF`) and in "
+":ref:`annotation scopes <annotation-scopes>` within class bodies."
+msgstr ""
+
+#: ../../library/dis.rst:1282
+msgid ""
+"Stores ``STACK.pop()`` into the cell contained in slot ``i`` of the \"fast "
+"locals\" storage."
+msgstr ""
+
+#: ../../library/dis.rst:1291
+msgid ""
+"Empties the cell contained in slot ``i`` of the \"fast locals\" storage. "
+"Used by the :keyword:`del` statement."
+msgstr ""
+
+#: ../../library/dis.rst:1302
+msgid ""
+"Copies the ``n`` free variables from the closure into the frame. Removes the"
+" need for special code on the caller's side when calling closures."
+msgstr ""
+
+#: ../../library/dis.rst:1311
+msgid ""
+"Raises an exception using one of the 3 forms of the ``raise`` statement, "
+"depending on the value of *argc*:"
+msgstr ""
+"Створює виняток, використовуючи одну з 3 форм оператора ``raise``, залежно "
+"від значення *argc*:"
+
+#: ../../library/dis.rst:1314
+msgid "0: ``raise`` (re-raise previous exception)"
+msgstr "0: ``raise`` (повторно підняти попередній виняток)"
+
+#: ../../library/dis.rst:1315
+msgid ""
+"1: ``raise STACK[-1]`` (raise exception instance or type at ``STACK[-1]``)"
+msgstr ""
+
+#: ../../library/dis.rst:1316
+msgid ""
+"2: ``raise STACK[-2] from STACK[-1]`` (raise exception instance or type at "
+"``STACK[-2]`` with ``__cause__`` set to ``STACK[-1]``)"
+msgstr ""
+
+#: ../../library/dis.rst:1322
+msgid ""
+"Calls a callable object with the number of arguments specified by ``argc``, "
+"including the named arguments specified by the preceding :opcode:`KW_NAMES`,"
+" if any. On the stack are (in ascending order), either:"
+msgstr ""
+
+#: ../../library/dis.rst:1327
+msgid "NULL"
+msgstr "НУЛЬ"
+
+#: ../../library/dis.rst:1328 ../../library/dis.rst:1334
+msgid "The callable"
+msgstr ""
+
+#: ../../library/dis.rst:1329
+msgid "The positional arguments"
+msgstr ""
+
+#: ../../library/dis.rst:1330 ../../library/dis.rst:1337
+msgid "The named arguments"
+msgstr ""
+
+#: ../../library/dis.rst:1332
+msgid "or:"
+msgstr ""
+
+#: ../../library/dis.rst:1335
+msgid "``self``"
+msgstr ""
+
+#: ../../library/dis.rst:1336
+msgid "The remaining positional arguments"
+msgstr ""
+
+#: ../../library/dis.rst:1339
+msgid ""
+"``argc`` is the total of the positional and named arguments, excluding "
+"``self`` when a ``NULL`` is not present."
+msgstr ""
+
+#: ../../library/dis.rst:1342
+msgid ""
+"``CALL`` pops all arguments and the callable object off the stack, calls the"
+" callable object with those arguments, and pushes the return value returned "
+"by the callable object."
+msgstr ""
+
+#: ../../library/dis.rst:1351
+msgid ""
+"Calls a callable object with variable set of positional and keyword "
+"arguments.  If the lowest bit of *flags* is set, the top of the stack "
+"contains a mapping object containing additional keyword arguments. Before "
+"the callable is called, the mapping object and iterable object are each "
+"\"unpacked\" and their contents passed in as keyword and positional "
+"arguments respectively. ``CALL_FUNCTION_EX`` pops all arguments and the "
+"callable object off the stack, calls the callable object with those "
+"arguments, and pushes the return value returned by the callable object."
+msgstr ""
+"Викликає викликаний об’єкт зі змінним набором позиційних і ключових "
+"аргументів. Якщо встановлено найнижчий біт *flags*, верхня частина стека "
+"містить об’єкт відображення, що містить додаткові аргументи ключового слова."
+" Перед викликом викликаного об’єкта відображення та ітерованого об’єкта "
+"кожен \"розпаковується\", а їхній вміст передається як ключове слово та "
+"позиційний аргумент відповідно. ``CALL_FUNCTION_EX`` видаляє зі стеку всі "
+"аргументи та об’єкт, який викликається, викликає об’єкт, який викликається, "
+"з цими аргументами та надсилає значення, яке повертає об’єкт, який "
+"викликається."
+
+#: ../../library/dis.rst:1366
+msgid ""
+"Pushes a ``NULL`` to the stack. Used in the call sequence to match the "
+"``NULL`` pushed by :opcode:`LOAD_METHOD` for non-method calls."
+msgstr ""
+
+#: ../../library/dis.rst:1375
+msgid ""
+"Prefixes :opcode:`CALL`. Stores a reference to ``co_consts[consti]`` into an"
+" internal variable for use by :opcode:`CALL`. ``co_consts[consti]`` must be "
+"a tuple of strings."
+msgstr ""
+
+#: ../../library/dis.rst:1384
+msgid ""
+"Pushes a new function object on the stack.  From bottom to top, the consumed"
+" stack must consist of values if the argument carries a specified flag value"
+msgstr ""
+"Поміщає новий функціональний об’єкт у стек. Знизу вгору споживаний стек "
+"повинен складатися зі значень, якщо аргумент містить вказане значення "
+"прапора"
+
+#: ../../library/dis.rst:1387
+msgid ""
+"``0x01`` a tuple of default values for positional-only and positional-or-"
+"keyword parameters in positional order"
+msgstr ""
+"``0x01`` кортеж значень за замовчуванням для позиційних параметрів і "
+"параметрів позиційного або ключового слова в позиційному порядку"
+
+#: ../../library/dis.rst:1389
+msgid "``0x02`` a dictionary of keyword-only parameters' default values"
+msgstr ""
+"``0x02`` словник значень за замовчуванням параметрів лише ключових слів"
+
+#: ../../library/dis.rst:1390
+msgid "``0x04`` a tuple of strings containing parameters' annotations"
+msgstr "``0x04`` кортеж рядків, що містять анотації параметрів"
+
+#: ../../library/dis.rst:1391
+msgid "``0x08`` a tuple containing cells for free variables, making a closure"
+msgstr ""
+"``0x08`` кортеж, що містить комірки для вільних змінних, створюючи закриття"
+
+#: ../../library/dis.rst:1392
+msgid "the code associated with the function (at ``STACK[-2]``)"
+msgstr ""
+
+#: ../../library/dis.rst:1393
+msgid "the :term:`qualified name` of the function (at ``STACK[-1]``)"
+msgstr ""
+
+#: ../../library/dis.rst:1395
+msgid "Flag value ``0x04`` is a tuple of strings instead of dictionary"
+msgstr "Значення прапора ``0x04`` є кортежем рядків замість словника"
+
+#: ../../library/dis.rst:1402
+msgid ""
+"Pushes a slice object on the stack.  *argc* must be 2 or 3.  If it is 2, "
+"implements::"
+msgstr ""
+
+#: ../../library/dis.rst:1408
+msgid "if it is 3, implements::"
+msgstr ""
+
+#: ../../library/dis.rst:1415
+msgid "See the :func:`slice` built-in function for more information."
+msgstr ""
+
+#: ../../library/dis.rst:1420
+msgid ""
+"Prefixes any opcode which has an argument too big to fit into the default "
+"one byte. *ext* holds an additional byte which act as higher bits in the "
+"argument. For each opcode, at most three prefixal ``EXTENDED_ARG`` are "
+"allowed, forming an argument from two-byte to four-byte."
+msgstr ""
+"Додає префікс до будь-якого коду операції, який має занадто великий "
+"аргумент, щоб поміститися в стандартний один байт. *ext* містить додатковий "
+"байт, який діє як старші біти в аргументі. Для кожного коду операції "
+"дозволено не більше трьох префіксів ``EXTENDED_ARG``, які утворюють аргумент"
+" розміром від двох до чотирьох байтів."
+
+#: ../../library/dis.rst:1428
+msgid ""
+"Used for implementing formatted literal strings (f-strings).  Pops an "
+"optional *fmt_spec* from the stack, then a required *value*. *flags* is "
+"interpreted as follows:"
+msgstr ""
+"Використовується для реалізації форматованих літеральних рядків (f-рядків). "
+"Витягує необов’язковий *fmt_spec* зі стеку, а потім обов’язкове *значення*. "
+"*flags* інтерпретується таким чином:"
+
+#: ../../library/dis.rst:1432
+msgid "``(flags & 0x03) == 0x00``: *value* is formatted as-is."
+msgstr "``(flags & 0x03) == 0x00``: *значення* відформатовано як є."
+
+#: ../../library/dis.rst:1433
+msgid ""
+"``(flags & 0x03) == 0x01``: call :func:`str` on *value* before formatting "
+"it."
+msgstr ""
+"``(flags & 0x03) == 0x01``: виклик :func:`str` для *значення* перед його "
+"форматуванням."
+
+#: ../../library/dis.rst:1435
+msgid ""
+"``(flags & 0x03) == 0x02``: call :func:`repr` on *value* before formatting "
+"it."
+msgstr ""
+"``(flags & 0x03) == 0x02``: виклик :func:`repr` для *значення* перед його "
+"форматуванням."
+
+#: ../../library/dis.rst:1437
+msgid ""
+"``(flags & 0x03) == 0x03``: call :func:`ascii` on *value* before formatting "
+"it."
+msgstr ""
+"``(flags & 0x03) == 0x03``: виклик :func:`ascii` для *значення* перед його "
+"форматуванням."
+
+#: ../../library/dis.rst:1439
+msgid ""
+"``(flags & 0x04) == 0x04``: pop *fmt_spec* from the stack and use it, else "
+"use an empty *fmt_spec*."
+msgstr ""
+"``(flags & 0x04) == 0x04``: витягніть *fmt_spec* зі стеку та використовуйте "
+"його, інакше використовуйте порожній *fmt_spec*."
+
+#: ../../library/dis.rst:1442
+msgid ""
+"Formatting is performed using :c:func:`PyObject_Format`.  The result is "
+"pushed on the stack."
+msgstr ""
+"Форматування виконується за допомогою :c:func:`PyObject_Format`. Результат "
+"поміщається в стек."
+
+#: ../../library/dis.rst:1450
+msgid ""
+"``STACK[-1]`` is a tuple of keyword attribute names, ``STACK[-2]`` is the "
+"class being matched against, and ``STACK[-3]`` is the match subject.  "
+"*count* is the number of positional sub-patterns."
+msgstr ""
+
+#: ../../library/dis.rst:1454
+msgid ""
+"Pop ``STACK[-1]``, ``STACK[-2]``, and ``STACK[-3]``. If ``STACK[-3]`` is an "
+"instance of ``STACK[-2]`` and has the positional and keyword attributes "
+"required by *count* and ``STACK[-1]``, push a tuple of extracted attributes."
+" Otherwise, push ``None``."
+msgstr ""
+
+#: ../../library/dis.rst:1468
+msgid "A no-op. Performs internal tracing, debugging and optimization checks."
+msgstr ""
+
+#: ../../library/dis.rst:1470
+msgid "The ``where`` operand marks where the ``RESUME`` occurs:"
+msgstr ""
+
+#: ../../library/dis.rst:1472
+msgid ""
+"``0`` The start of a function, which is neither a generator, coroutine nor "
+"an async generator"
+msgstr ""
+
+#: ../../library/dis.rst:1474
+msgid "``1`` After a ``yield`` expression"
+msgstr ""
+
+#: ../../library/dis.rst:1475
+msgid "``2`` After a ``yield from`` expression"
+msgstr ""
+
+#: ../../library/dis.rst:1476
+msgid "``3`` After an ``await`` expression"
+msgstr ""
+
+#: ../../library/dis.rst:1483
+msgid ""
+"Create a generator, coroutine, or async generator from the current frame. "
+"Used as first opcode of in code object for the above mentioned callables. "
+"Clear the current frame and return the newly created generator."
+msgstr ""
+
+#: ../../library/dis.rst:1492
+msgid ""
+"Equivalent to ``STACK[-1] = STACK[-2].send(STACK[-1])``. Used in ``yield "
+"from`` and ``await`` statements."
+msgstr ""
+
+#: ../../library/dis.rst:1495
+msgid ""
+"If the call raises :exc:`StopIteration`, pop both items, push the "
+"exception's ``value`` attribute, and increment the bytecode counter by "
+"*delta*."
+msgstr ""
+
+#: ../../library/dis.rst:1504
+msgid ""
+"This is not really an opcode.  It identifies the dividing line between "
+"opcodes in the range [0,255] which don't use their argument and those that "
+"do (``< HAVE_ARGUMENT`` and ``>= HAVE_ARGUMENT``, respectively)."
+msgstr ""
+
+#: ../../library/dis.rst:1508
+msgid ""
+"If your application uses pseudo instructions, use the :data:`hasarg` "
+"collection instead."
+msgstr ""
+
+#: ../../library/dis.rst:1511
+msgid ""
+"Now every instruction has an argument, but opcodes ``< HAVE_ARGUMENT`` "
+"ignore it. Before, only opcodes ``>= HAVE_ARGUMENT`` had an argument."
+msgstr ""
+"Тепер кожна інструкція має аргумент, але коди операцій ``< HAVE_ARGUMENT`` "
+"ignore it. Before, only opcodes ``> = HAVE_ARGUMENT`` мали аргумент."
+
+#: ../../library/dis.rst:1515
+msgid ""
+"Pseudo instructions were added to the :mod:`dis` module, and for them it is "
+"not true that comparison with ``HAVE_ARGUMENT`` indicates whether they use "
+"their arg."
+msgstr ""
+
+#: ../../library/dis.rst:1523
+msgid ""
+"Calls an intrinsic function with one argument. Passes ``STACK[-1]`` as the "
+"argument and sets ``STACK[-1]`` to the result. Used to implement "
+"functionality that is necessary but not performance critical."
+msgstr ""
+
+#: ../../library/dis.rst:1527 ../../library/dis.rst:1577
+msgid "The operand determines which intrinsic function is called:"
+msgstr ""
+
+#: ../../library/dis.rst:1530 ../../library/dis.rst:1580
+msgid "Operand"
+msgstr ""
+
+#: ../../library/dis.rst:1530 ../../library/dis.rst:1580
+msgid "Description"
+msgstr "Опис"
+
+#: ../../library/dis.rst:1532
+msgid "``INTRINSIC_1_INVALID``"
+msgstr ""
+
+#: ../../library/dis.rst:1532 ../../library/dis.rst:1582
+msgid "Not valid"
+msgstr ""
+
+#: ../../library/dis.rst:1534
+msgid "``INTRINSIC_PRINT``"
+msgstr ""
+
+#: ../../library/dis.rst:1534
+msgid "Prints the argument to standard out. Used in the REPL."
+msgstr ""
+
+#: ../../library/dis.rst:1537
+msgid "``INTRINSIC_IMPORT_STAR``"
+msgstr ""
+
+#: ../../library/dis.rst:1537
+msgid "Performs ``import *`` for the named module."
+msgstr ""
+
+#: ../../library/dis.rst:1540
+msgid "``INTRINSIC_STOPITERATION_ERROR``"
+msgstr ""
+
+#: ../../library/dis.rst:1540
+msgid "Extracts the return value from a ``StopIteration`` exception."
+msgstr ""
+
+#: ../../library/dis.rst:1543
+msgid "``INTRINSIC_ASYNC_GEN_WRAP``"
+msgstr ""
+
+#: ../../library/dis.rst:1543
+msgid "Wraps an aync generator value"
+msgstr ""
+
+#: ../../library/dis.rst:1545
+msgid "``INTRINSIC_UNARY_POSITIVE``"
+msgstr ""
+
+#: ../../library/dis.rst:1545
+msgid "Performs the unary ``+`` operation"
+msgstr ""
+
+#: ../../library/dis.rst:1548
+msgid "``INTRINSIC_LIST_TO_TUPLE``"
+msgstr ""
+
+#: ../../library/dis.rst:1548
+msgid "Converts a list to a tuple"
+msgstr ""
+
+#: ../../library/dis.rst:1550
+msgid "``INTRINSIC_TYPEVAR``"
+msgstr ""
+
+#: ../../library/dis.rst:1550
+msgid "Creates a :class:`typing.TypeVar`"
+msgstr ""
+
+#: ../../library/dis.rst:1552
+msgid "``INTRINSIC_PARAMSPEC``"
+msgstr ""
+
+#: ../../library/dis.rst:1552
+msgid "Creates a :class:`typing.ParamSpec`"
+msgstr ""
+
+#: ../../library/dis.rst:1555
+msgid "``INTRINSIC_TYPEVARTUPLE``"
+msgstr ""
+
+#: ../../library/dis.rst:1555
+msgid "Creates a :class:`typing.TypeVarTuple`"
+msgstr ""
+
+#: ../../library/dis.rst:1558
+msgid "``INTRINSIC_SUBSCRIPT_GENERIC``"
+msgstr ""
+
+#: ../../library/dis.rst:1558
+msgid "Returns :class:`typing.Generic` subscripted with the argument"
+msgstr ""
+
+#: ../../library/dis.rst:1561
+msgid "``INTRINSIC_TYPEALIAS``"
+msgstr ""
+
+#: ../../library/dis.rst:1561
+msgid ""
+"Creates a :class:`typing.TypeAliasType`; used in the :keyword:`type` "
+"statement. The argument is a tuple of the type alias's name, type "
+"parameters, and value."
+msgstr ""
+
+#: ../../library/dis.rst:1573
+msgid ""
+"Calls an intrinsic function with two arguments. Passes ``STACK[-2]``, "
+"``STACK[-1]`` as the arguments and sets ``STACK[-1]`` to the result. Used to"
+" implement functionality that is necessary but not performance critical."
+msgstr ""
+
+#: ../../library/dis.rst:1582
+msgid "``INTRINSIC_2_INVALID``"
+msgstr ""
+
+#: ../../library/dis.rst:1584
+msgid "``INTRINSIC_PREP_RERAISE_STAR``"
+msgstr ""
+
+#: ../../library/dis.rst:1584
+msgid "Calculates the :exc:`ExceptionGroup` to raise from a ``try-except*``."
+msgstr ""
+
+#: ../../library/dis.rst:1588
+msgid "``INTRINSIC_TYPEVAR_WITH_BOUND``"
+msgstr ""
+
+#: ../../library/dis.rst:1588
+msgid "Creates a :class:`typing.TypeVar` with a bound."
+msgstr ""
+
+#: ../../library/dis.rst:1591
+msgid "``INTRINSIC_TYPEVAR_WITH_CONSTRAINTS``"
+msgstr ""
+
+#: ../../library/dis.rst:1591
+msgid "Creates a :class:`typing.TypeVar` with constraints."
+msgstr ""
+
+#: ../../library/dis.rst:1595
+msgid "``INTRINSIC_SET_FUNCTION_TYPE_PARAMS``"
+msgstr ""
+
+#: ../../library/dis.rst:1595
+msgid "Sets the ``__type_params__`` attribute of a function."
+msgstr ""
+
+#: ../../library/dis.rst:1602
+msgid "**Pseudo-instructions**"
+msgstr ""
+
+#: ../../library/dis.rst:1604
+msgid ""
+"These opcodes do not appear in Python bytecode. They are used by the "
+"compiler but are replaced by real opcodes or removed before bytecode is "
+"generated."
+msgstr ""
+
+#: ../../library/dis.rst:1609
+msgid ""
+"Set up an exception handler for the following code block. If an exception "
+"occurs, the value stack level is restored to its current state and control "
+"is transferred to the exception handler at ``target``."
+msgstr ""
+
+#: ../../library/dis.rst:1616
+msgid ""
+"Like ``SETUP_FINALLY``, but in case of an exception also pushes the last "
+"instruction (``lasti``) to the stack so that ``RERAISE`` can restore it. If "
+"an exception occurs, the value stack level and the last instruction on the "
+"frame are restored to their current state, and control is transferred to the"
+" exception handler at ``target``."
+msgstr ""
+
+#: ../../library/dis.rst:1625
+msgid ""
+"Like ``SETUP_CLEANUP``, but in case of an exception one more item is popped "
+"from the stack before control is transferred to the exception handler at "
+"``target``."
+msgstr ""
+
+#: ../../library/dis.rst:1629
+msgid ""
+"This variant is used in :keyword:`with` and :keyword:`async with` "
+"constructs, which push the return value of the context manager's "
+":meth:`~object.__enter__` or :meth:`~object.__aenter__` to the stack."
+msgstr ""
+
+#: ../../library/dis.rst:1636
+msgid ""
+"Marks the end of the code block associated with the last ``SETUP_FINALLY``, "
+"``SETUP_CLEANUP`` or ``SETUP_WITH``."
+msgstr ""
+
+#: ../../library/dis.rst:1642
+msgid ""
+"Undirected relative jump instructions which are replaced by their directed "
+"(forward/backward) counterparts by the assembler."
+msgstr ""
+
+#: ../../library/dis.rst:1647
+msgid ""
+"Optimized unbound method lookup. Emitted as a ``LOAD_ATTR`` opcode with a "
+"flag set in the arg."
+msgstr ""
+
+#: ../../library/dis.rst:1654
+msgid "Opcode collections"
+msgstr "Колекції кодів операцій"
+
+#: ../../library/dis.rst:1656
+msgid ""
+"These collections are provided for automatic introspection of bytecode "
+"instructions:"
+msgstr "Ці колекції надаються для автоматичного аналізу інструкцій байт-коду:"
+
+#: ../../library/dis.rst:1659
+msgid ""
+"The collections now contain pseudo instructions as well. These are opcodes "
+"with values ``>= MIN_PSEUDO_OPCODE``."
+msgstr ""
+
+#: ../../library/dis.rst:1665
+msgid "Sequence of operation names, indexable using the bytecode."
+msgstr "Послідовність імен операцій, індексованих за допомогою байт-коду."
+
+#: ../../library/dis.rst:1670
+msgid "Dictionary mapping operation names to bytecodes."
+msgstr "Словник зіставляє назви операцій із байт-кодами."
+
+#: ../../library/dis.rst:1675
+msgid "Sequence of all compare operation names."
+msgstr "Послідовність імен усіх операцій порівняння."
+
+#: ../../library/dis.rst:1680
+msgid "Sequence of bytecodes that use their argument."
+msgstr ""
+
+#: ../../library/dis.rst:1687
+msgid "Sequence of bytecodes that access a constant."
+msgstr "Послідовність байт-кодів, які звертаються до константи."
+
+#: ../../library/dis.rst:1692
+msgid ""
+"Sequence of bytecodes that access a free variable. 'free' in this context "
+"refers to names in the current scope that are referenced by inner scopes or "
+"names in outer scopes that are referenced from this scope.  It does *not* "
+"include references to global or builtin scopes."
+msgstr ""
+
+#: ../../library/dis.rst:1700
+msgid "Sequence of bytecodes that access an attribute by name."
+msgstr "Послідовність байт-кодів, які звертаються до атрибута за назвою."
+
+#: ../../library/dis.rst:1705
+msgid "Sequence of bytecodes that have a relative jump target."
+msgstr "Послідовність байт-кодів, які мають відносну ціль переходу."
+
+#: ../../library/dis.rst:1710
+msgid "Sequence of bytecodes that have an absolute jump target."
+msgstr "Послідовність байт-кодів, які мають абсолютну ціль переходу."
+
+#: ../../library/dis.rst:1715
+msgid "Sequence of bytecodes that access a local variable."
+msgstr "Послідовність байт-кодів, які звертаються до локальної змінної."
+
+#: ../../library/dis.rst:1720
+msgid "Sequence of bytecodes of Boolean operations."
+msgstr "Послідовність байт-кодів булевих операцій."
+
+#: ../../library/dis.rst:1724
+msgid "Sequence of bytecodes that set an exception handler."
+msgstr ""
+
+#: ../../library/dis.rst:1400
+msgid "built-in function"
+msgstr ""
+
+#: ../../library/dis.rst:1400
+msgid "slice"
+msgstr "шматочок"
