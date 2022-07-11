@@ -1,0 +1,466 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2023, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-26 14:12+0000\n"
+"PO-Revision-Date: 2021-06-28 00:49+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2023\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../c-api/long.rst:6
+msgid "Integer Objects"
+msgstr "Цілі об'єкти"
+
+#: ../../c-api/long.rst:11
+msgid ""
+"All integers are implemented as \"long\" integer objects of arbitrary size."
+msgstr "Усі цілі числа реалізуються як \"довгі\" цілі об’єкти довільного розміру."
+
+#: ../../c-api/long.rst:13
+msgid ""
+"On error, most ``PyLong_As*`` APIs return ``(return type)-1`` which cannot "
+"be distinguished from a number.  Use :c:func:`PyErr_Occurred` to "
+"disambiguate."
+msgstr ""
+"У разі помилки більшість API ``PyLong_As*`` повертають ``(тип "
+"повернення)-1``, який неможливо відрізнити від числа. Використовуйте "
+":c:func:`PyErr_Occurred` для усунення неоднозначності."
+
+#: ../../c-api/long.rst:18
+msgid "This subtype of :c:type:`PyObject` represents a Python integer object."
+msgstr ""
+"Цей підтип :c:type:`PyObject` представляє цілочисельний об’єкт Python."
+
+#: ../../c-api/long.rst:23
+msgid ""
+"This instance of :c:type:`PyTypeObject` represents the Python integer type. "
+"This is the same object as :class:`int` in the Python layer."
+msgstr ""
+"Цей екземпляр :c:type:`PyTypeObject` представляє цілочисельний тип Python. "
+"Це той самий об’єкт, що й :class:`int` на рівні Python."
+
+#: ../../c-api/long.rst:29
+msgid ""
+"Return true if its argument is a :c:type:`PyLongObject` or a subtype of "
+":c:type:`PyLongObject`.  This function always succeeds."
+msgstr ""
+"Повертає true, якщо його аргумент є :c:type:`PyLongObject` або підтипом "
+":c:type:`PyLongObject`. Ця функція завжди успішна."
+
+#: ../../c-api/long.rst:35
+msgid ""
+"Return true if its argument is a :c:type:`PyLongObject`, but not a subtype "
+"of :c:type:`PyLongObject`.  This function always succeeds."
+msgstr ""
+"Повертає true, якщо його аргумент є :c:type:`PyLongObject`, але не підтипом "
+":c:type:`PyLongObject`. Ця функція завжди успішна."
+
+#: ../../c-api/long.rst:41
+msgid ""
+"Return a new :c:type:`PyLongObject` object from *v*, or ``NULL`` on failure."
+msgstr ""
+"Повертає новий об’єкт :c:type:`PyLongObject` з *v* або ``NULL`` у разі "
+"помилки."
+
+#: ../../c-api/long.rst:43
+msgid ""
+"The current implementation keeps an array of integer objects for all "
+"integers between ``-5`` and ``256``. When you create an int in that range "
+"you actually just get back a reference to the existing object."
+msgstr ""
+"Поточна реалізація зберігає масив цілих об’єктів для всіх цілих чисел від "
+"``-5`` до ``256``. Коли ви створюєте int у цьому діапазоні, ви фактично "
+"повертаєте посилання на існуючий об’єкт."
+
+#: ../../c-api/long.rst:50
+msgid ""
+"Return a new :c:type:`PyLongObject` object from a C :c:expr:`unsigned long`,"
+" or ``NULL`` on failure."
+msgstr ""
+
+#: ../../c-api/long.rst:56
+msgid ""
+"Return a new :c:type:`PyLongObject` object from a C :c:type:`Py_ssize_t`, or"
+" ``NULL`` on failure."
+msgstr ""
+"Повертає новий об’єкт :c:type:`PyLongObject` із C :c:type:`Py_ssize_t` або "
+"``NULL`` у разі помилки."
+
+#: ../../c-api/long.rst:62
+msgid ""
+"Return a new :c:type:`PyLongObject` object from a C :c:type:`size_t`, or "
+"``NULL`` on failure."
+msgstr ""
+"Повертає новий об’єкт :c:type:`PyLongObject` із C :c:type:`size_t` або "
+"``NULL`` у разі помилки."
+
+#: ../../c-api/long.rst:68
+msgid ""
+"Return a new :c:type:`PyLongObject` object from a C :c:expr:`long long`, or "
+"``NULL`` on failure."
+msgstr ""
+
+#: ../../c-api/long.rst:74
+msgid ""
+"Return a new :c:type:`PyLongObject` object from a C :c:expr:`unsigned long "
+"long`, or ``NULL`` on failure."
+msgstr ""
+
+#: ../../c-api/long.rst:80
+msgid ""
+"Return a new :c:type:`PyLongObject` object from the integer part of *v*, or "
+"``NULL`` on failure."
+msgstr ""
+"Повертає новий об’єкт :c:type:`PyLongObject` із цілої частини *v* або "
+"``NULL`` у разі помилки."
+
+#: ../../c-api/long.rst:86
+msgid ""
+"Return a new :c:type:`PyLongObject` based on the string value in *str*, "
+"which is interpreted according to the radix in *base*, or ``NULL`` on "
+"failure.  If *pend* is non-``NULL``, *\\*pend* will point to the end of "
+"*str* on success or to the first character that could not be processed on "
+"error.  If *base* is ``0``, *str* is interpreted using the :ref:`integers` "
+"definition; in this case, leading zeros in a non-zero decimal number raises "
+"a :exc:`ValueError`.  If *base* is not ``0``, it must be between ``2`` and "
+"``36``, inclusive.  Leading and trailing whitespace and single underscores "
+"after a base specifier and between digits are ignored.  If there are no "
+"digits or *str* is not NULL-terminated following the digits and trailing "
+"whitespace, :exc:`ValueError` will be raised."
+msgstr ""
+
+#: ../../c-api/long.rst:97
+msgid ""
+"Python methods :meth:`int.to_bytes` and :meth:`int.from_bytes` to convert a "
+":c:type:`PyLongObject` to/from an array of bytes in base ``256``. You can "
+"call those from C using :c:func:`PyObject_CallMethod`."
+msgstr ""
+
+#: ../../c-api/long.rst:104
+msgid ""
+"Convert a sequence of Unicode digits in the string *u* to a Python integer "
+"value."
+msgstr ""
+"Перетворіть послідовність цифр Unicode у рядку *u* на ціле число Python."
+
+#: ../../c-api/long.rst:112
+msgid ""
+"Create a Python integer from the pointer *p*. The pointer value can be "
+"retrieved from the resulting value using :c:func:`PyLong_AsVoidPtr`."
+msgstr ""
+"Створіть ціле число Python із покажчика *p*. Значення вказівника можна "
+"отримати з результуючого значення за допомогою :c:func:`PyLong_AsVoidPtr`."
+
+#: ../../c-api/long.rst:123 ../../c-api/long.rst:141
+msgid ""
+"Return a C :c:expr:`long` representation of *obj*.  If *obj* is not an "
+"instance of :c:type:`PyLongObject`, first call its :meth:`__index__` method "
+"(if present) to convert it to a :c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:127
+msgid ""
+"Raise :exc:`OverflowError` if the value of *obj* is out of range for a "
+":c:expr:`long`."
+msgstr ""
+
+#: ../../c-api/long.rst:130 ../../c-api/long.rst:150 ../../c-api/long.rst:171
+#: ../../c-api/long.rst:191 ../../c-api/long.rst:214
+msgid ""
+"Returns ``-1`` on error.  Use :c:func:`PyErr_Occurred` to disambiguate."
+msgstr ""
+"Повертає ``-1`` у разі помилки. Використовуйте :c:func:`PyErr_Occurred` для "
+"усунення неоднозначності."
+
+#: ../../c-api/long.rst:132 ../../c-api/long.rst:152 ../../c-api/long.rst:173
+#: ../../c-api/long.rst:195 ../../c-api/long.rst:279 ../../c-api/long.rst:299
+msgid "Use :meth:`__index__` if available."
+msgstr "Використовуйте :meth:`__index__`, якщо доступний."
+
+#: ../../c-api/long.rst:135 ../../c-api/long.rst:155 ../../c-api/long.rst:176
+#: ../../c-api/long.rst:198 ../../c-api/long.rst:282 ../../c-api/long.rst:302
+msgid "This function will no longer use :meth:`__int__`."
+msgstr "Ця функція більше не використовуватиме :meth:`__int__`."
+
+#: ../../c-api/long.rst:145
+msgid ""
+"If the value of *obj* is greater than :const:`LONG_MAX` or less than "
+":const:`LONG_MIN`, set *\\*overflow* to ``1`` or ``-1``, respectively, and "
+"return ``-1``; otherwise, set *\\*overflow* to ``0``.  If any other "
+"exception occurs set *\\*overflow* to ``0`` and return ``-1`` as usual."
+msgstr ""
+"Якщо значення *obj* більше за :const:`LONG_MAX` або менше за "
+":const:`LONG_MIN`, установіть для *\\*overflow* значення ``1`` або ``-1`` "
+"відповідно та поверніть ``-1``; інакше встановіть *\\*overflow* на ``0``. "
+"Якщо виникає будь-який інший виняток, встановіть *\\*overflow* на ``0`` і "
+"поверніть ``-1``, як зазвичай."
+
+#: ../../c-api/long.rst:164 ../../c-api/long.rst:182
+msgid ""
+"Return a C :c:expr:`long long` representation of *obj*.  If *obj* is not an "
+"instance of :c:type:`PyLongObject`, first call its :meth:`__index__` method "
+"(if present) to convert it to a :c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:168
+msgid ""
+"Raise :exc:`OverflowError` if the value of *obj* is out of range for a "
+":c:expr:`long long`."
+msgstr ""
+
+#: ../../c-api/long.rst:186
+msgid ""
+"If the value of *obj* is greater than :const:`LLONG_MAX` or less than "
+":const:`LLONG_MIN`, set *\\*overflow* to ``1`` or ``-1``, respectively, and "
+"return ``-1``; otherwise, set *\\*overflow* to ``0``.  If any other "
+"exception occurs set *\\*overflow* to ``0`` and return ``-1`` as usual."
+msgstr ""
+"Якщо значення *obj* більше за :const:`LLONG_MAX` або менше за "
+":const:`LLONG_MIN`, установіть для *\\*overflow* значення ``1`` або ``-1`` "
+"відповідно та поверніть ``-1``; інакше встановіть *\\*overflow* на ``0``. "
+"Якщо виникає будь-який інший виняток, встановіть *\\*overflow* на ``0`` і "
+"поверніть ``-1``, як зазвичай."
+
+#: ../../c-api/long.rst:208
+msgid ""
+"Return a C :c:type:`Py_ssize_t` representation of *pylong*.  *pylong* must "
+"be an instance of :c:type:`PyLongObject`."
+msgstr ""
+"Повертає C :c:type:`Py_ssize_t` представлення *pylong*. *pylong* має бути "
+"екземпляром :c:type:`PyLongObject`."
+
+#: ../../c-api/long.rst:211
+msgid ""
+"Raise :exc:`OverflowError` if the value of *pylong* is out of range for a "
+":c:type:`Py_ssize_t`."
+msgstr ""
+"Викликайте :exc:`OverflowError`, якщо значення *pylong* виходить за межі "
+"діапазону для :c:type:`Py_ssize_t`."
+
+#: ../../c-api/long.rst:223
+msgid ""
+"Return a C :c:expr:`unsigned long` representation of *pylong*.  *pylong* "
+"must be an instance of :c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:226
+msgid ""
+"Raise :exc:`OverflowError` if the value of *pylong* is out of range for a "
+":c:expr:`unsigned long`."
+msgstr ""
+
+#: ../../c-api/long.rst:229
+msgid ""
+"Returns ``(unsigned long)-1`` on error. Use :c:func:`PyErr_Occurred` to "
+"disambiguate."
+msgstr ""
+"У разі помилки повертає ``(unsigned long)-1``. Використовуйте "
+":c:func:`PyErr_Occurred` для усунення неоднозначності."
+
+#: ../../c-api/long.rst:239
+msgid ""
+"Return a C :c:type:`size_t` representation of *pylong*.  *pylong* must be an"
+" instance of :c:type:`PyLongObject`."
+msgstr ""
+"Повертає C :c:type:`size_t` представлення *pylong*. *pylong* має бути "
+"екземпляром :c:type:`PyLongObject`."
+
+#: ../../c-api/long.rst:242
+msgid ""
+"Raise :exc:`OverflowError` if the value of *pylong* is out of range for a "
+":c:type:`size_t`."
+msgstr ""
+"Викликайте :exc:`OverflowError`, якщо значення *pylong* виходить за межі "
+"діапазону для :c:type:`size_t`."
+
+#: ../../c-api/long.rst:245
+msgid ""
+"Returns ``(size_t)-1`` on error. Use :c:func:`PyErr_Occurred` to "
+"disambiguate."
+msgstr ""
+"Повертає ``(size_t)-1`` у разі помилки. Використовуйте "
+":c:func:`PyErr_Occurred` для усунення неоднозначності."
+
+#: ../../c-api/long.rst:254
+msgid ""
+"Return a C :c:expr:`unsigned long long` representation of *pylong*.  "
+"*pylong* must be an instance of :c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:257
+msgid ""
+"Raise :exc:`OverflowError` if the value of *pylong* is out of range for an "
+":c:expr:`unsigned long long`."
+msgstr ""
+
+#: ../../c-api/long.rst:260
+msgid ""
+"Returns ``(unsigned long long)-1`` on error. Use :c:func:`PyErr_Occurred` to"
+" disambiguate."
+msgstr ""
+"У разі помилки повертає ``(unsigned long long)-1``. Використовуйте "
+":c:func:`PyErr_Occurred` для усунення неоднозначності."
+
+#: ../../c-api/long.rst:263
+msgid ""
+"A negative *pylong* now raises :exc:`OverflowError`, not :exc:`TypeError`."
+msgstr ""
+"Негативний *pylong* тепер викликає :exc:`OverflowError`, а не "
+":exc:`TypeError`."
+
+#: ../../c-api/long.rst:269
+msgid ""
+"Return a C :c:expr:`unsigned long` representation of *obj*.  If *obj* is not"
+" an instance of :c:type:`PyLongObject`, first call its :meth:`__index__` "
+"method (if present) to convert it to a :c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:273
+msgid ""
+"If the value of *obj* is out of range for an :c:expr:`unsigned long`, return"
+" the reduction of that value modulo ``ULONG_MAX + 1``."
+msgstr ""
+
+#: ../../c-api/long.rst:276
+msgid ""
+"Returns ``(unsigned long)-1`` on error.  Use :c:func:`PyErr_Occurred` to "
+"disambiguate."
+msgstr ""
+"У разі помилки повертає ``(unsigned long)-1``. Використовуйте "
+":c:func:`PyErr_Occurred` для усунення неоднозначності."
+
+#: ../../c-api/long.rst:288
+msgid ""
+"Return a C :c:expr:`unsigned long long` representation of *obj*.  If *obj* "
+"is not an instance of :c:type:`PyLongObject`, first call its "
+":meth:`__index__` method (if present) to convert it to a "
+":c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:293
+msgid ""
+"If the value of *obj* is out of range for an :c:expr:`unsigned long long`, "
+"return the reduction of that value modulo ``ULLONG_MAX + 1``."
+msgstr ""
+
+#: ../../c-api/long.rst:296
+msgid ""
+"Returns ``(unsigned long long)-1`` on error.  Use :c:func:`PyErr_Occurred` "
+"to disambiguate."
+msgstr ""
+"У разі помилки повертає ``(unsigned long long)-1``. Використовуйте "
+":c:func:`PyErr_Occurred` для усунення неоднозначності."
+
+#: ../../c-api/long.rst:308
+msgid ""
+"Return a C :c:expr:`double` representation of *pylong*.  *pylong* must be an"
+" instance of :c:type:`PyLongObject`."
+msgstr ""
+
+#: ../../c-api/long.rst:311
+msgid ""
+"Raise :exc:`OverflowError` if the value of *pylong* is out of range for a "
+":c:expr:`double`."
+msgstr ""
+
+#: ../../c-api/long.rst:314
+msgid ""
+"Returns ``-1.0`` on error.  Use :c:func:`PyErr_Occurred` to disambiguate."
+msgstr ""
+"Повертає ``-1.0`` у разі помилки. Використовуйте :c:func:`PyErr_Occurred` "
+"для усунення неоднозначності."
+
+#: ../../c-api/long.rst:319
+msgid ""
+"Convert a Python integer *pylong* to a C :c:expr:`void` pointer. If *pylong*"
+" cannot be converted, an :exc:`OverflowError` will be raised.  This is only "
+"assured to produce a usable :c:expr:`void` pointer for values created with "
+":c:func:`PyLong_FromVoidPtr`."
+msgstr ""
+
+#: ../../c-api/long.rst:324
+msgid ""
+"Returns ``NULL`` on error.  Use :c:func:`PyErr_Occurred` to disambiguate."
+msgstr ""
+"Повертає ``NULL`` у разі помилки. Використовуйте :c:func:`PyErr_Occurred` "
+"для усунення неоднозначності."
+
+#: ../../c-api/long.rst:329
+msgid "Return 1 if *op* is compact, 0 otherwise."
+msgstr ""
+
+#: ../../c-api/long.rst:331
+msgid ""
+"This function makes it possible for performance-critical code to implement a"
+" “fast path” for small integers. For compact values use "
+":c:func:`PyUnstable_Long_CompactValue`; for others fall back to a "
+":c:func:`PyLong_As* <PyLong_AsSize_t>` function or :c:func:`calling "
+"<PyObject_CallMethod>` :meth:`int.to_bytes`."
+msgstr ""
+
+#: ../../c-api/long.rst:337
+msgid "The speedup is expected to be negligible for most users."
+msgstr ""
+
+#: ../../c-api/long.rst:339
+msgid ""
+"Exactly what values are considered compact is an implementation detail and "
+"is subject to change."
+msgstr ""
+
+#: ../../c-api/long.rst:344
+msgid ""
+"If *op* is compact, as determined by :c:func:`PyUnstable_Long_IsCompact`, "
+"return its value."
+msgstr ""
+
+#: ../../c-api/long.rst:347
+msgid "Otherwise, the return value is undefined."
+msgstr ""
+
+#: ../../c-api/long.rst:8 ../../c-api/long.rst:8
+msgid "object"
+msgstr "об'єкт"
+
+#: ../../c-api/long.rst:8
+msgid "long integer"
+msgstr ""
+
+#: ../../c-api/long.rst:8
+msgid "integer"
+msgstr "ціле число"
+
+#: ../../c-api/long.rst:119
+msgid "LONG_MAX"
+msgstr ""
+
+#: ../../c-api/long.rst:119 ../../c-api/long.rst:161 ../../c-api/long.rst:204
+#: ../../c-api/long.rst:219 ../../c-api/long.rst:235 ../../c-api/long.rst:251
+msgid "OverflowError (built-in exception)"
+msgstr ""
+
+#: ../../c-api/long.rst:204
+msgid "PY_SSIZE_T_MAX"
+msgstr ""
+
+#: ../../c-api/long.rst:219
+msgid "ULONG_MAX"
+msgstr ""
+
+#: ../../c-api/long.rst:235
+msgid "SIZE_MAX"
+msgstr ""

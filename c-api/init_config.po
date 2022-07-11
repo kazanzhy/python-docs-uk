@@ -1,0 +1,2525 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2001-2023, Python Software Foundation
+# This file is distributed under the same license as the Python package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Dmytro Kazanzhy, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python 3.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-26 14:12+0000\n"
+"PO-Revision-Date: 2021-06-28 00:49+0000\n"
+"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: ../../c-api/init_config.rst:7
+msgid "Python Initialization Configuration"
+msgstr "Конфігурація ініціалізації Python"
+
+#: ../../c-api/init_config.rst:11
+msgid ""
+"Python can be initialized with :c:func:`Py_InitializeFromConfig` and the "
+":c:type:`PyConfig` structure. It can be preinitialized with "
+":c:func:`Py_PreInitialize` and the :c:type:`PyPreConfig` structure."
+msgstr ""
+"Python можна ініціалізувати за допомогою :c:func:`Py_InitializeFromConfig` і"
+" структури :c:type:`PyConfig`. Його можна попередньо ініціалізувати за "
+"допомогою :c:func:`Py_PreInitialize` і структури :c:type:`PyPreConfig`."
+
+#: ../../c-api/init_config.rst:15
+msgid "There are two kinds of configuration:"
+msgstr "Існує два види конфігурації:"
+
+#: ../../c-api/init_config.rst:17
+msgid ""
+"The :ref:`Python Configuration <init-python-config>` can be used to build a "
+"customized Python which behaves as the regular Python. For example, "
+"environment variables and command line arguments are used to configure "
+"Python."
+msgstr ""
+":ref:`Налаштування Python <init-python-config>` можна використовувати для "
+"створення налаштованого Python, який веде себе як звичайний Python. "
+"Наприклад, змінні середовища та аргументи командного рядка використовуються "
+"для налаштування Python."
+
+#: ../../c-api/init_config.rst:22
+msgid ""
+"The :ref:`Isolated Configuration <init-isolated-conf>` can be used to embed "
+"Python into an application. It isolates Python from the system. For example,"
+" environment variables are ignored, the LC_CTYPE locale is left unchanged "
+"and no signal handler is registered."
+msgstr ""
+":ref:`Ізольована конфігурація <init-isolated-conf>` може бути використана "
+"для вбудовування Python у програму. Він ізолює Python від системи. "
+"Наприклад, змінні середовища ігноруються, локаль LC_CTYPE не змінюється, а "
+"обробник сигналів не реєструється."
+
+#: ../../c-api/init_config.rst:27
+msgid ""
+"The :c:func:`Py_RunMain` function can be used to write a customized Python "
+"program."
+msgstr ""
+"Функцію :c:func:`Py_RunMain` можна використовувати для написання спеціальної"
+" програми Python."
+
+#: ../../c-api/init_config.rst:30
+msgid ""
+"See also :ref:`Initialization, Finalization, and Threads <initialization>`."
+msgstr ""
+"Дивіться також :ref:`Ініціалізація, фіналізація та потоки <initialization>`."
+
+#: ../../c-api/init_config.rst:33
+msgid ":pep:`587` \"Python Initialization Configuration\"."
+msgstr ":pep:`587` \"Конфігурація ініціалізації Python\"."
+
+#: ../../c-api/init_config.rst:37
+msgid "Example"
+msgstr "приклад"
+
+#: ../../c-api/init_config.rst:39
+msgid "Example of customized Python always running in isolated mode::"
+msgstr ""
+"Приклад налаштованого Python, який завжди працює в ізольованому режимі::"
+
+#: ../../c-api/init_config.rst:76
+msgid "PyWideStringList"
+msgstr "PyWideStringList"
+
+#: ../../c-api/init_config.rst:80
+msgid "List of ``wchar_t*`` strings."
+msgstr "Список рядків ``wchar_t*``."
+
+#: ../../c-api/init_config.rst:82
+msgid ""
+"If *length* is non-zero, *items* must be non-``NULL`` and all strings must "
+"be non-``NULL``."
+msgstr ""
+"Якщо *length* не дорівнює нулю, *items* не мають бути ``NULL``, а всі рядки "
+"мають бути не ``NULL``."
+
+#: ../../c-api/init_config.rst:85
+msgid "Methods:"
+msgstr "Методи:"
+
+#: ../../c-api/init_config.rst:89
+msgid "Append *item* to *list*."
+msgstr "Додайте *елемент* до *списку*."
+
+#: ../../c-api/init_config.rst:91 ../../c-api/init_config.rst:102
+msgid "Python must be preinitialized to call this function."
+msgstr "Щоб викликати цю функцію, Python має бути попередньо ініціалізований."
+
+#: ../../c-api/init_config.rst:95
+msgid "Insert *item* into *list* at *index*."
+msgstr "Вставте *елемент* у *список* за *індексом*."
+
+#: ../../c-api/init_config.rst:97
+msgid ""
+"If *index* is greater than or equal to *list* length, append *item* to "
+"*list*."
+msgstr ""
+"Якщо *index* більше або дорівнює довжині *list*, додайте *item* до *list*."
+
+#: ../../c-api/init_config.rst:100
+msgid "*index* must be greater than or equal to ``0``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:104 ../../c-api/init_config.rst:124
+#: ../../c-api/init_config.rst:225 ../../c-api/init_config.rst:530
+msgid "Structure fields:"
+msgstr "Поля структури:"
+
+#: ../../c-api/init_config.rst:108
+msgid "List length."
+msgstr "Довжина списку."
+
+#: ../../c-api/init_config.rst:112
+msgid "List items."
+msgstr "Список елементів."
+
+#: ../../c-api/init_config.rst:115
+msgid "PyStatus"
+msgstr "PyStatus"
+
+#: ../../c-api/init_config.rst:119
+msgid ""
+"Structure to store an initialization function status: success, error or "
+"exit."
+msgstr ""
+"Структура для збереження стану функції ініціалізації: успіх, помилка або "
+"вихід."
+
+#: ../../c-api/init_config.rst:122
+msgid ""
+"For an error, it can store the C function name which created the error."
+msgstr "Для помилки він може зберегти назву функції C, яка створила помилку."
+
+#: ../../c-api/init_config.rst:128
+msgid "Exit code. Argument passed to ``exit()``."
+msgstr "Код виходу. Аргумент, переданий до ``exit()``."
+
+#: ../../c-api/init_config.rst:132
+msgid "Error message."
+msgstr "Повідомлення про помилку."
+
+#: ../../c-api/init_config.rst:136
+msgid "Name of the function which created an error, can be ``NULL``."
+msgstr "Ім'я функції, яка створила помилку, може бути ``NULL``."
+
+#: ../../c-api/init_config.rst:138
+msgid "Functions to create a status:"
+msgstr "Функції для створення статусу:"
+
+#: ../../c-api/init_config.rst:142
+msgid "Success."
+msgstr "Успіх."
+
+#: ../../c-api/init_config.rst:146
+msgid "Initialization error with a message."
+msgstr "Помилка ініціалізації з повідомленням."
+
+#: ../../c-api/init_config.rst:148
+msgid "*err_msg* must not be ``NULL``."
+msgstr "*err_msg* не має бути ``NULL``."
+
+#: ../../c-api/init_config.rst:152
+msgid "Memory allocation failure (out of memory)."
+msgstr "Помилка виділення пам'яті (брак пам'яті)."
+
+#: ../../c-api/init_config.rst:156
+msgid "Exit Python with the specified exit code."
+msgstr "Вийдіть із Python із вказаним кодом виходу."
+
+#: ../../c-api/init_config.rst:158
+msgid "Functions to handle a status:"
+msgstr "Функції для обробки статусу:"
+
+#: ../../c-api/init_config.rst:162
+msgid ""
+"Is the status an error or an exit? If true, the exception must be handled; "
+"by calling :c:func:`Py_ExitStatusException` for example."
+msgstr ""
+"Статус помилка чи вихід? Якщо істина, виняток потрібно обробити; наприклад, "
+"викликом :c:func:`Py_ExitStatusException`."
+
+#: ../../c-api/init_config.rst:167
+msgid "Is the result an error?"
+msgstr "Чи є результат помилкою?"
+
+#: ../../c-api/init_config.rst:171
+msgid "Is the result an exit?"
+msgstr "Результат – це вихід?"
+
+#: ../../c-api/init_config.rst:175
+msgid ""
+"Call ``exit(exitcode)`` if *status* is an exit. Print the error message and "
+"exit with a non-zero exit code if *status* is an error.  Must only be called"
+" if ``PyStatus_Exception(status)`` is non-zero."
+msgstr ""
+"Викличте ``exit(exitcode)``, якщо *status* є виходом. Роздрукуйте "
+"повідомлення про помилку та вийдіть із ненульовим кодом виходу, якщо "
+"*статус* є помилкою. Потрібно викликати, лише якщо "
+"``PyStatus_Exception(status)`` не дорівнює нулю."
+
+#: ../../c-api/init_config.rst:180
+msgid ""
+"Internally, Python uses macros which set ``PyStatus.func``, whereas "
+"functions to create a status set ``func`` to ``NULL``."
+msgstr ""
+"Внутрішньо Python використовує макроси, які встановлюють ``PyStatus.func``, "
+"тоді як функції для створення стану встановлюють ``func`` на ``NULL``."
+
+#: ../../c-api/init_config.rst:183
+msgid "Example::"
+msgstr "Приклад::"
+
+#: ../../c-api/init_config.rst:207
+msgid "PyPreConfig"
+msgstr "PyPreConfig"
+
+#: ../../c-api/init_config.rst:211
+msgid "Structure used to preinitialize Python."
+msgstr "Структура, яка використовується для попередньої ініціалізації Python."
+
+#: ../../c-api/init_config.rst:213
+msgid "Function to initialize a preconfiguration:"
+msgstr "Функція ініціалізації попередньої конфігурації:"
+
+#: ../../c-api/init_config.rst:217
+msgid ""
+"Initialize the preconfiguration with :ref:`Python Configuration <init-"
+"python-config>`."
+msgstr ""
+"Ініціалізуйте попередню конфігурацію за допомогою :ref:`Налаштування Python "
+"<init-python-config>`."
+
+#: ../../c-api/init_config.rst:222
+msgid ""
+"Initialize the preconfiguration with :ref:`Isolated Configuration <init-"
+"isolated-conf>`."
+msgstr ""
+"Ініціалізуйте попередню конфігурацію за допомогою :ref:`Ізольованої "
+"конфігурації <init-isolated-conf>`."
+
+#: ../../c-api/init_config.rst:229
+msgid "Name of the Python memory allocators:"
+msgstr "Ім'я розподілювачів пам'яті Python:"
+
+#: ../../c-api/init_config.rst:231
+msgid ""
+"``PYMEM_ALLOCATOR_NOT_SET`` (``0``): don't change memory allocators (use "
+"defaults)."
+msgstr ""
+"``PYMEM_ALLOCATOR_NOT_SET`` (``0``): не змінювати розподільники пам'яті "
+"(використовувати значення за замовчуванням)."
+
+#: ../../c-api/init_config.rst:233
+msgid ""
+"``PYMEM_ALLOCATOR_DEFAULT`` (``1``): :ref:`default memory allocators "
+"<default-memory-allocators>`."
+msgstr ""
+"``PYMEM_ALLOCATOR_DEFAULT`` (``1``): :ref:`розподіл пам'яті за замовчуванням"
+" <default-memory-allocators>`."
+
+#: ../../c-api/init_config.rst:235
+msgid ""
+"``PYMEM_ALLOCATOR_DEBUG`` (``2``): :ref:`default memory allocators <default-"
+"memory-allocators>` with :ref:`debug hooks <pymem-debug-hooks>`."
+msgstr ""
+"``PYMEM_ALLOCATOR_DEBUG`` (``2``): :ref:`розподільники пам’яті за "
+"замовчуванням <default-memory-allocators>` з :ref:`налагоджувальними хуками "
+"<pymem-debug-hooks>`."
+
+#: ../../c-api/init_config.rst:238
+msgid "``PYMEM_ALLOCATOR_MALLOC`` (``3``): use ``malloc()`` of the C library."
+msgstr ""
+"``PYMEM_ALLOCATOR_MALLOC`` (``3``): використовуйте ``malloc()`` бібліотеки "
+"C."
+
+#: ../../c-api/init_config.rst:239
+msgid ""
+"``PYMEM_ALLOCATOR_MALLOC_DEBUG`` (``4``): force usage of ``malloc()`` with "
+":ref:`debug hooks <pymem-debug-hooks>`."
+msgstr ""
+"``PYMEM_ALLOCATOR_MALLOC_DEBUG`` (``4``): примусове використання "
+"``malloc()`` з :ref:`налагоджувальними хуками <pymem-debug-hooks>`."
+
+#: ../../c-api/init_config.rst:241
+msgid ""
+"``PYMEM_ALLOCATOR_PYMALLOC`` (``5``): :ref:`Python pymalloc memory allocator"
+" <pymalloc>`."
+msgstr ""
+"``PYMEM_ALLOCATOR_PYMALLOC`` (``5``): :ref:`Виділювач пам'яті Python "
+"pymalloc <pymalloc>`."
+
+#: ../../c-api/init_config.rst:243
+msgid ""
+"``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` (``6``): :ref:`Python pymalloc memory "
+"allocator <pymalloc>` with :ref:`debug hooks <pymem-debug-hooks>`."
+msgstr ""
+"``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` (``6``): :ref:`Розподіл пам’яті Python "
+"pymalloc <pymalloc>` з :ref:`налагоджувальними хуками <pymem-debug-hooks>`."
+
+#: ../../c-api/init_config.rst:247
+msgid ""
+"``PYMEM_ALLOCATOR_PYMALLOC`` and ``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` are not "
+"supported if Python is :option:`configured using --without-pymalloc "
+"<--without-pymalloc>`."
+msgstr ""
+"``PYMEM_ALLOCATOR_PYMALLOC`` і ``PYMEM_ALLOCATOR_PYMALLOC_DEBUG`` не "
+"підтримуються, якщо Python :option:`налаштовано за допомогою --without-"
+"pymalloc <--without-pymalloc>`."
+
+#: ../../c-api/init_config.rst:251
+msgid "See :ref:`Memory Management <memory>`."
+msgstr "Перегляньте :ref:`Керування пам’яттю <memory>`."
+
+#: ../../c-api/init_config.rst:253
+msgid "Default: ``PYMEM_ALLOCATOR_NOT_SET``."
+msgstr "Типове значення: ``PYMEM_ALLOCATOR_NOT_SET``."
+
+#: ../../c-api/init_config.rst:257
+msgid "Set the LC_CTYPE locale to the user preferred locale."
+msgstr ""
+
+#: ../../c-api/init_config.rst:259
+msgid ""
+"If equals to ``0``, set :c:member:`~PyPreConfig.coerce_c_locale` and "
+":c:member:`~PyPreConfig.coerce_c_locale_warn` members to ``0``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:262 ../../c-api/init_config.rst:273
+msgid "See the :term:`locale encoding`."
+msgstr "Перегляньте :term:`locale encoding`."
+
+#: ../../c-api/init_config.rst:264 ../../c-api/init_config.rst:319
+#: ../../c-api/init_config.rst:670
+msgid "Default: ``1`` in Python config, ``0`` in isolated config."
+msgstr ""
+"За замовчуванням: ``1`` у конфігурації Python, ``0`` в ізольованій "
+"конфігурації."
+
+#: ../../c-api/init_config.rst:268
+msgid "If equals to ``2``, coerce the C locale."
+msgstr ""
+
+#: ../../c-api/init_config.rst:270
+msgid ""
+"If equals to ``1``, read the LC_CTYPE locale to decide if it should be "
+"coerced."
+msgstr ""
+
+#: ../../c-api/init_config.rst:275 ../../c-api/init_config.rst:281
+msgid "Default: ``-1`` in Python config, ``0`` in isolated config."
+msgstr ""
+"За замовчуванням: ``-1`` у конфігурації Python, ``0`` в ізольованій "
+"конфігурації."
+
+#: ../../c-api/init_config.rst:279
+msgid "If non-zero, emit a warning if the C locale is coerced."
+msgstr ""
+"Якщо значення відмінне від нуля, видати попередження, якщо локаль C виведена"
+" примусово."
+
+#: ../../c-api/init_config.rst:285
+msgid ""
+":ref:`Python Development Mode <devmode>`: see :c:member:`PyConfig.dev_mode`."
+msgstr ""
+
+#: ../../c-api/init_config.rst:288 ../../c-api/init_config.rst:679
+#: ../../c-api/init_config.rst:721 ../../c-api/init_config.rst:1174
+msgid "Default: ``-1`` in Python mode, ``0`` in isolated mode."
+msgstr "Типове значення: ``-1`` в режимі Python, ``0`` в ізольованому режимі."
+
+#: ../../c-api/init_config.rst:292
+msgid "Isolated mode: see :c:member:`PyConfig.isolated`."
+msgstr "Ізольований режим: див. :c:member:`PyConfig.isolated`."
+
+#: ../../c-api/init_config.rst:294 ../../c-api/init_config.rst:866
+msgid "Default: ``0`` in Python mode, ``1`` in isolated mode."
+msgstr "Типове значення: ``0`` в режимі Python, ``1`` в ізольованому режимі."
+
+#: ../../c-api/init_config.rst:298
+msgid "If non-zero:"
+msgstr "Якщо відмінне від нуля:"
+
+#: ../../c-api/init_config.rst:300
+msgid "Set :c:member:`PyPreConfig.utf8_mode` to ``0``,"
+msgstr "Установіть :c:member:`PyPreConfig.utf8_mode` на ``0``,"
+
+#: ../../c-api/init_config.rst:301
+msgid "Set :c:member:`PyConfig.filesystem_encoding` to ``\"mbcs\"``,"
+msgstr "Установіть :c:member:`PyConfig.filesystem_encoding` на ``\"mbcs\"``,"
+
+#: ../../c-api/init_config.rst:302
+msgid "Set :c:member:`PyConfig.filesystem_errors` to ``\"replace\"``."
+msgstr "Установіть :c:member:`PyConfig.filesystem_errors` на ``\"replace\"``."
+
+#: ../../c-api/init_config.rst:304
+msgid ""
+"Initialized the from :envvar:`PYTHONLEGACYWINDOWSFSENCODING` environment "
+"variable value."
+msgstr ""
+"Ініціалізовано значення змінної середовища from "
+":envvar:`PYTHONLEGACYWINDOWSFSENCODING`."
+
+#: ../../c-api/init_config.rst:307 ../../c-api/init_config.rst:880
+msgid ""
+"Only available on Windows. ``#ifdef MS_WINDOWS`` macro can be used for "
+"Windows specific code."
+msgstr ""
+"Доступно лише для Windows. Макрос ``#ifdef MS_WINDOWS`` можна "
+"використовувати для спеціального коду Windows."
+
+#: ../../c-api/init_config.rst:310 ../../c-api/init_config.rst:618
+#: ../../c-api/init_config.rst:625 ../../c-api/init_config.rst:692
+#: ../../c-api/init_config.rst:801 ../../c-api/init_config.rst:815
+#: ../../c-api/init_config.rst:829 ../../c-api/init_config.rst:883
+#: ../../c-api/init_config.rst:897 ../../c-api/init_config.rst:957
+#: ../../c-api/init_config.rst:1009 ../../c-api/init_config.rst:1069
+#: ../../c-api/init_config.rst:1109 ../../c-api/init_config.rst:1138
+#: ../../c-api/init_config.rst:1225
+msgid "Default: ``0``."
+msgstr "Типове значення: ``0``."
+
+#: ../../c-api/init_config.rst:314
+msgid ""
+"If non-zero, :c:func:`Py_PreInitializeFromArgs` and "
+":c:func:`Py_PreInitializeFromBytesArgs` parse their ``argv`` argument the "
+"same way the regular Python parses command line arguments: see :ref:`Command"
+" Line Arguments <using-on-cmdline>`."
+msgstr ""
+"Якщо значення відмінне від нуля, :c:func:`Py_PreInitializeFromArgs` і "
+":c:func:`Py_PreInitializeFromBytesArgs` аналізують свій аргумент ``argv`` "
+"так само, як звичайний Python аналізує аргументи командного рядка: див. "
+":ref:`Аргументи командного рядка <using-on-cmdline>`."
+
+#: ../../c-api/init_config.rst:323
+msgid ""
+"Use :ref:`environment variables <using-on-envvars>`? See "
+":c:member:`PyConfig.use_environment`."
+msgstr ""
+"Використовувати :ref:`змінні середовища <using-on-envvars>`? Перегляньте "
+":c:member:`PyConfig.use_environment`."
+
+#: ../../c-api/init_config.rst:326 ../../c-api/init_config.rst:1199
+msgid "Default: ``1`` in Python config and ``0`` in isolated config."
+msgstr ""
+"За замовчуванням: ``1`` у конфігурації Python і ``0`` в ізольованій "
+"конфігурації."
+
+#: ../../c-api/init_config.rst:330
+msgid "If non-zero, enable the :ref:`Python UTF-8 Mode <utf8-mode>`."
+msgstr "Якщо не нуль, увімкніть :ref:`Режим Python UTF-8 <utf8-mode>`."
+
+#: ../../c-api/init_config.rst:332
+msgid ""
+"Set to ``0`` or ``1`` by the :option:`-X utf8 <-X>` command line option and "
+"the :envvar:`PYTHONUTF8` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:335
+msgid "Also set to ``1`` if the ``LC_CTYPE`` locale is ``C`` or ``POSIX``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:337
+msgid "Default: ``-1`` in Python config and ``0`` in isolated config."
+msgstr ""
+"За замовчуванням: ``-1`` у конфігурації Python і ``0`` в ізольованій "
+"конфігурації."
+
+#: ../../c-api/init_config.rst:343
+msgid "Preinitialize Python with PyPreConfig"
+msgstr "Попередня ініціалізація Python за допомогою PyPreConfig"
+
+#: ../../c-api/init_config.rst:345
+msgid "The preinitialization of Python:"
+msgstr "Попередня ініціалізація Python:"
+
+#: ../../c-api/init_config.rst:347
+msgid "Set the Python memory allocators (:c:member:`PyPreConfig.allocator`)"
+msgstr ""
+"Встановіть розподільники пам’яті Python (:c:member:`PyPreConfig.allocator`)"
+
+#: ../../c-api/init_config.rst:348
+msgid "Configure the LC_CTYPE locale (:term:`locale encoding`)"
+msgstr "Налаштувати локаль LC_CTYPE (:term:`locale encoding`)"
+
+#: ../../c-api/init_config.rst:349
+msgid ""
+"Set the :ref:`Python UTF-8 Mode <utf8-mode>` "
+"(:c:member:`PyPreConfig.utf8_mode`)"
+msgstr ""
+"Установіть режим :ref:`Python UTF-8 Mode <utf8-mode>` "
+"(:c:member:`PyPreConfig.utf8_mode`)"
+
+#: ../../c-api/init_config.rst:352
+msgid ""
+"The current preconfiguration (``PyPreConfig`` type) is stored in "
+"``_PyRuntime.preconfig``."
+msgstr ""
+"Поточна попередня конфігурація (тип ``PyPreConfig``) зберігається в "
+"``_PyRuntime.preconfig``."
+
+#: ../../c-api/init_config.rst:355
+msgid "Functions to preinitialize Python:"
+msgstr "Функції для попередньої ініціалізації Python:"
+
+#: ../../c-api/init_config.rst:359 ../../c-api/init_config.rst:365
+#: ../../c-api/init_config.rst:374
+msgid "Preinitialize Python from *preconfig* preconfiguration."
+msgstr ""
+"Попередньо ініціалізуйте Python із попередньої конфігурації *preconfig*."
+
+#: ../../c-api/init_config.rst:361 ../../c-api/init_config.rst:370
+#: ../../c-api/init_config.rst:379
+msgid "*preconfig* must not be ``NULL``."
+msgstr "*preconfig* не має бути ``NULL``."
+
+#: ../../c-api/init_config.rst:367
+msgid ""
+"Parse *argv* command line arguments (bytes strings) if "
+":c:member:`~PyPreConfig.parse_argv` of *preconfig* is non-zero."
+msgstr ""
+"Проаналізуйте аргументи командного рядка *argv* (рядки байтів), якщо "
+":c:member:`~PyPreConfig.parse_argv` *preconfig* не дорівнює нулю."
+
+#: ../../c-api/init_config.rst:376
+msgid ""
+"Parse *argv* command line arguments (wide strings) if "
+":c:member:`~PyPreConfig.parse_argv` of *preconfig* is non-zero."
+msgstr ""
+"Проаналізуйте аргументи командного рядка *argv* (широкі рядки), якщо "
+":c:member:`~PyPreConfig.parse_argv` *preconfig* не дорівнює нулю."
+
+#: ../../c-api/init_config.rst:381 ../../c-api/init_config.rst:1287
+msgid ""
+"The caller is responsible to handle exceptions (error or exit) using "
+":c:func:`PyStatus_Exception` and :c:func:`Py_ExitStatusException`."
+msgstr ""
+"Виклик відповідає за обробку винятків (помилка або вихід) за допомогою "
+":c:func:`PyStatus_Exception` і :c:func:`Py_ExitStatusException`."
+
+#: ../../c-api/init_config.rst:384
+msgid ""
+"For :ref:`Python Configuration <init-python-config>` "
+"(:c:func:`PyPreConfig_InitPythonConfig`), if Python is initialized with "
+"command line arguments, the command line arguments must also be passed to "
+"preinitialize Python, since they have an effect on the pre-configuration "
+"like encodings. For example, the :option:`-X utf8 <-X>` command line option "
+"enables the :ref:`Python UTF-8 Mode <utf8-mode>`."
+msgstr ""
+"Для :ref:`Конфігурації Python <init-python-config>` "
+"(:c:func:`PyPreConfig_InitPythonConfig`), якщо Python ініціалізовано "
+"аргументами командного рядка, аргументи командного рядка також потрібно "
+"передати для попередньої ініціалізації Python, оскільки вони впливають на "
+"попередні конфігурація, як кодування. Наприклад, параметр командного рядка "
+":option:`-X utf8 <-X>` вмикає :ref:`Режим Python UTF-8 <utf8-mode>`."
+
+#: ../../c-api/init_config.rst:391
+msgid ""
+"``PyMem_SetAllocator()`` can be called after :c:func:`Py_PreInitialize` and "
+"before :c:func:`Py_InitializeFromConfig` to install a custom memory "
+"allocator. It can be called before :c:func:`Py_PreInitialize` if "
+":c:member:`PyPreConfig.allocator` is set to ``PYMEM_ALLOCATOR_NOT_SET``."
+msgstr ""
+"``PyMem_SetAllocator()`` можна викликати після :c:func:`Py_PreInitialize` і "
+"перед :c:func:`Py_InitializeFromConfig`, щоб встановити спеціальний "
+"розподільник пам’яті. Його можна викликати перед :c:func:`Py_PreInitialize`,"
+" якщо :c:member:`PyPreConfig.allocator` має значення "
+"``PYMEM_ALLOCATOR_NOT_SET``."
+
+#: ../../c-api/init_config.rst:396
+msgid ""
+"Python memory allocation functions like :c:func:`PyMem_RawMalloc` must not "
+"be used before the Python preinitialization, whereas calling directly "
+"``malloc()`` and ``free()`` is always safe. :c:func:`Py_DecodeLocale` must "
+"not be called before the Python preinitialization."
+msgstr ""
+"Функції виділення пам’яті Python, такі як :c:func:`PyMem_RawMalloc`, не "
+"можна використовувати до попередньої ініціалізації Python, тоді як прямий "
+"виклик ``malloc()`` і ``free()`` завжди безпечний. :c:func:`Py_DecodeLocale`"
+" не можна викликати до попередньої ініціалізації Python."
+
+#: ../../c-api/init_config.rst:401
+msgid ""
+"Example using the preinitialization to enable the :ref:`Python UTF-8 Mode "
+"<utf8-mode>`::"
+msgstr ""
+"Приклад використання попередньої ініціалізації для ввімкнення режиму "
+":ref:`Python UTF-8 <utf8-mode>`::"
+
+#: ../../c-api/init_config.rst:423
+msgid "PyConfig"
+msgstr "PyConfig"
+
+#: ../../c-api/init_config.rst:427
+msgid "Structure containing most parameters to configure Python."
+msgstr "Структура, що містить більшість параметрів для налаштування Python."
+
+#: ../../c-api/init_config.rst:429
+msgid ""
+"When done, the :c:func:`PyConfig_Clear` function must be used to release the"
+" configuration memory."
+msgstr ""
+"Після завершення необхідно використати функцію :c:func:`PyConfig_Clear`, щоб"
+" звільнити конфігураційну пам’ять."
+
+#: ../../c-api/init_config.rst:432
+msgid "Structure methods:"
+msgstr "Методи будови:"
+
+#: ../../c-api/init_config.rst:436
+msgid ""
+"Initialize configuration with the :ref:`Python Configuration <init-python-"
+"config>`."
+msgstr ""
+"Ініціалізуйте конфігурацію за допомогою :ref:`Налаштування Python <init-"
+"python-config>`."
+
+#: ../../c-api/init_config.rst:441
+msgid ""
+"Initialize configuration with the :ref:`Isolated Configuration <init-"
+"isolated-conf>`."
+msgstr ""
+"Ініціалізуйте конфігурацію за допомогою :ref:`ізольованої конфігурації "
+"<init-isolated-conf>`."
+
+#: ../../c-api/init_config.rst:446
+msgid "Copy the wide character string *str* into ``*config_str``."
+msgstr "Скопіюйте широкий символьний рядок *str* у ``*config_str``."
+
+#: ../../c-api/init_config.rst:448 ../../c-api/init_config.rst:455
+#: ../../c-api/init_config.rst:462 ../../c-api/init_config.rst:470
+#: ../../c-api/init_config.rst:476 ../../c-api/init_config.rst:493
+msgid ":ref:`Preinitialize Python <c-preinit>` if needed."
+msgstr ":ref:`Попередньо ініціалізуйте Python <c-preinit>`, якщо потрібно."
+
+#: ../../c-api/init_config.rst:452
+msgid ""
+"Decode *str* using :c:func:`Py_DecodeLocale` and set the result into "
+"``*config_str``."
+msgstr ""
+"Декодуйте *str* за допомогою :c:func:`Py_DecodeLocale` і встановіть "
+"результат у ``*config_str``."
+
+#: ../../c-api/init_config.rst:459
+msgid ""
+"Set command line arguments (:c:member:`~PyConfig.argv` member of *config*) "
+"from the *argv* list of wide character strings."
+msgstr ""
+"Установіть аргументи командного рядка (:c:member:`~PyConfig.argv` член "
+"*config*) зі списку *argv* рядків широких символів."
+
+#: ../../c-api/init_config.rst:466
+msgid ""
+"Set command line arguments (:c:member:`~PyConfig.argv` member of *config*) "
+"from the *argv* list of bytes strings. Decode bytes using "
+":c:func:`Py_DecodeLocale`."
+msgstr ""
+"Установіть аргументи командного рядка (:c:member:`~PyConfig.argv` член "
+"*config*) зі списку *argv* рядків байтів. Декодуйте байти за допомогою "
+":c:func:`Py_DecodeLocale`."
+
+#: ../../c-api/init_config.rst:474
+msgid "Set the list of wide strings *list* to *length* and *items*."
+msgstr ""
+"Установіть для списку широких рядків *list* значення *length* і *items*."
+
+#: ../../c-api/init_config.rst:480
+msgid "Read all Python configuration."
+msgstr "Прочитайте всю конфігурацію Python."
+
+#: ../../c-api/init_config.rst:482
+msgid "Fields which are already initialized are left unchanged."
+msgstr "Поля, які вже ініціалізовані, залишаються без змін."
+
+#: ../../c-api/init_config.rst:484
+msgid ""
+"Fields for :ref:`path configuration <init-path-config>` are no longer "
+"calculated or modified when calling this function, as of Python 3.11."
+msgstr ""
+
+#: ../../c-api/init_config.rst:487 ../../c-api/init_config.rst:986
+msgid ""
+"The :c:func:`PyConfig_Read` function only parses :c:member:`PyConfig.argv` "
+"arguments once: :c:member:`PyConfig.parse_argv` is set to ``2`` after "
+"arguments are parsed. Since Python arguments are strippped from "
+":c:member:`PyConfig.argv`, parsing arguments twice would parse the "
+"application options as Python options."
+msgstr ""
+"Функція :c:func:`PyConfig_Read` аналізує аргументи :c:member:`PyConfig.argv`"
+" лише один раз: :c:member:`PyConfig.parse_argv` має значення ``2`` після "
+"аналізу аргументів. Оскільки аргументи Python видаляються з "
+":c:member:`PyConfig.argv`, двічі аналізуючи аргументи, параметри програми "
+"будуть аналізуватися як параметри Python."
+
+#: ../../c-api/init_config.rst:495
+msgid ""
+"The :c:member:`PyConfig.argv` arguments are now only parsed once, "
+":c:member:`PyConfig.parse_argv` is set to ``2`` after arguments are parsed, "
+"and arguments are only parsed if :c:member:`PyConfig.parse_argv` equals "
+"``1``."
+msgstr ""
+"Аргументи :c:member:`PyConfig.argv` тепер аналізуються лише один раз, "
+":c:member:`PyConfig.parse_argv` встановлюється на ``2`` після аналізу "
+"аргументів, і аргументи аналізуються, лише якщо "
+":c:member:`PyConfig.parse_argv` дорівнює ``1``."
+
+#: ../../c-api/init_config.rst:501
+msgid ""
+":c:func:`PyConfig_Read` no longer calculates all paths, and so fields listed"
+" under :ref:`Python Path Configuration <init-path-config>` may no longer be "
+"updated until :c:func:`Py_InitializeFromConfig` is called."
+msgstr ""
+
+#: ../../c-api/init_config.rst:509
+msgid "Release configuration memory."
+msgstr "Звільніть конфігураційну пам'ять."
+
+#: ../../c-api/init_config.rst:511
+msgid ""
+"Most ``PyConfig`` methods :ref:`preinitialize Python <c-preinit>` if needed."
+" In that case, the Python preinitialization configuration "
+"(:c:type:`PyPreConfig`) in based on the :c:type:`PyConfig`. If configuration"
+" fields which are in common with :c:type:`PyPreConfig` are tuned, they must "
+"be set before calling a :c:type:`PyConfig` method:"
+msgstr ""
+"Більшість методів ``PyConfig`` :ref:`за необхідності попередньо "
+"ініціалізують Python <c-preinit>`. У цьому випадку конфігурація попередньої "
+"ініціалізації Python (:c:type:`PyPreConfig`) базується на "
+":c:type:`PyConfig`. Якщо поля конфігурації, які є спільними з "
+":c:type:`PyPreConfig`, налаштовано, їх потрібно встановити перед викликом "
+"методу :c:type:`PyConfig`:"
+
+#: ../../c-api/init_config.rst:517
+msgid ":c:member:`PyConfig.dev_mode`"
+msgstr ":c:member:`PyConfig.dev_mode`"
+
+#: ../../c-api/init_config.rst:518
+msgid ":c:member:`PyConfig.isolated`"
+msgstr ":c:member:`PyConfig.isolated`"
+
+#: ../../c-api/init_config.rst:519
+msgid ":c:member:`PyConfig.parse_argv`"
+msgstr ":c:member:`PyConfig.parse_argv`"
+
+#: ../../c-api/init_config.rst:520
+msgid ":c:member:`PyConfig.use_environment`"
+msgstr ":c:member:`PyConfig.use_environment`"
+
+#: ../../c-api/init_config.rst:522
+msgid ""
+"Moreover, if :c:func:`PyConfig_SetArgv` or :c:func:`PyConfig_SetBytesArgv` "
+"is used, this method must be called before other methods, since the "
+"preinitialization configuration depends on command line arguments (if "
+":c:member:`parse_argv` is non-zero)."
+msgstr ""
+"Крім того, якщо :c:func:`PyConfig_SetArgv` або "
+":c:func:`PyConfig_SetBytesArgv` використовується, цей метод має бути "
+"викликаний перед іншими методами, оскільки конфігурація попередньої "
+"ініціалізації залежить від аргументів командного рядка (якщо "
+":c:member:`parse_argv` не дорівнює нулю)."
+
+#: ../../c-api/init_config.rst:527
+msgid ""
+"The caller of these methods is responsible to handle exceptions (error or "
+"exit) using ``PyStatus_Exception()`` and ``Py_ExitStatusException()``."
+msgstr ""
+"Виклик цих методів відповідає за обробку винятків (помилка або вихід) за "
+"допомогою ``PyStatus_Exception()`` і ``Py_ExitStatusException()``."
+
+#: ../../c-api/init_config.rst:534
+msgid "Command line arguments: :data:`sys.argv`."
+msgstr "Аргументи командного рядка: :data:`sys.argv`."
+
+#: ../../c-api/init_config.rst:536
+msgid ""
+"Set :c:member:`~PyConfig.parse_argv` to ``1`` to parse "
+":c:member:`~PyConfig.argv` the same way the regular Python parses Python "
+"command line arguments and then to strip Python arguments from "
+":c:member:`~PyConfig.argv`."
+msgstr ""
+"Установіть для :c:member:`~PyConfig.parse_argv` значення ``1``, щоб "
+"аналізувати :c:member:`~PyConfig.argv` так само, як звичайний Python "
+"аналізує аргументи командного рядка Python, а потім видаляти аргументи "
+"Python з :c:member:`~PyConfig.argv`."
+
+#: ../../c-api/init_config.rst:541
+msgid ""
+"If :c:member:`~PyConfig.argv` is empty, an empty string is added to ensure "
+"that :data:`sys.argv` always exists and is never empty."
+msgstr ""
+"Якщо :c:member:`~PyConfig.argv` порожній, додається порожній рядок, щоб "
+"гарантувати, що :data:`sys.argv` завжди існує і ніколи не буде порожнім."
+
+#: ../../c-api/init_config.rst:544 ../../c-api/init_config.rst:571
+#: ../../c-api/init_config.rst:583 ../../c-api/init_config.rst:591
+#: ../../c-api/init_config.rst:699 ../../c-api/init_config.rst:708
+#: ../../c-api/init_config.rst:790 ../../c-api/init_config.rst:927
+#: ../../c-api/init_config.rst:1028 ../../c-api/init_config.rst:1046
+#: ../../c-api/init_config.rst:1060 ../../c-api/init_config.rst:1077
+#: ../../c-api/init_config.rst:1090 ../../c-api/init_config.rst:1098
+msgid "Default: ``NULL``."
+msgstr "Типове значення: ``NULL``."
+
+#: ../../c-api/init_config.rst:546
+msgid "See also the :c:member:`~PyConfig.orig_argv` member."
+msgstr "Дивіться також елемент :c:member:`~PyConfig.orig_argv`."
+
+#: ../../c-api/init_config.rst:550
+msgid ""
+"If equals to zero, ``Py_RunMain()`` prepends a potentially unsafe path to "
+":data:`sys.path` at startup:"
+msgstr ""
+
+#: ../../c-api/init_config.rst:553
+msgid ""
+"If :c:member:`argv[0] <PyConfig.argv>` is equal to ``L\"-m\"`` (``python -m "
+"module``), prepend the current working directory."
+msgstr ""
+
+#: ../../c-api/init_config.rst:555
+msgid ""
+"If running a script (``python script.py``), prepend the script's directory."
+"  If it's a symbolic link, resolve symbolic links."
+msgstr ""
+
+#: ../../c-api/init_config.rst:557
+msgid ""
+"Otherwise (``python -c code`` and ``python``), prepend an empty string, "
+"which means the current working directory."
+msgstr ""
+
+#: ../../c-api/init_config.rst:560
+msgid ""
+"Set to ``1`` by the :option:`-P` command line option and the "
+":envvar:`PYTHONSAFEPATH` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:563
+msgid "Default: ``0`` in Python config, ``1`` in isolated config."
+msgstr ""
+
+#: ../../c-api/init_config.rst:569
+msgid ":data:`sys.base_exec_prefix`."
+msgstr ":data:`sys.base_exec_prefix`."
+
+#: ../../c-api/init_config.rst:573 ../../c-api/init_config.rst:585
+#: ../../c-api/init_config.rst:593 ../../c-api/init_config.rst:701
+#: ../../c-api/init_config.rst:710 ../../c-api/init_config.rst:944
+#: ../../c-api/init_config.rst:1030
+msgid ""
+"Part of the :ref:`Python Path Configuration <init-path-config>` output."
+msgstr ""
+"Частина виведення :ref:`Налаштування шляху Python <init-path-config>`."
+
+#: ../../c-api/init_config.rst:577
+msgid "Python base executable: :data:`sys._base_executable`."
+msgstr "Базовий виконуваний файл Python: :data:`sys._base_executable`."
+
+#: ../../c-api/init_config.rst:579
+msgid "Set by the :envvar:`__PYVENV_LAUNCHER__` environment variable."
+msgstr "Встановлюється змінною середовища :envvar:`__PYVENV_LAUNCHER__`."
+
+#: ../../c-api/init_config.rst:581
+msgid "Set from :c:member:`PyConfig.executable` if ``NULL``."
+msgstr "Установити з :c:member:`PyConfig.executable`, якщо ``NULL``."
+
+#: ../../c-api/init_config.rst:589
+msgid ":data:`sys.base_prefix`."
+msgstr ":data:`sys.base_prefix`."
+
+#: ../../c-api/init_config.rst:597
+msgid ""
+"If equals to ``0`` and :c:member:`~PyConfig.configure_c_stdio` is non-zero, "
+"disable buffering on the C streams stdout and stderr."
+msgstr ""
+
+#: ../../c-api/init_config.rst:600
+msgid ""
+"Set to ``0`` by the :option:`-u` command line option and the "
+":envvar:`PYTHONUNBUFFERED` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:603
+msgid "stdin is always opened in buffered mode."
+msgstr "stdin завжди відкривається в режимі буферизації."
+
+#: ../../c-api/init_config.rst:605 ../../c-api/init_config.rst:638
+#: ../../c-api/init_config.rst:1126 ../../c-api/init_config.rst:1257
+msgid "Default: ``1``."
+msgstr "Типове значення: ``1``."
+
+#: ../../c-api/init_config.rst:609
+msgid ""
+"If equals to ``1``, issue a warning when comparing :class:`bytes` or "
+":class:`bytearray` with :class:`str`, or comparing :class:`bytes` with "
+":class:`int`."
+msgstr ""
+
+#: ../../c-api/init_config.rst:613
+msgid ""
+"If equal or greater to ``2``, raise a :exc:`BytesWarning` exception in these"
+" cases."
+msgstr ""
+
+#: ../../c-api/init_config.rst:616
+msgid "Incremented by the :option:`-b` command line option."
+msgstr "Збільшується параметром командного рядка :option:`-b`."
+
+#: ../../c-api/init_config.rst:622
+msgid ""
+"If non-zero, emit a :exc:`EncodingWarning` warning when "
+":class:`io.TextIOWrapper` uses its default encoding. See :ref:`io-encoding-"
+"warning` for details."
+msgstr ""
+"Якщо не нуль, видавати попередження :exc:`EncodingWarning`, коли "
+":class:`io.TextIOWrapper` використовує кодування за замовчуванням. Дивіться "
+":ref:`io-encoding-warning` для деталей."
+
+#: ../../c-api/init_config.rst:631
+msgid ""
+"If equals to ``0``, disables the inclusion of the end line and column "
+"mappings in code objects. Also disables traceback printing carets to "
+"specific error locations."
+msgstr ""
+
+#: ../../c-api/init_config.rst:635
+msgid ""
+"Set to ``0`` by the :envvar:`PYTHONNODEBUGRANGES` environment variable and "
+"by the :option:`-X no_debug_ranges <-X>` command line option."
+msgstr ""
+
+#: ../../c-api/init_config.rst:644
+msgid ""
+"Control the validation behavior of hash-based ``.pyc`` files: value of the "
+":option:`--check-hash-based-pycs` command line option."
+msgstr ""
+"Керуйте поведінкою перевірки файлів ``.pyc`` на основі хешу: значення "
+"параметра командного рядка :option:`--check-hash-based-pycs`."
+
+#: ../../c-api/init_config.rst:647
+msgid "Valid values:"
+msgstr "Дійсні значення:"
+
+#: ../../c-api/init_config.rst:649
+msgid ""
+"``L\"always\"``: Hash the source file for invalidation regardless of value "
+"of the 'check_source' flag."
+msgstr ""
+"``L\"always\"``: хеш вихідного файлу для визнання недійсним незалежно від "
+"значення позначки 'check_source'."
+
+#: ../../c-api/init_config.rst:651
+msgid "``L\"never\"``: Assume that hash-based pycs always are valid."
+msgstr "``L\"never\"``: припустимо, що pics на основі хешу завжди дійсні."
+
+#: ../../c-api/init_config.rst:652
+msgid ""
+"``L\"default\"``: The 'check_source' flag in hash-based pycs determines "
+"invalidation."
+msgstr ""
+"``L\"default\"``: прапор 'check_source' у pycs на основі хешу визначає "
+"недійсність."
+
+#: ../../c-api/init_config.rst:655
+msgid "Default: ``L\"default\"``."
+msgstr "Типове значення: ``L\"default\"``."
+
+#: ../../c-api/init_config.rst:657
+msgid "See also :pep:`552` \"Deterministic pycs\"."
+msgstr "Дивіться також :pep:`552` \"Детерміновані фото\"."
+
+#: ../../c-api/init_config.rst:661
+msgid "If non-zero, configure C standard streams:"
+msgstr "Якщо не нуль, налаштуйте стандартні потоки C:"
+
+#: ../../c-api/init_config.rst:663
+msgid ""
+"On Windows, set the binary mode (``O_BINARY``) on stdin, stdout and stderr."
+msgstr ""
+"У Windows установіть бінарний режим (``O_BINARY``) для stdin, stdout і "
+"stderr."
+
+#: ../../c-api/init_config.rst:665
+msgid ""
+"If :c:member:`~PyConfig.buffered_stdio` equals zero, disable buffering of "
+"stdin, stdout and stderr streams."
+msgstr ""
+"Якщо :c:member:`~PyConfig.buffered_stdio` дорівнює нулю, вимкніть "
+"буферизацію потоків stdin, stdout і stderr."
+
+#: ../../c-api/init_config.rst:667
+msgid ""
+"If :c:member:`~PyConfig.interactive` is non-zero, enable stream buffering on"
+" stdin and stdout (only stdout on Windows)."
+msgstr ""
+"Якщо :c:member:`~PyConfig.interactive` не дорівнює нулю, увімкніть "
+"буферизацію потоку на stdin і stdout (лише stdout у Windows)."
+
+#: ../../c-api/init_config.rst:674
+msgid "If non-zero, enable the :ref:`Python Development Mode <devmode>`."
+msgstr "Якщо не нуль, увімкніть :ref:`Режим розробки Python <devmode>`."
+
+#: ../../c-api/init_config.rst:676
+msgid ""
+"Set to ``1`` by the :option:`-X dev <-X>` option and the "
+":envvar:`PYTHONDEVMODE` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:683
+msgid "Dump Python references?"
+msgstr "Скинути посилання на Python?"
+
+#: ../../c-api/init_config.rst:685
+msgid "If non-zero, dump all objects which are still alive at exit."
+msgstr ""
+"Якщо значення відмінне від нуля, скинути всі об’єкти, які ще живі при "
+"виході."
+
+#: ../../c-api/init_config.rst:687
+msgid "Set to ``1`` by the :envvar:`PYTHONDUMPREFS` environment variable."
+msgstr ""
+"Установіть значення ``1`` за допомогою змінної середовища "
+":envvar:`PYTHONDUMPREFS`."
+
+#: ../../c-api/init_config.rst:689
+msgid ""
+"Need a special build of Python with the ``Py_TRACE_REFS`` macro defined: see"
+" the :option:`configure --with-trace-refs option <--with-trace-refs>`."
+msgstr ""
+"Потрібна спеціальна збірка Python із визначеним макросом ``Py_TRACE_REFS``: "
+"перегляньте параметр :option:`configure --with-trace-refs <--with-trace-"
+"refs>`."
+
+#: ../../c-api/init_config.rst:696
+msgid ""
+"The site-specific directory prefix where the platform-dependent Python files"
+" are installed: :data:`sys.exec_prefix`."
+msgstr ""
+"Префікс каталогу сайту, де встановлено файли Python, залежні від платформи: "
+":data:`sys.exec_prefix`."
+
+#: ../../c-api/init_config.rst:705
+msgid ""
+"The absolute path of the executable binary for the Python interpreter: "
+":data:`sys.executable`."
+msgstr ""
+"Абсолютний шлях виконуваного двійкового файлу для інтерпретатора Python: "
+":data:`sys.executable`."
+
+#: ../../c-api/init_config.rst:714
+msgid "Enable faulthandler?"
+msgstr "Увімкнути обробник помилок?"
+
+#: ../../c-api/init_config.rst:716
+msgid "If non-zero, call :func:`faulthandler.enable` at startup."
+msgstr "Якщо не нуль, викликати :func:`faulthandler.enable` під час запуску."
+
+#: ../../c-api/init_config.rst:718
+msgid ""
+"Set to ``1`` by :option:`-X faulthandler <-X>` and the "
+":envvar:`PYTHONFAULTHANDLER` environment variable."
+msgstr ""
+"Установіть значення ``1`` за допомогою :option:`-X faulthandler <-X>` і "
+"змінної середовища :envvar:`PYTHONFAULTHANDLER`."
+
+#: ../../c-api/init_config.rst:725
+msgid ""
+":term:`Filesystem encoding <filesystem encoding and error handler>`: "
+":func:`sys.getfilesystemencoding`."
+msgstr ""
+":term:`Кодування файлової системи <filesystem encoding and error handler>`: "
+":func:`sys.getfilesystemencoding`."
+
+#: ../../c-api/init_config.rst:728
+msgid "On macOS, Android and VxWorks: use ``\"utf-8\"`` by default."
+msgstr "У macOS, Android і VxWorks: використовуйте ``\"utf-8\"`` за умовчанням."
+
+#: ../../c-api/init_config.rst:730
+msgid ""
+"On Windows: use ``\"utf-8\"`` by default, or ``\"mbcs\"`` if "
+":c:member:`~PyPreConfig.legacy_windows_fs_encoding` of :c:type:`PyPreConfig`"
+" is non-zero."
+msgstr ""
+"У Windows: використовуйте ``\"utf-8\"`` за замовчуванням або ``\"mbcs\"``, "
+"якщо :c:member:`~PyPreConfig.legacy_windows_fs_encoding` "
+":c:type:`PyPreConfig` не дорівнює нулю."
+
+#: ../../c-api/init_config.rst:734
+msgid "Default encoding on other platforms:"
+msgstr "Стандартне кодування на інших платформах:"
+
+#: ../../c-api/init_config.rst:736
+msgid "``\"utf-8\"`` if :c:member:`PyPreConfig.utf8_mode` is non-zero."
+msgstr "``\"utf-8\"``, якщо :c:member:`PyPreConfig.utf8_mode` не нульовий."
+
+#: ../../c-api/init_config.rst:737
+msgid ""
+"``\"ascii\"`` if Python detects that ``nl_langinfo(CODESET)`` announces the "
+"ASCII encoding, whereas the ``mbstowcs()`` function decodes from a different"
+" encoding (usually Latin1)."
+msgstr ""
+"``\"ascii\"``, якщо Python виявляє, що ``nl_langinfo(CODESET)`` повідомляє "
+"про кодування ASCII, тоді як функція ``mbstowcs()`` декодує з іншого "
+"кодування (зазвичай Latin1)."
+
+#: ../../c-api/init_config.rst:740
+msgid "``\"utf-8\"`` if ``nl_langinfo(CODESET)`` returns an empty string."
+msgstr "``\"utf-8\"``, якщо ``nl_langinfo(CODESET)`` повертає порожній рядок."
+
+#: ../../c-api/init_config.rst:741
+msgid ""
+"Otherwise, use the :term:`locale encoding`: ``nl_langinfo(CODESET)`` result."
+msgstr ""
+"В іншому випадку використовуйте результат :term:`locale encoding`: "
+"``nl_langinfo(CODESET)``."
+
+#: ../../c-api/init_config.rst:744
+msgid ""
+"At Python startup, the encoding name is normalized to the Python codec name."
+" For example, ``\"ANSI_X3.4-1968\"`` is replaced with ``\"ascii\"``."
+msgstr ""
+"Під час запуску Python назва кодування нормалізується до назви кодека "
+"Python. Наприклад, ``\"ANSI_X3.4-1968\"`` замінюється на ``\"ascii\"``."
+
+#: ../../c-api/init_config.rst:747
+msgid "See also the :c:member:`~PyConfig.filesystem_errors` member."
+msgstr "Дивіться також елемент :c:member:`~PyConfig.filesystem_errors`."
+
+#: ../../c-api/init_config.rst:751
+msgid ""
+":term:`Filesystem error handler <filesystem encoding and error handler>`: "
+":func:`sys.getfilesystemencodeerrors`."
+msgstr ""
+":term:`Обробник помилок файлової системи <filesystem encoding and error "
+"handler>`: :func:`sys.getfilesystemencodeerrors`."
+
+#: ../../c-api/init_config.rst:754
+msgid ""
+"On Windows: use ``\"surrogatepass\"`` by default, or ``\"replace\"``  if "
+":c:member:`~PyPreConfig.legacy_windows_fs_encoding` of :c:type:`PyPreConfig`"
+" is non-zero."
+msgstr ""
+"У Windows: використовуйте ``\"surrogatepass\"`` за замовчуванням або "
+"``\"replace\"``, якщо :c:member:`~PyPreConfig.legacy_windows_fs_encoding` "
+":c:type:`PyPreConfig` не дорівнює нулю."
+
+#: ../../c-api/init_config.rst:758
+msgid "On other platforms: use ``\"surrogateescape\"`` by default."
+msgstr ""
+"На інших платформах: використовуйте ``\"surrogateescape\"`` за умовчанням."
+
+#: ../../c-api/init_config.rst:760
+msgid "Supported error handlers:"
+msgstr "Підтримувані засоби обробки помилок:"
+
+#: ../../c-api/init_config.rst:762
+msgid "``\"strict\"``"
+msgstr "``\"суворий\"``"
+
+#: ../../c-api/init_config.rst:763
+msgid "``\"surrogateescape\"``"
+msgstr "``\"сурогатна втеча\"``"
+
+#: ../../c-api/init_config.rst:764
+msgid "``\"surrogatepass\"`` (only supported with the UTF-8 encoding)"
+msgstr "``\"surrogatepass\"`` (підтримується лише з кодуванням UTF-8)"
+
+#: ../../c-api/init_config.rst:766
+msgid "See also the :c:member:`~PyConfig.filesystem_encoding` member."
+msgstr "Дивіться також елемент :c:member:`~PyConfig.filesystem_encoding`."
+
+#: ../../c-api/init_config.rst:771
+msgid "Randomized hash function seed."
+msgstr "Рандомізоване початкове значення хеш-функції."
+
+#: ../../c-api/init_config.rst:773
+msgid ""
+"If :c:member:`~PyConfig.use_hash_seed` is zero, a seed is chosen randomly at"
+" Python startup, and :c:member:`~PyConfig.hash_seed` is ignored."
+msgstr ""
+"Якщо :c:member:`~PyConfig.use_hash_seed` дорівнює нулю, початкове значення "
+"вибирається випадковим чином під час запуску Python, а "
+":c:member:`~PyConfig.hash_seed` ігнорується."
+
+#: ../../c-api/init_config.rst:776
+msgid "Set by the :envvar:`PYTHONHASHSEED` environment variable."
+msgstr "Встановлюється змінною середовища :envvar:`PYTHONHASHSEED`."
+
+#: ../../c-api/init_config.rst:778
+msgid ""
+"Default *use_hash_seed* value: ``-1`` in Python mode, ``0`` in isolated "
+"mode."
+msgstr ""
+"Значення *use_hash_seed* за замовчуванням: ``-1`` у режимі Python, ``0`` в "
+"ізольованому режимі."
+
+#: ../../c-api/init_config.rst:783
+msgid "Python home directory."
+msgstr "Домашній каталог Python."
+
+#: ../../c-api/init_config.rst:785
+msgid ""
+"If :c:func:`Py_SetPythonHome` has been called, use its argument if it is not"
+" ``NULL``."
+msgstr ""
+"Якщо було викликано :c:func:`Py_SetPythonHome`, використовуйте його "
+"аргумент, якщо він не ``NULL``."
+
+#: ../../c-api/init_config.rst:788
+msgid "Set by the :envvar:`PYTHONHOME` environment variable."
+msgstr "Встановлюється змінною середовища :envvar:`PYTHONHOME`."
+
+#: ../../c-api/init_config.rst:792 ../../c-api/init_config.rst:909
+#: ../../c-api/init_config.rst:929 ../../c-api/init_config.rst:1018
+#: ../../c-api/init_config.rst:1048
+msgid "Part of the :ref:`Python Path Configuration <init-path-config>` input."
+msgstr ""
+"Частина вхідних даних :ref:`Налаштування шляху Python <init-path-config>`."
+
+#: ../../c-api/init_config.rst:796
+msgid "If non-zero, profile import time."
+msgstr "Якщо не нуль, час імпорту профілю."
+
+#: ../../c-api/init_config.rst:798
+msgid ""
+"Set the ``1`` by the :option:`-X importtime <-X>` option and the "
+":envvar:`PYTHONPROFILEIMPORTTIME` environment variable."
+msgstr ""
+"Установіть ``1`` за допомогою параметра :option:`-X importtime <-X>` і "
+"змінної середовища :envvar:`PYTHONPROFILEIMPORTTIME`."
+
+#: ../../c-api/init_config.rst:805
+msgid "Enter interactive mode after executing a script or a command."
+msgstr "Увійти в інтерактивний режим після виконання сценарію або команди."
+
+#: ../../c-api/init_config.rst:807
+msgid ""
+"If greater than ``0``, enable inspect: when a script is passed as first "
+"argument or the -c option is used, enter interactive mode after executing "
+"the script or the command, even when :data:`sys.stdin` does not appear to be"
+" a terminal."
+msgstr ""
+
+#: ../../c-api/init_config.rst:812
+msgid ""
+"Incremented by the :option:`-i` command line option. Set to ``1`` if the "
+":envvar:`PYTHONINSPECT` environment variable is non-empty."
+msgstr ""
+"Збільшується параметром командного рядка :option:`-i`. Установіть значення "
+"``1``, якщо змінна середовища :envvar:`PYTHONINSPECT` не порожня."
+
+#: ../../c-api/init_config.rst:819
+msgid "Install Python signal handlers?"
+msgstr "Установити обробники сигналів Python?"
+
+#: ../../c-api/init_config.rst:821 ../../c-api/init_config.rst:992
+#: ../../c-api/init_config.rst:1016 ../../c-api/init_config.rst:1209
+msgid "Default: ``1`` in Python mode, ``0`` in isolated mode."
+msgstr "Типове значення: ``1`` в режимі Python, ``0`` в ізольованому режимі."
+
+#: ../../c-api/init_config.rst:825
+msgid "If greater than ``0``, enable the interactive mode (REPL)."
+msgstr ""
+
+#: ../../c-api/init_config.rst:827
+msgid "Incremented by the :option:`-i` command line option."
+msgstr "Збільшується параметром командного рядка :option:`-i`."
+
+#: ../../c-api/init_config.rst:833
+msgid ""
+"Configures the :ref:`integer string conversion length limitation "
+"<int_max_str_digits>`.  An initial value of ``-1`` means the value will be "
+"taken from the command line or environment or otherwise default to 4300 "
+"(:data:`sys.int_info.default_max_str_digits`).  A value of ``0`` disables "
+"the limitation.  Values greater than zero but less than 640 "
+"(:data:`sys.int_info.str_digits_check_threshold`) are unsupported and will "
+"produce an error."
+msgstr ""
+
+#: ../../c-api/init_config.rst:841
+msgid ""
+"Configured by the :option:`-X int_max_str_digits <-X>` command line flag or "
+"the :envvar:`PYTHONINTMAXSTRDIGITS` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:844
+msgid ""
+"Default: ``-1`` in Python mode.  4300 "
+"(:data:`sys.int_info.default_max_str_digits`) in isolated mode."
+msgstr ""
+
+#: ../../c-api/init_config.rst:851
+msgid "If greater than ``0``, enable isolated mode:"
+msgstr ""
+
+#: ../../c-api/init_config.rst:853
+msgid ""
+"Set :c:member:`~PyConfig.safe_path` to ``1``: don't prepend a potentially "
+"unsafe path to :data:`sys.path` at Python startup, such as the current "
+"directory, the script's directory or an empty string."
+msgstr ""
+
+#: ../../c-api/init_config.rst:857
+msgid ""
+"Set :c:member:`~PyConfig.use_environment` to ``0``: ignore ``PYTHON`` "
+"environment variables."
+msgstr ""
+
+#: ../../c-api/init_config.rst:859
+msgid ""
+"Set :c:member:`~PyConfig.user_site_directory` to ``0``: don't add the user "
+"site directory to :data:`sys.path`."
+msgstr ""
+
+#: ../../c-api/init_config.rst:861
+msgid ""
+"Python REPL doesn't import :mod:`readline` nor enable default readline "
+"configuration on interactive prompts."
+msgstr ""
+"Python REPL не імпортує :mod:`readline` і не вмикає стандартну конфігурацію "
+"readline в інтерактивних підказках."
+
+#: ../../c-api/init_config.rst:864
+msgid "Set to ``1`` by the :option:`-I` command line option."
+msgstr ""
+
+#: ../../c-api/init_config.rst:868
+msgid ""
+"See also the :ref:`Isolated Configuration <init-isolated-conf>` and "
+":c:member:`PyPreConfig.isolated`."
+msgstr ""
+
+#: ../../c-api/init_config.rst:873
+msgid ""
+"If non-zero, use :class:`io.FileIO` instead of :class:`io.WindowsConsoleIO` "
+"for :data:`sys.stdin`, :data:`sys.stdout` and :data:`sys.stderr`."
+msgstr ""
+"Якщо значення не нульове, використовуйте :class:`io.FileIO` замість "
+":class:`io.WindowsConsoleIO` для :data:`sys.stdin`, :data:`sys.stdout` і "
+":data:`sys.stderr`."
+
+#: ../../c-api/init_config.rst:877
+msgid ""
+"Set to ``1`` if the :envvar:`PYTHONLEGACYWINDOWSSTDIO` environment variable "
+"is set to a non-empty string."
+msgstr ""
+"Установіть значення ``1``, якщо змінна середовища "
+":envvar:`PYTHONLEGACYWINDOWSSTDIO` має значення непорожнього рядка."
+
+#: ../../c-api/init_config.rst:885
+msgid "See also the :pep:`528` (Change Windows console encoding to UTF-8)."
+msgstr ""
+"Дивіться також :pep:`528` (Змінити кодування консолі Windows на UTF-8)."
+
+#: ../../c-api/init_config.rst:889
+msgid ""
+"If non-zero, dump statistics on :ref:`Python pymalloc memory allocator "
+"<pymalloc>` at exit."
+msgstr ""
+"Якщо значення відмінне від нуля, вивести статистику на :ref:`Python pymalloc"
+" memory allocator <pymalloc>` при виході."
+
+#: ../../c-api/init_config.rst:892
+msgid "Set to ``1`` by the :envvar:`PYTHONMALLOCSTATS` environment variable."
+msgstr ""
+"Установіть значення ``1`` за допомогою змінної середовища "
+":envvar:`PYTHONMALLOCSTATS`."
+
+#: ../../c-api/init_config.rst:894
+msgid ""
+"The option is ignored if Python is :option:`configured using the --without-"
+"pymalloc option <--without-pymalloc>`."
+msgstr ""
+"Параметр ігнорується, якщо Python :option:`налаштовано за допомогою "
+"параметра --without-pymalloc <--without-pymalloc>`."
+
+#: ../../c-api/init_config.rst:901
+msgid "Platform library directory name: :data:`sys.platlibdir`."
+msgstr "Назва каталогу бібліотеки платформи: :data:`sys.platlibdir`."
+
+#: ../../c-api/init_config.rst:903
+msgid "Set by the :envvar:`PYTHONPLATLIBDIR` environment variable."
+msgstr "Встановлюється змінною середовища :envvar:`PYTHONPLATLIBDIR`."
+
+#: ../../c-api/init_config.rst:905
+msgid ""
+"Default: value of the ``PLATLIBDIR`` macro which is set by the "
+":option:`configure --with-platlibdir option <--with-platlibdir>` (default: "
+"``\"lib\"``, or ``\"DLLs\"`` on Windows)."
+msgstr ""
+
+#: ../../c-api/init_config.rst:913
+msgid ""
+"This macro is now used on Windows to locate the standard library extension "
+"modules, typically under ``DLLs``. However, for compatibility, note that "
+"this value is ignored for any non-standard layouts, including in-tree builds"
+" and virtual environments."
+msgstr ""
+
+#: ../../c-api/init_config.rst:922
+msgid ""
+"Module search paths (:data:`sys.path`) as a string separated by ``DELIM`` "
+"(:data:`os.path.pathsep`)."
+msgstr ""
+"Шляхи пошуку модуля (:data:`sys.path`) у вигляді рядка, розділеного "
+"``DELIM`` (:data:`os.path.pathsep`)."
+
+#: ../../c-api/init_config.rst:925
+msgid "Set by the :envvar:`PYTHONPATH` environment variable."
+msgstr "Встановлюється змінною середовища :envvar:`PYTHONPATH`."
+
+#: ../../c-api/init_config.rst:934
+msgid "Module search paths: :data:`sys.path`."
+msgstr "Шляхи пошуку модуля: :data:`sys.path`."
+
+#: ../../c-api/init_config.rst:936
+msgid ""
+"If :c:member:`~PyConfig.module_search_paths_set` is equal to ``0``, "
+":c:func:`Py_InitializeFromConfig` will replace "
+":c:member:`~PyConfig.module_search_paths` and sets "
+":c:member:`~PyConfig.module_search_paths_set` to ``1``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:941
+msgid ""
+"Default: empty list (``module_search_paths``) and ``0`` "
+"(``module_search_paths_set``)."
+msgstr ""
+"За замовчуванням: порожній список (``module_search_paths``) і ``0`` "
+"(``module_search_paths_set``)."
+
+#: ../../c-api/init_config.rst:948
+msgid "Compilation optimization level:"
+msgstr "Рівень оптимізації компіляції:"
+
+#: ../../c-api/init_config.rst:950
+msgid "``0``: Peephole optimizer, set ``__debug__`` to ``True``."
+msgstr "``0``: оптимізатор Peephole, встановіть ``__debug__`` на ``True``."
+
+#: ../../c-api/init_config.rst:951
+msgid "``1``: Level 0, remove assertions, set ``__debug__`` to ``False``."
+msgstr ""
+"``1``: Рівень 0, видалити твердження, встановити ``__debug__`` на ``False``."
+
+#: ../../c-api/init_config.rst:952
+msgid "``2``: Level 1, strip docstrings."
+msgstr "``2``: Рівень 1, рядки документації."
+
+#: ../../c-api/init_config.rst:954
+msgid ""
+"Incremented by the :option:`-O` command line option. Set to the "
+":envvar:`PYTHONOPTIMIZE` environment variable value."
+msgstr ""
+"Збільшується параметром командного рядка :option:`-O`. Установіть значення "
+"змінної середовища :envvar:`PYTHONOPTIMIZE`."
+
+#: ../../c-api/init_config.rst:961
+msgid ""
+"The list of the original command line arguments passed to the Python "
+"executable: :data:`sys.orig_argv`."
+msgstr ""
+"Список вихідних аргументів командного рядка, переданих у виконуваний файл "
+"Python: :data:`sys.orig_argv`."
+
+#: ../../c-api/init_config.rst:964
+msgid ""
+"If :c:member:`~PyConfig.orig_argv` list is empty and "
+":c:member:`~PyConfig.argv` is not a list only containing an empty string, "
+":c:func:`PyConfig_Read` copies :c:member:`~PyConfig.argv` into "
+":c:member:`~PyConfig.orig_argv` before modifying :c:member:`~PyConfig.argv` "
+"(if :c:member:`~PyConfig.parse_argv` is non-zero)."
+msgstr ""
+"Якщо список :c:member:`~PyConfig.orig_argv` порожній і "
+":c:member:`~PyConfig.argv` не є списком, який містить лише порожній рядок, "
+":c:func:`PyConfig_Read` копіює :c:member:`~PyConfig.argv` в "
+":c:member:`~PyConfig.orig_argv` перед зміною :c:member:`~PyConfig.argv` "
+"(якщо :c:member:`~PyConfig.parse_argv` не дорівнює нулю) ."
+
+#: ../../c-api/init_config.rst:971
+msgid ""
+"See also the :c:member:`~PyConfig.argv` member and the "
+":c:func:`Py_GetArgcArgv` function."
+msgstr ""
+"Дивіться також член :c:member:`~PyConfig.argv` і функцію "
+":c:func:`Py_GetArgcArgv`."
+
+#: ../../c-api/init_config.rst:974 ../../c-api/init_config.rst:1244
+#: ../../c-api/init_config.rst:1263
+msgid "Default: empty list."
+msgstr "За замовчуванням: порожній список."
+
+#: ../../c-api/init_config.rst:980
+msgid "Parse command line arguments?"
+msgstr "Розібрати аргументи командного рядка?"
+
+#: ../../c-api/init_config.rst:982
+msgid ""
+"If equals to ``1``, parse :c:member:`~PyConfig.argv` the same way the "
+"regular Python parses :ref:`command line arguments <using-on-cmdline>`, and "
+"strip Python arguments from :c:member:`~PyConfig.argv`."
+msgstr ""
+"Якщо дорівнює ``1``, аналізувати :c:member:`~PyConfig.argv` так само, як "
+"звичайний Python аналізує :ref:`аргументи командного рядка <using-on-"
+"cmdline>`, і видаляти аргументи Python з :c:member:`~PyConfig.argv`."
+
+#: ../../c-api/init_config.rst:994
+msgid ""
+"The :c:member:`PyConfig.argv` arguments are now only parsed if "
+":c:member:`PyConfig.parse_argv` equals to ``1``."
+msgstr ""
+"Аргументи :c:member:`PyConfig.argv` тепер аналізуються, лише якщо "
+":c:member:`PyConfig.parse_argv` дорівнює ``1``."
+
+#: ../../c-api/init_config.rst:1000
+msgid ""
+"Parser debug mode. If greater than ``0``, turn on parser debugging output "
+"(for expert only, depending on compilation options)."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1003
+msgid ""
+"Incremented by the :option:`-d` command line option. Set to the "
+":envvar:`PYTHONDEBUG` environment variable value."
+msgstr ""
+"Збільшується параметром командного рядка :option:`-d`. Установіть значення "
+"змінної середовища :envvar:`PYTHONDEBUG`."
+
+#: ../../c-api/init_config.rst:1006
+msgid ""
+"Need a :ref:`debug build of Python <debug-build>` (the ``Py_DEBUG`` macro "
+"must be defined)."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1013
+msgid ""
+"If non-zero, calculation of path configuration is allowed to log warnings "
+"into ``stderr``. If equals to ``0``, suppress these warnings."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1020
+msgid "Now also applies on Windows."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1025
+msgid ""
+"The site-specific directory prefix where the platform independent Python "
+"files are installed: :data:`sys.prefix`."
+msgstr ""
+"Префікс каталогу сайту, де встановлено незалежні від платформи файли Python:"
+" :data:`sys.prefix`."
+
+#: ../../c-api/init_config.rst:1034
+msgid ""
+"Program name used to initialize :c:member:`~PyConfig.executable` and in "
+"early error messages during Python initialization."
+msgstr ""
+"Ім’я програми, що використовується для ініціалізації "
+":c:member:`~PyConfig.executable` і в ранніх повідомленнях про помилки під "
+"час ініціалізації Python."
+
+#: ../../c-api/init_config.rst:1037
+msgid "If :func:`Py_SetProgramName` has been called, use its argument."
+msgstr ""
+"Якщо було викликано :func:`Py_SetProgramName`, використовуйте його аргумент."
+
+#: ../../c-api/init_config.rst:1038
+msgid "On macOS, use :envvar:`PYTHONEXECUTABLE` environment variable if set."
+msgstr ""
+"У macOS використовуйте змінну середовища :envvar:`PYTHONEXECUTABLE`, якщо "
+"встановлено."
+
+#: ../../c-api/init_config.rst:1039
+msgid ""
+"If the ``WITH_NEXT_FRAMEWORK`` macro is defined, use "
+":envvar:`__PYVENV_LAUNCHER__` environment variable if set."
+msgstr ""
+"Якщо визначено макрос ``WITH_NEXT_FRAMEWORK``, використовуйте змінну "
+"середовища :envvar:`__PYVENV_LAUNCHER__`, якщо встановлено."
+
+#: ../../c-api/init_config.rst:1041
+msgid ""
+"Use ``argv[0]`` of :c:member:`~PyConfig.argv` if available and non-empty."
+msgstr ""
+"Використовуйте ``argv[0]`` :c:member:`~PyConfig.argv`, якщо доступний і не є"
+" порожнім."
+
+#: ../../c-api/init_config.rst:1043
+msgid ""
+"Otherwise, use ``L\"python\"`` on Windows, or ``L\"python3\"`` on other "
+"platforms."
+msgstr ""
+"В іншому випадку використовуйте ``L\"python\"`` у Windows або "
+"``L\"python3\"`` на інших платформах."
+
+#: ../../c-api/init_config.rst:1052
+msgid ""
+"Directory where cached ``.pyc`` files are written: "
+":data:`sys.pycache_prefix`."
+msgstr ""
+"Каталог, де записуються кешовані файли ``.pyc``: :data:`sys.pycache_prefix`."
+
+#: ../../c-api/init_config.rst:1055
+msgid ""
+"Set by the :option:`-X pycache_prefix=PATH <-X>` command line option and the"
+" :envvar:`PYTHONPYCACHEPREFIX` environment variable."
+msgstr ""
+"Встановлюється параметром командного рядка :option:`-X pycache_prefix=PATH "
+"<-X>` і змінною середовища :envvar:`PYTHONPYCACHEPREFIX`."
+
+#: ../../c-api/init_config.rst:1058
+msgid "If ``NULL``, :data:`sys.pycache_prefix` is set to ``None``."
+msgstr "Якщо ``NULL``, :data:`sys.pycache_prefix` має значення ``None``."
+
+#: ../../c-api/init_config.rst:1064
+msgid ""
+"Quiet mode. If greater than ``0``, don't display the copyright and version "
+"at Python startup in interactive mode."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1067
+msgid "Incremented by the :option:`-q` command line option."
+msgstr "Збільшується параметром командного рядка :option:`-q`."
+
+#: ../../c-api/init_config.rst:1073
+msgid "Value of the :option:`-c` command line option."
+msgstr "Значення параметра командного рядка :option:`-c`."
+
+#: ../../c-api/init_config.rst:1075 ../../c-api/init_config.rst:1096
+msgid "Used by :c:func:`Py_RunMain`."
+msgstr "Використовується :c:func:`Py_RunMain`."
+
+#: ../../c-api/init_config.rst:1081
+msgid ""
+"Filename passed on the command line: trailing command line argument without "
+":option:`-c` or :option:`-m`. It is used by the :c:func:`Py_RunMain` "
+"function."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1085
+msgid ""
+"For example, it is set to ``script.py`` by the ``python3 script.py arg`` "
+"command line."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1088
+msgid "See also the :c:member:`PyConfig.skip_source_first_line` option."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1094
+msgid "Value of the :option:`-m` command line option."
+msgstr "Значення параметра командного рядка :option:`-m`."
+
+#: ../../c-api/init_config.rst:1102
+msgid "Show total reference count at exit?"
+msgstr "Показати загальну кількість посилань на виході?"
+
+#: ../../c-api/init_config.rst:1104
+msgid "Set to ``1`` by :option:`-X showrefcount <-X>` command line option."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1106
+msgid ""
+"Need a :ref:`debug build of Python <debug-build>` (the ``Py_REF_DEBUG`` "
+"macro must be defined)."
+msgstr ""
+"Потрібна :ref:`налагоджувальна збірка Python <debug-build>` (повинен бути "
+"визначений макрос ``Py_REF_DEBUG``)."
+
+#: ../../c-api/init_config.rst:1113
+msgid "Import the :mod:`site` module at startup?"
+msgstr "Імпортувати модуль :mod:`site` під час запуску?"
+
+#: ../../c-api/init_config.rst:1115
+msgid ""
+"If equal to zero, disable the import of the module site and the site-"
+"dependent manipulations of :data:`sys.path` that it entails."
+msgstr ""
+"Якщо дорівнює нулю, вимкніть імпорт сайту модуля та залежні від сайту "
+"маніпуляції :data:`sys.path`, які він тягне за собою."
+
+#: ../../c-api/init_config.rst:1118
+msgid ""
+"Also disable these manipulations if the :mod:`site` module is explicitly "
+"imported later (call :func:`site.main` if you want them to be triggered)."
+msgstr ""
+"Також вимкніть ці маніпуляції, якщо модуль :mod:`site` буде явно імпортовано"
+" пізніше (викличте :func:`site.main`, якщо ви хочете, щоб вони були "
+"активовані)."
+
+#: ../../c-api/init_config.rst:1121
+msgid "Set to ``0`` by the :option:`-S` command line option."
+msgstr ""
+"Установіть ``0`` за допомогою параметра командного рядка :option:`-S`."
+
+#: ../../c-api/init_config.rst:1123
+msgid ""
+":data:`sys.flags.no_site` is set to the inverted value of "
+":c:member:`~PyConfig.site_import`."
+msgstr ""
+":data:`sys.flags.no_site` встановлюється на обернене значення "
+":c:member:`~PyConfig.site_import`."
+
+#: ../../c-api/init_config.rst:1130
+msgid ""
+"If non-zero, skip the first line of the :c:member:`PyConfig.run_filename` "
+"source."
+msgstr ""
+"Якщо значення не нульове, пропустіть перший рядок джерела "
+":c:member:`PyConfig.run_filename`."
+
+#: ../../c-api/init_config.rst:1133
+msgid ""
+"It allows the usage of non-Unix forms of ``#!cmd``. This is intended for a "
+"DOS specific hack only."
+msgstr ""
+"Це дозволяє використовувати не-Unix форми ``#!cmd``. Це призначено лише для "
+"спеціального злому DOS."
+
+#: ../../c-api/init_config.rst:1136
+msgid "Set to ``1`` by the :option:`-x` command line option."
+msgstr ""
+"Установіть значення ``1`` за допомогою параметра командного рядка "
+":option:`-x`."
+
+#: ../../c-api/init_config.rst:1143
+msgid ""
+"Encoding and encoding errors of :data:`sys.stdin`, :data:`sys.stdout` and "
+":data:`sys.stderr` (but :data:`sys.stderr` always uses "
+"``\"backslashreplace\"`` error handler)."
+msgstr ""
+"Кодування та помилки кодування :data:`sys.stdin`, :data:`sys.stdout` і "
+":data:`sys.stderr` (але :data:`sys.stderr` завжди використовує "
+"``\"backslashreplace\"`` обробник помилок)."
+
+#: ../../c-api/init_config.rst:1147
+msgid ""
+"If :c:func:`Py_SetStandardStreamEncoding` has been called, use its *error* "
+"and *errors* arguments if they are not ``NULL``."
+msgstr ""
+"Якщо було викликано :c:func:`Py_SetStandardStreamEncoding`, використовуйте "
+"його аргументи *error* і *errors*, якщо вони не є ``NULL``."
+
+#: ../../c-api/init_config.rst:1150
+msgid ""
+"Use the :envvar:`PYTHONIOENCODING` environment variable if it is non-empty."
+msgstr ""
+"Використовуйте змінну середовища :envvar:`PYTHONIOENCODING`, якщо вона "
+"непорожня."
+
+#: ../../c-api/init_config.rst:1153
+msgid "Default encoding:"
+msgstr "Стандартне кодування:"
+
+#: ../../c-api/init_config.rst:1155
+msgid "``\"UTF-8\"`` if :c:member:`PyPreConfig.utf8_mode` is non-zero."
+msgstr "``\"UTF-8\"``, якщо :c:member:`PyPreConfig.utf8_mode` не нульовий."
+
+#: ../../c-api/init_config.rst:1156
+msgid "Otherwise, use the :term:`locale encoding`."
+msgstr "В іншому випадку використовуйте :term:`locale encoding`."
+
+#: ../../c-api/init_config.rst:1158
+msgid "Default error handler:"
+msgstr "Обробник помилок за замовчуванням:"
+
+#: ../../c-api/init_config.rst:1160
+msgid "On Windows: use ``\"surrogateescape\"``."
+msgstr "У Windows: використовуйте ``\"surrogateescape\"``."
+
+#: ../../c-api/init_config.rst:1161
+msgid ""
+"``\"surrogateescape\"`` if :c:member:`PyPreConfig.utf8_mode` is non-zero, or"
+" if the LC_CTYPE locale is \"C\" or \"POSIX\"."
+msgstr ""
+"``\"surrogateescape\"``, якщо :c:member:`PyPreConfig.utf8_mode` не нульовий,"
+" або якщо LC_CTYPE локаль \"C\" або \"POSIX\"."
+
+#: ../../c-api/init_config.rst:1163
+msgid "``\"strict\"`` otherwise."
+msgstr "``\"строгий\"`` інакше."
+
+#: ../../c-api/init_config.rst:1167
+msgid "Enable tracemalloc?"
+msgstr "Увімкнути tracemalloc?"
+
+#: ../../c-api/init_config.rst:1169
+msgid "If non-zero, call :func:`tracemalloc.start` at startup."
+msgstr "Якщо не нуль, викликати :func:`tracemalloc.start` під час запуску."
+
+#: ../../c-api/init_config.rst:1171
+msgid ""
+"Set by :option:`-X tracemalloc=N <-X>` command line option and by the "
+":envvar:`PYTHONTRACEMALLOC` environment variable."
+msgstr ""
+"Встановлюється параметром командного рядка :option:`-X tracemalloc=N <-X>` і"
+" змінною середовища :envvar:`PYTHONTRACEMALLOC`."
+
+#: ../../c-api/init_config.rst:1178
+msgid "Enable compatibility mode with the perf profiler?"
+msgstr ""
+
+#: ../../c-api/init_config.rst:1180
+msgid ""
+"If non-zero, initialize the perf trampoline. See :ref:`perf_profiling` for "
+"more information."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1183
+msgid ""
+"Set by :option:`-X perf <-X>` command line option and by the "
+":envvar:`PYTHONPERFSUPPORT` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1186
+msgid "Default: ``-1``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1192
+msgid "Use :ref:`environment variables <using-on-envvars>`?"
+msgstr "Використовувати :ref:`змінні середовища <using-on-envvars>`?"
+
+#: ../../c-api/init_config.rst:1194
+msgid ""
+"If equals to zero, ignore the :ref:`environment variables <using-on-"
+"envvars>`."
+msgstr ""
+"Якщо дорівнює нулю, ігноруйте :ref:`змінні середовища <using-on-envvars>`."
+
+#: ../../c-api/init_config.rst:1197
+msgid "Set to ``0`` by the :option:`-E` environment variable."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1203
+msgid "If non-zero, add the user site directory to :data:`sys.path`."
+msgstr ""
+"Якщо значення не нульове, додайте каталог сайту користувача до "
+":data:`sys.path`."
+
+#: ../../c-api/init_config.rst:1205
+msgid ""
+"Set to ``0`` by the :option:`-s` and :option:`-I` command line options."
+msgstr ""
+"Установіть значення ``0`` за допомогою параметрів командного рядка "
+":option:`-s` і :option:`-I`."
+
+#: ../../c-api/init_config.rst:1207
+msgid "Set to ``0`` by the :envvar:`PYTHONNOUSERSITE` environment variable."
+msgstr ""
+"Установлено значення ``0`` за допомогою змінної середовища "
+":envvar:`PYTHONNOUSERSITE`."
+
+#: ../../c-api/init_config.rst:1213
+msgid ""
+"Verbose mode. If greater than ``0``, print a message each time a module is "
+"imported, showing the place (filename or built-in module) from which it is "
+"loaded."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1217
+msgid ""
+"If greater than or equal to ``2``, print a message for each file that is "
+"checked for when searching for a module. Also provides information on module"
+" cleanup at exit."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1221
+msgid "Incremented by the :option:`-v` command line option."
+msgstr "Збільшується параметром командного рядка :option:`-v`."
+
+#: ../../c-api/init_config.rst:1223
+msgid "Set by the :envvar:`PYTHONVERBOSE` environment variable value."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1229
+msgid ""
+"Options of the :mod:`warnings` module to build warnings filters, lowest to "
+"highest priority: :data:`sys.warnoptions`."
+msgstr ""
+"Параметри модуля :mod:`warnings` для створення фільтрів попереджень, від "
+"найнижчого до найвищого пріоритету: :data:`sys.warnoptions`."
+
+#: ../../c-api/init_config.rst:1232
+msgid ""
+"The :mod:`warnings` module adds :data:`sys.warnoptions` in the reverse "
+"order: the last :c:member:`PyConfig.warnoptions` item becomes the first item"
+" of :data:`warnings.filters` which is checked first (highest priority)."
+msgstr ""
+"Модуль :mod:`warnings` додає :data:`sys.warnoptions` у зворотному порядку: "
+"останній елемент :c:member:`PyConfig.warnoptions` стає першим елементом "
+":data:`warnings.filters`, який є перевіряється першим (найвищий пріоритет)."
+
+#: ../../c-api/init_config.rst:1237
+msgid ""
+"The :option:`-W` command line options adds its value to "
+":c:member:`~PyConfig.warnoptions`, it can be used multiple times."
+msgstr ""
+"Параметр командного рядка :option:`-W` додає значення до "
+":c:member:`~PyConfig.warnoptions`, тому його можна використовувати кілька "
+"разів."
+
+#: ../../c-api/init_config.rst:1240
+msgid ""
+"The :envvar:`PYTHONWARNINGS` environment variable can also be used to add "
+"warning options. Multiple options can be specified, separated by commas "
+"(``,``)."
+msgstr ""
+"Змінну середовища :envvar:`PYTHONWARNINGS` також можна використовувати для "
+"додавання параметрів попередження. Можна вказати декілька параметрів, "
+"розділених комами (``,``)."
+
+#: ../../c-api/init_config.rst:1248
+msgid ""
+"If equal to ``0``, Python won't try to write ``.pyc`` files on the import of"
+" source modules."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1251
+msgid ""
+"Set to ``0`` by the :option:`-B` command line option and the "
+":envvar:`PYTHONDONTWRITEBYTECODE` environment variable."
+msgstr ""
+"Установіть значення ``0`` за допомогою параметра командного рядка "
+":option:`-B` і змінної середовища :envvar:`PYTHONDONTWRITEBYTECODE`."
+
+#: ../../c-api/init_config.rst:1254
+msgid ""
+":data:`sys.dont_write_bytecode` is initialized to the inverted value of "
+":c:member:`~PyConfig.write_bytecode`."
+msgstr ""
+":data:`sys.dont_write_bytecode` ініціалізується інвертованим значенням "
+":c:member:`~PyConfig.write_bytecode`."
+
+#: ../../c-api/init_config.rst:1261
+msgid ""
+"Values of the :option:`-X` command line options: :data:`sys._xoptions`."
+msgstr ""
+"Значення параметрів командного рядка :option:`-X`: :data:`sys._xoptions`."
+
+#: ../../c-api/init_config.rst:1265
+msgid ""
+"If :c:member:`~PyConfig.parse_argv` is non-zero, :c:member:`~PyConfig.argv` "
+"arguments are parsed the same way the regular Python parses :ref:`command "
+"line arguments <using-on-cmdline>`, and Python arguments are stripped from "
+":c:member:`~PyConfig.argv`."
+msgstr ""
+"Якщо :c:member:`~PyConfig.parse_argv` не дорівнює нулю, аргументи "
+":c:member:`~PyConfig.argv` аналізуються так само, як звичайний Python "
+"аналізує :ref:`аргументи командного рядка <using-on-cmdline>`, і Python "
+"аргументи видаляються з :c:member:`~PyConfig.argv`."
+
+#: ../../c-api/init_config.rst:1270
+msgid ""
+"The :c:member:`~PyConfig.xoptions` options are parsed to set other options: "
+"see the :option:`-X` command line option."
+msgstr ""
+"Параметри :c:member:`~PyConfig.xoptions` аналізуються, щоб встановити інші "
+"параметри: дивіться параметр командного рядка :option:`-X`."
+
+#: ../../c-api/init_config.rst:1275
+msgid "The ``show_alloc_count`` field has been removed."
+msgstr "Поле ``show_alloc_count`` видалено."
+
+#: ../../c-api/init_config.rst:1279
+msgid "Initialization with PyConfig"
+msgstr "Ініціалізація за допомогою PyConfig"
+
+#: ../../c-api/init_config.rst:1281
+msgid "Function to initialize Python:"
+msgstr "Функція для ініціалізації Python:"
+
+#: ../../c-api/init_config.rst:1285
+msgid "Initialize Python from *config* configuration."
+msgstr "Ініціалізація Python із конфігурації *config*."
+
+#: ../../c-api/init_config.rst:1290
+msgid ""
+"If :c:func:`PyImport_FrozenModules`, :c:func:`PyImport_AppendInittab` or "
+":c:func:`PyImport_ExtendInittab` are used, they must be set or called after "
+"Python preinitialization and before the Python initialization. If Python is "
+"initialized multiple times, :c:func:`PyImport_AppendInittab` or "
+":c:func:`PyImport_ExtendInittab` must be called before each Python "
+"initialization."
+msgstr ""
+"Якщо :c:func:`PyImport_FrozenModules`, :c:func:`PyImport_AppendInittab` або "
+":c:func:`PyImport_ExtendInittab` використовуються, їх потрібно встановити "
+"або викликати після попередньої ініціалізації Python та перед ініціалізацією"
+" Python. Якщо Python ініціалізовано кілька разів, перед кожною "
+"ініціалізацією Python потрібно викликати :c:func:`PyImport_AppendInittab` "
+"або :c:func:`PyImport_ExtendInittab`."
+
+#: ../../c-api/init_config.rst:1297
+msgid ""
+"The current configuration (``PyConfig`` type) is stored in "
+"``PyInterpreterState.config``."
+msgstr ""
+"Поточна конфігурація (тип ``PyConfig``) зберігається в "
+"``PyInterpreterState.config``."
+
+#: ../../c-api/init_config.rst:1300
+msgid "Example setting the program name::"
+msgstr "Приклад налаштування імені програми::"
+
+#: ../../c-api/init_config.rst:1328
+msgid ""
+"More complete example modifying the default configuration, read the "
+"configuration, and then override some parameters. Note that since 3.11, many"
+" parameters are not calculated until initialization, and so values cannot be"
+" read from the configuration structure. Any values set before initialize is "
+"called will be left unchanged by initialization::"
+msgstr ""
+
+#: ../../c-api/init_config.rst:1391
+msgid "Isolated Configuration"
+msgstr "Ізольована конфігурація"
+
+#: ../../c-api/init_config.rst:1393
+msgid ""
+":c:func:`PyPreConfig_InitIsolatedConfig` and "
+":c:func:`PyConfig_InitIsolatedConfig` functions create a configuration to "
+"isolate Python from the system. For example, to embed Python into an "
+"application."
+msgstr ""
+"Функції :c:func:`PyPreConfig_InitIsolatedConfig` і "
+":c:func:`PyConfig_InitIsolatedConfig` створюють конфігурацію для ізоляції "
+"Python від системи. Наприклад, щоб вбудувати Python у програму."
+
+#: ../../c-api/init_config.rst:1398
+msgid ""
+"This configuration ignores global configuration variables, environment "
+"variables, command line arguments (:c:member:`PyConfig.argv` is not parsed) "
+"and user site directory. The C standard streams (ex: ``stdout``) and the "
+"LC_CTYPE locale are left unchanged. Signal handlers are not installed."
+msgstr ""
+"Ця конфігурація ігнорує глобальні змінні конфігурації, змінні середовища, "
+"аргументи командного рядка (:c:member:`PyConfig.argv` не аналізується) і "
+"каталог сайту користувача. Стандартні потоки C (наприклад: ``stdout``) і "
+"локаль LC_CTYPE залишаються без змін. Обробники сигналів не встановлені."
+
+#: ../../c-api/init_config.rst:1403
+msgid ""
+"Configuration files are still used with this configuration to determine "
+"paths that are unspecified. Ensure :c:member:`PyConfig.home` is specified to"
+" avoid computing the default path configuration."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1411
+msgid "Python Configuration"
+msgstr "Конфігурація Python"
+
+#: ../../c-api/init_config.rst:1413
+msgid ""
+":c:func:`PyPreConfig_InitPythonConfig` and "
+":c:func:`PyConfig_InitPythonConfig` functions create a configuration to "
+"build a customized Python which behaves as the regular Python."
+msgstr ""
+"Функції :c:func:`PyPreConfig_InitPythonConfig` і "
+":c:func:`PyConfig_InitPythonConfig` створюють конфігурацію для створення "
+"налаштованого Python, який веде себе як звичайний Python."
+
+#: ../../c-api/init_config.rst:1417
+msgid ""
+"Environments variables and command line arguments are used to configure "
+"Python, whereas global configuration variables are ignored."
+msgstr ""
+"Для налаштування Python використовуються змінні середовища та аргументи "
+"командного рядка, тоді як глобальні змінні конфігурації ігноруються."
+
+#: ../../c-api/init_config.rst:1420
+msgid ""
+"This function enables C locale coercion (:pep:`538`) and :ref:`Python UTF-8 "
+"Mode <utf8-mode>` (:pep:`540`) depending on the LC_CTYPE locale, "
+":envvar:`PYTHONUTF8` and :envvar:`PYTHONCOERCECLOCALE` environment "
+"variables."
+msgstr ""
+"Ця функція вмикає примусове налаштування локалі C (:pep:`538`) і "
+":ref:`Python UTF-8 Mode <utf8-mode>` (:pep:`540`) залежно від локалі "
+"LC_CTYPE, :envvar:`PYTHONUTF8` і Змінні середовища "
+":envvar:`PYTHONCOERCECLOCALE`."
+
+#: ../../c-api/init_config.rst:1429
+msgid "Python Path Configuration"
+msgstr "Конфігурація шляху Python"
+
+#: ../../c-api/init_config.rst:1431
+msgid ""
+":c:type:`PyConfig` contains multiple fields for the path configuration:"
+msgstr ":c:type:`PyConfig` містить кілька полів для конфігурації шляху:"
+
+#: ../../c-api/init_config.rst:1433
+msgid "Path configuration inputs:"
+msgstr "Вхідні дані конфігурації шляху:"
+
+#: ../../c-api/init_config.rst:1435
+msgid ":c:member:`PyConfig.home`"
+msgstr ":c:member:`PyConfig.home`"
+
+#: ../../c-api/init_config.rst:1436
+msgid ":c:member:`PyConfig.platlibdir`"
+msgstr ":c:member:`PyConfig.platlibdir`"
+
+#: ../../c-api/init_config.rst:1437
+msgid ":c:member:`PyConfig.pathconfig_warnings`"
+msgstr ":c:member:`PyConfig.pathconfig_warnings`"
+
+#: ../../c-api/init_config.rst:1438
+msgid ":c:member:`PyConfig.program_name`"
+msgstr ":c:member:`PyConfig.program_name`"
+
+#: ../../c-api/init_config.rst:1439
+msgid ":c:member:`PyConfig.pythonpath_env`"
+msgstr ":c:member:`PyConfig.pythonpath_env`"
+
+#: ../../c-api/init_config.rst:1440
+msgid "current working directory: to get absolute paths"
+msgstr "поточний робочий каталог: щоб отримати абсолютні шляхи"
+
+#: ../../c-api/init_config.rst:1441
+msgid ""
+"``PATH`` environment variable to get the program full path (from "
+":c:member:`PyConfig.program_name`)"
+msgstr ""
+"Змінна середовища ``PATH``, щоб отримати повний шлях до програми (з "
+":c:member:`PyConfig.program_name`)"
+
+#: ../../c-api/init_config.rst:1443
+msgid "``__PYVENV_LAUNCHER__`` environment variable"
+msgstr "Змінна середовища ``__PYVENV_LAUNCHER__``"
+
+#: ../../c-api/init_config.rst:1444
+msgid ""
+"(Windows only) Application paths in the registry under "
+"\"Software\\Python\\PythonCore\\X.Y\\PythonPath\" of HKEY_CURRENT_USER and "
+"HKEY_LOCAL_MACHINE (where X.Y is the Python version)."
+msgstr ""
+"(Лише для Windows) Шляхи програм у реєстрі в розділі "
+"\"Software\\Python\\PythonCore\\X.Y\\PythonPath\" HKEY_CURRENT_USER і "
+"HKEY_LOCAL_MACHINE (де X.Y — версія Python)."
+
+#: ../../c-api/init_config.rst:1448
+msgid "Path configuration output fields:"
+msgstr "Поля виведення конфігурації шляху:"
+
+#: ../../c-api/init_config.rst:1450
+msgid ":c:member:`PyConfig.base_exec_prefix`"
+msgstr ":c:member:`PyConfig.base_exec_prefix`"
+
+#: ../../c-api/init_config.rst:1451
+msgid ":c:member:`PyConfig.base_executable`"
+msgstr ":c:member:`PyConfig.base_executable`"
+
+#: ../../c-api/init_config.rst:1452
+msgid ":c:member:`PyConfig.base_prefix`"
+msgstr ":c:member:`PyConfig.base_prefix`"
+
+#: ../../c-api/init_config.rst:1453
+msgid ":c:member:`PyConfig.exec_prefix`"
+msgstr ":c:member:`PyConfig.exec_prefix`"
+
+#: ../../c-api/init_config.rst:1454
+msgid ":c:member:`PyConfig.executable`"
+msgstr ":c:member:`PyConfig.executable`"
+
+#: ../../c-api/init_config.rst:1455
+msgid ""
+":c:member:`PyConfig.module_search_paths_set`, "
+":c:member:`PyConfig.module_search_paths`"
+msgstr ""
+":c:member:`PyConfig.module_search_paths_set`, "
+":c:member:`PyConfig.module_search_paths`"
+
+#: ../../c-api/init_config.rst:1457
+msgid ":c:member:`PyConfig.prefix`"
+msgstr ":c:member:`PyConfig.prefix`"
+
+#: ../../c-api/init_config.rst:1459
+msgid ""
+"If at least one \"output field\" is not set, Python calculates the path "
+"configuration to fill unset fields. If "
+":c:member:`~PyConfig.module_search_paths_set` is equal to ``0``, "
+":c:member:`~PyConfig.module_search_paths` is overridden and "
+":c:member:`~PyConfig.module_search_paths_set` is set to ``1``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1465
+msgid ""
+"It is possible to completely ignore the function calculating the default "
+"path configuration by setting explicitly all path configuration output "
+"fields listed above. A string is considered as set even if it is non-empty. "
+"``module_search_paths`` is considered as set if ``module_search_paths_set`` "
+"is set to ``1``. In this case, ``module_search_paths`` will be used without "
+"modification."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1472
+msgid ""
+"Set :c:member:`~PyConfig.pathconfig_warnings` to ``0`` to suppress warnings "
+"when calculating the path configuration (Unix only, Windows does not log any"
+" warning)."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1475
+msgid ""
+"If :c:member:`~PyConfig.base_prefix` or "
+":c:member:`~PyConfig.base_exec_prefix` fields are not set, they inherit "
+"their value from :c:member:`~PyConfig.prefix` and "
+":c:member:`~PyConfig.exec_prefix` respectively."
+msgstr ""
+"Якщо поля :c:member:`~PyConfig.base_prefix` або "
+":c:member:`~PyConfig.base_exec_prefix` не встановлені, вони успадковують "
+"свої значення від :c:member:`~PyConfig.prefix` і "
+":c:member:`~PyConfig.exec_prefix` відповідно."
+
+#: ../../c-api/init_config.rst:1479
+msgid ":c:func:`Py_RunMain` and :c:func:`Py_Main` modify :data:`sys.path`:"
+msgstr ":c:func:`Py_RunMain` і :c:func:`Py_Main` змінюють :data:`sys.path`:"
+
+#: ../../c-api/init_config.rst:1481
+msgid ""
+"If :c:member:`~PyConfig.run_filename` is set and is a directory which "
+"contains a ``__main__.py`` script, prepend "
+":c:member:`~PyConfig.run_filename` to :data:`sys.path`."
+msgstr ""
+"Якщо :c:member:`~PyConfig.run_filename` встановлено і це каталог, який "
+"містить сценарій ``__main__.py``, додайте :c:member:`~PyConfig.run_filename`"
+" до :data:`sys.path`."
+
+#: ../../c-api/init_config.rst:1484
+msgid "If :c:member:`~PyConfig.isolated` is zero:"
+msgstr "Якщо :c:member:`~PyConfig.isolated` дорівнює нулю:"
+
+#: ../../c-api/init_config.rst:1486
+msgid ""
+"If :c:member:`~PyConfig.run_module` is set, prepend the current directory to"
+" :data:`sys.path`. Do nothing if the current directory cannot be read."
+msgstr ""
+"Якщо встановлено :c:member:`~PyConfig.run_module`, додайте поточний каталог "
+"до :data:`sys.path`. Нічого не робити, якщо поточний каталог неможливо "
+"прочитати."
+
+#: ../../c-api/init_config.rst:1488
+msgid ""
+"If :c:member:`~PyConfig.run_filename` is set, prepend the directory of the "
+"filename to :data:`sys.path`."
+msgstr ""
+"Якщо встановлено :c:member:`~PyConfig.run_filename`, додайте каталог імені "
+"файлу перед :data:`sys.path`."
+
+#: ../../c-api/init_config.rst:1490
+msgid "Otherwise, prepend an empty string to :data:`sys.path`."
+msgstr "В іншому випадку додайте порожній рядок до :data:`sys.path`."
+
+#: ../../c-api/init_config.rst:1492
+msgid ""
+"If :c:member:`~PyConfig.site_import` is non-zero, :data:`sys.path` can be "
+"modified by the :mod:`site` module. If "
+":c:member:`~PyConfig.user_site_directory` is non-zero and the user's site-"
+"package directory exists, the :mod:`site` module appends the user's site-"
+"package directory to :data:`sys.path`."
+msgstr ""
+"Якщо :c:member:`~PyConfig.site_import` не дорівнює нулю, :data:`sys.path` "
+"можна змінити за допомогою модуля :mod:`site`. Якщо "
+":c:member:`~PyConfig.user_site_directory` не дорівнює нулю, а каталог "
+"пакетів сайту користувача існує, модуль :mod:`site` додає каталог пакетів "
+"сайту користувача до :data:`sys.path`."
+
+#: ../../c-api/init_config.rst:1498
+msgid "The following configuration files are used by the path configuration:"
+msgstr "У конфігурації шляху використовуються такі файли конфігурації:"
+
+#: ../../c-api/init_config.rst:1500
+msgid "``pyvenv.cfg``"
+msgstr "``pyvenv.cfg``"
+
+#: ../../c-api/init_config.rst:1501
+msgid "``._pth`` file (ex: ``python._pth``)"
+msgstr ""
+
+#: ../../c-api/init_config.rst:1502
+msgid "``pybuilddir.txt`` (Unix only)"
+msgstr "``pybuilddir.txt`` (лише Unix)"
+
+#: ../../c-api/init_config.rst:1504
+msgid "If a ``._pth`` file is present:"
+msgstr ""
+
+#: ../../c-api/init_config.rst:1506
+msgid "Set :c:member:`~PyConfig.isolated` to ``1``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1507
+msgid "Set :c:member:`~PyConfig.use_environment` to ``0``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1508
+msgid "Set :c:member:`~PyConfig.site_import` to ``0``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1509
+msgid "Set :c:member:`~PyConfig.safe_path` to ``1``."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1511
+msgid ""
+"The ``__PYVENV_LAUNCHER__`` environment variable is used to set "
+":c:member:`PyConfig.base_executable`"
+msgstr ""
+"Змінна середовища ``__PYVENV_LAUNCHER__`` використовується для встановлення "
+":c:member:`PyConfig.base_executable`"
+
+#: ../../c-api/init_config.rst:1516
+msgid "Py_RunMain()"
+msgstr "Py_RunMain()"
+
+#: ../../c-api/init_config.rst:1520
+msgid ""
+"Execute the command (:c:member:`PyConfig.run_command`), the script "
+"(:c:member:`PyConfig.run_filename`) or the module "
+"(:c:member:`PyConfig.run_module`) specified on the command line or in the "
+"configuration."
+msgstr ""
+"Виконайте команду (:c:member:`PyConfig.run_command`), сценарій "
+"(:c:member:`PyConfig.run_filename`) або модуль "
+"(:c:member:`PyConfig.run_module`), указані в командному рядку або в "
+"конфігурації."
+
+#: ../../c-api/init_config.rst:1525
+msgid "By default and when if :option:`-i` option is used, run the REPL."
+msgstr ""
+"За замовчуванням і якщо використовується параметр :option:`-i`, запустіть "
+"REPL."
+
+#: ../../c-api/init_config.rst:1527
+msgid ""
+"Finally, finalizes Python and returns an exit status that can be passed to "
+"the ``exit()`` function."
+msgstr ""
+"Нарешті завершує Python і повертає статус виходу, який можна передати "
+"функції ``exit()``."
+
+#: ../../c-api/init_config.rst:1530
+msgid ""
+"See :ref:`Python Configuration <init-python-config>` for an example of "
+"customized Python always running in isolated mode using "
+":c:func:`Py_RunMain`."
+msgstr ""
+"Перегляньте :ref:`Налаштування Python <init-python-config>` для прикладу "
+"налаштованого Python, який завжди працює в ізольованому режимі за допомогою "
+":c:func:`Py_RunMain`."
+
+#: ../../c-api/init_config.rst:1536
+msgid "Py_GetArgcArgv()"
+msgstr "Py_GetArgcArgv()"
+
+#: ../../c-api/init_config.rst:1540
+msgid "Get the original command line arguments, before Python modified them."
+msgstr ""
+"Отримайте оригінальні аргументи командного рядка до того, як Python їх "
+"змінив."
+
+#: ../../c-api/init_config.rst:1542
+msgid "See also :c:member:`PyConfig.orig_argv` member."
+msgstr "Дивіться також член :c:member:`PyConfig.orig_argv`."
+
+#: ../../c-api/init_config.rst:1546
+msgid "Multi-Phase Initialization Private Provisional API"
+msgstr "Приватний тимчасовий API багатофазної ініціалізації"
+
+#: ../../c-api/init_config.rst:1548
+msgid ""
+"This section is a private provisional API introducing multi-phase "
+"initialization, the core feature of :pep:`432`:"
+msgstr ""
+"Цей розділ є приватним тимчасовим API, який представляє багатофазову "
+"ініціалізацію, основну функцію :pep:`432`:"
+
+#: ../../c-api/init_config.rst:1551
+msgid "\"Core\" initialization phase, \"bare minimum Python\":"
+msgstr "Фаза ініціалізації \"Core\", \"мінімум Python\":"
+
+#: ../../c-api/init_config.rst:1553
+msgid "Builtin types;"
+msgstr "Вбудовані типи;"
+
+#: ../../c-api/init_config.rst:1554
+msgid "Builtin exceptions;"
+msgstr "Вбудовані винятки;"
+
+#: ../../c-api/init_config.rst:1555
+msgid "Builtin and frozen modules;"
+msgstr "Вбудовані та заморожені модулі;"
+
+#: ../../c-api/init_config.rst:1556
+msgid ""
+"The :mod:`sys` module is only partially initialized (ex: :data:`sys.path` "
+"doesn't exist yet)."
+msgstr ""
+"Модуль :mod:`sys` ініціалізовано лише частково (наприклад: :data:`sys.path` "
+"ще не існує)."
+
+#: ../../c-api/init_config.rst:1559
+msgid "\"Main\" initialization phase, Python is fully initialized:"
+msgstr "\"Основна\" фаза ініціалізації, Python повністю ініціалізовано:"
+
+#: ../../c-api/init_config.rst:1561
+msgid "Install and configure :mod:`importlib`;"
+msgstr "Встановити та налаштувати :mod:`importlib`;"
+
+#: ../../c-api/init_config.rst:1562
+msgid "Apply the :ref:`Path Configuration <init-path-config>`;"
+msgstr "Застосуйте :ref:`Конфігурацію шляху <init-path-config>`;"
+
+#: ../../c-api/init_config.rst:1563
+msgid "Install signal handlers;"
+msgstr "встановити обробники сигналів;"
+
+#: ../../c-api/init_config.rst:1564
+msgid ""
+"Finish :mod:`sys` module initialization (ex: create :data:`sys.stdout` and "
+":data:`sys.path`);"
+msgstr ""
+"Завершити ініціалізацію модуля :mod:`sys` (наприклад, створити "
+":data:`sys.stdout` і :data:`sys.path`);"
+
+#: ../../c-api/init_config.rst:1566
+msgid ""
+"Enable optional features like :mod:`faulthandler` and :mod:`tracemalloc`;"
+msgstr ""
+"Увімкнути додаткові функції, такі як :mod:`faulthandler` і "
+":mod:`tracemalloc`;"
+
+#: ../../c-api/init_config.rst:1567
+msgid "Import the :mod:`site` module;"
+msgstr "Імпортуйте модуль :mod:`site`;"
+
+#: ../../c-api/init_config.rst:1568
+msgid "etc."
+msgstr "тощо"
+
+#: ../../c-api/init_config.rst:1570
+msgid "Private provisional API:"
+msgstr "Приватний тимчасовий API:"
+
+#: ../../c-api/init_config.rst:1572
+msgid ""
+":c:member:`PyConfig._init_main`: if set to ``0``, "
+":c:func:`Py_InitializeFromConfig` stops at the \"Core\" initialization "
+"phase."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1577
+msgid ""
+"Move to the \"Main\" initialization phase, finish the Python initialization."
+msgstr "Перейдіть до фази ініціалізації \"Main\", завершіть ініціалізацію Python."
+
+#: ../../c-api/init_config.rst:1579
+msgid ""
+"No module is imported during the \"Core\" phase and the ``importlib`` module"
+" is not configured: the :ref:`Path Configuration <init-path-config>` is only"
+" applied during the \"Main\" phase. It may allow to customize Python in "
+"Python to override or tune the :ref:`Path Configuration <init-path-config>`,"
+" maybe install a custom :data:`sys.meta_path` importer or an import hook, "
+"etc."
+msgstr ""
+"Жоден модуль не імпортується під час фази \"Core\", а модуль ``importlib`` "
+"не налаштовано: :ref:`Конфігурація шляху <init-path-config>` застосовується "
+"лише під час фази \"Main\". Це може дозволити налаштувати Python у Python, "
+"щоб перевизначити або налаштувати :ref:`Конфігурацію шляху <init-path-"
+"config>`, можливо, встановити спеціальний імпортер :data:`sys.meta_path` або"
+" хук імпорту тощо."
+
+#: ../../c-api/init_config.rst:1585
+msgid ""
+"It may become possible to calculate the :ref:`Path Configuration <init-path-"
+"config>` in Python, after the Core phase and before the Main phase, which is"
+" one of the :pep:`432` motivation."
+msgstr ""
+
+#: ../../c-api/init_config.rst:1589
+msgid ""
+"The \"Core\" phase is not properly defined: what should be and what should "
+"not be available at this phase is not specified yet. The API is marked as "
+"private and provisional: the API can be modified or even be removed anytime "
+"until a proper public API is designed."
+msgstr ""
+"Фаза \"Core\" не визначена належним чином: що має бути, а що не має бути "
+"доступним на цій фазі, ще не визначено. API позначено як приватний і "
+"тимчасовий: API можна змінити або навіть видалити в будь-який час, доки не "
+"буде розроблено відповідний публічний API."
+
+#: ../../c-api/init_config.rst:1594
+msgid ""
+"Example running Python code between \"Core\" and \"Main\" initialization "
+"phases::"
+msgstr "Приклад виконання коду Python між фазами ініціалізації \"Core\" і \"Main\"::"
