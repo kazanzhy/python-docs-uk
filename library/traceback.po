@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-02 19:38+0000\n"
+"POT-Creation-Date: 2023-06-09 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -344,7 +344,7 @@ msgstr ""
 "Об’єкти :class:`TracebackException` створюються з фактичних винятків, щоб "
 "отримати дані для подальшого друку в спрощеному вигляді."
 
-#: ../../library/traceback.rst:222 ../../library/traceback.rst:296
+#: ../../library/traceback.rst:222 ../../library/traceback.rst:310
 msgid ""
 "Capture an exception for later rendering. *limit*, *lookup_lines* and "
 "*capture_locals* are as for the :class:`StackSummary` class."
@@ -364,7 +364,7 @@ msgstr ""
 "``__context__`` обчислюється, лише якщо ``__cause__`` має значення ``None``,"
 " а ``__suppress_context__`` має значення false."
 
-#: ../../library/traceback.rst:230 ../../library/traceback.rst:299
+#: ../../library/traceback.rst:230 ../../library/traceback.rst:313
 msgid ""
 "Note that when locals are captured, they are also shown in the traceback."
 msgstr ""
@@ -423,28 +423,40 @@ msgid "For syntax errors - the line number where the error occurred."
 msgstr "Для синтаксичних помилок - номер рядка, де сталася помилка."
 
 #: ../../library/traceback.rst:284
+msgid ""
+"For syntax errors - the end line number where the error occurred. Can be "
+"``None`` if not present."
+msgstr ""
+
+#: ../../library/traceback.rst:291
 msgid "For syntax errors - the text where the error occurred."
 msgstr "Для синтаксичних помилок - текст, де сталася помилка."
 
-#: ../../library/traceback.rst:288
+#: ../../library/traceback.rst:295
 msgid "For syntax errors - the offset into the text where the error occurred."
 msgstr "Для синтаксичних помилок - зміщення в тексті, де сталася помилка."
 
-#: ../../library/traceback.rst:292
+#: ../../library/traceback.rst:299
+msgid ""
+"For syntax errors - the end offset into the text where the error occurred. "
+"Can be ``None`` if not present."
+msgstr ""
+
+#: ../../library/traceback.rst:306
 msgid "For syntax errors - the compiler error message."
 msgstr "Для синтаксичних помилок - повідомлення про помилку компілятора."
 
-#: ../../library/traceback.rst:303
+#: ../../library/traceback.rst:317
 msgid ""
 "Print to *file* (default ``sys.stderr``) the exception information returned "
 "by :meth:`format`."
 msgstr ""
 
-#: ../../library/traceback.rst:310
+#: ../../library/traceback.rst:324
 msgid "Format the exception."
 msgstr "Відформатувати виняток."
 
-#: ../../library/traceback.rst:312
+#: ../../library/traceback.rst:326
 msgid ""
 "If *chain* is not ``True``, ``__cause__`` and ``__context__`` will not be "
 "formatted."
@@ -452,7 +464,7 @@ msgstr ""
 "Якщо *chain* не має значення ``True``, ``__cause__`` і ``__context__`` не "
 "будуть відформатовані."
 
-#: ../../library/traceback.rst:315
+#: ../../library/traceback.rst:329
 msgid ""
 "The return value is a generator of strings, each ending in a newline and "
 "some containing internal newlines. :func:`~traceback.print_exception` is a "
@@ -463,24 +475,24 @@ msgstr ""
 ":func:`~traceback.print_exception` є обгорткою цього методу, яка просто "
 "друкує рядки у файл."
 
-#: ../../library/traceback.rst:319 ../../library/traceback.rst:333
+#: ../../library/traceback.rst:333 ../../library/traceback.rst:347
 msgid ""
 "The message indicating which exception occurred is always the last string in"
 " the output."
 msgstr ""
 "Повідомлення, яке вказує на виняток, завжди є останнім рядком у виводі."
 
-#: ../../library/traceback.rst:324
+#: ../../library/traceback.rst:338
 msgid "Format the exception part of the traceback."
 msgstr "Відформатуйте частину винятку зворотного відстеження."
 
-#: ../../library/traceback.rst:326
+#: ../../library/traceback.rst:340
 msgid "The return value is a generator of strings, each ending in a newline."
 msgstr ""
 "Повернене значення є генератором рядків, кожен із яких закінчується символом"
 " нового рядка."
 
-#: ../../library/traceback.rst:328
+#: ../../library/traceback.rst:342
 msgid ""
 "Normally, the generator emits a single string; however, for "
 ":exc:`SyntaxError` exceptions, it emits several lines that (when printed) "
@@ -490,26 +502,26 @@ msgstr ""
 ":exc:`SyntaxError` видає кілька рядків, які (під час друку) відображають "
 "детальну інформацію про те, де сталася синтаксична помилка."
 
-#: ../../library/traceback.rst:336
+#: ../../library/traceback.rst:350
 msgid "Added the *compact* parameter."
 msgstr "Додано параметр *compact*."
 
-#: ../../library/traceback.rst:339
+#: ../../library/traceback.rst:353
 msgid "Added the *max_group_width* and *max_group_depth* parameters."
 msgstr ""
 
-#: ../../library/traceback.rst:344
+#: ../../library/traceback.rst:358
 msgid ":class:`StackSummary` Objects"
 msgstr ":class:`StackSummary` Об’єкти"
 
-#: ../../library/traceback.rst:348
+#: ../../library/traceback.rst:362
 msgid ""
 ":class:`StackSummary` objects represent a call stack ready for formatting."
 msgstr ""
 "Об'єкти :class:`StackSummary` представляють стек викликів, готовий до "
 "форматування."
 
-#: ../../library/traceback.rst:354
+#: ../../library/traceback.rst:368
 msgid ""
 "Construct a :class:`StackSummary` object from a frame generator (such as is "
 "returned by :func:`~traceback.walk_stack` or :func:`~traceback.walk_tb`)."
@@ -517,7 +529,7 @@ msgstr ""
 "Створіть об’єкт :class:`StackSummary` з генератора кадрів (наприклад, "
 "повертається :func:`~traceback.walk_stack` або :func:`~traceback.walk_tb`)."
 
-#: ../../library/traceback.rst:358
+#: ../../library/traceback.rst:372
 msgid ""
 "If *limit* is supplied, only this many frames are taken from *frame_gen*. If"
 " *lookup_lines* is ``False``, the returned :class:`FrameSummary` objects "
@@ -533,13 +545,13 @@ msgstr ""
 "не форматується). Якщо *capture_locals* має значення ``True``, локальні "
 "змінні в кожному :class:`FrameSummary` фіксуються як представлення об’єктів."
 
-#: ../../library/traceback.rst:366
+#: ../../library/traceback.rst:380
 msgid ""
 "Exceptions raised from :func:`repr` on a local variable (when "
 "*capture_locals* is ``True``) are no longer propagated to the caller."
 msgstr ""
 
-#: ../../library/traceback.rst:372
+#: ../../library/traceback.rst:386
 msgid ""
 "Construct a :class:`StackSummary` object from a supplied list of "
 ":class:`FrameSummary` objects or old-style list of tuples.  Each tuple "
@@ -549,7 +561,7 @@ msgstr ""
 ":class:`FrameSummary` або старого списку кортежів. Кожен кортеж має бути "
 "4-кортежем з елементами filename, lineno, name, line."
 
-#: ../../library/traceback.rst:378
+#: ../../library/traceback.rst:392
 msgid ""
 "Returns a list of strings ready for printing.  Each string in the resulting "
 "list corresponds to a single frame from the stack. Each string ends in a "
@@ -561,7 +573,7 @@ msgstr ""
 "рядка; рядки також можуть містити внутрішні символи нового рядка для "
 "елементів із рядками вихідного тексту."
 
-#: ../../library/traceback.rst:383
+#: ../../library/traceback.rst:397
 msgid ""
 "For long sequences of the same frame and line, the first few repetitions are"
 " shown, followed by a summary line stating the exact number of further "
@@ -571,11 +583,11 @@ msgstr ""
 "кілька повторів, за якими йде підсумковий рядок із зазначенням точної "
 "кількості подальших повторень."
 
-#: ../../library/traceback.rst:387
+#: ../../library/traceback.rst:401
 msgid "Long sequences of repeated frames are now abbreviated."
 msgstr "Довгі послідовності повторюваних кадрів тепер скорочуються."
 
-#: ../../library/traceback.rst:392
+#: ../../library/traceback.rst:406
 msgid ""
 "Returns a string for printing one of the frames involved in the stack. This "
 "method is called for each :class:`FrameSummary` object to be printed by "
@@ -583,16 +595,16 @@ msgid ""
 "from the output."
 msgstr ""
 
-#: ../../library/traceback.rst:401
+#: ../../library/traceback.rst:415
 msgid ":class:`FrameSummary` Objects"
 msgstr ":class:`FrameSummary` Об’єкти"
 
-#: ../../library/traceback.rst:405
+#: ../../library/traceback.rst:419
 msgid ""
 "A :class:`FrameSummary` object represents a single frame in a traceback."
 msgstr ""
 
-#: ../../library/traceback.rst:409
+#: ../../library/traceback.rst:423
 msgid ""
 "Represent a single frame in the traceback or stack that is being formatted "
 "or printed. It may optionally have a stringified version of the frames "
@@ -614,11 +626,11 @@ msgstr ""
 "словник змінних, і якщо його надати, представлення змінних зберігаються в "
 "підсумку для подальшого відображення."
 
-#: ../../library/traceback.rst:422
+#: ../../library/traceback.rst:436
 msgid "Traceback Examples"
 msgstr "Приклади відстеження"
 
-#: ../../library/traceback.rst:424
+#: ../../library/traceback.rst:438
 msgid ""
 "This simple example implements a basic read-eval-print loop, similar to (but"
 " less useful than) the standard Python interactive interpreter loop.  For a "
@@ -630,7 +642,7 @@ msgstr ""
 "Python. Для більш повної реалізації циклу інтерпретатора зверніться до "
 "модуля :mod:`code`. ::"
 
-#: ../../library/traceback.rst:446
+#: ../../library/traceback.rst:460
 msgid ""
 "The following example demonstrates the different ways to print and format "
 "the exception and traceback:"
@@ -638,18 +650,18 @@ msgstr ""
 "У наступному прикладі демонструються різні способи друку та форматування "
 "винятку та зворотного відстеження:"
 
-#: ../../library/traceback.rst:481
+#: ../../library/traceback.rst:495
 msgid "The output for the example would look similar to this:"
 msgstr "Вихід для прикладу виглядатиме приблизно так:"
 
-#: ../../library/traceback.rst:523
+#: ../../library/traceback.rst:537
 msgid ""
 "The following example shows the different ways to print and format the "
 "stack::"
 msgstr ""
 "У наступному прикладі показано різні способи друку та форматування стосу:"
 
-#: ../../library/traceback.rst:549
+#: ../../library/traceback.rst:563
 msgid "This last example demonstrates the final few formatting functions:"
 msgstr "Цей останній приклад демонструє кілька останніх функцій форматування:"
 
