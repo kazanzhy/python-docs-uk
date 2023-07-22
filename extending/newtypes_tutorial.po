@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-30 14:13+0000\n"
+"POT-Creation-Date: 2023-07-21 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -256,8 +256,8 @@ msgstr ""
 "базового типу, а отже, збільшите його розмір."
 
 #: ../../extending/newtypes_tutorial.rst:154
-msgid "We set the class flags to :const:`Py_TPFLAGS_DEFAULT`. ::"
-msgstr "Ми встановили прапорці класу на :const:`Py_TPFLAGS_DEFAULT`. ::"
+msgid "We set the class flags to :c:macro:`Py_TPFLAGS_DEFAULT`. ::"
+msgstr ""
 
 #: ../../extending/newtypes_tutorial.rst:158
 msgid ""
@@ -730,11 +730,9 @@ msgstr ""
 
 #: ../../extending/newtypes_tutorial.rst:501
 msgid ""
-"(note that we used the :const:`METH_NOARGS` flag to indicate that the method"
-" is expecting no arguments other than *self*)"
+"(note that we used the :c:macro:`METH_NOARGS` flag to indicate that the "
+"method is expecting no arguments other than *self*)"
 msgstr ""
-"(зверніть увагу, що ми використали прапорець :const:`METH_NOARGS`, щоб "
-"вказати, що метод не очікує жодних аргументів, крім *self*)"
 
 #: ../../extending/newtypes_tutorial.rst:504
 msgid "and assign it to the :c:member:`~PyTypeObject.tp_methods` slot::"
@@ -745,13 +743,8 @@ msgid ""
 "Finally, we'll make our type usable as a base class for subclassing.  We've "
 "written our methods carefully so far so that they don't make any assumptions"
 " about the type of the object being created or used, so all we need to do is"
-" to add the :const:`Py_TPFLAGS_BASETYPE` to our class flag definition::"
+" to add the :c:macro:`Py_TPFLAGS_BASETYPE` to our class flag definition::"
 msgstr ""
-"Нарешті, ми зробимо наш тип придатним для використання як базовий клас для "
-"підкласів. Наразі ми ретельно написали наші методи, щоб вони не робили "
-"жодних припущень щодо типу об’єкта, який створюється чи використовується, "
-"тому все, що нам потрібно зробити, це додати :const:`Py_TPFLAGS_BASETYPE` до"
-" визначення прапора нашого класу ::"
 
 #: ../../extending/newtypes_tutorial.rst:515
 msgid ""
@@ -1033,10 +1026,8 @@ msgstr ""
 
 #: ../../extending/newtypes_tutorial.rst:777
 msgid ""
-"Finally, we add the :const:`Py_TPFLAGS_HAVE_GC` flag to the class flags::"
+"Finally, we add the :c:macro:`Py_TPFLAGS_HAVE_GC` flag to the class flags::"
 msgstr ""
-"Нарешті, ми додаємо прапорець :const:`Py_TPFLAGS_HAVE_GC` до прапорців "
-"класу::"
 
 #: ../../extending/newtypes_tutorial.rst:781
 msgid ""

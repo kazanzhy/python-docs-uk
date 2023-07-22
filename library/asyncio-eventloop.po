@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-14 14:14+0000\n"
+"POT-Creation-Date: 2023-07-21 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -312,7 +312,7 @@ msgstr ""
 
 #: ../../library/asyncio-eventloop.rst:176
 #: ../../library/asyncio-eventloop.rst:1236
-#: ../../library/asyncio-eventloop.rst:1639
+#: ../../library/asyncio-eventloop.rst:1642
 msgid "Example::"
 msgstr "Приклад::"
 
@@ -634,17 +634,14 @@ msgstr ""
 
 #: ../../library/asyncio-eventloop.rst:406
 msgid ""
-"The socket family can be either :py:data:`~socket.AF_INET` or "
-":py:data:`~socket.AF_INET6` depending on *host* (or the *family* argument, "
+"The socket family can be either :py:const:`~socket.AF_INET` or "
+":py:const:`~socket.AF_INET6` depending on *host* (or the *family* argument, "
 "if provided)."
 msgstr ""
-"Сімейство сокетів може бути :py:data:`~socket.AF_INET` або "
-":py:data:`~socket.AF_INET6` залежно від *host* (або аргументу *family*, якщо"
-" він надається)."
 
 #: ../../library/asyncio-eventloop.rst:410
-msgid "The socket type will be :py:data:`~socket.SOCK_STREAM`."
-msgstr "Тип сокета буде :py:data:`~socket.SOCK_STREAM`."
+msgid "The socket type will be :py:const:`~socket.SOCK_STREAM`."
+msgstr ""
 
 #: ../../library/asyncio-eventloop.rst:412
 #: ../../library/asyncio-eventloop.rst:1152
@@ -861,11 +858,9 @@ msgstr "Додано підтримку SSL/TLS у :class:`ProactorEventLoop`."
 
 #: ../../library/asyncio-eventloop.rst:512
 msgid ""
-"The socket option :py:data:`~socket.TCP_NODELAY` is set by default for all "
+"The socket option :py:const:`~socket.TCP_NODELAY` is set by default for all "
 "TCP connections."
 msgstr ""
-"Параметр сокета :py:data:`~socket.TCP_NODELAY` встановлено за замовчуванням "
-"для всіх TCP-з’єднань."
 
 #: ../../library/asyncio-eventloop.rst:517
 #: ../../library/asyncio-eventloop.rst:842
@@ -920,17 +915,14 @@ msgstr "Створіть з'єднання дейтаграми."
 
 #: ../../library/asyncio-eventloop.rst:555
 msgid ""
-"The socket family can be either :py:data:`~socket.AF_INET`, "
-":py:data:`~socket.AF_INET6`, or :py:data:`~socket.AF_UNIX`, depending on "
+"The socket family can be either :py:const:`~socket.AF_INET`, "
+":py:const:`~socket.AF_INET6`, or :py:const:`~socket.AF_UNIX`, depending on "
 "*host* (or the *family* argument, if provided)."
 msgstr ""
-"Сімейство сокетів може бути :py:data:`~socket.AF_INET`, "
-":py:data:`~socket.AF_INET6` або :py:data:`~socket.AF_UNIX`, залежно від "
-"*хосту* (або аргумент *сім'я*, якщо він надається)."
 
 #: ../../library/asyncio-eventloop.rst:559
-msgid "The socket type will be :py:data:`~socket.SOCK_DGRAM`."
-msgstr "Тип сокета буде :py:data:`~socket.SOCK_DGRAM`."
+msgid "The socket type will be :py:const:`~socket.SOCK_DGRAM`."
+msgstr ""
 
 #: ../../library/asyncio-eventloop.rst:561
 #: ../../library/asyncio-eventloop.rst:681
@@ -984,15 +976,9 @@ msgid ""
 "*reuse_port* tells the kernel to allow this endpoint to be bound to the same"
 " port as other existing endpoints are bound to, so long as they all set this"
 " flag when being created. This option is not supported on Windows and some "
-"Unixes. If the :py:data:`~socket.SO_REUSEPORT` constant is not defined then "
-"this capability is unsupported."
+"Unixes. If the :py:const:`~socket.SO_REUSEPORT` constant is not defined then"
+" this capability is unsupported."
 msgstr ""
-"*reuse_port* повідомляє ядру дозволити цю кінцеву точку прив’язувати до того"
-" самого порту, до якого прив’язані інші існуючі кінцеві точки, за умови, що "
-"всі вони встановлюють цей прапор під час створення. Цей параметр не "
-"підтримується в Windows і деяких Unix. Якщо константа "
-":py:data:`~socket.SO_REUSEPORT` не визначена, ця можливість не "
-"підтримується."
 
 #: ../../library/asyncio-eventloop.rst:587
 msgid ""
@@ -1032,7 +1018,7 @@ msgstr ""
 #: ../../library/asyncio-eventloop.rst:608
 msgid ""
 "The *reuse_address* parameter is no longer supported, as using "
-":py:data:`~sockets.SO_REUSEADDR` poses a significant security concern for "
+":py:const:`~sockets.SO_REUSEADDR` poses a significant security concern for "
 "UDP. Explicitly passing ``reuse_address=True`` will raise an exception."
 msgstr ""
 
@@ -1049,14 +1035,10 @@ msgstr ""
 #: ../../library/asyncio-eventloop.rst:617
 msgid ""
 "For supported platforms, *reuse_port* can be used as a replacement for "
-"similar functionality. With *reuse_port*, :py:data:`~sockets.SO_REUSEPORT` "
+"similar functionality. With *reuse_port*, :py:const:`~sockets.SO_REUSEPORT` "
 "is used instead, which specifically prevents processes with differing UIDs "
 "from assigning sockets to the same socket address."
 msgstr ""
-"Для підтримуваних платформ *reuse_port* можна використовувати як заміну "
-"подібної функції. За допомогою *reuse_port* замість нього використовується "
-":py:data:`~sockets.SO_REUSEPORT`, що спеціально запобігає процесам з різними"
-" UID призначати сокетам ту саму адресу сокета."
 
 #: ../../library/asyncio-eventloop.rst:623
 msgid "Added support for Windows."
@@ -1074,11 +1056,9 @@ msgstr "Створіть підключення Unix."
 
 #: ../../library/asyncio-eventloop.rst:637
 msgid ""
-"The socket family will be :py:data:`~socket.AF_UNIX`; socket type will be "
-":py:data:`~socket.SOCK_STREAM`."
+"The socket family will be :py:const:`~socket.AF_UNIX`; socket type will be "
+":py:const:`~socket.SOCK_STREAM`."
 msgstr ""
-"Сімейство сокетів буде :py:data:`~socket.AF_UNIX`; тип сокета буде "
-":py:data:`~socket.SOCK_STREAM`."
 
 #: ../../library/asyncio-eventloop.rst:642
 msgid ""
@@ -1118,11 +1098,9 @@ msgstr "Створення мережевих серверів"
 
 #: ../../library/asyncio-eventloop.rst:674
 msgid ""
-"Create a TCP server (socket type :data:`~socket.SOCK_STREAM`) listening on "
+"Create a TCP server (socket type :const:`~socket.SOCK_STREAM`) listening on "
 "*port* of the *host* address."
 msgstr ""
-"Створіть TCP-сервер (тип сокета :data:`~socket.SOCK_STREAM`), який "
-"прослуховує *порт* адреси *хосту*."
 
 #: ../../library/asyncio-eventloop.rst:677
 msgid "Returns a :class:`Server` object."
@@ -1180,15 +1158,11 @@ msgstr ""
 
 #: ../../library/asyncio-eventloop.rst:702
 msgid ""
-"*family* can be set to either :data:`socket.AF_INET` or "
-":data:`~socket.AF_INET6` to force the socket to use IPv4 or IPv6. If not "
+"*family* can be set to either :const:`socket.AF_INET` or "
+":const:`~socket.AF_INET6` to force the socket to use IPv4 or IPv6. If not "
 "set, the *family* will be determined from host name (defaults to "
-":data:`~socket.AF_UNSPEC`)."
+":const:`~socket.AF_UNSPEC`)."
 msgstr ""
-"*family* можна встановити як :data:`socket.AF_INET` або "
-":data:`~socket.AF_INET6`, щоб змусити сокет використовувати IPv4 або IPv6. "
-"Якщо не встановлено, *сімейство* буде визначено з імені хоста (за "
-"замовчуванням :data:`~socket.AF_UNSPEC`)."
 
 #: ../../library/asyncio-eventloop.rst:707
 msgid "*flags* is a bitmask for :meth:`getaddrinfo`."
@@ -1275,12 +1249,9 @@ msgstr "Параметр *host* може бути послідовністю р�
 #: ../../library/asyncio-eventloop.rst:758
 msgid ""
 "Added *ssl_handshake_timeout* and *start_serving* parameters. The socket "
-"option :py:data:`~socket.TCP_NODELAY` is set by default for all TCP "
+"option :py:const:`~socket.TCP_NODELAY` is set by default for all TCP "
 "connections."
 msgstr ""
-"Додано параметри *ssl_handshake_timeout* і *start_serving*. Параметр сокета "
-":py:data:`~socket.TCP_NODELAY` встановлено за замовчуванням для всіх "
-"TCP-з’єднань."
 
 #: ../../library/asyncio-eventloop.rst:768
 msgid ""
@@ -1295,10 +1266,8 @@ msgstr ""
 #: ../../library/asyncio-eventloop.rst:779
 msgid ""
 "Similar to :meth:`loop.create_server` but works with the "
-":py:data:`~socket.AF_UNIX` socket family."
+":py:const:`~socket.AF_UNIX` socket family."
 msgstr ""
-"Подібно до :meth:`loop.create_server`, але працює з сімейством сокетів "
-":py:data:`~socket.AF_UNIX`."
 
 #: ../../library/asyncio-eventloop.rst:782
 msgid ""
@@ -2463,7 +2432,13 @@ msgstr ""
 "Серверний об’єкт — це асинхронний менеджер контексту, починаючи з Python "
 "3.7."
 
-#: ../../library/asyncio-eventloop.rst:1598
+#: ../../library/asyncio-eventloop.rst:1596
+msgid ""
+"This class was exposed publicly as ``asyncio.Server`` in Python 3.9.11, "
+"3.10.3 and 3.11."
+msgstr ""
+
+#: ../../library/asyncio-eventloop.rst:1601
 msgid ""
 "Stop serving: close listening sockets and set the :attr:`sockets` attribute "
 "to ``None``."
@@ -2471,7 +2446,7 @@ msgstr ""
 "Зупинити обслуговування: закрийте сокети прослуховування та встановіть для "
 "атрибута :attr:`sockets` значення ``None``."
 
-#: ../../library/asyncio-eventloop.rst:1601
+#: ../../library/asyncio-eventloop.rst:1604
 msgid ""
 "The sockets that represent existing incoming client connections are left "
 "open."
@@ -2479,7 +2454,7 @@ msgstr ""
 "Сокети, які представляють наявні вхідні підключення клієнта, залишаються "
 "відкритими."
 
-#: ../../library/asyncio-eventloop.rst:1604
+#: ../../library/asyncio-eventloop.rst:1607
 msgid ""
 "The server is closed asynchronously, use the :meth:`wait_closed` coroutine "
 "to wait until the server is closed."
@@ -2487,21 +2462,21 @@ msgstr ""
 "Сервер закривається асинхронно, скористайтеся співпрограмою "
 ":meth:`wait_closed`, щоб дочекатися, поки сервер закриється."
 
-#: ../../library/asyncio-eventloop.rst:1609
+#: ../../library/asyncio-eventloop.rst:1612
 msgid "Return the event loop associated with the server object."
 msgstr "Повертає цикл подій, пов’язаний з об’єктом сервера."
 
-#: ../../library/asyncio-eventloop.rst:1615
+#: ../../library/asyncio-eventloop.rst:1618
 msgid "Start accepting connections."
 msgstr "Почніть приймати підключення."
 
-#: ../../library/asyncio-eventloop.rst:1617
+#: ../../library/asyncio-eventloop.rst:1620
 msgid ""
 "This method is idempotent, so it can be called when the server is already "
 "serving."
 msgstr ""
 
-#: ../../library/asyncio-eventloop.rst:1620
+#: ../../library/asyncio-eventloop.rst:1623
 msgid ""
 "The *start_serving* keyword-only parameter to :meth:`loop.create_server` and"
 " :meth:`asyncio.start_server` allows creating a Server object that is not "
@@ -2515,7 +2490,7 @@ msgstr ""
 ":meth:`Server.serve_forever` можна використати, щоб сервер почав приймати "
 "з’єднання."
 
-#: ../../library/asyncio-eventloop.rst:1631
+#: ../../library/asyncio-eventloop.rst:1634
 msgid ""
 "Start accepting connections until the coroutine is cancelled. Cancellation "
 "of ``serve_forever`` task causes the server to be closed."
@@ -2523,7 +2498,7 @@ msgstr ""
 "Почніть приймати підключення, доки співпрограму не буде скасовано. "
 "Скасування завдання ``serve_forever`` призводить до закриття сервера."
 
-#: ../../library/asyncio-eventloop.rst:1635
+#: ../../library/asyncio-eventloop.rst:1638
 msgid ""
 "This method can be called if the server is already accepting connections.  "
 "Only one ``serve_forever`` task can exist per one *Server* object."
@@ -2531,21 +2506,21 @@ msgstr ""
 "Цей метод можна викликати, якщо сервер уже приймає підключення. На один "
 "об’єкт *Server* може існувати лише одне завдання ``serve_forever``."
 
-#: ../../library/asyncio-eventloop.rst:1657
+#: ../../library/asyncio-eventloop.rst:1660
 msgid "Return ``True`` if the server is accepting new connections."
 msgstr "Повертає ``True``, якщо сервер приймає нові підключення."
 
-#: ../../library/asyncio-eventloop.rst:1663
+#: ../../library/asyncio-eventloop.rst:1666
 msgid "Wait until the :meth:`close` method completes."
 msgstr "Зачекайте, поки метод :meth:`close` завершить роботу."
 
-#: ../../library/asyncio-eventloop.rst:1667
+#: ../../library/asyncio-eventloop.rst:1670
 msgid ""
 "List of socket-like objects, ``asyncio.trsock.TransportSocket``, which the "
 "server is listening on."
 msgstr ""
 
-#: ../../library/asyncio-eventloop.rst:1670
+#: ../../library/asyncio-eventloop.rst:1673
 msgid ""
 "Prior to Python 3.7 ``Server.sockets`` used to return an internal list of "
 "server sockets directly.  In 3.7 a copy of that list is returned."
@@ -2554,11 +2529,11 @@ msgstr ""
 "повернення внутрішнього списку серверних сокетів. У 3.7 повертається копія "
 "цього списку."
 
-#: ../../library/asyncio-eventloop.rst:1680
+#: ../../library/asyncio-eventloop.rst:1683
 msgid "Event Loop Implementations"
 msgstr "Реалізації циклу подій"
 
-#: ../../library/asyncio-eventloop.rst:1682
+#: ../../library/asyncio-eventloop.rst:1685
 msgid ""
 "asyncio ships with two different event loop implementations: "
 ":class:`SelectorEventLoop` and :class:`ProactorEventLoop`."
@@ -2566,7 +2541,7 @@ msgstr ""
 "asyncio постачається з двома різними реалізаціями циклу подій: "
 ":class:`SelectorEventLoop` і :class:`ProactorEventLoop`."
 
-#: ../../library/asyncio-eventloop.rst:1685
+#: ../../library/asyncio-eventloop.rst:1688
 msgid ""
 "By default asyncio is configured to use :class:`SelectorEventLoop` on Unix "
 "and :class:`ProactorEventLoop` on Windows."
@@ -2574,11 +2549,11 @@ msgstr ""
 "За замовчуванням asyncio налаштовано на використання "
 ":class:`SelectorEventLoop` в Unix і :class:`ProactorEventLoop` у Windows."
 
-#: ../../library/asyncio-eventloop.rst:1691
+#: ../../library/asyncio-eventloop.rst:1694
 msgid "An event loop based on the :mod:`selectors` module."
 msgstr "Цикл подій на основі модуля :mod:`selectors`."
 
-#: ../../library/asyncio-eventloop.rst:1693
+#: ../../library/asyncio-eventloop.rst:1696
 msgid ""
 "Uses the most efficient *selector* available for the given platform.  It is "
 "also possible to manually configure the exact selector implementation to be "
@@ -2588,21 +2563,21 @@ msgstr ""
 "Також можна вручну налаштувати точну реалізацію селектора, яка буде "
 "використовуватися:"
 
-#: ../../library/asyncio-eventloop.rst:1708
+#: ../../library/asyncio-eventloop.rst:1711
 msgid ":ref:`Availability <availability>`: Unix, Windows."
 msgstr ":ref:`Наявність <availability>`: Unix, Windows."
 
-#: ../../library/asyncio-eventloop.rst:1713
+#: ../../library/asyncio-eventloop.rst:1716
 msgid "An event loop for Windows that uses \"I/O Completion Ports\" (IOCP)."
 msgstr ""
 "Цикл подій для Windows, який використовує \"Порти завершення введення-"
 "виведення\" (IOCP)."
 
-#: ../../library/asyncio-eventloop.rst:1715
+#: ../../library/asyncio-eventloop.rst:1718
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ":ref:`Наявність <availability>`: Windows."
 
-#: ../../library/asyncio-eventloop.rst:1719
+#: ../../library/asyncio-eventloop.rst:1722
 msgid ""
 "`MSDN documentation on I/O Completion Ports <https://docs.microsoft.com/en-"
 "ca/windows/desktop/FileIO/i-o-completion-ports>`_."
@@ -2611,21 +2586,21 @@ msgstr ""
 "<https://docs.microsoft.com/en-ca/windows/desktop/FileIO/i-o-completion-"
 "ports>`_."
 
-#: ../../library/asyncio-eventloop.rst:1725
+#: ../../library/asyncio-eventloop.rst:1728
 msgid "Abstract base class for asyncio-compliant event loops."
 msgstr "Абстрактний базовий клас для асинційно-сумісних циклів подій."
 
-#: ../../library/asyncio-eventloop.rst:1727
+#: ../../library/asyncio-eventloop.rst:1730
 msgid ""
 "The :ref:`asyncio-event-loop-methods` section lists all methods that an "
 "alternative implementation of ``AbstractEventLoop`` should have defined."
 msgstr ""
 
-#: ../../library/asyncio-eventloop.rst:1733
+#: ../../library/asyncio-eventloop.rst:1736
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/asyncio-eventloop.rst:1735
+#: ../../library/asyncio-eventloop.rst:1738
 msgid ""
 "Note that all examples in this section **purposefully** show how to use the "
 "low-level event loop APIs, such as :meth:`loop.run_forever` and "
@@ -2639,11 +2614,11 @@ msgstr ""
 "програми рідко потрібно писати таким чином; подумайте про використання "
 "функцій високого рівня, таких як :func:`asyncio.run`."
 
-#: ../../library/asyncio-eventloop.rst:1745
+#: ../../library/asyncio-eventloop.rst:1748
 msgid "Hello World with call_soon()"
 msgstr "Привіт, світ із call_soon()"
 
-#: ../../library/asyncio-eventloop.rst:1747
+#: ../../library/asyncio-eventloop.rst:1750
 msgid ""
 "An example using the :meth:`loop.call_soon` method to schedule a callback. "
 "The callback displays ``\"Hello World\"`` and then stops the event loop::"
@@ -2652,7 +2627,7 @@ msgstr ""
 " виклику. Зворотний виклик відображає ``\"Hello World\"``, а потім зупиняє "
 "цикл подій::"
 
-#: ../../library/asyncio-eventloop.rst:1771
+#: ../../library/asyncio-eventloop.rst:1774
 msgid ""
 "A similar :ref:`Hello World <coroutine>` example created with a coroutine "
 "and the :func:`run` function."
@@ -2660,11 +2635,11 @@ msgstr ""
 "Подібний приклад :ref:`Hello World <coroutine>`, створений за допомогою "
 "співпрограми та функції :func:`run`."
 
-#: ../../library/asyncio-eventloop.rst:1778
+#: ../../library/asyncio-eventloop.rst:1781
 msgid "Display the current date with call_later()"
 msgstr "Показати поточну дату за допомогою call_later()"
 
-#: ../../library/asyncio-eventloop.rst:1780
+#: ../../library/asyncio-eventloop.rst:1783
 msgid ""
 "An example of a callback displaying the current date every second. The "
 "callback uses the :meth:`loop.call_later` method to reschedule itself after "
@@ -2674,7 +2649,7 @@ msgstr ""
 "Зворотний виклик використовує метод :meth:`loop.call_later`, щоб "
 "перепланувати себе через 5 секунд, а потім зупинити цикл подій::"
 
-#: ../../library/asyncio-eventloop.rst:1808
+#: ../../library/asyncio-eventloop.rst:1811
 msgid ""
 "A similar :ref:`current date <asyncio_example_sleep>` example created with a"
 " coroutine and the :func:`run` function."
@@ -2682,11 +2657,11 @@ msgstr ""
 "Схожий приклад :ref:`current date <asyncio_example_sleep>`, створений за "
 "допомогою співпрограми та функції :func:`run`."
 
-#: ../../library/asyncio-eventloop.rst:1815
+#: ../../library/asyncio-eventloop.rst:1818
 msgid "Watch a file descriptor for read events"
 msgstr "Спостерігайте за подіями читання файлового дескриптора"
 
-#: ../../library/asyncio-eventloop.rst:1817
+#: ../../library/asyncio-eventloop.rst:1820
 msgid ""
 "Wait until a file descriptor received some data using the "
 ":meth:`loop.add_reader` method and then close the event loop::"
@@ -2694,7 +2669,7 @@ msgstr ""
 "Зачекайте, доки дескриптор файлу не отримає деякі дані за допомогою методу "
 ":meth:`loop.add_reader`, а потім закрийте цикл подій::"
 
-#: ../../library/asyncio-eventloop.rst:1855
+#: ../../library/asyncio-eventloop.rst:1858
 msgid ""
 "A similar :ref:`example <asyncio_example_create_connection>` using "
 "transports, protocols, and the :meth:`loop.create_connection` method."
@@ -2702,7 +2677,7 @@ msgstr ""
 "Подібний :ref:`приклад <asyncio_example_create_connection>` з використанням "
 "транспортів, протоколів і методу :meth:`loop.create_connection`."
 
-#: ../../library/asyncio-eventloop.rst:1859
+#: ../../library/asyncio-eventloop.rst:1862
 msgid ""
 "Another similar :ref:`example <asyncio_example_create_connection-streams>` "
 "using the high-level :func:`asyncio.open_connection` function and streams."
@@ -2711,15 +2686,15 @@ msgstr ""
 "використанням високорівневої функції :func:`asyncio.open_connection` і "
 "потоків."
 
-#: ../../library/asyncio-eventloop.rst:1867
+#: ../../library/asyncio-eventloop.rst:1870
 msgid "Set signal handlers for SIGINT and SIGTERM"
 msgstr "Встановити обробники сигналів для SIGINT і SIGTERM"
 
-#: ../../library/asyncio-eventloop.rst:1869
+#: ../../library/asyncio-eventloop.rst:1872
 msgid "(This ``signals`` example only works on Unix.)"
 msgstr "(Цей приклад ``сигналів`` працює лише в Unix.)"
 
-#: ../../library/asyncio-eventloop.rst:1871
+#: ../../library/asyncio-eventloop.rst:1874
 msgid ""
 "Register handlers for signals :py:data:`SIGINT` and :py:data:`SIGTERM` using"
 " the :meth:`loop.add_signal_handler` method::"
