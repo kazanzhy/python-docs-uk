@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2022
+# Dmytro Kazanzhy, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-14 14:14+0000\n"
+"POT-Creation-Date: 2023-07-21 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:05+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -116,14 +116,7 @@ msgstr ""
 "якщо синтаксичний аналіз не вдається, у цьому випадку повертається 2-кортеж "
 "``('', '')``."
 
-#: ../../library/email.utils.rst:68
-msgid ""
-"For security reasons, addresses that were ambiguous and could parse into "
-"multiple different addresses now cause ``('', '')`` to be returned instead "
-"of only one of the *potential* addresses."
-msgstr ""
-
-#: ../../library/email.utils.rst:76
+#: ../../library/email.utils.rst:71
 msgid ""
 "The inverse of :meth:`parseaddr`, this takes a 2-tuple of the form "
 "``(realname, email_address)`` and returns the string value suitable for a "
@@ -135,7 +128,7 @@ msgstr ""
 ":mailheader:`To` або :mailheader:`Cc` . Якщо перший елемент *pair* є false, "
 "то другий елемент повертається без змін."
 
-#: ../../library/email.utils.rst:81
+#: ../../library/email.utils.rst:76
 msgid ""
 "Optional *charset* is the character set that will be used in the :rfc:`2047`"
 " encoding of the ``realname`` if the ``realname`` contains non-ASCII "
@@ -147,49 +140,23 @@ msgstr ""
 "відмінні від ASCII. Може бути екземпляром :class:`str` або "
 ":class:`~email.charset.Charset`. За замовчуванням ``utf-8``."
 
-#: ../../library/email.utils.rst:86
+#: ../../library/email.utils.rst:81
 msgid "Added the *charset* option."
 msgstr "Додано опцію *charset*."
 
-#: ../../library/email.utils.rst:92
+#: ../../library/email.utils.rst:87
 msgid ""
 "This method returns a list of 2-tuples of the form returned by "
 "``parseaddr()``. *fieldvalues* is a sequence of header field values as might"
 " be returned by :meth:`Message.get_all <email.message.Message.get_all>`.  "
-"Here's a simple example that gets all the recipients of a message:"
+"Here's a simple example that gets all the recipients of a message::"
 msgstr ""
+"Цей метод повертає список 2-кортежів форми, яку повертає ``parseaddr()``. "
+"*fieldvalues* — це послідовність значень поля заголовка, яку може повернути "
+":meth:`Message.get_all <email.message.Message.get_all>`. Ось простий "
+"приклад, який отримує всіх одержувачів повідомлення:"
 
-#: ../../library/email.utils.rst:97
-msgid "from email.utils import getaddresses"
-msgstr ""
-
-#: ../../library/email.utils.rst:99
-msgid ""
-"tos = msg.get_all('to', []) ccs = msg.get_all('cc', []) resent_tos = "
-"msg.get_all('resent-to', []) resent_ccs = msg.get_all('resent-cc', []) "
-"all_recipients = getaddresses(tos + ccs + resent_tos + resent_ccs)"
-msgstr ""
-
-#: ../../library/email.utils.rst:105
-msgid ""
-"When parsing fails for a single fieldvalue, a 2-tuple of ``('', '')`` is "
-"returned in its place.  Other errors in parsing the list of addresses such "
-"as a fieldvalue seemingly parsing into multiple addresses may result in a "
-"list containing a single empty 2-tuple ``[('', '')]`` being returned rather "
-"than returning potentially invalid output."
-msgstr ""
-
-#: ../../library/email.utils.rst:112
-msgid "Example malformed input parsing:"
-msgstr ""
-
-#: ../../library/email.utils.rst:120
-msgid ""
-"The 2-tuple of ``('', '')`` in the returned values when parsing fails were "
-"added as to address a security issue."
-msgstr ""
-
-#: ../../library/email.utils.rst:127
+#: ../../library/email.utils.rst:103
 msgid ""
 "Attempts to parse a date according to the rules in :rfc:`2822`. however, "
 "some mailers don't follow that format as specified, so :func:`parsedate` "
@@ -208,7 +175,7 @@ msgstr ""
 "повернено ``None``. Зверніть увагу, що індекси 6, 7 і 8 кортежу результатів "
 "не можна використовувати."
 
-#: ../../library/email.utils.rst:138
+#: ../../library/email.utils.rst:114
 msgid ""
 "Performs the same function as :func:`parsedate`, but returns either ``None``"
 " or a 10-tuple; the first 9 elements make up a tuple that can be passed "
@@ -226,7 +193,7 @@ msgstr ""
 "повертається, є ``0``, який представляє UTC. Зверніть увагу, що індекси 6, 7"
 " і 8 кортежу результатів не можна використовувати."
 
-#: ../../library/email.utils.rst:148
+#: ../../library/email.utils.rst:124
 msgid ""
 "The inverse of :func:`format_datetime`.  Performs the same function as "
 ":func:`parsedate`, but on success returns a :mod:`~datetime.datetime`; "
@@ -250,7 +217,7 @@ msgstr ""
 "поясу, ``datetime`` буде відомим ``datetime`` з відповідним "
 ":class:`~datetime.timezone` :class:`~datetime.tzinfo`."
 
-#: ../../library/email.utils.rst:164
+#: ../../library/email.utils.rst:140
 msgid ""
 "Turn a 10-tuple as returned by :func:`parsedate_tz` into a UTC timestamp "
 "(seconds since the Epoch).  If the timezone item in the tuple is ``None``, "
@@ -260,11 +227,11 @@ msgstr ""
 " (секунди з епохи). Якщо елемент часового поясу в кортежі ``None``, "
 "припустіть місцевий час."
 
-#: ../../library/email.utils.rst:171
+#: ../../library/email.utils.rst:147
 msgid "Returns a date string as per :rfc:`2822`, e.g.::"
 msgstr "Повертає рядок дати згідно з :rfc:`2822`, наприклад::"
 
-#: ../../library/email.utils.rst:175
+#: ../../library/email.utils.rst:151
 msgid ""
 "Optional *timeval* if given is a floating point time value as accepted by "
 ":func:`time.gmtime` and :func:`time.localtime`, otherwise the current time "
@@ -274,7 +241,7 @@ msgstr ""
 "прийняте :func:`time.gmtime` і :func:`time.localtime`, інакше "
 "використовується поточний час."
 
-#: ../../library/email.utils.rst:179
+#: ../../library/email.utils.rst:155
 msgid ""
 "Optional *localtime* is a flag that when ``True``, interprets *timeval*, and"
 " returns a date relative to the local timezone instead of UTC, properly "
@@ -286,7 +253,7 @@ msgstr ""
 "замість UTC, правильно враховуючи літній час. Типовим значенням є ``False``,"
 " тобто використовується UTC."
 
-#: ../../library/email.utils.rst:184
+#: ../../library/email.utils.rst:160
 msgid ""
 "Optional *usegmt* is a flag that when ``True``, outputs a  date string with "
 "the timezone as an ascii string ``GMT``, rather than a numeric ``-0000``. "
@@ -299,7 +266,7 @@ msgstr ""
 "стосується лише випадків, коли *localtime* має значення ``False``. Типовим "
 "значенням є ``False``."
 
-#: ../../library/email.utils.rst:192
+#: ../../library/email.utils.rst:168
 msgid ""
 "Like ``formatdate``, but the input is a :mod:`datetime` instance.  If it is "
 "a naive datetime, it is assumed to be \"UTC with no information about the "
@@ -319,11 +286,11 @@ msgstr ""
 "використовується замість числового зсуву часового поясу. Це надає спосіб "
 "генерувати заголовки дати HTTP, що відповідають стандартам."
 
-#: ../../library/email.utils.rst:206
+#: ../../library/email.utils.rst:182
 msgid "Decode the string *s* according to :rfc:`2231`."
 msgstr "Розшифруйте рядок *s* відповідно до :rfc:`2231`."
 
-#: ../../library/email.utils.rst:211
+#: ../../library/email.utils.rst:187
 msgid ""
 "Encode the string *s* according to :rfc:`2231`.  Optional *charset* and "
 "*language*, if given is the character set name and language name to use.  If"
@@ -337,7 +304,7 @@ msgstr ""
 " задано, але *language* ні, рядок кодується за допомогою порожнього рядка "
 "для *language*."
 
-#: ../../library/email.utils.rst:219
+#: ../../library/email.utils.rst:195
 msgid ""
 "When a header parameter is encoded in :rfc:`2231` format, "
 ":meth:`Message.get_param <email.message.Message.get_param>` may return a "
@@ -358,7 +325,7 @@ msgstr ""
 "міститься в заголовку :rfc:`2231`, не відомий Python; за замовчуванням "
 "``'us-ascii'``."
 
-#: ../../library/email.utils.rst:228
+#: ../../library/email.utils.rst:204
 msgid ""
 "For convenience, if the *value* passed to :func:`collapse_rfc2231_value` is "
 "not a tuple, it should be a string and it is returned unquoted."
@@ -366,7 +333,7 @@ msgstr ""
 "Для зручності, якщо *значення*, передане :func:`collapse_rfc2231_value`, не "
 "є кортежем, воно має бути рядком і повертається без лапок."
 
-#: ../../library/email.utils.rst:234
+#: ../../library/email.utils.rst:210
 msgid ""
 "Decode parameters list according to :rfc:`2231`.  *params* is a sequence of "
 "2-tuples containing elements of the form ``(content-type, string-value)``."
@@ -375,11 +342,11 @@ msgstr ""
 "послідовність 2-кортежів, що містять елементи форми ``(тип вмісту, значення-"
 "рядка)``."
 
-#: ../../library/email.utils.rst:239
+#: ../../library/email.utils.rst:215
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/email.utils.rst:240
+#: ../../library/email.utils.rst:216
 msgid ""
 "Note that the sign of the timezone offset is the opposite of the sign of the"
 " ``time.timezone`` variable for the same timezone; the latter variable "
