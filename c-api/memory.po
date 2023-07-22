@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-06-30 14:13+0000\n"
+"POT-Creation-Date: 2023-07-21 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -850,13 +850,10 @@ msgstr ""
 
 #: ../../c-api/memory.rst:473
 msgid ""
-"For the :c:data:`PYMEM_DOMAIN_RAW` domain, the allocator must be thread-"
+"For the :c:macro:`PYMEM_DOMAIN_RAW` domain, the allocator must be thread-"
 "safe: the :term:`GIL <global interpreter lock>` is not held when the "
 "allocator is called."
 msgstr ""
-"Для домену :c:data:`PYMEM_DOMAIN_RAW` розподільник має бути потокобезпечним:"
-" :term:`GIL <global interpreter lock>` не утримується під час виклику "
-"розподілювача."
 
 #: ../../c-api/memory.rst:477
 msgid ""
@@ -978,13 +975,10 @@ msgstr "Виявлення запису після закінчення буфе
 #: ../../c-api/memory.rst:538
 msgid ""
 "Check that the :term:`GIL <global interpreter lock>` is held when allocator "
-"functions of :c:data:`PYMEM_DOMAIN_OBJ` (ex: :c:func:`PyObject_Malloc`) and "
-":c:data:`PYMEM_DOMAIN_MEM` (ex: :c:func:`PyMem_Malloc`) domains are called."
+"functions of :c:macro:`PYMEM_DOMAIN_OBJ` (ex: :c:func:`PyObject_Malloc`) and"
+" :c:macro:`PYMEM_DOMAIN_MEM` (ex: :c:func:`PyMem_Malloc`) domains are "
+"called."
 msgstr ""
-"Переконайтеся, що :term:`GIL <global interpreter lock>` зберігається, коли "
-"функції розподільника :c:data:`PYMEM_DOMAIN_OBJ` (наприклад: "
-":c:func:`PyObject_Malloc`) і :c:data:`PYMEM_DOMAIN_MEM` (наприклад: "
-":c:func:`PyMem_Malloc`) викликаються домени."
 
 #: ../../c-api/memory.rst:543
 msgid ""
@@ -1034,16 +1028,16 @@ msgid "API identifier (ASCII character):"
 msgstr "Ідентифікатор API (символ ASCII):"
 
 #: ../../c-api/memory.rst:560
-msgid "``'r'`` for :c:data:`PYMEM_DOMAIN_RAW`."
-msgstr "``'r'`` для :c:data:`PYMEM_DOMAIN_RAW`."
+msgid "``'r'`` for :c:macro:`PYMEM_DOMAIN_RAW`."
+msgstr ""
 
 #: ../../c-api/memory.rst:561
-msgid "``'m'`` for :c:data:`PYMEM_DOMAIN_MEM`."
-msgstr "``'m''`` для :c:data:`PYMEM_DOMAIN_MEM`."
+msgid "``'m'`` for :c:macro:`PYMEM_DOMAIN_MEM`."
+msgstr ""
 
 #: ../../c-api/memory.rst:562
-msgid "``'o'`` for :c:data:`PYMEM_DOMAIN_OBJ`."
-msgstr "``'o'`` для :c:data:`PYMEM_DOMAIN_OBJ`."
+msgid "``'o'`` for :c:macro:`PYMEM_DOMAIN_OBJ`."
+msgstr ""
 
 #: ../../c-api/memory.rst:565
 msgid "``p[-S+1:0]``"
@@ -1145,15 +1139,9 @@ msgid ""
 "compiled in release mode.  On error, the debug hooks now use "
 ":mod:`tracemalloc` to get the traceback where a memory block was allocated. "
 "The debug hooks now also check if the GIL is held when functions of "
-":c:data:`PYMEM_DOMAIN_OBJ` and :c:data:`PYMEM_DOMAIN_MEM` domains are "
+":c:macro:`PYMEM_DOMAIN_OBJ` and :c:macro:`PYMEM_DOMAIN_MEM` domains are "
 "called."
 msgstr ""
-"Функція :c:func:`PyMem_SetupDebugHooks` тепер також працює на Python, "
-"скомпільованому в режимі випуску. У разі помилки хуки налагодження тепер "
-"використовують :mod:`tracemalloc` для отримання зворотного відстеження, де "
-"було виділено блок пам’яті. Хуки налагодження тепер також перевіряють, чи "
-"утримується GIL під час виклику функцій доменів :c:data:`PYMEM_DOMAIN_OBJ` і"
-" :c:data:`PYMEM_DOMAIN_MEM`."
 
 #: ../../c-api/memory.rst:607
 msgid ""
@@ -1188,12 +1176,9 @@ msgstr ""
 #: ../../c-api/memory.rst:624
 msgid ""
 "*pymalloc* is the :ref:`default allocator <default-memory-allocators>` of "
-"the :c:data:`PYMEM_DOMAIN_MEM` (ex: :c:func:`PyMem_Malloc`) and "
-":c:data:`PYMEM_DOMAIN_OBJ` (ex: :c:func:`PyObject_Malloc`) domains."
+"the :c:macro:`PYMEM_DOMAIN_MEM` (ex: :c:func:`PyMem_Malloc`) and "
+":c:macro:`PYMEM_DOMAIN_OBJ` (ex: :c:func:`PyObject_Malloc`) domains."
 msgstr ""
-"*pymalloc* є :ref:`розподільником за замовчуванням <default-memory-"
-"allocators>` :c:data:`PYMEM_DOMAIN_MEM` (наприклад: :c:func:`PyMem_Malloc`) "
-"і :c:data:`PYMEM_DOMAIN_OBJ` (наприклад: :c:func:`PyObject_Malloc`)."
 
 #: ../../c-api/memory.rst:628
 msgid "The arena allocator uses the following functions:"
