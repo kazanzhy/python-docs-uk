@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 14:13+0000\n"
+"POT-Creation-Date: 2023-07-28 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -702,6 +702,16 @@ msgstr ""
 
 #: ../../tutorial/modules.rst:515
 msgid ""
+"Be aware that submodules might become shadowed by locally defined names. For"
+" example, if you added a ``reverse`` function to the "
+":file:`sound/effects/__init__.py` file, the ``from sound.effects import *`` "
+"would only import the two submodules ``echo`` and ``surround``, but *not* "
+"the ``reverse`` submodule, because it is shadowed by the locally defined "
+"``reverse`` function::"
+msgstr ""
+
+#: ../../tutorial/modules.rst:531
+msgid ""
 "If ``__all__`` is not defined, the statement ``from sound.effects import *``"
 " does *not* import all submodules from the package :mod:`sound.effects` into"
 " the current namespace; it only ensures that the package "
@@ -721,7 +731,7 @@ msgstr ""
 "включає будь-які підмодулі пакета, які були явно завантажені попередніми "
 "операторами :keyword:`import`. Розгляньте цей код::"
 
-#: ../../tutorial/modules.rst:528
+#: ../../tutorial/modules.rst:544
 msgid ""
 "In this example, the :mod:`echo` and :mod:`surround` modules are imported in"
 " the current namespace because they are defined in the :mod:`sound.effects` "
@@ -733,7 +743,7 @@ msgstr ""
 "``from...import`` виконується оператор. (Це також працює, якщо визначено "
 "``__all__``.)"
 
-#: ../../tutorial/modules.rst:533
+#: ../../tutorial/modules.rst:549
 msgid ""
 "Although certain modules are designed to export only names that follow "
 "certain patterns when you use ``import *``, it is still considered bad "
@@ -743,7 +753,7 @@ msgstr ""
 " шаблонам, коли ви використовуєте ``import *``, це все ще вважається поганою"
 " практикою у робочому коді."
 
-#: ../../tutorial/modules.rst:537
+#: ../../tutorial/modules.rst:553
 msgid ""
 "Remember, there is nothing wrong with using ``from package import "
 "specific_submodule``!  In fact, this is the recommended notation unless the "
@@ -755,11 +765,11 @@ msgstr ""
 "імпортуючому модулю не потрібно використовувати підмодулі з однаковими "
 "назвами з різних пакунків."
 
-#: ../../tutorial/modules.rst:546
+#: ../../tutorial/modules.rst:562
 msgid "Intra-package References"
 msgstr "Внутрішньопакетні посилання"
 
-#: ../../tutorial/modules.rst:548
+#: ../../tutorial/modules.rst:564
 msgid ""
 "When packages are structured into subpackages (as with the :mod:`sound` "
 "package in the example), you can use absolute imports to refer to submodules"
@@ -774,7 +784,7 @@ msgstr ""
 "пакунку :mod:`sound.effects`, він може використовувати ``from sound.effects "
 "import echo``."
 
-#: ../../tutorial/modules.rst:554
+#: ../../tutorial/modules.rst:570
 msgid ""
 "You can also write relative imports, with the ``from module import name`` "
 "form of import statement.  These imports use leading dots to indicate the "
@@ -787,7 +797,7 @@ msgstr ""
 "участь у відносному імпорті. Наприклад, у модулі :mod:`surround` можна "
 "використовувати::"
 
-#: ../../tutorial/modules.rst:563
+#: ../../tutorial/modules.rst:579
 msgid ""
 "Note that relative imports are based on the name of the current module.  "
 "Since the name of the main module is always ``\"__main__\"``, modules "
@@ -799,11 +809,11 @@ msgstr ""
 "використання як головного модуля програми Python, повинні завжди "
 "використовувати абсолютний імпорт."
 
-#: ../../tutorial/modules.rst:569
+#: ../../tutorial/modules.rst:585
 msgid "Packages in Multiple Directories"
 msgstr "Пакунки в кількох каталогах"
 
-#: ../../tutorial/modules.rst:571
+#: ../../tutorial/modules.rst:587
 msgid ""
 "Packages support one more special attribute, :attr:`__path__`.  This is "
 "initialized to be a list containing the name of the directory holding the "
@@ -817,7 +827,7 @@ msgstr ""
 "може бути змінена; це впливає на майбутній пошук модулів і підпакетів, що "
 "містяться в пакеті."
 
-#: ../../tutorial/modules.rst:577
+#: ../../tutorial/modules.rst:593
 msgid ""
 "While this feature is not often needed, it can be used to extend the set of "
 "modules found in a package."
@@ -825,11 +835,11 @@ msgstr ""
 "Хоча ця функція не часто потрібна, її можна використовувати для розширення "
 "набору модулів, які містяться в пакеті."
 
-#: ../../tutorial/modules.rst:582
+#: ../../tutorial/modules.rst:598
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/modules.rst:583
+#: ../../tutorial/modules.rst:599
 msgid ""
 "In fact function definitions are also 'statements' that are 'executed'; the "
 "execution of a module-level function definition adds the function name to "

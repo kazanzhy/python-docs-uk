@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 14:13+0000\n"
+"POT-Creation-Date: 2023-07-28 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:10+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -619,11 +619,10 @@ msgstr ""
 #: ../../library/os.rst:322 ../../library/os.rst:1086
 #: ../../library/os.rst:1097 ../../library/os.rst:1110
 #: ../../library/os.rst:1317 ../../library/os.rst:1588
-#: ../../library/os.rst:1756 ../../library/os.rst:2153
-#: ../../library/os.rst:2489 ../../library/os.rst:3332
-#: ../../library/os.rst:3369 ../../library/os.rst:3985
-#: ../../library/os.rst:4483 ../../library/os.rst:4494
-#: ../../library/os.rst:4611
+#: ../../library/os.rst:1756 ../../library/os.rst:2489
+#: ../../library/os.rst:3332 ../../library/os.rst:3369
+#: ../../library/os.rst:3985 ../../library/os.rst:4483
+#: ../../library/os.rst:4494 ../../library/os.rst:4611
 msgid ":ref:`Availability <availability>`: Unix, Windows."
 msgstr ":ref:`Наявність <availability>`: Unix, Windows."
 
@@ -716,31 +715,18 @@ msgstr ""
 msgid ""
 "On macOS, :func:`getgroups` behavior differs somewhat from other Unix "
 "platforms. If the Python interpreter was built with a deployment target of "
-":const:`10.5` or earlier, :func:`getgroups` returns the list of effective "
-"group ids associated with the current user process; this list is limited to "
-"a system-defined number of entries, typically 16, and may be modified by "
-"calls to :func:`setgroups` if suitably privileged. If built with a "
-"deployment target greater than :const:`10.5`, :func:`getgroups` returns the "
-"current group access list for the user associated with the effective user id"
-" of the process; the group access list may change over the lifetime of the "
-"process, it is not affected by calls to :func:`setgroups`, and its length is"
-" not limited to 16.  The deployment target value, "
+"``10.5`` or earlier, :func:`getgroups` returns the list of effective group "
+"ids associated with the current user process; this list is limited to a "
+"system-defined number of entries, typically 16, and may be modified by calls"
+" to :func:`setgroups` if suitably privileged. If built with a deployment "
+"target greater than ``10.5``, :func:`getgroups` returns the current group "
+"access list for the user associated with the effective user id of the "
+"process; the group access list may change over the lifetime of the process, "
+"it is not affected by calls to :func:`setgroups`, and its length is not "
+"limited to 16.  The deployment target value, "
 ":const:`MACOSX_DEPLOYMENT_TARGET`, can be obtained with "
 ":func:`sysconfig.get_config_var`."
 msgstr ""
-"У macOS поведінка :func:`getgroups` дещо відрізняється від інших платформ "
-"Unix. Якщо інтерпретатор Python було створено з метою розгортання "
-":const:`10.5` або раніше, :func:`getgroups` повертає список ефективних "
-"ідентифікаторів груп, пов’язаних із поточним процесом користувача; цей "
-"список обмежується визначеною системою кількістю записів, як правило, 16, і "
-"може бути змінений викликами :func:`setgroups`, якщо відповідні привілеї. "
-"Якщо створено з метою розгортання, більшою за :const:`10.5`, "
-":func:`getgroups` повертає поточний список доступу групи для користувача, "
-"пов’язаного з ефективним ідентифікатором користувача процесу; список доступу"
-" групи може змінюватися протягом життя процесу, на нього не впливають "
-"виклики :func:`setgroups`, і його довжина не обмежена 16. Цільове значення "
-"розгортання, :const:`MACOSX_DEPLOYMENT_TARGET`, може бути отримано за "
-"допомогою :func:`sysconfig.get_config_var`."
 
 #: ../../library/os.rst:419
 msgid ""
@@ -1051,19 +1037,15 @@ msgstr ""
 
 #: ../../library/os.rst:717
 msgid ""
-"Call the system call :c:func:`getsid`.  See the Unix manual for the "
+"Call the system call :c:func:`!getsid`.  See the Unix manual for the "
 "semantics."
 msgstr ""
-"Викличте системний виклик :c:func:`getsid`. Перегляньте посібник з Unix для "
-"семантики."
 
 #: ../../library/os.rst:724
 msgid ""
-"Call the system call :c:func:`setsid`.  See the Unix manual for the "
+"Call the system call :c:func:`!setsid`.  See the Unix manual for the "
 "semantics."
 msgstr ""
-"Викличте системний виклик :c:func:`setsid`. Перегляньте посібник з Unix для "
-"семантики."
 
 #: ../../library/os.rst:733
 msgid "Set the current process's user id."
@@ -1072,12 +1054,9 @@ msgstr "Встановіть ідентифікатор користувача �
 #: ../../library/os.rst:741
 msgid ""
 "Return the error message corresponding to the error code in *code*. On "
-"platforms where :c:func:`strerror` returns ``NULL`` when given an unknown "
+"platforms where :c:func:`!strerror` returns ``NULL`` when given an unknown "
 "error number, :exc:`ValueError` is raised."
 msgstr ""
-"Повернути повідомлення про помилку, що відповідає коду помилки в *code*. На "
-"платформах, де :c:func:`strerror` повертає ``NULL``, коли отримує невідомий "
-"номер помилки, виникає :exc:`ValueError`."
 
 #: ../../library/os.rst:748
 msgid ""
@@ -2975,6 +2954,10 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``os.link`` з аргументами ``src``, "
 "``dst``, ``src_dir_fd``, ``dst_dir_fd``."
 
+#: ../../library/os.rst:2153
+msgid ":ref:`Availability <availability>`: Unix, Windows, not Emscripten."
+msgstr ""
+
 #: ../../library/os.rst:2155
 msgid "Added Windows support."
 msgstr "Додана підтримка Windows."
@@ -3339,18 +3322,14 @@ msgstr ""
 #: ../../library/os.rst:2422
 msgid ""
 "Extract the device major number from a raw device number (usually the "
-":attr:`st_dev` or :attr:`st_rdev` field from :c:type:`stat`)."
+":attr:`st_dev` or :attr:`st_rdev` field from :c:struct:`stat`)."
 msgstr ""
-"Витягніть основний номер пристрою з необробленого номера пристрою (зазвичай "
-"це поле :attr:`st_dev` або :attr:`st_rdev` з :c:type:`stat`)."
 
 #: ../../library/os.rst:2428
 msgid ""
 "Extract the device minor number from a raw device number (usually the "
-":attr:`st_dev` or :attr:`st_rdev` field from :c:type:`stat`)."
+":attr:`st_dev` or :attr:`st_rdev` field from :c:struct:`stat`)."
 msgstr ""
-"Витягніть другорядний номер пристрою з необробленого номера пристрою "
-"(зазвичай це поле :attr:`st_dev` або :attr:`st_rdev` з :c:type:`stat`)."
 
 #: ../../library/os.rst:2434
 msgid "Compose a raw device number from the major and minor device numbers."
@@ -4158,12 +4137,9 @@ msgstr ""
 #: ../../library/os.rst:2939
 msgid ""
 "Object whose attributes correspond roughly to the members of the "
-":c:type:`stat` structure. It is used for the result of :func:`os.stat`, "
+":c:struct:`stat` structure. It is used for the result of :func:`os.stat`, "
 ":func:`os.fstat` and :func:`os.lstat`."
 msgstr ""
-"Об’єкт, атрибути якого приблизно відповідають членам структури "
-":c:type:`stat`. Він використовується для результату :func:`os.stat`, "
-":func:`os.fstat` і :func:`os.lstat`."
 
 #: ../../library/os.rst:2943
 msgid "Attributes:"
@@ -4407,32 +4383,21 @@ msgstr ""
 #: ../../library/os.rst:3119
 msgid ""
 "The standard module :mod:`stat` defines functions and constants that are "
-"useful for extracting information from a :c:type:`stat` structure. (On "
+"useful for extracting information from a :c:struct:`stat` structure. (On "
 "Windows, some items are filled with dummy values.)"
 msgstr ""
-"Стандартний модуль :mod:`stat` визначає функції та константи, корисні для "
-"отримання інформації зі структури :c:type:`stat`. (У Windows деякі елементи "
-"заповнюються фіктивними значеннями.)"
 
 #: ../../library/os.rst:3123
 msgid ""
 "For backward compatibility, a :class:`stat_result` instance is also "
 "accessible as a tuple of at least 10 integers giving the most important (and"
-" portable) members of the :c:type:`stat` structure, in the order "
+" portable) members of the :c:struct:`stat` structure, in the order "
 ":attr:`st_mode`, :attr:`st_ino`, :attr:`st_dev`, :attr:`st_nlink`, "
 ":attr:`st_uid`, :attr:`st_gid`, :attr:`st_size`, :attr:`st_atime`, "
 ":attr:`st_mtime`, :attr:`st_ctime`. More items may be added at the end by "
 "some implementations. For compatibility with older Python versions, "
 "accessing :class:`stat_result` as a tuple always returns integers."
 msgstr ""
-"Для зворотної сумісності екземпляр :class:`stat_result` також доступний як "
-"кортеж із принаймні 10 цілих чисел, що надає найважливіші (і переносні) "
-"члени структури :c:type:`stat` у порядку :attr:`st_mode`, :attr:`st_ino`, "
-":attr:`st_dev`, :attr:`st_nlink`, :attr:`st_uid`, :attr:`st_gid`, "
-":attr:`st_size`, :attr:`st_atime`, :attr:`st_mtime`, :attr:`st_ctime`. Інші "
-"елементи можуть бути додані в кінці в деяких реалізаціях. Для сумісності зі "
-"старими версіями Python доступ до :class:`stat_result` як кортежу завжди "
-"повертає цілі числа."
 
 #: ../../library/os.rst:3132
 msgid ""
@@ -4496,17 +4461,11 @@ msgstr ""
 msgid ""
 "Perform a :c:func:`statvfs` system call on the given path.  The return value"
 " is an object whose attributes describe the filesystem on the given path, "
-"and correspond to the members of the :c:type:`statvfs` structure, namely: "
+"and correspond to the members of the :c:struct:`statvfs` structure, namely: "
 ":attr:`f_bsize`, :attr:`f_frsize`, :attr:`f_blocks`, :attr:`f_bfree`, "
 ":attr:`f_bavail`, :attr:`f_files`, :attr:`f_ffree`, :attr:`f_favail`, "
 ":attr:`f_flag`, :attr:`f_namemax`, :attr:`f_fsid`."
 msgstr ""
-"Виконайте системний виклик :c:func:`statvfs` за вказаним шляхом. Повернене "
-"значення — це об’єкт, атрибути якого описують файлову систему на заданому "
-"шляху та відповідають членам структури :c:type:`statvfs`, а саме: "
-":attr:`f_bsize`, :attr:`f_frsize`,  :attr:`f_blocks`, :attr:`f_bfree`, "
-":attr:`f_bavail`, :attr:`f_files`, :attr:`f_ffree`, :attr:`f_favail`, "
-":attr:`f_flag`, :attr:`f_namemax`, :attr:`f_fsid`."
 
 #: ../../library/os.rst:3182
 msgid ""
@@ -6617,7 +6576,7 @@ msgstr ""
 #: ../../library/os.rst:4652
 msgid ""
 "The return value is an object representing the data contained in the "
-":c:type:`!siginfo_t` structure with the following attributes:"
+":c:type:`siginfo_t` structure with the following attributes:"
 msgstr ""
 
 #: ../../library/os.rst:4655

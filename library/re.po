@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-14 14:14+0000\n"
+"POT-Creation-Date: 2023-07-28 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -197,7 +197,7 @@ msgstr ""
 msgid "The special characters are:"
 msgstr "Спеціальними символами є:"
 
-#: ../../library/re.rst:104 ../../library/re.rst:1532
+#: ../../library/re.rst:104 ../../library/re.rst:1545
 msgid "``.``"
 msgstr "``.``"
 
@@ -912,7 +912,7 @@ msgid ""
 "(``b'\\x00'``-``b'\\x7f'``)."
 msgstr ""
 
-#: ../../library/re.rst:504
+#: ../../library/re.rst:506
 msgid ""
 "The special sequences consist of ``'\\'`` and a character from the list "
 "below. If the ordinary character is not an ASCII digit or an ASCII letter, "
@@ -924,11 +924,11 @@ msgstr ""
 " RE відповідатиме другому символу. Наприклад, ``\\$`` відповідає символу "
 "``''$'``."
 
-#: ../../library/re.rst:519
+#: ../../library/re.rst:521
 msgid "``\\number``"
 msgstr "``\\номер``"
 
-#: ../../library/re.rst:512
+#: ../../library/re.rst:514
 msgid ""
 "Matches the contents of the group of the same number.  Groups are numbered "
 "starting from 1.  For example, ``(.+) \\1`` matches ``'the the'`` or ``'55 "
@@ -948,19 +948,19 @@ msgstr ""
 " *число*. Усередині ``'['`` і ``']'`` класу символів усі цифрові екрановані "
 "символи розглядаються як символи."
 
-#: ../../library/re.rst:524
+#: ../../library/re.rst:526
 msgid "``\\A``"
 msgstr "``\\A``"
 
-#: ../../library/re.rst:524
+#: ../../library/re.rst:526
 msgid "Matches only at the start of the string."
 msgstr "Збігається лише на початку рядка."
 
-#: ../../library/re.rst:540
+#: ../../library/re.rst:542
 msgid "``\\b``"
 msgstr "``\\b``"
 
-#: ../../library/re.rst:529
+#: ../../library/re.rst:531
 msgid ""
 "Matches the empty string, but only at the beginning or end of a word. A word"
 " is defined as a sequence of word characters.  Note that formally, ``\\b`` "
@@ -976,7 +976,7 @@ msgstr ""
 " ``'foo'``, ``'foo.''``, ``'(foo)'``, ``'bar foo baz'``, але не ``'foobar'``"
 " або ``'foo3'``."
 
-#: ../../library/re.rst:536
+#: ../../library/re.rst:538
 msgid ""
 "By default Unicode alphanumerics are the ones used in Unicode patterns, but "
 "this can be changed by using the :const:`ASCII` flag.  Word boundaries are "
@@ -990,11 +990,11 @@ msgstr ""
 ":const:`LOCALE`. Усередині діапазону символів ``\\b`` представляє символ "
 "зворотного пробілу для сумісності з рядковими літералами Python."
 
-#: ../../library/re.rst:551
+#: ../../library/re.rst:553
 msgid "``\\B``"
 msgstr "``\\B``"
 
-#: ../../library/re.rst:545
+#: ../../library/re.rst:547
 msgid ""
 "Matches the empty string, but only when it is *not* at the beginning or end "
 "of a word.  This means that ``r'py\\B'`` matches ``'python'``, ``'py3'``, "
@@ -1012,15 +1012,15 @@ msgstr ""
 "допомогою прапорця :const:`ASCII`. Межі слів визначаються поточною мовою, "
 "якщо використовується прапорець :const:`LOCALE`."
 
-#: ../../library/re.rst:563
+#: ../../library/re.rst:565
 msgid "``\\d``"
 msgstr "``\\d``"
 
-#: ../../library/re.rst:560 ../../library/re.rst:580 ../../library/re.rst:599
+#: ../../library/re.rst:562 ../../library/re.rst:582 ../../library/re.rst:601
 msgid "For Unicode (str) patterns:"
 msgstr "Для шаблонів Unicode (str):"
 
-#: ../../library/re.rst:557
+#: ../../library/re.rst:559
 msgid ""
 "Matches any Unicode decimal digit (that is, any character in Unicode "
 "character category [Nd]).  This includes ``[0-9]``, and also many other "
@@ -1032,19 +1032,19 @@ msgstr ""
 "багато інших цифрових символів. Якщо використовується прапорець "
 ":const:`ASCII`, збігається лише ``[0-9]``."
 
-#: ../../library/re.rst:563 ../../library/re.rst:584 ../../library/re.rst:605
+#: ../../library/re.rst:565 ../../library/re.rst:586 ../../library/re.rst:607
 msgid "For 8-bit (bytes) patterns:"
 msgstr "Для 8-бітових (байтових) шаблонів:"
 
-#: ../../library/re.rst:563
+#: ../../library/re.rst:565
 msgid "Matches any decimal digit; this is equivalent to ``[0-9]``."
 msgstr "Збігається з будь-якою десятковою цифрою; це еквівалентно ``[0-9]``."
 
-#: ../../library/re.rst:570
+#: ../../library/re.rst:572
 msgid "``\\D``"
 msgstr "``\\D``"
 
-#: ../../library/re.rst:568
+#: ../../library/re.rst:570
 msgid ""
 "Matches any character which is not a decimal digit. This is the opposite of "
 "``\\d``. If the :const:`ASCII` flag is used this becomes the equivalent of "
@@ -1054,11 +1054,11 @@ msgstr ""
 " ``\\d``. Якщо використовується прапорець :const:`ASCII`, це стає "
 "еквівалентом ``[^0-9]``."
 
-#: ../../library/re.rst:584
+#: ../../library/re.rst:586
 msgid "``\\s``"
 msgstr "``\\s``"
 
-#: ../../library/re.rst:576
+#: ../../library/re.rst:578
 msgid ""
 "Matches Unicode whitespace characters (which includes ``[ "
 "\\t\\n\\r\\f\\v]``, and also many other characters, for example the non-"
@@ -1070,7 +1070,7 @@ msgstr ""
 "правилами типографіки багатьох мов). Якщо використовується прапорець "
 ":const:`ASCII`, збігається лише ``[ \\t\\n\\r\\f\\v]``."
 
-#: ../../library/re.rst:583
+#: ../../library/re.rst:585
 msgid ""
 "Matches characters considered whitespace in the ASCII character set; this is"
 " equivalent to ``[ \\t\\n\\r\\f\\v]``."
@@ -1078,11 +1078,11 @@ msgstr ""
 "Відповідає символам, які вважаються пробілами в наборі символів ASCII; це "
 "еквівалентно ``[ \\t\\n\\r\\f\\v]``."
 
-#: ../../library/re.rst:591
+#: ../../library/re.rst:593
 msgid "``\\S``"
 msgstr "``\\S``"
 
-#: ../../library/re.rst:589
+#: ../../library/re.rst:591
 msgid ""
 "Matches any character which is not a whitespace character. This is the "
 "opposite of ``\\s``. If the :const:`ASCII` flag is used this becomes the "
@@ -1092,18 +1092,18 @@ msgstr ""
 " Якщо використовується прапорець :const:`ASCII`, це стає еквівалентом ``[^ "
 "\\t\\n\\r\\f\\v]``."
 
-#: ../../library/re.rst:605
+#: ../../library/re.rst:607
 msgid "``\\w``"
 msgstr "``\\w``"
 
-#: ../../library/re.rst:597
+#: ../../library/re.rst:599
 msgid ""
 "Matches Unicode word characters; this includes alphanumeric characters (as "
 "defined by :meth:`str.isalnum`) as well as the underscore (``_``). If the "
 ":const:`ASCII` flag is used, only ``[a-zA-Z0-9_]`` is matched."
 msgstr ""
 
-#: ../../library/re.rst:602
+#: ../../library/re.rst:604
 msgid ""
 "Matches characters considered alphanumeric in the ASCII character set; this "
 "is equivalent to ``[a-zA-Z0-9_]``.  If the :const:`LOCALE` flag is used, "
@@ -1115,11 +1115,11 @@ msgstr ""
 ":const:`LOCALE`, відповідає символам, які вважаються буквено-цифровими в "
 "поточній локалі, і підкресленню."
 
-#: ../../library/re.rst:614
+#: ../../library/re.rst:616
 msgid "``\\W``"
 msgstr "``\\W``"
 
-#: ../../library/re.rst:610
+#: ../../library/re.rst:612
 msgid ""
 "Matches any character which is not a word character. This is the opposite of"
 " ``\\w``. If the :const:`ASCII` flag is used this becomes the equivalent of "
@@ -1132,23 +1132,21 @@ msgstr ""
 ":const:`LOCALE`, відповідає символам, які не є ані буквено-цифровими в "
 "поточній локалі, ані підкресленням."
 
-#: ../../library/re.rst:619
+#: ../../library/re.rst:621
 msgid "``\\Z``"
 msgstr "``\\Z``"
 
-#: ../../library/re.rst:619
+#: ../../library/re.rst:621
 msgid "Matches only at the end of the string."
 msgstr "Збігається лише в кінці рядка."
 
-#: ../../library/re.rst:635
+#: ../../library/re.rst:637
 msgid ""
-"Most of the standard escapes supported by Python string literals are also "
-"accepted by the regular expression parser::"
+"Most of the :ref:`escape sequences <escape-sequences>` supported by Python "
+"string literals are also accepted by the regular expression parser::"
 msgstr ""
-"Більшість стандартних екранованих символів, які підтримуються рядковими "
-"літералами Python, також приймаються аналізатором регулярних виразів::"
 
-#: ../../library/re.rst:642
+#: ../../library/re.rst:644
 msgid ""
 "(Note that ``\\b`` is used to represent word boundaries, and means "
 "\"backspace\" only inside character classes.)"
@@ -1156,7 +1154,7 @@ msgstr ""
 "(Зауважте, що ``\\b`` використовується для представлення меж слів і означає "
 "\"backspace\" лише всередині класів символів.)"
 
-#: ../../library/re.rst:645
+#: ../../library/re.rst:647
 msgid ""
 "``'\\u'``, ``'\\U'``, and ``'\\N'`` escape sequences are only recognized in "
 "Unicode patterns.  In bytes patterns they are errors.  Unknown escapes of "
@@ -1167,7 +1165,7 @@ msgstr ""
 "ASCII зарезервовано для майбутнього використання та розглядаються як "
 "помилки."
 
-#: ../../library/re.rst:649
+#: ../../library/re.rst:651
 msgid ""
 "Octal escapes are included in a limited form.  If the first digit is a 0, or"
 " if there are three octal digits, it is considered an octal escape. "
@@ -1179,18 +1177,18 @@ msgstr ""
 " посилання на групу. Що стосується рядкових літералів, вісімкові символи "
 "екранування завжди мають не більше трьох цифр."
 
-#: ../../library/re.rst:654
+#: ../../library/re.rst:656
 msgid "The ``'\\u'`` and ``'\\U'`` escape sequences have been added."
 msgstr "Було додано керуючі послідовності ``'\\u'`` і ``'\\U'``."
 
-#: ../../library/re.rst:657
+#: ../../library/re.rst:659
 msgid ""
 "Unknown escapes consisting of ``'\\'`` and an ASCII letter now are errors."
 msgstr ""
 "Невідомі вихідні символи, що складаються з ``'\\'`` і літери ASCII, тепер є "
 "помилками."
 
-#: ../../library/re.rst:660
+#: ../../library/re.rst:662
 msgid ""
 "The ``'\\N{name}'`` escape sequence has been added. As in string literals, "
 "it expands to the named Unicode character (e.g. ``'\\N{EM DASH}'``)."
@@ -1199,11 +1197,11 @@ msgstr ""
 "він розширюється до названого символу Unicode (наприклад, ``'\\N{EM "
 "DASH}''``)."
 
-#: ../../library/re.rst:668
+#: ../../library/re.rst:670
 msgid "Module Contents"
 msgstr "Зміст модуля"
 
-#: ../../library/re.rst:670
+#: ../../library/re.rst:672
 msgid ""
 "The module defines several functions, constants, and an exception. Some of "
 "the functions are simplified versions of the full featured methods for "
@@ -1215,11 +1213,11 @@ msgstr ""
 "регулярних виразів. Більшість нетривіальних програм завжди використовують "
 "скомпільовану форму."
 
-#: ../../library/re.rst:677
+#: ../../library/re.rst:679
 msgid "Flags"
 msgstr "Прапори"
 
-#: ../../library/re.rst:679
+#: ../../library/re.rst:681
 msgid ""
 "Flag constants are now instances of :class:`RegexFlag`, which is a subclass "
 "of :class:`enum.IntFlag`."
@@ -1227,16 +1225,16 @@ msgstr ""
 "Константи прапорів тепер є екземплярами :class:`RegexFlag`, який є підкласом"
 " :class:`enum.IntFlag`."
 
-#: ../../library/re.rst:686
+#: ../../library/re.rst:688
 msgid ""
 "An :class:`enum.IntFlag` class containing the regex options listed below."
 msgstr ""
 
-#: ../../library/re.rst:688
+#: ../../library/re.rst:690
 msgid "- added to ``__all__``"
 msgstr ""
 
-#: ../../library/re.rst:693
+#: ../../library/re.rst:695
 msgid ""
 "Make ``\\w``, ``\\W``, ``\\b``, ``\\B``, ``\\d``, ``\\D``, ``\\s`` and "
 "``\\S`` perform ASCII-only matching instead of full Unicode matching.  This "
@@ -1248,7 +1246,7 @@ msgstr ""
 "Unicode. Це має значення лише для шаблонів Unicode та ігнорується для "
 "шаблонів байтів. Відповідає вбудованому прапору ``(?a)``."
 
-#: ../../library/re.rst:698
+#: ../../library/re.rst:700
 msgid ""
 "Note that for backward compatibility, the :const:`re.U` flag still exists "
 "(as well as its synonym :const:`re.UNICODE` and its embedded counterpart "
@@ -1260,7 +1258,7 @@ msgstr ""
 "але вони зайві. у Python 3, оскільки збіги є Юнікодом за замовчуванням для "
 "рядків (і збіги Юнікоду не дозволені для байтів)."
 
-#: ../../library/re.rst:707
+#: ../../library/re.rst:709
 msgid ""
 "Display debug information about compiled expression. No corresponding inline"
 " flag."
@@ -1268,7 +1266,7 @@ msgstr ""
 "Відображення налагоджувальної інформації про скомпільований вираз. Немає "
 "відповідного вбудованого прапора."
 
-#: ../../library/re.rst:714
+#: ../../library/re.rst:716
 msgid ""
 "Perform case-insensitive matching; expressions like ``[A-Z]`` will also "
 "match lowercase letters.  Full Unicode matching (such as ``Ü`` matching "
@@ -1285,7 +1283,7 @@ msgstr ""
 "використовується прапорець :const:`re.LOCALE`. Відповідає вбудованому "
 "прапору ``(?i)``."
 
-#: ../../library/re.rst:721
+#: ../../library/re.rst:723
 msgid ""
 "Note that when the Unicode patterns ``[a-z]`` or ``[A-Z]`` are used in "
 "combination with the :const:`IGNORECASE` flag, they will match the 52 ASCII "
@@ -1303,7 +1301,7 @@ msgstr ""
 "(U+212A, знак Кельвіна). Якщо використовується прапорець :const:`ASCII`, "
 "збігаються лише літери від 'a' до 'z' і від 'A' до 'Z'."
 
-#: ../../library/re.rst:732
+#: ../../library/re.rst:734
 msgid ""
 "Make ``\\w``, ``\\W``, ``\\b``, ``\\B`` and case-insensitive matching "
 "dependent on the current locale.  This flag can be used only with bytes "
@@ -1322,7 +1320,7 @@ msgstr ""
 "здатний обробляти різні локалі/мови. Відповідає вбудованому прапору "
 "``(?L)``."
 
-#: ../../library/re.rst:741
+#: ../../library/re.rst:743
 msgid ""
 ":const:`re.LOCALE` can be used only with bytes patterns and is not "
 "compatible with :const:`re.ASCII`."
@@ -1330,7 +1328,7 @@ msgstr ""
 ":const:`re.LOCALE` можна використовувати лише з шаблонами байтів і "
 "несумісний з :const:`re.ASCII`."
 
-#: ../../library/re.rst:745
+#: ../../library/re.rst:747
 msgid ""
 "Compiled regular expression objects with the :const:`re.LOCALE` flag no "
 "longer depend on the locale at compile time.  Only the locale at matching "
@@ -1340,7 +1338,7 @@ msgstr ""
 "залежать від локалі під час компіляції. Лише локаль під час зіставлення "
 "впливає на результат зіставлення."
 
-#: ../../library/re.rst:754
+#: ../../library/re.rst:756
 msgid ""
 "When specified, the pattern character ``'^'`` matches at the beginning of "
 "the string and at the beginning of each line (immediately following each "
@@ -1358,7 +1356,7 @@ msgstr ""
 "нового рядка (якщо є) у кінці рядка. Відповідає вбудованому прапору "
 "``(?m)``."
 
-#: ../../library/re.rst:764
+#: ../../library/re.rst:766
 msgid ""
 "Indicates no flag being applied, the value is ``0``.  This flag may be used "
 "as a default value for a function keyword argument or as a base value that "
@@ -1366,7 +1364,7 @@ msgid ""
 "value::"
 msgstr ""
 
-#: ../../library/re.rst:777
+#: ../../library/re.rst:779
 msgid ""
 "Make the ``'.'`` special character match any character at all, including a "
 "newline; without this flag, ``'.'`` will match anything *except* a newline. "
@@ -1377,6 +1375,21 @@ msgstr ""
 "будь-чому *крім* нового рядка. Відповідає вбудованому прапору ``(?s)``."
 
 #: ../../library/re.rst:787
+msgid ""
+"In Python 2, this flag made :ref:`special sequences <re-special-sequences>` "
+"include Unicode characters in matches. Since Python 3, Unicode characters "
+"are matched by default."
+msgstr ""
+
+#: ../../library/re.rst:791
+msgid "See :const:`A` for restricting matching on ASCII characters instead."
+msgstr ""
+
+#: ../../library/re.rst:793
+msgid "This flag is only kept for backward compatibility."
+msgstr ""
+
+#: ../../library/re.rst:800
 msgid ""
 "This flag allows you to write regular expressions that look nicer and are "
 "more readable by allowing you to visually separate logical sections of the "
@@ -1389,7 +1402,7 @@ msgid ""
 "ignored."
 msgstr ""
 
-#: ../../library/re.rst:797
+#: ../../library/re.rst:810
 msgid ""
 "This means that the two following regular expression objects that match a "
 "decimal number are functionally equal::"
@@ -1397,15 +1410,15 @@ msgstr ""
 "Це означає, що два наступних об’єкти регулярного виразу, які відповідають "
 "десятковому числу, функціонально однакові:"
 
-#: ../../library/re.rst:805
+#: ../../library/re.rst:818
 msgid "Corresponds to the inline flag ``(?x)``."
 msgstr "Відповідає вбудованому прапору ``(?x)``."
 
-#: ../../library/re.rst:809
+#: ../../library/re.rst:822
 msgid "Functions"
 msgstr "Функції"
 
-#: ../../library/re.rst:813
+#: ../../library/re.rst:826
 msgid ""
 "Compile a regular expression pattern into a :ref:`regular expression object "
 "<re-objects>`, which can be used for matching using its "
@@ -1417,7 +1430,7 @@ msgstr ""
 ":func:`~Pattern.match`, :func:`~Pattern.search` та інших методів, описаних "
 "нижче ."
 
-#: ../../library/re.rst:818
+#: ../../library/re.rst:831
 msgid ""
 "The expression's behaviour can be modified by specifying a *flags* value. "
 "Values can be any of the following variables, combined using bitwise OR (the"
@@ -1427,15 +1440,15 @@ msgstr ""
 " бути будь-які з наведених нижче змінних, об’єднаних за допомогою побітового"
 " АБО (оператор ``|``)."
 
-#: ../../library/re.rst:822
+#: ../../library/re.rst:835
 msgid "The sequence ::"
 msgstr "Послідовність ::"
 
-#: ../../library/re.rst:827
+#: ../../library/re.rst:840
 msgid "is equivalent to ::"
 msgstr "еквівалентно ::"
 
-#: ../../library/re.rst:831
+#: ../../library/re.rst:844
 msgid ""
 "but using :func:`re.compile` and saving the resulting regular expression "
 "object for reuse is more efficient when the expression will be used several "
@@ -1445,7 +1458,7 @@ msgstr ""
 "регулярного виразу для повторного використання ефективніше, якщо вираз "
 "використовуватиметься кілька разів в одній програмі."
 
-#: ../../library/re.rst:837
+#: ../../library/re.rst:850
 msgid ""
 "The compiled versions of the most recent patterns passed to "
 ":func:`re.compile` and the module-level matching functions are cached, so "
@@ -1457,7 +1470,7 @@ msgstr ""
 "використовують лише кілька регулярних виразів одночасно, не потрібно "
 "турбуватися про компіляцію регулярних виразів."
 
-#: ../../library/re.rst:845
+#: ../../library/re.rst:858
 msgid ""
 "Scan through *string* looking for the first location where the regular "
 "expression *pattern* produces a match, and return a corresponding "
@@ -1471,7 +1484,7 @@ msgstr ""
 "відповідає шаблону; зауважте, що це відрізняється від пошуку збігу нульової "
 "довжини в деякій точці рядка."
 
-#: ../../library/re.rst:854
+#: ../../library/re.rst:867
 msgid ""
 "If zero or more characters at the beginning of *string* match the regular "
 "expression *pattern*, return a corresponding :ref:`match object <match-"
@@ -1483,7 +1496,7 @@ msgstr ""
 " Повертає ``None``, якщо рядок не відповідає шаблону; зауважте, що це "
 "відрізняється від збігу нульової довжини."
 
-#: ../../library/re.rst:859
+#: ../../library/re.rst:872
 msgid ""
 "Note that even in :const:`MULTILINE` mode, :func:`re.match` will only match "
 "at the beginning of the string and not at the beginning of each line."
@@ -1491,7 +1504,7 @@ msgstr ""
 "Зауважте, що навіть у режимі :const:`MULTILINE` :func:`re.match` "
 "збігатиметься лише на початку рядка, а не на початку кожного рядка."
 
-#: ../../library/re.rst:862
+#: ../../library/re.rst:875
 msgid ""
 "If you want to locate a match anywhere in *string*, use :func:`search` "
 "instead (see also :ref:`search-vs-match`)."
@@ -1499,7 +1512,7 @@ msgstr ""
 "Якщо ви хочете знайти збіг будь-де в *string*, використовуйте натомість "
 ":func:`search` (див. також :ref:`search-vs-match`)."
 
-#: ../../library/re.rst:868
+#: ../../library/re.rst:881
 msgid ""
 "If the whole *string* matches the regular expression *pattern*, return a "
 "corresponding :ref:`match object <match-objects>`.  Return ``None`` if the "
@@ -1511,7 +1524,7 @@ msgstr ""
 "якщо рядок не відповідає шаблону; зауважте, що це відрізняється від збігу "
 "нульової довжини."
 
-#: ../../library/re.rst:878
+#: ../../library/re.rst:891
 msgid ""
 "Split *string* by the occurrences of *pattern*.  If capturing parentheses "
 "are used in *pattern*, then the text of all groups in the pattern are also "
@@ -1525,7 +1538,7 @@ msgstr ""
 "відбувається не більше ніж *maxsplit*, а залишок рядка повертається як "
 "останній елемент списку. ::"
 
-#: ../../library/re.rst:893
+#: ../../library/re.rst:906
 msgid ""
 "If there are capturing groups in the separator and it matches at the start "
 "of the string, the result will start with an empty string.  The same holds "
@@ -1534,7 +1547,7 @@ msgstr ""
 "Якщо в розділювачі є групи захоплення, і він збігається на початку рядка, "
 "результат розпочнеться з порожнього рядка. Те саме стосується кінця рядка::"
 
-#: ../../library/re.rst:900
+#: ../../library/re.rst:913
 msgid ""
 "That way, separator components are always found at the same relative indices"
 " within the result list."
@@ -1542,7 +1555,7 @@ msgstr ""
 "Таким чином, компоненти роздільників завжди знаходяться за однаковими "
 "відносними індексами в списку результатів."
 
-#: ../../library/re.rst:903
+#: ../../library/re.rst:916
 msgid ""
 "Empty matches for the pattern split the string only when not adjacent to a "
 "previous empty match."
@@ -1550,18 +1563,18 @@ msgstr ""
 "Порожні збіги для шаблону розділяють рядок лише тоді, коли вони не суміжні з"
 " попереднім порожнім збігом."
 
-#: ../../library/re.rst:913 ../../library/re.rst:1004
-#: ../../library/re.rst:1033
+#: ../../library/re.rst:926 ../../library/re.rst:1017
+#: ../../library/re.rst:1046
 msgid "Added the optional flags argument."
 msgstr "Додано необов’язковий аргумент flags."
 
-#: ../../library/re.rst:916
+#: ../../library/re.rst:929
 msgid ""
 "Added support of splitting on a pattern that could match an empty string."
 msgstr ""
 "Додано підтримку розбиття на шаблон, який може відповідати порожньому рядку."
 
-#: ../../library/re.rst:922
+#: ../../library/re.rst:935
 msgid ""
 "Return all non-overlapping matches of *pattern* in *string*, as a list of "
 "strings or tuples.  The *string* is scanned left-to-right, and matches are "
@@ -1571,7 +1584,7 @@ msgstr ""
 "рядків або кортежів. *Рядок* сканується зліва направо, і збіги повертаються "
 "в порядку знайдення. Порожні збіги включаються в результат."
 
-#: ../../library/re.rst:926
+#: ../../library/re.rst:939
 msgid ""
 "The result depends on the number of capturing groups in the pattern. If "
 "there are no groups, return a list of strings matching the whole pattern.  "
@@ -1586,13 +1599,13 @@ msgstr ""
 "присутні кілька груп, поверніть список кортежів рядків, які відповідають "
 "групам. Незахоплюючі групи не впливають на форму результату."
 
-#: ../../library/re.rst:938 ../../library/re.rst:949
+#: ../../library/re.rst:951 ../../library/re.rst:962
 msgid "Non-empty matches can now start just after a previous empty match."
 msgstr ""
 "Непорожні збіги тепер можуть починатися одразу після попереднього порожнього"
 " збігу."
 
-#: ../../library/re.rst:944
+#: ../../library/re.rst:957
 msgid ""
 "Return an :term:`iterator` yielding :ref:`match objects <match-objects>` "
 "over all non-overlapping matches for the RE *pattern* in *string*.  The "
@@ -1604,7 +1617,7 @@ msgstr ""
 "сканується зліва направо, і збіги повертаються в порядку знайдення. Порожні "
 "збіги включаються в результат."
 
-#: ../../library/re.rst:955
+#: ../../library/re.rst:968
 msgid ""
 "Return the string obtained by replacing the leftmost non-overlapping "
 "occurrences of *pattern* in *string* by the replacement *repl*.  If the "
@@ -1628,7 +1641,7 @@ msgstr ""
 "спокої. Зворотні посилання, такі як ``\\6``, замінюються підрядком, який "
 "відповідає групі 6 у шаблоні. Наприклад::"
 
-#: ../../library/re.rst:971
+#: ../../library/re.rst:984
 msgid ""
 "If *repl* is a function, it is called for every non-overlapping occurrence "
 "of *pattern*.  The function takes a single :ref:`match object <match-"
@@ -1638,11 +1651,11 @@ msgstr ""
 "входження *шаблону*. Функція приймає один аргумент :ref:`match object "
 "<match-objects>` і повертає рядок заміни. Наприклад::"
 
-#: ../../library/re.rst:984
+#: ../../library/re.rst:997
 msgid "The pattern may be a string or a :ref:`pattern object <re-objects>`."
 msgstr "Шаблон може бути рядком або :ref:`об’єктом шаблону <re-objects>`."
 
-#: ../../library/re.rst:986
+#: ../../library/re.rst:999
 msgid ""
 "The optional argument *count* is the maximum number of pattern occurrences "
 "to be replaced; *count* must be a non-negative integer.  If omitted or zero,"
@@ -1656,7 +1669,7 @@ msgstr ""
 "замінюються лише тоді, коли вони не суміжні з попереднім порожнім збігом, "
 "тому ``sub('x*', '-', 'abxd')`` повертає ``'-a-b--d-'`` ."
 
-#: ../../library/re.rst:994
+#: ../../library/re.rst:1007
 msgid ""
 "In string-type *repl* arguments, in addition to the character escapes and "
 "backreferences described above, ``\\g<name>`` will use the substring matched"
@@ -1678,12 +1691,12 @@ msgstr ""
 "``'0'``. Зворотне посилання ``\\g <0>`` замінює весь підрядок, який "
 "відповідає RE."
 
-#: ../../library/re.rst:1007 ../../library/re.rst:1036
-#: ../../library/re.rst:1270
+#: ../../library/re.rst:1020 ../../library/re.rst:1049
+#: ../../library/re.rst:1283
 msgid "Unmatched groups are replaced with an empty string."
 msgstr "Невідповідні групи замінюються порожнім рядком."
 
-#: ../../library/re.rst:1010
+#: ../../library/re.rst:1023
 msgid ""
 "Unknown escapes in *pattern* consisting of ``'\\'`` and an ASCII letter now "
 "are errors."
@@ -1691,7 +1704,7 @@ msgstr ""
 "Невідомі вихідні коди в *шаблоні*, що складаються з ``'\\'`` і літери ASCII,"
 " тепер є помилками."
 
-#: ../../library/re.rst:1014
+#: ../../library/re.rst:1027
 msgid ""
 "Unknown escapes in *repl* consisting of ``'\\'`` and an ASCII letter now are"
 " errors."
@@ -1699,7 +1712,7 @@ msgstr ""
 "Невідомі вихідні символи в *repl*, які складаються з ``'\\'`` і літери "
 "ASCII, тепер є помилками."
 
-#: ../../library/re.rst:1018
+#: ../../library/re.rst:1031
 msgid ""
 "Empty matches for the pattern are replaced when adjacent to a previous non-"
 "empty match."
@@ -1707,14 +1720,14 @@ msgstr ""
 "Порожні збіги для шаблону замінюються, якщо вони суміжні з попереднім "
 "непорожнім збігом."
 
-#: ../../library/re.rst:1022
+#: ../../library/re.rst:1035
 msgid ""
 "Group *id* can only contain ASCII digits. In :class:`bytes` replacement "
 "strings, group *name* can only contain bytes in the ASCII range "
 "(``b'\\x00'``-``b'\\x7f'``)."
 msgstr ""
 
-#: ../../library/re.rst:1030
+#: ../../library/re.rst:1043
 msgid ""
 "Perform the same operation as :func:`sub`, but return a tuple ``(new_string,"
 " number_of_subs_made)``."
@@ -1722,7 +1735,7 @@ msgstr ""
 "Виконайте ту саму операцію, що й :func:`sub`, але поверніть кортеж "
 "``(new_string, number_of_subs_made)``."
 
-#: ../../library/re.rst:1042
+#: ../../library/re.rst:1055
 msgid ""
 "Escape special characters in *pattern*. This is useful if you want to match "
 "an arbitrary literal string that may have regular expression metacharacters "
@@ -1732,7 +1745,7 @@ msgstr ""
 "зіставити довільний рядок літералу, який може містити метасимволи "
 "регулярного виразу. Наприклад::"
 
-#: ../../library/re.rst:1057
+#: ../../library/re.rst:1070
 msgid ""
 "This function must not be used for the replacement string in :func:`sub` and"
 " :func:`subn`, only backslashes should be escaped.  For example::"
@@ -1740,11 +1753,11 @@ msgstr ""
 "Цю функцію не можна використовувати для рядка заміни в :func:`sub` і "
 ":func:`subn`, слід екранувати лише зворотні косі риски. Наприклад::"
 
-#: ../../library/re.rst:1065
+#: ../../library/re.rst:1078
 msgid "The ``'_'`` character is no longer escaped."
 msgstr "Символ \"_\" більше не екранується."
 
-#: ../../library/re.rst:1068
+#: ../../library/re.rst:1081
 msgid ""
 "Only characters that can have special meaning in a regular expression are "
 "escaped. As a result, ``'!'``, ``'\"'``, ``'%'``, ``\"'\"``, ``','``, "
@@ -1756,15 +1769,15 @@ msgstr ""
 "`, ``':'``, ``';'``, ``' <'``, ``'='``, ``'> '``, ``'@'`` і ``\"`\"`` більше"
 " не екрануються."
 
-#: ../../library/re.rst:1077
+#: ../../library/re.rst:1090
 msgid "Clear the regular expression cache."
 msgstr "Очистити кеш регулярних виразів."
 
-#: ../../library/re.rst:1081
+#: ../../library/re.rst:1094
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../library/re.rst:1085
+#: ../../library/re.rst:1098
 msgid ""
 "Exception raised when a string passed to one of the functions here is not a "
 "valid regular expression (for example, it might contain unmatched "
@@ -1778,35 +1791,35 @@ msgstr ""
 "помилкою, якщо рядок не містить збігів для шаблону. Екземпляр помилки має "
 "такі додаткові атрибути:"
 
-#: ../../library/re.rst:1093
+#: ../../library/re.rst:1106
 msgid "The unformatted error message."
 msgstr "Неформатне повідомлення про помилку."
 
-#: ../../library/re.rst:1097
+#: ../../library/re.rst:1110
 msgid "The regular expression pattern."
 msgstr "Шаблон регулярного виразу."
 
-#: ../../library/re.rst:1101
+#: ../../library/re.rst:1114
 msgid "The index in *pattern* where compilation failed (may be ``None``)."
 msgstr "Індекс у *шаблоні*, де не вдалося компілювати (може бути ``None``)."
 
-#: ../../library/re.rst:1105
+#: ../../library/re.rst:1118
 msgid "The line corresponding to *pos* (may be ``None``)."
 msgstr "Рядок, що відповідає *pos* (може бути ``None``)."
 
-#: ../../library/re.rst:1109
+#: ../../library/re.rst:1122
 msgid "The column corresponding to *pos* (may be ``None``)."
 msgstr "Стовпець, що відповідає *pos* (може бути ``None``)."
 
-#: ../../library/re.rst:1111
+#: ../../library/re.rst:1124
 msgid "Added additional attributes."
 msgstr "Додані додаткові атрибути."
 
-#: ../../library/re.rst:1117
+#: ../../library/re.rst:1130
 msgid "Regular Expression Objects"
 msgstr "Об’єкти регулярного виразу"
 
-#: ../../library/re.rst:1119
+#: ../../library/re.rst:1132
 msgid ""
 "Compiled regular expression objects support the following methods and "
 "attributes:"
@@ -1814,7 +1827,7 @@ msgstr ""
 "Зкомпільовані об’єкти регулярного виразу підтримують наступні методи та "
 "атрибути:"
 
-#: ../../library/re.rst:1124
+#: ../../library/re.rst:1137
 msgid ""
 "Scan through *string* looking for the first location where this regular "
 "expression produces a match, and return a corresponding :ref:`match object "
@@ -1828,7 +1841,7 @@ msgstr ""
 "зауважте, що це відрізняється від пошуку збігу нульової довжини в деякій "
 "точці рядка."
 
-#: ../../library/re.rst:1130
+#: ../../library/re.rst:1143
 msgid ""
 "The optional second parameter *pos* gives an index in the string where the "
 "search is to start; it defaults to ``0``.  This is not completely equivalent"
@@ -1842,7 +1855,7 @@ msgstr ""
 "позиціях одразу після нового рядка, але не обов’язково в індексі, з якого "
 "має початися пошук."
 
-#: ../../library/re.rst:1136
+#: ../../library/re.rst:1149
 msgid ""
 "The optional parameter *endpos* limits how far the string will be searched; "
 "it will be as if the string is *endpos* characters long, so only the "
@@ -1858,7 +1871,7 @@ msgstr ""
 "скомпільованим об’єктом регулярного виразу, ``rx.search(string, 0, 50)`` "
 "еквівалентно ``rx.search(string[:50], 0)``. ::"
 
-#: ../../library/re.rst:1151
+#: ../../library/re.rst:1164
 msgid ""
 "If zero or more characters at the *beginning* of *string* match this regular"
 " expression, return a corresponding :ref:`match object <match-objects>`. "
@@ -1870,7 +1883,7 @@ msgstr ""
 "<match-objects>`. Повертає ``None``, якщо рядок не відповідає шаблону; "
 "зауважте, що це відрізняється від збігу нульової довжини."
 
-#: ../../library/re.rst:1156 ../../library/re.rst:1174
+#: ../../library/re.rst:1169 ../../library/re.rst:1187
 msgid ""
 "The optional *pos* and *endpos* parameters have the same meaning as for the "
 ":meth:`~Pattern.search` method. ::"
@@ -1878,7 +1891,7 @@ msgstr ""
 "Необов’язкові параметри *pos* і *endpos* мають те саме значення, що й для "
 "методу :meth:`~Pattern.search`. ::"
 
-#: ../../library/re.rst:1164
+#: ../../library/re.rst:1177
 msgid ""
 "If you want to locate a match anywhere in *string*, use "
 ":meth:`~Pattern.search` instead (see also :ref:`search-vs-match`)."
@@ -1886,7 +1899,7 @@ msgstr ""
 "Якщо ви хочете знайти збіг будь-де в *string*, використовуйте натомість "
 ":meth:`~Pattern.search` (див. також :ref:`search-vs-match`)."
 
-#: ../../library/re.rst:1170
+#: ../../library/re.rst:1183
 msgid ""
 "If the whole *string* matches this regular expression, return a "
 "corresponding :ref:`match object <match-objects>`.  Return ``None`` if the "
@@ -1898,12 +1911,12 @@ msgstr ""
 "відповідає шаблону; зауважте, що це відрізняється від збігу нульової "
 "довжини."
 
-#: ../../library/re.rst:1188
+#: ../../library/re.rst:1201
 msgid "Identical to the :func:`split` function, using the compiled pattern."
 msgstr ""
 "Ідентична функції :func:`split`, використовуючи скомпільований шаблон."
 
-#: ../../library/re.rst:1193
+#: ../../library/re.rst:1206
 msgid ""
 "Similar to the :func:`findall` function, using the compiled pattern, but "
 "also accepts optional *pos* and *endpos* parameters that limit the search "
@@ -1913,7 +1926,7 @@ msgstr ""
 "також приймає додаткові параметри *pos* і *endpos*, які обмежують область "
 "пошуку, як для :meth:`search`."
 
-#: ../../library/re.rst:1200
+#: ../../library/re.rst:1213
 msgid ""
 "Similar to the :func:`finditer` function, using the compiled pattern, but "
 "also accepts optional *pos* and *endpos* parameters that limit the search "
@@ -1923,15 +1936,15 @@ msgstr ""
 " але також приймає додаткові параметри *pos* і *endpos*, які обмежують "
 "область пошуку, як для :meth:`search`."
 
-#: ../../library/re.rst:1207
+#: ../../library/re.rst:1220
 msgid "Identical to the :func:`sub` function, using the compiled pattern."
 msgstr "Ідентична функції :func:`sub`, використовуючи скомпільований шаблон."
 
-#: ../../library/re.rst:1212
+#: ../../library/re.rst:1225
 msgid "Identical to the :func:`subn` function, using the compiled pattern."
 msgstr "Ідентична функції :func:`subn`, використовуючи скомпільований шаблон."
 
-#: ../../library/re.rst:1217
+#: ../../library/re.rst:1230
 msgid ""
 "The regex matching flags.  This is a combination of the flags given to "
 ":func:`.compile`, any ``(?...)`` inline flags in the pattern, and implicit "
@@ -1941,11 +1954,11 @@ msgstr ""
 ":func:`.compile`, будь-яких вбудованих прапорів ``(?...)`` у шаблоні та "
 "неявних прапорів, таких як :data:`UNICODE`, якщо шаблон є Рядок Unicode."
 
-#: ../../library/re.rst:1224
+#: ../../library/re.rst:1237
 msgid "The number of capturing groups in the pattern."
 msgstr "Кількість груп захоплення в шаблоні."
 
-#: ../../library/re.rst:1229
+#: ../../library/re.rst:1242
 msgid ""
 "A dictionary mapping any symbolic group names defined by ``(?P<id>)`` to "
 "group numbers.  The dictionary is empty if no symbolic groups were used in "
@@ -1955,11 +1968,11 @@ msgstr ""
 ")``, на номери груп. Словник порожній, якщо в шаблоні не використовувалися "
 "символічні групи."
 
-#: ../../library/re.rst:1236
+#: ../../library/re.rst:1249
 msgid "The pattern string from which the pattern object was compiled."
 msgstr "Рядок шаблону, з якого було скомпільовано об’єкт шаблону."
 
-#: ../../library/re.rst:1239
+#: ../../library/re.rst:1252
 msgid ""
 "Added support of :func:`copy.copy` and :func:`copy.deepcopy`.  Compiled "
 "regular expression objects are considered atomic."
@@ -1967,11 +1980,11 @@ msgstr ""
 "Додано підтримку :func:`copy.copy` і :func:`copy.deepcopy`. Зкомпільовані "
 "об’єкти регулярного виразу вважаються атомарними."
 
-#: ../../library/re.rst:1247
+#: ../../library/re.rst:1260
 msgid "Match Objects"
 msgstr "Зіставте об’єкти"
 
-#: ../../library/re.rst:1249
+#: ../../library/re.rst:1262
 msgid ""
 "Match objects always have a boolean value of ``True``. Since "
 ":meth:`~Pattern.match` and :meth:`~Pattern.search` return ``None`` when "
@@ -1983,11 +1996,11 @@ msgstr ""
 "відсутності збігу, ви можете перевірити, чи був збіг за допомогою простого "
 "оператора ``if``: :"
 
-#: ../../library/re.rst:1258
+#: ../../library/re.rst:1271
 msgid "Match objects support the following methods and attributes:"
 msgstr "Об’єкти відповідності підтримують такі методи й атрибути:"
 
-#: ../../library/re.rst:1263
+#: ../../library/re.rst:1276
 msgid ""
 "Return the string obtained by doing backslash substitution on the template "
 "string *template*, as done by the :meth:`~Pattern.sub` method. Escapes such "
@@ -2001,7 +2014,7 @@ msgstr ""
 "посилання (``\\1``, ``\\2``) і іменовані зворотні посилання (``\\g <1>``, "
 "``\\g <name>``) замінюються вмістом відповідної групи."
 
-#: ../../library/re.rst:1275
+#: ../../library/re.rst:1288
 msgid ""
 "Returns one or more subgroups of the match.  If there is a single argument, "
 "the result is a single string; if there are multiple arguments, the result "
@@ -2027,7 +2040,7 @@ msgstr ""
 "результатом є ``None``. Якщо група міститься в частині шаблону, яка "
 "збігалася кілька разів, повертається останній збіг. ::"
 
-#: ../../library/re.rst:1297
+#: ../../library/re.rst:1310
 msgid ""
 "If the regular expression uses the ``(?P<name>...)`` syntax, the *groupN* "
 "arguments may also be strings identifying groups by their group name.  If a "
@@ -2039,20 +2052,20 @@ msgstr ""
 "Якщо рядковий аргумент не використовується як ім’я групи в шаблоні, виникає "
 "виняток :exc:`IndexError`."
 
-#: ../../library/re.rst:1302
+#: ../../library/re.rst:1315
 msgid "A moderately complicated example::"
 msgstr "Помірно складний приклад:"
 
-#: ../../library/re.rst:1310
+#: ../../library/re.rst:1323
 msgid "Named groups can also be referred to by their index::"
 msgstr "Іменовані групи також можна посилатися за їх індексом::"
 
-#: ../../library/re.rst:1317
+#: ../../library/re.rst:1330
 msgid "If a group matches multiple times, only the last match is accessible::"
 msgstr ""
 "Якщо група збігається кілька разів, доступним буде лише останній збіг::"
 
-#: ../../library/re.rst:1326
+#: ../../library/re.rst:1339
 msgid ""
 "This is identical to ``m.group(g)``.  This allows easier access to an "
 "individual group from a match::"
@@ -2060,11 +2073,11 @@ msgstr ""
 "Це ідентично ``m.group(g)``. Це дозволяє легше отримати доступ до окремої "
 "групи з матчу::"
 
-#: ../../library/re.rst:1337
+#: ../../library/re.rst:1350
 msgid "Named groups are supported as well::"
 msgstr ""
 
-#: ../../library/re.rst:1350
+#: ../../library/re.rst:1363
 msgid ""
 "Return a tuple containing all the subgroups of the match, from 1 up to "
 "however many groups are in the pattern.  The *default* argument is used for "
@@ -2074,11 +2087,11 @@ msgstr ""
 "кількості груп у шаблоні. Аргумент *default* використовується для груп, які "
 "не брали участі в матчі; за замовчуванням ``None``."
 
-#: ../../library/re.rst:1354 ../../library/re.rst:1579
+#: ../../library/re.rst:1367 ../../library/re.rst:1592
 msgid "For example::"
 msgstr "Наприклад::"
 
-#: ../../library/re.rst:1360
+#: ../../library/re.rst:1373
 msgid ""
 "If we make the decimal place and everything after it optional, not all "
 "groups might participate in the match.  These groups will default to "
@@ -2088,7 +2101,7 @@ msgstr ""
 "участь у матчі. Для цих груп за замовчуванням буде ``None``, якщо не вказано"
 " аргумент *default*::"
 
-#: ../../library/re.rst:1373
+#: ../../library/re.rst:1386
 msgid ""
 "Return a dictionary containing all the *named* subgroups of the match, keyed"
 " by the subgroup name.  The *default* argument is used for groups that did "
@@ -2098,7 +2111,7 @@ msgstr ""
 "містить назву підгрупи. Аргумент *default* використовується для груп, які не"
 " брали участі в матчі; за замовчуванням ``None``. Наприклад::"
 
-#: ../../library/re.rst:1385
+#: ../../library/re.rst:1398
 msgid ""
 "Return the indices of the start and end of the substring matched by *group*;"
 " *group* defaults to zero (meaning the whole matched substring). Return "
@@ -2112,7 +2125,7 @@ msgstr ""
 " Для об’єкта збігу *m* і групи *g*, яка внесла свій внесок у збіг, підрядок,"
 " який відповідає групі *g* (еквівалент ``m.group(g)``) є ::"
 
-#: ../../library/re.rst:1393
+#: ../../library/re.rst:1406
 msgid ""
 "Note that ``m.start(group)`` will equal ``m.end(group)`` if *group* matched "
 "a null string.  For example, after ``m = re.search('b(c?)', 'cba')``, "
@@ -2125,11 +2138,11 @@ msgstr ""
 " і ``m.end(1)`` мають значення 2, а ``m.start(2)`` викликає виняток "
 ":exc:`IndexError`."
 
-#: ../../library/re.rst:1398
+#: ../../library/re.rst:1411
 msgid "An example that will remove *remove_this* from email addresses::"
 msgstr "Приклад видалення *remove_this* з електронних адрес::"
 
-#: ../../library/re.rst:1408
+#: ../../library/re.rst:1421
 msgid ""
 "For a match *m*, return the 2-tuple ``(m.start(group), m.end(group))``. Note"
 " that if *group* did not contribute to the match, this is ``(-1, -1)``. "
@@ -2139,7 +2152,7 @@ msgstr ""
 "Зауважте, що якщо *група* не брала участі в матчі, це ``(-1, -1)``. *група* "
 "за замовчуванням дорівнює нулю, весь збіг."
 
-#: ../../library/re.rst:1415
+#: ../../library/re.rst:1428
 msgid ""
 "The value of *pos* which was passed to the :meth:`~Pattern.search` or "
 ":meth:`~Pattern.match` method of a :ref:`regex object <re-objects>`.  This "
@@ -2150,7 +2163,7 @@ msgstr ""
 ":meth:`~Pattern.match` об’єкта :ref:`regex <re-objects>`. Це індекс у рядку,"
 " за яким механізм RE почав шукати збіг."
 
-#: ../../library/re.rst:1422
+#: ../../library/re.rst:1435
 msgid ""
 "The value of *endpos* which was passed to the :meth:`~Pattern.search` or "
 ":meth:`~Pattern.match` method of a :ref:`regex object <re-objects>`.  This "
@@ -2160,7 +2173,7 @@ msgstr ""
 ":meth:`~Pattern.match` об’єкта :ref:`regex <re-objects>`. Це індекс у рядку,"
 " за який механізм RE не виходить."
 
-#: ../../library/re.rst:1429
+#: ../../library/re.rst:1442
 msgid ""
 "The integer index of the last matched capturing group, or ``None`` if no "
 "group was matched at all. For example, the expressions ``(a)b``, "
@@ -2174,7 +2187,7 @@ msgstr ""
 "рядок ``'ab''``, тоді як вираз ``(a)(b)`` матиме ``lastindex == 2``, якщо "
 "застосувати до того самого рядка."
 
-#: ../../library/re.rst:1438
+#: ../../library/re.rst:1451
 msgid ""
 "The name of the last matched capturing group, or ``None`` if the group "
 "didn't have a name, or if no group was matched at all."
@@ -2182,7 +2195,7 @@ msgstr ""
 "Ім’я останньої відповідної групи захоплення або ``None``, якщо група не мала"
 " назви, або якщо жодна група не була знайдена взагалі."
 
-#: ../../library/re.rst:1444
+#: ../../library/re.rst:1457
 msgid ""
 "The :ref:`regular expression object <re-objects>` whose "
 ":meth:`~Pattern.match` or :meth:`~Pattern.search` method produced this match"
@@ -2192,13 +2205,13 @@ msgstr ""
 ":meth:`~Pattern.match` або :meth:`~Pattern.search` створив цей екземпляр "
 "відповідності."
 
-#: ../../library/re.rst:1450
+#: ../../library/re.rst:1463
 msgid ""
 "The string passed to :meth:`~Pattern.match` or :meth:`~Pattern.search`."
 msgstr ""
 "Рядок передається до :meth:`~Pattern.match` або :meth:`~Pattern.search`."
 
-#: ../../library/re.rst:1453
+#: ../../library/re.rst:1466
 msgid ""
 "Added support of :func:`copy.copy` and :func:`copy.deepcopy`.  Match objects"
 " are considered atomic."
@@ -2206,15 +2219,15 @@ msgstr ""
 "Додано підтримку :func:`copy.copy` і :func:`copy.deepcopy`. Об'єкти "
 "відповідності вважаються атомарними."
 
-#: ../../library/re.rst:1461
+#: ../../library/re.rst:1474
 msgid "Regular Expression Examples"
 msgstr "Приклади регулярних виразів"
 
-#: ../../library/re.rst:1465
+#: ../../library/re.rst:1478
 msgid "Checking for a Pair"
 msgstr "Перевірка на пару"
 
-#: ../../library/re.rst:1467
+#: ../../library/re.rst:1480
 msgid ""
 "In this example, we'll use the following helper function to display match "
 "objects a little more gracefully::"
@@ -2222,7 +2235,7 @@ msgstr ""
 "У цьому прикладі ми використаємо наступну допоміжну функцію, щоб відобразити"
 " об’єкти відповідності трохи витонченіше:"
 
-#: ../../library/re.rst:1475
+#: ../../library/re.rst:1488
 msgid ""
 "Suppose you are writing a poker program where a player's hand is represented"
 " as a 5-character string with each character representing a card, \"a\" for "
@@ -2234,12 +2247,12 @@ msgstr ""
 "\"k\" — король, \"q\" — дама, \"j\" — валет, \"t\" означає 10 і \"2\" - "
 "\"9\", що представляють картку з таким значенням."
 
-#: ../../library/re.rst:1480
+#: ../../library/re.rst:1493
 msgid "To see if a given string is a valid hand, one could do the following::"
 msgstr ""
 "Щоб перевірити, чи даний рядок є правильною рукою, можна зробити наступне:"
 
-#: ../../library/re.rst:1490
+#: ../../library/re.rst:1503
 msgid ""
 "That last hand, ``\"727ak\"``, contained a pair, or two of the same valued "
 "cards. To match this with a regular expression, one could use backreferences"
@@ -2249,7 +2262,7 @@ msgstr ""
 "значення. Щоб зіставити це з регулярним виразом, можна використовувати "
 "зворотні посилання як такі:"
 
-#: ../../library/re.rst:1500
+#: ../../library/re.rst:1513
 msgid ""
 "To find out what card the pair consists of, one could use the "
 ":meth:`~Match.group` method of the match object in the following manner::"
@@ -2257,136 +2270,132 @@ msgstr ""
 "Щоб дізнатися, з якої карти складається пара, можна використати метод "
 ":meth:`~Match.group` об’єкта відповідності таким чином:"
 
-#: ../../library/re.rst:1519
+#: ../../library/re.rst:1532
 msgid "Simulating scanf()"
 msgstr "Імітація scanf()"
 
-#: ../../library/re.rst:1523
+#: ../../library/re.rst:1536
 msgid ""
-"Python does not currently have an equivalent to :c:func:`scanf`.  Regular "
+"Python does not currently have an equivalent to :c:func:`!scanf`.  Regular "
 "expressions are generally more powerful, though also more verbose, than "
-":c:func:`scanf` format strings.  The table below offers some more-or-less "
-"equivalent mappings between :c:func:`scanf` format tokens and regular "
+":c:func:`!scanf` format strings.  The table below offers some more-or-less "
+"equivalent mappings between :c:func:`!scanf` format tokens and regular "
 "expressions."
 msgstr ""
-"Python наразі не має еквівалента :c:func:`scanf`. Регулярні вирази, як "
-"правило, потужніші, хоча й більш докладні, ніж рядки формату "
-":c:func:`scanf`. Таблиця нижче пропонує деякі більш-менш еквівалентні "
-"відповідності між маркерами формату :c:func:`scanf` і регулярними виразами."
 
-#: ../../library/re.rst:1530
-msgid ":c:func:`scanf` Token"
-msgstr ":c:func:`scanf` Токен"
+#: ../../library/re.rst:1543
+msgid ":c:func:`!scanf` Token"
+msgstr ""
 
-#: ../../library/re.rst:1530
+#: ../../library/re.rst:1543
 msgid "Regular Expression"
 msgstr "Регулярний вираз"
 
-#: ../../library/re.rst:1532
+#: ../../library/re.rst:1545
 msgid "``%c``"
 msgstr "``%c``"
 
-#: ../../library/re.rst:1534
+#: ../../library/re.rst:1547
 msgid "``%5c``"
 msgstr "``%5c``"
 
-#: ../../library/re.rst:1534
+#: ../../library/re.rst:1547
 msgid "``.{5}``"
 msgstr "``.{5}``"
 
-#: ../../library/re.rst:1536
+#: ../../library/re.rst:1549
 msgid "``%d``"
 msgstr "``%d``"
 
-#: ../../library/re.rst:1536
+#: ../../library/re.rst:1549
 msgid "``[-+]?\\d+``"
 msgstr "``[-+]?\\d+``"
 
-#: ../../library/re.rst:1538
+#: ../../library/re.rst:1551
 msgid "``%e``, ``%E``, ``%f``, ``%g``"
 msgstr "``%e``, ``%E``, ``%f``, ``%g``"
 
-#: ../../library/re.rst:1538
+#: ../../library/re.rst:1551
 msgid "``[-+]?(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?``"
 msgstr "``[-+]?(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?``"
 
-#: ../../library/re.rst:1540
+#: ../../library/re.rst:1553
 msgid "``%i``"
 msgstr "``%i``"
 
-#: ../../library/re.rst:1540
+#: ../../library/re.rst:1553
 msgid "``[-+]?(0[xX][\\dA-Fa-f]+|0[0-7]*|\\d+)``"
 msgstr "``[-+]?(0[xX][\\dA-Fa-f]+|0[0-7]*|\\d+)``"
 
-#: ../../library/re.rst:1542
+#: ../../library/re.rst:1555
 msgid "``%o``"
 msgstr "``%o``"
 
-#: ../../library/re.rst:1542
+#: ../../library/re.rst:1555
 msgid "``[-+]?[0-7]+``"
 msgstr "``[-+]?[0-7]+``"
 
-#: ../../library/re.rst:1544
+#: ../../library/re.rst:1557
 msgid "``%s``"
 msgstr "``%s``"
 
-#: ../../library/re.rst:1544
+#: ../../library/re.rst:1557
 msgid "``\\S+``"
 msgstr "``\\S+``"
 
-#: ../../library/re.rst:1546
+#: ../../library/re.rst:1559
 msgid "``%u``"
 msgstr "``%u``"
 
-#: ../../library/re.rst:1546
+#: ../../library/re.rst:1559
 msgid "``\\d+``"
 msgstr "``\\d+``"
 
-#: ../../library/re.rst:1548
+#: ../../library/re.rst:1561
 msgid "``%x``, ``%X``"
 msgstr "``%x``, ``%X``"
 
-#: ../../library/re.rst:1548
+#: ../../library/re.rst:1561
 msgid "``[-+]?(0[xX])?[\\dA-Fa-f]+``"
 msgstr "``[-+]?(0[xX])?[\\dA-Fa-f]+``"
 
-#: ../../library/re.rst:1551
+#: ../../library/re.rst:1564
 msgid "To extract the filename and numbers from a string like ::"
 msgstr "Щоб витягти назву файлу та номери з рядка на зразок ::"
 
-#: ../../library/re.rst:1555
-msgid "you would use a :c:func:`scanf` format like ::"
-msgstr "ви б використовували формат :c:func:`scanf`, наприклад ::"
+#: ../../library/re.rst:1568
+msgid "you would use a :c:func:`!scanf` format like ::"
+msgstr ""
 
-#: ../../library/re.rst:1559
+#: ../../library/re.rst:1572
 msgid "The equivalent regular expression would be ::"
 msgstr "Еквівалентним регулярним виразом буде::"
 
-#: ../../library/re.rst:1567
+#: ../../library/re.rst:1580
 msgid "search() vs. match()"
 msgstr "search() проти match()"
 
-#: ../../library/re.rst:1571
+#: ../../library/re.rst:1584
 msgid ""
 "Python offers different primitive operations based on regular expressions:"
 msgstr ""
 
-#: ../../library/re.rst:1573
+#: ../../library/re.rst:1586
 msgid ""
 ":func:`re.match` checks for a match only at the beginning of the string"
 msgstr ""
 
-#: ../../library/re.rst:1574
+#: ../../library/re.rst:1587
 msgid ""
 ":func:`re.search` checks for a match anywhere in the string (this is what "
 "Perl does by default)"
 msgstr ""
 
-#: ../../library/re.rst:1576
+#: ../../library/re.rst:1589
 msgid ":func:`re.fullmatch` checks for entire string to be a match"
 msgstr ""
 
-#: ../../library/re.rst:1588
+#: ../../library/re.rst:1601
 msgid ""
 "Regular expressions beginning with ``'^'`` can be used with :func:`search` "
 "to restrict the match at the beginning of the string::"
@@ -2394,7 +2403,7 @@ msgstr ""
 "Регулярні вирази, що починаються з ``'^'``, можна використовувати з "
 ":func:`search`, щоб обмежити збіг на початку рядка::"
 
-#: ../../library/re.rst:1596
+#: ../../library/re.rst:1609
 msgid ""
 "Note however that in :const:`MULTILINE` mode :func:`match` only matches at "
 "the beginning of the string, whereas using :func:`search` with a regular "
@@ -2405,11 +2414,11 @@ msgstr ""
 " на початку рядка, тоді як використання :func:`search` із регулярним "
 "виразом, що починається з ``'^'`` збігається на початок кожного рядка. ::"
 
-#: ../../library/re.rst:1606
+#: ../../library/re.rst:1619
 msgid "Making a Phonebook"
 msgstr "Створення телефонної книги"
 
-#: ../../library/re.rst:1608
+#: ../../library/re.rst:1621
 msgid ""
 ":func:`split` splits a string into a list delimited by the passed pattern.  "
 "The method is invaluable for converting textual data into data structures "
@@ -2421,7 +2430,7 @@ msgstr ""
 "можна легко читати та змінювати Python, як показано в наступному прикладі "
 "створення телефонної книги."
 
-#: ../../library/re.rst:1613
+#: ../../library/re.rst:1626
 msgid ""
 "First, here is the input.  Normally it may come from a file, here we are "
 "using triple-quoted string syntax"
@@ -2429,7 +2438,7 @@ msgstr ""
 "По-перше, ось вхідні дані. Зазвичай він може надходити з файлу, тут ми "
 "використовуємо синтаксис рядка в потрійних лапках"
 
-#: ../../library/re.rst:1626
+#: ../../library/re.rst:1639
 msgid ""
 "The entries are separated by one or more newlines. Now we convert the string"
 " into a list with each nonempty line having its own entry:"
@@ -2438,7 +2447,7 @@ msgstr ""
 "перетворюємо рядок на список, у якому кожен непорожній рядок має окремий "
 "запис:"
 
-#: ../../library/re.rst:1639
+#: ../../library/re.rst:1652
 msgid ""
 "Finally, split each entry into a list with first name, last name, telephone "
 "number, and address.  We use the ``maxsplit`` parameter of :func:`split` "
@@ -2448,7 +2457,7 @@ msgstr ""
 "телефону та адресою. Ми використовуємо параметр ``maxsplit`` :func:`split`, "
 "тому що в адресі є пробіли, наш шаблон поділу:"
 
-#: ../../library/re.rst:1652
+#: ../../library/re.rst:1665
 msgid ""
 "The ``:?`` pattern matches the colon after the last name, so that it does "
 "not occur in the result list.  With a ``maxsplit`` of ``4``, we could "
@@ -2458,11 +2467,11 @@ msgstr ""
 "списку результатів. За допомогою ``maxsplit`` ``4`` ми можемо відокремити "
 "номер будинку від назви вулиці:"
 
-#: ../../library/re.rst:1667
+#: ../../library/re.rst:1680
 msgid "Text Munging"
 msgstr "Перебирання тексту"
 
-#: ../../library/re.rst:1669
+#: ../../library/re.rst:1682
 msgid ""
 ":func:`sub` replaces every occurrence of a pattern with a string or the "
 "result of a function.  This example demonstrates using :func:`sub` with a "
@@ -2474,11 +2483,11 @@ msgstr ""
 "\"переміщення\" тексту або випадкового порядку всіх символів у кожному слові"
 " речення, за винятком першого та останнього символів::"
 
-#: ../../library/re.rst:1687
+#: ../../library/re.rst:1700
 msgid "Finding all Adverbs"
 msgstr "Знайти всі прислівники"
 
-#: ../../library/re.rst:1689
+#: ../../library/re.rst:1702
 msgid ""
 ":func:`findall` matches *all* occurrences of a pattern, not just the first "
 "one as :func:`search` does.  For example, if a writer wanted to find all of "
@@ -2489,11 +2498,11 @@ msgstr ""
 "це робить :func:`search`. Наприклад, якщо автор хоче знайти всі прислівники "
 "в якомусь тексті, він може використати :func:`findall` у такий спосіб:"
 
-#: ../../library/re.rst:1700
+#: ../../library/re.rst:1713
 msgid "Finding all Adverbs and their Positions"
 msgstr "Знайти всі прислівники та їх позиції"
 
-#: ../../library/re.rst:1702
+#: ../../library/re.rst:1715
 msgid ""
 "If one wants more information about all matches of a pattern than the "
 "matched text, :func:`finditer` is useful as it provides :ref:`match objects "
@@ -2507,11 +2516,11 @@ msgstr ""
 "приклад, якби автор хотів знайти всі прислівники *та їх позиції* в якомусь "
 "тексті, він використав би :func:`finditer` таким чином::"
 
-#: ../../library/re.rst:1716
+#: ../../library/re.rst:1729
 msgid "Raw String Notation"
 msgstr "Необроблена рядкова нотація"
 
-#: ../../library/re.rst:1718
+#: ../../library/re.rst:1731
 msgid ""
 "Raw string notation (``r\"text\"``) keeps regular expressions sane.  Without"
 " it, every backslash (``'\\'``) in a regular expression would have to be "
@@ -2523,7 +2532,7 @@ msgstr ""
 "повинен був би мати префікс іншим, щоб уникнути його. Наприклад, два "
 "наступних рядки коду функціонально ідентичні:"
 
-#: ../../library/re.rst:1728
+#: ../../library/re.rst:1741
 msgid ""
 "When one wants to match a literal backslash, it must be escaped in the "
 "regular expression.  With raw string notation, this means ``r\"\\\\\"``.  "
@@ -2535,11 +2544,11 @@ msgstr ""
 "``r\"\\\\\"``. Без нотації необробленого рядка потрібно використовувати "
 "``\"\\\\\\\\\"``, роблячи наступні рядки коду функціонально ідентичними::"
 
-#: ../../library/re.rst:1740
+#: ../../library/re.rst:1753
 msgid "Writing a Tokenizer"
 msgstr "Написання токенізера"
 
-#: ../../library/re.rst:1742
+#: ../../library/re.rst:1755
 msgid ""
 "A `tokenizer or scanner <https://en.wikipedia.org/wiki/Lexical_analysis>`_ "
 "analyzes a string to categorize groups of characters.  This is a useful "
@@ -2549,7 +2558,7 @@ msgstr ""
 "аналізує рядок, щоб класифікувати групи символів. Це корисний перший крок у "
 "написанні компілятора чи інтерпретатора."
 
-#: ../../library/re.rst:1746
+#: ../../library/re.rst:1759
 msgid ""
 "The text categories are specified with regular expressions.  The technique "
 "is to combine those into a single master regular expression and to loop over"
@@ -2559,11 +2568,11 @@ msgstr ""
 "щоб об’єднати їх у єдиний основний регулярний вираз і виконати цикл "
 "послідовних збігів:"
 
-#: ../../library/re.rst:1802
+#: ../../library/re.rst:1815
 msgid "The tokenizer produces the following output::"
 msgstr "Токенізатор видає такий вихід:"
 
-#: ../../library/re.rst:1825
+#: ../../library/re.rst:1838
 msgid ""
 "Friedl, Jeffrey. Mastering Regular Expressions. 3rd ed., O'Reilly Media, "
 "2009. The third edition of the book no longer covers Python at all, but the "
@@ -2586,12 +2595,12 @@ msgstr ""
 #: ../../library/re.rst:309 ../../library/re.rst:319 ../../library/re.rst:345
 #: ../../library/re.rst:394 ../../library/re.rst:426 ../../library/re.rst:432
 #: ../../library/re.rst:437 ../../library/re.rst:444 ../../library/re.rst:451
-#: ../../library/re.rst:478 ../../library/re.rst:488 ../../library/re.rst:509
-#: ../../library/re.rst:521 ../../library/re.rst:526 ../../library/re.rst:542
-#: ../../library/re.rst:553 ../../library/re.rst:565 ../../library/re.rst:572
-#: ../../library/re.rst:586 ../../library/re.rst:593 ../../library/re.rst:607
-#: ../../library/re.rst:616 ../../library/re.rst:621 ../../library/re.rst:785
-#: ../../library/re.rst:992
+#: ../../library/re.rst:478 ../../library/re.rst:488 ../../library/re.rst:511
+#: ../../library/re.rst:523 ../../library/re.rst:528 ../../library/re.rst:544
+#: ../../library/re.rst:555 ../../library/re.rst:567 ../../library/re.rst:574
+#: ../../library/re.rst:588 ../../library/re.rst:595 ../../library/re.rst:609
+#: ../../library/re.rst:618 ../../library/re.rst:623 ../../library/re.rst:798
+#: ../../library/re.rst:1005
 msgid "in regular expressions"
 msgstr ""
 
@@ -2643,7 +2652,7 @@ msgstr ""
 msgid "{} (curly brackets)"
 msgstr ""
 
-#: ../../library/re.rst:220 ../../library/re.rst:257 ../../library/re.rst:509
+#: ../../library/re.rst:220 ../../library/re.rst:257 ../../library/re.rst:511
 msgid "\\ (backslash)"
 msgstr ""
 
@@ -2703,94 +2712,94 @@ msgstr ""
 msgid "(?("
 msgstr ""
 
-#: ../../library/re.rst:521
+#: ../../library/re.rst:523
 msgid "\\A"
 msgstr ""
 
-#: ../../library/re.rst:526 ../../library/re.rst:621
+#: ../../library/re.rst:528 ../../library/re.rst:623
 msgid "\\b"
 msgstr ""
 
-#: ../../library/re.rst:542
+#: ../../library/re.rst:544
 msgid "\\B"
 msgstr ""
 
-#: ../../library/re.rst:553
+#: ../../library/re.rst:555
 msgid "\\d"
 msgstr ""
 
-#: ../../library/re.rst:565
+#: ../../library/re.rst:567
 msgid "\\D"
 msgstr ""
 
-#: ../../library/re.rst:572
+#: ../../library/re.rst:574
 msgid "\\s"
 msgstr ""
 
-#: ../../library/re.rst:586
+#: ../../library/re.rst:588
 msgid "\\S"
 msgstr ""
 
-#: ../../library/re.rst:593
+#: ../../library/re.rst:595
 msgid "\\w"
 msgstr ""
 
-#: ../../library/re.rst:607
+#: ../../library/re.rst:609
 msgid "\\W"
 msgstr ""
 
-#: ../../library/re.rst:616
+#: ../../library/re.rst:618
 msgid "\\Z"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\a"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\f"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\n"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\r"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\t"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\u"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\U"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\v"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\x"
 msgstr ""
 
-#: ../../library/re.rst:621
+#: ../../library/re.rst:623
 msgid "\\\\"
 msgstr ""
 
-#: ../../library/re.rst:785
+#: ../../library/re.rst:798
 msgid "# (hash)"
 msgstr ""
 
-#: ../../library/re.rst:992
+#: ../../library/re.rst:1005
 msgid "\\g"
 msgstr ""
 
-#: ../../library/re.rst:1521
+#: ../../library/re.rst:1534
 msgid "scanf()"
 msgstr ""
