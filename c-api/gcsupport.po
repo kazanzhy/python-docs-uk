@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 14:13+0000\n"
+"POT-Creation-Date: 2023-07-28 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:48+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -69,11 +69,9 @@ msgstr "Конструктори для типів контейнерів пов
 
 #: ../../c-api/gcsupport.rst:28
 msgid ""
-"The memory for the object must be allocated using :c:func:`PyObject_GC_New` "
-"or :c:func:`PyObject_GC_NewVar`."
+"The memory for the object must be allocated using :c:macro:`PyObject_GC_New`"
+" or :c:macro:`PyObject_GC_NewVar`."
 msgstr ""
-"Пам’ять для об’єкта має бути виділена за допомогою :c:func:`PyObject_GC_New`"
-" або :c:func:`PyObject_GC_NewVar`."
 
 #: ../../c-api/gcsupport.rst:31
 msgid ""
@@ -127,19 +125,19 @@ msgstr ""
 
 #: ../../c-api/gcsupport.rst:57
 msgid ""
-"Analogous to :c:func:`PyObject_New` but for container objects with the "
+"Analogous to :c:macro:`PyObject_New` but for container objects with the "
 ":c:macro:`Py_TPFLAGS_HAVE_GC` flag set."
 msgstr ""
 
 #: ../../c-api/gcsupport.rst:62
 msgid ""
-"Analogous to :c:func:`PyObject_NewVar` but for container objects with the "
+"Analogous to :c:macro:`PyObject_NewVar` but for container objects with the "
 ":c:macro:`Py_TPFLAGS_HAVE_GC` flag set."
 msgstr ""
 
 #: ../../c-api/gcsupport.rst:67
 msgid ""
-"Analogous to :c:func:`PyObject_GC_New` but allocates *extra_size* bytes at "
+"Analogous to :c:macro:`PyObject_GC_New` but allocates *extra_size* bytes at "
 "the end of the object (at offset :c:member:`~PyTypeObject.tp_basicsize`). "
 "The allocated memory is initialized to zeros, except for the :c:type:`Python"
 " object header <PyObject>`."
@@ -161,13 +159,10 @@ msgstr ""
 
 #: ../../c-api/gcsupport.rst:88
 msgid ""
-"Resize an object allocated by :c:func:`PyObject_NewVar`.  Returns the "
+"Resize an object allocated by :c:macro:`PyObject_NewVar`.  Returns the "
 "resized object or ``NULL`` on failure.  *op* must not be tracked by the "
 "collector yet."
 msgstr ""
-"Змінити розмір об’єкта, виділеного :c:func:`PyObject_NewVar`. Повертає "
-"змінений розмір об’єкта або ``NULL`` у разі помилки. *op* ще не повинен "
-"відстежуватися колекціонером."
 
 #: ../../c-api/gcsupport.rst:94
 msgid ""
@@ -224,11 +219,9 @@ msgstr "Це аналогічно функції Python :func:`gc.is_finalized`.
 
 #: ../../c-api/gcsupport.rst:131
 msgid ""
-"Releases memory allocated to an object using :c:func:`PyObject_GC_New` or "
-":c:func:`PyObject_GC_NewVar`."
+"Releases memory allocated to an object using :c:macro:`PyObject_GC_New` or "
+":c:macro:`PyObject_GC_NewVar`."
 msgstr ""
-"Звільняє пам’ять, виділену об’єкту за допомогою :c:func:`PyObject_GC_New` "
-"або :c:func:`PyObject_GC_NewVar`."
 
 #: ../../c-api/gcsupport.rst:137
 msgid ""
@@ -248,11 +241,9 @@ msgstr ""
 
 #: ../../c-api/gcsupport.rst:146
 msgid ""
-"The :c:func:`_PyObject_GC_TRACK` and :c:func:`_PyObject_GC_UNTRACK` macros "
-"have been removed from the public C API."
+"The :c:func:`!_PyObject_GC_TRACK` and :c:func:`!_PyObject_GC_UNTRACK` macros"
+" have been removed from the public C API."
 msgstr ""
-"Макроси :c:func:`_PyObject_GC_TRACK` і :c:func:`_PyObject_GC_UNTRACK` "
-"видалено з публічного API C."
 
 #: ../../c-api/gcsupport.rst:149
 msgid ""
