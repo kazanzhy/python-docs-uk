@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 14:13+0000\n"
+"POT-Creation-Date: 2023-07-28 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -164,11 +164,11 @@ msgstr ""
 "знищується. У разі помилки повертає ``-1`` і встановлює ``*p`` значення "
 "``NULL`` і викликає :exc:`MemoryError` або :exc:`SystemError`."
 
-#: ../../c-api/tuple.rst:115
+#: ../../c-api/tuple.rst:117
 msgid "Struct Sequence Objects"
 msgstr "Структуруйте об’єкти послідовності"
 
-#: ../../c-api/tuple.rst:117
+#: ../../c-api/tuple.rst:119
 msgid ""
 "Struct sequence objects are the C equivalent of "
 ":func:`~collections.namedtuple` objects, i.e. a sequence whose items can "
@@ -180,7 +180,7 @@ msgstr ""
 "також можна отримати доступ через атрибути. Щоб створити послідовність "
 "структур, спочатку потрібно створити певний тип послідовності структур."
 
-#: ../../c-api/tuple.rst:124
+#: ../../c-api/tuple.rst:126
 msgid ""
 "Create a new struct sequence type from the data in *desc*, described below. "
 "Instances of the resulting type can be created with "
@@ -190,11 +190,11 @@ msgstr ""
 "нижче. Екземпляри отриманого типу можна створити за допомогою "
 ":c:func:`PyStructSequence_New`."
 
-#: ../../c-api/tuple.rst:130
+#: ../../c-api/tuple.rst:132
 msgid "Initializes a struct sequence type *type* from *desc* in place."
 msgstr "Ініціалізує структурну послідовність типу *type* з *desc* на місці."
 
-#: ../../c-api/tuple.rst:135
+#: ../../c-api/tuple.rst:137
 msgid ""
 "The same as ``PyStructSequence_InitType``, but returns ``0`` on success and "
 "``-1`` on failure."
@@ -202,100 +202,55 @@ msgstr ""
 "Те саме, що ``PyStructSequence_InitType``, але повертає ``0`` у разі успіху "
 "та ``-1`` у разі невдачі."
 
-#: ../../c-api/tuple.rst:143
+#: ../../c-api/tuple.rst:145
 msgid "Contains the meta information of a struct sequence type to create."
 msgstr ""
 "Містить метаінформацію типу послідовності структур, яку потрібно створити."
 
-#: ../../c-api/tuple.rst:146 ../../c-api/tuple.rst:169
-msgid "Field"
-msgstr "Поле"
-
-#: ../../c-api/tuple.rst:146 ../../c-api/tuple.rst:169
-msgid "C Type"
-msgstr "C Тип"
-
-#: ../../c-api/tuple.rst:146 ../../c-api/tuple.rst:169
-msgid "Meaning"
-msgstr "Значення"
-
-#: ../../c-api/tuple.rst:148 ../../c-api/tuple.rst:171
-msgid "``name``"
-msgstr "``ім'я``"
-
-#: ../../c-api/tuple.rst:148 ../../c-api/tuple.rst:150
-#: ../../c-api/tuple.rst:171 ../../c-api/tuple.rst:176
-msgid "``const char *``"
-msgstr "``const char *``"
-
-#: ../../c-api/tuple.rst:148
-msgid "name of the struct sequence type"
-msgstr "ім'я типу послідовності структур"
-
-#: ../../c-api/tuple.rst:150 ../../c-api/tuple.rst:176
-msgid "``doc``"
-msgstr "``doc``"
-
-#: ../../c-api/tuple.rst:150
-msgid "pointer to docstring for the type or ``NULL`` to omit"
-msgstr "вказівник на рядок документації для типу або ``NULL`` для пропуску"
-
-#: ../../c-api/tuple.rst:153
-msgid "``fields``"
-msgstr "``поля``"
-
-#: ../../c-api/tuple.rst:153
-msgid "``PyStructSequence_Field *``"
-msgstr "``PyStructSequence_Field *``"
-
-#: ../../c-api/tuple.rst:153
-msgid "pointer to ``NULL``-terminated array with field names of the new type"
+#: ../../c-api/tuple.rst:149
+msgid "Name of the struct sequence type."
 msgstr ""
-"вказівник на масив із закінченням ``NULL`` з іменами полів нового типу"
 
-#: ../../c-api/tuple.rst:156
-msgid "``n_in_sequence``"
-msgstr "``n_in_sequence``"
-
-#: ../../c-api/tuple.rst:156
-msgid "``int``"
-msgstr "``int``"
-
-#: ../../c-api/tuple.rst:156
-msgid "number of fields visible to the Python side (if used as tuple)"
+#: ../../c-api/tuple.rst:153
+msgid "Pointer to docstring for the type or ``NULL`` to omit."
 msgstr ""
-"кількість полів, видимих стороні Python (якщо використовується як кортеж)"
 
-#: ../../c-api/tuple.rst:163
+#: ../../c-api/tuple.rst:157
+msgid "Pointer to ``NULL``-terminated array with field names of the new type."
+msgstr ""
+
+#: ../../c-api/tuple.rst:161
+msgid "Number of fields visible to the Python side (if used as tuple)."
+msgstr ""
+
+#: ../../c-api/tuple.rst:166
 msgid ""
 "Describes a field of a struct sequence. As a struct sequence is modeled as a"
 " tuple, all fields are typed as :c:expr:`PyObject*`.  The index in the "
-":attr:`fields` array of the :c:type:`PyStructSequence_Desc` determines which"
-" field of the struct sequence is described."
+":c:member:`~PyStructSequence_Desc.fields` array of the "
+":c:type:`PyStructSequence_Desc` determines which field of the struct "
+"sequence is described."
 msgstr ""
 
-#: ../../c-api/tuple.rst:171
+#: ../../c-api/tuple.rst:174
 msgid ""
-"name for the field or ``NULL`` to end the list of named fields, set to "
-":c:data:`PyStructSequence_UnnamedField` to leave unnamed"
+"Name for the field or ``NULL`` to end the list of named fields, set to "
+":c:data:`PyStructSequence_UnnamedField` to leave unnamed."
 msgstr ""
-"ім’я для поля або ``NULL``, щоб завершити список іменованих полів, "
-"встановіть значення :c:data:`PyStructSequence_UnnamedField`, щоб залишити "
-"без назви"
 
-#: ../../c-api/tuple.rst:176
-msgid "field docstring or ``NULL`` to omit"
-msgstr "поле docstring або ``NULL`` для пропуску"
+#: ../../c-api/tuple.rst:179
+msgid "Field docstring or ``NULL`` to omit."
+msgstr ""
 
-#: ../../c-api/tuple.rst:182
+#: ../../c-api/tuple.rst:184
 msgid "Special value for a field name to leave it unnamed."
 msgstr "Спеціальне значення для імені поля, щоб залишити його без імені."
 
-#: ../../c-api/tuple.rst:184
+#: ../../c-api/tuple.rst:186
 msgid "The type was changed from ``char *``."
 msgstr "Тип змінено з ``char *``."
 
-#: ../../c-api/tuple.rst:190
+#: ../../c-api/tuple.rst:192
 msgid ""
 "Creates an instance of *type*, which must have been created with "
 ":c:func:`PyStructSequence_NewType`."
@@ -303,7 +258,7 @@ msgstr ""
 "Створює екземпляр *type*, який має бути створено за допомогою "
 ":c:func:`PyStructSequence_NewType`."
 
-#: ../../c-api/tuple.rst:196
+#: ../../c-api/tuple.rst:198
 msgid ""
 "Return the object at position *pos* in the struct sequence pointed to by "
 "*p*. No bounds checking is performed."
@@ -311,11 +266,11 @@ msgstr ""
 "Повертає об’єкт у позицію *pos* у послідовності структур, на яку вказує *p*."
 " Перевірка меж не виконується."
 
-#: ../../c-api/tuple.rst:202
+#: ../../c-api/tuple.rst:204
 msgid "Macro equivalent of :c:func:`PyStructSequence_GetItem`."
 msgstr "Макроеквівалент :c:func:`PyStructSequence_GetItem`."
 
-#: ../../c-api/tuple.rst:207
+#: ../../c-api/tuple.rst:209
 msgid ""
 "Sets the field at index *pos* of the struct sequence *p* to value *o*.  Like"
 " :c:func:`PyTuple_SET_ITEM`, this should only be used to fill in brand new "
@@ -325,11 +280,11 @@ msgstr ""
 "*o*. Як і :c:func:`PyTuple_SET_ITEM`, це слід використовувати лише для "
 "заповнення абсолютно нових екземплярів."
 
-#: ../../c-api/tuple.rst:213 ../../c-api/tuple.rst:223
+#: ../../c-api/tuple.rst:215 ../../c-api/tuple.rst:225
 msgid "This function \"steals\" a reference to *o*."
 msgstr "Ця функція \"краде\" посилання на *o*."
 
-#: ../../c-api/tuple.rst:218
+#: ../../c-api/tuple.rst:220
 msgid ""
 "Similar to :c:func:`PyStructSequence_SetItem`, but implemented as a static "
 "inlined function."
