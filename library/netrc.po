@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-21 14:13+0000\n"
+"POT-Creation-Date: 2023-08-04 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:10+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -93,25 +93,30 @@ msgstr ""
 msgid ""
 "Exception raised by the :class:`~netrc.netrc` class when syntactical errors "
 "are encountered in source text.  Instances of this exception provide three "
-"interesting attributes:  :attr:`msg` is a textual explanation of the error, "
-":attr:`filename` is the name of the source file, and :attr:`lineno` gives "
-"the line number on which the error was found."
+"interesting attributes:"
 msgstr ""
-"Виняток створюється класом :class:`~netrc.netrc`, коли у вихідному тексті "
-"зустрічаються синтаксичні помилки. Приклади цього винятку надають три цікаві"
-" атрибути: :attr:`msg` — це текстове пояснення помилки, :attr:`filename` — "
-"це ім’я вихідного файлу, а :attr:`lineno` — це номер рядка, у якому помилка "
-"знайдена."
+
+#: ../../library/netrc.rst:58
+msgid "Textual explanation of the error."
+msgstr ""
 
 #: ../../library/netrc.rst:62
+msgid "The name of the source file."
+msgstr ""
+
+#: ../../library/netrc.rst:66
+msgid "The line number on which the error was found."
+msgstr ""
+
+#: ../../library/netrc.rst:72
 msgid "netrc Objects"
 msgstr "Об'єкти netrc"
 
-#: ../../library/netrc.rst:64
+#: ../../library/netrc.rst:74
 msgid "A :class:`~netrc.netrc` instance has the following methods:"
 msgstr "Екземпляр :class:`~netrc.netrc` має такі методи:"
 
-#: ../../library/netrc.rst:69
+#: ../../library/netrc.rst:79
 msgid ""
 "Return a 3-tuple ``(login, account, password)`` of authenticators for "
 "*host*. If the netrc file did not contain an entry for the given host, "
@@ -123,7 +128,7 @@ msgstr ""
 "кортеж, пов’язаний із записом \"default\". Якщо ні відповідний хост, ні "
 "запис за замовчуванням недоступні, поверніть ``None``."
 
-#: ../../library/netrc.rst:77
+#: ../../library/netrc.rst:87
 msgid ""
 "Dump the class data as a string in the format of a netrc file. (This "
 "discards comments and may reorder the entries.)"
@@ -131,11 +136,11 @@ msgstr ""
 "Дамп даних класу як рядок у форматі файлу netrc. (Це відхиляє коментарі та "
 "може змінити порядок записів.)"
 
-#: ../../library/netrc.rst:80
+#: ../../library/netrc.rst:90
 msgid "Instances of :class:`~netrc.netrc` have public instance variables:"
 msgstr "Екземпляри :class:`~netrc.netrc` мають публічні змінні екземпляра:"
 
-#: ../../library/netrc.rst:85
+#: ../../library/netrc.rst:95
 msgid ""
 "Dictionary mapping host names to ``(login, account, password)`` tuples.  The"
 " 'default' entry, if any, is represented as a pseudo-host by that name."
@@ -144,6 +149,6 @@ msgstr ""
 "пароль)``. Запис \"за замовчуванням\", якщо такий є, представляється як "
 "псевдохост під таким іменем."
 
-#: ../../library/netrc.rst:91
+#: ../../library/netrc.rst:101
 msgid "Dictionary mapping macro names to string lists."
 msgstr "Словник зіставляє імена макросів зі списками рядків."
