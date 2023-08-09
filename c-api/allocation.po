@@ -6,15 +6,16 @@
 # Translators:
 # Dmytro Kazanzhy, 2022
 # Anastasiia Derevianko <anastasiia1010@gmail.com>, 2023
+# Ivan Prytula, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-28 14:13+0000\n"
+"POT-Creation-Date: 2023-08-04 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
-"Last-Translator: Anastasiia Derevianko <anastasiia1010@gmail.com>, 2023\n"
+"Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -55,6 +56,11 @@ msgid ""
 "be one.  The size of the memory allocation is determined from the "
 ":c:member:`~PyTypeObject.tp_basicsize` field of the type object."
 msgstr ""
+"Виділяє новий об'єкт Python, використовуючи структурний тип C *TYPE* та "
+"об'єкт Python типу  *typeobj* (``PyTypeObject*``). Поля, не визначені "
+"заголовком об'єкта Python, не ініціалізуються; кількість посилань на об'єкт "
+"буде дорівнювати одиниці.  Розмір виділеної пам'яті визначається з поля "
+":c:member:`~PyTypeObject.tp_basicsize` об'єкту типу."
 
 #: ../../c-api/allocation.rst:42
 msgid ""
@@ -68,6 +74,14 @@ msgid ""
 "same allocation decreases the number of allocations, improving the memory "
 "management efficiency."
 msgstr ""
+"Виділяє новий об'єкт Python, використовуючи структурний тип C *TYPE* та "
+"об'єкт типу Python *typeobj* (``PyTypeObject*``). Поля, не визначені в "
+"заголовку об'єкта Python, не ініціалізуються.  Виділена пам'ять дозволяє "
+"розмістити структуру *TYPE* плюс поля *size* (``Py_ssize_t``) розміром, "
+"заданим полем :c:member:`~PyTypeObject.tp_itemsize` об'єкта *typeobj*.  Це "
+"корисно для реалізації об'єктів типу кортежів, які можуть визначати свій "
+"розмір під час конструювання.  Вбудовування масиву полів в один розподіл "
+"зменшує кількість розподілів, покращуючи ефективність управління пам'яттю."
 
 #: ../../c-api/allocation.rst:56
 msgid ""
@@ -77,6 +91,11 @@ msgid ""
 "  The fields of the object should not be accessed after this call as the "
 "memory is no longer a valid Python object."
 msgstr ""
+"Звільняє пам'ять, виділену для об'єкта за допомогою :c:macro:`PyObject_New` "
+"або :c:macro:`PyObject_NewVar`. Зазвичай викликається з обробника "
+":c:member:`~PyTypeObject.tp_dealloc`, вказаного в типі об'єкта.  Після цього"
+" виклику не слід звертатися до полів об'єкта, оскільки пам'ять більше не є "
+"дійсним об'єктом Python."
 
 #: ../../c-api/allocation.rst:65
 msgid ""
