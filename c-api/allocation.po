@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 14:13+0000\n"
+"POT-Creation-Date: 2023-08-11 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -52,17 +52,13 @@ msgstr ""
 msgid ""
 "Allocate a new Python object using the C structure type *TYPE* and the "
 "Python type object *typeobj* (``PyTypeObject*``). Fields not defined by the "
-"Python object header are not initialized; the object's reference count will "
-"be one.  The size of the memory allocation is determined from the "
+"Python object header are not initialized. The caller will own the only "
+"reference to the object (i.e. its reference count will be one). The size of "
+"the memory allocation is determined from the "
 ":c:member:`~PyTypeObject.tp_basicsize` field of the type object."
 msgstr ""
-"Виділяє новий об'єкт Python, використовуючи структурний тип C *TYPE* та "
-"об'єкт Python типу  *typeobj* (``PyTypeObject*``). Поля, не визначені "
-"заголовком об'єкта Python, не ініціалізуються; кількість посилань на об'єкт "
-"буде дорівнювати одиниці.  Розмір виділеної пам'яті визначається з поля "
-":c:member:`~PyTypeObject.tp_basicsize` об'єкту типу."
 
-#: ../../c-api/allocation.rst:42
+#: ../../c-api/allocation.rst:43
 msgid ""
 "Allocate a new Python object using the C structure type *TYPE* and the "
 "Python type object *typeobj* (``PyTypeObject*``). Fields not defined by the "
@@ -83,7 +79,7 @@ msgstr ""
 "розмір під час конструювання.  Вбудовування масиву полів в один розподіл "
 "зменшує кількість розподілів, покращуючи ефективність управління пам'яттю."
 
-#: ../../c-api/allocation.rst:56
+#: ../../c-api/allocation.rst:57
 msgid ""
 "Releases memory allocated to an object using :c:macro:`PyObject_New` or "
 ":c:macro:`PyObject_NewVar`.  This is normally called from the "
@@ -97,7 +93,7 @@ msgstr ""
 " виклику не слід звертатися до полів об'єкта, оскільки пам'ять більше не є "
 "дійсним об'єктом Python."
 
-#: ../../c-api/allocation.rst:65
+#: ../../c-api/allocation.rst:66
 msgid ""
 "Object which is visible in Python as ``None``.  This should only be accessed"
 " using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
@@ -107,10 +103,10 @@ msgstr ""
 " допомогою макросу :c:macro:`Py_None`, який обчислює вказівник на цей "
 "об’єкт."
 
-#: ../../c-api/allocation.rst:72
+#: ../../c-api/allocation.rst:73
 msgid ":c:func:`PyModule_Create`"
 msgstr ":c:func:`PyModule_Create`"
 
-#: ../../c-api/allocation.rst:73
+#: ../../c-api/allocation.rst:74
 msgid "To allocate and create extension modules."
 msgstr "Для розміщення та створення модулів розширення."
