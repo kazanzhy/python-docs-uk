@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:13+0000\n"
+"POT-Creation-Date: 2023-08-18 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -496,7 +496,7 @@ msgid "Integer specifying the handle of the Python DLL."
 msgstr "Ціле число, що визначає дескриптор DLL Python."
 
 #: ../../library/sys.rst:282 ../../library/sys.rst:919
-#: ../../library/sys.rst:1656 ../../library/sys.rst:1889
+#: ../../library/sys.rst:1656 ../../library/sys.rst:1893
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ":ref:`Наявність <availability>`: Windows."
 
@@ -3254,34 +3254,31 @@ msgid "The *unraisable* argument has the following attributes:"
 msgstr "Аргумент *unraisable* має такі атрибути:"
 
 #: ../../library/sys.rst:1814
-msgid "*exc_type*: Exception type."
-msgstr "*exc_type*: Тип винятку."
+msgid ":attr:`!exc_type`: Exception type."
+msgstr ""
 
 #: ../../library/sys.rst:1815
-msgid "*exc_value*: Exception value, can be ``None``."
-msgstr "*exc_value*: значення винятку, може бути ``None``."
+msgid ":attr:`!exc_value`: Exception value, can be ``None``."
+msgstr ""
 
 #: ../../library/sys.rst:1816
-msgid "*exc_traceback*: Exception traceback, can be ``None``."
-msgstr "*exc_traceback*: Зворотне відстеження винятків, може бути ``None``."
+msgid ":attr:`!exc_traceback`: Exception traceback, can be ``None``."
+msgstr ""
 
 #: ../../library/sys.rst:1817
-msgid "*err_msg*: Error message, can be ``None``."
-msgstr "*err_msg*: повідомлення про помилку, може бути ``None``."
+msgid ":attr:`!err_msg`: Error message, can be ``None``."
+msgstr ""
 
 #: ../../library/sys.rst:1818
-msgid "*object*: Object causing the exception, can be ``None``."
-msgstr "*object*: Об’єкт, що викликає виняток, може бути ``None``."
+msgid ":attr:`!object`: Object causing the exception, can be ``None``."
+msgstr ""
 
 #: ../../library/sys.rst:1820
 msgid ""
-"The default hook formats *err_msg* and *object* as: ``f'{err_msg}: "
-"{object!r}'``; use \"Exception ignored in\" error message if *err_msg* is "
-"``None``."
+"The default hook formats :attr:`!err_msg` and :attr:`!object` as: "
+"``f'{err_msg}: {object!r}'``; use \"Exception ignored in\" error message if "
+":attr:`!err_msg` is ``None``."
 msgstr ""
-"Типовий хук форматує *err_msg* і *object* як: ``f'{err_msg}: {object!r}''``;"
-" використовуйте повідомлення про помилку \"Виняток проігноровано\", якщо "
-"*err_msg* має значення ``None``."
 
 #: ../../library/sys.rst:1824
 msgid ""
@@ -3291,32 +3288,25 @@ msgstr ""
 ":func:`sys.unraisablehook` можна перевизначити, щоб керувати обробкою "
 "винятків, які не підлягають виклику."
 
-#: ../../library/sys.rst:1827
-msgid ""
-"Storing *exc_value* using a custom hook can create a reference cycle. It "
-"should be cleared explicitly to break the reference cycle when the exception"
-" is no longer needed."
+#: ../../library/sys.rst:1829
+msgid ":func:`excepthook` which handles uncaught exceptions."
 msgstr ""
-"Зберігання *exc_value* за допомогою спеціального хука може створити "
-"еталонний цикл. Його слід явно очистити, щоб розірвати цикл посилання, коли "
-"виняток більше не потрібен."
 
-#: ../../library/sys.rst:1831
+#: ../../library/sys.rst:1833
 msgid ""
-"Storing *object* using a custom hook can resurrect it if it is set to an "
-"object which is being finalized. Avoid storing *object* after the custom "
-"hook completes to avoid resurrecting objects."
+"Storing :attr:`!exc_value` using a custom hook can create a reference cycle."
+" It should be cleared explicitly to break the reference cycle when the "
+"exception is no longer needed."
 msgstr ""
-"Зберігання *об’єкта* за допомогою спеціального хука може воскресити його, "
-"якщо для нього встановлено об’єкт, який завершується. Уникайте зберігання "
-"*object* після завершення власного хука, щоб уникнути відновлення об’єктів."
-
-#: ../../library/sys.rst:1835
-msgid "See also :func:`excepthook` which handles uncaught exceptions."
-msgstr ""
-"Дивіться також :func:`excepthook`, який обробляє неперехоплені винятки."
 
 #: ../../library/sys.rst:1837
+msgid ""
+"Storing :attr:`!object` using a custom hook can resurrect it if it is set to"
+" an object which is being finalized. Avoid storing :attr:`!object` after the"
+" custom hook completes to avoid resurrecting objects."
+msgstr ""
+
+#: ../../library/sys.rst:1841
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``sys.unraisablehook`` with "
 "arguments ``hook``, ``unraisable``."
@@ -3324,19 +3314,15 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing> ` ``sys.unraisablehook`` з "
 "аргументами ``hook``, ``unraisable``."
 
-#: ../../library/sys.rst:1839
+#: ../../library/sys.rst:1843
 msgid ""
-"Raise an auditing event ``sys.unraisablehook`` with arguments ``hook``, "
-"``unraisable`` when an exception that cannot be handled occurs. The "
-"``unraisable`` object is the same as what will be passed to the hook. If no "
-"hook has been set, ``hook`` may be ``None``."
+"Raise an auditing event ``sys.unraisablehook`` with arguments *hook*, "
+"*unraisable* when an exception that cannot be handled occurs. The "
+"*unraisable* object is the same as what will be passed to the hook. If no "
+"hook has been set, *hook* may be ``None``."
 msgstr ""
-"Викликати подію аудиту ``sys.unraisablehook`` з аргументами ``hook``, "
-"``unraisable``, коли виникає виняткова ситуація, яку неможливо обробити. "
-"Об’єкт ``unraisable`` є таким самим, як і те, що буде передано в гачок. Якщо"
-" хук не встановлено, ``hook`` може мати значення ``None``."
 
-#: ../../library/sys.rst:1848
+#: ../../library/sys.rst:1852
 msgid ""
 "A string containing the version number of the Python interpreter plus "
 "additional information on the build number and compiler used.  This string "
@@ -3350,7 +3336,7 @@ msgstr ""
 " нього інформацію про версію, скоріше використовуйте :data:`version_info` і "
 "функції, надані модулем :mod:`platform`."
 
-#: ../../library/sys.rst:1857
+#: ../../library/sys.rst:1861
 msgid ""
 "The C API version for this interpreter.  Programmers may find this useful "
 "when debugging version conflicts between Python and extension modules."
@@ -3359,7 +3345,7 @@ msgstr ""
 "корисним під час усунення конфліктів версій між Python і модулями "
 "розширення."
 
-#: ../../library/sys.rst:1863
+#: ../../library/sys.rst:1867
 msgid ""
 "A tuple containing the five components of the version number: *major*, "
 "*minor*, *micro*, *releaselevel*, and *serial*.  All values except "
@@ -3377,11 +3363,11 @@ msgstr ""
 " за іменем, тому ``sys.version_info[0]`` еквівалентно "
 "``sys.version_info.major`` і так далі."
 
-#: ../../library/sys.rst:1871
+#: ../../library/sys.rst:1875
 msgid "Added named component attributes."
 msgstr "Додано іменовані атрибути компонента."
 
-#: ../../library/sys.rst:1876
+#: ../../library/sys.rst:1880
 msgid ""
 "This is an implementation detail of the warnings framework; do not modify "
 "this value.  Refer to the :mod:`warnings` module for more information on the"
@@ -3391,7 +3377,7 @@ msgstr ""
 "Зверніться до модуля :mod:`warnings`, щоб дізнатися більше про структуру "
 "попереджень."
 
-#: ../../library/sys.rst:1883
+#: ../../library/sys.rst:1887
 msgid ""
 "The version number used to form registry keys on Windows platforms. This is "
 "stored as string resource 1000 in the Python DLL.  The value is normally the"
@@ -3400,7 +3386,7 @@ msgid ""
 "has no effect on the registry keys used by Python."
 msgstr ""
 
-#: ../../library/sys.rst:1894
+#: ../../library/sys.rst:1898
 msgid ""
 "A dictionary of the various implementation-specific flags passed through the"
 " :option:`-X` command-line option.  Option names are either mapped to their "
@@ -3410,7 +3396,7 @@ msgstr ""
 "параметр командного рядка :option:`-X`. Назви параметрів або зіставляються з"
 " їхніми значеннями, якщо вказано явно, або з :const:`True`. приклад:"
 
-#: ../../library/sys.rst:1910
+#: ../../library/sys.rst:1914
 msgid ""
 "This is a CPython-specific way of accessing options passed through "
 ":option:`-X`.  Other implementations may export them through other means, or"
@@ -3420,11 +3406,11 @@ msgstr ""
 "через :option:`-X`. Інші реалізації можуть експортувати їх іншими засобами "
 "або взагалі не експортувати."
 
-#: ../../library/sys.rst:1918
+#: ../../library/sys.rst:1922
 msgid "Citations"
 msgstr "Цитування"
 
-#: ../../library/sys.rst:1919
+#: ../../library/sys.rst:1923
 msgid ""
 "ISO/IEC 9899:1999.  \"Programming languages -- C.\"  A public draft of this "
 "standard is available at https://www.open-"
