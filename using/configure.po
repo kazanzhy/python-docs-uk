@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-04 14:13+0000\n"
+"POT-Creation-Date: 2023-08-18 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1115,23 +1115,19 @@ msgstr ""
 ":file:`Modules/Setup`: розширення C, створені Makefile за допомогою сценарію"
 " оболонки :file:`Module/makesetup`;"
 
-#: ../../using/configure.rst:689
-msgid ":file:`setup.py`: C extensions built using the ``setuptools`` package."
-msgstr ""
-
-#: ../../using/configure.rst:692
+#: ../../using/configure.rst:691
 msgid "Main build steps"
 msgstr "Основні етапи побудови"
 
-#: ../../using/configure.rst:694
+#: ../../using/configure.rst:693
 msgid "C files (``.c``) are built as object files (``.o``)."
 msgstr "Файли C (``.c``) створюються як об’єктні файли (``.o``)."
 
-#: ../../using/configure.rst:695
+#: ../../using/configure.rst:694
 msgid "A static ``libpython`` library (``.a``) is created from objects files."
 msgstr "Статична бібліотека libpython (``.a``) створюється з файлів об’єктів."
 
-#: ../../using/configure.rst:696
+#: ../../using/configure.rst:695
 msgid ""
 "``python.o`` and the static ``libpython`` library are linked into the final "
 "``python`` program."
@@ -1139,23 +1135,19 @@ msgstr ""
 "``python.o`` і статична бібліотека ``libpython`` пов’язані в остаточну "
 "програму ``python``."
 
-#: ../../using/configure.rst:698
-msgid ""
-"C extensions are built by the Makefile (see :file:`Modules/Setup`) and "
-"``python setup.py build``."
+#: ../../using/configure.rst:697
+msgid "C extensions are built by the Makefile (see :file:`Modules/Setup`)."
 msgstr ""
-"Розширення C створено за допомогою Makefile (див. :file:`Modules/Setup`) і "
-"``python setup.py build``."
 
-#: ../../using/configure.rst:702
+#: ../../using/configure.rst:700
 msgid "Main Makefile targets"
 msgstr "Основні цілі Makefile"
 
-#: ../../using/configure.rst:704
+#: ../../using/configure.rst:702
 msgid "``make``: Build Python with the standard library."
 msgstr "``make``: Збірка Python зі стандартною бібліотекою."
 
-#: ../../using/configure.rst:705
+#: ../../using/configure.rst:703
 msgid ""
 "``make platform:``: build the ``python`` program, but don't build the "
 "standard library extension modules."
@@ -1163,7 +1155,7 @@ msgstr ""
 "``make platform:``: створіть програму ``python``, але не створюйте "
 "стандартні модулі розширення бібліотеки."
 
-#: ../../using/configure.rst:707
+#: ../../using/configure.rst:705
 msgid ""
 "``make profile-opt``: build Python using Profile Guided Optimization (PGO). "
 "You can use the configure :option:`--enable-optimizations` option to make "
@@ -1175,7 +1167,7 @@ msgstr ""
 "optimizations`, щоб зробити це типовим цільовою командою ``make`` (``make "
 "all`` або лише ``make``)."
 
-#: ../../using/configure.rst:711
+#: ../../using/configure.rst:709
 msgid ""
 "``make buildbottest``: Build Python and run the Python test suite, the same "
 "way than buildbots test Python. Set ``TESTTIMEOUT`` variable (in seconds) to"
@@ -1186,11 +1178,11 @@ msgstr ""
 "секундах), щоб змінити час очікування тесту (1200 за замовчуванням: 20 "
 "хвилин)."
 
-#: ../../using/configure.rst:714
+#: ../../using/configure.rst:712
 msgid "``make install``: Build and install Python."
 msgstr "``make install``: Створення та встановлення Python."
 
-#: ../../using/configure.rst:715
+#: ../../using/configure.rst:713
 msgid ""
 "``make regen-all``: Regenerate (almost) all generated files; ``make regen-"
 "stdlib-module-names`` and ``autoconf`` must be run separately for the "
@@ -1200,11 +1192,11 @@ msgstr ""
 "``make regen-stdlib-module-names`` і ``autoconf`` потрібно запускати окремо "
 "для решти згенерованих файлів."
 
-#: ../../using/configure.rst:718
+#: ../../using/configure.rst:716
 msgid "``make clean``: Remove built files."
 msgstr "``make clean``: Видалити зібрані файли."
 
-#: ../../using/configure.rst:719
+#: ../../using/configure.rst:717
 msgid ""
 "``make distclean``: Same than ``make clean``, but remove also files created "
 "by the configure script."
@@ -1212,11 +1204,11 @@ msgstr ""
 "``make distclean``: Те саме, що ``make clean``, але також видаляє файли, "
 "створені сценарієм конфігурації."
 
-#: ../../using/configure.rst:723
+#: ../../using/configure.rst:721
 msgid "C extensions"
 msgstr "C розширення"
 
-#: ../../using/configure.rst:725
+#: ../../using/configure.rst:723
 msgid ""
 "Some C extensions are built as built-in modules, like the ``sys`` module. "
 "They are built with the ``Py_BUILD_CORE_BUILTIN`` macro defined. Built-in "
@@ -1226,14 +1218,14 @@ msgstr ""
 "створені за допомогою визначеного макросу ``Py_BUILD_CORE_BUILTIN``. "
 "Вбудовані модулі не мають атрибута ``__file__``::"
 
-#: ../../using/configure.rst:737
+#: ../../using/configure.rst:735
 msgid ""
 "Other C extensions are built as dynamic libraries, like the ``_asyncio`` "
 "module. They are built with the ``Py_BUILD_CORE_MODULE`` macro defined. "
 "Example on Linux x86-64::"
 msgstr ""
 
-#: ../../using/configure.rst:747
+#: ../../using/configure.rst:745
 msgid ""
 ":file:`Modules/Setup` is used to generate Makefile targets to build C "
 "extensions. At the beginning of the files, C extensions are built as built-"
@@ -1245,35 +1237,24 @@ msgstr ""
 "вбудовані модулі. Розширення, визначені після маркера ``*shared*``, "
 "будуються як динамічні бібліотеки."
 
-#: ../../using/configure.rst:751
+#: ../../using/configure.rst:749
 msgid ""
-"The :file:`setup.py` script only builds C extensions as shared libraries "
-"using the :mod:`distutils` module."
-msgstr ""
-"Сценарій :file:`setup.py` створює лише розширення C як спільні бібліотеки за"
-" допомогою модуля :mod:`distutils`."
-
-#: ../../using/configure.rst:754
-msgid ""
-"The :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_API()` and "
-":c:macro:`PyMODINIT_FUNC()` macros of :file:`Include/pyport.h` are defined "
+"The :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_DATA()` and "
+":c:macro:`PyMODINIT_FUNC` macros of :file:`Include/pyport.h` are defined "
 "differently depending if the ``Py_BUILD_CORE_MODULE`` macro is defined:"
 msgstr ""
-"Макроси :c:macro:`PyAPI_FUNC()`, :c:macro:`PyAPI_API()` та "
-":c:macro:`PyMODINIT_FUNC()` :file:`Include/pyport.h` визначаються по-різному"
-" залежно від того, чи визначено макрос ``Py_BUILD_CORE_MODULE``:"
 
-#: ../../using/configure.rst:758
+#: ../../using/configure.rst:753
 msgid "Use ``Py_EXPORTED_SYMBOL`` if the ``Py_BUILD_CORE_MODULE`` is defined"
 msgstr ""
 "Використовуйте ``Py_EXPORTED_SYMBOL``, якщо ``Py_BUILD_CORE_MODULE`` "
 "визначено"
 
-#: ../../using/configure.rst:759
+#: ../../using/configure.rst:754
 msgid "Use ``Py_IMPORTED_SYMBOL`` otherwise."
 msgstr "В іншому випадку використовуйте ``Py_IMPORTED_SYMBOL``."
 
-#: ../../using/configure.rst:761
+#: ../../using/configure.rst:756
 msgid ""
 "If the ``Py_BUILD_CORE_BUILTIN`` macro is used by mistake on a C extension "
 "built as a shared library, its ``PyInit_xxx()`` function is not exported, "
@@ -1284,11 +1265,11 @@ msgstr ""
 "``PyInit_xxx()`` не експортується, що спричиняє :exc:`ImportError` під час "
 "імпорту."
 
-#: ../../using/configure.rst:767
+#: ../../using/configure.rst:762
 msgid "Compiler and linker flags"
 msgstr "Прапори компілятора та компонувальника"
 
-#: ../../using/configure.rst:769
+#: ../../using/configure.rst:764
 msgid ""
 "Options set by the ``./configure`` script and environment variables and used"
 " by ``Makefile``."
@@ -1296,17 +1277,17 @@ msgstr ""
 "Параметри, встановлені сценарієм ``./configure`` і змінними середовища та "
 "використовуються ``Makefile``."
 
-#: ../../using/configure.rst:773
+#: ../../using/configure.rst:768
 msgid "Preprocessor flags"
 msgstr "Прапори препроцесора"
 
-#: ../../using/configure.rst:777
+#: ../../using/configure.rst:772
 msgid ""
 "Value of :envvar:`CPPFLAGS` variable passed to the ``./configure`` script."
 msgstr ""
 "Значення змінної :envvar:`CPPFLAGS` передається до сценарію ``./configure``."
 
-#: ../../using/configure.rst:783
+#: ../../using/configure.rst:778
 msgid ""
 "(Objective) C/C++ preprocessor flags, e.g. ``-I<include dir>`` if you have "
 "headers in a nonstandard directory ``<include dir>``."
@@ -1314,24 +1295,21 @@ msgstr ""
 "(Мета) Прапори препроцесора C/C++, напр. ``-I <include dir>``, якщо у вас є "
 "заголовки в нестандартному каталозі ``<include dir>``."
 
-#: ../../using/configure.rst:786 ../../using/configure.rst:976
+#: ../../using/configure.rst:781 ../../using/configure.rst:971
 msgid ""
 "Both :envvar:`CPPFLAGS` and :envvar:`LDFLAGS` need to contain the shell's "
-"value for setup.py to be able to build extension modules using the "
-"directories specified in the environment variables."
+"value to be able to build extension modules using the directories specified "
+"in the environment variables."
 msgstr ""
-"І :envvar:`CPPFLAGS`, і :envvar:`LDFLAGS` повинні містити значення оболонки "
-"для setup.py, щоб мати можливість створювати модулі розширення за допомогою "
-"каталогів, указаних у змінних середовища."
 
-#: ../../using/configure.rst:796
+#: ../../using/configure.rst:791
 msgid ""
 "Extra preprocessor flags added for building the interpreter object files."
 msgstr ""
 "Для побудови об’єктних файлів інтерпретатора додано додаткові позначки "
 "препроцесора."
 
-#: ../../using/configure.rst:798
+#: ../../using/configure.rst:793
 msgid ""
 "Default: ``$(BASECPPFLAGS) -I. -I$(srcdir)/Include $(CONFIGURE_CPPFLAGS) "
 "$(CPPFLAGS)``."
@@ -1339,46 +1317,42 @@ msgstr ""
 "Типове значення: ``$(BASECPPFLAGS) -I. -I$(srcdir)/Включити "
 "$(CONFIGURE_CPPFLAGS) $(CPPFLAGS)``."
 
-#: ../../using/configure.rst:803
+#: ../../using/configure.rst:798
 msgid "Compiler flags"
 msgstr "Прапори компілятора"
 
-#: ../../using/configure.rst:807
+#: ../../using/configure.rst:802
 msgid "C compiler command."
 msgstr "Команда компілятора C."
 
-#: ../../using/configure.rst:809
+#: ../../using/configure.rst:804
 msgid "Example: ``gcc -pthread``."
 msgstr "Приклад: ``gcc -pthread``."
 
-#: ../../using/configure.rst:813
+#: ../../using/configure.rst:808
 msgid "C++ compiler command."
 msgstr "Команда компілятора C++."
 
-#: ../../using/configure.rst:815
+#: ../../using/configure.rst:810
 msgid "Example: ``g++ -pthread``."
 msgstr "Приклад: ``g++ -pthread``."
 
-#: ../../using/configure.rst:819
+#: ../../using/configure.rst:814
 msgid "C compiler flags."
 msgstr "Прапори компілятора C."
 
-#: ../../using/configure.rst:823
+#: ../../using/configure.rst:818
 msgid ""
 ":envvar:`CFLAGS_NODIST` is used for building the interpreter and stdlib C "
-"extensions.  Use it when a compiler flag should *not* be part of the "
-"distutils :envvar:`CFLAGS` once Python is installed (:issue:`21121`)."
+"extensions.  Use it when a compiler flag should *not* be part of "
+":envvar:`CFLAGS` once Python is installed (:gh:`65320`)."
 msgstr ""
-":envvar:`CFLAGS_NODIST` використовується для створення інтерпретатора та "
-"розширень stdlib C. Використовуйте його, коли прапор компілятора *не* "
-"повинен бути частиною distutils :envvar:`CFLAGS` після встановлення Python "
-"(:issue:`21121`)."
 
-#: ../../using/configure.rst:827
+#: ../../using/configure.rst:822
 msgid "In particular, :envvar:`CFLAGS` should not contain:"
 msgstr ""
 
-#: ../../using/configure.rst:829
+#: ../../using/configure.rst:824
 msgid ""
 "the compiler flag ``-I`` (for setting the search path for include files). "
 "The ``-I`` flags are processed from left to right, and any flags in "
@@ -1386,29 +1360,29 @@ msgid ""
 "``-I`` flags."
 msgstr ""
 
-#: ../../using/configure.rst:834
+#: ../../using/configure.rst:829
 msgid ""
 "hardening flags such as ``-Werror`` because distributions cannot control "
 "whether packages installed by users conform to such heightened standards."
 msgstr ""
 
-#: ../../using/configure.rst:842
+#: ../../using/configure.rst:837
 msgid ""
 "Options passed to the :mod:`compileall` command line when building PYC files"
 " in ``make install``. Default: ``-j0``."
 msgstr ""
 
-#: ../../using/configure.rst:849
+#: ../../using/configure.rst:844
 msgid "Extra C compiler flags."
 msgstr "Додаткові позначки компілятора C."
 
-#: ../../using/configure.rst:853
+#: ../../using/configure.rst:848
 msgid ""
 "Value of :envvar:`CFLAGS` variable passed to the ``./configure`` script."
 msgstr ""
 "Значення змінної :envvar:`CFLAGS` передається до сценарію ``./configure``."
 
-#: ../../using/configure.rst:860
+#: ../../using/configure.rst:855
 msgid ""
 "Value of :envvar:`CFLAGS_NODIST` variable passed to the ``./configure`` "
 "script."
@@ -1416,35 +1390,35 @@ msgstr ""
 "Значення змінної :envvar:`CFLAGS_NODIST` передається до сценарію "
 "``./configure``."
 
-#: ../../using/configure.rst:867
+#: ../../using/configure.rst:862
 msgid "Base compiler flags."
 msgstr "Базові прапори компілятора."
 
-#: ../../using/configure.rst:871
+#: ../../using/configure.rst:866
 msgid "Optimization flags."
 msgstr "Прапори оптимізації."
 
-#: ../../using/configure.rst:875
+#: ../../using/configure.rst:870
 msgid "Strict or non-strict aliasing flags used to compile ``Python/dtoa.c``."
 msgstr ""
 "Суворі або нестрогі прапорці псевдонімів, які використовуються для "
 "компіляції ``Python/dtoa.c``."
 
-#: ../../using/configure.rst:881
+#: ../../using/configure.rst:876
 msgid "Compiler flags used to build a shared library."
 msgstr ""
 "Прапори компілятора, які використовуються для створення спільної бібліотеки."
 
-#: ../../using/configure.rst:883
+#: ../../using/configure.rst:878
 msgid "For example, ``-fPIC`` is used on Linux and on BSD."
 msgstr "Наприклад, ``-fPIC`` використовується в Linux і BSD."
 
-#: ../../using/configure.rst:887
+#: ../../using/configure.rst:882
 msgid "Extra C flags added for building the interpreter object files."
 msgstr ""
 "Для побудови об’єктних файлів інтерпретатора додано додаткові позначки C."
 
-#: ../../using/configure.rst:889
+#: ../../using/configure.rst:884
 msgid ""
 "Default: ``$(CCSHARED)`` when :option:`--enable-shared` is used, or an empty"
 " string otherwise."
@@ -1452,7 +1426,7 @@ msgstr ""
 "Типове значення: ``$(CCSHARED)``, коли :option:`--enable-shared` "
 "використовується, або порожній рядок в інших випадках."
 
-#: ../../using/configure.rst:894
+#: ../../using/configure.rst:889
 msgid ""
 "Default: ``$(BASECFLAGS) $(OPT) $(CONFIGURE_CFLAGS) $(CFLAGS) "
 "$(EXTRA_CFLAGS)``."
@@ -1460,7 +1434,7 @@ msgstr ""
 "Типове значення: ``$(BASECFLAGS) $(OPT) $(CONFIGURE_CFLAGS) $(CFLAGS) "
 "$(EXTRA_CFLAGS)``."
 
-#: ../../using/configure.rst:898
+#: ../../using/configure.rst:893
 msgid ""
 "Default: ``$(CONFIGURE_CFLAGS_NODIST) $(CFLAGS_NODIST) "
 "-I$(srcdir)/Include/internal``."
@@ -1468,13 +1442,13 @@ msgstr ""
 "Типове значення: ``$(CONFIGURE_CFLAGS_NODIST) $(CFLAGS_NODIST) "
 "-I$(srcdir)/Include/internal``."
 
-#: ../../using/configure.rst:904
+#: ../../using/configure.rst:899
 msgid "C flags used for building the interpreter object files."
 msgstr ""
 "Прапорці C, які використовуються для побудови об'єктних файлів "
 "інтерпретатора."
 
-#: ../../using/configure.rst:906
+#: ../../using/configure.rst:901
 msgid ""
 "Default: ``$(PY_CFLAGS) $(PY_CFLAGS_NODIST) $(PY_CPPFLAGS) "
 "$(CFLAGSFORSHARED)``."
@@ -1482,11 +1456,11 @@ msgstr ""
 "Типове значення: ``$(PY_CFLAGS) $(PY_CFLAGS_NODIST) $(PY_CPPFLAGS) "
 "$(CFLAGSFORSHARED)``."
 
-#: ../../using/configure.rst:912
+#: ../../using/configure.rst:907
 msgid "Default: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE``."
 msgstr "Типове значення: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE``."
 
-#: ../../using/configure.rst:918
+#: ../../using/configure.rst:913
 msgid ""
 "Compiler flags to build a standard library extension module as a built-in "
 "module, like the :mod:`posix` module."
@@ -1494,40 +1468,40 @@ msgstr ""
 "Прапори компілятора для створення стандартного модуля розширення бібліотеки "
 "як вбудованого модуля, як-от модуль :mod:`posix`."
 
-#: ../../using/configure.rst:921
+#: ../../using/configure.rst:916
 msgid "Default: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE_BUILTIN``."
 msgstr "Типове значення: ``$(PY_STDMODULE_CFLAGS) -DPy_BUILD_CORE_BUILTIN``."
 
-#: ../../using/configure.rst:927
+#: ../../using/configure.rst:922
 msgid "Purify command. Purify is a memory debugger program."
 msgstr "Команда очищення. Purify — це програма для налагодження пам'яті."
 
-#: ../../using/configure.rst:929
+#: ../../using/configure.rst:924
 msgid "Default: empty string (not used)."
 msgstr "За замовчуванням: порожній рядок (не використовується)."
 
-#: ../../using/configure.rst:933
+#: ../../using/configure.rst:928
 msgid "Linker flags"
 msgstr "Прапори компонувальника"
 
-#: ../../using/configure.rst:937
+#: ../../using/configure.rst:932
 msgid ""
 "Linker command used to build programs like ``python`` and ``_testembed``."
 msgstr ""
 "Команда компонувальника, яка використовується для створення таких програм, "
 "як ``python`` і ``_testembed``."
 
-#: ../../using/configure.rst:939
+#: ../../using/configure.rst:934
 msgid "Default: ``$(PURIFY) $(CC)``."
 msgstr ""
 
-#: ../../using/configure.rst:943
+#: ../../using/configure.rst:938
 msgid ""
 "Value of :envvar:`LDFLAGS` variable passed to the ``./configure`` script."
 msgstr ""
 "Значення змінної :envvar:`LDFLAGS` передається до сценарію ``./configure``."
 
-#: ../../using/configure.rst:945
+#: ../../using/configure.rst:940
 msgid ""
 "Avoid assigning :envvar:`CFLAGS`, :envvar:`LDFLAGS`, etc. so users can use "
 "them on the command line to append to these values without stomping the pre-"
@@ -1537,22 +1511,18 @@ msgstr ""
 "користувачі могли використовувати їх у командному рядку для додавання до цих"
 " значень без порушення попередньо встановлених значень."
 
-#: ../../using/configure.rst:953
+#: ../../using/configure.rst:948
 msgid ""
 ":envvar:`LDFLAGS_NODIST` is used in the same manner as "
 ":envvar:`CFLAGS_NODIST`.  Use it when a linker flag should *not* be part of "
-"the distutils :envvar:`LDFLAGS` once Python is installed (:issue:`35257`)."
+":envvar:`LDFLAGS` once Python is installed (:gh:`65320`)."
 msgstr ""
-":envvar:`LDFLAGS_NODIST` використовується так само, як "
-":envvar:`CFLAGS_NODIST`. Використовуйте його, коли прапор компонувальника "
-"*не* повинен бути частиною distutils :envvar:`LDFLAGS` після встановлення "
-"Python (:issue:`35257`)."
 
-#: ../../using/configure.rst:957
+#: ../../using/configure.rst:952
 msgid "In particular, :envvar:`LDFLAGS` should not contain:"
 msgstr ""
 
-#: ../../using/configure.rst:959
+#: ../../using/configure.rst:954
 msgid ""
 "the compiler flag ``-L`` (for setting the search path for libraries). The "
 "``-L`` flags are processed from left to right, and any flags in "
@@ -1560,7 +1530,7 @@ msgid ""
 "``-L`` flags."
 msgstr ""
 
-#: ../../using/configure.rst:966
+#: ../../using/configure.rst:961
 msgid ""
 "Value of :envvar:`LDFLAGS_NODIST` variable passed to the ``./configure`` "
 "script."
@@ -1568,7 +1538,7 @@ msgstr ""
 "Значення змінної :envvar:`LDFLAGS_NODIST` передається до сценарію "
 "``./configure``."
 
-#: ../../using/configure.rst:973
+#: ../../using/configure.rst:968
 msgid ""
 "Linker flags, e.g. ``-L<lib dir>`` if you have libraries in a nonstandard "
 "directory ``<lib dir>``."
@@ -1576,7 +1546,7 @@ msgstr ""
 "Прапори компонування, напр. ``-L <lib dir>``, якщо у вас є бібліотеки в "
 "нестандартному каталозі ``<lib dir>``."
 
-#: ../../using/configure.rst:982
+#: ../../using/configure.rst:977
 msgid ""
 "Linker flags to pass libraries to the linker when linking the Python "
 "executable."
@@ -1584,35 +1554,35 @@ msgstr ""
 "Прапорці компонувальника для передачі бібліотек компонувальнику під час "
 "компонування виконуваного файлу Python."
 
-#: ../../using/configure.rst:985
+#: ../../using/configure.rst:980
 msgid "Example: ``-lrt``."
 msgstr "Приклад: ``-lrt``."
 
-#: ../../using/configure.rst:989
+#: ../../using/configure.rst:984
 msgid "Command to build a shared library."
 msgstr "Команда для створення спільної бібліотеки."
 
-#: ../../using/configure.rst:991
+#: ../../using/configure.rst:986
 msgid "Default: ``@LDSHARED@ $(PY_LDFLAGS)``."
 msgstr "Типове значення: ``@LDSHARED@ $(PY_LDFLAGS)``."
 
-#: ../../using/configure.rst:995
+#: ../../using/configure.rst:990
 msgid "Command to build ``libpython`` shared library."
 msgstr "Команда для створення спільної бібліотеки ``libpython``."
 
-#: ../../using/configure.rst:997
+#: ../../using/configure.rst:992
 msgid "Default: ``@BLDSHARED@ $(PY_CORE_LDFLAGS)``."
 msgstr "За замовчуванням: ``@BLDSHARED@ $(PY_CORE_LDFLAGS)``."
 
-#: ../../using/configure.rst:1001
+#: ../../using/configure.rst:996
 msgid "Default: ``$(CONFIGURE_LDFLAGS) $(LDFLAGS)``."
 msgstr "Типове значення: ``$(CONFIGURE_LDFLAGS) $(LDFLAGS)``."
 
-#: ../../using/configure.rst:1005
+#: ../../using/configure.rst:1000
 msgid "Default: ``$(CONFIGURE_LDFLAGS_NODIST) $(LDFLAGS_NODIST)``."
 msgstr "Типове значення: ``$(CONFIGURE_LDFLAGS_NODIST) $(LDFLAGS_NODIST)``."
 
-#: ../../using/configure.rst:1011
+#: ../../using/configure.rst:1006
 msgid "Linker flags used for building the interpreter object files."
 msgstr ""
 "Прапори компонувальника, які використовуються для створення файлів об’єктів "
