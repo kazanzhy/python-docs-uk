@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:13+0000\n"
+"POT-Creation-Date: 2023-08-25 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -216,9 +216,8 @@ msgstr "Чи є еквівалент onexit() C у Python?"
 #: ../../faq/library.rst:113
 msgid ""
 "The :mod:`atexit` module provides a register function that is similar to C's"
-" :c:func:`onexit`."
+" :c:func:`!onexit`."
 msgstr ""
-"Модуль :mod:`atexit` надає функцію реєстру, подібну до :c:func:`onexit` C."
 
 #: ../../faq/library.rst:118
 msgid "Why don't my signal handlers work?"
@@ -513,14 +512,10 @@ msgstr "Це не::"
 #: ../../faq/library.rst:399
 msgid ""
 "Operations that replace other objects may invoke those other objects' "
-":meth:`__del__` method when their reference count reaches zero, and that can"
-" affect things.  This is especially true for the mass updates to "
+":meth:`~object.__del__` method when their reference count reaches zero, and "
+"that can affect things.  This is especially true for the mass updates to "
 "dictionaries and lists.  When in doubt, use a mutex!"
 msgstr ""
-"Операції, які замінюють інші об’єкти, можуть викликати метод :meth:`__del__`"
-" цих інших об’єктів, коли кількість посилань досягає нуля, і це може "
-"вплинути на речі. Особливо це стосується масових оновлень словників і "
-"списків. Якщо сумніваєтеся, використовуйте м'ютекс!"
 
 #: ../../faq/library.rst:406
 msgid "Can't we get rid of the Global Interpreter Lock?"
@@ -982,35 +977,24 @@ msgstr ""
 #: ../../faq/library.rst:767
 msgid ""
 "To prevent the TCP connect from blocking, you can set the socket to non-"
-"blocking mode.  Then when you do the :meth:`socket.connect`, you will either"
-" connect immediately (unlikely) or get an exception that contains the error "
-"number as ``.errno``. ``errno.EINPROGRESS`` indicates that the connection is"
-" in progress, but hasn't finished yet.  Different OSes will return different"
-" values, so you're going to have to check what's returned on your system."
+"blocking mode.  Then when you do the :meth:`~socket.socket.connect`, you "
+"will either connect immediately (unlikely) or get an exception that contains"
+" the error number as ``.errno``. ``errno.EINPROGRESS`` indicates that the "
+"connection is in progress, but hasn't finished yet.  Different OSes will "
+"return different values, so you're going to have to check what's returned on"
+" your system."
 msgstr ""
-"Щоб запобігти блокуванню підключення TCP, ви можете встановити для сокета "
-"неблокуючий режим. Тоді, коли ви виконуєте :meth:`socket.connect`, ви або "
-"підключитеся негайно (навряд чи), або отримаєте виняток, який містить номер "
-"помилки як ``.errno``. ``errno.EINPROGRESS`` вказує на те, що підключення "
-"триває, але ще не завершено. Різні ОС повертатимуть різні значення, тому вам"
-" доведеться перевірити, що повертає ваша система."
 
-#: ../../faq/library.rst:774
+#: ../../faq/library.rst:775
 msgid ""
-"You can use the :meth:`socket.connect_ex` method to avoid creating an "
-"exception.  It will just return the errno value.  To poll, you can call "
-":meth:`socket.connect_ex` again later -- ``0`` or ``errno.EISCONN`` indicate"
-" that you're connected -- or you can pass this socket to "
+"You can use the :meth:`~socket.socket.connect_ex` method to avoid creating "
+"an exception. It will just return the errno value. To poll, you can call "
+":meth:`~socket.socket.connect_ex` again later -- ``0`` or ``errno.EISCONN`` "
+"indicate that you're connected -- or you can pass this socket to "
 ":meth:`select.select` to check if it's writable."
 msgstr ""
-"Ви можете використовувати метод :meth:`socket.connect_ex`, щоб уникнути "
-"створення винятку. Він просто поверне значення errno. Щоб провести "
-"опитування, ви можете пізніше знову викликати :meth:`socket.connect_ex` -- "
-"``0`` або ``errno.EISCONN`` вказують на те, що ви підключені -- або ви "
-"можете передати цей сокет :meth:`select.select`, щоб перевірити, чи "
-"доступний він для запису."
 
-#: ../../faq/library.rst:780
+#: ../../faq/library.rst:783
 msgid ""
 "The :mod:`asyncio` module provides a general purpose single-threaded and "
 "concurrent asynchronous library, which can be used for writing non-blocking "
@@ -1018,19 +1002,19 @@ msgid ""
 " popular and feature-rich alternative."
 msgstr ""
 
-#: ../../faq/library.rst:788
+#: ../../faq/library.rst:791
 msgid "Databases"
 msgstr "Бази даних"
 
-#: ../../faq/library.rst:791
+#: ../../faq/library.rst:794
 msgid "Are there any interfaces to database packages in Python?"
 msgstr "Чи існують інтерфейси для пакетів баз даних у Python?"
 
-#: ../../faq/library.rst:793
+#: ../../faq/library.rst:796
 msgid "Yes."
 msgstr "Так."
 
-#: ../../faq/library.rst:795
+#: ../../faq/library.rst:798
 msgid ""
 "Interfaces to disk-based hashes such as :mod:`DBM <dbm.ndbm>` and :mod:`GDBM"
 " <dbm.gnu>` are also included with standard Python.  There is also the "
@@ -1041,7 +1025,7 @@ msgstr ""
 "<dbm.gnu>`, також включені в стандартний Python. Існує також модуль "
 ":mod:`sqlite3`, який забезпечує полегшену дискову реляційну базу даних."
 
-#: ../../faq/library.rst:800
+#: ../../faq/library.rst:803
 msgid ""
 "Support for most relational databases is available.  See the "
 "`DatabaseProgramming wiki page "
@@ -1052,11 +1036,11 @@ msgstr ""
 "<https://wiki.python.org/moin/DatabaseProgramming>`_ для отримання "
 "додаткової інформації."
 
-#: ../../faq/library.rst:806
+#: ../../faq/library.rst:809
 msgid "How do you implement persistent objects in Python?"
 msgstr "Як реалізувати постійні об’єкти в Python?"
 
-#: ../../faq/library.rst:808
+#: ../../faq/library.rst:811
 msgid ""
 "The :mod:`pickle` library module solves this in a very general way (though "
 "you still can't store things like open files, sockets or windows), and the "
@@ -1068,15 +1052,15 @@ msgstr ""
 " а модуль бібліотеки :mod:`shelve` використовує pickle і (g) dbm для "
 "створення постійних відображень, що містять довільні об’єкти Python."
 
-#: ../../faq/library.rst:815
+#: ../../faq/library.rst:818
 msgid "Mathematics and Numerics"
 msgstr "Математика та цифри"
 
-#: ../../faq/library.rst:818
+#: ../../faq/library.rst:821
 msgid "How do I generate random numbers in Python?"
 msgstr "Як генерувати випадкові числа в Python?"
 
-#: ../../faq/library.rst:820
+#: ../../faq/library.rst:823
 msgid ""
 "The standard module :mod:`random` implements a random number generator.  "
 "Usage is simple::"
@@ -1084,47 +1068,47 @@ msgstr ""
 "Стандартний модуль :mod:`random` реалізує генератор випадкових чисел. "
 "Використання просте::"
 
-#: ../../faq/library.rst:826
+#: ../../faq/library.rst:829
 msgid "This returns a random floating point number in the range [0, 1)."
 msgstr "Це повертає випадкове число з плаваючою комою в діапазоні [0, 1)."
 
-#: ../../faq/library.rst:828
+#: ../../faq/library.rst:831
 msgid ""
 "There are also many other specialized generators in this module, such as:"
 msgstr ""
 "У цьому модулі також є багато інших спеціалізованих генераторів, таких як:"
 
-#: ../../faq/library.rst:830
+#: ../../faq/library.rst:833
 msgid "``randrange(a, b)`` chooses an integer in the range [a, b)."
 msgstr "``randrange(a, b)`` вибирає ціле число в діапазоні [a, b)."
 
-#: ../../faq/library.rst:831
+#: ../../faq/library.rst:834
 msgid "``uniform(a, b)`` chooses a floating point number in the range [a, b)."
 msgstr "``uniform(a, b)`` вибирає число з плаваючою комою в діапазоні [a, b)."
 
-#: ../../faq/library.rst:832
+#: ../../faq/library.rst:835
 msgid ""
 "``normalvariate(mean, sdev)`` samples the normal (Gaussian) distribution."
 msgstr ""
 "``normalvariate(mean, sdev)`` вибірка нормального (гауссового) розподілу."
 
-#: ../../faq/library.rst:834
+#: ../../faq/library.rst:837
 msgid "Some higher-level functions operate on sequences directly, such as:"
 msgstr ""
 "Деякі функції вищого рівня працюють безпосередньо з послідовностями, "
 "наприклад:"
 
-#: ../../faq/library.rst:836
+#: ../../faq/library.rst:839
 msgid "``choice(S)`` chooses a random element from a given sequence."
 msgstr "``choice(S)`` вибирає випадковий елемент із заданої послідовності."
 
-#: ../../faq/library.rst:837
+#: ../../faq/library.rst:840
 msgid "``shuffle(L)`` shuffles a list in-place, i.e. permutes it randomly."
 msgstr ""
 "``shuffle(L)`` перемішує список на місці, тобто переставляє його випадковим "
 "чином."
 
-#: ../../faq/library.rst:839
+#: ../../faq/library.rst:842
 msgid ""
 "There's also a ``Random`` class you can instantiate to create independent "
 "multiple random number generators."
