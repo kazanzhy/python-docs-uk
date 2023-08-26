@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-18 14:13+0000\n"
+"POT-Creation-Date: 2023-08-25 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1862,8 +1862,8 @@ msgid ""
 msgstr "Щоб оновити модуль розширення до нового API, виконайте такі дії:"
 
 #: ../../whatsnew/2.2.rst:1081
-msgid "Rename :c:func:`Py_TPFLAGS_GC` to :c:func:`PyTPFLAGS_HAVE_GC`."
-msgstr "Перейменуйте :c:func:`Py_TPFLAGS_GC` на :c:func:`PyTPFLAGS_HAVE_GC`."
+msgid "Rename :c:macro:`!Py_TPFLAGS_GC` to :c:macro:`Py_TPFLAGS_HAVE_GC`."
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:1084
 msgid ""
@@ -1876,24 +1876,20 @@ msgstr ""
 msgid "objects, and :c:func:`PyObject_GC_Del` to deallocate them."
 msgstr "об’єктів і :c:func:`PyObject_GC_Del`, щоб звільнити їх."
 
-#: ../../whatsnew/2.2.rst:1087
-msgid "Rename :c:func:`PyObject_GC_Init` to :c:func:`PyObject_GC_Track` and"
+#: ../../whatsnew/2.2.rst:1086
+msgid ""
+"Rename :c:func:`!PyObject_GC_Init` to :c:func:`PyObject_GC_Track` and "
+":c:func:`!PyObject_GC_Fini` to :c:func:`PyObject_GC_UnTrack`."
 msgstr ""
-"Перейменуйте :c:func:`PyObject_GC_Init` на :c:func:`PyObject_GC_Track` і"
-
-#: ../../whatsnew/2.2.rst:1087
-msgid ":c:func:`PyObject_GC_Fini` to :c:func:`PyObject_GC_UnTrack`."
-msgstr ":c:func:`PyObject_GC_Fini` до :c:func:`PyObject_GC_UnTrack`."
 
 #: ../../whatsnew/2.2.rst:1089
-msgid "Remove :c:func:`PyGC_HEAD_SIZE` from object size calculations."
-msgstr "Видалити :c:func:`PyGC_HEAD_SIZE` з обчислень розміру об’єкта."
+msgid "Remove :c:macro:`!PyGC_HEAD_SIZE` from object size calculations."
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:1091
 msgid ""
-"Remove calls to :c:func:`PyObject_AS_GC` and :c:func:`PyObject_FROM_GC`."
+"Remove calls to :c:func:`!PyObject_AS_GC` and :c:func:`!PyObject_FROM_GC`."
 msgstr ""
-"Видаліть виклики :c:func:`PyObject_AS_GC` і :c:func:`PyObject_FROM_GC`."
 
 #: ../../whatsnew/2.2.rst:1093
 msgid ""
@@ -2132,17 +2128,9 @@ msgid ""
 ":keyword:`in` operator, but these features were rarely used and therefore "
 "buggy.  The :meth:`tolist` method and the :attr:`start`, :attr:`stop`, and "
 ":attr:`step` attributes are also being deprecated.  At the C level, the "
-"fourth argument to the :c:func:`PyRange_New` function, ``repeat``, has also "
-"been deprecated."
+"fourth argument to the :c:func:`!PyRange_New` function, ``repeat``, has also"
+" been deprecated."
 msgstr ""
-"Деякі функції об’єкта, що повертаються функцією :func:`xrange`, тепер "
-"застаріли та викликають попередження під час доступу до них; вони зникнуть у"
-" Python 2.3. Об’єкти :class:`xrange` намагалися вдавати, що вони є типами "
-"повної послідовності, підтримуючи нарізку, множення послідовності та "
-"оператор :keyword:`in`, але ці функції рідко використовувалися і, отже, мали"
-" помилки. Метод :meth:`tolist` і атрибути :attr:`start`, :attr:`stop` і "
-":attr:`step` також застаріли. На рівні C четвертий аргумент функції "
-":c:func:`PyRange_New`, ``repeat``, також застарів."
 
 #: ../../whatsnew/2.2.rst:1224
 msgid ""

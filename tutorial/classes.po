@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:13+0000\n"
+"POT-Creation-Date: 2023-08-25 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -203,15 +203,9 @@ msgid ""
 "attributes is possible.  Module attributes are writable: you can write "
 "``modname.the_answer = 42``.  Writable attributes may also be deleted with "
 "the :keyword:`del` statement.  For example, ``del modname.the_answer`` will "
-"remove the attribute :attr:`the_answer` from the object named by "
+"remove the attribute :attr:`!the_answer` from the object named by "
 "``modname``."
 msgstr ""
-"Атрибути можуть бути доступними лише для читання або запису. В останньому "
-"випадку можливе призначення атрибутів. Атрибути модуля доступні для запису: "
-"ви можете написати ``modname.the_answer = 42``. Атрибути, доступні для "
-"запису, також можна видалити за допомогою оператора :keyword:`del`. "
-"Наприклад, ``del modname.the_answer`` видалить атрибут :attr:`the_answer` з "
-"об’єкта, названого ``modname``."
 
 #: ../../tutorial/classes.rst:96
 msgid ""
@@ -470,15 +464,8 @@ msgid ""
 " next section.  The original local scope (the one in effect just before the "
 "class definition was entered) is reinstated, and the class object is bound "
 "here to the class name given in the class definition header "
-"(:class:`ClassName` in the example)."
+"(:class:`!ClassName` in the example)."
 msgstr ""
-"Коли визначення класу залишається звичайним способом (через кінець), "
-"створюється *об’єкт класу*. По суті, це оболонка навколо вмісту простору "
-"імен, створеного визначенням класу; ми дізнаємось більше про об’єкти класу в"
-" наступному розділі. Початкова локальна область (та, що діяла безпосередньо "
-"перед тим, як було введено визначення класу) відновлюється, а об’єкт класу "
-"прив’язується тут до імені класу, указаного в заголовку визначення класу "
-"(:class:`ClassName` у прикладі)."
 
 #: ../../tutorial/classes.rst:259
 msgid "Class Objects"
@@ -541,29 +528,23 @@ msgid ""
 "The instantiation operation (\"calling\" a class object) creates an empty "
 "object. Many classes like to create objects with instances customized to a "
 "specific initial state. Therefore a class may define a special method named "
-":meth:`__init__`, like this::"
+":meth:`~object.__init__`, like this::"
 msgstr ""
-"Операція інстанціювання (\"виклик\" об’єкта класу) створює порожній об’єкт. "
-"Багато класів люблять створювати об’єкти з екземплярами, налаштованими на "
-"певний початковий стан. Тому клас може визначати спеціальний метод під "
-"назвою :meth:`__init__`, наприклад:"
 
 #: ../../tutorial/classes.rst:299
 msgid ""
-"When a class defines an :meth:`__init__` method, class instantiation "
-"automatically invokes :meth:`__init__` for the newly created class instance."
-"  So in this example, a new, initialized instance can be obtained by::"
+"When a class defines an :meth:`~object.__init__` method, class instantiation"
+" automatically invokes :meth:`!__init__` for the newly created class "
+"instance.  So in this example, a new, initialized instance can be obtained "
+"by::"
 msgstr ""
 
 #: ../../tutorial/classes.rst:305
 msgid ""
-"Of course, the :meth:`__init__` method may have arguments for greater "
-"flexibility.  In that case, arguments given to the class instantiation "
-"operator are passed on to :meth:`__init__`.  For example, ::"
+"Of course, the :meth:`~object.__init__` method may have arguments for "
+"greater flexibility.  In that case, arguments given to the class "
+"instantiation operator are passed on to :meth:`!__init__`.  For example, ::"
 msgstr ""
-"Звичайно, метод :meth:`__init__` може мати аргументи для більшої гнучкості. "
-"У цьому випадку аргументи, надані оператору інстанції класу, передаються до "
-":meth:`__init__`. Наприклад, ::"
 
 #: ../../tutorial/classes.rst:322
 msgid "Instance Objects"
@@ -584,15 +565,10 @@ msgid ""
 "*data attributes* correspond to \"instance variables\" in Smalltalk, and to "
 "\"data members\" in C++.  Data attributes need not be declared; like local "
 "variables, they spring into existence when they are first assigned to.  For "
-"example, if ``x`` is the instance of :class:`MyClass` created above, the "
+"example, if ``x`` is the instance of :class:`!MyClass` created above, the "
 "following piece of code will print the value ``16``, without leaving a "
 "trace::"
 msgstr ""
-"*атрибути даних* відповідають \"змінним екземплярів\" у Smalltalk і \"членам"
-" даних\" у C++. Атрибути даних не потрібно оголошувати; як і локальні "
-"змінні, вони виникають, коли їх вперше призначають. Наприклад, якщо ``x`` є "
-"екземпляром :class:`MyClass`, створеним вище, наступний фрагмент коду виведе"
-" значення ``16``, не залишаючи слідів::"
 
 #: ../../tutorial/classes.rst:340
 msgid ""
@@ -638,14 +614,11 @@ msgstr "Зазвичай метод викликається одразу піс
 
 #: ../../tutorial/classes.rst:366
 msgid ""
-"In the :class:`MyClass` example, this will return the string ``'hello "
+"In the :class:`!MyClass` example, this will return the string ``'hello "
 "world'``. However, it is not necessary to call a method right away: ``x.f`` "
 "is a method object, and can be stored away and called at a later time.  For "
 "example::"
 msgstr ""
-"У прикладі :class:`MyClass` це поверне рядок ``'hello world'``. Однак не "
-"обов’язково викликати метод одразу: ``x.f`` є об’єктом методу, його можна "
-"зберегти та викликати пізніше. Наприклад::"
 
 #: ../../tutorial/classes.rst:374
 msgid "will continue to print ``hello world`` until the end of time."
@@ -655,16 +628,11 @@ msgstr "продовжуватиме друкувати ``hello world`` до к�
 msgid ""
 "What exactly happens when a method is called?  You may have noticed that "
 "``x.f()`` was called without an argument above, even though the function "
-"definition for :meth:`f` specified an argument.  What happened to the "
+"definition for :meth:`!f` specified an argument.  What happened to the "
 "argument? Surely Python raises an exception when a function that requires an"
 " argument is called without any --- even if the argument isn't actually "
 "used..."
 msgstr ""
-"Що саме відбувається під час виклику методу? Можливо, ви помітили, що "
-"``x.f()`` було викликано без аргументу вище, навіть якщо визначення функції "
-"для :meth:`f` вказало аргумент. Що сталося з суперечкою? Звичайно, Python "
-"створює виняток, коли функція, яка вимагає аргументу, викликається без будь-"
-"якого --- навіть якщо аргумент насправді не використовується..."
 
 #: ../../tutorial/classes.rst:382
 msgid ""
@@ -824,15 +792,11 @@ msgstr ""
 
 #: ../../tutorial/classes.rst:535
 msgid ""
-"Now ``f``, ``g`` and ``h`` are all attributes of class :class:`C` that refer"
-" to function objects, and consequently they are all methods of instances of "
-":class:`C` --- ``h`` being exactly equivalent to ``g``.  Note that this "
-"practice usually only serves to confuse the reader of a program."
+"Now ``f``, ``g`` and ``h`` are all attributes of class :class:`!C` that "
+"refer to function objects, and consequently they are all methods of "
+"instances of :class:`!C` --- ``h`` being exactly equivalent to ``g``.  Note "
+"that this practice usually only serves to confuse the reader of a program."
 msgstr ""
-"Тепер ``f``, ``g`` і ``h`` — усі атрибути класу :class:`C`, які посилаються "
-"на функціональні об’єкти, і, отже, всі вони є методами екземплярів "
-":class:`C` --- ``h`` є точним еквівалентом ``g``. Зауважте, що ця практика "
-"зазвичай служить лише для того, щоб заплутати читача програми."
 
 #: ../../tutorial/classes.rst:540
 msgid ""
@@ -888,7 +852,7 @@ msgstr ""
 
 #: ../../tutorial/classes.rst:584
 msgid ""
-"The name :class:`BaseClassName` must be defined in a namespace accessible "
+"The name :class:`!BaseClassName` must be defined in a namespace accessible "
 "from the scope containing the derived class definition.  In place of a base "
 "class name, other arbitrary expressions are also allowed.  This can be "
 "useful, for example, when the base class is defined in another module::"
@@ -998,18 +962,11 @@ msgid ""
 "For most purposes, in the simplest cases, you can think of the search for "
 "attributes inherited from a parent class as depth-first, left-to-right, not "
 "searching twice in the same class where there is an overlap in the "
-"hierarchy. Thus, if an attribute is not found in :class:`DerivedClassName`, "
-"it is searched for in :class:`Base1`, then (recursively) in the base classes"
-" of :class:`Base1`, and if it was not found there, it was searched for in "
-":class:`Base2`, and so on."
+"hierarchy. Thus, if an attribute is not found in :class:`!DerivedClassName`,"
+" it is searched for in :class:`!Base1`, then (recursively) in the base "
+"classes of :class:`!Base1`, and if it was not found there, it was searched "
+"for in :class:`!Base2`, and so on."
 msgstr ""
-"Для більшості цілей, у найпростіших випадках, ви можете думати про пошук "
-"атрибутів, успадкованих від батьківського класу, як про пошук у глибину, "
-"зліва направо, а не пошук двічі в тому самому класі, де є перекриття в "
-"ієрархії. Таким чином, якщо атрибут не знайдено в :class:`DerivedClassName`,"
-" він шукається в :class:`Base1`, потім (рекурсивно) в базових класах "
-":class:`Base1`, а якщо він не знайдений там його шукали в :class:`Base2` і "
-"так далі."
 
 #: ../../tutorial/classes.rst:652
 msgid ""
@@ -1158,31 +1115,23 @@ msgid ""
 "A piece of Python code that expects a particular abstract data type can "
 "often be passed a class that emulates the methods of that data type instead."
 "  For instance, if you have a function that formats some data from a file "
-"object, you can define a class with methods :meth:`read` and "
-":meth:`!readline` that get the data from a string buffer instead, and pass "
-"it as an argument."
+"object, you can define a class with methods :meth:`~io.TextIOBase.read` and "
+":meth:`~io.TextIOBase.readline` that get the data from a string buffer "
+"instead, and pass it as an argument."
 msgstr ""
-"Фрагмент коду Python, який очікує певний абстрактний тип даних, часто можна "
-"передати класу, який емулює методи цього типу даних. Наприклад, якщо у вас є"
-" функція, яка форматує деякі дані з файлового об’єкта, ви можете визначити "
-"клас за допомогою методів :meth:`read` і :meth:`!readline`, які натомість "
-"отримують дані з рядкового буфера та передають це як аргумент."
 
-#: ../../tutorial/classes.rst:771
+#: ../../tutorial/classes.rst:772
 msgid ""
 "Instance method objects have attributes, too: ``m.__self__`` is the instance"
-" object with the method :meth:`m`, and ``m.__func__`` is the function object"
-" corresponding to the method."
+" object with the method :meth:`!m`, and ``m.__func__`` is the function "
+"object corresponding to the method."
 msgstr ""
-"Об’єкти методів екземплярів також мають атрибути: ``m.__self__`` — об’єкт "
-"екземпляра з методом :meth:`m`, а ``m.__func__`` — об’єкт функції, що "
-"відповідає методу."
 
-#: ../../tutorial/classes.rst:779
+#: ../../tutorial/classes.rst:780
 msgid "Iterators"
 msgstr "Ітератори"
 
-#: ../../tutorial/classes.rst:781
+#: ../../tutorial/classes.rst:782
 msgid ""
 "By now you have probably noticed that most container objects can be looped "
 "over using a :keyword:`for` statement::"
@@ -1190,7 +1139,7 @@ msgstr ""
 "Наразі ви, мабуть, помітили, що більшість об’єктів-контейнерів можна "
 "зациклювати за допомогою оператора :keyword:`for`::"
 
-#: ../../tutorial/classes.rst:795
+#: ../../tutorial/classes.rst:796
 msgid ""
 "This style of access is clear, concise, and convenient.  The use of "
 "iterators pervades and unifies Python.  Behind the scenes, the "
@@ -1212,23 +1161,20 @@ msgstr ""
 ":meth:`~iterator.__next__` за допомогою вбудованої функції :func:`next`; цей"
 " приклад показує, як це все працює:"
 
-#: ../../tutorial/classes.rst:820
+#: ../../tutorial/classes.rst:821
 msgid ""
 "Having seen the mechanics behind the iterator protocol, it is easy to add "
-"iterator behavior to your classes.  Define an :meth:`__iter__` method which "
-"returns an object with a :meth:`~iterator.__next__` method.  If the class "
-"defines :meth:`__next__`, then :meth:`__iter__` can just return ``self``::"
+"iterator behavior to your classes.  Define an :meth:`~container.__iter__` "
+"method which returns an object with a :meth:`~iterator.__next__` method.  If"
+" the class defines :meth:`!__next__`, then :meth:`!__iter__` can just return"
+" ``self``::"
 msgstr ""
-"Побачивши механіку протоколу ітератора, можна легко додати поведінку "
-"ітератора до своїх класів. Визначте метод :meth:`__iter__`, який повертає "
-"об’єкт за допомогою методу :meth:`~iterator.__next__`. Якщо клас визначає "
-":meth:`__next__`, тоді :meth:`__iter__` може просто повернути ``self``::"
 
-#: ../../tutorial/classes.rst:857
+#: ../../tutorial/classes.rst:858
 msgid "Generators"
 msgstr "Генератори"
 
-#: ../../tutorial/classes.rst:859
+#: ../../tutorial/classes.rst:860
 msgid ""
 ":term:`Generators <generator>` are a simple and powerful tool for creating "
 "iterators.  They are written like regular functions but use the "
@@ -1245,19 +1191,15 @@ msgstr ""
 "виконаний останнім). Приклад показує, що генератори можна тривіально легко "
 "створити:"
 
-#: ../../tutorial/classes.rst:880
+#: ../../tutorial/classes.rst:881
 msgid ""
 "Anything that can be done with generators can also be done with class-based "
 "iterators as described in the previous section.  What makes generators so "
-"compact is that the :meth:`__iter__` and :meth:`~generator.__next__` methods"
-" are created automatically."
+"compact is that the :meth:`~iterator.__iter__` and "
+":meth:`~generator.__next__` methods are created automatically."
 msgstr ""
-"Усе, що можна зробити за допомогою генераторів, також можна зробити за "
-"допомогою ітераторів на основі класів, як описано в попередньому розділі. Що"
-" робить генератори такими компактними, так це те, що методи :meth:`__iter__`"
-" і :meth:`~generator.__next__` створюються автоматично."
 
-#: ../../tutorial/classes.rst:885
+#: ../../tutorial/classes.rst:886
 msgid ""
 "Another key feature is that the local variables and execution state are "
 "automatically saved between calls.  This made the function easier to write "
@@ -1269,7 +1211,7 @@ msgstr ""
 "для написання та набагато зрозумілішою, ніж підхід із використанням змінних "
 "екземплярів, таких як ``self.index`` і ``self.data``."
 
-#: ../../tutorial/classes.rst:890
+#: ../../tutorial/classes.rst:891
 msgid ""
 "In addition to automatic method creation and saving program state, when "
 "generators terminate, they automatically raise :exc:`StopIteration`. In "
@@ -1281,11 +1223,11 @@ msgstr ""
 ":exc:`StopIteration`. У поєднанні ці функції дозволяють легко створювати "
 "ітератори без зусиль, ніж написання звичайної функції."
 
-#: ../../tutorial/classes.rst:899
+#: ../../tutorial/classes.rst:900
 msgid "Generator Expressions"
 msgstr "Генератор виразів"
 
-#: ../../tutorial/classes.rst:901
+#: ../../tutorial/classes.rst:902
 msgid ""
 "Some simple generators can be coded succinctly as expressions using a syntax"
 " similar to list comprehensions but with parentheses instead of square "
@@ -1301,15 +1243,15 @@ msgstr ""
 "компактними, але менш універсальними, ніж повні визначення генераторів, і, "
 "як правило, більш зручні для пам’яті, ніж еквівалентні списки."
 
-#: ../../tutorial/classes.rst:908
+#: ../../tutorial/classes.rst:909
 msgid "Examples::"
 msgstr "Приклади::"
 
-#: ../../tutorial/classes.rst:929
+#: ../../tutorial/classes.rst:930
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/classes.rst:930
+#: ../../tutorial/classes.rst:931
 msgid ""
 "Except for one thing.  Module objects have a secret read-only attribute "
 "called :attr:`~object.__dict__` which returns the dictionary used to "
