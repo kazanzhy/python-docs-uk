@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:13+0000\n"
+"POT-Creation-Date: 2023-08-25 14:13+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -2648,11 +2648,9 @@ msgstr ":c:func:`PyObject_INIT`, :c:func:`PyObject_INIT_VAR`"
 
 #: ../../whatsnew/3.8.rst:1577
 msgid ""
-"Private functions: :c:func:`_PyObject_GC_TRACK`, "
-":c:func:`_PyObject_GC_UNTRACK`, :c:func:`_Py_Dealloc`"
+"Private functions: :c:func:`!_PyObject_GC_TRACK`, "
+":c:func:`!_PyObject_GC_UNTRACK`, :c:func:`!_Py_Dealloc`"
 msgstr ""
-"Приватні функції: :c:func:`_PyObject_GC_TRACK`, "
-":c:func:`_PyObject_GC_UNTRACK`, :c:func:`_Py_Dealloc`"
 
 #: ../../whatsnew/3.8.rst:1580
 msgid "(Contributed by Victor Stinner in :issue:`35059`.)"
@@ -2660,15 +2658,11 @@ msgstr "(Надав Віктор Стіннер у :issue:`35059`.)"
 
 #: ../../whatsnew/3.8.rst:1582
 msgid ""
-"The :c:func:`PyByteArray_Init` and :c:func:`PyByteArray_Fini` functions have"
-" been removed. They did nothing since Python 2.7.4 and Python 3.2.0, were "
-"excluded from the limited API (stable ABI), and were not documented. "
+"The :c:func:`!PyByteArray_Init` and :c:func:`!PyByteArray_Fini` functions "
+"have been removed. They did nothing since Python 2.7.4 and Python 3.2.0, "
+"were excluded from the limited API (stable ABI), and were not documented. "
 "(Contributed by Victor Stinner in :issue:`35713`.)"
 msgstr ""
-"Функції :c:func:`PyByteArray_Init` і :c:func:`PyByteArray_Fini` видалено. "
-"Вони нічого не зробили з Python 2.7.4 і Python 3.2.0, були виключені з "
-"обмеженого API (стабільний ABI) і не були задокументовані. (Надав Віктор "
-"Стіннер у :issue:`35713`.)"
 
 #: ../../whatsnew/3.8.rst:1587
 msgid ""
@@ -2771,14 +2765,11 @@ msgstr ""
 
 #: ../../whatsnew/3.8.rst:1631
 msgid ""
-":c:func:`Py_SetPath` now sets :data:`sys.executable` to the program full "
+":c:func:`!Py_SetPath` now sets :data:`sys.executable` to the program full "
 "path (:c:func:`Py_GetProgramFullPath`) rather than to the program name "
 "(:c:func:`Py_GetProgramName`). (Contributed by Victor Stinner in "
 ":issue:`38234`.)"
 msgstr ""
-":c:func:`Py_SetPath` тепер встановлює :data:`sys.executable` повний шлях до "
-"програми (:c:func:`Py_GetProgramFullPath`), а не назву програми "
-"(:c:func:`Py_GetProgramName`). (Надав Віктор Стіннер у :issue:`38234`.)"
 
 #: ../../whatsnew/3.8.rst:1638
 msgid "Deprecated"
@@ -3257,12 +3248,12 @@ msgstr ""
 
 #: ../../whatsnew/3.8.rst:1848
 msgid ""
-":c:func:`PyEval_AcquireLock` and :c:func:`PyEval_AcquireThread` now "
+":c:func:`!PyEval_AcquireLock` and :c:func:`!PyEval_AcquireThread` now "
 "terminate the current thread if called while the interpreter is finalizing, "
 "making them consistent with :c:func:`PyEval_RestoreThread`, "
 ":c:func:`Py_END_ALLOW_THREADS`, and :c:func:`PyGILState_Ensure`. If this "
 "behavior is not desired, guard the call by checking "
-":c:func:`_Py_IsFinalizing` or :func:`sys.is_finalizing`. (Contributed by "
+":c:func:`!_Py_IsFinalizing` or :func:`sys.is_finalizing`. (Contributed by "
 "Joannah Nanjekye in :issue:`36475`.)"
 msgstr ""
 
@@ -3602,13 +3593,10 @@ msgstr ""
 
 #: ../../whatsnew/3.8.rst:2024
 msgid ""
-"The :c:func:`PyEval_ReInitThreads` function has been removed from the C API."
-" It should not be called explicitly: use :c:func:`PyOS_AfterFork_Child` "
+"The :c:func:`!PyEval_ReInitThreads` function has been removed from the C "
+"API. It should not be called explicitly: use :c:func:`PyOS_AfterFork_Child` "
 "instead. (Contributed by Victor Stinner in :issue:`36728`.)"
 msgstr ""
-"Функцію :c:func:`PyEval_ReInitThreads` видалено з C API. Його не слід "
-"викликати явно: замість цього використовуйте :c:func:`PyOS_AfterFork_Child`."
-" (Надав Віктор Стіннер у :issue:`36728`.)"
 
 #: ../../whatsnew/3.8.rst:2029
 msgid ""
@@ -3738,11 +3726,10 @@ msgstr "(Надав Антуан Пітру в :issue:`32388`.)"
 
 #: ../../whatsnew/3.8.rst:2124
 msgid ""
-"The functions :c:func:`PyNode_AddChild` and :c:func:`PyParser_AddToken` now "
-"accept two additional ``int`` arguments *end_lineno* and *end_col_offset*."
+"The functions :c:func:`!PyNode_AddChild` and :c:func:`!PyParser_AddToken` "
+"now accept two additional ``int`` arguments *end_lineno* and "
+"*end_col_offset*."
 msgstr ""
-"Функції :c:func:`PyNode_AddChild` і :c:func:`PyParser_AddToken` тепер "
-"приймають два додаткові аргументи ``int`` *end_lineno* і *end_col_offset*."
 
 #: ../../whatsnew/3.8.rst:2127
 msgid ""
