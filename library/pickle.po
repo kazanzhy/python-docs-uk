@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-11 14:13+0000\n"
+"POT-Creation-Date: 2023-09-01 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -935,25 +935,27 @@ msgid "The following types can be pickled:"
 msgstr "Маринувати можна такі види:"
 
 #: ../../library/pickle.rst:497
-msgid "``None``, ``True``, and ``False``;"
-msgstr "``None``, ``True`` і ``False``;"
+msgid ""
+"built-in constants (``None``, ``True``, ``False``, ``Ellipsis``, and "
+"``NotImplemented``);"
+msgstr ""
 
-#: ../../library/pickle.rst:499
+#: ../../library/pickle.rst:500
 msgid "integers, floating-point numbers, complex numbers;"
 msgstr "цілі числа, числа з плаваючою комою, комплексні числа;"
 
-#: ../../library/pickle.rst:501
+#: ../../library/pickle.rst:502
 msgid "strings, bytes, bytearrays;"
 msgstr "рядки, байти, байтові масиви;"
 
-#: ../../library/pickle.rst:503
+#: ../../library/pickle.rst:504
 msgid ""
 "tuples, lists, sets, and dictionaries containing only picklable objects;"
 msgstr ""
 "кортежі, списки, набори та словники, що містять лише об’єкти, які можна "
 "вибирати;"
 
-#: ../../library/pickle.rst:505
+#: ../../library/pickle.rst:506
 msgid ""
 "functions (built-in and user-defined) accessible from the top level of a "
 "module (using :keyword:`def`, not :keyword:`lambda`);"
@@ -961,17 +963,17 @@ msgstr ""
 "функції (вбудовані та визначені користувачем), доступні з верхнього рівня "
 "модуля (за допомогою :keyword:`def`, а не :keyword:`lambda`);"
 
-#: ../../library/pickle.rst:508
+#: ../../library/pickle.rst:509
 msgid "classes accessible from the top level of a module;"
 msgstr "класи, доступні з верхнього рівня модуля;"
 
-#: ../../library/pickle.rst:510
+#: ../../library/pickle.rst:511
 msgid ""
 "instances of such classes whose the result of calling :meth:`__getstate__` "
 "is picklable  (see section :ref:`pickle-inst` for details)."
 msgstr ""
 
-#: ../../library/pickle.rst:513
+#: ../../library/pickle.rst:514
 msgid ""
 "Attempts to pickle unpicklable objects will raise the :exc:`PicklingError` "
 "exception; when this happens, an unspecified number of bytes may have "
@@ -987,7 +989,7 @@ msgstr ""
 "рекурсії, у цьому випадку виникне :exc:`RecursionError`. Ви можете обережно "
 "збільшити це обмеження за допомогою :func:`sys.setrecursionlimit`."
 
-#: ../../library/pickle.rst:520
+#: ../../library/pickle.rst:521
 msgid ""
 "Note that functions (built-in and user-defined) are pickled by fully "
 ":term:`qualified name`, not by value. [#]_  This means that only the "
@@ -1004,7 +1006,7 @@ msgstr ""
 "визначальний модуль має бути імпортованим у середовищі unpickling, і модуль "
 "має містити названий об’єкт, інакше буде створено виняток. [#]_"
 
-#: ../../library/pickle.rst:527
+#: ../../library/pickle.rst:528
 msgid ""
 "Similarly, classes are pickled by fully qualified name, so the same "
 "restrictions in the unpickling environment apply.  Note that none of the "
@@ -1016,7 +1018,7 @@ msgstr ""
 "класу не вибирається, тому в наступному прикладі атрибут класу ``attr`` не "
 "відновлюється в середовищі розбирання::"
 
-#: ../../library/pickle.rst:537
+#: ../../library/pickle.rst:538
 msgid ""
 "These restrictions are why picklable functions and classes must be defined "
 "at the top level of a module."
@@ -1024,7 +1026,7 @@ msgstr ""
 "Через ці обмеження функції та класи, які можна вибрати, повинні бути "
 "визначені на верхньому рівні модуля."
 
-#: ../../library/pickle.rst:540
+#: ../../library/pickle.rst:541
 msgid ""
 "Similarly, when class instances are pickled, their class's code and data are"
 " not pickled along with them.  Only the instance data are pickled.  This is "
@@ -1044,11 +1046,11 @@ msgstr ""
 "відповідні перетворення можна було зробити за допомогою методу "
 ":meth:`__setstate__` класу."
 
-#: ../../library/pickle.rst:552
+#: ../../library/pickle.rst:553
 msgid "Pickling Class Instances"
 msgstr "Примірники класу маринування"
 
-#: ../../library/pickle.rst:556
+#: ../../library/pickle.rst:557
 msgid ""
 "In this section, we describe the general mechanisms available to you to "
 "define, customize, and control how class instances are pickled and "
@@ -1058,7 +1060,7 @@ msgstr ""
 " налаштування та контролю того, як екземпляри класу вибираються та не "
 "вибираються."
 
-#: ../../library/pickle.rst:559
+#: ../../library/pickle.rst:560
 msgid ""
 "In most cases, no additional code is needed to make instances picklable.  By"
 " default, pickle will retrieve the class and the attributes of an instance "
@@ -1075,7 +1077,7 @@ msgstr ""
 "відновлює збережені атрибути. Наступний код демонструє реалізацію цієї "
 "поведінки:"
 
-#: ../../library/pickle.rst:574
+#: ../../library/pickle.rst:575
 msgid ""
 "Classes can alter the default behaviour by providing one or several special "
 "methods:"
@@ -1083,7 +1085,7 @@ msgstr ""
 "Класи можуть змінювати типову поведінку, надаючи один або декілька "
 "спеціальних методів:"
 
-#: ../../library/pickle.rst:579
+#: ../../library/pickle.rst:580
 msgid ""
 "In protocols 2 and newer, classes that implements the "
 ":meth:`__getnewargs_ex__` method can dictate the values passed to the "
@@ -1099,7 +1101,7 @@ msgstr ""
 " іменованих аргументів для побудови об’єкта. Вони будуть передані в метод "
 ":meth:`__new__` після видалення."
 
-#: ../../library/pickle.rst:587
+#: ../../library/pickle.rst:588
 msgid ""
 "You should implement this method if the :meth:`__new__` method of your class"
 " requires keyword-only arguments.  Otherwise, it is recommended for "
@@ -1109,11 +1111,11 @@ msgstr ""
 "вимагає аргументів лише з ключовими словами. В іншому випадку для сумісності"
 " рекомендується реалізувати :meth:`__getnewargs__`."
 
-#: ../../library/pickle.rst:591
+#: ../../library/pickle.rst:592
 msgid ":meth:`__getnewargs_ex__` is now used in protocols 2 and 3."
 msgstr ":meth:`__getnewargs_ex__` тепер використовується в протоколах 2 і 3."
 
-#: ../../library/pickle.rst:597
+#: ../../library/pickle.rst:598
 msgid ""
 "This method serves a similar purpose as :meth:`__getnewargs_ex__`, but "
 "supports only positional arguments.  It must return a tuple of arguments "
@@ -1123,7 +1125,7 @@ msgstr ""
 "підтримує лише позиційні аргументи. Він має повертати кортеж аргументів "
 "``args``, який буде передано методу :meth:`__new__` після видалення."
 
-#: ../../library/pickle.rst:601
+#: ../../library/pickle.rst:602
 msgid ""
 ":meth:`__getnewargs__` will not be called if :meth:`__getnewargs_ex__` is "
 "defined."
@@ -1131,7 +1133,7 @@ msgstr ""
 ":meth:`__getnewargs__` не буде викликано, якщо :meth:`__getnewargs_ex__` "
 "визначено."
 
-#: ../../library/pickle.rst:604
+#: ../../library/pickle.rst:605
 msgid ""
 "Before Python 3.6, :meth:`__getnewargs__` was called instead of "
 ":meth:`__getnewargs_ex__` in protocols 2 and 3."
@@ -1139,7 +1141,7 @@ msgstr ""
 "До Python 3.6 :meth:`__getnewargs__` викликався замість "
 ":meth:`__getnewargs_ex__` у протоколах 2 і 3."
 
-#: ../../library/pickle.rst:611
+#: ../../library/pickle.rst:612
 msgid ""
 "Classes can further influence how their instances are pickled by overriding "
 "the method :meth:`__getstate__`.  It is called and the returned object is "
@@ -1147,19 +1149,19 @@ msgid ""
 "are several cases:"
 msgstr ""
 
-#: ../../library/pickle.rst:616
+#: ../../library/pickle.rst:617
 msgid ""
 "For a class that has no instance :attr:`~object.__dict__` and no "
 ":attr:`~object.__slots__`, the default state is ``None``."
 msgstr ""
 
-#: ../../library/pickle.rst:619
+#: ../../library/pickle.rst:620
 msgid ""
 "For a class that has an instance :attr:`~object.__dict__` and no "
 ":attr:`~object.__slots__`, the default state is ``self.__dict__``."
 msgstr ""
 
-#: ../../library/pickle.rst:622
+#: ../../library/pickle.rst:623
 msgid ""
 "For a class that has an instance :attr:`~object.__dict__` and "
 ":attr:`~object.__slots__`, the default state is a tuple consisting of two "
@@ -1167,7 +1169,7 @@ msgid ""
 "slot values.  Only slots that have a value are included in the latter."
 msgstr ""
 
-#: ../../library/pickle.rst:628
+#: ../../library/pickle.rst:629
 msgid ""
 "For a class that has :attr:`~object.__slots__` and no instance "
 ":attr:`~object.__dict__`, the default state is a tuple whose first item is "
@@ -1175,13 +1177,13 @@ msgid ""
 "values described in the previous bullet."
 msgstr ""
 
-#: ../../library/pickle.rst:633
+#: ../../library/pickle.rst:634
 msgid ""
 "Added the default implementation of the ``__getstate__()`` method in the "
 ":class:`object` class."
 msgstr ""
 
-#: ../../library/pickle.rst:640
+#: ../../library/pickle.rst:641
 msgid ""
 "Upon unpickling, if the class defines :meth:`__setstate__`, it is called "
 "with the unpickled state.  In that case, there is no requirement for the "
@@ -1193,7 +1195,7 @@ msgstr ""
 "словником. В іншому випадку маринований стан має бути словником, а його "
 "елементи призначаються словнику нового екземпляра."
 
-#: ../../library/pickle.rst:647
+#: ../../library/pickle.rst:648
 msgid ""
 "If :meth:`__getstate__` returns a false value, the :meth:`__setstate__` "
 "method will not be called upon unpickling."
@@ -1201,7 +1203,7 @@ msgstr ""
 "Якщо :meth:`__getstate__` повертає хибне значення, метод "
 ":meth:`__setstate__` не буде викликано після видалення."
 
-#: ../../library/pickle.rst:651
+#: ../../library/pickle.rst:652
 msgid ""
 "Refer to the section :ref:`pickle-state` for more information about how to "
 "use the methods :meth:`__getstate__` and :meth:`__setstate__`."
@@ -1209,7 +1211,7 @@ msgstr ""
 "Зверніться до розділу :ref:`pickle-state`, щоб дізнатися більше про те, як "
 "використовувати методи :meth:`__getstate__` і :meth:`__setstate__`."
 
-#: ../../library/pickle.rst:656
+#: ../../library/pickle.rst:657
 msgid ""
 "At unpickling time, some methods like :meth:`__getattr__`, "
 ":meth:`__getattribute__`, or :meth:`__setattr__` may be called upon the "
@@ -1224,7 +1226,7 @@ msgstr ""
 " встановлення такого інваріанта, оскільки :meth:`__init__` не викликається "
 "під час видалення екземпляра."
 
-#: ../../library/pickle.rst:665
+#: ../../library/pickle.rst:666
 msgid ""
 "As we shall see, pickle does not use directly the methods described above.  "
 "In fact, these methods are part of the copy protocol which implements the "
@@ -1238,7 +1240,7 @@ msgstr ""
 "уніфікований інтерфейс для отримання даних, необхідних для травлення та "
 "копіювання об'єктів. [#]_"
 
-#: ../../library/pickle.rst:671
+#: ../../library/pickle.rst:672
 msgid ""
 "Although powerful, implementing :meth:`__reduce__` directly in your classes "
 "is error prone.  For this reason, class designers should use the high-level "
@@ -1254,7 +1256,7 @@ msgstr ""
 "покажемо випадки, коли використання :meth:`__reduce__` є єдиним варіантом "
 "або призводить до більш ефективного травлення, або обох."
 
-#: ../../library/pickle.rst:680
+#: ../../library/pickle.rst:681
 msgid ""
 "The interface is currently defined as follows.  The :meth:`__reduce__` "
 "method takes no argument and shall return either a string or preferably a "
@@ -1264,7 +1266,7 @@ msgstr ""
 ":meth:`__reduce__` не приймає аргументів і повертає або рядок, або, бажано, "
 "кортеж (повернений об’єкт часто називають \"зменшеним значенням\")."
 
-#: ../../library/pickle.rst:684
+#: ../../library/pickle.rst:685
 msgid ""
 "If a string is returned, the string should be interpreted as the name of a "
 "global variable.  It should be the object's local name relative to its "
@@ -1276,7 +1278,7 @@ msgstr ""
 "pickle шукає простір імен модуля, щоб визначити модуль об’єкта. Така "
 "поведінка, як правило, корисна для одиночних користувачів."
 
-#: ../../library/pickle.rst:689
+#: ../../library/pickle.rst:690
 msgid ""
 "When a tuple is returned, it must be between two and six items long. "
 "Optional items can either be omitted, or ``None`` can be provided as their "
@@ -1286,7 +1288,7 @@ msgstr ""
 "Необов’язкові елементи можна або пропустити, або в якості їхнього значення "
 "можна вказати ``None``. Семантика кожного елемента в порядку:"
 
-#: ../../library/pickle.rst:695
+#: ../../library/pickle.rst:696
 msgid ""
 "A callable object that will be called to create the initial version of the "
 "object."
@@ -1294,7 +1296,7 @@ msgstr ""
 "Викликаний об’єкт, який буде викликано для створення початкової версії "
 "об’єкта."
 
-#: ../../library/pickle.rst:698
+#: ../../library/pickle.rst:699
 msgid ""
 "A tuple of arguments for the callable object.  An empty tuple must be given "
 "if the callable does not accept any argument."
@@ -1302,7 +1304,7 @@ msgstr ""
 "Кортеж аргументів для викликаного об’єкта. Порожній кортеж повинен бути "
 "наданий, якщо викликаний не приймає жодних аргументів."
 
-#: ../../library/pickle.rst:701
+#: ../../library/pickle.rst:702
 msgid ""
 "Optionally, the object's state, which will be passed to the object's "
 ":meth:`__setstate__` method as previously described.  If the object has no "
@@ -1314,7 +1316,7 @@ msgstr ""
 "бути словником, і воно буде додано до атрибута об’єкта "
 ":attr:`~object.__dict__`."
 
-#: ../../library/pickle.rst:706
+#: ../../library/pickle.rst:707
 msgid ""
 "Optionally, an iterator (and not a sequence) yielding successive items. "
 "These items will be appended to the object either using ``obj.append(item)``"
@@ -1334,7 +1336,7 @@ msgstr ""
 "залежить від того, яка версія протоколу pickle використовується, а також від"
 " кількості елементів для додавання, тому обидва мають підтримуватися.)"
 
-#: ../../library/pickle.rst:715
+#: ../../library/pickle.rst:716
 msgid ""
 "Optionally, an iterator (not a sequence) yielding successive key-value "
 "pairs.  These items will be stored to the object using ``obj[key] = value``."
@@ -1346,7 +1348,7 @@ msgstr ""
 "value``. Це в основному використовується для підкласів словників, але може "
 "використовуватися іншими класами, якщо вони реалізують :meth:`__setitem__`."
 
-#: ../../library/pickle.rst:720
+#: ../../library/pickle.rst:721
 msgid ""
 "Optionally, a callable with a ``(obj, state)`` signature. This callable "
 "allows the user to programmatically control the state-updating behavior of a"
@@ -1360,11 +1362,11 @@ msgstr ""
 " Якщо не ``None``, цей виклик матиме пріоритет над ``obj`` "
 ":meth:`__setstate__`."
 
-#: ../../library/pickle.rst:726
+#: ../../library/pickle.rst:727
 msgid "The optional sixth tuple item, ``(obj, state)``, was added."
 msgstr "Додано необов’язковий шостий елемент кортежу, ``(obj, state)``."
 
-#: ../../library/pickle.rst:732
+#: ../../library/pickle.rst:733
 msgid ""
 "Alternatively, a :meth:`__reduce_ex__` method may be defined.  The only "
 "difference is this method should take a single integer argument, the "
@@ -1380,11 +1382,11 @@ msgstr ""
 " розширеної версії. Основним використанням цього методу є надання зворотно "
 "сумісних значень зменшення для старіших випусків Python."
 
-#: ../../library/pickle.rst:744
+#: ../../library/pickle.rst:745
 msgid "Persistence of External Objects"
 msgstr "Постійність зовнішніх об'єктів"
 
-#: ../../library/pickle.rst:750
+#: ../../library/pickle.rst:751
 msgid ""
 "For the benefit of object persistence, the :mod:`pickle` module supports the"
 " notion of a reference to an object outside the pickled data stream.  Such "
@@ -1398,7 +1400,7 @@ msgstr ""
 "цифрових символів (для протоколу 0) [#]_, або просто довільним об’єктом (для"
 " будь-якого новішого протоколу)."
 
-#: ../../library/pickle.rst:756
+#: ../../library/pickle.rst:757
 msgid ""
 "The resolution of such persistent IDs is not defined by the :mod:`pickle` "
 "module; it will delegate this resolution to the user-defined methods on the "
@@ -1410,7 +1412,7 @@ msgstr ""
 "pickler і unpickler, :meth:`~Pickler.persistent_id` і "
 ":meth:`~Unpickler.persistent_load` відповідно."
 
-#: ../../library/pickle.rst:761
+#: ../../library/pickle.rst:762
 msgid ""
 "To pickle objects that have an external persistent ID, the pickler must have"
 " a custom :meth:`~Pickler.persistent_id` method that takes an object as an "
@@ -1428,7 +1430,7 @@ msgstr ""
 " виділяє цей об’єкт разом із маркером, щоб засіб вилучення розпізнавало його"
 " як постійний ідентифікатор."
 
-#: ../../library/pickle.rst:768
+#: ../../library/pickle.rst:769
 msgid ""
 "To unpickle external objects, the unpickler must have a custom "
 ":meth:`~Unpickler.persistent_load` method that takes a persistent ID object "
@@ -1438,7 +1440,7 @@ msgstr ""
 ":meth:`~Unpickler.persistent_load`, який приймає об’єкт постійного "
 "ідентифікатора та повертає об’єкт, на який посилається."
 
-#: ../../library/pickle.rst:772
+#: ../../library/pickle.rst:773
 msgid ""
 "Here is a comprehensive example presenting how persistent ID can be used to "
 "pickle external objects by reference."
@@ -1446,11 +1448,11 @@ msgstr ""
 "Ось вичерпний приклад, який демонструє, як постійний ідентифікатор можна "
 "використовувати для маринування зовнішніх об’єктів за посиланням."
 
-#: ../../library/pickle.rst:780
+#: ../../library/pickle.rst:781
 msgid "Dispatch Tables"
 msgstr "Таблиці відправлення"
 
-#: ../../library/pickle.rst:782
+#: ../../library/pickle.rst:783
 msgid ""
 "If one wants to customize pickling of some classes without disturbing any "
 "other code which depends on pickling, then one can create a pickler with a "
@@ -1460,7 +1462,7 @@ msgstr ""
 " інший код, який залежить від маринування, тоді можна створити піклер із "
 "приватною таблицею відправлення."
 
-#: ../../library/pickle.rst:786
+#: ../../library/pickle.rst:787
 msgid ""
 "The global dispatch table managed by the :mod:`copyreg` module is available "
 "as :data:`copyreg.dispatch_table`.  Therefore, one may choose to use a "
@@ -1471,11 +1473,11 @@ msgstr ""
 "модифіковану копію :data:`copyreg.dispatch_table` як приватну таблицю "
 "відправлення."
 
-#: ../../library/pickle.rst:791
+#: ../../library/pickle.rst:792
 msgid "For example ::"
 msgstr "Наприклад ::"
 
-#: ../../library/pickle.rst:798
+#: ../../library/pickle.rst:799
 msgid ""
 "creates an instance of :class:`pickle.Pickler` with a private dispatch table"
 " which handles the ``SomeClass`` class specially.  Alternatively, the code "
@@ -1485,7 +1487,7 @@ msgstr ""
 "відправлення, яка спеціально обробляє клас ``SomeClass``. Як альтернатива, "
 "код::"
 
-#: ../../library/pickle.rst:808
+#: ../../library/pickle.rst:809
 msgid ""
 "does the same but all instances of ``MyPickler`` will by default share the "
 "private dispatch table.  On the other hand, the code ::"
@@ -1493,7 +1495,7 @@ msgstr ""
 "робить те саме, але всі екземпляри ``MyPickler`` за замовчуванням спільно "
 "використовуватимуть приватну таблицю відправлення. З іншого боку, код ::"
 
-#: ../../library/pickle.rst:815
+#: ../../library/pickle.rst:816
 msgid ""
 "modifies the global dispatch table shared by all users of the :mod:`copyreg`"
 " module."
@@ -1501,11 +1503,11 @@ msgstr ""
 "змінює глобальну таблицю відправлення, яку використовують усі користувачі "
 "модуля :mod:`copyreg`."
 
-#: ../../library/pickle.rst:820
+#: ../../library/pickle.rst:821
 msgid "Handling Stateful Objects"
 msgstr "Обробка об'єктів із збереженням стану"
 
-#: ../../library/pickle.rst:826
+#: ../../library/pickle.rst:827
 msgid ""
 "Here's an example that shows how to modify pickling behavior for a class. "
 "The :class:`TextReader` class opens a text file, and returns the line number"
@@ -1525,15 +1527,15 @@ msgstr ""
 "поведінки використовуються методи :meth:`__setstate__` і "
 ":meth:`__getstate__`. ::"
 
-#: ../../library/pickle.rst:872
+#: ../../library/pickle.rst:873
 msgid "A sample usage might be something like this::"
 msgstr "Зразок використання може бути приблизно таким:"
 
-#: ../../library/pickle.rst:886
+#: ../../library/pickle.rst:887
 msgid "Custom Reduction for Types, Functions, and Other Objects"
 msgstr "Спеціальне скорочення для типів, функцій та інших об’єктів"
 
-#: ../../library/pickle.rst:890
+#: ../../library/pickle.rst:891
 msgid ""
 "Sometimes, :attr:`~Pickler.dispatch_table` may not be flexible enough. In "
 "particular we may want to customize pickling based on another criterion than"
@@ -1545,7 +1547,7 @@ msgstr ""
 "критерію, ніж тип об’єкта, або ми можемо захотіти налаштувати маринування "
 "функцій і класів."
 
-#: ../../library/pickle.rst:895
+#: ../../library/pickle.rst:896
 msgid ""
 "For those cases, it is possible to subclass from the :class:`Pickler` class "
 "and implement a :meth:`~Pickler.reducer_override` method. This method can "
@@ -1558,7 +1560,7 @@ msgstr ""
 "повертати довільний кортеж скорочення (див. :meth:`__reduce__`). Він також "
 "може повернути ``NotImplemented`` для повернення до традиційної поведінки."
 
-#: ../../library/pickle.rst:900
+#: ../../library/pickle.rst:901
 msgid ""
 "If both the :attr:`~Pickler.dispatch_table` and "
 ":meth:`~Pickler.reducer_override` are defined, then "
@@ -1568,7 +1570,7 @@ msgstr ""
 ":meth:`~Pickler.reducer_override`, то метод "
 ":meth:`~Pickler.reducer_override` має пріоритет."
 
-#: ../../library/pickle.rst:905
+#: ../../library/pickle.rst:906
 msgid ""
 "For performance reasons, :meth:`~Pickler.reducer_override` may not be called"
 " for the following objects: ``None``, ``True``, ``False``, and exact "
@@ -1582,7 +1584,7 @@ msgstr ""
 ":class:`dict`, :class:`set`, :class:`frozenset`, :class:`list` і "
 ":class:`tuple`."
 
-#: ../../library/pickle.rst:911
+#: ../../library/pickle.rst:912
 msgid ""
 "Here is a simple example where we allow pickling and reconstructing a given "
 "class::"
@@ -1590,11 +1592,11 @@ msgstr ""
 "Ось простий приклад, де ми дозволяємо маринувати та реконструювати заданий "
 "клас:"
 
-#: ../../library/pickle.rst:946
+#: ../../library/pickle.rst:947
 msgid "Out-of-band Buffers"
 msgstr "Позасмугові буфери"
 
-#: ../../library/pickle.rst:950
+#: ../../library/pickle.rst:951
 msgid ""
 "In some contexts, the :mod:`pickle` module is used to transfer massive "
 "amounts of data.  Therefore, it can be important to minimize the number of "
@@ -1610,7 +1612,7 @@ msgstr ""
 "структуру об’єктів у послідовний потік байтів, за своєю суттю передбачає "
 "копіювання даних до потоку pickle і з нього."
 
-#: ../../library/pickle.rst:957
+#: ../../library/pickle.rst:958
 msgid ""
 "This constraint can be eschewed if both the *provider* (the implementation "
 "of the object types to be transferred) and the *consumer* (the "
@@ -1621,11 +1623,11 @@ msgstr ""
 "що передаються), і *споживач* (реалізація системи зв’язку) підтримують "
 "засоби позасмугової передачі, надані протоколом pickle 5 і вище."
 
-#: ../../library/pickle.rst:963
+#: ../../library/pickle.rst:964
 msgid "Provider API"
 msgstr "API провайдера"
 
-#: ../../library/pickle.rst:965
+#: ../../library/pickle.rst:966
 msgid ""
 "The large data objects to be pickled must implement a :meth:`__reduce_ex__` "
 "method specialized for protocol 5 and higher, which returns a "
@@ -1637,7 +1639,7 @@ msgstr ""
 " екземпляр :class:`PickleBuffer` (замість, наприклад, об’єкта "
 ":class:`bytes`) для будь-якого великого даних."
 
-#: ../../library/pickle.rst:970
+#: ../../library/pickle.rst:971
 msgid ""
 "A :class:`PickleBuffer` object *signals* that the underlying buffer is "
 "eligible for out-of-band data transfer.  Those objects remain compatible "
@@ -1650,11 +1652,11 @@ msgstr ""
 "використанням модуля :mod:`pickle`. Однак споживачі також можуть повідомити "
 ":mod:`pickle`, що вони самостійно оброблятимуть ці буфери."
 
-#: ../../library/pickle.rst:977
+#: ../../library/pickle.rst:978
 msgid "Consumer API"
 msgstr "Споживацький API"
 
-#: ../../library/pickle.rst:979
+#: ../../library/pickle.rst:980
 msgid ""
 "A communications system can enable custom handling of the "
 ":class:`PickleBuffer` objects generated when serializing an object graph."
@@ -1662,7 +1664,7 @@ msgstr ""
 "Система зв’язку може ввімкнути спеціальну обробку об’єктів "
 ":class:`PickleBuffer`, створених під час серіалізації графа об’єктів."
 
-#: ../../library/pickle.rst:982
+#: ../../library/pickle.rst:983
 msgid ""
 "On the sending side, it needs to pass a *buffer_callback* argument to "
 ":class:`Pickler` (or to the :func:`dump` or :func:`dumps` function), which "
@@ -1677,7 +1679,7 @@ msgstr ""
 "графа об’єкта. Буфери, накопичені *buffer_callback*, не бачитимуть своїх "
 "даних, скопійованих у потік pickle, буде вставлено лише дешевий маркер."
 
-#: ../../library/pickle.rst:989
+#: ../../library/pickle.rst:990
 msgid ""
 "On the receiving side, it needs to pass a *buffers* argument to "
 ":class:`Unpickler` (or to the :func:`load` or :func:`loads` function), which"
@@ -1695,7 +1697,7 @@ msgstr ""
 "об’єктів, маринування яких створило оригінальні об’єкти "
 ":class:`PickleBuffer`."
 
-#: ../../library/pickle.rst:997
+#: ../../library/pickle.rst:998
 msgid ""
 "Between the sending side and the receiving side, the communications system "
 "is free to implement its own transfer mechanism for out-of-band buffers. "
@@ -1707,11 +1709,11 @@ msgstr ""
 "оптимізація включає використання спільної пам’яті або залежне від типу даних"
 " стиснення."
 
-#: ../../library/pickle.rst:1003
+#: ../../library/pickle.rst:1004
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/pickle.rst:1005
+#: ../../library/pickle.rst:1006
 msgid ""
 "Here is a trivial example where we implement a :class:`bytearray` subclass "
 "able to participate in out-of-band buffer pickling::"
@@ -1719,7 +1721,7 @@ msgstr ""
 "Ось тривіальний приклад, у якому ми реалізуємо підклас :class:`bytearray`, "
 "здатний брати участь у позаполосному відбиранні буфера:"
 
-#: ../../library/pickle.rst:1029
+#: ../../library/pickle.rst:1030
 msgid ""
 "The reconstructor (the ``_reconstruct`` class method) returns the buffer's "
 "providing object if it has the right type.  This is an easy way to simulate "
@@ -1729,7 +1731,7 @@ msgstr ""
 " якщо він має правильний тип. Це простий спосіб імітувати поведінку без "
 "копіювання на цьому прикладі іграшки."
 
-#: ../../library/pickle.rst:1033
+#: ../../library/pickle.rst:1034
 msgid ""
 "On the consumer side, we can pickle those objects the usual way, which when "
 "unserialized will give us a copy of the original object::"
@@ -1737,7 +1739,7 @@ msgstr ""
 "Зі сторони споживача ми можемо відібрати ці об’єкти звичайним способом, який"
 " після десеріалізації дасть нам копію оригінального об’єкта:"
 
-#: ../../library/pickle.rst:1042
+#: ../../library/pickle.rst:1043
 msgid ""
 "But if we pass a *buffer_callback* and then give back the accumulated "
 "buffers when unserializing, we are able to get back the original object::"
@@ -1745,7 +1747,7 @@ msgstr ""
 "Але якщо ми передаємо *buffer_callback*, а потім повертаємо накопичені "
 "буфери під час десеріалізації, ми можемо повернути вихідний об’єкт::"
 
-#: ../../library/pickle.rst:1052
+#: ../../library/pickle.rst:1053
 msgid ""
 "This example is limited by the fact that :class:`bytearray` allocates its "
 "own memory: you cannot create a :class:`bytearray` instance that is backed "
@@ -1761,15 +1763,15 @@ msgstr ""
 " копіювання (або створення якомога меншої кількості копій) під час передачі "
 "між окремими процесами чи системами."
 
-#: ../../library/pickle.rst:1059
+#: ../../library/pickle.rst:1060
 msgid ":pep:`574` -- Pickle protocol 5 with out-of-band data"
 msgstr ":pep:`574` -- Протокол Pickle 5 із позаполосними даними"
 
-#: ../../library/pickle.rst:1065
+#: ../../library/pickle.rst:1066
 msgid "Restricting Globals"
 msgstr "Обмеження Globals"
 
-#: ../../library/pickle.rst:1070
+#: ../../library/pickle.rst:1071
 msgid ""
 "By default, unpickling will import any class or function that it finds in "
 "the pickle data.  For many applications, this behaviour is unacceptable as "
@@ -1782,7 +1784,7 @@ msgstr ""
 "подумайте, що робить цей створений вручну потік даних маринованих огірків "
 "під час завантаження:"
 
-#: ../../library/pickle.rst:1080
+#: ../../library/pickle.rst:1081
 msgid ""
 "In this example, the unpickler imports the :func:`os.system` function and "
 "then apply the string argument \"echo hello world\".  Although this example "
@@ -1793,7 +1795,7 @@ msgstr ""
 "застосовує рядковий аргумент \"echo hello world\". Хоча цей приклад не "
 "образливий, неважко уявити такий, який може пошкодити вашу систему."
 
-#: ../../library/pickle.rst:1084
+#: ../../library/pickle.rst:1085
 msgid ""
 "For this reason, you may want to control what gets unpickled by customizing "
 ":meth:`Unpickler.find_class`.  Unlike its name suggests, "
@@ -1807,7 +1809,7 @@ msgstr ""
 "(тобто клас або функція). Таким чином, можна або повністю заборонити "
 "глобальні елементи, або обмежити їх безпечною підмножиною."
 
-#: ../../library/pickle.rst:1090
+#: ../../library/pickle.rst:1091
 msgid ""
 "Here is an example of an unpickler allowing only few safe classes from the "
 ":mod:`builtins` module to be loaded::"
@@ -1815,11 +1817,11 @@ msgstr ""
 "Ось приклад unpickler, який дозволяє завантажити лише декілька безпечних "
 "класів із модуля :mod:`builtins`:"
 
-#: ../../library/pickle.rst:1119
+#: ../../library/pickle.rst:1120
 msgid "A sample usage of our unpickler working as intended::"
 msgstr "Зразок використання нашого unpickler, що працює за призначенням::"
 
-#: ../../library/pickle.rst:1138
+#: ../../library/pickle.rst:1139
 msgid ""
 "As our examples shows, you have to be careful with what you allow to be "
 "unpickled.  Therefore if security is a concern, you may want to consider "
@@ -1831,11 +1833,11 @@ msgstr ""
 "ви можете розглянути такі альтернативи, як маршалінговий API у "
 ":mod:`xmlrpc.client` або рішення сторонніх розробників."
 
-#: ../../library/pickle.rst:1145
+#: ../../library/pickle.rst:1146
 msgid "Performance"
 msgstr "Продуктивність"
 
-#: ../../library/pickle.rst:1147
+#: ../../library/pickle.rst:1148
 msgid ""
 "Recent versions of the pickle protocol (from protocol 2 and upwards) feature"
 " efficient binary encodings for several common features and built-in types. "
@@ -1845,70 +1847,70 @@ msgstr ""
 "двійкове кодування для кількох загальних функцій і вбудованих типів. Крім "
 "того, модуль :mod:`pickle` має прозорий оптимізатор, написаний мовою C."
 
-#: ../../library/pickle.rst:1155
+#: ../../library/pickle.rst:1156
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/pickle.rst:1157
+#: ../../library/pickle.rst:1158
 msgid ""
 "For the simplest code, use the :func:`dump` and :func:`load` functions. ::"
 msgstr ""
 "Для найпростішого коду використовуйте функції :func:`dump` і :func:`load`. "
 "::"
 
-#: ../../library/pickle.rst:1173
+#: ../../library/pickle.rst:1174
 msgid "The following example reads the resulting pickled data. ::"
 msgstr "У наступному прикладі зчитуються результуючі мариновані дані. ::"
 
-#: ../../library/pickle.rst:1190
+#: ../../library/pickle.rst:1191
 msgid "Module :mod:`copyreg`"
 msgstr "Модуль :mod:`copyreg`"
 
-#: ../../library/pickle.rst:1190
+#: ../../library/pickle.rst:1191
 msgid "Pickle interface constructor registration for extension types."
 msgstr "Реєстрація конструктора інтерфейсу Pickle для типів розширень."
 
-#: ../../library/pickle.rst:1193
+#: ../../library/pickle.rst:1194
 msgid "Module :mod:`pickletools`"
 msgstr "Модуль :mod:`pickletools`"
 
-#: ../../library/pickle.rst:1193
+#: ../../library/pickle.rst:1194
 msgid "Tools for working with and analyzing pickled data."
 msgstr "Інструменти для роботи з маринованими даними та їх аналізу."
 
-#: ../../library/pickle.rst:1196
+#: ../../library/pickle.rst:1197
 msgid "Module :mod:`shelve`"
 msgstr "Модуль :mod:`shelve`"
 
-#: ../../library/pickle.rst:1196
+#: ../../library/pickle.rst:1197
 msgid "Indexed databases of objects; uses :mod:`pickle`."
 msgstr "Індексовані бази даних об'єктів; використовує :mod:`pickle`."
 
-#: ../../library/pickle.rst:1199
+#: ../../library/pickle.rst:1200
 msgid "Module :mod:`copy`"
 msgstr "Модуль :mod:`copy`"
 
-#: ../../library/pickle.rst:1199
+#: ../../library/pickle.rst:1200
 msgid "Shallow and deep object copying."
 msgstr "Неглибоке і глибоке копіювання об'єктів."
 
-#: ../../library/pickle.rst:1201
+#: ../../library/pickle.rst:1202
 msgid "Module :mod:`marshal`"
 msgstr "Модуль :mod:`marshal`"
 
-#: ../../library/pickle.rst:1202
+#: ../../library/pickle.rst:1203
 msgid "High-performance serialization of built-in types."
 msgstr "Високопродуктивна серіалізація вбудованих типів."
 
-#: ../../library/pickle.rst:1206
+#: ../../library/pickle.rst:1207
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/pickle.rst:1207
+#: ../../library/pickle.rst:1208
 msgid "Don't confuse this with the :mod:`marshal` module"
 msgstr "Не плутайте це з модулем :mod:`marshal`"
 
-#: ../../library/pickle.rst:1209
+#: ../../library/pickle.rst:1210
 msgid ""
 "This is why :keyword:`lambda` functions cannot be pickled:  all "
 ":keyword:`!lambda` functions share the same name:  ``<lambda>``."
@@ -1916,7 +1918,7 @@ msgstr ""
 "Ось чому функції :keyword:`lambda` не можна маринувати: усі функції "
 ":keyword:`!lambda` мають однакову назву: ``<lambda>``."
 
-#: ../../library/pickle.rst:1212
+#: ../../library/pickle.rst:1213
 msgid ""
 "The exception raised will likely be an :exc:`ImportError` or an "
 ":exc:`AttributeError` but it could be something else."
@@ -1924,7 +1926,7 @@ msgstr ""
 "Виняток, імовірно, буде :exc:`ImportError` або :exc:`AttributeError`, але це"
 " може бути щось інше."
 
-#: ../../library/pickle.rst:1215
+#: ../../library/pickle.rst:1216
 msgid ""
 "The :mod:`copy` module uses this protocol for shallow and deep copying "
 "operations."
@@ -1932,7 +1934,7 @@ msgstr ""
 "Модуль :mod:`copy` використовує цей протокол для дрібних і глибоких операцій"
 " копіювання."
 
-#: ../../library/pickle.rst:1218
+#: ../../library/pickle.rst:1219
 msgid ""
 "The limitation on alphanumeric characters is due to the fact that persistent"
 " IDs in protocol 0 are delimited by the newline character.  Therefore if any"
@@ -1978,30 +1980,30 @@ msgstr ""
 msgid "External Data Representation"
 msgstr ""
 
-#: ../../library/pickle.rst:663
+#: ../../library/pickle.rst:664
 msgid "copy"
 msgstr ""
 
-#: ../../library/pickle.rst:663
+#: ../../library/pickle.rst:664
 msgid "protocol"
 msgstr ""
 
-#: ../../library/pickle.rst:746
+#: ../../library/pickle.rst:747
 msgid "persistent_id (pickle protocol)"
 msgstr ""
 
-#: ../../library/pickle.rst:746
+#: ../../library/pickle.rst:747
 msgid "persistent_load (pickle protocol)"
 msgstr ""
 
-#: ../../library/pickle.rst:822
+#: ../../library/pickle.rst:823
 msgid "__getstate__() (copy protocol)"
 msgstr ""
 
-#: ../../library/pickle.rst:822
+#: ../../library/pickle.rst:823
 msgid "__setstate__() (copy protocol)"
 msgstr ""
 
-#: ../../library/pickle.rst:1067
+#: ../../library/pickle.rst:1068
 msgid "find_class() (pickle protocol)"
 msgstr ""
