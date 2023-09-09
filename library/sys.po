@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-25 14:13+0000\n"
+"POT-Creation-Date: 2023-09-08 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -616,21 +616,14 @@ msgstr "Ця функція друкує задану трасування та 
 
 #: ../../library/sys.rst:381
 msgid ""
-"When an exception is raised and uncaught, the interpreter calls "
-"``sys.excepthook`` with three arguments, the exception class, exception "
-"instance, and a traceback object.  In an interactive session this happens "
-"just before control is returned to the prompt; in a Python program this "
-"happens just before the program exits.  The handling of such top-level "
-"exceptions can be customized by assigning another three-argument function to"
-" ``sys.excepthook``."
+"When an exception other than :exc:`SystemExit` is raised and uncaught, the "
+"interpreter calls ``sys.excepthook`` with three arguments, the exception "
+"class, exception instance, and a traceback object.  In an interactive "
+"session this happens just before control is returned to the prompt; in a "
+"Python program this happens just before the program exits.  The handling of "
+"such top-level exceptions can be customized by assigning another three-"
+"argument function to ``sys.excepthook``."
 msgstr ""
-"Коли виняток виникає та не перехоплюється, інтерпретатор викликає "
-"``sys.excepthook`` із трьома аргументами: клас винятку, екземпляр винятку та"
-" об’єкт трасування. Під час інтерактивного сеансу це відбувається "
-"безпосередньо перед поверненням керування до підказки; у програмі Python це "
-"відбувається безпосередньо перед виходом програми. Обробку таких винятків "
-"верхнього рівня можна налаштувати, призначивши іншу функцію з трьома "
-"аргументами для ``sys.excepthook``."
 
 #: ../../library/sys.rst:388
 msgid ""
@@ -3163,7 +3156,13 @@ msgid ""
 "has no effect on the registry keys used by Python."
 msgstr ""
 
-#: ../../library/sys.rst:1958
+#: ../../library/sys.rst:1959
+msgid ""
+"Namespace containing functions and constants for register callbacks and "
+"controlling monitoring events. See  :mod:`sys.monitoring` for details."
+msgstr ""
+
+#: ../../library/sys.rst:1965
 msgid ""
 "A dictionary of the various implementation-specific flags passed through the"
 " :option:`-X` command-line option.  Option names are either mapped to their "
@@ -3173,7 +3172,7 @@ msgstr ""
 "параметр командного рядка :option:`-X`. Назви параметрів або зіставляються з"
 " їхніми значеннями, якщо вказано явно, або з :const:`True`. приклад:"
 
-#: ../../library/sys.rst:1974
+#: ../../library/sys.rst:1981
 msgid ""
 "This is a CPython-specific way of accessing options passed through "
 ":option:`-X`.  Other implementations may export them through other means, or"
@@ -3183,11 +3182,11 @@ msgstr ""
 "через :option:`-X`. Інші реалізації можуть експортувати їх іншими засобами "
 "або взагалі не експортувати."
 
-#: ../../library/sys.rst:1982
+#: ../../library/sys.rst:1989
 msgid "Citations"
 msgstr "Цитування"
 
-#: ../../library/sys.rst:1983
+#: ../../library/sys.rst:1990
 msgid ""
 "ISO/IEC 9899:1999.  \"Programming languages -- C.\"  A public draft of this "
 "standard is available at https://www.open-"
