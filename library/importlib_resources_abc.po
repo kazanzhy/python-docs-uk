@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-08 14:13+0000\n"
+"POT-Creation-Date: 2023-09-15 14:13+0000\n"
 "PO-Revision-Date: 2022-11-05 19:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -89,12 +89,11 @@ msgstr ""
 "не є пакетом, цей метод має повернути :const:`None`. Об’єкт, сумісний із цим"
 " ABC, слід повертати лише тоді, коли вказаний модуль є пакетом."
 
-#: ../../library/importlib.resources.abc.rst:50
-#: ../../library/importlib.resources.abc.rst:160
+#: ../../library/importlib.resources.abc.rst:48
 msgid "Use :class:`importlib.resources.abc.TraversableResources` instead."
 msgstr ""
 
-#: ../../library/importlib.resources.abc.rst:53
+#: ../../library/importlib.resources.abc.rst:51
 msgid ""
 "Returns an opened, :term:`file-like object` for binary reading of the "
 "*resource*."
@@ -102,15 +101,15 @@ msgstr ""
 "Повертає відкритий :term:`file-like object` для двійкового читання "
 "*ресурсу*."
 
-#: ../../library/importlib.resources.abc.rst:56
+#: ../../library/importlib.resources.abc.rst:54
 msgid "If the resource cannot be found, :exc:`FileNotFoundError` is raised."
 msgstr "Якщо ресурс не знайдено, виникає :exc:`FileNotFoundError`."
 
-#: ../../library/importlib.resources.abc.rst:61
+#: ../../library/importlib.resources.abc.rst:59
 msgid "Returns the file system path to the *resource*."
 msgstr "Повертає шлях файлової системи до *ресурсу*."
 
-#: ../../library/importlib.resources.abc.rst:63
+#: ../../library/importlib.resources.abc.rst:61
 msgid ""
 "If the resource does not concretely exist on the file system, raise "
 ":exc:`FileNotFoundError`."
@@ -118,7 +117,7 @@ msgstr ""
 "Якщо ресурс конкретно не існує у файловій системі, викликайте "
 ":exc:`FileNotFoundError`."
 
-#: ../../library/importlib.resources.abc.rst:68
+#: ../../library/importlib.resources.abc.rst:66
 msgid ""
 "Returns ``True`` if the named *name* is considered a resource. "
 ":exc:`FileNotFoundError` is raised if *name* does not exist."
@@ -126,7 +125,7 @@ msgstr ""
 "Повертає ``True``, якщо назване *ім’я* вважається ресурсом. "
 ":exc:`FileNotFoundError` виникає, якщо *name* не існує."
 
-#: ../../library/importlib.resources.abc.rst:73
+#: ../../library/importlib.resources.abc.rst:71
 msgid ""
 "Returns an :term:`iterable` of strings over the contents of the package. Do "
 "note that it is not required that all names returned by the iterator be "
@@ -138,7 +137,7 @@ msgstr ""
 "ресурсами, наприклад. прийнятно повертати імена, для яких "
 ":meth:`is_resource` буде false."
 
-#: ../../library/importlib.resources.abc.rst:79
+#: ../../library/importlib.resources.abc.rst:77
 msgid ""
 "Allowing non-resource names to be returned is to allow for situations where "
 "how a package and its resources are stored are known a priori and the non-"
@@ -153,48 +152,44 @@ msgstr ""
 "відомо, що пакет і ресурси зберігаються у файловій системі, ці імена "
 "підкаталогів можна було використовувати безпосередньо."
 
-#: ../../library/importlib.resources.abc.rst:87
+#: ../../library/importlib.resources.abc.rst:85
 msgid "The abstract method returns an iterable of no items."
 msgstr "Абстрактний метод повертає ітерацію без елементів."
 
-#: ../../library/importlib.resources.abc.rst:92
+#: ../../library/importlib.resources.abc.rst:90
 msgid ""
 "An object with a subset of :class:`pathlib.Path` methods suitable for "
 "traversing directories and opening files."
 msgstr ""
 
-#: ../../library/importlib.resources.abc.rst:95
+#: ../../library/importlib.resources.abc.rst:93
 msgid ""
 "For a representation of the object on the file-system, use "
 ":meth:`importlib.resources.as_file`."
 msgstr ""
 
-#: ../../library/importlib.resources.abc.rst:102
-msgid "Use :class:`importlib.resources.abc.Traversable` instead."
-msgstr ""
-
-#: ../../library/importlib.resources.abc.rst:105
+#: ../../library/importlib.resources.abc.rst:98
 msgid "Abstract. The base name of this object without any parent references."
 msgstr ""
 
-#: ../../library/importlib.resources.abc.rst:109
+#: ../../library/importlib.resources.abc.rst:102
 msgid "Yield Traversable objects in self."
 msgstr "Прибуток Traversable об'єктів в себе."
 
-#: ../../library/importlib.resources.abc.rst:113
+#: ../../library/importlib.resources.abc.rst:106
 msgid "Return True if self is a directory."
 msgstr "Повертає True, якщо self є каталогом."
 
-#: ../../library/importlib.resources.abc.rst:117
+#: ../../library/importlib.resources.abc.rst:110
 msgid "Return True if self is a file."
 msgstr "Повертає True, якщо self є файлом."
 
-#: ../../library/importlib.resources.abc.rst:121
-#: ../../library/importlib.resources.abc.rst:125
+#: ../../library/importlib.resources.abc.rst:114
+#: ../../library/importlib.resources.abc.rst:118
 msgid "Return Traversable child in self."
 msgstr "Повернення Прохідної дитини в себе."
 
-#: ../../library/importlib.resources.abc.rst:129
+#: ../../library/importlib.resources.abc.rst:122
 msgid ""
 "*mode* may be 'r' or 'rb' to open as text or binary. Return a handle "
 "suitable for reading (same as :attr:`pathlib.Path.open`)."
@@ -203,21 +198,21 @@ msgstr ""
 "файл. Повертає дескриптор, придатний для читання (те саме, що "
 ":attr:`pathlib.Path.open`)."
 
-#: ../../library/importlib.resources.abc.rst:132
+#: ../../library/importlib.resources.abc.rst:125
 msgid ""
 "When opening as text, accepts encoding parameters such as those accepted by "
 ":class:`io.TextIOWrapper`."
 msgstr ""
 
-#: ../../library/importlib.resources.abc.rst:137
+#: ../../library/importlib.resources.abc.rst:130
 msgid "Read contents of self as bytes."
 msgstr "Читати вміст себе як байти."
 
-#: ../../library/importlib.resources.abc.rst:141
+#: ../../library/importlib.resources.abc.rst:134
 msgid "Read contents of self as text."
 msgstr "Прочитати вміст себе як текст."
 
-#: ../../library/importlib.resources.abc.rst:146
+#: ../../library/importlib.resources.abc.rst:139
 msgid ""
 "An abstract base class for resource readers capable of serving the "
 ":meth:`importlib.resources.files` interface. Subclasses "
@@ -226,7 +221,7 @@ msgid ""
 " :class:`!TraversableResources` also supplies :class:`!ResourceReader`."
 msgstr ""
 
-#: ../../library/importlib.resources.abc.rst:153
+#: ../../library/importlib.resources.abc.rst:146
 msgid ""
 "Loaders that wish to support resource reading are expected to implement this"
 " interface."
@@ -234,7 +229,7 @@ msgstr ""
 "Очікується, що завантажувачі, які бажають підтримувати читання ресурсів, "
 "реалізують цей інтерфейс."
 
-#: ../../library/importlib.resources.abc.rst:163
+#: ../../library/importlib.resources.abc.rst:151
 msgid ""
 "Returns a :class:`importlib.resources.abc.Traversable` object for the loaded"
 " package."
