@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-15 14:13+0000\n"
+"POT-Creation-Date: 2023-09-29 14:12+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -162,15 +162,12 @@ msgstr ""
 #: ../../library/devmode.rst:61
 msgid ""
 "Call :func:`faulthandler.enable` at Python startup to install handlers for "
-"the :const:`SIGSEGV`, :const:`SIGFPE`, :const:`SIGABRT`, :const:`SIGBUS` and"
-" :const:`SIGILL` signals to dump the Python traceback on a crash."
+"the :const:`~signal.SIGSEGV`, :const:`~signal.SIGFPE`, "
+":const:`~signal.SIGABRT`, :const:`~signal.SIGBUS` and "
+":const:`~signal.SIGILL` signals to dump the Python traceback on a crash."
 msgstr ""
-"Викличте :func:`faulthandler.enable` під час запуску Python, щоб установити "
-"обробники для :const:`SIGSEGV`, :const:`SIGFPE`, :const:`SIGABRT`, "
-":const:`SIGBUS` і :const:`SIGILL` сигналізує скинути зворотне трасування "
-"Python у разі збою."
 
-#: ../../library/devmode.rst:65
+#: ../../library/devmode.rst:66
 msgid ""
 "It behaves as if the :option:`-X faulthandler <-X>` command line option is "
 "used or if the :envvar:`PYTHONFAULTHANDLER` environment variable is set to "
@@ -180,7 +177,7 @@ msgstr ""
 ":option:`-X faulthandler <-X>` або якщо змінна середовища "
 ":envvar:`PYTHONFAULTHANDLER` має значення ``1``."
 
-#: ../../library/devmode.rst:69
+#: ../../library/devmode.rst:70
 msgid ""
 "Enable :ref:`asyncio debug mode <asyncio-debug-mode>`. For example, "
 ":mod:`asyncio` checks for coroutines that were not awaited and logs them."
@@ -189,7 +186,7 @@ msgstr ""
 "Наприклад, :mod:`asyncio` перевіряє співпрограми, які не були очікувані, і "
 "реєструє їх."
 
-#: ../../library/devmode.rst:72
+#: ../../library/devmode.rst:73
 msgid ""
 "It behaves as if the :envvar:`PYTHONASYNCIODEBUG` environment variable is "
 "set to ``1``."
@@ -197,7 +194,7 @@ msgstr ""
 "Він поводиться так, ніби для змінної середовища :envvar:`PYTHONASYNCIODEBUG`"
 " встановлено значення ``1``."
 
-#: ../../library/devmode.rst:75
+#: ../../library/devmode.rst:76
 msgid ""
 "Check the *encoding* and *errors* arguments for string encoding and decoding"
 " operations. Examples: :func:`open`, :meth:`str.encode` and "
@@ -207,7 +204,7 @@ msgstr ""
 "декодування рядків. Приклади: :func:`open`, :meth:`str.encode` і "
 ":meth:`bytes.decode`."
 
-#: ../../library/devmode.rst:79
+#: ../../library/devmode.rst:80
 msgid ""
 "By default, for best performance, the *errors* argument is only checked at "
 "the first encoding/decoding error and the *encoding* argument is sometimes "
@@ -217,17 +214,17 @@ msgstr ""
 "перевіряється лише при першій помилці кодування/декодування, а аргумент "
 "*encoding* іноді ігнорується для порожніх рядків."
 
-#: ../../library/devmode.rst:83
+#: ../../library/devmode.rst:84
 msgid "The :class:`io.IOBase` destructor logs ``close()`` exceptions."
 msgstr "Деструктор :class:`io.IOBase` реєструє винятки ``close()``."
 
-#: ../../library/devmode.rst:84
+#: ../../library/devmode.rst:85
 msgid ""
 "Set the :attr:`~sys.flags.dev_mode` attribute of :data:`sys.flags` to "
 "``True``."
 msgstr ""
 
-#: ../../library/devmode.rst:87
+#: ../../library/devmode.rst:88
 msgid ""
 "The Python Development Mode does not enable the :mod:`tracemalloc` module by"
 " default, because the overhead cost (to performance and memory) would be too"
@@ -244,7 +241,7 @@ msgstr ""
 "відстеження, де було виділено ресурс, а помилка переповнення буфера реєструє"
 " відстеження, де було виділено блок пам’яті."
 
-#: ../../library/devmode.rst:94
+#: ../../library/devmode.rst:95
 msgid ""
 "The Python Development Mode does not prevent the :option:`-O` command line "
 "option from removing :keyword:`assert` statements nor from setting "
@@ -254,7 +251,7 @@ msgstr ""
 "видаляти оператори :keyword:`assert` або встановлювати :const:`__debug__` "
 "значення ``False``."
 
-#: ../../library/devmode.rst:98
+#: ../../library/devmode.rst:99
 msgid ""
 "The Python Development Mode can only be enabled at the Python startup. Its "
 "value can be read from :data:`sys.flags.dev_mode <sys.flags>`."
@@ -262,11 +259,11 @@ msgstr ""
 "Режим розробки Python можна ввімкнути лише під час запуску Python. Його "
 "значення можна прочитати з :data:`sys.flags.dev_mode <sys.flags>`."
 
-#: ../../library/devmode.rst:101
+#: ../../library/devmode.rst:102
 msgid "The :class:`io.IOBase` destructor now logs ``close()`` exceptions."
 msgstr "Деструктор :class:`io.IOBase` тепер реєструє винятки ``close()``."
 
-#: ../../library/devmode.rst:104
+#: ../../library/devmode.rst:105
 msgid ""
 "The *encoding* and *errors* arguments are now checked for string encoding "
 "and decoding operations."
@@ -274,11 +271,11 @@ msgstr ""
 "Аргументи *encoding* і *errors* тепер перевіряються на наявність операцій "
 "кодування та декодування рядків."
 
-#: ../../library/devmode.rst:110
+#: ../../library/devmode.rst:111
 msgid "ResourceWarning Example"
 msgstr "Приклад ResourceWarning"
 
-#: ../../library/devmode.rst:112
+#: ../../library/devmode.rst:113
 msgid ""
 "Example of a script counting the number of lines of the text file specified "
 "in the command line::"
@@ -286,7 +283,7 @@ msgstr ""
 "Приклад сценарію підрахунку кількості рядків текстового файлу, вказаного в "
 "командному рядку:"
 
-#: ../../library/devmode.rst:126
+#: ../../library/devmode.rst:127
 msgid ""
 "The script does not close the file explicitly. By default, Python does not "
 "emit any warning. Example using README.txt, which has 269 lines:"
@@ -294,7 +291,7 @@ msgstr ""
 "Сценарій не закриває файл явно. За замовчуванням Python не видає жодних "
 "попереджень. Приклад використання README.txt, який містить 269 рядків:"
 
-#: ../../library/devmode.rst:134
+#: ../../library/devmode.rst:135
 msgid ""
 "Enabling the Python Development Mode displays a :exc:`ResourceWarning` "
 "warning:"
@@ -302,7 +299,7 @@ msgstr ""
 "Увімкнення режиму розробки Python відображає попередження "
 ":exc:`ResourceWarning`:"
 
-#: ../../library/devmode.rst:144
+#: ../../library/devmode.rst:145
 msgid ""
 "In addition, enabling :mod:`tracemalloc` shows the line where the file was "
 "opened:"
@@ -310,14 +307,14 @@ msgstr ""
 "Крім того, увімкнення :mod:`tracemalloc` показує рядок, де було відкрито "
 "файл:"
 
-#: ../../library/devmode.rst:159
+#: ../../library/devmode.rst:160
 msgid ""
 "The fix is to close explicitly the file. Example using a context manager::"
 msgstr ""
 "Виправлення полягає в тому, щоб явно закрити файл. Приклад використання "
 "контекстного менеджера::"
 
-#: ../../library/devmode.rst:167
+#: ../../library/devmode.rst:168
 msgid ""
 "Not closing a resource explicitly can leave a resource open for way longer "
 "than expected; it can cause severe issues upon exiting Python. It is bad in "
@@ -329,19 +326,19 @@ msgstr ""
 " Це погано в CPython, але ще гірше в PyPy. Закриття ресурсів явно робить "
 "додаток більш детермінованим і надійнішим."
 
-#: ../../library/devmode.rst:174
+#: ../../library/devmode.rst:175
 msgid "Bad file descriptor error example"
 msgstr "Приклад помилки неправильного дескриптора файлу"
 
-#: ../../library/devmode.rst:176
+#: ../../library/devmode.rst:177
 msgid "Script displaying the first line of itself::"
 msgstr "Сценарій, що відображає перший рядок самого себе::"
 
-#: ../../library/devmode.rst:189
+#: ../../library/devmode.rst:190
 msgid "By default, Python does not emit any warning:"
 msgstr "За замовчуванням Python не видає жодного попередження:"
 
-#: ../../library/devmode.rst:196
+#: ../../library/devmode.rst:197
 msgid ""
 "The Python Development Mode shows a :exc:`ResourceWarning` and logs a \"Bad "
 "file descriptor\" error when finalizing the file object:"
@@ -349,7 +346,7 @@ msgstr ""
 "Режим розробки Python показує :exc:`ResourceWarning` і реєструє помилку "
 "\"Поганий дескриптор файлу\" під час завершення об’єкта файлу:"
 
-#: ../../library/devmode.rst:212
+#: ../../library/devmode.rst:213
 msgid ""
 "``os.close(fp.fileno())`` closes the file descriptor. When the file object "
 "finalizer tries to close the file descriptor again, it fails with the ``Bad "
@@ -363,7 +360,7 @@ msgstr ""
 " бути закрито лише один раз. У гіршому випадку подвійне закриття може "
 "призвести до збою (див. :issue:`18748` для прикладу)."
 
-#: ../../library/devmode.rst:218
+#: ../../library/devmode.rst:219
 msgid ""
 "The fix is to remove the ``os.close(fp.fileno())`` line, or open the file "
 "with ``closefd=False``."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-08 14:13+0000\n"
+"POT-Creation-Date: 2023-09-29 14:12+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -36,57 +36,51 @@ msgstr "Łukasz Langa"
 #: ../../whatsnew/3.9.rst:45
 msgid ""
 "This article explains the new features in Python 3.9, compared to 3.8. "
-"Python 3.9 was released on October 5, 2020."
+"Python 3.9 was released on October 5, 2020. For full details, see the "
+":ref:`changelog <changelog>`."
 msgstr ""
-"У цій статті пояснюється нові функції в Python 3.9 порівняно з 3.8. Python "
-"3.9 було випущено 5 жовтня 2020 року."
 
-#: ../../whatsnew/3.9.rst:48
-msgid "For full details, see the :ref:`changelog <changelog>`."
-msgstr ""
-"Щоб отримати повну інформацію, перегляньте :ref:`журнал змін <changelog>`."
-
-#: ../../whatsnew/3.9.rst:52
+#: ../../whatsnew/3.9.rst:51
 msgid ":pep:`596` - Python 3.9 Release Schedule"
 msgstr ":pep:`596` - Графік випуску Python 3.9"
 
-#: ../../whatsnew/3.9.rst:56
+#: ../../whatsnew/3.9.rst:55
 msgid "Summary -- Release highlights"
 msgstr "Підсумок – основні моменти випуску"
 
-#: ../../whatsnew/3.9.rst:61
+#: ../../whatsnew/3.9.rst:60
 msgid "New syntax features:"
 msgstr "Нові функції синтаксису:"
 
-#: ../../whatsnew/3.9.rst:63
+#: ../../whatsnew/3.9.rst:62
 msgid ":pep:`584`, union operators added to ``dict``;"
 msgstr ":pep:`584`, оператори об’єднання додано до ``dict``;"
 
-#: ../../whatsnew/3.9.rst:64
+#: ../../whatsnew/3.9.rst:63
 msgid ":pep:`585`, type hinting generics in standard collections;"
 msgstr ":pep:`585`, генерики підказок типів у стандартних колекціях;"
 
-#: ../../whatsnew/3.9.rst:65
+#: ../../whatsnew/3.9.rst:64
 msgid ":pep:`614`, relaxed grammar restrictions on decorators."
 msgstr ":pep:`614`, послаблені граматичні обмеження для декораторів."
 
-#: ../../whatsnew/3.9.rst:67
+#: ../../whatsnew/3.9.rst:66
 msgid "New built-in features:"
 msgstr "Нові вбудовані функції:"
 
-#: ../../whatsnew/3.9.rst:69
+#: ../../whatsnew/3.9.rst:68
 msgid ":pep:`616`, string methods to remove prefixes and suffixes."
 msgstr ":pep:`616`, рядкові методи для видалення префіксів і суфіксів."
 
-#: ../../whatsnew/3.9.rst:71
+#: ../../whatsnew/3.9.rst:70
 msgid "New features in the standard library:"
 msgstr "Нові можливості стандартної бібліотеки:"
 
-#: ../../whatsnew/3.9.rst:73
+#: ../../whatsnew/3.9.rst:72
 msgid ":pep:`593`, flexible function and variable annotations;"
 msgstr ":pep:`593`, гнучка функція та анотації змінних;"
 
-#: ../../whatsnew/3.9.rst:74
+#: ../../whatsnew/3.9.rst:73
 msgid ""
 ":func:`os.pidfd_open` added that allows process management without races and"
 " signals."
@@ -94,22 +88,22 @@ msgstr ""
 ":func:`os.pidfd_open` додано, що дозволяє керувати процесом без гонок і "
 "сигналів."
 
-#: ../../whatsnew/3.9.rst:77
+#: ../../whatsnew/3.9.rst:76
 msgid "Interpreter improvements:"
 msgstr "Покращення перекладача:"
 
-#: ../../whatsnew/3.9.rst:79
+#: ../../whatsnew/3.9.rst:78
 msgid ""
 ":pep:`573`, fast access to module state from methods of C extension types;"
 msgstr ""
 ":pep:`573`, швидкий доступ до стану модуля з методів типів розширення C;"
 
-#: ../../whatsnew/3.9.rst:81
+#: ../../whatsnew/3.9.rst:80
 msgid ":pep:`617`, CPython now uses a new parser based on PEG;"
 msgstr ""
 ":pep:`617`, CPython тепер використовує новий аналізатор на основі PEG;"
 
-#: ../../whatsnew/3.9.rst:82
+#: ../../whatsnew/3.9.rst:81
 msgid ""
 "a number of Python builtins (range, tuple, set, frozenset, list, dict) are "
 "now sped up using :pep:`590` vectorcall;"
@@ -117,11 +111,11 @@ msgstr ""
 "ряд вбудованих компонентів Python (діапазон, кортеж, набір, заморожений "
 "набір, список, dict) тепер пришвидшено за допомогою :pep:`590` vectorcall;"
 
-#: ../../whatsnew/3.9.rst:84
+#: ../../whatsnew/3.9.rst:83
 msgid "garbage collection does not block on resurrected objects;"
 msgstr "збір сміття не блокується на відроджених об'єктах;"
 
-#: ../../whatsnew/3.9.rst:85
+#: ../../whatsnew/3.9.rst:84
 msgid ""
 "a number of Python modules (:mod:`_abc`, :mod:`audioop`, :mod:`_bz2`, "
 ":mod:`_codecs`, :mod:`_contextvars`, :mod:`_crypt`, :mod:`_functools`, "
@@ -135,7 +129,7 @@ msgstr ""
 " :mod:`time`, :mod:`_weakref`) тепер використовує багатофазову "
 "ініціалізацію, як визначено PEP 489;"
 
-#: ../../whatsnew/3.9.rst:90
+#: ../../whatsnew/3.9.rst:89
 msgid ""
 "a number of standard library modules (:mod:`audioop`, :mod:`ast`, "
 ":mod:`grp`, :mod:`_hashlib`, :mod:`pwd`, :mod:`_posixsubprocess`, "
@@ -147,11 +141,11 @@ msgstr ""
 ":mod:`random`, :mod:`select`, :mod:`struct`, :mod:`termios`, :mod:`zlib`) "
 "тепер використовують стабільний ABI, визначений PEP 384."
 
-#: ../../whatsnew/3.9.rst:95
+#: ../../whatsnew/3.9.rst:94
 msgid "New library modules:"
 msgstr "Нові бібліотечні модулі:"
 
-#: ../../whatsnew/3.9.rst:97
+#: ../../whatsnew/3.9.rst:96
 msgid ""
 ":pep:`615`, the IANA Time Zone Database is now present in the standard "
 "library in the :mod:`zoneinfo` module;"
@@ -159,7 +153,7 @@ msgstr ""
 ":pep:`615`, база даних часових поясів IANA тепер присутня в стандартній "
 "бібліотеці в модулі :mod:`zoneinfo`;"
 
-#: ../../whatsnew/3.9.rst:99
+#: ../../whatsnew/3.9.rst:98
 msgid ""
 "an implementation of a topological sort of a graph is now provided in the "
 "new :mod:`graphlib` module."
@@ -167,19 +161,19 @@ msgstr ""
 "реалізація топологічного сортування графа тепер доступна в новому модулі "
 ":mod:`graphlib`."
 
-#: ../../whatsnew/3.9.rst:102
+#: ../../whatsnew/3.9.rst:101
 msgid "Release process changes:"
 msgstr "Зміни в процесі випуску:"
 
-#: ../../whatsnew/3.9.rst:104
+#: ../../whatsnew/3.9.rst:103
 msgid ":pep:`602`, CPython adopts an annual release cycle."
 msgstr ":pep:`602`, CPython використовує щорічний цикл випуску."
 
-#: ../../whatsnew/3.9.rst:108
+#: ../../whatsnew/3.9.rst:107
 msgid "You should check for DeprecationWarning in your code"
 msgstr "Вам слід перевірити DeprecationWarning у вашому коді"
 
-#: ../../whatsnew/3.9.rst:110
+#: ../../whatsnew/3.9.rst:109
 msgid ""
 "When Python 2.7 was still supported, a lot of functionality in Python 3 was "
 "kept for backward compatibility with Python 2.7. With the end of Python 2 "
@@ -197,7 +191,7 @@ msgstr ""
 "``collections.Mapping`` замість ``collections.abc.Mapping`` видає "
 ":exc:`DeprecationWarning`, починаючи з Python 3.3, випущеного в 2012 році."
 
-#: ../../whatsnew/3.9.rst:118
+#: ../../whatsnew/3.9.rst:117
 msgid ""
 "Test your application with the :option:`-W` ``default`` command-line option "
 "to see :exc:`DeprecationWarning` and :exc:`PendingDeprecationWarning`, or "
@@ -212,7 +206,7 @@ msgstr ""
 "filter>` можна використовувати для ігнорування попереджень від стороннього "
 "коду."
 
-#: ../../whatsnew/3.9.rst:123
+#: ../../whatsnew/3.9.rst:122
 msgid ""
 "Python 3.9 is the last version providing those Python 2 backward "
 "compatibility layers, to give more time to Python projects maintainers to "
@@ -223,7 +217,7 @@ msgstr ""
 "організації видалення підтримки Python 2 і додавання підтримки для Python "
 "3.9."
 
-#: ../../whatsnew/3.9.rst:127
+#: ../../whatsnew/3.9.rst:126
 msgid ""
 "Aliases to :ref:`Abstract Base Classes <collections-abstract-base-classes>` "
 "in the :mod:`collections` module, like ``collections.Mapping`` alias to "
@@ -235,7 +229,7 @@ msgstr ""
 ":class:`collections.abc.Mapping`, зберігаються для останнього випуску для "
 "повернення сумісність. Їх буде видалено з Python 3.10."
 
-#: ../../whatsnew/3.9.rst:132
+#: ../../whatsnew/3.9.rst:131
 msgid ""
 "More generally, try to run your tests in the :ref:`Python Development Mode "
 "<devmode>` which helps to prepare your code to make it compatible with the "
@@ -245,7 +239,7 @@ msgstr ""
 "Mode <devmode>`, який допоможе підготувати ваш код до сумісності з наступною"
 " версією Python."
 
-#: ../../whatsnew/3.9.rst:136
+#: ../../whatsnew/3.9.rst:135
 msgid ""
 "Note: a number of pre-existing deprecations were removed in this version of "
 "Python as well. Consult the :ref:`removed-in-python-39` section."
@@ -253,15 +247,15 @@ msgstr ""
 "Примітка: у цій версії Python також було видалено низку існуючих застарілих "
 "програм. Зверніться до розділу :ref:`removed-in-python-39`."
 
-#: ../../whatsnew/3.9.rst:141 ../../whatsnew/3.9.rst:1274
+#: ../../whatsnew/3.9.rst:140 ../../whatsnew/3.9.rst:1273
 msgid "New Features"
 msgstr "Нові можливості"
 
-#: ../../whatsnew/3.9.rst:144
+#: ../../whatsnew/3.9.rst:143
 msgid "Dictionary Merge & Update Operators"
 msgstr "Оператори злиття та оновлення словника"
 
-#: ../../whatsnew/3.9.rst:146
+#: ../../whatsnew/3.9.rst:145
 msgid ""
 "Merge (``|``) and update (``|=``) operators have been added to the built-in "
 ":class:`dict` class. Those complement the existing ``dict.update`` and "
@@ -271,11 +265,11 @@ msgstr ""
 "(``|=``). Вони доповнюють існуючі методи об’єднання словників "
 "``dict.update`` і ``{**d1, **d2}``."
 
-#: ../../whatsnew/3.9.rst:150 ../../whatsnew/3.9.rst:283
+#: ../../whatsnew/3.9.rst:149 ../../whatsnew/3.9.rst:282
 msgid "Example::"
 msgstr "Приклад::"
 
-#: ../../whatsnew/3.9.rst:159
+#: ../../whatsnew/3.9.rst:158
 msgid ""
 "See :pep:`584` for a full description. (Contributed by Brandt Bucher in "
 ":issue:`36144`.)"
@@ -283,11 +277,11 @@ msgstr ""
 "Дивіться :pep:`584` для повного опису. (Надав Брандт Бухер у "
 ":issue:`36144`.)"
 
-#: ../../whatsnew/3.9.rst:163
+#: ../../whatsnew/3.9.rst:162
 msgid "New String Methods to Remove Prefixes and Suffixes"
 msgstr "Нові рядкові методи для видалення префіксів і суфіксів"
 
-#: ../../whatsnew/3.9.rst:165
+#: ../../whatsnew/3.9.rst:164
 msgid ""
 ":meth:`str.removeprefix(prefix)<str.removeprefix>` and "
 ":meth:`str.removesuffix(suffix)<str.removesuffix>` have been added to easily"
@@ -302,11 +296,11 @@ msgstr ""
 "``bytes``, ``bytearray`` і ``collections.UserString``. Дивіться :pep:`616` "
 "для повного опису. (Надав Денніс Суїні в :issue:`39939`.)"
 
-#: ../../whatsnew/3.9.rst:173
+#: ../../whatsnew/3.9.rst:172
 msgid "Type Hinting Generics in Standard Collections"
 msgstr "Універсальні підказки типів у стандартних колекціях"
 
-#: ../../whatsnew/3.9.rst:175
+#: ../../whatsnew/3.9.rst:174
 msgid ""
 "In type annotations you can now use built-in collection types such as "
 "``list`` and ``dict`` as generic types instead of importing the "
@@ -320,11 +314,11 @@ msgstr ""
 "``введення``. Деякі інші типи стандартної бібліотеки також тепер є "
 "загальними, наприклад ``queue.Queue``."
 
-#: ../../whatsnew/3.9.rst:181 ../../whatsnew/3.9.rst:1162
+#: ../../whatsnew/3.9.rst:180 ../../whatsnew/3.9.rst:1161
 msgid "Example:"
 msgstr "приклад:"
 
-#: ../../whatsnew/3.9.rst:189
+#: ../../whatsnew/3.9.rst:188
 msgid ""
 "See :pep:`585` for more details.  (Contributed by Guido van Rossum, Ethan "
 "Smith, and Batuhan Taşkaya in :issue:`39481`.)"
@@ -332,11 +326,11 @@ msgstr ""
 "Дивіться :pep:`585` для більш детальної інформації. (Надано Гвідо ван "
 "Россумом, Ітаном Смітом і Батуханом Ташкаєю в :issue:`39481`.)"
 
-#: ../../whatsnew/3.9.rst:193
+#: ../../whatsnew/3.9.rst:192
 msgid "New Parser"
 msgstr "Новий парсер"
 
-#: ../../whatsnew/3.9.rst:195
+#: ../../whatsnew/3.9.rst:194
 msgid ""
 "Python 3.9 uses a new parser, based on `PEG "
 "<https://en.wikipedia.org/wiki/Parsing_expression_grammar>`_ instead of "
@@ -354,7 +348,7 @@ msgstr ""
 "до розробки нових функцій мови. Ми почнемо використовувати цю гнучкість у "
 "Python 3.10 і пізніших версіях."
 
-#: ../../whatsnew/3.9.rst:203
+#: ../../whatsnew/3.9.rst:202
 msgid ""
 "The :mod:`ast` module uses the new parser and produces the same AST as the "
 "old parser."
@@ -362,7 +356,7 @@ msgstr ""
 "Модуль :mod:`ast` використовує новий аналізатор і створює той самий AST, що "
 "й старий аналізатор."
 
-#: ../../whatsnew/3.9.rst:206
+#: ../../whatsnew/3.9.rst:205
 msgid ""
 "In Python 3.10, the old parser will be deleted and so will all functionality"
 " that depends on it (primarily the :mod:`parser` module, which has long been"
@@ -377,7 +371,7 @@ msgstr ""
 "командного рядка (``-X oldparser``) або змінної середовища "
 "(``PYTHONOLDPARSER=1``)."
 
-#: ../../whatsnew/3.9.rst:212
+#: ../../whatsnew/3.9.rst:211
 msgid ""
 "See :pep:`617` for more details.  (Contributed by Guido van Rossum, Pablo "
 "Galindo and Lysandros Nikolaou in :issue:`40334`.)"
@@ -385,11 +379,11 @@ msgstr ""
 "Дивіться :pep:`617` для більш детальної інформації. (Надано Гвідо ван "
 "Россумом, Пабло Галіндо та Лісандросом Ніколау в :issue:`40334`.)"
 
-#: ../../whatsnew/3.9.rst:217
+#: ../../whatsnew/3.9.rst:216
 msgid "Other Language Changes"
 msgstr "Інші зміни мови"
 
-#: ../../whatsnew/3.9.rst:219
+#: ../../whatsnew/3.9.rst:218
 msgid ""
 ":func:`__import__` now raises :exc:`ImportError` instead of "
 ":exc:`ValueError`, which used to occur when a relative import went past its "
@@ -399,7 +393,7 @@ msgstr ""
 ":exc:`ValueError`, який раніше траплявся, коли відносний імпорт проходив "
 "поза пакетом верхнього рівня. (Надав Нгалім Сірегар у :issue:`37444`.)"
 
-#: ../../whatsnew/3.9.rst:224
+#: ../../whatsnew/3.9.rst:223
 msgid ""
 "Python now gets the absolute path of the script filename specified on the "
 "command line (ex: ``python3 script.py``): the ``__file__`` attribute of the "
@@ -417,7 +411,7 @@ msgstr ""
 "відображає абсолютний шлях для фреймів модуля :mod:`__main__`. (Надав Віктор"
 " Стіннер у :issue:`20443`.)"
 
-#: ../../whatsnew/3.9.rst:232
+#: ../../whatsnew/3.9.rst:231
 msgid ""
 "In the :ref:`Python Development Mode <devmode>` and in :ref:`debug build "
 "<debug-build>`, the *encoding* and *errors* arguments are now checked for "
@@ -429,7 +423,7 @@ msgstr ""
 "наявність операцій кодування та декодування рядків. Приклади: :func:`open`, "
 ":meth:`str.encode` і :meth:`bytes.decode`."
 
-#: ../../whatsnew/3.9.rst:237
+#: ../../whatsnew/3.9.rst:236
 msgid ""
 "By default, for best performance, the *errors* argument is only checked at "
 "the first encoding/decoding error and the *encoding* argument is sometimes "
@@ -441,7 +435,7 @@ msgstr ""
 "*encoding* іноді ігнорується для порожніх рядків. (Надав Віктор Стіннер у "
 ":issue:`37388`.)"
 
-#: ../../whatsnew/3.9.rst:242
+#: ../../whatsnew/3.9.rst:241
 msgid ""
 "``\"\".replace(\"\", s, n)`` now returns ``s`` instead of an empty string "
 "for all non-zero ``n``.  It is now consistent with ``\"\".replace(\"\", "
@@ -453,7 +447,7 @@ msgstr ""
 "Існують подібні зміни для об’єктів :class:`bytes` і :class:`bytearray`. "
 "(Надав Сергій Сторчака в :issue:`28029`.)"
 
-#: ../../whatsnew/3.9.rst:247
+#: ../../whatsnew/3.9.rst:246
 msgid ""
 "Any valid expression can now be used as a :term:`decorator`.  Previously, "
 "the grammar was much more restrictive.  See :pep:`614` for details. "
@@ -463,7 +457,7 @@ msgstr ""
 "Раніше граматика була набагато жорсткішою. Подробиці див. :pep:`614`. (Надав"
 " Брандт Бухер у :issue:`39702`.)"
 
-#: ../../whatsnew/3.9.rst:251
+#: ../../whatsnew/3.9.rst:250
 msgid ""
 "Improved help for the :mod:`typing` module. Docstrings are now shown for all"
 " special forms and special generic aliases (like ``Union`` and ``List``). "
@@ -478,7 +472,7 @@ msgstr ""
 "конкретного типу (``list`` у цьому випадку). (Надав Сергій Сторчака в "
 ":issue:`40257`.)"
 
-#: ../../whatsnew/3.9.rst:257
+#: ../../whatsnew/3.9.rst:256
 msgid ""
 "Parallel running of :meth:`~agen.aclose` / :meth:`~agen.asend` / "
 ":meth:`~agen.athrow` is now prohibited, and ``ag_running`` now reflects the "
@@ -490,7 +484,7 @@ msgstr ""
 "фактичний статус роботи асинхронний генератор. (Надав Юрій Селіванов у "
 ":issue:`30773`.)"
 
-#: ../../whatsnew/3.9.rst:262
+#: ../../whatsnew/3.9.rst:261
 msgid ""
 "Unexpected errors in calling the ``__iter__`` method are no longer masked by"
 " ``TypeError`` in the :keyword:`in` operator and functions "
@@ -504,7 +498,7 @@ msgstr ""
 ":func:`~operator.countOf` модуля :mod:`operator`. (Надав Сергій Сторчака в "
 ":issue:`40824`.)"
 
-#: ../../whatsnew/3.9.rst:268
+#: ../../whatsnew/3.9.rst:267
 msgid ""
 "Unparenthesized lambda expressions can no longer be the expression part in "
 "an ``if`` clause in comprehensions and generator expressions. See "
@@ -514,15 +508,15 @@ msgstr ""
 "реченні ``if`` у виразах розуміння та генераторі. Дивіться :issue:`41848` і "
 ":issue:`43755` для отримання додаткової інформації."
 
-#: ../../whatsnew/3.9.rst:274
+#: ../../whatsnew/3.9.rst:273
 msgid "New Modules"
 msgstr "Нові модулі"
 
-#: ../../whatsnew/3.9.rst:277
+#: ../../whatsnew/3.9.rst:276
 msgid "zoneinfo"
 msgstr "зонаінфо"
 
-#: ../../whatsnew/3.9.rst:279
+#: ../../whatsnew/3.9.rst:278
 msgid ""
 "The :mod:`zoneinfo` module brings support for the IANA time zone database to"
 " the standard library. It adds :class:`zoneinfo.ZoneInfo`, a concrete "
@@ -534,7 +528,7 @@ msgstr ""
 "реалізацію :class:`datetime.tzinfo`, яка підтримується даними про часовий "
 "пояс системи."
 
-#: ../../whatsnew/3.9.rst:303
+#: ../../whatsnew/3.9.rst:302
 msgid ""
 "As a fall-back source of data for platforms that don't ship the IANA "
 "database, the |tzdata|_ module was released as a first-party package -- "
@@ -544,7 +538,7 @@ msgstr ""
 "модуль |tzdata|_ було випущено як пакет першої сторони, який поширюється "
 "через PyPI та підтримується основною командою CPython."
 
-#: ../../whatsnew/3.9.rst:312
+#: ../../whatsnew/3.9.rst:311
 msgid ""
 ":pep:`615` -- Support for the IANA Time Zone Database in the Standard "
 "Library"
@@ -552,15 +546,15 @@ msgstr ""
 ":pep:`615` -- Підтримка бази даних часових поясів IANA в стандартній "
 "бібліотеці"
 
-#: ../../whatsnew/3.9.rst:313
+#: ../../whatsnew/3.9.rst:312
 msgid "PEP written and implemented by Paul Ganssle"
 msgstr "PEP написаний і реалізований Полом Ганссле"
 
-#: ../../whatsnew/3.9.rst:317
+#: ../../whatsnew/3.9.rst:316
 msgid "graphlib"
 msgstr "graphlib"
 
-#: ../../whatsnew/3.9.rst:319
+#: ../../whatsnew/3.9.rst:318
 msgid ""
 "A new module, :mod:`graphlib`, was added that contains the "
 ":class:`graphlib.TopologicalSorter` class to offer functionality to perform "
@@ -572,15 +566,15 @@ msgstr ""
 "топологічного сортування графів. (Надано Пабло Галіндо, Тімом Пітерсом і "
 "Ларрі Гастінгсом у :issue:`17005`.)"
 
-#: ../../whatsnew/3.9.rst:326
+#: ../../whatsnew/3.9.rst:325
 msgid "Improved Modules"
 msgstr "Покращені модулі"
 
-#: ../../whatsnew/3.9.rst:329
+#: ../../whatsnew/3.9.rst:328
 msgid "ast"
 msgstr "аст"
 
-#: ../../whatsnew/3.9.rst:331
+#: ../../whatsnew/3.9.rst:330
 msgid ""
 "Added the *indent* option to :func:`~ast.dump` which allows it to produce a "
 "multiline indented output. (Contributed by Serhiy Storchaka in "
@@ -589,7 +583,7 @@ msgstr ""
 "Додано опцію *indent* до :func:`~ast.dump`, яка дозволяє створювати "
 "багаторядковий вивід із відступом. (Надав Сергій Сторчака в :issue:`37995`.)"
 
-#: ../../whatsnew/3.9.rst:335
+#: ../../whatsnew/3.9.rst:334
 msgid ""
 "Added :func:`ast.unparse` as a function in the :mod:`ast` module that can be"
 " used to unparse an :class:`ast.AST` object and produce a string with code "
@@ -601,7 +595,7 @@ msgstr ""
 "кодом, який створить еквівалентний :class:`ast.AST` об'єкт під час аналізу. "
 "(Надано Пабло Галіндо та Батуханом Таською в :issue:`38870`.)"
 
-#: ../../whatsnew/3.9.rst:340
+#: ../../whatsnew/3.9.rst:339
 msgid ""
 "Added docstrings to AST nodes that contains the ASDL signature used to "
 "construct that node. (Contributed by Batuhan Taskaya in :issue:`39638`.)"
@@ -609,11 +603,11 @@ msgstr ""
 "До вузлів AST додано рядки документів, які містять підпис ASDL, використаний"
 " для створення цього вузла. (Надано Batuhan Taskaya в :issue:`39638`.)"
 
-#: ../../whatsnew/3.9.rst:344
+#: ../../whatsnew/3.9.rst:343
 msgid "asyncio"
 msgstr "asyncio"
 
-#: ../../whatsnew/3.9.rst:346
+#: ../../whatsnew/3.9.rst:345
 msgid ""
 "Due to significant security concerns, the *reuse_address* parameter of "
 ":meth:`asyncio.loop.create_datagram_endpoint` is no longer supported. This "
@@ -629,7 +623,7 @@ msgstr ""
 "``loop.create_datagram_endpoint()``. (Надано Кайлом Стенлі, Антуаном Пітру "
 "та Юрієм Селівановим у :issue:`37228`.)"
 
-#: ../../whatsnew/3.9.rst:353
+#: ../../whatsnew/3.9.rst:352
 msgid ""
 "Added a new :term:`coroutine` "
 ":meth:`~asyncio.loop.shutdown_default_executor` that schedules a shutdown "
@@ -645,7 +639,7 @@ msgstr ""
 ":func:`asyncio.run` було оновлено, щоб використовувати нову "
 ":term:`coroutine`. (Надав Кайл Стенлі в :issue:`34037`.)"
 
-#: ../../whatsnew/3.9.rst:359
+#: ../../whatsnew/3.9.rst:358
 msgid ""
 "Added :class:`asyncio.PidfdChildWatcher`, a Linux-specific child watcher "
 "implementation that polls process file descriptors. (:issue:`38692`)"
@@ -654,7 +648,7 @@ msgstr ""
 "спостерігача для Linux, яка опитує дескриптори файлів процесу. "
 "(:issue:`38692`)"
 
-#: ../../whatsnew/3.9.rst:362
+#: ../../whatsnew/3.9.rst:361
 msgid ""
 "Added a new :term:`coroutine` :func:`asyncio.to_thread`. It is mainly used "
 "for running IO-bound functions in a separate thread to avoid blocking the "
@@ -670,7 +664,7 @@ msgstr ""
 "безпосередньо приймати ключові аргументи. (Надано Кайлом Стенлі та Юрієм "
 "Селівановим у :issue:`32309`.)"
 
-#: ../../whatsnew/3.9.rst:368
+#: ../../whatsnew/3.9.rst:367
 msgid ""
 "When cancelling the task due to a timeout, :meth:`asyncio.wait_for` will now"
 " wait until the cancellation is complete also in the case when *timeout* is "
@@ -682,7 +676,7 @@ msgstr ""
 "це відбувається з позитивними тайм-аутами. (Надав Елвіс Пранскявічус у "
 ":issue:`32751`.)"
 
-#: ../../whatsnew/3.9.rst:373
+#: ../../whatsnew/3.9.rst:372
 msgid ""
 ":mod:`asyncio` now raises :exc:`TyperError` when calling incompatible "
 "methods with an :class:`ssl.SSLSocket` socket. (Contributed by Ido Michael "
@@ -692,11 +686,11 @@ msgstr ""
 "методів із сокетом :class:`ssl.SSLSocket`. (Надав Ідо Майкл у "
 ":issue:`37404`.)"
 
-#: ../../whatsnew/3.9.rst:378
+#: ../../whatsnew/3.9.rst:377
 msgid "compileall"
 msgstr "compileall"
 
-#: ../../whatsnew/3.9.rst:380
+#: ../../whatsnew/3.9.rst:379
 msgid ""
 "Added new possibility to use hardlinks for duplicated ``.pyc`` files: "
 "*hardlink_dupes* parameter and --hardlink-dupes command line option. "
@@ -706,7 +700,7 @@ msgstr ""
 "файлів ``.pyc``: параметр *hardlink_dupes* і параметр командного рядка "
 "--hardlink-dupes. (Надав Lumír 'Frenzy' Balhar у :issue:`40495`.)"
 
-#: ../../whatsnew/3.9.rst:383
+#: ../../whatsnew/3.9.rst:382
 msgid ""
 "Added new options for path manipulation in resulting ``.pyc`` files: "
 "*stripdir*, *prependdir*, *limit_sl_dest* parameters and -s, -p, -e command "
@@ -719,11 +713,11 @@ msgstr ""
 "рядка -s, -p, -e. Додана можливість багаторазово вказувати опцію для рівня "
 "оптимізації. (Надав Lumír 'Frenzy' Balhar у :issue:`38112`.)"
 
-#: ../../whatsnew/3.9.rst:388
+#: ../../whatsnew/3.9.rst:387
 msgid "concurrent.futures"
 msgstr "concurrent.futures"
 
-#: ../../whatsnew/3.9.rst:390
+#: ../../whatsnew/3.9.rst:389
 msgid ""
 "Added a new *cancel_futures* parameter to "
 ":meth:`concurrent.futures.Executor.shutdown` that cancels all pending "
@@ -736,7 +730,7 @@ msgstr ""
 "ф’ючерси, які ще не почали виконуватися, замість того, щоб чекати їх "
 "завершення перед вимкненням виконавця. (Надав Кайл Стенлі в :issue:`39349`.)"
 
-#: ../../whatsnew/3.9.rst:396
+#: ../../whatsnew/3.9.rst:395
 msgid ""
 "Removed daemon threads from :class:`~concurrent.futures.ThreadPoolExecutor` "
 "and :class:`~concurrent.futures.ProcessPoolExecutor`. This improves "
@@ -748,7 +742,7 @@ msgstr ""
 "субінтерпретаторами та передбачуваність процесів їх завершення. (Надав Кайл "
 "Стенлі в :issue:`39812`.)"
 
-#: ../../whatsnew/3.9.rst:401
+#: ../../whatsnew/3.9.rst:400
 msgid ""
 "Workers in :class:`~concurrent.futures.ProcessPoolExecutor` are now spawned "
 "on demand, only when there are no available idle workers to reuse. This "
@@ -761,11 +755,11 @@ msgstr ""
 "кількість втраченого процесорного часу для простою працівників. (Надав Кайл "
 "Стенлі в :issue:`39207`.)"
 
-#: ../../whatsnew/3.9.rst:407
+#: ../../whatsnew/3.9.rst:406
 msgid "curses"
 msgstr "прокльони"
 
-#: ../../whatsnew/3.9.rst:409
+#: ../../whatsnew/3.9.rst:408
 msgid ""
 "Added :func:`curses.get_escdelay`, :func:`curses.set_escdelay`, "
 ":func:`curses.get_tabsize`, and :func:`curses.set_tabsize` functions. "
@@ -775,27 +769,23 @@ msgstr ""
 ":func:`curses.get_tabsize` і :func:`curses.set_tabsize`. (Надав Ентоні "
 "Соттіле в :issue:`38312`.)"
 
-#: ../../whatsnew/3.9.rst:414
+#: ../../whatsnew/3.9.rst:413
 msgid "datetime"
 msgstr "дата, час"
 
-#: ../../whatsnew/3.9.rst:415
+#: ../../whatsnew/3.9.rst:414
 msgid ""
 "The :meth:`~datetime.date.isocalendar()` of :class:`datetime.date` and "
 ":meth:`~datetime.datetime.isocalendar()` of :class:`datetime.datetime` "
 "methods now returns a :func:`~collections.namedtuple` instead of a "
-":class:`tuple`. (Contributed by Dong-hee Na in :issue:`24416`.)"
+":class:`tuple`. (Contributed by Donghee Na in :issue:`24416`.)"
 msgstr ""
-":meth:`~datetime.date.isocalendar()` методів :class:`datetime.date` і "
-":meth:`~datetime.datetime.isocalendar()` :class:`datetime.datetime` тепер "
-"повертає :func:`~collections.namedtuple` замість :class:`tuple`. (Надав "
-"Dong-hee Na у :issue:`24416`.)"
 
-#: ../../whatsnew/3.9.rst:421
+#: ../../whatsnew/3.9.rst:420
 msgid "distutils"
 msgstr "distutils"
 
-#: ../../whatsnew/3.9.rst:423
+#: ../../whatsnew/3.9.rst:422
 msgid ""
 "The :command:`upload` command now creates SHA2-256 and Blake2b-256 hash "
 "digests. It skips MD5 on platforms that block MD5 digest. (Contributed by "
@@ -805,38 +795,34 @@ msgstr ""
 "Blake2b-256. Він пропускає MD5 на платформах, які блокують дайджест MD5. "
 "(Надав Крістіан Хеймс у :issue:`40698`.)"
 
-#: ../../whatsnew/3.9.rst:428
+#: ../../whatsnew/3.9.rst:427
 msgid "fcntl"
 msgstr "fcntl"
 
-#: ../../whatsnew/3.9.rst:430
+#: ../../whatsnew/3.9.rst:429
 msgid ""
 "Added constants :const:`~fcntl.F_OFD_GETLK`, :const:`~fcntl.F_OFD_SETLK` and"
-" :const:`~fcntl.F_OFD_SETLKW`. (Contributed by Dong-hee Na in "
+" :const:`~fcntl.F_OFD_SETLKW`. (Contributed by Donghee Na in "
 ":issue:`38602`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:435
+#: ../../whatsnew/3.9.rst:434
 msgid "ftplib"
 msgstr "ftplib"
 
-#: ../../whatsnew/3.9.rst:437
+#: ../../whatsnew/3.9.rst:436
 msgid ""
 ":class:`~ftplib.FTP` and :class:`~ftplib.FTP_TLS` now raise a "
 ":class:`ValueError` if the given timeout for their constructor is zero to "
-"prevent the creation of a non-blocking socket. (Contributed by Dong-hee Na "
-"in :issue:`39259`.)"
+"prevent the creation of a non-blocking socket. (Contributed by Donghee Na in"
+" :issue:`39259`.)"
 msgstr ""
-":class:`~ftplib.FTP` і :class:`~ftplib.FTP_TLS` тепер викликають "
-":class:`ValueError`, якщо час очікування для їх конструктора дорівнює нулю, "
-"щоб запобігти створенню неблокуючого сокета. (Надав Dong-hee Na у "
-":issue:`39259`.)"
 
-#: ../../whatsnew/3.9.rst:442
+#: ../../whatsnew/3.9.rst:441
 msgid "gc"
 msgstr "gc"
 
-#: ../../whatsnew/3.9.rst:444
+#: ../../whatsnew/3.9.rst:443
 msgid ""
 "When the garbage collector makes a collection in which some objects "
 "resurrect (they are reachable from outside the isolated cycles after the "
@@ -849,7 +835,7 @@ msgstr ""
 "блокуйте колекцію всіх об’єктів, які все ще недоступні. (Надано Пабло "
 "Галіндо та Тімом Пітерсом у :issue:`38379`.)"
 
-#: ../../whatsnew/3.9.rst:449
+#: ../../whatsnew/3.9.rst:448
 msgid ""
 "Added a new function :func:`gc.is_finalized` to check if an object has been "
 "finalized by the garbage collector. (Contributed by Pablo Galindo in "
@@ -858,11 +844,11 @@ msgstr ""
 "Додано нову функцію :func:`gc.is_finalized`, щоб перевірити, чи завершив "
 "об’єкт збирач сміття. (Надав Пабло Галіндо в :issue:`39322`.)"
 
-#: ../../whatsnew/3.9.rst:454
+#: ../../whatsnew/3.9.rst:453
 msgid "hashlib"
 msgstr "хешліб"
 
-#: ../../whatsnew/3.9.rst:456
+#: ../../whatsnew/3.9.rst:455
 msgid ""
 "The :mod:`hashlib` module can now use SHA3 hashes and SHAKE XOF from OpenSSL"
 " when available. (Contributed by Christian Heimes in :issue:`37630`.)"
@@ -870,7 +856,7 @@ msgstr ""
 "Модуль :mod:`hashlib` тепер може використовувати хеші SHA3 і SHAKE XOF з "
 "OpenSSL, якщо вони доступні. (Надав Крістіан Хеймс у :issue:`37630`.)"
 
-#: ../../whatsnew/3.9.rst:460
+#: ../../whatsnew/3.9.rst:459
 msgid ""
 "Builtin hash modules can now be disabled with ``./configure --without-"
 "builtin-hashlib-hashes`` or selectively enabled with e.g. ``./configure "
@@ -883,25 +869,22 @@ msgstr ""
 "примусово використовувати реалізацію на основі OpenSSL. (Надав Крістіан "
 "Хеймс у :issue:`40479`)"
 
-#: ../../whatsnew/3.9.rst:468
+#: ../../whatsnew/3.9.rst:467
 msgid "http"
 msgstr "http"
 
-#: ../../whatsnew/3.9.rst:470
+#: ../../whatsnew/3.9.rst:469
 msgid ""
 "HTTP status codes ``103 EARLY_HINTS``, ``418 IM_A_TEAPOT`` and ``425 "
-"TOO_EARLY`` are added to :class:`http.HTTPStatus`. (Contributed by Dong-hee "
+"TOO_EARLY`` are added to :class:`http.HTTPStatus`. (Contributed by Donghee "
 "Na in :issue:`39509` and Ross Rhodes in :issue:`39507`.)"
 msgstr ""
-"Коди статусу HTTP ``103 EARLY_HINTS``, ``418 IM_A_TEAPOT`` і ``425 "
-"TOO_EARLY`` додаються до :class:`http.HTTPStatus`. (Надано Dong-hee Na у "
-":issue:`39509` та Росс Роудс у :issue:`39507`.)"
 
-#: ../../whatsnew/3.9.rst:474
+#: ../../whatsnew/3.9.rst:473
 msgid "IDLE and idlelib"
 msgstr "IDLE і idlelib"
 
-#: ../../whatsnew/3.9.rst:476
+#: ../../whatsnew/3.9.rst:475
 msgid ""
 "Added option to toggle cursor blink off.  (Contributed by Zackery Spytz in "
 ":issue:`4603`.)"
@@ -909,7 +892,7 @@ msgstr ""
 "Додана опція для вимкнення блимання курсору. (Надав Закері Шпітц у "
 ":issue:`4603`.)"
 
-#: ../../whatsnew/3.9.rst:479
+#: ../../whatsnew/3.9.rst:478
 msgid ""
 "Escape key now closes IDLE completion windows.  (Contributed by Johnny "
 "Najera in :issue:`38944`.)"
@@ -917,7 +900,7 @@ msgstr ""
 "Клавіша Escape тепер закриває вікна завершення IDLE. (Надав Джонні Наджера в"
 " :issue:`38944`.)"
 
-#: ../../whatsnew/3.9.rst:482
+#: ../../whatsnew/3.9.rst:481
 msgid ""
 "Added keywords to module name completion list.  (Contributed by Terry J. "
 "Reedy in :issue:`37765`.)"
@@ -925,11 +908,11 @@ msgstr ""
 "Додано ключові слова до списку завершення імен модуля. (Надано Террі Дж. "
 "Ріді в :issue:`37765`.)"
 
-#: ../../whatsnew/3.9.rst:485
+#: ../../whatsnew/3.9.rst:484
 msgid "New in 3.9 maintenance releases"
 msgstr "Нове у випусках обслуговування 3.9"
 
-#: ../../whatsnew/3.9.rst:487
+#: ../../whatsnew/3.9.rst:486
 msgid ""
 "Make IDLE invoke :func:`sys.excepthook` (when started without '-n'). User "
 "hooks were previously ignored.  (Contributed by Ken Hilton in "
@@ -938,11 +921,11 @@ msgstr ""
 "Зробити IDLE викликом :func:`sys.excepthook` (якщо запускається без '-n'). "
 "Хуки користувача раніше ігнорувалися. (Надав Кен Хілтон у :issue:`43008`.)"
 
-#: ../../whatsnew/3.9.rst:491
+#: ../../whatsnew/3.9.rst:490
 msgid "The changes above have been backported to 3.8 maintenance releases."
 msgstr "Зазначені вище зміни було перенесено до випусків обслуговування 3.8."
 
-#: ../../whatsnew/3.9.rst:493
+#: ../../whatsnew/3.9.rst:492
 msgid ""
 "Rearrange the settings dialog.  Split the General tab into Windows and "
 "Shell/Ed tabs.  Move help sources, which extend the Help menu, to the "
@@ -961,53 +944,41 @@ msgstr ""
 "нову вкладку Windows. (Надано Марком Розманом і Террі Джен Ріді в "
 ":issue:`33962`.)"
 
-#: ../../whatsnew/3.9.rst:501
+#: ../../whatsnew/3.9.rst:500
 msgid ""
 "Apply syntax highlighting to ``.pyi`` files. (Contributed by Alex Waygood "
 "and Terry Jan Reedy in :issue:`45447`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:505
+#: ../../whatsnew/3.9.rst:504
 msgid "imaplib"
 msgstr "імапліб"
 
-#: ../../whatsnew/3.9.rst:507
+#: ../../whatsnew/3.9.rst:506
 msgid ""
 ":class:`~imaplib.IMAP4` and :class:`~imaplib.IMAP4_SSL` now have an optional"
 " *timeout* parameter for their constructors. Also, the "
 ":meth:`~imaplib.IMAP4.open` method now has an optional *timeout* parameter "
 "with this change. The overridden methods of :class:`~imaplib.IMAP4_SSL` and "
 ":class:`~imaplib.IMAP4_stream` were applied to this change. (Contributed by "
-"Dong-hee Na in :issue:`38615`.)"
+"Donghee Na in :issue:`38615`.)"
 msgstr ""
-":class:`~imaplib.IMAP4` і :class:`~imaplib.IMAP4_SSL` тепер мають додатковий"
-" параметр *timeout* для своїх конструкторів. Крім того, завдяки цій зміні "
-"метод :meth:`~imaplib.IMAP4.open` тепер має додатковий параметр *timeout*. "
-"До цієї зміни було застосовано перевизначені методи "
-":class:`~imaplib.IMAP4_SSL` і :class:`~imaplib.IMAP4_stream`. (Надав Dong-"
-"hee Na у :issue:`38615`.)"
 
-#: ../../whatsnew/3.9.rst:514
+#: ../../whatsnew/3.9.rst:513
 msgid ""
 ":meth:`imaplib.IMAP4.unselect` is added. :meth:`imaplib.IMAP4.unselect` "
 "frees server's resources associated with the selected mailbox and returns "
 "the server to the authenticated state. This command performs the same "
 "actions as :meth:`imaplib.IMAP4.close`, except that no messages are "
 "permanently removed from the currently selected mailbox. (Contributed by "
-"Dong-hee Na in :issue:`40375`.)"
+"Donghee Na in :issue:`40375`.)"
 msgstr ""
-":meth:`imaplib.IMAP4.unselect` додано. :meth:`imaplib.IMAP4.unselect` "
-"звільняє ресурси сервера, пов’язані з вибраною поштовою скринькою, і "
-"повертає сервер до автентифікованого стану. Ця команда виконує ті самі дії, "
-"що й :meth:`imaplib.IMAP4.close`, за винятком того, що повідомлення не "
-"видаляються назавжди з поточної вибраної поштової скриньки. (Надав Dong-hee "
-"Na у :issue:`40375`.)"
 
-#: ../../whatsnew/3.9.rst:522
+#: ../../whatsnew/3.9.rst:521
 msgid "importlib"
 msgstr "importlib"
 
-#: ../../whatsnew/3.9.rst:524
+#: ../../whatsnew/3.9.rst:523
 msgid ""
 "To improve consistency with import statements, "
 ":func:`importlib.util.resolve_name` now raises :exc:`ImportError` instead of"
@@ -1019,7 +990,7 @@ msgstr ""
 "замість :exc:`ValueError` для недійсних відносних спроб імпорту. (Надав "
 "Нгалім Сірегар у :issue:`37444`.)"
 
-#: ../../whatsnew/3.9.rst:529
+#: ../../whatsnew/3.9.rst:528
 msgid ""
 "Import loaders which publish immutable module objects can now publish "
 "immutable packages in addition to individual modules. (Contributed by Dino "
@@ -1029,7 +1000,7 @@ msgstr ""
 " публікувати незмінні пакети на додаток до окремих модулів. (Надав Діно "
 "Віланд у :issue:`39336`.)"
 
-#: ../../whatsnew/3.9.rst:533
+#: ../../whatsnew/3.9.rst:532
 msgid ""
 "Added :func:`importlib.resources.files` function with support for "
 "subdirectories in package data, matching backport in ``importlib_resources``"
@@ -1039,17 +1010,17 @@ msgstr ""
 "у даних пакетів, що відповідає бекпорту в ``importlib_resources`` версії "
 "1.5. (Надав Джейсон Р. Кумбс у :issue:`39791`.)"
 
-#: ../../whatsnew/3.9.rst:538
+#: ../../whatsnew/3.9.rst:537
 msgid ""
 "Refreshed ``importlib.metadata`` from ``importlib_metadata`` version 1.6.1."
 msgstr ""
 "Оновлено ``importlib.metadata`` з ``importlib_metadata`` версії 1.6.1."
 
-#: ../../whatsnew/3.9.rst:541
+#: ../../whatsnew/3.9.rst:540
 msgid "inspect"
 msgstr "оглядати"
 
-#: ../../whatsnew/3.9.rst:543
+#: ../../whatsnew/3.9.rst:542
 msgid ""
 ":attr:`inspect.BoundArguments.arguments` is changed from ``OrderedDict`` to "
 "regular dict.  (Contributed by Inada Naoki in :issue:`36350` and "
@@ -1058,11 +1029,11 @@ msgstr ""
 ":attr:`inspect.BoundArguments.arguments` змінено з ``OrderedDict`` на "
 "звичайний dict. (Надано Інадою Наокі в :issue:`36350` і :issue:`39775`.)"
 
-#: ../../whatsnew/3.9.rst:547
+#: ../../whatsnew/3.9.rst:546
 msgid "ipaddress"
 msgstr "IP-адреса"
 
-#: ../../whatsnew/3.9.rst:549
+#: ../../whatsnew/3.9.rst:548
 msgid ""
 ":mod:`ipaddress` now supports IPv6 Scoped Addresses (IPv6 address with "
 "suffix ``%<scope_id>``)."
@@ -1070,7 +1041,7 @@ msgstr ""
 ":mod:`ipaddress` тепер підтримує IPv6 Scoped Addresses (адреса IPv6 із "
 "суфіксом ``% <scope_id>``)."
 
-#: ../../whatsnew/3.9.rst:551
+#: ../../whatsnew/3.9.rst:550
 msgid ""
 "Scoped IPv6 addresses can be parsed using :class:`ipaddress.IPv6Address`. If"
 " present, scope zone ID is available through the "
@@ -1082,7 +1053,7 @@ msgstr ""
 "доступний через атрибут :attr:`~ipaddress.IPv6Address.scope_id`. (Надав "
 "Олександр Павлюк у :issue:`34788`.)"
 
-#: ../../whatsnew/3.9.rst:555
+#: ../../whatsnew/3.9.rst:554
 msgid ""
 "Starting with Python 3.9.5 the :mod:`ipaddress` module no longer accepts any"
 " leading zeros in IPv4 address strings. (Contributed by Christian Heimes in "
@@ -1092,11 +1063,11 @@ msgstr ""
 "початкових нулів у рядках адрес IPv4. (Надав Крістіан Хеймс у "
 ":issue:`36384`)."
 
-#: ../../whatsnew/3.9.rst:560
+#: ../../whatsnew/3.9.rst:559
 msgid "math"
 msgstr "математика"
 
-#: ../../whatsnew/3.9.rst:562
+#: ../../whatsnew/3.9.rst:561
 msgid ""
 "Expanded the :func:`math.gcd` function to handle multiple arguments. "
 "Formerly, it only supported two arguments. (Contributed by Serhiy Storchaka "
@@ -1106,7 +1077,7 @@ msgstr ""
 "він підтримував лише два аргументи. (Надав Сергій Сторчака в "
 ":issue:`39648`.)"
 
-#: ../../whatsnew/3.9.rst:566
+#: ../../whatsnew/3.9.rst:565
 msgid ""
 "Added :func:`math.lcm`: return the least common multiple of specified "
 "arguments. (Contributed by Mark Dickinson, Ananthakrishnan and Serhiy "
@@ -1116,7 +1087,7 @@ msgstr ""
 "аргументів. (Надано Марком Дікінсоном, Анантакрішнаном і Сергієм Сторчакою в"
 " :issue:`39479` і :issue:`39648`.)"
 
-#: ../../whatsnew/3.9.rst:570
+#: ../../whatsnew/3.9.rst:569
 msgid ""
 "Added :func:`math.nextafter`: return the next floating-point value after *x*"
 " towards *y*. (Contributed by Victor Stinner in :issue:`39288`.)"
@@ -1124,7 +1095,7 @@ msgstr ""
 "Додано :func:`math.nextafter`: повертає наступне значення з плаваючою комою "
 "після *x* до *y*. (Надав Віктор Стіннер у :issue:`39288`.)"
 
-#: ../../whatsnew/3.9.rst:574
+#: ../../whatsnew/3.9.rst:573
 msgid ""
 "Added :func:`math.ulp`: return the value of the least significant bit of a "
 "float. (Contributed by Victor Stinner in :issue:`39310`.)"
@@ -1132,11 +1103,11 @@ msgstr ""
 "Додано :func:`math.ulp`: повертає значення молодшого біта числа з плаваючою "
 "точкою. (Надав Віктор Стіннер у :issue:`39310`.)"
 
-#: ../../whatsnew/3.9.rst:579
+#: ../../whatsnew/3.9.rst:578
 msgid "multiprocessing"
 msgstr "багатопроцесорність"
 
-#: ../../whatsnew/3.9.rst:581
+#: ../../whatsnew/3.9.rst:580
 msgid ""
 "The :class:`multiprocessing.SimpleQueue` class has a new "
 ":meth:`~multiprocessing.SimpleQueue.close` method to explicitly close the "
@@ -1146,40 +1117,36 @@ msgstr ""
 ":meth:`~multiprocessing.SimpleQueue.close` для явного закриття черги. (Надав"
 " Віктор Стіннер у :issue:`30966`.)"
 
-#: ../../whatsnew/3.9.rst:587
+#: ../../whatsnew/3.9.rst:586
 msgid "nntplib"
 msgstr "nntplib"
 
-#: ../../whatsnew/3.9.rst:589
+#: ../../whatsnew/3.9.rst:588
 msgid ""
 ":class:`~nntplib.NNTP` and :class:`~nntplib.NNTP_SSL` now raise a "
 ":class:`ValueError` if the given timeout for their constructor is zero to "
-"prevent the creation of a non-blocking socket. (Contributed by Dong-hee Na "
-"in :issue:`39259`.)"
+"prevent the creation of a non-blocking socket. (Contributed by Donghee Na in"
+" :issue:`39259`.)"
 msgstr ""
-":class:`~nntplib.NNTP` і :class:`~nntplib.NNTP_SSL` тепер викликають "
-":class:`ValueError`, якщо заданий тайм-аут для їхнього конструктора дорівнює"
-" нулю, щоб запобігти створенню неблокуючого сокета. (Надав Dong-hee Na у "
-":issue:`39259`.)"
 
-#: ../../whatsnew/3.9.rst:594
+#: ../../whatsnew/3.9.rst:593
 msgid "os"
 msgstr "ос"
 
-#: ../../whatsnew/3.9.rst:596
+#: ../../whatsnew/3.9.rst:595
 msgid ""
 "Added :const:`~os.CLD_KILLED` and :const:`~os.CLD_STOPPED` for "
-":attr:`si_code`. (Contributed by Dong-hee Na in :issue:`38493`.)"
+":attr:`si_code`. (Contributed by Donghee Na in :issue:`38493`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:599
+#: ../../whatsnew/3.9.rst:598
 msgid ""
 "Exposed the Linux-specific :func:`os.pidfd_open` (:issue:`38692`) and "
 ":const:`os.P_PIDFD` (:issue:`38713`) for process management with file "
 "descriptors."
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:603
+#: ../../whatsnew/3.9.rst:602
 msgid ""
 "The :func:`os.unsetenv` function is now also available on Windows. "
 "(Contributed by Victor Stinner in :issue:`39413`.)"
@@ -1187,7 +1154,7 @@ msgstr ""
 "Функція :func:`os.unsetenv` тепер також доступна в Windows. (Надав Віктор "
 "Стіннер у :issue:`39413`.)"
 
-#: ../../whatsnew/3.9.rst:606
+#: ../../whatsnew/3.9.rst:605
 msgid ""
 "The :func:`os.putenv` and :func:`os.unsetenv` functions are now always "
 "available. (Contributed by Victor Stinner in :issue:`39395`.)"
@@ -1195,7 +1162,7 @@ msgstr ""
 "Функції :func:`os.putenv` і :func:`os.unsetenv` тепер завжди доступні. "
 "(Надав Віктор Стіннер у :issue:`39395`.)"
 
-#: ../../whatsnew/3.9.rst:610
+#: ../../whatsnew/3.9.rst:609
 msgid ""
 "Added :func:`os.waitstatus_to_exitcode` function: convert a wait status to "
 "an exit code. (Contributed by Victor Stinner in :issue:`40094`.)"
@@ -1203,11 +1170,11 @@ msgstr ""
 "Додано функцію :func:`os.waitstatus_to_exitcode`: перетворює стан очікування"
 " на код виходу. (Надав Віктор Стіннер у :issue:`40094`.)"
 
-#: ../../whatsnew/3.9.rst:615
+#: ../../whatsnew/3.9.rst:614
 msgid "pathlib"
 msgstr "pathlib"
 
-#: ../../whatsnew/3.9.rst:617
+#: ../../whatsnew/3.9.rst:616
 msgid ""
 "Added :meth:`pathlib.Path.readlink()` which acts similarly to "
 ":func:`os.readlink`. (Contributed by Girts Folkmanis in :issue:`30618`)"
@@ -1215,11 +1182,11 @@ msgstr ""
 "Додано :meth:`pathlib.Path.readlink()`, який діє подібно до "
 ":func:`os.readlink`. (Надав Гіртс Фолкманіс у :issue:`30618`)"
 
-#: ../../whatsnew/3.9.rst:622
+#: ../../whatsnew/3.9.rst:621
 msgid "pdb"
 msgstr "pdb"
 
-#: ../../whatsnew/3.9.rst:624
+#: ../../whatsnew/3.9.rst:623
 msgid ""
 "On Windows now :class:`~pdb.Pdb` supports ``~/.pdbrc``. (Contributed by Tim "
 "Hopper and Dan Lidral-Porter in :issue:`20523`.)"
@@ -1227,27 +1194,23 @@ msgstr ""
 "У Windows тепер :class:`~pdb.Pdb` підтримує ``~/.pdbrc``. (Надано Тімом "
 "Хоппером і Деном Лідралом-Портером у :issue:`20523`.)"
 
-#: ../../whatsnew/3.9.rst:628
+#: ../../whatsnew/3.9.rst:627
 msgid "poplib"
 msgstr "попліб"
 
-#: ../../whatsnew/3.9.rst:630
+#: ../../whatsnew/3.9.rst:629
 msgid ""
 ":class:`~poplib.POP3` and :class:`~poplib.POP3_SSL` now raise a "
 ":class:`ValueError` if the given timeout for their constructor is zero to "
-"prevent the creation of a non-blocking socket. (Contributed by Dong-hee Na "
-"in :issue:`39259`.)"
+"prevent the creation of a non-blocking socket. (Contributed by Donghee Na in"
+" :issue:`39259`.)"
 msgstr ""
-":class:`~poplib.POP3` і :class:`~poplib.POP3_SSL` тепер викликають "
-":class:`ValueError`, якщо час очікування для їх конструктора дорівнює нулю, "
-"щоб запобігти створенню неблокуючого сокета. (Надав Dong-hee Na у "
-":issue:`39259`.)"
 
-#: ../../whatsnew/3.9.rst:635
+#: ../../whatsnew/3.9.rst:634
 msgid "pprint"
 msgstr "pprint"
 
-#: ../../whatsnew/3.9.rst:637
+#: ../../whatsnew/3.9.rst:636
 msgid ""
 ":mod:`pprint` can now pretty-print :class:`types.SimpleNamespace`. "
 "(Contributed by Carl Bordum Hansen in :issue:`37376`.)"
@@ -1255,11 +1218,11 @@ msgstr ""
 ":mod:`pprint` тепер може красиво друкувати :class:`types.SimpleNamespace`. "
 "(Надав Карл Бордум Хансен у :issue:`37376`.)"
 
-#: ../../whatsnew/3.9.rst:641
+#: ../../whatsnew/3.9.rst:640
 msgid "pydoc"
 msgstr "pydoc"
 
-#: ../../whatsnew/3.9.rst:643
+#: ../../whatsnew/3.9.rst:642
 msgid ""
 "The documentation string is now shown not only for class, function, method "
 "etc, but for any object that has its own ``__doc__`` attribute. (Contributed"
@@ -1269,11 +1232,11 @@ msgstr ""
 "тощо, але й для будь-якого об’єкта, який має власний атрибут ``__doc__``. "
 "(Надав Сергій Сторчака в :issue:`40257`.)"
 
-#: ../../whatsnew/3.9.rst:648
+#: ../../whatsnew/3.9.rst:647
 msgid "random"
 msgstr "випадковий"
 
-#: ../../whatsnew/3.9.rst:650
+#: ../../whatsnew/3.9.rst:649
 msgid ""
 "Added a new :attr:`random.Random.randbytes` method: generate random bytes. "
 "(Contributed by Victor Stinner in :issue:`40286`.)"
@@ -1281,11 +1244,11 @@ msgstr ""
 "Додано новий метод :attr:`random.Random.randbytes`: генерувати випадкові "
 "байти. (Надав Віктор Стіннер у :issue:`40286`.)"
 
-#: ../../whatsnew/3.9.rst:654
+#: ../../whatsnew/3.9.rst:653
 msgid "signal"
 msgstr "сигнал"
 
-#: ../../whatsnew/3.9.rst:656
+#: ../../whatsnew/3.9.rst:655
 msgid ""
 "Exposed the Linux-specific :func:`signal.pidfd_send_signal` for sending to "
 "signals to a process using a file descriptor instead of a pid. "
@@ -1295,48 +1258,42 @@ msgstr ""
 "надсилання сигналів до процесу за допомогою файлового дескриптора замість "
 "pid. (:issue:`38712`)"
 
-#: ../../whatsnew/3.9.rst:660
+#: ../../whatsnew/3.9.rst:659
 msgid "smtplib"
 msgstr "smtplib"
 
-#: ../../whatsnew/3.9.rst:662
+#: ../../whatsnew/3.9.rst:661
 msgid ""
 ":class:`~smtplib.SMTP` and :class:`~smtplib.SMTP_SSL` now raise a "
 ":class:`ValueError` if the given timeout for their constructor is zero to "
-"prevent the creation of a non-blocking socket. (Contributed by Dong-hee Na "
-"in :issue:`39259`.)"
+"prevent the creation of a non-blocking socket. (Contributed by Donghee Na in"
+" :issue:`39259`.)"
 msgstr ""
-":class:`~smtplib.SMTP` і :class:`~smtplib.SMTP_SSL` тепер викликають "
-":class:`ValueError`, якщо заданий тайм-аут для їхнього конструктора дорівнює"
-" нулю, щоб запобігти створенню неблокуючого сокета. (Надав Dong-hee Na у "
-":issue:`39259`.)"
 
-#: ../../whatsnew/3.9.rst:666
+#: ../../whatsnew/3.9.rst:665
 msgid ""
 ":class:`~smtplib.LMTP` constructor  now has an optional *timeout* parameter."
-" (Contributed by Dong-hee Na in :issue:`39329`.)"
+" (Contributed by Donghee Na in :issue:`39329`.)"
 msgstr ""
-":class:`~smtplib.LMTP` конструктор тепер має додатковий параметр *timeout*. "
-"(Надав Dong-hee Na у :issue:`39329`.)"
 
-#: ../../whatsnew/3.9.rst:670
+#: ../../whatsnew/3.9.rst:669
 msgid "socket"
 msgstr "гніздо"
 
-#: ../../whatsnew/3.9.rst:672
+#: ../../whatsnew/3.9.rst:671
 msgid ""
 "The :mod:`socket` module now exports the "
 ":const:`~socket.CAN_RAW_JOIN_FILTERS` constant on Linux 4.1 and greater. "
 "(Contributed by Stefan Tatschner and Zackery Spytz in :issue:`25780`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:676
+#: ../../whatsnew/3.9.rst:675
 msgid ""
 "The socket module now supports the :const:`~socket.CAN_J1939` protocol on "
 "platforms that support it.  (Contributed by Karl Ding in :issue:`40291`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:679
+#: ../../whatsnew/3.9.rst:678
 msgid ""
 "The socket module now has the :func:`socket.send_fds` and "
 ":func:`socket.recv_fds` functions. (Contributed by Joannah Nanjekye, Shinya "
@@ -1346,11 +1303,11 @@ msgstr ""
 ":func:`socket.recv_fds`. (Надано Joannah Nanjekye, Shinya Okano та Victor "
 "Stinner у :issue:`28724`.)"
 
-#: ../../whatsnew/3.9.rst:685
+#: ../../whatsnew/3.9.rst:684
 msgid "time"
 msgstr "час"
 
-#: ../../whatsnew/3.9.rst:687
+#: ../../whatsnew/3.9.rst:686
 msgid ""
 "On AIX, :func:`~time.thread_time` is now implemented with "
 "``thread_cputime()`` which has nanosecond resolution, rather than "
@@ -1358,11 +1315,11 @@ msgid ""
 "milliseconds. (Contributed by Batuhan Taskaya in :issue:`40192`)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:693
+#: ../../whatsnew/3.9.rst:692
 msgid "sys"
 msgstr "система"
 
-#: ../../whatsnew/3.9.rst:695
+#: ../../whatsnew/3.9.rst:694
 msgid ""
 "Added a new :data:`sys.platlibdir` attribute: name of the platform-specific "
 "library directory. It is used to build the path of standard library and the "
@@ -1372,18 +1329,18 @@ msgid ""
 "and Victor Stinner in :issue:`1294959`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:701
+#: ../../whatsnew/3.9.rst:700
 msgid ""
 "Previously, :data:`sys.stderr` was block-buffered when non-interactive. Now "
 "``stderr`` defaults to always being line-buffered. (Contributed by Jendrik "
 "Seipp in :issue:`13601`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:706
+#: ../../whatsnew/3.9.rst:705
 msgid "tracemalloc"
 msgstr "tracemalloc"
 
-#: ../../whatsnew/3.9.rst:708
+#: ../../whatsnew/3.9.rst:707
 msgid ""
 "Added :func:`tracemalloc.reset_peak` to set the peak size of traced memory "
 "blocks to the current size, to measure the peak of specific pieces of code. "
@@ -1393,11 +1350,11 @@ msgstr ""
 " відстежуваних блоків пам’яті на поточний розмір, щоб виміряти пік певних "
 "фрагментів коду. (Надав Хуон Вілсон у :issue:`40630`.)"
 
-#: ../../whatsnew/3.9.rst:713 ../../whatsnew/3.9.rst:1496
+#: ../../whatsnew/3.9.rst:712 ../../whatsnew/3.9.rst:1495
 msgid "typing"
 msgstr "введення тексту"
 
-#: ../../whatsnew/3.9.rst:715
+#: ../../whatsnew/3.9.rst:714
 msgid ""
 ":pep:`593` introduced an :data:`typing.Annotated` type to decorate existing "
 "types with context-specific metadata and new ``include_extras`` parameter to"
@@ -1409,20 +1366,20 @@ msgstr ""
 "для :func:`typing.get_type_hints` для доступу до метаданих під час "
 "виконання. (Надано Тіллем Варокво та Костянтином Кашиним.)"
 
-#: ../../whatsnew/3.9.rst:721
+#: ../../whatsnew/3.9.rst:720
 msgid "unicodedata"
 msgstr "unicodedata"
 
-#: ../../whatsnew/3.9.rst:723
+#: ../../whatsnew/3.9.rst:722
 msgid ""
 "The Unicode database has been updated to version 13.0.0. (:issue:`39926`)."
 msgstr "Базу даних Unicode оновлено до версії 13.0.0. (:issue:`39926`)."
 
-#: ../../whatsnew/3.9.rst:726
+#: ../../whatsnew/3.9.rst:725
 msgid "venv"
 msgstr "venv"
 
-#: ../../whatsnew/3.9.rst:728
+#: ../../whatsnew/3.9.rst:727
 msgid ""
 "The activation scripts provided by :mod:`venv` now all specify their prompt "
 "customization consistently by always using the value specified by "
@@ -1438,11 +1395,11 @@ msgstr ""
 " за замовчуванням), а один замість цього використовував ``__VENV_NAME__``. "
 "(Надано Бреттом Кенноном у :issue:`37663`.)"
 
-#: ../../whatsnew/3.9.rst:736
+#: ../../whatsnew/3.9.rst:735
 msgid "xml"
 msgstr "xml"
 
-#: ../../whatsnew/3.9.rst:738
+#: ../../whatsnew/3.9.rst:737
 msgid ""
 "White space characters within attributes are now preserved when serializing "
 ":mod:`xml.etree.ElementTree` to XML file. EOLNs are no longer normalized to "
@@ -1454,11 +1411,11 @@ msgstr ""
 "\"\\n\". Це результат обговорення того, як інтерпретувати розділ 2.11 "
 "специфікації XML. (Надано Mefistotelis у :issue:`39011`.)"
 
-#: ../../whatsnew/3.9.rst:746
+#: ../../whatsnew/3.9.rst:745
 msgid "Optimizations"
 msgstr "Оптимізації"
 
-#: ../../whatsnew/3.9.rst:748
+#: ../../whatsnew/3.9.rst:747
 msgid ""
 "Optimized the idiom for assignment a temporary variable in comprehensions. "
 "Now ``for y in [expr]`` in comprehensions is as fast as a simple assignment "
@@ -1468,11 +1425,11 @@ msgstr ""
 "``для y в [expr]`` в розуміннях так само швидко, як просте присвоєння ``y = "
 "expr``. Наприклад:"
 
-#: ../../whatsnew/3.9.rst:752
+#: ../../whatsnew/3.9.rst:751
 msgid "sums = [s for s in [0] for x in data for s in [s + x]]"
 msgstr "суми = [s для s у [0] для x у даних для s у [s + x]]"
 
-#: ../../whatsnew/3.9.rst:754
+#: ../../whatsnew/3.9.rst:753
 msgid ""
 "Unlike the ``:=`` operator this idiom does not leak a variable to the outer "
 "scope."
@@ -1480,11 +1437,11 @@ msgstr ""
 "На відміну від оператора ``:=``, ця ідіома не пропускає змінну до зовнішньої"
 " області."
 
-#: ../../whatsnew/3.9.rst:757
+#: ../../whatsnew/3.9.rst:756
 msgid "(Contributed by Serhiy Storchaka in :issue:`32856`.)"
 msgstr "(Надав Сергій Сторчака в :issue:`32856`.)"
 
-#: ../../whatsnew/3.9.rst:759
+#: ../../whatsnew/3.9.rst:758
 msgid ""
 "Optimized signal handling in multithreaded applications. If a thread "
 "different than the main thread gets a signal, the bytecode evaluation loop "
@@ -1498,7 +1455,7 @@ msgstr ""
 "незавершених сигналів, які не можуть бути оброблені. Тільки основний потік "
 "головного інтерпретатора може обробляти сигнали."
 
-#: ../../whatsnew/3.9.rst:765
+#: ../../whatsnew/3.9.rst:764
 msgid ""
 "Previously, the bytecode evaluation loop was interrupted at each instruction"
 " until the main thread handles signals. (Contributed by Victor Stinner in "
@@ -1507,7 +1464,7 @@ msgstr ""
 "Раніше цикл оцінки байт-коду переривався на кожній інструкції, доки основний"
 " потік не обробить сигнали. (Надав Віктор Стіннер у :issue:`40010`.)"
 
-#: ../../whatsnew/3.9.rst:769
+#: ../../whatsnew/3.9.rst:768
 msgid ""
 "Optimized the :mod:`subprocess` module on FreeBSD using ``closefrom()``. "
 "(Contributed by Ed Maste, Conrad Meyer, Kyle Evans, Kubilay Kocak and Victor"
@@ -1517,25 +1474,21 @@ msgstr ""
 "``closefrom()``. (Надано Едом Масте, Конрадом Майєром, Кайлом Евансом, "
 "Кубілаєм Коцаком і Віктором Стіннером у :issue:`38061`.)"
 
-#: ../../whatsnew/3.9.rst:773
+#: ../../whatsnew/3.9.rst:772
 msgid ""
 ":c:func:`PyLong_FromDouble` is now up to 1.87x faster for values that fit "
 "into :c:expr:`long`. (Contributed by Sergey Fedoseev in :issue:`37986`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:777
+#: ../../whatsnew/3.9.rst:776
 msgid ""
 "A number of Python builtins (:class:`range`, :class:`tuple`, :class:`set`, "
 ":class:`frozenset`, :class:`list`, :class:`dict`) are now sped up by using "
-":pep:`590` vectorcall protocol. (Contributed by Dong-hee Na, Mark Shannon, "
+":pep:`590` vectorcall protocol. (Contributed by Donghee Na, Mark Shannon, "
 "Jeroen Demeyer and Petr Viktorin in :issue:`37207`.)"
 msgstr ""
-"Низка вбудованих модулів Python (:class:`range`, :class:`tuple`, "
-":class:`set`, :class:`frozenset`, :class:`list`, :class:`dict`) тепер "
-"прискорюється за допомогою протоколу vectorcall :pep:`590`. (Надано Dong-hee"
-" Na, Mark Shannon, Jeroen Demeyer та Petr Viktorin у :issue:`37207`.)"
 
-#: ../../whatsnew/3.9.rst:782
+#: ../../whatsnew/3.9.rst:781
 msgid ""
 "Optimized :func:`~set.difference_update` for the case when the other set is "
 "much larger than the base set. (Suggested by Evgeny Kapun with code "
@@ -1545,7 +1498,7 @@ msgstr ""
 "набагато більший за базовий набір. (Запропоновано Євгеном Капуном із кодом, "
 "наданим Мікеле Орру в :issue:`8425`.)"
 
-#: ../../whatsnew/3.9.rst:786
+#: ../../whatsnew/3.9.rst:785
 msgid ""
 "Python's small object allocator (``obmalloc.c``) now allows (no more than) "
 "one empty arena to remain available for immediate reuse, without returning "
@@ -1559,17 +1512,14 @@ msgstr ""
 " арена може бути створена та знищена заново на кожній ітерації. (Надав Тім "
 "Пітерс у :issue:`37257`.)"
 
-#: ../../whatsnew/3.9.rst:792
+#: ../../whatsnew/3.9.rst:791
 msgid ""
 ":term:`floor division` of float operation now has a better performance. Also"
 " the message of :exc:`ZeroDivisionError` for this operation is updated. "
-"(Contributed by Dong-hee Na in :issue:`39434`.)"
+"(Contributed by Donghee Na in :issue:`39434`.)"
 msgstr ""
-":term:`floor division` операції float тепер має кращу продуктивність. Також "
-"оновлено повідомлення :exc:`ZeroDivisionError` для цієї операції. (Надав "
-"Dong-hee Na у :issue:`39434`.)"
 
-#: ../../whatsnew/3.9.rst:796
+#: ../../whatsnew/3.9.rst:795
 msgid ""
 "Decoding short ASCII strings with UTF-8 and ascii codecs is now about 15% "
 "faster.  (Contributed by Inada Naoki in :issue:`37348`.)"
@@ -1577,13 +1527,13 @@ msgstr ""
 "Декодування коротких рядків ASCII за допомогою кодеків UTF-8 і ascii тепер "
 "приблизно на 15% швидше. (Надано Інадою Наокі в :issue:`37348`.)"
 
-#: ../../whatsnew/3.9.rst:799
+#: ../../whatsnew/3.9.rst:798
 msgid ""
 "Here's a summary of performance improvements from Python 3.4 through Python "
 "3.9:"
 msgstr "Ось підсумок покращень продуктивності від Python 3.4 до Python 3.9:"
 
-#: ../../whatsnew/3.9.rst:846
+#: ../../whatsnew/3.9.rst:845
 msgid ""
 "These results were generated from the variable access benchmark script at: "
 "``Tools/scripts/var_access_benchmark.py``. The benchmark script displays "
@@ -1595,11 +1545,11 @@ msgid ""
 "<https://www.python.org/downloads/macos/>`_."
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:856
+#: ../../whatsnew/3.9.rst:855
 msgid "Deprecated"
 msgstr "Застаріле"
 
-#: ../../whatsnew/3.9.rst:858
+#: ../../whatsnew/3.9.rst:857
 msgid ""
 "The distutils ``bdist_msi`` command is now deprecated, use ``bdist_wheel`` "
 "(wheel packages) instead. (Contributed by Hugo van Kemenade in "
@@ -1608,7 +1558,7 @@ msgstr ""
 "Команда distutils ``bdist_msi`` тепер застаріла, замість неї використовуйте "
 "``bdist_wheel`` (пакети колеса). (Надав Хуго ван Кеменаде в :issue:`39586`.)"
 
-#: ../../whatsnew/3.9.rst:862
+#: ../../whatsnew/3.9.rst:861
 msgid ""
 "Currently :func:`math.factorial` accepts :class:`float` instances with non-"
 "negative integer values (like ``5.0``).  It raises a :exc:`ValueError` for "
@@ -1622,7 +1572,7 @@ msgstr ""
 " це застаріле. У майбутніх версіях Python він викличе :exc:`TypeError` для "
 "всіх плаваючих значень. (Надав Сергій Сторчака в :issue:`37315`.)"
 
-#: ../../whatsnew/3.9.rst:868
+#: ../../whatsnew/3.9.rst:867
 msgid ""
 "The :mod:`parser` and :mod:`symbol` modules are deprecated and will be "
 "removed in future versions of Python. For the majority of use cases, users "
@@ -1634,7 +1584,7 @@ msgstr ""
 "можуть використовувати етап генерації та компіляції абстрактного "
 "синтаксичного дерева (AST) за допомогою модуля :mod:`ast`."
 
-#: ../../whatsnew/3.9.rst:873
+#: ../../whatsnew/3.9.rst:872
 msgid ""
 "The Public C API functions :c:func:`!PyParser_SimpleParseStringFlags`, "
 ":c:func:`!PyParser_SimpleParseStringFlagsFilename`, "
@@ -1642,7 +1592,7 @@ msgid ""
 "deprecated and will be removed in Python 3.10 together with the old parser."
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:878
+#: ../../whatsnew/3.9.rst:877
 msgid ""
 "Using :data:`NotImplemented` in a boolean context has been deprecated, as it"
 " is almost exclusively the result of incorrect rich comparator "
@@ -1654,7 +1604,7 @@ msgstr ""
 "компаратора. У майбутній версії Python це буде зроблено як :exc:`TypeError`."
 " (Надав Джош Розенберг у :issue:`35712`.)"
 
-#: ../../whatsnew/3.9.rst:884
+#: ../../whatsnew/3.9.rst:883
 msgid ""
 "The :mod:`random` module currently accepts any hashable type as a possible "
 "seed value.  Unfortunately, some of those types are not guaranteed to have a"
@@ -1668,7 +1618,7 @@ msgstr ""
 "значення до :const:`None`, :class:`int`, :class:`float`, :class:`str`, "
 ":class:`bytes` і :class:`bytearray`."
 
-#: ../../whatsnew/3.9.rst:890
+#: ../../whatsnew/3.9.rst:889
 msgid ""
 "Opening the :class:`~gzip.GzipFile` file for writing without specifying the "
 "*mode* argument is deprecated.  In future Python versions it will always be "
@@ -1681,7 +1631,7 @@ msgstr ""
 "читання за умовчанням. Укажіть аргумент *mode*, щоб відкрити його для запису"
 " та вимкнення попередження. (Надав Сергій Сторчака в :issue:`28286`.)"
 
-#: ../../whatsnew/3.9.rst:896
+#: ../../whatsnew/3.9.rst:895
 msgid ""
 "Deprecated the ``split()`` method of :class:`_tkinter.TkappType` in favour "
 "of the ``splitlist()`` method which has more consistent and predicable "
@@ -1691,7 +1641,7 @@ msgstr ""
 "``splitlist()``, який має більш узгоджену та передбачувану поведінку. (Надав"
 " Сергій Сторчака в :issue:`38371`.)"
 
-#: ../../whatsnew/3.9.rst:901
+#: ../../whatsnew/3.9.rst:900
 msgid ""
 "The explicit passing of coroutine objects to :func:`asyncio.wait` has been "
 "deprecated and will be removed in version 3.11. (Contributed by Yury "
@@ -1701,7 +1651,7 @@ msgstr ""
 "буде видалено у версії 3.11. (Надано Юрієм Селівановим і Кайлом Стенлі в "
 ":issue:`34790`.)"
 
-#: ../../whatsnew/3.9.rst:905
+#: ../../whatsnew/3.9.rst:904
 msgid ""
 "binhex4 and hexbin4 standards are now deprecated. The :mod:`binhex` module "
 "and the following :mod:`binascii` functions are now deprecated:"
@@ -1709,19 +1659,19 @@ msgstr ""
 "Стандарти binhex4 і hexbin4 тепер застаріли. Модуль :mod:`binhex` і такі "
 "функції :mod:`binascii` тепер застаріли:"
 
-#: ../../whatsnew/3.9.rst:908
+#: ../../whatsnew/3.9.rst:907
 msgid ":func:`~binascii.b2a_hqx`, :func:`~binascii.a2b_hqx`"
 msgstr ":func:`~binascii.b2a_hqx`, :func:`~binascii.a2b_hqx`"
 
-#: ../../whatsnew/3.9.rst:909
+#: ../../whatsnew/3.9.rst:908
 msgid ":func:`~binascii.rlecode_hqx`, :func:`~binascii.rledecode_hqx`"
 msgstr ":func:`~binascii.rlecode_hqx`, :func:`~binascii.rledecode_hqx`"
 
-#: ../../whatsnew/3.9.rst:911
+#: ../../whatsnew/3.9.rst:910
 msgid "(Contributed by Victor Stinner in :issue:`39353`.)"
 msgstr "(Надав Віктор Стіннер у :issue:`39353`.)"
 
-#: ../../whatsnew/3.9.rst:913
+#: ../../whatsnew/3.9.rst:912
 msgid ""
 ":mod:`ast` classes ``slice``, ``Index`` and ``ExtSlice`` are considered "
 "deprecated and will be removed in future Python versions.  ``value`` itself "
@@ -1735,7 +1685,7 @@ msgstr ""
 " використовувати замість ``ExtSlice(slices)``. (Надав Сергій Сторчака в "
 ":issue:`34822`.)"
 
-#: ../../whatsnew/3.9.rst:919
+#: ../../whatsnew/3.9.rst:918
 msgid ""
 ":mod:`ast` classes ``Suite``, ``Param``, ``AugLoad`` and ``AugStore`` are "
 "considered deprecated and will be removed in future Python versions. They "
@@ -1749,7 +1699,7 @@ msgstr ""
 "Batuhan Taskaya в :issue:`39639` і :issue:`39969` та Сергій Сторчака в "
 ":issue:`39988`.)"
 
-#: ../../whatsnew/3.9.rst:926
+#: ../../whatsnew/3.9.rst:925
 msgid ""
 "The :c:func:`!PyEval_InitThreads` and :c:func:`!PyEval_ThreadsInitialized` "
 "functions are now deprecated and will be removed in Python 3.11. Calling "
@@ -1758,7 +1708,7 @@ msgid ""
 "Victor Stinner in :issue:`39877`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:932
+#: ../../whatsnew/3.9.rst:931
 msgid ""
 "Passing ``None`` as the first argument to the :func:`shlex.split` function "
 "has been deprecated.  (Contributed by Zackery Spytz in :issue:`33262`.)"
@@ -1766,7 +1716,7 @@ msgstr ""
 "Передача ``None`` як першого аргументу функції :func:`shlex.split` "
 "застаріла. (Надав Закері Шпітц у :issue:`33262`.)"
 
-#: ../../whatsnew/3.9.rst:935
+#: ../../whatsnew/3.9.rst:934
 msgid ""
 ":func:`smtpd.MailmanProxy` is now deprecated as it is unusable without an "
 "external module, ``mailman``.  (Contributed by Samuel Colvin in "
@@ -1776,7 +1726,7 @@ msgstr ""
 "використовувати без зовнішнього модуля, ``mailman``. (Надав Семюель Колвін у"
 " :issue:`35800`.)"
 
-#: ../../whatsnew/3.9.rst:938
+#: ../../whatsnew/3.9.rst:937
 msgid ""
 "The :mod:`lib2to3` module now emits a :exc:`PendingDeprecationWarning`. "
 "Python 3.9 switched to a PEG parser (see :pep:`617`), and Python 3.10 may "
@@ -1792,7 +1742,7 @@ msgstr ""
 "майбутній версії Python. Розгляньте сторонні альтернативи, такі як `LibCST`_"
 " або `parso`_. (Надано Карлом Майєром у :issue:`40360`.)"
 
-#: ../../whatsnew/3.9.rst:946
+#: ../../whatsnew/3.9.rst:945
 msgid ""
 "The *random* parameter of :func:`random.shuffle` has been deprecated. "
 "(Contributed by Raymond Hettinger in :issue:`40465`)"
@@ -1800,31 +1750,26 @@ msgstr ""
 "Параметр *random* :func:`random.shuffle` застарів. (Надав Реймонд Геттінгер "
 "у :issue:`40465`)"
 
-#: ../../whatsnew/3.9.rst:955 ../../whatsnew/3.9.rst:1410
+#: ../../whatsnew/3.9.rst:954 ../../whatsnew/3.9.rst:1409
 msgid "Removed"
 msgstr "Видалено"
 
-#: ../../whatsnew/3.9.rst:957
+#: ../../whatsnew/3.9.rst:956
 msgid ""
 "The erroneous version at :data:`unittest.mock.__version__` has been removed."
 msgstr "Помилкову версію в :data:`unittest.mock.__version__` було видалено."
 
-#: ../../whatsnew/3.9.rst:959
+#: ../../whatsnew/3.9.rst:958
 msgid ""
 ":class:`nntplib.NNTP`: ``xpath()`` and ``xgtitle()`` methods have been "
 "removed. These methods are deprecated since Python 3.3. Generally, these "
 "extensions are not supported or not enabled by NNTP server administrators. "
 "For ``xgtitle()``, please use :meth:`nntplib.NNTP.descriptions` or "
-":meth:`nntplib.NNTP.description` instead. (Contributed by Dong-hee Na in "
+":meth:`nntplib.NNTP.description` instead. (Contributed by Donghee Na in "
 ":issue:`39366`.)"
 msgstr ""
-":class:`nntplib.NNTP`: методи ``xpath()`` і ``xgtitle()`` видалено. Ці "
-"методи застаріли з Python 3.3. Як правило, ці розширення не підтримуються "
-"або не ввімкнені адміністраторами NNTP-сервера. Для ``xgtitle()`` "
-"використовуйте замість цього :meth:`nntplib.NNTP.descriptions` або "
-":meth:`nntplib.NNTP.description`. (Надав Dong-hee Na у :issue:`39366`.)"
 
-#: ../../whatsnew/3.9.rst:966
+#: ../../whatsnew/3.9.rst:965
 msgid ""
 ":class:`array.array`: ``tostring()`` and ``fromstring()`` methods have been "
 "removed. They were aliases to ``tobytes()`` and ``frombytes()``, deprecated "
@@ -1834,7 +1779,7 @@ msgstr ""
 " були псевдоніми для ``tobytes()`` і ``frombytes()``, застарілих з Python "
 "3.2. (Надав Віктор Стіннер у :issue:`38916`.)"
 
-#: ../../whatsnew/3.9.rst:971
+#: ../../whatsnew/3.9.rst:970
 msgid ""
 "The undocumented ``sys.callstats()`` function has been removed. Since Python"
 " 3.7, it was deprecated and always returned :const:`None`. It required a "
@@ -1846,7 +1791,7 @@ msgstr ""
 "потрібен був спеціальний параметр збірки ``CALL_PROFILE``, який уже було "
 "видалено в Python 3.7. (Надав Віктор Стіннер у :issue:`37414`.)"
 
-#: ../../whatsnew/3.9.rst:976
+#: ../../whatsnew/3.9.rst:975
 msgid ""
 "The ``sys.getcheckinterval()`` and ``sys.setcheckinterval()`` functions have"
 " been removed. They were deprecated since Python 3.2. Use "
@@ -1858,7 +1803,7 @@ msgstr ""
 ":func:`sys.getswitchinterval` і :func:`sys.setswitchinterval`. (Надав Віктор"
 " Стіннер у :issue:`37392`.)"
 
-#: ../../whatsnew/3.9.rst:981
+#: ../../whatsnew/3.9.rst:980
 msgid ""
 "The C function ``PyImport_Cleanup()`` has been removed. It was documented "
 "as: \"Empty the module table.  For internal use only.\" (Contributed by "
@@ -1868,7 +1813,7 @@ msgstr ""
 "\"Очистити таблицю модулів. Тільки для внутрішнього використання\". (Надав "
 "Віктор Стіннер у :issue:`36710`.)"
 
-#: ../../whatsnew/3.9.rst:985
+#: ../../whatsnew/3.9.rst:984
 msgid ""
 "``_dummy_thread`` and ``dummy_threading`` modules have been removed. These "
 "modules were deprecated since Python 3.7 which requires threading support. "
@@ -1878,7 +1823,7 @@ msgstr ""
 " з Python 3.7, який потребує підтримки потоків. (Надав Віктор Стіннер у "
 ":issue:`37312`.)"
 
-#: ../../whatsnew/3.9.rst:989
+#: ../../whatsnew/3.9.rst:988
 msgid ""
 "``aifc.openfp()`` alias to ``aifc.open()``, ``sunau.openfp()`` alias to "
 "``sunau.open()``, and ``wave.openfp()`` alias to :func:`wave.open()` have "
@@ -1890,19 +1835,15 @@ msgstr ""
 "видалено. Вони застаріли з Python 3.7. (Надав Віктор Стіннер у "
 ":issue:`37320`.)"
 
-#: ../../whatsnew/3.9.rst:994
+#: ../../whatsnew/3.9.rst:993
 msgid ""
 "The :meth:`~threading.Thread.isAlive()` method of :class:`threading.Thread` "
 "has been removed. It was deprecated since Python 3.8. Use "
-":meth:`~threading.Thread.is_alive()` instead. (Contributed by Dong-hee Na in"
-" :issue:`37804`.)"
-msgstr ""
-"Метод :meth:`~threading.Thread.isAlive()` :class:`threading.Thread` "
-"видалено. Він був застарілим, починаючи з Python 3.8. Замість цього "
-"використовуйте :meth:`~threading.Thread.is_alive()`. (Надав Dong-hee Na у "
+":meth:`~threading.Thread.is_alive()` instead. (Contributed by Donghee Na in "
 ":issue:`37804`.)"
+msgstr ""
 
-#: ../../whatsnew/3.9.rst:999
+#: ../../whatsnew/3.9.rst:998
 msgid ""
 "Methods ``getchildren()`` and ``getiterator()`` of classes "
 ":class:`~xml.etree.ElementTree.ElementTree` and "
@@ -1920,7 +1861,7 @@ msgstr ""
 "``x.iter()`` або ``list(x.iter())`` замість ``x.getiterator()``. (Надав "
 "Сергій Сторчака в :issue:`36543`.)"
 
-#: ../../whatsnew/3.9.rst:1007
+#: ../../whatsnew/3.9.rst:1006
 msgid ""
 "The old :mod:`plistlib` API has been removed, it was deprecated since Python"
 " 3.4. Use the :func:`~plistlib.load`, :func:`~plistlib.loads`, "
@@ -1935,7 +1876,7 @@ msgstr ""
 "параметр *use_builtin_types*, замість нього завжди використовуються "
 "стандартні об’єкти :class:`bytes`. (Надав Джон Янзен у :issue:`36409`.)"
 
-#: ../../whatsnew/3.9.rst:1013
+#: ../../whatsnew/3.9.rst:1012
 msgid ""
 "The C function ``PyGen_NeedsFinalizing`` has been removed. It was not "
 "documented, tested, or used anywhere within CPython after the implementation"
@@ -1947,7 +1888,7 @@ msgstr ""
 ":pep:`442`. Патч від Joannah Nanjekye. (Надано Joannah Nanjekye в "
 ":issue:`15088`)"
 
-#: ../../whatsnew/3.9.rst:1018
+#: ../../whatsnew/3.9.rst:1017
 msgid ""
 "``base64.encodestring()`` and ``base64.decodestring()``, aliases deprecated "
 "since Python 3.1, have been removed: use :func:`base64.encodebytes` and "
@@ -1959,7 +1900,7 @@ msgstr ""
 ":func:`base64.encodebytes` і :func:`base64.decodebytes`. (Надав Віктор "
 "Стіннер у :issue:`39351`.)"
 
-#: ../../whatsnew/3.9.rst:1023
+#: ../../whatsnew/3.9.rst:1022
 msgid ""
 "``fractions.gcd()`` function has been removed, it was deprecated since "
 "Python 3.5 (:issue:`22486`): use :func:`math.gcd` instead. (Contributed by "
@@ -1969,7 +1910,7 @@ msgstr ""
 "(:issue:`22486`): замість неї використовуйте :func:`math.gcd`. (Надав Віктор"
 " Стіннер у :issue:`39350`.)"
 
-#: ../../whatsnew/3.9.rst:1027
+#: ../../whatsnew/3.9.rst:1026
 msgid ""
 "The *buffering* parameter of :class:`bz2.BZ2File` has been removed. Since "
 "Python 3.0, it was ignored and using it emitted a :exc:`DeprecationWarning`."
@@ -1982,7 +1923,7 @@ msgstr ""
 "контролювати, як відкривається файл. (Надав Віктор Стіннер у "
 ":issue:`39357`.)"
 
-#: ../../whatsnew/3.9.rst:1032
+#: ../../whatsnew/3.9.rst:1031
 msgid ""
 "The *encoding* parameter of :func:`json.loads` has been removed. As of "
 "Python 3.1, it was deprecated and ignored; using it has emitted a "
@@ -1994,7 +1935,7 @@ msgstr ""
 ":exc:`DeprecationWarning`, починаючи з Python 3.8. (Надано Інадою Наокі в "
 ":issue:`39377`)"
 
-#: ../../whatsnew/3.9.rst:1037
+#: ../../whatsnew/3.9.rst:1036
 msgid ""
 "``with (await asyncio.lock):`` and ``with (yield from asyncio.lock):`` "
 "statements are not longer supported, use ``async with lock`` instead.  The "
@@ -2006,7 +1947,7 @@ msgstr ""
 " with lock``. Те саме правильно для ``asyncio.Condition`` і "
 "``asyncio.Semaphore``. (Надав Ендрю Свєтлов у :issue:`34793`.)"
 
-#: ../../whatsnew/3.9.rst:1042
+#: ../../whatsnew/3.9.rst:1041
 msgid ""
 "The :func:`sys.getcounts` function, the ``-X showalloccount`` command line "
 "option and the ``show_alloc_count`` field of the C structure "
@@ -2019,7 +1960,7 @@ msgstr ""
 "видалено. Їм потрібна була спеціальна збірка Python із визначенням макросу "
 "``COUNT_ALLOCS``. (Надав Віктор Стіннер у :issue:`39489`.)"
 
-#: ../../whatsnew/3.9.rst:1048
+#: ../../whatsnew/3.9.rst:1047
 msgid ""
 "The ``_field_types`` attribute of the :class:`typing.NamedTuple` class has "
 "been removed.  It was deprecated since Python 3.8.  Use the "
@@ -2030,7 +1971,7 @@ msgstr ""
 " був застарілим, починаючи з Python 3.8. Натомість використовуйте атрибут "
 "``__annotations__``. (Надав Сергій Сторчака в :issue:`40182`.)"
 
-#: ../../whatsnew/3.9.rst:1053
+#: ../../whatsnew/3.9.rst:1052
 msgid ""
 "The :meth:`symtable.SymbolTable.has_exec` method has been removed. It was "
 "deprecated since 2006, and only returning ``False`` when it's called. "
@@ -2040,7 +1981,7 @@ msgstr ""
 "року, і повертає лише ``False`` під час виклику. (Надано Batuhan Taskaya в "
 ":issue:`40208`)"
 
-#: ../../whatsnew/3.9.rst:1057
+#: ../../whatsnew/3.9.rst:1056
 msgid ""
 "The :meth:`asyncio.Task.current_task` and :meth:`asyncio.Task.all_tasks` "
 "have been removed. They were deprecated since Python 3.7 and you can use "
@@ -2052,7 +1993,7 @@ msgstr ""
 ":func:`asyncio.current_task` і :func:`asyncio.all_tasks`. (Надав Ремі Лапейр"
 " у :issue:`40967`)"
 
-#: ../../whatsnew/3.9.rst:1062
+#: ../../whatsnew/3.9.rst:1061
 msgid ""
 "The ``unescape()`` method in the :class:`html.parser.HTMLParser` class has "
 "been removed (it was deprecated since Python 3.4).  :func:`html.unescape` "
@@ -2064,11 +2005,11 @@ msgstr ""
 "використовувати для перетворення посилань на символи у відповідні символи "
 "Unicode."
 
-#: ../../whatsnew/3.9.rst:1069 ../../whatsnew/3.9.rst:1336
+#: ../../whatsnew/3.9.rst:1068 ../../whatsnew/3.9.rst:1335
 msgid "Porting to Python 3.9"
 msgstr "Перенесення на Python 3.9"
 
-#: ../../whatsnew/3.9.rst:1071
+#: ../../whatsnew/3.9.rst:1070
 msgid ""
 "This section lists previously described changes and other bugfixes that may "
 "require changes to your code."
@@ -2076,11 +2017,11 @@ msgstr ""
 "У цьому розділі наведено описані раніше зміни та інші виправлення помилок, "
 "які можуть потребувати змін у вашому коді."
 
-#: ../../whatsnew/3.9.rst:1076
+#: ../../whatsnew/3.9.rst:1075
 msgid "Changes in the Python API"
 msgstr "Зміни в API Python"
 
-#: ../../whatsnew/3.9.rst:1078
+#: ../../whatsnew/3.9.rst:1077
 msgid ""
 ":func:`__import__` and :func:`importlib.util.resolve_name` now raise "
 ":exc:`ImportError` where it previously raised :exc:`ValueError`. Callers "
@@ -2094,7 +2035,7 @@ msgstr ""
 "попередні версії, повинні будуть перехопити обидва за допомогою ``except "
 "(ImportError, ValueError):``."
 
-#: ../../whatsnew/3.9.rst:1083
+#: ../../whatsnew/3.9.rst:1082
 msgid ""
 "The :mod:`venv` activation scripts no longer special-case when "
 "``__VENV_PROMPT__`` is set to ``\"\"``."
@@ -2102,14 +2043,14 @@ msgstr ""
 "Скрипти активації :mod:`venv` більше не виключають особливий випадок, коли "
 "для ``__VENV_PROMPT__`` встановлено значення ``\"\"``."
 
-#: ../../whatsnew/3.9.rst:1086
+#: ../../whatsnew/3.9.rst:1085
 msgid ""
 "The :meth:`select.epoll.unregister` method no longer ignores the "
 ":const:`~errno.EBADF` error. (Contributed by Victor Stinner in "
 ":issue:`39239`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1090
+#: ../../whatsnew/3.9.rst:1089
 msgid ""
 "The *compresslevel* parameter of :class:`bz2.BZ2File` became keyword-only, "
 "since the *buffering* parameter has been removed. (Contributed by Victor "
@@ -2119,7 +2060,7 @@ msgstr ""
 "оскільки параметр *buffering* було видалено. (Надав Віктор Стіннер у "
 ":issue:`39357`.)"
 
-#: ../../whatsnew/3.9.rst:1094
+#: ../../whatsnew/3.9.rst:1093
 msgid ""
 "Simplified AST for subscription. Simple indices will be represented by their"
 " value, extended slices will be represented as tuples. ``Index(value)`` will"
@@ -2131,7 +2072,7 @@ msgstr ""
 " поверне саме ``value``, ``ExtSlice(slices)`` поверне ``Tuple(slices, "
 "Load())``. (Надав Сергій Сторчака в :issue:`34822`.)"
 
-#: ../../whatsnew/3.9.rst:1100
+#: ../../whatsnew/3.9.rst:1099
 msgid ""
 "The :mod:`importlib` module now ignores the :envvar:`PYTHONCASEOK` "
 "environment variable when the :option:`-E` or :option:`-I` command line "
@@ -2141,7 +2082,7 @@ msgstr ""
 ":envvar:`PYTHONCASEOK`, коли використовуються параметри командного рядка "
 ":option:`-E` або :option:`-I`."
 
-#: ../../whatsnew/3.9.rst:1104
+#: ../../whatsnew/3.9.rst:1103
 msgid ""
 "The *encoding* parameter has been added to the classes :class:`ftplib.FTP` "
 "and :class:`ftplib.FTP_TLS` as a keyword-only parameter, and the default "
@@ -2151,7 +2092,7 @@ msgstr ""
 ":class:`ftplib.FTP_TLS` як параметр лише для ключового слова, а стандартне "
 "кодування змінено з Latin-1 на UTF-8 на слідувати :rfc:`2640`."
 
-#: ../../whatsnew/3.9.rst:1108
+#: ../../whatsnew/3.9.rst:1107
 msgid ""
 ":meth:`asyncio.loop.shutdown_default_executor` has been added to "
 ":class:`~asyncio.AbstractEventLoop`, meaning alternative event loops that "
@@ -2163,7 +2104,7 @@ msgstr ""
 "успадковуються від нього, повинні мати цей метод. (Надав Кайл Стенлі в "
 ":issue:`34037`.)"
 
-#: ../../whatsnew/3.9.rst:1113
+#: ../../whatsnew/3.9.rst:1112
 msgid ""
 "The constant values of future flags in the :mod:`__future__` module is "
 "updated in order to prevent collision with compiler flags. Previously "
@@ -2175,7 +2116,7 @@ msgstr ""
 "``PyCF_ALLOW_TOP_LEVEL_AWAIT`` конфліктував з ``CO_FUTURE_DIVISION``. (Надав"
 " Batuhan Taskaya в :issue:`39562`)"
 
-#: ../../whatsnew/3.9.rst:1118
+#: ../../whatsnew/3.9.rst:1117
 msgid ""
 "``array('u')`` now uses :c:type:`wchar_t` as C type instead of "
 "``Py_UNICODE``. This change doesn't affect to its behavior because "
@@ -2183,7 +2124,7 @@ msgid ""
 "by Inada Naoki in :issue:`34538`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1123
+#: ../../whatsnew/3.9.rst:1122
 msgid ""
 "The :func:`logging.getLogger` API now returns the root logger when passed "
 "the name ``'root'``, whereas previously it returned a non-root logger named "
@@ -2200,7 +2141,7 @@ msgstr ""
 "в якомусь модулі верхнього рівня під назвою ``'root. py''``. (Надав Віней "
 "Саджип у :issue:`37742`.)"
 
-#: ../../whatsnew/3.9.rst:1130
+#: ../../whatsnew/3.9.rst:1129
 msgid ""
 "Division handling of :class:`~pathlib.PurePath` now returns "
 "``NotImplemented`` instead of raising a :exc:`TypeError` when passed "
@@ -2214,7 +2155,7 @@ msgstr ""
 "створювати сумісні класи, які не успадковують ці типи. (Надав Роджер Аюді в "
 ":issue:`34775`)."
 
-#: ../../whatsnew/3.9.rst:1136
+#: ../../whatsnew/3.9.rst:1135
 msgid ""
 "Starting with Python 3.9.5 the :mod:`ipaddress` module no longer accepts any"
 " leading zeros in IPv4 address strings. Leading zeros are ambiguous and "
@@ -2230,7 +2171,7 @@ msgstr ""
 "вісімкове позначення. glibc реалізація сучасного :func:`~socket.inet_pton` "
 "не приймає жодних початкових нулів. (Надав Крістіан Хеймс у :issue:`36384`)."
 
-#: ../../whatsnew/3.9.rst:1144
+#: ../../whatsnew/3.9.rst:1143
 msgid ""
 ":func:`codecs.lookup` now normalizes the encoding name the same way as "
 ":func:`encodings.normalize_encoding`, except that :func:`codecs.lookup` also"
@@ -2244,11 +2185,11 @@ msgstr ""
 "назву кодування ``\"latex+latin1\"`` тепер нормалізовано до "
 "``\"latex_latin1\"``. (Надав Джордон Сю в :issue:`37751`.)"
 
-#: ../../whatsnew/3.9.rst:1152
+#: ../../whatsnew/3.9.rst:1151
 msgid "Changes in the C API"
 msgstr "Зміни в C API"
 
-#: ../../whatsnew/3.9.rst:1154
+#: ../../whatsnew/3.9.rst:1153
 msgid ""
 "Instances of :ref:`heap-allocated types <heap-types>` (such as those created"
 " with :c:func:`PyType_FromSpec` and similar APIs) hold a reference to their "
@@ -2267,7 +2208,7 @@ msgstr ""
 "користувача функції ``tp_traverse`` типів, виділених у купі, відвідують тип "
 "об’єкта."
 
-#: ../../whatsnew/3.9.rst:1175
+#: ../../whatsnew/3.9.rst:1174
 msgid ""
 "If your traverse function delegates to ``tp_traverse`` of its base class (or"
 " another type), ensure that ``Py_TYPE(self)`` is visited only once. Note "
@@ -2279,20 +2220,20 @@ msgstr ""
 "раз. Зауважте, що очікується, що лише :ref:`тип купи <heap-types>` відвідає "
 "тип у ``tp_traverse``."
 
-#: ../../whatsnew/3.9.rst:1180
+#: ../../whatsnew/3.9.rst:1179
 msgid "For example, if your ``tp_traverse`` function includes:"
 msgstr "Наприклад, якщо ваша функція ``tp_traverse`` містить:"
 
-#: ../../whatsnew/3.9.rst:1186
+#: ../../whatsnew/3.9.rst:1185
 msgid "then add:"
 msgstr "потім додайте:"
 
-#: ../../whatsnew/3.9.rst:1199
+#: ../../whatsnew/3.9.rst:1198
 msgid "(See :issue:`35810` and :issue:`40217` for more information.)"
 msgstr ""
 "(Див. :issue:`35810` і :issue:`40217` для отримання додаткової інформації.)"
 
-#: ../../whatsnew/3.9.rst:1201
+#: ../../whatsnew/3.9.rst:1200
 msgid ""
 "The functions ``PyEval_CallObject``, ``PyEval_CallFunction``, "
 "``PyEval_CallMethod`` and ``PyEval_CallObjectWithKeywords`` are deprecated. "
@@ -2304,11 +2245,11 @@ msgstr ""
 " цього використовуйте :c:func:`PyObject_Call` та його варіанти. (Детальніше "
 "див. у :issue:`29548`.)"
 
-#: ../../whatsnew/3.9.rst:1207
+#: ../../whatsnew/3.9.rst:1206
 msgid "CPython bytecode changes"
 msgstr "Зміни байт-коду CPython"
 
-#: ../../whatsnew/3.9.rst:1209
+#: ../../whatsnew/3.9.rst:1208
 msgid ""
 "The :opcode:`LOAD_ASSERTION_ERROR` opcode was added for handling the "
 ":keyword:`assert` statement. Previously, the assert statement would not work"
@@ -2320,41 +2261,41 @@ msgstr ""
 "виняток :exc:`AssertionError` затінявся. (Надав Закері Шпітц у "
 ":issue:`34880`.)"
 
-#: ../../whatsnew/3.9.rst:1214
+#: ../../whatsnew/3.9.rst:1213
 msgid ""
 "The :opcode:`COMPARE_OP` opcode was split into four distinct instructions:"
 msgstr ""
 "Код операції :opcode:`COMPARE_OP` було розділено на чотири окремі "
 "інструкції:"
 
-#: ../../whatsnew/3.9.rst:1216
+#: ../../whatsnew/3.9.rst:1215
 msgid "``COMPARE_OP`` for rich comparisons"
 msgstr "``COMPARE_OP`` для насичених порівнянь"
 
-#: ../../whatsnew/3.9.rst:1217
+#: ../../whatsnew/3.9.rst:1216
 msgid "``IS_OP`` for 'is' and 'is not' tests"
 msgstr "``IS_OP`` для тестів \"є\" і \"не є\"."
 
-#: ../../whatsnew/3.9.rst:1218
+#: ../../whatsnew/3.9.rst:1217
 msgid "``CONTAINS_OP`` for 'in' and 'not in' tests"
 msgstr "``CONTAINS_OP`` для тестів \"in\" і \"not in\"."
 
-#: ../../whatsnew/3.9.rst:1219
+#: ../../whatsnew/3.9.rst:1218
 msgid ""
 "``JUMP_IF_NOT_EXC_MATCH`` for checking exceptions in 'try-except' "
 "statements."
 msgstr ""
 "``JUMP_IF_NOT_EXC_MATCH`` для перевірки винятків у операторах 'try-except'."
 
-#: ../../whatsnew/3.9.rst:1222
+#: ../../whatsnew/3.9.rst:1221
 msgid "(Contributed by Mark Shannon in :issue:`39156`.)"
 msgstr "(Надав Марк Шеннон у :issue:`39156`.)"
 
-#: ../../whatsnew/3.9.rst:1226
+#: ../../whatsnew/3.9.rst:1225
 msgid "Build Changes"
 msgstr "Зміни збірки"
 
-#: ../../whatsnew/3.9.rst:1228
+#: ../../whatsnew/3.9.rst:1227
 msgid ""
 "Added ``--with-platlibdir`` option to the ``configure`` script: name of the "
 "platform-specific library directory, stored in the new "
@@ -2363,7 +2304,7 @@ msgid ""
 "Stratakis and Victor Stinner in :issue:`1294959`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1234
+#: ../../whatsnew/3.9.rst:1233
 msgid ""
 "The ``COUNT_ALLOCS`` special build macro has been removed. (Contributed by "
 "Victor Stinner in :issue:`39489`.)"
@@ -2371,7 +2312,7 @@ msgstr ""
 "Спеціальний макрос збірки ``COUNT_ALLOCS`` видалено. (Надав Віктор Стіннер у"
 " :issue:`39489`.)"
 
-#: ../../whatsnew/3.9.rst:1237
+#: ../../whatsnew/3.9.rst:1236
 msgid ""
 "On non-Windows platforms, the :c:func:`setenv` and :c:func:`unsetenv` "
 "functions are now required to build Python. (Contributed by Victor Stinner "
@@ -2381,7 +2322,7 @@ msgstr ""
 "функції :c:func:`setenv` і :c:func:`unsetenv`. (Надав Віктор Стіннер у "
 ":issue:`39395`.)"
 
-#: ../../whatsnew/3.9.rst:1241
+#: ../../whatsnew/3.9.rst:1240
 msgid ""
 "On non-Windows platforms, creating ``bdist_wininst`` installers is now "
 "officially unsupported.  (See :issue:`10945` for more details.)"
@@ -2390,7 +2331,7 @@ msgstr ""
 "``bdist_wininst`` тепер офіційно не підтримується. (Додаткову інформацію "
 "див. :issue:`10945`.)"
 
-#: ../../whatsnew/3.9.rst:1244
+#: ../../whatsnew/3.9.rst:1243
 msgid ""
 "When building Python on macOS from source, ``_tkinter`` now links with non-"
 "system Tcl and Tk frameworks if they are installed in "
@@ -2401,7 +2342,7 @@ msgid ""
 "``--with-tcltk-libs``. (Contributed by Ned Deily in :issue:`34956`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1253
+#: ../../whatsnew/3.9.rst:1252
 msgid ""
 "Python can now be built for Windows 10 ARM64. (Contributed by Steve Dower in"
 " :issue:`33125`.)"
@@ -2409,7 +2350,7 @@ msgstr ""
 "Тепер Python можна створити для Windows 10 ARM64. (Надав Стів Дауер у "
 ":issue:`33125`.)"
 
-#: ../../whatsnew/3.9.rst:1256
+#: ../../whatsnew/3.9.rst:1255
 msgid ""
 "Some individual tests are now skipped when ``--pgo`` is used.  The tests in "
 "question increased the PGO task time significantly and likely didn't help "
@@ -2438,11 +2379,11 @@ msgstr ""
 "інструментів компілятора. (Додаткову інформацію див. у :issue:`36044` і "
 ":issue:`37707`.)"
 
-#: ../../whatsnew/3.9.rst:1271
+#: ../../whatsnew/3.9.rst:1270
 msgid "C API Changes"
 msgstr "Зміни C API"
 
-#: ../../whatsnew/3.9.rst:1276
+#: ../../whatsnew/3.9.rst:1275
 msgid ""
 ":pep:`573`: Added :c:func:`PyType_FromModuleAndSpec` to associate a module "
 "with a class; :c:func:`PyType_GetModule` and :c:func:`PyType_GetModuleState`"
@@ -2451,7 +2392,7 @@ msgid ""
 "in. (Contributed by Marcel Plch and Petr Viktorin in :issue:`38787`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1283
+#: ../../whatsnew/3.9.rst:1282
 msgid ""
 "Added :c:func:`PyFrame_GetCode` function: get a frame code. Added "
 ":c:func:`PyFrame_GetBack` function: get the frame next outer frame. "
@@ -2461,7 +2402,7 @@ msgstr ""
 " :c:func:`PyFrame_GetBack`: отримати кадр наступного зовнішнього кадру. "
 "(Надав Віктор Стіннер у :issue:`40421`.)"
 
-#: ../../whatsnew/3.9.rst:1287
+#: ../../whatsnew/3.9.rst:1286
 msgid ""
 "Added :c:func:`PyFrame_GetLineNumber` to the limited C API. (Contributed by "
 "Victor Stinner in :issue:`40421`.)"
@@ -2469,7 +2410,7 @@ msgstr ""
 "Додано :c:func:`PyFrame_GetLineNumber` до обмеженого C API. (Надав Віктор "
 "Стіннер у :issue:`40421`.)"
 
-#: ../../whatsnew/3.9.rst:1290
+#: ../../whatsnew/3.9.rst:1289
 msgid ""
 "Added :c:func:`PyThreadState_GetInterpreter` and "
 ":c:func:`PyInterpreterState_Get` functions to get the interpreter. Added "
@@ -2485,7 +2426,7 @@ msgstr ""
 "унікальний ідентифікатор стану потоку Python. (Надав Віктор Стіннер у "
 ":issue:`39947`.)"
 
-#: ../../whatsnew/3.9.rst:1298
+#: ../../whatsnew/3.9.rst:1297
 msgid ""
 "Added a new public :c:func:`PyObject_CallNoArgs` function to the C API, "
 "which calls a callable Python object without any arguments. It is the most "
@@ -2497,11 +2438,11 @@ msgstr ""
 "викликати викликаний об’єкт Python без аргументів. (Надав Віктор Стіннер у "
 ":issue:`37194`.)"
 
-#: ../../whatsnew/3.9.rst:1303 ../../whatsnew/3.9.rst:1421
+#: ../../whatsnew/3.9.rst:1302 ../../whatsnew/3.9.rst:1420
 msgid "Changes in the limited C API (if ``Py_LIMITED_API`` macro is defined):"
 msgstr "Зміни в обмеженому API C (якщо визначено макрос ``Py_LIMITED_API``):"
 
-#: ../../whatsnew/3.9.rst:1305
+#: ../../whatsnew/3.9.rst:1304
 msgid ""
 "Provide :c:func:`Py_EnterRecursiveCall` and :c:func:`Py_LeaveRecursiveCall` "
 "as regular functions for the limited API. Previously, there were defined as "
@@ -2515,7 +2456,7 @@ msgstr ""
 "доступ до поля ``PyThreadState.recursion_depth`` (структура непрозора в "
 "обмеженому C API)."
 
-#: ../../whatsnew/3.9.rst:1311
+#: ../../whatsnew/3.9.rst:1310
 msgid ""
 "``PyObject_INIT()`` and ``PyObject_INIT_VAR()`` become regular \"opaque\" "
 "function to hide implementation details."
@@ -2523,19 +2464,17 @@ msgstr ""
 "``PyObject_INIT()`` і ``PyObject_INIT_VAR()`` стають звичайними "
 "\"непрозорими\" функціями для приховування деталей реалізації."
 
-#: ../../whatsnew/3.9.rst:1314 ../../whatsnew/3.9.rst:1448
+#: ../../whatsnew/3.9.rst:1313 ../../whatsnew/3.9.rst:1447
 msgid "(Contributed by Victor Stinner in :issue:`38644` and :issue:`39542`.)"
 msgstr "(Надав Віктор Стіннер у :issue:`38644` і :issue:`39542`.)"
 
-#: ../../whatsnew/3.9.rst:1316
+#: ../../whatsnew/3.9.rst:1315
 msgid ""
 "The :c:func:`PyModule_AddType` function is added to help adding a type to a "
-"module. (Contributed by Dong-hee Na in :issue:`40024`.)"
+"module. (Contributed by Donghee Na in :issue:`40024`.)"
 msgstr ""
-"Додано функцію :c:func:`PyModule_AddType`, щоб допомогти додати тип до "
-"модуля. (Надав Dong-hee Na у :issue:`40024`.)"
 
-#: ../../whatsnew/3.9.rst:1320
+#: ../../whatsnew/3.9.rst:1319
 msgid ""
 "Added the functions :c:func:`PyObject_GC_IsTracked` and "
 ":c:func:`PyObject_GC_IsFinalized` to the public API to allow to query if "
@@ -2548,7 +2487,7 @@ msgstr ""
 "Python зараз відстежуються чи вони вже завершені збирачем сміття відповідно."
 " (Надав Пабло Галіндо Сальгадо в :issue:`40241`.)"
 
-#: ../../whatsnew/3.9.rst:1326
+#: ../../whatsnew/3.9.rst:1325
 msgid ""
 "Added :c:func:`_PyObject_FunctionStr` to get a user-friendly string "
 "representation of a function-like object. (Patch by Jeroen Demeyer in "
@@ -2558,7 +2497,7 @@ msgstr ""
 "представлення об’єкта, подібного до функції. (Патч від Jeroen Demeyer у "
 ":issue:`37645`.)"
 
-#: ../../whatsnew/3.9.rst:1330
+#: ../../whatsnew/3.9.rst:1329
 msgid ""
 "Added :c:func:`PyObject_CallOneArg` for calling an object with one "
 "positional argument (Patch by Jeroen Demeyer in :issue:`37483`.)"
@@ -2566,7 +2505,7 @@ msgstr ""
 "Додано :c:func:`PyObject_CallOneArg` для виклику об’єкта з одним позиційним "
 "аргументом (Патч від Jeroen Demeyer у :issue:`37483`.)"
 
-#: ../../whatsnew/3.9.rst:1338
+#: ../../whatsnew/3.9.rst:1337
 msgid ""
 "``PyInterpreterState.eval_frame`` (:pep:`523`) now requires a new mandatory "
 "*tstate* parameter (``PyThreadState*``). (Contributed by Victor Stinner in "
@@ -2576,7 +2515,7 @@ msgstr ""
 "обов’язкового параметра *tstate* (``PyThreadState*``). (Надав Віктор Стіннер"
 " у :issue:`38500`.)"
 
-#: ../../whatsnew/3.9.rst:1342
+#: ../../whatsnew/3.9.rst:1341
 msgid ""
 "Extension modules: :c:member:`~PyModuleDef.m_traverse`, "
 ":c:member:`~PyModuleDef.m_clear` and :c:member:`~PyModuleDef.m_free` "
@@ -2595,12 +2534,12 @@ msgstr ""
 "функції не викликаються, якщо :c:member:`~PyModuleDef.m_size` більше 0 і "
 "стан модуля (як повертається :c:func:`PyModule_GetState`) є ``NULL``."
 
-#: ../../whatsnew/3.9.rst:1351
+#: ../../whatsnew/3.9.rst:1350
 msgid ""
 "Extension modules without module state (``m_size <= 0``) are not affected."
 msgstr "Модулі розширення без стану модуля (``m_size <= 0``) не впливають."
 
-#: ../../whatsnew/3.9.rst:1353
+#: ../../whatsnew/3.9.rst:1352
 msgid ""
 "If :c:func:`Py_AddPendingCall` is called in a subinterpreter, the function "
 "is now scheduled to be called from the subinterpreter, rather than being "
@@ -2612,7 +2551,7 @@ msgstr ""
 "інтерпретатора. Кожен субінтерпретатор тепер має власний список запланованих"
 " викликів. (Надав Віктор Стіннер у :issue:`39984`.)"
 
-#: ../../whatsnew/3.9.rst:1359
+#: ../../whatsnew/3.9.rst:1358
 msgid ""
 "The Windows registry is no longer used to initialize :data:`sys.path` when "
 "the ``-E`` option is used (if :c:member:`PyConfig.use_environment` is set to"
@@ -2624,7 +2563,7 @@ msgstr ""
 ":c:member:`PyConfig.use_environment` має значення ``0``). Це важливо під час"
 " вбудовування Python у Windows. (Надав Закері Шпітц у :issue:`8901`.)"
 
-#: ../../whatsnew/3.9.rst:1364
+#: ../../whatsnew/3.9.rst:1363
 msgid ""
 "The global variable :c:data:`PyStructSequence_UnnamedField` is now a "
 "constant and refers to a constant string. (Contributed by Serhiy Storchaka "
@@ -2633,7 +2572,7 @@ msgstr ""
 "Глобальна змінна :c:data:`PyStructSequence_UnnamedField` тепер є константою "
 "та посилається на постійний рядок. (Надав Сергій Сторчака в :issue:`38650`.)"
 
-#: ../../whatsnew/3.9.rst:1368
+#: ../../whatsnew/3.9.rst:1367
 msgid ""
 "The :c:type:`PyGC_Head` structure is now opaque. It is only defined in the "
 "internal C API (``pycore_gc.h``). (Contributed by Victor Stinner in "
@@ -2643,7 +2582,7 @@ msgstr ""
 "внутрішньому API C (``pycore_gc.h``). (Надав Віктор Стіннер у "
 ":issue:`40241`.)"
 
-#: ../../whatsnew/3.9.rst:1372
+#: ../../whatsnew/3.9.rst:1371
 msgid ""
 "The ``Py_UNICODE_COPY``, ``Py_UNICODE_FILL``, ``PyUnicode_WSTR_LENGTH``, "
 ":c:func:`!PyUnicode_FromUnicode`, :c:func:`!PyUnicode_AsUnicode`, "
@@ -2652,7 +2591,7 @@ msgid ""
 "Python 3.3. (Contributed by Inada Naoki in :issue:`36346`.)"
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1379
+#: ../../whatsnew/3.9.rst:1378
 msgid ""
 "The :c:func:`Py_FatalError` function is replaced with a macro which logs "
 "automatically the name of the current function, unless the "
@@ -2663,7 +2602,7 @@ msgstr ""
 " назву поточної функції, якщо не визначено макрос ``Py_LIMITED_API``. (Надав"
 " Віктор Стіннер у :issue:`39882`.)"
 
-#: ../../whatsnew/3.9.rst:1384
+#: ../../whatsnew/3.9.rst:1383
 msgid ""
 "The vectorcall protocol now requires that the caller passes only strings as "
 "keyword names. (See :issue:`37540` for more information.)"
@@ -2671,16 +2610,16 @@ msgstr ""
 "Протокол vectorcall тепер вимагає, щоб абонент передавав лише рядки як імена"
 " ключових слів. (Додаткову інформацію див. :issue:`37540`.)"
 
-#: ../../whatsnew/3.9.rst:1387
+#: ../../whatsnew/3.9.rst:1386
 msgid ""
 "Implementation details of a number of macros and functions are now hidden:"
 msgstr "Деталі реалізації ряду макросів і функцій тепер приховано:"
 
-#: ../../whatsnew/3.9.rst:1389
+#: ../../whatsnew/3.9.rst:1388
 msgid ":c:func:`PyObject_IS_GC` macro was converted to a function."
 msgstr ":c:func:`PyObject_IS_GC` макрос перетворено на функцію."
 
-#: ../../whatsnew/3.9.rst:1391
+#: ../../whatsnew/3.9.rst:1390
 msgid ""
 "The :c:func:`PyObject_NEW` macro becomes an alias to the "
 ":c:macro:`PyObject_New` macro, and the :c:func:`PyObject_NEW_VAR` macro "
@@ -2688,7 +2627,7 @@ msgid ""
 "access directly the :c:member:`PyTypeObject.tp_basicsize` member."
 msgstr ""
 
-#: ../../whatsnew/3.9.rst:1396
+#: ../../whatsnew/3.9.rst:1395
 msgid ""
 ":c:func:`PyObject_GET_WEAKREFS_LISTPTR` macro was converted to a function: "
 "the macro accessed directly the :c:member:`PyTypeObject.tp_weaklistoffset` "
@@ -2698,7 +2637,7 @@ msgstr ""
 "макрос мав прямий доступ до елемента "
 ":c:member:`PyTypeObject.tp_weaklistoffset`."
 
-#: ../../whatsnew/3.9.rst:1400
+#: ../../whatsnew/3.9.rst:1399
 msgid ""
 ":c:func:`PyObject_CheckBuffer` macro was converted to a function: the macro "
 "accessed directly the :c:member:`PyTypeObject.tp_as_buffer` member."
@@ -2706,7 +2645,7 @@ msgstr ""
 "Макрос :c:func:`PyObject_CheckBuffer` було перетворено на функцію: макрос "
 "мав прямий доступ до елемента :c:member:`PyTypeObject.tp_as_buffer`."
 
-#: ../../whatsnew/3.9.rst:1403
+#: ../../whatsnew/3.9.rst:1402
 msgid ""
 ":c:func:`PyIndex_Check` is now always declared as an opaque function to hide"
 " implementation details: removed the ``PyIndex_Check()`` macro. The macro "
@@ -2716,11 +2655,11 @@ msgstr ""
 "приховати деталі реалізації: видалено макрос ``PyIndex_Check()``. Макрос "
 "звертався безпосередньо до члена :c:member:`PyTypeObject.tp_as_number`."
 
-#: ../../whatsnew/3.9.rst:1407
+#: ../../whatsnew/3.9.rst:1406
 msgid "(See :issue:`40170` for more details.)"
 msgstr "(Додаткову інформацію див. :issue:`40170`.)"
 
-#: ../../whatsnew/3.9.rst:1412
+#: ../../whatsnew/3.9.rst:1411
 msgid ""
 "Excluded ``PyFPE_START_PROTECT()`` and ``PyFPE_END_PROTECT()`` macros of "
 "``pyfpe.h`` from the limited C API. (Contributed by Victor Stinner in "
@@ -2730,7 +2669,7 @@ msgstr ""
 "``pyfpe.h`` виключено з обмеженого C API. (Надав Віктор Стіннер у "
 ":issue:`38835`.)"
 
-#: ../../whatsnew/3.9.rst:1416
+#: ../../whatsnew/3.9.rst:1415
 msgid ""
 "The ``tp_print`` slot of :ref:`PyTypeObject <type-structs>` has been "
 "removed. It was used for printing objects to files in Python 2.7 and before."
@@ -2742,11 +2681,11 @@ msgstr ""
 " з Python 3.0, він ігнорувався та не використовувався. (Надано Jeroen "
 "Demeyer у :issue:`36974`.)"
 
-#: ../../whatsnew/3.9.rst:1423
+#: ../../whatsnew/3.9.rst:1422
 msgid "Excluded the following functions from the limited C API:"
 msgstr "Виключено такі функції з обмеженого C API:"
 
-#: ../../whatsnew/3.9.rst:1425
+#: ../../whatsnew/3.9.rst:1424
 msgid ""
 "``PyThreadState_DeleteCurrent()`` (Contributed by Joannah Nanjekye in "
 ":issue:`37878`.)"
@@ -2754,79 +2693,79 @@ msgstr ""
 "``PyThreadState_DeleteCurrent()`` (Надано Joannah Nanjekye в "
 ":issue:`37878`.)"
 
-#: ../../whatsnew/3.9.rst:1427
+#: ../../whatsnew/3.9.rst:1426
 msgid "``_Py_CheckRecursionLimit``"
 msgstr "``_Py_CheckRecursionLimit``"
 
-#: ../../whatsnew/3.9.rst:1428
+#: ../../whatsnew/3.9.rst:1427
 msgid "``_Py_NewReference()``"
 msgstr "``_Py_NewReference()``"
 
-#: ../../whatsnew/3.9.rst:1429
+#: ../../whatsnew/3.9.rst:1428
 msgid "``_Py_ForgetReference()``"
 msgstr "``_Py_ForgetReference()``"
 
-#: ../../whatsnew/3.9.rst:1430
+#: ../../whatsnew/3.9.rst:1429
 msgid "``_PyTraceMalloc_NewReference()``"
 msgstr "``_PyTraceMalloc_NewReference()``"
 
-#: ../../whatsnew/3.9.rst:1431
+#: ../../whatsnew/3.9.rst:1430
 msgid "``_Py_GetRefTotal()``"
 msgstr "``_Py_GetRefTotal()``"
 
-#: ../../whatsnew/3.9.rst:1432
+#: ../../whatsnew/3.9.rst:1431
 msgid "The trashcan mechanism which never worked in the limited C API."
 msgstr "Механізм кошика, який ніколи не працював в обмеженому C API."
 
-#: ../../whatsnew/3.9.rst:1433
+#: ../../whatsnew/3.9.rst:1432
 msgid "``PyTrash_UNWIND_LEVEL``"
 msgstr "``PyTrash_UNWIND_LEVEL``"
 
-#: ../../whatsnew/3.9.rst:1434
+#: ../../whatsnew/3.9.rst:1433
 msgid "``Py_TRASHCAN_BEGIN_CONDITION``"
 msgstr "``Py_TRASHCAN_BEGIN_CONDITION``"
 
-#: ../../whatsnew/3.9.rst:1435
+#: ../../whatsnew/3.9.rst:1434
 msgid "``Py_TRASHCAN_BEGIN``"
 msgstr "``Py_TRASHCAN_BEGIN``"
 
-#: ../../whatsnew/3.9.rst:1436
+#: ../../whatsnew/3.9.rst:1435
 msgid "``Py_TRASHCAN_END``"
 msgstr "``Py_TRASHCAN_END``"
 
-#: ../../whatsnew/3.9.rst:1437
+#: ../../whatsnew/3.9.rst:1436
 msgid "``Py_TRASHCAN_SAFE_BEGIN``"
 msgstr "``Py_TRASHCAN_SAFE_BEGIN``"
 
-#: ../../whatsnew/3.9.rst:1438
+#: ../../whatsnew/3.9.rst:1437
 msgid "``Py_TRASHCAN_SAFE_END``"
 msgstr "``Py_TRASHCAN_SAFE_END``"
 
-#: ../../whatsnew/3.9.rst:1440
+#: ../../whatsnew/3.9.rst:1439
 msgid "Moved following functions and definitions to the internal C API:"
 msgstr "Перенесено такі функції та визначення до внутрішнього C API:"
 
-#: ../../whatsnew/3.9.rst:1442
+#: ../../whatsnew/3.9.rst:1441
 msgid "``_PyDebug_PrintTotalRefs()``"
 msgstr "``_PyDebug_PrintTotalRefs()``"
 
-#: ../../whatsnew/3.9.rst:1443
+#: ../../whatsnew/3.9.rst:1442
 msgid "``_Py_PrintReferences()``"
 msgstr "``_Py_PrintReferences()``"
 
-#: ../../whatsnew/3.9.rst:1444
+#: ../../whatsnew/3.9.rst:1443
 msgid "``_Py_PrintReferenceAddresses()``"
 msgstr "``_Py_PrintReferenceAddresses()``"
 
-#: ../../whatsnew/3.9.rst:1445
+#: ../../whatsnew/3.9.rst:1444
 msgid "``_Py_tracemalloc_config``"
 msgstr "``_Py_tracemalloc_config``"
 
-#: ../../whatsnew/3.9.rst:1446
+#: ../../whatsnew/3.9.rst:1445
 msgid "``_Py_AddToAllObjects()`` (specific to ``Py_TRACE_REFS`` build)"
 msgstr "``_Py_AddToAllObjects()`` (специфічний для збірки ``Py_TRACE_REFS``)"
 
-#: ../../whatsnew/3.9.rst:1450
+#: ../../whatsnew/3.9.rst:1449
 msgid ""
 "Removed ``_PyRuntime.getframe`` hook and removed ``_PyThreadState_GetFrame``"
 " macro which was an alias to ``_PyRuntime.getframe``. They were only exposed"
@@ -2838,7 +2777,7 @@ msgstr ""
 "Їх відкривав лише внутрішній C API. Видалено також тип "
 "``PyThreadFrameGetter``. (Надав Віктор Стіннер у :issue:`39946`.)"
 
-#: ../../whatsnew/3.9.rst:1455
+#: ../../whatsnew/3.9.rst:1454
 msgid ""
 "Removed the following functions from the C API. Call :c:func:`PyGC_Collect` "
 "explicitly to clear all free lists. (Contributed by Inada Naoki and Victor "
@@ -2848,31 +2787,31 @@ msgstr ""
 " очистити всі вільні списки. (Надано Інадою Наокі та Віктором Стіннером у "
 ":issue:`37340`, :issue:`38896` та :issue:`40428`.)"
 
-#: ../../whatsnew/3.9.rst:1460
+#: ../../whatsnew/3.9.rst:1459
 msgid "``PyAsyncGen_ClearFreeLists()``"
 msgstr "``PyAsyncGen_ClearFreeLists()``"
 
-#: ../../whatsnew/3.9.rst:1461
+#: ../../whatsnew/3.9.rst:1460
 msgid "``PyContext_ClearFreeList()``"
 msgstr "``PyContext_ClearFreeList()``"
 
-#: ../../whatsnew/3.9.rst:1462
+#: ../../whatsnew/3.9.rst:1461
 msgid "``PyDict_ClearFreeList()``"
 msgstr "``PyDict_ClearFreeList()``"
 
-#: ../../whatsnew/3.9.rst:1463
+#: ../../whatsnew/3.9.rst:1462
 msgid "``PyFloat_ClearFreeList()``"
 msgstr "``PyFloat_ClearFreeList()``"
 
-#: ../../whatsnew/3.9.rst:1464
+#: ../../whatsnew/3.9.rst:1463
 msgid "``PyFrame_ClearFreeList()``"
 msgstr "``PyFrame_ClearFreeList()``"
 
-#: ../../whatsnew/3.9.rst:1465
+#: ../../whatsnew/3.9.rst:1464
 msgid "``PyList_ClearFreeList()``"
 msgstr "``PyList_ClearFreeList()``"
 
-#: ../../whatsnew/3.9.rst:1466
+#: ../../whatsnew/3.9.rst:1465
 msgid ""
 "``PyMethod_ClearFreeList()`` and ``PyCFunction_ClearFreeList()``: the free "
 "lists of bound method objects have been removed."
@@ -2880,16 +2819,16 @@ msgstr ""
 "``PyMethod_ClearFreeList()`` і ``PyCFunction_ClearFreeList()``: вільні "
 "списки зв’язаних об’єктів методу видалено."
 
-#: ../../whatsnew/3.9.rst:1468
+#: ../../whatsnew/3.9.rst:1467
 msgid ""
 "``PySet_ClearFreeList()``: the set free list has been removed in Python 3.4."
 msgstr "``PySet_ClearFreeList()``: у Python 3.4 видалено список вільних."
 
-#: ../../whatsnew/3.9.rst:1470
+#: ../../whatsnew/3.9.rst:1469
 msgid "``PyTuple_ClearFreeList()``"
 msgstr "``PyTuple_ClearFreeList()``"
 
-#: ../../whatsnew/3.9.rst:1471
+#: ../../whatsnew/3.9.rst:1470
 msgid ""
 "``PyUnicode_ClearFreeList()``: the Unicode free list has been removed in "
 "Python 3.3."
@@ -2897,7 +2836,7 @@ msgstr ""
 "``PyUnicode_ClearFreeList()``: у Python 3.3 видалено список вільних кодів "
 "Unicode."
 
-#: ../../whatsnew/3.9.rst:1474
+#: ../../whatsnew/3.9.rst:1473
 msgid ""
 "Removed ``_PyUnicode_ClearStaticStrings()`` function. (Contributed by Victor"
 " Stinner in :issue:`39465`.)"
@@ -2905,7 +2844,7 @@ msgstr ""
 "Вилучено функцію ``_PyUnicode_ClearStaticStrings()``. (Надав Віктор Стіннер "
 "у :issue:`39465`.)"
 
-#: ../../whatsnew/3.9.rst:1477
+#: ../../whatsnew/3.9.rst:1476
 msgid ""
 "Removed ``Py_UNICODE_MATCH``. It has been deprecated by :pep:`393`, and "
 "broken since Python 3.3. The :c:func:`PyUnicode_Tailmatch` function can be "
@@ -2915,7 +2854,7 @@ msgstr ""
 "Python 3.3. Замість цього можна використовувати функцію "
 ":c:func:`PyUnicode_Tailmatch`. (Надано Інадою Наокі в :issue:`36346`.)"
 
-#: ../../whatsnew/3.9.rst:1482
+#: ../../whatsnew/3.9.rst:1481
 msgid ""
 "Cleaned header files of interfaces defined but with no implementation. The "
 "public API symbols being removed are: "
@@ -2936,11 +2875,11 @@ msgstr ""
 "``PyNullImporter_Type``, ``PyCmpWrapper_Type``, ``PySortWrapper_Type``, "
 "``PyNoArgsFunction``. (Надав Пабло Галіндо Сальгадо в :issue:`39372`.)"
 
-#: ../../whatsnew/3.9.rst:1493
+#: ../../whatsnew/3.9.rst:1492
 msgid "Notable changes in Python 3.9.1"
 msgstr "Помітні зміни в Python 3.9.1"
 
-#: ../../whatsnew/3.9.rst:1498
+#: ../../whatsnew/3.9.rst:1497
 msgid ""
 "The behavior of :class:`typing.Literal` was changed to conform with "
 ":pep:`586` and to match the behavior of static type checkers specified in "
@@ -2950,17 +2889,17 @@ msgstr ""
 ":pep:`586` і відповідала поведінці засобів перевірки статичних типів, "
 "указаних у PEP."
 
-#: ../../whatsnew/3.9.rst:1501
+#: ../../whatsnew/3.9.rst:1500
 msgid "``Literal`` now de-duplicates parameters."
 msgstr "``Літерал`` тепер усуває дублікати параметрів."
 
-#: ../../whatsnew/3.9.rst:1502
+#: ../../whatsnew/3.9.rst:1501
 msgid ""
 "Equality comparisons between ``Literal`` objects are now order independent."
 msgstr ""
 "Порівняння рівності між об’єктами ``Literal`` тепер не залежить від порядку."
 
-#: ../../whatsnew/3.9.rst:1503
+#: ../../whatsnew/3.9.rst:1502
 msgid ""
 "``Literal`` comparisons now respect types.  For example, ``Literal[0] == "
 "Literal[False]`` previously evaluated to ``True``.  It is now ``False``.  To"
@@ -2971,7 +2910,7 @@ msgstr ""
 "Literal[False]``, попередньо оцінене як ``True``. Тепер це ``False``. Для "
 "підтримки цієї зміни внутрішній кеш типів тепер підтримує розрізняючі типи."
 
-#: ../../whatsnew/3.9.rst:1507
+#: ../../whatsnew/3.9.rst:1506
 msgid ""
 "``Literal`` objects will now raise a :exc:`TypeError` exception during "
 "equality comparisons if any of their parameters are not :term:`hashable`. "
@@ -2983,15 +2922,15 @@ msgstr ""
 "Зверніть увагу, що оголошення ``Literal`` зі змінними параметрами не викличе"
 " помилку:"
 
-#: ../../whatsnew/3.9.rst:1519
+#: ../../whatsnew/3.9.rst:1518
 msgid "(Contributed by Yurii Karabas in :issue:`42345`.)"
 msgstr "(Надав Юрій Карабас у :issue:`42345`.)"
 
-#: ../../whatsnew/3.9.rst:1522
+#: ../../whatsnew/3.9.rst:1521
 msgid "macOS 11.0 (Big Sur) and Apple Silicon Mac support"
 msgstr "Підтримка macOS 11.0 (Big Sur) і Apple Silicon Mac"
 
-#: ../../whatsnew/3.9.rst:1524
+#: ../../whatsnew/3.9.rst:1523
 msgid ""
 "As of 3.9.1, Python now fully supports building and running on macOS 11.0 "
 "(Big Sur) and on Apple Silicon Macs (based on the ``ARM64`` architecture). A"
@@ -3012,20 +2951,20 @@ msgstr ""
 "доступними на основі версії операційної системи, яка використовується під "
 "час виконання (\"слабкі зв’язки\" )."
 
-#: ../../whatsnew/3.9.rst:1533
+#: ../../whatsnew/3.9.rst:1532
 msgid ""
 "(Contributed by Ronald Oussoren and Lawrence D'Anna in :issue:`41100`.)"
 msgstr "(Надано Рональдом Усореном і Лоуренсом Д'Анною в :issue:`41100`.)"
 
-#: ../../whatsnew/3.9.rst:1536
+#: ../../whatsnew/3.9.rst:1535
 msgid "Notable changes in Python 3.9.2"
 msgstr "Помітні зміни в Python 3.9.2"
 
-#: ../../whatsnew/3.9.rst:1539
+#: ../../whatsnew/3.9.rst:1538
 msgid "collections.abc"
 msgstr "колекції.abc"
 
-#: ../../whatsnew/3.9.rst:1541
+#: ../../whatsnew/3.9.rst:1540
 msgid ""
 ":class:`collections.abc.Callable` generic now flattens type parameters, "
 "similar to what :data:`typing.Callable` currently does.  This means that "
@@ -3053,11 +2992,11 @@ msgstr ""
 "Це :exc:`DeprecationWarning` стане :exc:`TypeError` у Python 3.10. (Надав "
 "Кен Джин у :issue:`42195`.)"
 
-#: ../../whatsnew/3.9.rst:1555
+#: ../../whatsnew/3.9.rst:1554
 msgid "urllib.parse"
 msgstr "urllib.parse"
 
-#: ../../whatsnew/3.9.rst:1557
+#: ../../whatsnew/3.9.rst:1556
 msgid ""
 "Earlier Python versions allowed using both ``;`` and ``&`` as query "
 "parameter separators in :func:`urllib.parse.parse_qs` and "
