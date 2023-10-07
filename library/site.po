@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-22 14:13+0000\n"
+"POT-Creation-Date: 2023-10-06 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -44,14 +44,8 @@ msgid ""
 "path and add a few builtins, unless :option:`-S` was used.  In that case, "
 "this module can be safely imported with no automatic modifications to the "
 "module search path or additions to the builtins.  To explicitly trigger the "
-"usual site-specific additions, call the :func:`site.main` function."
+"usual site-specific additions, call the :func:`main` function."
 msgstr ""
-"Імпорт цього модуля додасть шляхи до сайту до шляху пошуку модуля та додасть"
-" кілька вбудованих елементів, якщо не було використано :option:`-S`. У "
-"такому випадку цей модуль можна безпечно імпортувати без автоматичних змін у"
-" шляху пошуку модуля чи доповнень до вбудованих компонентів. Щоб явно "
-"ініціювати звичайні додавання для конкретного сайту, викличте функцію "
-":func:`site.main`."
 
 #: ../../library/site.rst:24
 msgid ""
@@ -188,51 +182,41 @@ msgstr ""
 "перед :file:`foo.pth` в алфавітному порядку; і :file:`spam` пропущено, "
 "оскільки він не згадується в обох файлах конфігурації шляху."
 
-#: ../../library/site.rst:114
+#: ../../library/site.rst:113
+msgid ":mod:`sitecustomize`"
+msgstr ""
+
+#: ../../library/site.rst:117
 msgid ""
 "After these path manipulations, an attempt is made to import a module named "
 ":mod:`sitecustomize`, which can perform arbitrary site-specific "
 "customizations. It is typically created by a system administrator in the "
 "site-packages directory.  If this import fails with an :exc:`ImportError` or"
-" its subclass exception, and the exception's :attr:`name` attribute equals "
-"to ``'sitecustomize'``, it is silently ignored.  If Python is started "
-"without output streams available, as with :file:`pythonw.exe` on Windows "
-"(which is used by default to start IDLE), attempted output from "
+" its subclass exception, and the exception's :attr:`~ImportError.name` "
+"attribute equals to ``'sitecustomize'``, it is silently ignored.  If Python "
+"is started without output streams available, as with :file:`pythonw.exe` on "
+"Windows (which is used by default to start IDLE), attempted output from "
 ":mod:`sitecustomize` is ignored.  Any other exception causes a silent and "
 "perhaps mysterious failure of the process."
 msgstr ""
-"Після цих маніпуляцій шляхом робиться спроба імпортувати модуль під назвою "
-":mod:`sitecustomize`, який може виконувати довільні налаштування сайту. "
-"Зазвичай його створює системний адміністратор у каталозі site-packages. Якщо"
-" це імпортування не вдається через виняток :exc:`ImportError` або його "
-"підкласу, а атрибут :attr:`name` виключення дорівнює ``'sitecustomize'``, "
-"він мовчки ігнорується. Якщо Python запускається без доступних вихідних "
-"потоків, як у випадку з :file:`pythonw.exe` у Windows (який використовується"
-" за замовчуванням для запуску IDLE), спроба виведення з :mod:`sitecustomize`"
-" ігнорується. Будь-який інший виняток викликає тихий і, можливо, таємничий "
-"збій процесу."
 
-#: ../../library/site.rst:126
+#: ../../library/site.rst:129
+msgid ":mod:`usercustomize`"
+msgstr ""
+
+#: ../../library/site.rst:133
 msgid ""
 "After this, an attempt is made to import a module named "
 ":mod:`usercustomize`, which can perform arbitrary user-specific "
-"customizations, if :data:`ENABLE_USER_SITE` is true.  This file is intended "
-"to be created in the user site-packages directory (see below), which is part"
-" of ``sys.path`` unless disabled by :option:`-s`.  If this import fails with"
-" an :exc:`ImportError` or its subclass exception, and the exception's "
-":attr:`name` attribute equals to ``'usercustomize'``, it is silently "
-"ignored."
+"customizations, if :data:`~site.ENABLE_USER_SITE` is true.  This file is "
+"intended to be created in the user site-packages directory (see below), "
+"which is part of ``sys.path`` unless disabled by :option:`-s`.  If this "
+"import fails with an :exc:`ImportError` or its subclass exception, and the "
+"exception's :attr:`~ImportError.name` attribute equals to "
+"``'usercustomize'``, it is silently ignored."
 msgstr ""
-"Після цього робиться спроба імпортувати модуль під назвою "
-":mod:`usercustomize`, який може виконувати довільні налаштування "
-"користувача, якщо :data:`ENABLE_USER_SITE` має значення true. Цей файл "
-"призначено для створення в каталозі пакетів сайту користувача (див. нижче), "
-"який є частиною ``sys.path``, якщо його не вимкнено :option:`-s`. Якщо цей "
-"імпорт завершується помилкою :exc:`ImportError` або винятком його підкласу, "
-"а атрибут :attr:`name` винятку дорівнює ``'usercustomize'``, він мовчки "
-"ігнорується."
 
-#: ../../library/site.rst:134
+#: ../../library/site.rst:141
 msgid ""
 "Note that for some non-Unix systems, ``sys.prefix`` and ``sys.exec_prefix`` "
 "are empty, and the path manipulations are skipped; however the import of "
@@ -242,11 +226,11 @@ msgstr ""
 "порожні, а маніпуляції зі шляхом пропускаються; проте спроба імпорту "
 ":mod:`sitecustomize` і :mod:`usercustomize` все ще робиться."
 
-#: ../../library/site.rst:142
+#: ../../library/site.rst:150
 msgid "Readline configuration"
 msgstr "Конфігурація Readline"
 
-#: ../../library/site.rst:144
+#: ../../library/site.rst:152
 msgid ""
 "On systems that support :mod:`readline`, this module will also import and "
 "configure the :mod:`rlcompleter` module, if Python is started in "
@@ -266,19 +250,19 @@ msgstr ""
 "модулі :mod:`sitecustomize` або :mod:`usercustomize` або у вашому файлі "
 ":envvar:`PYTHONSTARTUP`."
 
-#: ../../library/site.rst:153
+#: ../../library/site.rst:161
 msgid "Activation of rlcompleter and history was made automatic."
 msgstr "Активацію rlcompleter та історії було зроблено автоматично."
 
-#: ../../library/site.rst:158
+#: ../../library/site.rst:166
 msgid "Module contents"
 msgstr "Зміст модуля"
 
-#: ../../library/site.rst:162
+#: ../../library/site.rst:170
 msgid "A list of prefixes for site-packages directories."
 msgstr "Список префіксів для каталогів пакетів сайту."
 
-#: ../../library/site.rst:167
+#: ../../library/site.rst:175
 msgid ""
 "Flag showing the status of the user site-packages directory.  ``True`` means"
 " that it is enabled and was added to ``sys.path``.  ``False`` means that it "
@@ -294,7 +278,7 @@ msgstr ""
 "міркувань безпеки (невідповідність між ідентифікатором користувача чи групи "
 "та ефективним ідентифікатором) або адміністратором."
 
-#: ../../library/site.rst:177
+#: ../../library/site.rst:185
 msgid ""
 "Path to the user site-packages for the running Python.  Can be ``None`` if "
 ":func:`getusersitepackages` hasn't been called yet.  Default value is "
@@ -314,7 +298,7 @@ msgstr ""
 "Цей каталог є каталогом сайту, що означає, що файли :file:`.pth` у ньому "
 "будуть оброблені."
 
-#: ../../library/site.rst:188
+#: ../../library/site.rst:196
 msgid ""
 "Path to the base directory for the user site-packages.  Can be ``None`` if "
 ":func:`getuserbase` hasn't been called yet.  Default value is "
@@ -322,10 +306,11 @@ msgid ""
 ":file:`~/Library/Python/{X.Y}` for macOS framework builds, and "
 ":file:`{%APPDATA%}\\\\Python` for Windows.  This value is used to compute "
 "the installation directories for scripts, data files, Python modules, etc. "
-"for the user installation scheme. See also :envvar:`PYTHONUSERBASE`."
+"for the :ref:`user installation scheme <sysconfig-user-scheme>`. See also "
+":envvar:`PYTHONUSERBASE`."
 msgstr ""
 
-#: ../../library/site.rst:200
+#: ../../library/site.rst:208
 msgid ""
 "Adds all the standard site-specific directories to the module search path.  "
 "This function is called automatically when this module is imported, unless "
@@ -335,11 +320,11 @@ msgstr ""
 "викликається автоматично під час імпорту цього модуля, якщо інтерпретатор "
 "Python не було запущено з прапорцем :option:`-S`."
 
-#: ../../library/site.rst:204
+#: ../../library/site.rst:212
 msgid "This function used to be called unconditionally."
 msgstr "Ця функція раніше називалася безумовно."
 
-#: ../../library/site.rst:210
+#: ../../library/site.rst:218
 msgid ""
 "Add a directory to sys.path and process its :file:`.pth` files.  Typically "
 "used in :mod:`sitecustomize` or :mod:`usercustomize` (see above)."
@@ -348,11 +333,11 @@ msgstr ""
 "використовується в :mod:`sitecustomize` або :mod:`usercustomize` (див. "
 "вище)."
 
-#: ../../library/site.rst:216
+#: ../../library/site.rst:224
 msgid "Return a list containing all global site-packages directories."
 msgstr "Повертає список, що містить усі глобальні каталоги пакетів сайту."
 
-#: ../../library/site.rst:223
+#: ../../library/site.rst:231
 msgid ""
 "Return the path of the user base directory, :data:`USER_BASE`.  If it is not"
 " initialized yet, this function will also set it, respecting "
@@ -362,7 +347,7 @@ msgstr ""
 "не ініціалізований, ця функція також встановить його, поважаючи "
 ":envvar:`PYTHONUSERBASE`."
 
-#: ../../library/site.rst:232
+#: ../../library/site.rst:240
 msgid ""
 "Return the path of the user-specific site-packages directory, "
 ":data:`USER_SITE`.  If it is not initialized yet, this function will also "
@@ -376,11 +361,11 @@ msgstr ""
 "пакети сайтів до ``sys.path``, слід використовувати "
 ":data:`ENABLE_USER_SITE`."
 
-#: ../../library/site.rst:244
+#: ../../library/site.rst:252
 msgid "Command Line Interface"
 msgstr "Інтерфейс командного рядка"
 
-#: ../../library/site.rst:248
+#: ../../library/site.rst:256
 msgid ""
 "The :mod:`site` module also provides a way to get the user directories from "
 "the command line:"
@@ -388,7 +373,7 @@ msgstr ""
 "Модуль :mod:`site` також надає спосіб отримати каталоги користувача з "
 "командного рядка:"
 
-#: ../../library/site.rst:256
+#: ../../library/site.rst:264
 msgid ""
 "If it is called without arguments, it will print the contents of "
 ":data:`sys.path` on the standard output, followed by the value of "
@@ -400,15 +385,15 @@ msgstr ""
 "каталог, потім те саме для :data:`USER_SITE` і, нарешті, значення "
 ":data:`ENABLE_USER_SITE`."
 
-#: ../../library/site.rst:263
+#: ../../library/site.rst:271
 msgid "Print the path to the user base directory."
 msgstr "Надрукуйте шлях до каталогу бази користувача."
 
-#: ../../library/site.rst:267
+#: ../../library/site.rst:275
 msgid "Print the path to the user site-packages directory."
 msgstr "Надрукуйте шлях до каталогу site-packages користувача."
 
-#: ../../library/site.rst:269
+#: ../../library/site.rst:277
 msgid ""
 "If both options are given, user base and user site will be printed (always "
 "in this order), separated by :data:`os.pathsep`."
@@ -416,7 +401,7 @@ msgstr ""
 "Якщо задано обидва параметри, буде надруковано базу користувачів і сайт "
 "користувачів (завжди в такому порядку), розділених :data:`os.pathsep`."
 
-#: ../../library/site.rst:272
+#: ../../library/site.rst:280
 msgid ""
 "If any option is given, the script will exit with one of these values: ``0``"
 " if the user site-packages directory is enabled, ``1`` if it was disabled by"
@@ -428,16 +413,15 @@ msgstr ""
 "якщо він був вимкнений користувачем, ``2``, якщо його вимкнено з міркувань "
 "безпеки або адміністратором, і значення більше 2, якщо є помилка."
 
-#: ../../library/site.rst:279
+#: ../../library/site.rst:287
 msgid ":pep:`370` -- Per user site-packages directory"
 msgstr ":pep:`370` -- Каталог пакетів сайту для кожного користувача"
 
-#: ../../library/site.rst:280
+#: ../../library/site.rst:288
 msgid ":ref:`sys-path-init` -- The initialization of :data:`sys.path`."
 msgstr ""
 
-#: ../../library/site.rst:16 ../../library/site.rst:112
-#: ../../library/site.rst:124
+#: ../../library/site.rst:16
 msgid "module"
 msgstr "модуль"
 
@@ -483,12 +467,4 @@ msgstr ""
 
 #: ../../library/site.rst:77
 msgid "file"
-msgstr ""
-
-#: ../../library/site.rst:112
-msgid "sitecustomize"
-msgstr ""
-
-#: ../../library/site.rst:124
-msgid "usercustomize"
 msgstr ""
