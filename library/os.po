@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-29 14:12+0000\n"
+"POT-Creation-Date: 2023-10-06 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:10+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -646,9 +646,9 @@ msgstr ""
 #: ../../library/os.rst:2178 ../../library/os.rst:2496
 #: ../../library/os.rst:2508 ../../library/os.rst:3241
 #: ../../library/os.rst:3398 ../../library/os.rst:3631
-#: ../../library/os.rst:5172 ../../library/os.rst:5181
-#: ../../library/os.rst:5202 ../../library/os.rst:5212
-#: ../../library/os.rst:5221
+#: ../../library/os.rst:5174 ../../library/os.rst:5183
+#: ../../library/os.rst:5204 ../../library/os.rst:5214
+#: ../../library/os.rst:5223
 msgid ":ref:`Availability <availability>`: Unix."
 msgstr ":ref:`Наявність <availability>`: Unix."
 
@@ -7177,18 +7177,20 @@ msgstr ""
 "процесорів, якими має бути обмежений процес."
 
 #: ../../library/os.rst:5144
-msgid ""
-"Return the set of CPUs the process with PID *pid* (or the current process if"
-" zero) is restricted to."
+msgid "Return the set of CPUs the process with PID *pid* is restricted to."
 msgstr ""
-"Повертає набір процесорів, до яких обмежено процес із PID *pid* (або "
-"поточний процес, якщо він нульовий)."
 
-#: ../../library/os.rst:5151
+#: ../../library/os.rst:5146
+msgid ""
+"If *pid* is zero, return the set of CPUs the calling thread of the current "
+"process is restricted to."
+msgstr ""
+
+#: ../../library/os.rst:5153
 msgid "Miscellaneous System Information"
 msgstr "Різна системна інформація"
 
-#: ../../library/os.rst:5156
+#: ../../library/os.rst:5158
 msgid ""
 "Return string-valued system configuration values. *name* specifies the "
 "configuration value to retrieve; it may be a string which is the name of a "
@@ -7206,7 +7208,7 @@ msgstr ""
 "``confstr_names``. Для змінних конфігурації, не включених до цього "
 "відображення, також допускається передача цілого числа для *name*."
 
-#: ../../library/os.rst:5164
+#: ../../library/os.rst:5166
 msgid ""
 "If the configuration value specified by *name* isn't defined, ``None`` is "
 "returned."
@@ -7214,7 +7216,7 @@ msgstr ""
 "Якщо значення конфігурації, указане *name*, не визначено, повертається "
 "``None``."
 
-#: ../../library/os.rst:5167
+#: ../../library/os.rst:5169
 msgid ""
 "If *name* is a string and is not known, :exc:`ValueError` is raised.  If a "
 "specific value for *name* is not supported by the host system, even if it is"
@@ -7226,7 +7228,7 @@ msgstr ""
 "включене в ``confstr_names``, виникає :exc:`OSError` з :const:`errno.EINVAL`"
 " для номера помилки ."
 
-#: ../../library/os.rst:5177
+#: ../../library/os.rst:5179
 msgid ""
 "Dictionary mapping names accepted by :func:`confstr` to the integer values "
 "defined for those names by the host operating system. This can be used to "
@@ -7236,24 +7238,20 @@ msgstr ""
 "визначених для цих імен головною операційною системою. Це можна "
 "використовувати для визначення набору імен, відомих системі."
 
-#: ../../library/os.rst:5186
-msgid ""
-"Return the number of CPUs in the system. Returns ``None`` if undetermined."
-msgstr ""
-"Повертає кількість процесорів у системі. Повертає ``None``, якщо не "
-"визначено."
-
 #: ../../library/os.rst:5188
 msgid ""
-"This number is not equivalent to the number of CPUs the current process can "
-"use.  The number of usable CPUs can be obtained with "
-"``len(os.sched_getaffinity(0))``"
+"Return the number of logical CPUs in the system. Returns ``None`` if "
+"undetermined."
 msgstr ""
-"Це число не еквівалентно кількості ЦП, які може використовувати поточний "
-"процес. Кількість доступних ЦП можна отримати за допомогою "
-"``len(os.sched_getaffinity(0))``"
 
-#: ../../library/os.rst:5198
+#: ../../library/os.rst:5191
+msgid ""
+"This number is not equivalent to the number of logical CPUs the current "
+"process can use. ``len(os.sched_getaffinity(0))`` gets the number of logical"
+" CPUs the calling thread of the current process is restricted to"
+msgstr ""
+
+#: ../../library/os.rst:5200
 msgid ""
 "Return the number of processes in the system run queue averaged over the "
 "last 1, 5, and 15 minutes or raises :exc:`OSError` if the load average was "
@@ -7263,7 +7261,7 @@ msgstr ""
 "5 і 15 хвилин або викликає :exc:`OSError`, якщо середнє значення "
 "завантаження неможливо отримати."
 
-#: ../../library/os.rst:5207
+#: ../../library/os.rst:5209
 msgid ""
 "Return integer-valued system configuration values. If the configuration "
 "value specified by *name* isn't defined, ``-1`` is returned.  The comments "
@@ -7276,7 +7274,7 @@ msgstr ""
 "щодо параметра *name* для :func:`confstr` також застосовуються тут; словник,"
 " який надає інформацію про відомі імена, надається ``sysconf_names``."
 
-#: ../../library/os.rst:5217
+#: ../../library/os.rst:5219
 msgid ""
 "Dictionary mapping names accepted by :func:`sysconf` to the integer values "
 "defined for those names by the host operating system. This can be used to "
@@ -7286,11 +7284,11 @@ msgstr ""
 "визначених для цих імен головною операційною системою. Це можна "
 "використовувати для визначення набору імен, відомих системі."
 
-#: ../../library/os.rst:5223
+#: ../../library/os.rst:5225
 msgid "Add ``'SC_MINSIGSTKSZ'`` name."
 msgstr ""
 
-#: ../../library/os.rst:5226
+#: ../../library/os.rst:5228
 msgid ""
 "The following data values are used to support path manipulation operations."
 "  These are defined for all platforms."
@@ -7298,14 +7296,14 @@ msgstr ""
 "Наступні значення даних використовуються для підтримки операцій "
 "маніпулювання шляхом. Вони визначені для всіх платформ."
 
-#: ../../library/os.rst:5229
+#: ../../library/os.rst:5231
 msgid ""
 "Higher-level operations on pathnames are defined in the :mod:`os.path` "
 "module."
 msgstr ""
 "Операції вищого рівня над іменами шляхів визначені в модулі :mod:`os.path`."
 
-#: ../../library/os.rst:5235
+#: ../../library/os.rst:5237
 msgid ""
 "The constant string used by the operating system to refer to the current "
 "directory. This is ``'.'`` for Windows and POSIX. Also available via "
@@ -7315,7 +7313,7 @@ msgstr ""
 " поточний каталог. Це ``'.'`` для Windows і POSIX. Також доступний через "
 ":mod:`os.path`."
 
-#: ../../library/os.rst:5243
+#: ../../library/os.rst:5245
 msgid ""
 "The constant string used by the operating system to refer to the parent "
 "directory. This is ``'..'`` for Windows and POSIX. Also available via "
@@ -7325,7 +7323,7 @@ msgstr ""
 " батьківський каталог. Це \"..\" для Windows і POSIX. Також доступний через "
 ":mod:`os.path`."
 
-#: ../../library/os.rst:5252
+#: ../../library/os.rst:5254
 msgid ""
 "The character used by the operating system to separate pathname components. "
 "This is ``'/'`` for POSIX and ``'\\\\'`` for Windows.  Note that knowing "
@@ -7339,7 +7337,7 @@ msgstr ""
 "використовуйте :func:`os.path.split` і :func:`os.path.join` --- але іноді це"
 " корисно. Також доступний через :mod:`os.path`."
 
-#: ../../library/os.rst:5262
+#: ../../library/os.rst:5264
 msgid ""
 "An alternative character used by the operating system to separate pathname "
 "components, or ``None`` if only one separator character exists.  This is set"
@@ -7351,7 +7349,7 @@ msgstr ""
 " символ. У системах Windows встановлено значення ``'/''``, де ``sep`` є "
 "зворотною косою рискою. Також доступний через :mod:`os.path`."
 
-#: ../../library/os.rst:5271
+#: ../../library/os.rst:5273
 msgid ""
 "The character which separates the base filename from the extension; for "
 "example, the ``'.'`` in :file:`os.py`. Also available via :mod:`os.path`."
@@ -7359,7 +7357,7 @@ msgstr ""
 "Символ, який відокремлює базову назву файлу від розширення; наприклад, "
 "``'.'`` у :file:`os.py`. Також доступний через :mod:`os.path`."
 
-#: ../../library/os.rst:5279
+#: ../../library/os.rst:5281
 msgid ""
 "The character conventionally used by the operating system to separate search"
 " path components (as in :envvar:`PATH`), such as ``':'`` for POSIX or "
@@ -7369,7 +7367,7 @@ msgstr ""
 "компонентів шляху пошуку (як у :envvar:`PATH`), наприклад ``':''`` для POSIX"
 " або ``';''`` для Windows. Також доступний через :mod:`os.path`."
 
-#: ../../library/os.rst:5286
+#: ../../library/os.rst:5288
 msgid ""
 "The default search path used by :func:`exec\\*p\\* <execl>` and "
 ":func:`spawn\\*p\\* <spawnl>` if the environment doesn't have a ``'PATH'`` "
@@ -7379,7 +7377,7 @@ msgstr ""
 " і :func:`spawn\\*p\\* <spawnl>`, якщо середовище не має ключа ``'PATH'``. "
 "Також доступний через :mod:`os.path`."
 
-#: ../../library/os.rst:5293
+#: ../../library/os.rst:5295
 msgid ""
 "The string used to separate (or, rather, terminate) lines on the current "
 "platform.  This may be a single character, such as ``'\\n'`` for POSIX, or "
@@ -7394,7 +7392,7 @@ msgstr ""
 "текстовому режимі (за замовчуванням); замість цього використовуйте єдиний "
 "``'\\n'`` на всіх платформах."
 
-#: ../../library/os.rst:5302
+#: ../../library/os.rst:5304
 msgid ""
 "The file path of the null device. For example: ``'/dev/null'`` for POSIX, "
 "``'nul'`` for Windows.  Also available via :mod:`os.path`."
@@ -7402,7 +7400,7 @@ msgstr ""
 "Шлях до файлу нульового пристрою. Наприклад: ``'/dev/null`` для POSIX, "
 "``'nul'`` для Windows. Також доступний через :mod:`os.path`."
 
-#: ../../library/os.rst:5313
+#: ../../library/os.rst:5315
 msgid ""
 "Flags for use with the :func:`~sys.setdlopenflags` and "
 ":func:`~sys.getdlopenflags` functions.  See the Unix manual page "
@@ -7412,11 +7410,11 @@ msgstr ""
 ":func:`~sys.getdlopenflags`. Що означають різні прапорці, див. сторінку "
 "посібника Unix :manpage:`dlopen(3)`."
 
-#: ../../library/os.rst:5321
+#: ../../library/os.rst:5323
 msgid "Random numbers"
 msgstr "Випадкові числа"
 
-#: ../../library/os.rst:5326
+#: ../../library/os.rst:5328
 msgid ""
 "Get up to *size* random bytes. The function can return less bytes than "
 "requested."
@@ -7424,7 +7422,7 @@ msgstr ""
 "Отримайте до *size* випадкових байтів. Функція може повертати менше байтів, "
 "ніж вимагається."
 
-#: ../../library/os.rst:5329
+#: ../../library/os.rst:5331
 msgid ""
 "These bytes can be used to seed user-space random number generators or for "
 "cryptographic purposes."
@@ -7432,7 +7430,7 @@ msgstr ""
 "Ці байти можна використовувати для заповнення генераторів випадкових чисел у"
 " просторі користувача або для криптографічних цілей."
 
-#: ../../library/os.rst:5332
+#: ../../library/os.rst:5334
 msgid ""
 "``getrandom()`` relies on entropy gathered from device drivers and other "
 "sources of environmental noise. Unnecessarily reading large quantities of "
@@ -7444,31 +7442,31 @@ msgstr ""
 "кількості даних матиме негативний вплив на інших користувачів пристроїв "
 "``/dev/random`` і ``/dev/urandom``."
 
-#: ../../library/os.rst:5337
+#: ../../library/os.rst:5339
 msgid ""
 "The flags argument is a bit mask that can contain zero or more of the "
 "following values ORed together: :py:const:`os.GRND_RANDOM` and "
 ":py:data:`GRND_NONBLOCK`."
 msgstr ""
 
-#: ../../library/os.rst:5341
+#: ../../library/os.rst:5343
 msgid ""
 "See also the `Linux getrandom() manual page <https://man7.org/linux/man-"
 "pages/man2/getrandom.2.html>`_."
 msgstr ""
 
-#: ../../library/os.rst:5344
+#: ../../library/os.rst:5346
 msgid ":ref:`Availability <availability>`: Linux >= 3.17."
 msgstr ""
 
-#: ../../library/os.rst:5350
+#: ../../library/os.rst:5352
 msgid ""
 "Return a bytestring of *size* random bytes suitable for cryptographic use."
 msgstr ""
 "Повертає байтовий рядок *розміру* випадкових байтів, придатних для "
 "криптографічного використання."
 
-#: ../../library/os.rst:5352
+#: ../../library/os.rst:5354
 msgid ""
 "This function returns random bytes from an OS-specific randomness source.  "
 "The returned data should be unpredictable enough for cryptographic "
@@ -7478,7 +7476,7 @@ msgstr ""
 "випадковості. Повернуті дані мають бути досить непередбачуваними для "
 "криптографічних програм, хоча їх точна якість залежить від реалізації ОС."
 
-#: ../../library/os.rst:5356
+#: ../../library/os.rst:5358
 msgid ""
 "On Linux, if the ``getrandom()`` syscall is available, it is used in "
 "blocking mode: block until the system urandom entropy pool is initialized "
@@ -7495,7 +7493,7 @@ msgstr ""
 "(використовуючи прапор :data:`GRND_NONBLOCK`) або для опитування, доки "
 "системний пул випадкової ентропії не буде ініціалізовано."
 
-#: ../../library/os.rst:5363
+#: ../../library/os.rst:5365
 msgid ""
 "On a Unix-like system, random bytes are read from the ``/dev/urandom`` "
 "device. If the ``/dev/urandom`` device is not available or not readable, the"
@@ -7505,11 +7503,11 @@ msgstr ""
 "``/dev/urandom``. Якщо пристрій ``/dev/urandom`` недоступний або не "
 "читається, виникає виняток :exc:`NotImplementedError`."
 
-#: ../../library/os.rst:5367
+#: ../../library/os.rst:5369
 msgid "On Windows, it will use ``BCryptGenRandom()``."
 msgstr ""
 
-#: ../../library/os.rst:5370
+#: ../../library/os.rst:5372
 msgid ""
 "The :mod:`secrets` module provides higher level functions. For an easy-to-"
 "use interface to the random number generator provided by your platform, "
@@ -7519,7 +7517,7 @@ msgstr ""
 "використанні інтерфейс генератора випадкових чисел, наданий вашою "
 "платформою, див. :class:`random.SystemRandom`."
 
-#: ../../library/os.rst:5374
+#: ../../library/os.rst:5376
 msgid ""
 "On Linux, ``getrandom()`` is now used in blocking mode to increase the "
 "security."
@@ -7527,7 +7525,7 @@ msgstr ""
 "У Linux ``getrandom()`` тепер використовується в режимі блокування для "
 "підвищення безпеки."
 
-#: ../../library/os.rst:5378
+#: ../../library/os.rst:5380
 msgid ""
 "On Linux, if the ``getrandom()`` syscall blocks (the urandom entropy pool is"
 " not initialized yet), fall back on reading ``/dev/urandom``."
@@ -7535,7 +7533,7 @@ msgstr ""
 "У Linux, якщо системний виклик ``getrandom()`` блокує (пул ентропії urandom "
 "ще не ініціалізовано), поверніться до читання ``/dev/urandom``."
 
-#: ../../library/os.rst:5382
+#: ../../library/os.rst:5384
 msgid ""
 "On Linux 3.17 and newer, the ``getrandom()`` syscall is now used when "
 "available.  On OpenBSD 5.6 and newer, the C ``getentropy()`` function is now"
@@ -7546,13 +7544,13 @@ msgstr ""
 "використовується функція C ``getentropy()``. Ці функції уникають "
 "використання внутрішнього файлового дескриптора."
 
-#: ../../library/os.rst:5388
+#: ../../library/os.rst:5390
 msgid ""
 "On Windows, ``BCryptGenRandom()`` is used instead of ``CryptGenRandom()`` "
 "which is deprecated."
 msgstr ""
 
-#: ../../library/os.rst:5394
+#: ../../library/os.rst:5396
 msgid ""
 "By  default, when reading from ``/dev/random``, :func:`getrandom` blocks if "
 "no random bytes are available, and when reading from ``/dev/urandom``, it "
@@ -7562,7 +7560,7 @@ msgstr ""
 " якщо випадкові байти недоступні, а під час читання з ``/dev/urandom`` "
 "блокує, якщо пул ентропії не має ще не ініціалізовано."
 
-#: ../../library/os.rst:5398
+#: ../../library/os.rst:5400
 msgid ""
 "If the :py:data:`GRND_NONBLOCK` flag is set, then :func:`getrandom` does not"
 " block in these cases, but instead immediately raises "
@@ -7572,7 +7570,7 @@ msgstr ""
 " блокує в цих випадках, а замість цього негайно викликає "
 ":exc:`BlockingIOError`."
 
-#: ../../library/os.rst:5405
+#: ../../library/os.rst:5407
 msgid ""
 "If  this  bit  is  set,  then  random bytes are drawn from the "
 "``/dev/random`` pool instead of the ``/dev/urandom`` pool."
@@ -7686,40 +7684,40 @@ msgstr ""
 msgid "signalling"
 msgstr ""
 
-#: ../../library/os.rst:5232 ../../library/os.rst:5268
+#: ../../library/os.rst:5234 ../../library/os.rst:5270
 msgid ". (dot)"
 msgstr ""
 
-#: ../../library/os.rst:5232 ../../library/os.rst:5240
-#: ../../library/os.rst:5248 ../../library/os.rst:5259
-#: ../../library/os.rst:5268
+#: ../../library/os.rst:5234 ../../library/os.rst:5242
+#: ../../library/os.rst:5250 ../../library/os.rst:5261
+#: ../../library/os.rst:5270
 msgid "in pathnames"
 msgstr ""
 
-#: ../../library/os.rst:5240
+#: ../../library/os.rst:5242
 msgid ".."
 msgstr ""
 
-#: ../../library/os.rst:5248 ../../library/os.rst:5259
+#: ../../library/os.rst:5250 ../../library/os.rst:5261
 msgid "/ (slash)"
 msgstr ""
 
-#: ../../library/os.rst:5249
+#: ../../library/os.rst:5251
 msgid "\\ (backslash)"
 msgstr ""
 
-#: ../../library/os.rst:5249
+#: ../../library/os.rst:5251
 msgid "in pathnames (Windows)"
 msgstr ""
 
-#: ../../library/os.rst:5275
+#: ../../library/os.rst:5277
 msgid ": (colon)"
 msgstr ""
 
-#: ../../library/os.rst:5275
+#: ../../library/os.rst:5277
 msgid "path separator (POSIX)"
 msgstr ""
 
-#: ../../library/os.rst:5275
+#: ../../library/os.rst:5277
 msgid "; (semicolon)"
 msgstr ""
