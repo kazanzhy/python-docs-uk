@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-22 14:13+0000\n"
+"POT-Creation-Date: 2023-10-13 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -45,11 +45,11 @@ msgstr ""
 "користувачі модуля :mod:`pickle`, ймовірно, не знайдуть модуль "
 ":mod:`pickletools` доречним."
 
-#: ../../library/pickletools.rst:21
+#: ../../library/pickletools.rst:23
 msgid "Command line usage"
 msgstr "Використання командного рядка"
 
-#: ../../library/pickletools.rst:25
+#: ../../library/pickletools.rst:27
 msgid ""
 "When invoked from the command line, ``python -m pickletools`` will "
 "disassemble the contents of one or more pickle files.  Note that if you want"
@@ -65,32 +65,32 @@ msgstr ""
 "ви хочете перевірити, походить із ненадійного джерела, ``-m pickletools`` є "
 "безпечнішим варіантом, оскільки він не виконує байт-код pickle."
 
-#: ../../library/pickletools.rst:33
+#: ../../library/pickletools.rst:35
 msgid "For example, with a tuple ``(1, 2)`` pickled in file ``x.pickle``:"
 msgstr "Наприклад, з кортежем ``(1, 2)``, маринованим у файлі ``x.pickle``:"
 
-#: ../../library/pickletools.rst:50
+#: ../../library/pickletools.rst:52
 msgid "Command line options"
 msgstr "Параметри командного рядка"
 
-#: ../../library/pickletools.rst:56
+#: ../../library/pickletools.rst:58
 msgid "Annotate each line with a short opcode description."
 msgstr "Додайте до кожного рядка короткий опис коду операції."
 
-#: ../../library/pickletools.rst:60
+#: ../../library/pickletools.rst:62
 msgid "Name of a file where the output should be written."
 msgstr "Ім'я файлу, куди слід записати вихідні дані."
 
-#: ../../library/pickletools.rst:64
+#: ../../library/pickletools.rst:66
 msgid "The number of blanks by which to indent a new MARK level."
 msgstr "Кількість пробілів, на які потрібно відступити новий рівень MARK."
 
-#: ../../library/pickletools.rst:68
+#: ../../library/pickletools.rst:70
 msgid ""
 "When multiple objects are disassembled, preserve memo between disassemblies."
 msgstr "Коли кілька об’єктів розібрано, зберігайте пам’ятку між розбираннями."
 
-#: ../../library/pickletools.rst:73
+#: ../../library/pickletools.rst:75
 msgid ""
 "When more than one pickle file are specified, print given preamble before "
 "each disassembly."
@@ -98,11 +98,11 @@ msgstr ""
 "Якщо вказано більше одного файлу pickle, друкуйте надану преамбулу перед "
 "кожним розбиранням."
 
-#: ../../library/pickletools.rst:79
+#: ../../library/pickletools.rst:81
 msgid "Programmatic Interface"
 msgstr "Програмний інтерфейс"
 
-#: ../../library/pickletools.rst:84
+#: ../../library/pickletools.rst:86
 msgid ""
 "Outputs a symbolic disassembly of the pickle to the file-like object *out*, "
 "defaulting to ``sys.stdout``.  *pickle* can be a string or a file-like "
@@ -124,11 +124,11 @@ msgstr ""
 "даних анотується коротким описом. Значення *annotate* використовується як "
 "підказка для стовпця, з якого має починатися анотація."
 
-#: ../../library/pickletools.rst:95
+#: ../../library/pickletools.rst:97
 msgid "The *annotate* argument."
 msgstr "Аргумент *аннотувати*."
 
-#: ../../library/pickletools.rst:100
+#: ../../library/pickletools.rst:102
 msgid ""
 "Provides an :term:`iterator` over all of the opcodes in a pickle, returning "
 "a sequence of ``(opcode, arg, pos)`` triples.  *opcode* is an instance of an"
@@ -142,7 +142,7 @@ msgstr ""
 "як об’єкт Python; *pos* - це позиція, у якій знаходиться цей код операції. "
 "*pickle* може бути рядком або файлоподібним об’єктом."
 
-#: ../../library/pickletools.rst:108
+#: ../../library/pickletools.rst:110
 msgid ""
 "Returns a new equivalent pickle string after eliminating unused ``PUT`` "
 "opcodes. The optimized pickle is shorter, takes less transmission time, "
