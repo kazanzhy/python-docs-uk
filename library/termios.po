@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:14+0000\n"
+"POT-Creation-Date: 2023-10-20 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -87,19 +87,24 @@ msgstr ""
 msgid ""
 "Set the tty attributes for file descriptor *fd* from the *attributes*, which"
 " is a list like the one returned by :func:`tcgetattr`.  The *when* argument "
-"determines when the attributes are changed: :const:`TCSANOW` to change "
-"immediately, :const:`TCSADRAIN` to change after transmitting all queued "
-"output, or :const:`TCSAFLUSH` to change after transmitting all queued output"
-" and discarding all queued input."
+"determines when the attributes are changed:"
 msgstr ""
-"Установіть атрибути tty для файлового дескриптора *fd* зі списку "
-"*attributes*, який є списком, подібним до того, який повертає "
-":func:`tcgetattr`. Аргумент *when* визначає, коли змінюються атрибути: "
-":const:`TCSANOW` для негайної зміни, :const:`TCSADRAIN` для зміни після "
-"передачі всього виводу в черзі або :const:`TCSAFLUSH` для зміни після "
-"передачі всього виводу в черзі і відкидаючи всі введення в черзі."
+
+#: ../../library/termios.rst:50
+msgid "Change attributes immediately."
+msgstr ""
 
 #: ../../library/termios.rst:54
+msgid "Change attributes after transmitting all queued output."
+msgstr ""
+
+#: ../../library/termios.rst:58
+msgid ""
+"Change attributes after transmitting all queued output and discarding all "
+"queued input."
+msgstr ""
+
+#: ../../library/termios.rst:64
 msgid ""
 "Send a break on file descriptor *fd*.  A zero *duration* sends a break for "
 "0.25--0.5 seconds; a nonzero *duration* has a system dependent meaning."
@@ -108,14 +113,14 @@ msgstr ""
 "перерву на 0,25--0,5 секунди; ненульова *тривалість* має системно-залежне "
 "значення."
 
-#: ../../library/termios.rst:60
+#: ../../library/termios.rst:70
 msgid ""
 "Wait until all output written to file descriptor *fd* has been transmitted."
 msgstr ""
 "Зачекайте, доки не буде передано весь вихід, записаний у файловий дескриптор"
 " *fd*."
 
-#: ../../library/termios.rst:65
+#: ../../library/termios.rst:75
 msgid ""
 "Discard queued data on file descriptor *fd*.  The *queue* selector specifies"
 " which queue: :const:`TCIFLUSH` for the input queue, :const:`TCOFLUSH` for "
@@ -125,7 +130,7 @@ msgstr ""
 " яка черга: :const:`TCIFLUSH` для черги введення, :const:`TCOFLUSH` для "
 "черги виведення або :const:`TCIOFLUSH` для обох черг."
 
-#: ../../library/termios.rst:72
+#: ../../library/termios.rst:82
 msgid ""
 "Suspend or resume input or output on file descriptor *fd*.  The *action* "
 "argument can be :const:`TCOOFF` to suspend output, :const:`TCOON` to restart"
@@ -137,14 +142,14 @@ msgstr ""
 "виведення, :const:`TCOON`, щоб перезапустити виведення, :const:`TCIOFF`, щоб"
 " призупинити введення, або :const:`TCION`, щоб перезапустити введення."
 
-#: ../../library/termios.rst:79
+#: ../../library/termios.rst:89
 msgid ""
 "Return a tuple ``(ws_row, ws_col)`` containing the tty window size for file "
 "descriptor *fd*. Requires :const:`termios.TIOCGWINSZ` or "
 ":const:`termios.TIOCGSIZE`."
 msgstr ""
 
-#: ../../library/termios.rst:88
+#: ../../library/termios.rst:98
 msgid ""
 "Set the tty window size for file descriptor *fd* from *winsize*, which is a "
 "two-item tuple ``(ws_row, ws_col)`` like the one returned by "
@@ -153,19 +158,19 @@ msgid ""
 "(:const:`termios.TIOCGSIZE`, :const:`termios.TIOCSSIZE`) to be defined."
 msgstr ""
 
-#: ../../library/termios.rst:99
+#: ../../library/termios.rst:109
 msgid "Module :mod:`tty`"
 msgstr "Модуль :mod:`tty`"
 
-#: ../../library/termios.rst:100
+#: ../../library/termios.rst:110
 msgid "Convenience functions for common terminal control operations."
 msgstr "Функції зручності для звичайних операцій керування терміналом."
 
-#: ../../library/termios.rst:106
+#: ../../library/termios.rst:116
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/termios.rst:108
+#: ../../library/termios.rst:118
 msgid ""
 "Here's a function that prompts for a password with echoing turned off.  Note"
 " the technique using a separate :func:`tcgetattr` call and a :keyword:`try` "
