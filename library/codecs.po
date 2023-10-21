@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:14+0000\n"
+"POT-Creation-Date: 2023-10-20 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -507,8 +507,8 @@ msgid "Value"
 msgstr "Значення"
 
 #: ../../library/codecs.rst:330 ../../library/codecs.rst:373
-#: ../../library/codecs.rst:393 ../../library/codecs.rst:1327
-#: ../../library/codecs.rst:1395 ../../library/codecs.rst:1450
+#: ../../library/codecs.rst:393 ../../library/codecs.rst:1330
+#: ../../library/codecs.rst:1398 ../../library/codecs.rst:1455
 msgid "Meaning"
 msgstr "Значення"
 
@@ -838,7 +838,7 @@ msgstr ""
 "Базовий клас :class:`Codec` визначає ці методи, які також визначають "
 "функціональні інтерфейси кодера та декодера без збереження стану:"
 
-#: ../../library/codecs.rst:525
+#: ../../library/codecs.rst:527
 msgid ""
 "Encodes the object *input* and returns a tuple (output object, length "
 "consumed). For instance, :term:`text encoding` converts a string object to a"
@@ -850,7 +850,7 @@ msgstr ""
 "bytes, використовуючи певне кодування набору символів (наприклад, ``cp1252``"
 " або ``iso-8859-1``)."
 
-#: ../../library/codecs.rst:530 ../../library/codecs.rst:552
+#: ../../library/codecs.rst:532 ../../library/codecs.rst:554
 msgid ""
 "The *errors* argument defines the error handling to apply. It defaults to "
 "``'strict'`` handling."
@@ -858,7 +858,7 @@ msgstr ""
 "Аргумент *errors* визначає застосовувану обробку помилок. За замовчуванням "
 "``'сувора''`` обробка."
 
-#: ../../library/codecs.rst:533
+#: ../../library/codecs.rst:535
 msgid ""
 "The method may not store state in the :class:`Codec` instance. Use "
 ":class:`StreamWriter` for codecs which have to keep state in order to make "
@@ -868,7 +868,7 @@ msgstr ""
 ":class:`StreamWriter` для кодеків, які мають зберігати стан, щоб зробити "
 "кодування ефективним."
 
-#: ../../library/codecs.rst:537
+#: ../../library/codecs.rst:539
 msgid ""
 "The encoder must be able to handle zero length input and return an empty "
 "object of the output object type in this situation."
@@ -876,7 +876,7 @@ msgstr ""
 "У цій ситуації кодер повинен мати можливість обробляти вхідні дані нульової "
 "довжини та повертати порожній об’єкт типу вихідного об’єкта."
 
-#: ../../library/codecs.rst:543
+#: ../../library/codecs.rst:545
 msgid ""
 "Decodes the object *input* and returns a tuple (output object, length "
 "consumed). For instance, for a :term:`text encoding`, decoding converts a "
@@ -888,7 +888,7 @@ msgstr ""
 " bytes, закодований за допомогою кодування певного набору символів, на "
 "рядковий об’єкт."
 
-#: ../../library/codecs.rst:548
+#: ../../library/codecs.rst:550
 msgid ""
 "For text encodings and bytes-to-bytes codecs, *input* must be a bytes object"
 " or one which provides the read-only buffer interface -- for example, buffer"
@@ -898,7 +898,7 @@ msgstr ""
 "об’єктом bytes або таким, який забезпечує інтерфейс буфера лише для читання "
 "– наприклад, об’єкти буфера та файли, відображені в пам’яті."
 
-#: ../../library/codecs.rst:555
+#: ../../library/codecs.rst:557
 msgid ""
 "The method may not store state in the :class:`Codec` instance. Use "
 ":class:`StreamReader` for codecs which have to keep state in order to make "
@@ -908,7 +908,7 @@ msgstr ""
 ":class:`StreamReader` для кодеків, які мають зберігати стан, щоб зробити "
 "декодування ефективним."
 
-#: ../../library/codecs.rst:559
+#: ../../library/codecs.rst:561
 msgid ""
 "The decoder must be able to handle zero length input and return an empty "
 "object of the output object type in this situation."
@@ -916,11 +916,11 @@ msgstr ""
 "У цій ситуації декодер повинен мати можливість обробляти вхідні дані "
 "нульової довжини та повертати порожній об’єкт типу вихідного об’єкта."
 
-#: ../../library/codecs.rst:564
+#: ../../library/codecs.rst:566
 msgid "Incremental Encoding and Decoding"
 msgstr "Інкрементне кодування та декодування"
 
-#: ../../library/codecs.rst:566
+#: ../../library/codecs.rst:568
 msgid ""
 "The :class:`IncrementalEncoder` and :class:`IncrementalDecoder` classes "
 "provide the basic interface for incremental encoding and decoding. "
@@ -938,7 +938,7 @@ msgstr ""
 "інкрементального кодувальника /декодер. Інкрементний кодер/декодер відстежує"
 " процес кодування/декодування під час викликів методів."
 
-#: ../../library/codecs.rst:574
+#: ../../library/codecs.rst:576
 msgid ""
 "The joined output of calls to the "
 ":meth:`~IncrementalEncoder.encode`/:meth:`~IncrementalDecoder.decode` method"
@@ -950,11 +950,11 @@ msgstr ""
 "самий, як якби всі окремі входи були об’єднані в один, і цей вхід було "
 "закодовано/декодовано за допомогою кодер/декодер без стану."
 
-#: ../../library/codecs.rst:583
+#: ../../library/codecs.rst:585
 msgid "IncrementalEncoder Objects"
 msgstr "Об’єкти IncrementalEncoder"
 
-#: ../../library/codecs.rst:585
+#: ../../library/codecs.rst:587
 msgid ""
 "The :class:`IncrementalEncoder` class is used for encoding an input in "
 "multiple steps. It defines the following methods which every incremental "
@@ -965,11 +965,11 @@ msgstr ""
 "даних у кілька кроків. Він визначає наступні методи, які повинен визначити "
 "кожен інкрементальний кодер, щоб бути сумісним із реєстром кодеків Python."
 
-#: ../../library/codecs.rst:592
+#: ../../library/codecs.rst:594
 msgid "Constructor for an :class:`IncrementalEncoder` instance."
 msgstr "Конструктор для екземпляра :class:`IncrementalEncoder`."
 
-#: ../../library/codecs.rst:594
+#: ../../library/codecs.rst:596
 msgid ""
 "All incremental encoders must provide this constructor interface. They are "
 "free to add additional keyword arguments, but only the ones defined here are"
@@ -979,7 +979,7 @@ msgstr ""
 "Вони можуть вільно додавати додаткові аргументи ключових слів, але лише ті, "
 "що визначені тут, використовуються реєстром кодеків Python."
 
-#: ../../library/codecs.rst:598
+#: ../../library/codecs.rst:600
 msgid ""
 "The :class:`IncrementalEncoder` may implement different error handling "
 "schemes by providing the *errors* keyword argument. See :ref:`error-"
@@ -989,7 +989,7 @@ msgstr ""
 "надаючи аргумент ключового слова *errors*. Перегляньте :ref:`error-handlers`"
 " можливі значення."
 
-#: ../../library/codecs.rst:602
+#: ../../library/codecs.rst:604
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
@@ -1000,7 +1000,7 @@ msgstr ""
 "атрибуту дає змогу перемикатися між різними стратегіями обробки помилок "
 "протягом життя об’єкта :class:`IncrementalEncoder`."
 
-#: ../../library/codecs.rst:610
+#: ../../library/codecs.rst:612
 msgid ""
 "Encodes *object* (taking the current state of the encoder into account) and "
 "returns the resulting encoded object. If this is the last call to "
@@ -1010,7 +1010,7 @@ msgstr ""
 "отриманий закодований об’єкт. Якщо це останній виклик :meth:`encode`, "
 "*final* має бути true (за умовчанням — false)."
 
-#: ../../library/codecs.rst:617
+#: ../../library/codecs.rst:619
 msgid ""
 "Reset the encoder to the initial state. The output is discarded: call "
 "``.encode(object, final=True)``, passing an empty byte or text string if "
@@ -1020,7 +1020,7 @@ msgstr ""
 "``.encode(object, final=True)``, передаючи порожній байт або текстовий "
 "рядок, якщо необхідно, щоб скинути кодер і отримати вихідні дані."
 
-#: ../../library/codecs.rst:624
+#: ../../library/codecs.rst:626
 msgid ""
 "Return the current state of the encoder which must be an integer. The "
 "implementation should make sure that ``0`` is the most common state. (States"
@@ -1034,7 +1034,7 @@ msgstr ""
 "маршалінгу/вибору стану та кодування байтів результуючого рядка в ціле "
 "число.)"
 
-#: ../../library/codecs.rst:633
+#: ../../library/codecs.rst:635
 msgid ""
 "Set the state of the encoder to *state*. *state* must be an encoder state "
 "returned by :meth:`getstate`."
@@ -1042,11 +1042,11 @@ msgstr ""
 "Встановіть стан кодера на *state*. *state* має бути станом кодувальника, "
 "який повертає :meth:`getstate`."
 
-#: ../../library/codecs.rst:640
+#: ../../library/codecs.rst:642
 msgid "IncrementalDecoder Objects"
 msgstr "Об’єкти IncrementalDecoder"
 
-#: ../../library/codecs.rst:642
+#: ../../library/codecs.rst:644
 msgid ""
 "The :class:`IncrementalDecoder` class is used for decoding an input in "
 "multiple steps. It defines the following methods which every incremental "
@@ -1057,11 +1057,11 @@ msgstr ""
 "даних у кілька кроків. Він визначає наступні методи, які повинен визначити "
 "кожен інкрементний декодер, щоб бути сумісним із реєстром кодеків Python."
 
-#: ../../library/codecs.rst:649
+#: ../../library/codecs.rst:651
 msgid "Constructor for an :class:`IncrementalDecoder` instance."
 msgstr "Конструктор для екземпляра :class:`IncrementalDecoder`."
 
-#: ../../library/codecs.rst:651
+#: ../../library/codecs.rst:653
 msgid ""
 "All incremental decoders must provide this constructor interface. They are "
 "free to add additional keyword arguments, but only the ones defined here are"
@@ -1071,7 +1071,7 @@ msgstr ""
 "Вони можуть вільно додавати додаткові аргументи ключових слів, але лише ті, "
 "що визначені тут, використовуються реєстром кодеків Python."
 
-#: ../../library/codecs.rst:655
+#: ../../library/codecs.rst:657
 msgid ""
 "The :class:`IncrementalDecoder` may implement different error handling "
 "schemes by providing the *errors* keyword argument. See :ref:`error-"
@@ -1081,7 +1081,7 @@ msgstr ""
 "надаючи аргумент ключового слова *errors*. Перегляньте :ref:`error-handlers`"
 " можливі значення."
 
-#: ../../library/codecs.rst:659
+#: ../../library/codecs.rst:661
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
@@ -1092,7 +1092,7 @@ msgstr ""
 "атрибуту дає змогу перемикатися між різними стратегіями обробки помилок "
 "протягом життя об’єкта :class:`IncrementalDecoder`."
 
-#: ../../library/codecs.rst:667
+#: ../../library/codecs.rst:669
 msgid ""
 "Decodes *object* (taking the current state of the decoder into account) and "
 "returns the resulting decoded object. If this is the last call to "
@@ -1110,11 +1110,11 @@ msgstr ""
 "введення), він повинен ініціювати обробку помилок, як у випадку без стану "
 "(що може спричинити виняток)."
 
-#: ../../library/codecs.rst:678
+#: ../../library/codecs.rst:680
 msgid "Reset the decoder to the initial state."
 msgstr "Скиньте декодер до початкового стану."
 
-#: ../../library/codecs.rst:683
+#: ../../library/codecs.rst:685
 msgid ""
 "Return the current state of the decoder. This must be a tuple with two "
 "items, the first must be the buffer containing the still undecoded input. "
@@ -1140,7 +1140,7 @@ msgstr ""
 "перетворити на ціле число шляхом маршалінгу/вибору інформації та кодування "
 "байтів отриманого рядка в ціле число.)"
 
-#: ../../library/codecs.rst:698
+#: ../../library/codecs.rst:700
 msgid ""
 "Set the state of the decoder to *state*. *state* must be a decoder state "
 "returned by :meth:`getstate`."
@@ -1148,26 +1148,22 @@ msgstr ""
 "Встановіть стан декодера на *state*. *state* має бути станом декодера, який "
 "повертає :meth:`getstate`."
 
-#: ../../library/codecs.rst:703
+#: ../../library/codecs.rst:705
 msgid "Stream Encoding and Decoding"
 msgstr "Кодування та декодування потоку"
 
-#: ../../library/codecs.rst:706
+#: ../../library/codecs.rst:708
 msgid ""
 "The :class:`StreamWriter` and :class:`StreamReader` classes provide generic "
 "working interfaces which can be used to implement new encoding submodules "
-"very easily. See :mod:`encodings.utf_8` for an example of how this is done."
+"very easily. See :mod:`!encodings.utf_8` for an example of how this is done."
 msgstr ""
-"Класи :class:`StreamWriter` і :class:`StreamReader` забезпечують загальні "
-"робочі інтерфейси, які можна використовувати для дуже легкої реалізації "
-"нових субмодулів кодування. Перегляньте :mod:`encodings.utf_8` для прикладу "
-"того, як це робиться."
 
-#: ../../library/codecs.rst:714
+#: ../../library/codecs.rst:716
 msgid "StreamWriter Objects"
 msgstr "Об’єкти StreamWriter"
 
-#: ../../library/codecs.rst:716
+#: ../../library/codecs.rst:718
 msgid ""
 "The :class:`StreamWriter` class is a subclass of :class:`Codec` and defines "
 "the following methods which every stream writer must define in order to be "
@@ -1177,11 +1173,11 @@ msgstr ""
 "методи, які повинен визначити кожен записувач потоків, щоб бути сумісним із "
 "реєстром кодеків Python."
 
-#: ../../library/codecs.rst:723
+#: ../../library/codecs.rst:725
 msgid "Constructor for a :class:`StreamWriter` instance."
 msgstr "Конструктор для екземпляра :class:`StreamWriter`."
 
-#: ../../library/codecs.rst:725
+#: ../../library/codecs.rst:727
 msgid ""
 "All stream writers must provide this constructor interface. They are free to"
 " add additional keyword arguments, but only the ones defined here are used "
@@ -1191,7 +1187,7 @@ msgstr ""
 "вільно додавати додаткові аргументи ключових слів, але лише ті, що визначені"
 " тут, використовуються реєстром кодеків Python."
 
-#: ../../library/codecs.rst:729
+#: ../../library/codecs.rst:731
 msgid ""
 "The *stream* argument must be a file-like object open for writing text or "
 "binary data, as appropriate for the specific codec."
@@ -1199,7 +1195,7 @@ msgstr ""
 "Аргумент *потік* має бути файлоподібним об’єктом, відкритим для запису "
 "тексту або двійкових даних, відповідно до конкретного кодека."
 
-#: ../../library/codecs.rst:732
+#: ../../library/codecs.rst:734
 msgid ""
 "The :class:`StreamWriter` may implement different error handling schemes by "
 "providing the *errors* keyword argument. See :ref:`error-handlers` for the "
@@ -1210,7 +1206,7 @@ msgstr ""
 " для стандартних обробників помилок, які може підтримувати основний "
 "потоковий кодек."
 
-#: ../../library/codecs.rst:736
+#: ../../library/codecs.rst:738
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
@@ -1221,11 +1217,11 @@ msgstr ""
 "атрибуту дає змогу перемикатися між різними стратегіями обробки помилок "
 "протягом життя об’єкта :class:`StreamWriter`."
 
-#: ../../library/codecs.rst:742
+#: ../../library/codecs.rst:744
 msgid "Writes the object's contents encoded to the stream."
 msgstr "Записує закодований вміст об’єкта в потік."
 
-#: ../../library/codecs.rst:747
+#: ../../library/codecs.rst:749
 msgid ""
 "Writes the concatenated iterable of strings to the stream (possibly by "
 "reusing the :meth:`write` method). Infinite or very large iterables are not "
@@ -1236,13 +1232,13 @@ msgstr ""
 " підтримуються. Стандартні кодеки від байтів до байтів не підтримують цей "
 "метод."
 
-#: ../../library/codecs.rst:755 ../../library/codecs.rst:850
+#: ../../library/codecs.rst:757 ../../library/codecs.rst:852
 msgid "Resets the codec buffers used for keeping internal state."
 msgstr ""
 "Скидає буфери кодеків, які використовуються для збереження внутрішнього "
 "стану."
 
-#: ../../library/codecs.rst:757
+#: ../../library/codecs.rst:759
 msgid ""
 "Calling this method should ensure that the data on the output is put into a "
 "clean state that allows appending of new fresh data without having to rescan"
@@ -1252,7 +1248,7 @@ msgstr ""
 "чистий стан, який дозволяє додавати нові свіжі дані без необхідності "
 "повторного сканування всього потоку для відновлення стану."
 
-#: ../../library/codecs.rst:762
+#: ../../library/codecs.rst:764
 msgid ""
 "In addition to the above methods, the :class:`StreamWriter` must also "
 "inherit all other methods and attributes from the underlying stream."
@@ -1260,11 +1256,11 @@ msgstr ""
 "Окрім вищезазначених методів, :class:`StreamWriter` також має успадкувати "
 "всі інші методи та атрибути базового потоку."
 
-#: ../../library/codecs.rst:769
+#: ../../library/codecs.rst:771
 msgid "StreamReader Objects"
 msgstr "Об’єкти StreamReader"
 
-#: ../../library/codecs.rst:771
+#: ../../library/codecs.rst:773
 msgid ""
 "The :class:`StreamReader` class is a subclass of :class:`Codec` and defines "
 "the following methods which every stream reader must define in order to be "
@@ -1274,11 +1270,11 @@ msgstr ""
 "методи, які повинен визначити кожен зчитувач потоку, щоб бути сумісним із "
 "реєстром кодеків Python."
 
-#: ../../library/codecs.rst:778
+#: ../../library/codecs.rst:780
 msgid "Constructor for a :class:`StreamReader` instance."
 msgstr "Конструктор для екземпляра :class:`StreamReader`."
 
-#: ../../library/codecs.rst:780
+#: ../../library/codecs.rst:782
 msgid ""
 "All stream readers must provide this constructor interface. They are free to"
 " add additional keyword arguments, but only the ones defined here are used "
@@ -1288,7 +1284,7 @@ msgstr ""
 "можуть вільно додавати додаткові аргументи ключових слів, але лише ті, що "
 "визначені тут, використовуються реєстром кодеків Python."
 
-#: ../../library/codecs.rst:784
+#: ../../library/codecs.rst:786
 msgid ""
 "The *stream* argument must be a file-like object open for reading text or "
 "binary data, as appropriate for the specific codec."
@@ -1296,7 +1292,7 @@ msgstr ""
 "Аргумент *потік* має бути файлоподібним об’єктом, відкритим для читання "
 "тексту або двійкових даних, відповідно до конкретного кодека."
 
-#: ../../library/codecs.rst:787
+#: ../../library/codecs.rst:789
 msgid ""
 "The :class:`StreamReader` may implement different error handling schemes by "
 "providing the *errors* keyword argument. See :ref:`error-handlers` for the "
@@ -1307,7 +1303,7 @@ msgstr ""
 " для стандартних обробників помилок, які може підтримувати основний "
 "потоковий кодек."
 
-#: ../../library/codecs.rst:791
+#: ../../library/codecs.rst:793
 msgid ""
 "The *errors* argument will be assigned to an attribute of the same name. "
 "Assigning to this attribute makes it possible to switch between different "
@@ -1318,7 +1314,7 @@ msgstr ""
 "атрибуту дає змогу перемикатися між різними стратегіями обробки помилок "
 "протягом життя об’єкта :class:`StreamReader`."
 
-#: ../../library/codecs.rst:795
+#: ../../library/codecs.rst:797
 msgid ""
 "The set of allowed values for the *errors* argument can be extended with "
 ":func:`register_error`."
@@ -1326,11 +1322,11 @@ msgstr ""
 "Набір дозволених значень для аргументу *errors* можна розширити за допомогою"
 " :func:`register_error`."
 
-#: ../../library/codecs.rst:801
+#: ../../library/codecs.rst:803
 msgid "Decodes data from the stream and returns the resulting object."
 msgstr "Декодує дані з потоку та повертає отриманий об’єкт."
 
-#: ../../library/codecs.rst:803
+#: ../../library/codecs.rst:805
 msgid ""
 "The *chars* argument indicates the number of decoded code points or bytes to"
 " return. The :func:`read` method will never return more data than requested,"
@@ -1340,7 +1336,7 @@ msgstr ""
 "потрібно повернути. Метод :func:`read` ніколи не поверне більше даних, ніж "
 "вимагається, але може повернути менше, якщо їх буде недостатньо."
 
-#: ../../library/codecs.rst:808
+#: ../../library/codecs.rst:810
 msgid ""
 "The *size* argument indicates the approximate maximum number of encoded "
 "bytes or code points to read for decoding. The decoder can modify this "
@@ -1354,7 +1350,7 @@ msgstr ""
 "декодування якомога більшої кількості. Цей параметр призначений для "
 "запобігання необхідності декодувати великі файли за один крок."
 
-#: ../../library/codecs.rst:815
+#: ../../library/codecs.rst:817
 msgid ""
 "The *firstline* flag indicates that it would be sufficient to only return "
 "the first line, if there are decoding errors on later lines."
@@ -1362,7 +1358,7 @@ msgstr ""
 "Прапорець *firstline* вказує на те, що було б достатньо повернути лише "
 "перший рядок, якщо в наступних рядках є помилки декодування."
 
-#: ../../library/codecs.rst:819
+#: ../../library/codecs.rst:821
 msgid ""
 "The method should use a greedy read strategy meaning that it should read as "
 "much data as is allowed within the definition of the encoding and the given "
@@ -1374,11 +1370,11 @@ msgstr ""
 "заданого розміру, наприклад. якщо в потоці доступні додаткові закінчення "
 "кодування або маркери стану, їх також слід прочитати."
 
-#: ../../library/codecs.rst:827
+#: ../../library/codecs.rst:829
 msgid "Read one line from the input stream and return the decoded data."
 msgstr "Прочитати один рядок із вхідного потоку та повернути декодовані дані."
 
-#: ../../library/codecs.rst:829
+#: ../../library/codecs.rst:831
 msgid ""
 "*size*, if given, is passed as size argument to the stream's :meth:`read` "
 "method."
@@ -1386,7 +1382,7 @@ msgstr ""
 "*size*, якщо задано, передається як аргумент розміру в метод :meth:`read` "
 "потоку."
 
-#: ../../library/codecs.rst:832
+#: ../../library/codecs.rst:834
 msgid ""
 "If *keepends* is false line-endings will be stripped from the lines "
 "returned."
@@ -1394,7 +1390,7 @@ msgstr ""
 "Якщо *keepends* має значення false, закінчення рядків буде видалено з "
 "повернутих рядків."
 
-#: ../../library/codecs.rst:838
+#: ../../library/codecs.rst:840
 msgid ""
 "Read all lines available on the input stream and return them as a list of "
 "lines."
@@ -1402,7 +1398,7 @@ msgstr ""
 "Прочитати всі рядки, доступні у вхідному потоці, і повернути їх як список "
 "рядків."
 
-#: ../../library/codecs.rst:841
+#: ../../library/codecs.rst:843
 msgid ""
 "Line-endings are implemented using the codec's :meth:`decode` method and are"
 " included in the list entries if *keepends* is true."
@@ -1410,7 +1406,7 @@ msgstr ""
 "Закінчення рядків реалізуються за допомогою методу кодека :meth:`decode` і "
 "включаються до записів списку, якщо *keepends* має значення true."
 
-#: ../../library/codecs.rst:844
+#: ../../library/codecs.rst:846
 msgid ""
 "*sizehint*, if given, is passed as the *size* argument to the stream's "
 ":meth:`read` method."
@@ -1418,7 +1414,7 @@ msgstr ""
 "*sizehint*, якщо його задано, передається як аргумент *size* у метод потоку "
 ":meth:`read`."
 
-#: ../../library/codecs.rst:852
+#: ../../library/codecs.rst:854
 msgid ""
 "Note that no stream repositioning should take place. This method is "
 "primarily intended to be able to recover from decoding errors."
@@ -1426,7 +1422,7 @@ msgstr ""
 "Зауважте, що переміщення потоку не повинно відбуватися. Цей метод насамперед"
 " призначений для відновлення після помилок декодування."
 
-#: ../../library/codecs.rst:856
+#: ../../library/codecs.rst:858
 msgid ""
 "In addition to the above methods, the :class:`StreamReader` must also "
 "inherit all other methods and attributes from the underlying stream."
@@ -1434,11 +1430,11 @@ msgstr ""
 "Окрім вищезазначених методів, :class:`StreamReader` також має успадкувати "
 "всі інші методи та атрибути базового потоку."
 
-#: ../../library/codecs.rst:862
+#: ../../library/codecs.rst:864
 msgid "StreamReaderWriter Objects"
 msgstr "Об’єкти StreamReaderWriter"
 
-#: ../../library/codecs.rst:864
+#: ../../library/codecs.rst:866
 msgid ""
 "The :class:`StreamReaderWriter` is a convenience class that allows wrapping "
 "streams which work in both read and write modes."
@@ -1446,7 +1442,7 @@ msgstr ""
 ":class:`StreamReaderWriter` — це зручний клас, який дозволяє обгортати "
 "потоки, які працюють як у режимі читання, так і в режимі запису."
 
-#: ../../library/codecs.rst:867 ../../library/codecs.rst:891
+#: ../../library/codecs.rst:869 ../../library/codecs.rst:893
 msgid ""
 "The design is such that one can use the factory functions returned by the "
 ":func:`lookup` function to construct the instance."
@@ -1454,7 +1450,7 @@ msgstr ""
 "Конструкція така, що можна використовувати фабричні функції, які повертає "
 "функція :func:`lookup` для створення екземпляра."
 
-#: ../../library/codecs.rst:873
+#: ../../library/codecs.rst:875
 msgid ""
 "Creates a :class:`StreamReaderWriter` instance. *stream* must be a file-like"
 " object. *Reader* and *Writer* must be factory functions or classes "
@@ -1468,7 +1464,7 @@ msgstr ""
 ":class:`StreamWriter` відповідно. Обробка помилок виконується так само, як "
 "визначено для читачів і записів потоку."
 
-#: ../../library/codecs.rst:878
+#: ../../library/codecs.rst:880
 msgid ""
 ":class:`StreamReaderWriter` instances define the combined interfaces of "
 ":class:`StreamReader` and :class:`StreamWriter` classes. They inherit all "
@@ -1478,11 +1474,11 @@ msgstr ""
 "класів :class:`StreamReader` і :class:`StreamWriter`. Вони успадковують усі "
 "інші методи та атрибути від основного потоку."
 
-#: ../../library/codecs.rst:886
+#: ../../library/codecs.rst:888
 msgid "StreamRecoder Objects"
 msgstr "Об’єкти StreamRecoder"
 
-#: ../../library/codecs.rst:888
+#: ../../library/codecs.rst:890
 msgid ""
 "The :class:`StreamRecoder` translates data from one encoding to another, "
 "which is sometimes useful when dealing with different encoding environments."
@@ -1490,19 +1486,15 @@ msgstr ""
 ":class:`StreamRecoder` переводить дані з одного кодування в інше, що іноді "
 "корисно, коли ви маєте справу з різними середовищами кодування."
 
-#: ../../library/codecs.rst:897
+#: ../../library/codecs.rst:899
 msgid ""
 "Creates a :class:`StreamRecoder` instance which implements a two-way "
-"conversion: *encode* and *decode* work on the frontend — the data visible to"
-" code calling :meth:`read` and :meth:`write`, while *Reader* and *Writer* "
-"work on the backend — the data in *stream*."
+"conversion: *encode* and *decode* work on the frontend — the data visible to"
+" code calling :meth:`~StreamReader.read` and :meth:`~StreamWriter.write`, "
+"while *Reader* and *Writer* work on the backend — the data in *stream*."
 msgstr ""
-"Створює екземпляр :class:`StreamRecoder`, який реалізує двостороннє "
-"перетворення: *encode* і *decode* працюють на інтерфейсі — дані, видимі для "
-"коду, що викликає :meth:`read` і :meth:`write`, а *Reader* і *Writer* "
-"працюють на сервері — дані в *потоці*."
 
-#: ../../library/codecs.rst:902
+#: ../../library/codecs.rst:905
 msgid ""
 "You can use these objects to do transparent transcodings, e.g., from Latin-1"
 " to UTF-8 and back."
@@ -1510,11 +1502,11 @@ msgstr ""
 "Ви можете використовувати ці об’єкти для прозорого перекодування, наприклад,"
 " з Latin-1 на UTF-8 і назад."
 
-#: ../../library/codecs.rst:905
+#: ../../library/codecs.rst:908
 msgid "The *stream* argument must be a file-like object."
 msgstr "Аргумент *потік* має бути файлоподібним об’єктом."
 
-#: ../../library/codecs.rst:907
+#: ../../library/codecs.rst:910
 msgid ""
 "The *encode* and *decode* arguments must adhere to the :class:`Codec` "
 "interface. *Reader* and *Writer* must be factory functions or classes "
@@ -1526,7 +1518,7 @@ msgstr ""
 "забезпечують об’єкти інтерфейсу :class:`StreamReader` і "
 ":class:`StreamWriter` відповідно."
 
-#: ../../library/codecs.rst:912
+#: ../../library/codecs.rst:915
 msgid ""
 "Error handling is done in the same way as defined for the stream readers and"
 " writers."
@@ -1534,7 +1526,7 @@ msgstr ""
 "Обробка помилок виконується так само, як визначено для читачів і записів "
 "потоку."
 
-#: ../../library/codecs.rst:916
+#: ../../library/codecs.rst:919
 msgid ""
 ":class:`StreamRecoder` instances define the combined interfaces of "
 ":class:`StreamReader` and :class:`StreamWriter` classes. They inherit all "
@@ -1544,11 +1536,11 @@ msgstr ""
 ":class:`StreamReader` і :class:`StreamWriter`. Вони успадковують усі інші "
 "методи та атрибути основного потоку."
 
-#: ../../library/codecs.rst:924
+#: ../../library/codecs.rst:927
 msgid "Encodings and Unicode"
 msgstr "Кодування та Unicode"
 
-#: ../../library/codecs.rst:926
+#: ../../library/codecs.rst:929
 msgid ""
 "Strings are stored internally as sequences of code points in range "
 "``U+0000``--``U+10FFFF``. (See :pep:`393` for more details about the "
@@ -1570,7 +1562,7 @@ msgstr ""
 "серіалізації тексту, які в сукупності називаються :term:`текстовими "
 "кодуваннями <text encoding>`."
 
-#: ../../library/codecs.rst:936
+#: ../../library/codecs.rst:939
 msgid ""
 "The simplest text encoding (called ``'latin-1'`` or ``'iso-8859-1'``) maps "
 "the code points 0--255 to the bytes ``0x0``--``0xff``, which means that a "
@@ -1589,7 +1581,7 @@ msgstr ""
 "закодувати символ '\\u1234' у позиції 3 : порядковий номер не в діапазоні "
 "(256)``."
 
-#: ../../library/codecs.rst:944
+#: ../../library/codecs.rst:947
 msgid ""
 "There's another group of encodings (the so called charmap encodings) that "
 "choose a different subset of all Unicode code points and how these code "
@@ -1605,7 +1597,7 @@ msgstr ""
 "використовується в основному в Windows). Існує рядкова константа з 256 "
 "символами, яка показує, який символ зіставляється з яким значенням байта."
 
-#: ../../library/codecs.rst:951
+#: ../../library/codecs.rst:954
 msgid ""
 "All of these encodings can only encode 256 of the 1114112 code points "
 "defined in Unicode. A simple and straightforward way that can store each "
@@ -1662,7 +1654,7 @@ msgstr ""
 "послідовність байтів була декодована в рядок; як ``НУЛЬОВА ШИРИНА БЕЗ "
 "РОЗБИВУ`` це звичайний символ, який буде декодовано, як і будь-який інший."
 
-#: ../../library/codecs.rst:977
+#: ../../library/codecs.rst:980
 msgid ""
 "There's another encoding that is able to encode the full range of Unicode "
 "characters: UTF-8. UTF-8 is an 8-bit encoding, which means there are no "
@@ -1680,52 +1672,52 @@ msgstr ""
 "якими йде ``0`` біт. Символи Unicode кодуються таким чином (де x є бітами "
 "корисного навантаження, які при з’єднанні дають символ Unicode):"
 
-#: ../../library/codecs.rst:986
+#: ../../library/codecs.rst:989
 msgid "Range"
 msgstr "Діапазон"
 
-#: ../../library/codecs.rst:986
+#: ../../library/codecs.rst:989
 msgid "Encoding"
 msgstr "Кодування"
 
-#: ../../library/codecs.rst:988
+#: ../../library/codecs.rst:991
 msgid "``U-00000000`` ... ``U-0000007F``"
 msgstr "``U-00000000`` ... ``U-0000007F``"
 
-#: ../../library/codecs.rst:988
+#: ../../library/codecs.rst:991
 msgid "0xxxxxxx"
 msgstr "0xxxxxxx"
 
-#: ../../library/codecs.rst:990
+#: ../../library/codecs.rst:993
 msgid "``U-00000080`` ... ``U-000007FF``"
 msgstr "``U-00000080`` ... ``U-000007FF``"
 
-#: ../../library/codecs.rst:990
+#: ../../library/codecs.rst:993
 msgid "110xxxxx 10xxxxxx"
 msgstr "110xxxxx 10xxxxxx"
 
-#: ../../library/codecs.rst:992
+#: ../../library/codecs.rst:995
 msgid "``U-00000800`` ... ``U-0000FFFF``"
 msgstr "``U-00000800`` ... ``U-0000FFFF``"
 
-#: ../../library/codecs.rst:992
+#: ../../library/codecs.rst:995
 msgid "1110xxxx 10xxxxxx 10xxxxxx"
 msgstr "1110xxxx 10xxxxxx 10xxxxxx"
 
-#: ../../library/codecs.rst:994
+#: ../../library/codecs.rst:997
 msgid "``U-00010000`` ... ``U-0010FFFF``"
 msgstr "``U-00010000`` ... ``U-0010FFFF``"
 
-#: ../../library/codecs.rst:994
+#: ../../library/codecs.rst:997
 msgid "11110xxx 10xxxxxx 10xxxxxx 10xxxxxx"
 msgstr "11110xxx 10xxxxxx 10xxxxxx 10xxxxxx"
 
-#: ../../library/codecs.rst:997
+#: ../../library/codecs.rst:1000
 msgid ""
 "The least significant bit of the Unicode character is the rightmost x bit."
 msgstr "Наймолодшим бітом символу Юнікод є крайній правий біт x."
 
-#: ../../library/codecs.rst:999
+#: ../../library/codecs.rst:1002
 msgid ""
 "As UTF-8 is an 8-bit encoding no BOM is required and any ``U+FEFF`` "
 "character in the decoded string (even if it's the first character) is "
@@ -1735,7 +1727,7 @@ msgstr ""
 " будь-який символ ``U+FEFF`` у декодованому рядку (навіть якщо це перший "
 "символ) розглядається як ``НУЛЬОВА ШИРИНА БЕЗ РОЗБИВУ`` ."
 
-#: ../../library/codecs.rst:1003
+#: ../../library/codecs.rst:1006
 msgid ""
 "Without external information it's impossible to reliably determine which "
 "encoding was used for encoding a string. Each charmap encoding can decode "
@@ -1772,7 +1764,7 @@ msgstr "ПОДВІЙНІ КУТНІ ЛАПКИ, Спрямовані вправ�
 msgid "INVERTED QUESTION MARK"
 msgstr "ПЕРЕВЕРНУТИЙ ЗНАК ПИТАННЯ"
 
-#: ../../library/codecs.rst:1019
+#: ../../library/codecs.rst:1022
 msgid ""
 "in iso-8859-1), this increases the probability that a ``utf-8-sig`` encoding"
 " can be correctly guessed from the byte sequence. So here the BOM is not "
@@ -1793,11 +1785,11 @@ msgstr ""
 " байти у файлі. В UTF-8 використання BOM не рекомендується, і його слід "
 "уникати."
 
-#: ../../library/codecs.rst:1032
+#: ../../library/codecs.rst:1035
 msgid "Standard Encodings"
 msgstr "Стандартні кодування"
 
-#: ../../library/codecs.rst:1034
+#: ../../library/codecs.rst:1037
 msgid ""
 "Python comes with a number of codecs built-in, either implemented as C "
 "functions or with dictionaries as mapping tables. The following table lists "
@@ -1817,7 +1809,7 @@ msgstr ""
 "підкреслення, також є дійсними псевдонімами; отже, напр. ``'utf-8''`` є "
 "дійсним псевдонімом для ``'utf_8''`` кодека."
 
-#: ../../library/codecs.rst:1044
+#: ../../library/codecs.rst:1047
 msgid ""
 "Some common encodings can bypass the codecs lookup machinery to improve "
 "performance. These optimization opportunities are only recognized by CPython"
@@ -1835,11 +1827,11 @@ msgstr ""
 " замість тире. Використання альтернативних псевдонімів для цих кодувань може"
 " призвести до сповільнення виконання."
 
-#: ../../library/codecs.rst:1052
+#: ../../library/codecs.rst:1055
 msgid "Optimization opportunity recognized for us-ascii."
 msgstr "Можливість оптимізації визнана для us-ascii."
 
-#: ../../library/codecs.rst:1055
+#: ../../library/codecs.rst:1058
 msgid ""
 "Many of the character sets support the same languages. They vary in "
 "individual characters (e.g. whether the EURO SIGN is supported or not), and "
@@ -1851,11 +1843,11 @@ msgstr ""
 " призначенням символів позиціям коду. Зокрема, для європейських мов зазвичай"
 " існують такі варіанти:"
 
-#: ../../library/codecs.rst:1060
+#: ../../library/codecs.rst:1063
 msgid "an ISO 8859 codeset"
 msgstr "кодовий набір ISO 8859"
 
-#: ../../library/codecs.rst:1062
+#: ../../library/codecs.rst:1065
 msgid ""
 "a Microsoft Windows code page, which is typically derived from an 8859 "
 "codeset, but replaces control characters with additional graphic characters"
@@ -1863,495 +1855,495 @@ msgstr ""
 "кодова сторінка Microsoft Windows, яка зазвичай походить від коду 8859, але "
 "замінює контрольні символи додатковими графічними символами"
 
-#: ../../library/codecs.rst:1065
+#: ../../library/codecs.rst:1068
 msgid "an IBM EBCDIC code page"
 msgstr "кодову сторінку IBM EBCDIC"
 
-#: ../../library/codecs.rst:1067
+#: ../../library/codecs.rst:1070
 msgid "an IBM PC code page, which is ASCII compatible"
 msgstr "кодова сторінка IBM PC, сумісна з ASCII"
 
-#: ../../library/codecs.rst:1072 ../../library/codecs.rst:1327
-#: ../../library/codecs.rst:1395 ../../library/codecs.rst:1450
+#: ../../library/codecs.rst:1075 ../../library/codecs.rst:1330
+#: ../../library/codecs.rst:1398 ../../library/codecs.rst:1455
 msgid "Codec"
 msgstr "Кодек"
 
-#: ../../library/codecs.rst:1072 ../../library/codecs.rst:1327
-#: ../../library/codecs.rst:1395 ../../library/codecs.rst:1450
+#: ../../library/codecs.rst:1075 ../../library/codecs.rst:1330
+#: ../../library/codecs.rst:1398 ../../library/codecs.rst:1455
 msgid "Aliases"
 msgstr "Псевдоніми"
 
-#: ../../library/codecs.rst:1072
+#: ../../library/codecs.rst:1075
 msgid "Languages"
 msgstr "Мови"
 
-#: ../../library/codecs.rst:1074
+#: ../../library/codecs.rst:1077
 msgid "ascii"
 msgstr "ascii"
 
-#: ../../library/codecs.rst:1074
+#: ../../library/codecs.rst:1077
 msgid "646, us-ascii"
 msgstr "646, us-ascii"
 
-#: ../../library/codecs.rst:1074 ../../library/codecs.rst:1080
-#: ../../library/codecs.rst:1088
+#: ../../library/codecs.rst:1077 ../../library/codecs.rst:1083
+#: ../../library/codecs.rst:1091
 msgid "English"
 msgstr "англійська"
 
-#: ../../library/codecs.rst:1076
+#: ../../library/codecs.rst:1079
 msgid "big5"
 msgstr "великий5"
 
-#: ../../library/codecs.rst:1076
+#: ../../library/codecs.rst:1079
 msgid "big5-tw, csbig5"
 msgstr "big5-tw, csbig5"
 
-#: ../../library/codecs.rst:1076 ../../library/codecs.rst:1078
-#: ../../library/codecs.rst:1136
+#: ../../library/codecs.rst:1079 ../../library/codecs.rst:1081
+#: ../../library/codecs.rst:1139
 msgid "Traditional Chinese"
 msgstr "Традиційний китайський"
 
-#: ../../library/codecs.rst:1078
+#: ../../library/codecs.rst:1081
 msgid "big5hkscs"
 msgstr "big5hkscs"
 
-#: ../../library/codecs.rst:1078
+#: ../../library/codecs.rst:1081
 msgid "big5-hkscs, hkscs"
 msgstr "big5-hkscs, hkscs"
 
-#: ../../library/codecs.rst:1080
+#: ../../library/codecs.rst:1083
 msgid "cp037"
 msgstr "cp037"
 
-#: ../../library/codecs.rst:1080
+#: ../../library/codecs.rst:1083
 msgid "IBM037, IBM039"
 msgstr "IBM037, IBM039"
 
-#: ../../library/codecs.rst:1082
+#: ../../library/codecs.rst:1085
 msgid "cp273"
 msgstr "cp273"
 
-#: ../../library/codecs.rst:1082
+#: ../../library/codecs.rst:1085
 msgid "273, IBM273, csIBM273"
 msgstr "273, IBM273, csIBM273"
 
-#: ../../library/codecs.rst:1082
+#: ../../library/codecs.rst:1085
 msgid "German"
 msgstr "Німецький"
 
-#: ../../library/codecs.rst:1086
+#: ../../library/codecs.rst:1089
 msgid "cp424"
 msgstr "cp424"
 
-#: ../../library/codecs.rst:1086
+#: ../../library/codecs.rst:1089
 msgid "EBCDIC-CP-HE, IBM424"
 msgstr "EBCDIC-CP-HE, IBM424"
 
-#: ../../library/codecs.rst:1086 ../../library/codecs.rst:1106
-#: ../../library/codecs.rst:1116 ../../library/codecs.rst:1159
-#: ../../library/codecs.rst:1222
+#: ../../library/codecs.rst:1089 ../../library/codecs.rst:1109
+#: ../../library/codecs.rst:1119 ../../library/codecs.rst:1162
+#: ../../library/codecs.rst:1225
 msgid "Hebrew"
 msgstr "іврит"
 
-#: ../../library/codecs.rst:1088
+#: ../../library/codecs.rst:1091
 msgid "cp437"
 msgstr "cp437"
 
-#: ../../library/codecs.rst:1088
+#: ../../library/codecs.rst:1091
 msgid "437, IBM437"
 msgstr "437, IBM437"
 
-#: ../../library/codecs.rst:1090
+#: ../../library/codecs.rst:1093
 msgid "cp500"
 msgstr "cp500"
 
-#: ../../library/codecs.rst:1090
+#: ../../library/codecs.rst:1093
 msgid "EBCDIC-CP-BE, EBCDIC-CP-CH, IBM500"
 msgstr "EBCDIC-CP-BE, EBCDIC-CP-CH, IBM500"
 
-#: ../../library/codecs.rst:1090 ../../library/codecs.rst:1099
-#: ../../library/codecs.rst:1110 ../../library/codecs.rst:1146
-#: ../../library/codecs.rst:1153 ../../library/codecs.rst:1206
-#: ../../library/codecs.rst:1234 ../../library/codecs.rst:1262
+#: ../../library/codecs.rst:1093 ../../library/codecs.rst:1102
+#: ../../library/codecs.rst:1113 ../../library/codecs.rst:1149
+#: ../../library/codecs.rst:1156 ../../library/codecs.rst:1209
+#: ../../library/codecs.rst:1237 ../../library/codecs.rst:1265
 msgid "Western Europe"
 msgstr "Західна Європа"
 
-#: ../../library/codecs.rst:1093
+#: ../../library/codecs.rst:1096
 msgid "cp720"
 msgstr "cp720"
 
-#: ../../library/codecs.rst:1093 ../../library/codecs.rst:1120
-#: ../../library/codecs.rst:1161 ../../library/codecs.rst:1218
+#: ../../library/codecs.rst:1096 ../../library/codecs.rst:1123
+#: ../../library/codecs.rst:1164 ../../library/codecs.rst:1221
 msgid "Arabic"
 msgstr "арабська"
 
-#: ../../library/codecs.rst:1095
+#: ../../library/codecs.rst:1098
 msgid "cp737"
 msgstr "cp737"
 
-#: ../../library/codecs.rst:1095 ../../library/codecs.rst:1126
-#: ../../library/codecs.rst:1130 ../../library/codecs.rst:1155
-#: ../../library/codecs.rst:1220 ../../library/codecs.rst:1255
+#: ../../library/codecs.rst:1098 ../../library/codecs.rst:1129
+#: ../../library/codecs.rst:1133 ../../library/codecs.rst:1158
+#: ../../library/codecs.rst:1223 ../../library/codecs.rst:1258
 msgid "Greek"
 msgstr "грецька"
 
-#: ../../library/codecs.rst:1097
+#: ../../library/codecs.rst:1100
 msgid "cp775"
 msgstr "cp775"
 
-#: ../../library/codecs.rst:1097
+#: ../../library/codecs.rst:1100
 msgid "IBM775"
 msgstr "IBM775"
 
-#: ../../library/codecs.rst:1097 ../../library/codecs.rst:1163
-#: ../../library/codecs.rst:1213 ../../library/codecs.rst:1230
+#: ../../library/codecs.rst:1100 ../../library/codecs.rst:1166
+#: ../../library/codecs.rst:1216 ../../library/codecs.rst:1233
 msgid "Baltic languages"
 msgstr "Балтійські мови"
 
-#: ../../library/codecs.rst:1099
+#: ../../library/codecs.rst:1102
 msgid "cp850"
 msgstr "cp850"
 
-#: ../../library/codecs.rst:1099
+#: ../../library/codecs.rst:1102
 msgid "850, IBM850"
 msgstr "850, IBM850"
 
-#: ../../library/codecs.rst:1101
+#: ../../library/codecs.rst:1104
 msgid "cp852"
 msgstr "cp852"
 
-#: ../../library/codecs.rst:1101
+#: ../../library/codecs.rst:1104
 msgid "852, IBM852"
 msgstr "852, IBM852"
 
-#: ../../library/codecs.rst:1101 ../../library/codecs.rst:1148
-#: ../../library/codecs.rst:1209 ../../library/codecs.rst:1259
+#: ../../library/codecs.rst:1104 ../../library/codecs.rst:1151
+#: ../../library/codecs.rst:1212 ../../library/codecs.rst:1262
 msgid "Central and Eastern Europe"
 msgstr "Центральна та Східна Європа"
 
-#: ../../library/codecs.rst:1103
+#: ../../library/codecs.rst:1106
 msgid "cp855"
 msgstr "cp855"
 
-#: ../../library/codecs.rst:1103
+#: ../../library/codecs.rst:1106
 msgid "855, IBM855"
 msgstr "855, IBM855"
 
-#: ../../library/codecs.rst:1103 ../../library/codecs.rst:1150
-#: ../../library/codecs.rst:1215 ../../library/codecs.rst:1252
+#: ../../library/codecs.rst:1106 ../../library/codecs.rst:1153
+#: ../../library/codecs.rst:1218 ../../library/codecs.rst:1255
 msgid "Bulgarian, Byelorussian, Macedonian, Russian, Serbian"
 msgstr "болгарська, білоруська, македонська, російська, сербська"
 
-#: ../../library/codecs.rst:1106
+#: ../../library/codecs.rst:1109
 msgid "cp856"
 msgstr "cp856"
 
-#: ../../library/codecs.rst:1108
+#: ../../library/codecs.rst:1111
 msgid "cp857"
 msgstr "cp857"
 
-#: ../../library/codecs.rst:1108
+#: ../../library/codecs.rst:1111
 msgid "857, IBM857"
 msgstr "857, IBM857"
 
-#: ../../library/codecs.rst:1108 ../../library/codecs.rst:1140
-#: ../../library/codecs.rst:1157 ../../library/codecs.rst:1224
-#: ../../library/codecs.rst:1264
+#: ../../library/codecs.rst:1111 ../../library/codecs.rst:1143
+#: ../../library/codecs.rst:1160 ../../library/codecs.rst:1227
+#: ../../library/codecs.rst:1267
 msgid "Turkish"
 msgstr "турецька"
 
-#: ../../library/codecs.rst:1110
+#: ../../library/codecs.rst:1113
 msgid "cp858"
 msgstr "cp858"
 
-#: ../../library/codecs.rst:1110
+#: ../../library/codecs.rst:1113
 msgid "858, IBM858"
 msgstr "858, IBM858"
 
-#: ../../library/codecs.rst:1112
+#: ../../library/codecs.rst:1115
 msgid "cp860"
 msgstr "cp860"
 
-#: ../../library/codecs.rst:1112
+#: ../../library/codecs.rst:1115
 msgid "860, IBM860"
 msgstr "860, IBM860"
 
-#: ../../library/codecs.rst:1112
+#: ../../library/codecs.rst:1115
 msgid "Portuguese"
 msgstr "португальська"
 
-#: ../../library/codecs.rst:1114
+#: ../../library/codecs.rst:1117
 msgid "cp861"
 msgstr "cp861"
 
-#: ../../library/codecs.rst:1114
+#: ../../library/codecs.rst:1117
 msgid "861, CP-IS, IBM861"
 msgstr "861, CP-IS, IBM861"
 
-#: ../../library/codecs.rst:1114 ../../library/codecs.rst:1257
+#: ../../library/codecs.rst:1117 ../../library/codecs.rst:1260
 msgid "Icelandic"
 msgstr "ісландська"
 
-#: ../../library/codecs.rst:1116
+#: ../../library/codecs.rst:1119
 msgid "cp862"
 msgstr "cp862"
 
-#: ../../library/codecs.rst:1116
+#: ../../library/codecs.rst:1119
 msgid "862, IBM862"
 msgstr "862, IBM862"
 
-#: ../../library/codecs.rst:1118
+#: ../../library/codecs.rst:1121
 msgid "cp863"
 msgstr "cp863"
 
-#: ../../library/codecs.rst:1118
+#: ../../library/codecs.rst:1121
 msgid "863, IBM863"
 msgstr "863, IBM863"
 
-#: ../../library/codecs.rst:1118
+#: ../../library/codecs.rst:1121
 msgid "Canadian"
 msgstr "канадський"
 
-#: ../../library/codecs.rst:1120
+#: ../../library/codecs.rst:1123
 msgid "cp864"
 msgstr "cp864"
 
-#: ../../library/codecs.rst:1120
+#: ../../library/codecs.rst:1123
 msgid "IBM864"
 msgstr "IBM864"
 
-#: ../../library/codecs.rst:1122
+#: ../../library/codecs.rst:1125
 msgid "cp865"
 msgstr "cp865"
 
-#: ../../library/codecs.rst:1122
+#: ../../library/codecs.rst:1125
 msgid "865, IBM865"
 msgstr "865, IBM865"
 
-#: ../../library/codecs.rst:1122
+#: ../../library/codecs.rst:1125
 msgid "Danish, Norwegian"
 msgstr "датська, норвезька"
 
-#: ../../library/codecs.rst:1124
+#: ../../library/codecs.rst:1127
 msgid "cp866"
 msgstr "cp866"
 
-#: ../../library/codecs.rst:1124
+#: ../../library/codecs.rst:1127
 msgid "866, IBM866"
 msgstr "866, IBM866"
 
-#: ../../library/codecs.rst:1124 ../../library/codecs.rst:1240
+#: ../../library/codecs.rst:1127 ../../library/codecs.rst:1243
 msgid "Russian"
 msgstr "російський"
 
-#: ../../library/codecs.rst:1126
+#: ../../library/codecs.rst:1129
 msgid "cp869"
 msgstr "cp869"
 
-#: ../../library/codecs.rst:1126
+#: ../../library/codecs.rst:1129
 msgid "869, CP-GR, IBM869"
 msgstr "869, CP-GR, IBM869"
 
-#: ../../library/codecs.rst:1128
+#: ../../library/codecs.rst:1131
 msgid "cp874"
 msgstr "cp874"
 
-#: ../../library/codecs.rst:1128
+#: ../../library/codecs.rst:1131
 msgid "Thai"
 msgstr "тайська"
 
-#: ../../library/codecs.rst:1130
+#: ../../library/codecs.rst:1133
 msgid "cp875"
 msgstr "cp875"
 
-#: ../../library/codecs.rst:1132
+#: ../../library/codecs.rst:1135
 msgid "cp932"
 msgstr "cp932"
 
-#: ../../library/codecs.rst:1132
+#: ../../library/codecs.rst:1135
 msgid "932, ms932, mskanji, ms-kanji"
 msgstr "932, ms932, mskanji, ms-kanji"
 
-#: ../../library/codecs.rst:1132 ../../library/codecs.rst:1167
-#: ../../library/codecs.rst:1169 ../../library/codecs.rst:1171
-#: ../../library/codecs.rst:1188 ../../library/codecs.rst:1191
-#: ../../library/codecs.rst:1196 ../../library/codecs.rst:1199
-#: ../../library/codecs.rst:1201 ../../library/codecs.rst:1269
-#: ../../library/codecs.rst:1272 ../../library/codecs.rst:1275
+#: ../../library/codecs.rst:1135 ../../library/codecs.rst:1170
+#: ../../library/codecs.rst:1172 ../../library/codecs.rst:1174
+#: ../../library/codecs.rst:1191 ../../library/codecs.rst:1194
+#: ../../library/codecs.rst:1199 ../../library/codecs.rst:1202
+#: ../../library/codecs.rst:1204 ../../library/codecs.rst:1272
+#: ../../library/codecs.rst:1275 ../../library/codecs.rst:1278
 msgid "Japanese"
 msgstr "Японський"
 
-#: ../../library/codecs.rst:1134
+#: ../../library/codecs.rst:1137
 msgid "cp949"
 msgstr "cp949"
 
-#: ../../library/codecs.rst:1134
+#: ../../library/codecs.rst:1137
 msgid "949, ms949, uhc"
 msgstr "949, ms949, uhc"
 
-#: ../../library/codecs.rst:1134 ../../library/codecs.rst:1173
-#: ../../library/codecs.rst:1203 ../../library/codecs.rst:1238
+#: ../../library/codecs.rst:1137 ../../library/codecs.rst:1176
+#: ../../library/codecs.rst:1206 ../../library/codecs.rst:1241
 msgid "Korean"
 msgstr "корейська"
 
-#: ../../library/codecs.rst:1136
+#: ../../library/codecs.rst:1139
 msgid "cp950"
 msgstr "cp950"
 
-#: ../../library/codecs.rst:1136
+#: ../../library/codecs.rst:1139
 msgid "950, ms950"
 msgstr "950, мс950"
 
-#: ../../library/codecs.rst:1138
+#: ../../library/codecs.rst:1141
 msgid "cp1006"
 msgstr "cp1006"
 
-#: ../../library/codecs.rst:1138
+#: ../../library/codecs.rst:1141
 msgid "Urdu"
 msgstr "урду"
 
-#: ../../library/codecs.rst:1140
+#: ../../library/codecs.rst:1143
 msgid "cp1026"
 msgstr "cp1026"
 
-#: ../../library/codecs.rst:1140
+#: ../../library/codecs.rst:1143
 msgid "ibm1026"
 msgstr "ibm1026"
 
-#: ../../library/codecs.rst:1142
+#: ../../library/codecs.rst:1145
 msgid "cp1125"
 msgstr "cp1125"
 
-#: ../../library/codecs.rst:1142
+#: ../../library/codecs.rst:1145
 msgid "1125, ibm1125, cp866u, ruscii"
 msgstr "1125, ibm1125, cp866u, рос"
 
-#: ../../library/codecs.rst:1142 ../../library/codecs.rst:1246
+#: ../../library/codecs.rst:1145 ../../library/codecs.rst:1249
 msgid "Ukrainian"
 msgstr "українська"
 
-#: ../../library/codecs.rst:1146
+#: ../../library/codecs.rst:1149
 msgid "cp1140"
 msgstr "cp1140"
 
-#: ../../library/codecs.rst:1146
+#: ../../library/codecs.rst:1149
 msgid "ibm1140"
 msgstr "ibm1140"
 
-#: ../../library/codecs.rst:1148
+#: ../../library/codecs.rst:1151
 msgid "cp1250"
 msgstr "cp1250"
 
-#: ../../library/codecs.rst:1148
+#: ../../library/codecs.rst:1151
 msgid "windows-1250"
 msgstr "вікна-1250"
 
-#: ../../library/codecs.rst:1150
+#: ../../library/codecs.rst:1153
 msgid "cp1251"
 msgstr "cp1251"
 
-#: ../../library/codecs.rst:1150
+#: ../../library/codecs.rst:1153
 msgid "windows-1251"
 msgstr "вікна-1251"
 
-#: ../../library/codecs.rst:1153
+#: ../../library/codecs.rst:1156
 msgid "cp1252"
 msgstr "cp1252"
 
-#: ../../library/codecs.rst:1153
+#: ../../library/codecs.rst:1156
 msgid "windows-1252"
 msgstr "вікна-1252"
 
-#: ../../library/codecs.rst:1155
+#: ../../library/codecs.rst:1158
 msgid "cp1253"
 msgstr "cp1253"
 
-#: ../../library/codecs.rst:1155
+#: ../../library/codecs.rst:1158
 msgid "windows-1253"
 msgstr "вікна-1253"
 
-#: ../../library/codecs.rst:1157
+#: ../../library/codecs.rst:1160
 msgid "cp1254"
 msgstr "cp1254"
 
-#: ../../library/codecs.rst:1157
+#: ../../library/codecs.rst:1160
 msgid "windows-1254"
 msgstr "windows-1254"
 
-#: ../../library/codecs.rst:1159
+#: ../../library/codecs.rst:1162
 msgid "cp1255"
 msgstr "cp1255"
 
-#: ../../library/codecs.rst:1159
+#: ../../library/codecs.rst:1162
 msgid "windows-1255"
 msgstr "вікна-1255"
 
-#: ../../library/codecs.rst:1161
+#: ../../library/codecs.rst:1164
 msgid "cp1256"
 msgstr "cp1256"
 
-#: ../../library/codecs.rst:1161
+#: ../../library/codecs.rst:1164
 msgid "windows-1256"
 msgstr "вікна-1256"
 
-#: ../../library/codecs.rst:1163
+#: ../../library/codecs.rst:1166
 msgid "cp1257"
 msgstr "cp1257"
 
-#: ../../library/codecs.rst:1163
+#: ../../library/codecs.rst:1166
 msgid "windows-1257"
 msgstr "вікна-1257"
 
-#: ../../library/codecs.rst:1165
+#: ../../library/codecs.rst:1168
 msgid "cp1258"
 msgstr "cp1258"
 
-#: ../../library/codecs.rst:1165
+#: ../../library/codecs.rst:1168
 msgid "windows-1258"
 msgstr "вікна-1258"
 
-#: ../../library/codecs.rst:1165
+#: ../../library/codecs.rst:1168
 msgid "Vietnamese"
 msgstr "в'єтнамська"
 
-#: ../../library/codecs.rst:1167
+#: ../../library/codecs.rst:1170
 msgid "euc_jp"
 msgstr "euc_jp"
 
-#: ../../library/codecs.rst:1167
+#: ../../library/codecs.rst:1170
 msgid "eucjp, ujis, u-jis"
 msgstr "eucjp, ujis, u-jis"
 
-#: ../../library/codecs.rst:1169
+#: ../../library/codecs.rst:1172
 msgid "euc_jis_2004"
 msgstr "euc_jis_2004"
 
-#: ../../library/codecs.rst:1169
+#: ../../library/codecs.rst:1172
 msgid "jisx0213, eucjis2004"
 msgstr "jisx0213, eucjis2004"
 
-#: ../../library/codecs.rst:1171
+#: ../../library/codecs.rst:1174
 msgid "euc_jisx0213"
 msgstr "euc_jisx0213"
 
-#: ../../library/codecs.rst:1171
+#: ../../library/codecs.rst:1174
 msgid "eucjisx0213"
 msgstr "eucjisx0213"
 
-#: ../../library/codecs.rst:1173
+#: ../../library/codecs.rst:1176
 msgid "euc_kr"
 msgstr "euc_kr"
 
-#: ../../library/codecs.rst:1173
+#: ../../library/codecs.rst:1176
 msgid "euckr, korean, ksc5601, ks_c-5601, ks_c-5601-1987, ksx1001, ks_x-1001"
 msgstr ""
 "euckr, корейська, ksc5601, ks_c-5601, ks_c-5601-1987, ksx1001, ks_x-1001"
 
-#: ../../library/codecs.rst:1177
+#: ../../library/codecs.rst:1180
 msgid "gb2312"
 msgstr "gb2312"
 
-#: ../../library/codecs.rst:1177
+#: ../../library/codecs.rst:1180
 msgid ""
 "chinese, csiso58gb231280, euc-cn, euccn, eucgb2312-cn, gb2312-1980, "
 "gb2312-80, iso-ir-58"
@@ -2359,431 +2351,431 @@ msgstr ""
 "китайська, csiso58gb231280, euc-cn, euccn, eucgb2312-cn, gb2312-1980, "
 "gb2312-80, iso-ir-58"
 
-#: ../../library/codecs.rst:1177 ../../library/codecs.rst:1186
+#: ../../library/codecs.rst:1180 ../../library/codecs.rst:1189
 msgid "Simplified Chinese"
 msgstr "Спрощена Китайська"
 
-#: ../../library/codecs.rst:1182
+#: ../../library/codecs.rst:1185
 msgid "gbk"
 msgstr "gbk"
 
-#: ../../library/codecs.rst:1182
+#: ../../library/codecs.rst:1185
 msgid "936, cp936, ms936"
 msgstr "936, cp936, ms936"
 
-#: ../../library/codecs.rst:1182 ../../library/codecs.rst:1184
+#: ../../library/codecs.rst:1185 ../../library/codecs.rst:1187
 msgid "Unified Chinese"
 msgstr "Єдина китайська"
 
-#: ../../library/codecs.rst:1184
+#: ../../library/codecs.rst:1187
 msgid "gb18030"
 msgstr "gb18030"
 
-#: ../../library/codecs.rst:1184
+#: ../../library/codecs.rst:1187
 msgid "gb18030-2000"
 msgstr "gb18030-2000"
 
-#: ../../library/codecs.rst:1186
+#: ../../library/codecs.rst:1189
 msgid "hz"
 msgstr "Гц"
 
-#: ../../library/codecs.rst:1186
+#: ../../library/codecs.rst:1189
 msgid "hzgb, hz-gb, hz-gb-2312"
 msgstr "hzgb, hz-gb, hz-gb-2312"
 
-#: ../../library/codecs.rst:1188
+#: ../../library/codecs.rst:1191
 msgid "iso2022_jp"
 msgstr "iso2022_jp"
 
-#: ../../library/codecs.rst:1188
+#: ../../library/codecs.rst:1191
 msgid "csiso2022jp, iso2022jp, iso-2022-jp"
 msgstr "csiso2022jp, iso2022jp, iso-2022-jp"
 
-#: ../../library/codecs.rst:1191
+#: ../../library/codecs.rst:1194
 msgid "iso2022_jp_1"
 msgstr "iso2022_jp_1"
 
-#: ../../library/codecs.rst:1191
+#: ../../library/codecs.rst:1194
 msgid "iso2022jp-1, iso-2022-jp-1"
 msgstr "iso2022jp-1, iso-2022-jp-1"
 
-#: ../../library/codecs.rst:1193
+#: ../../library/codecs.rst:1196
 msgid "iso2022_jp_2"
 msgstr "iso2022_jp_2"
 
-#: ../../library/codecs.rst:1193
+#: ../../library/codecs.rst:1196
 msgid "iso2022jp-2, iso-2022-jp-2"
 msgstr "iso2022jp-2, iso-2022-jp-2"
 
-#: ../../library/codecs.rst:1193
+#: ../../library/codecs.rst:1196
 msgid "Japanese, Korean, Simplified Chinese, Western Europe, Greek"
 msgstr "Японська, корейська, спрощена китайська, західноєвропейська, грецька"
 
-#: ../../library/codecs.rst:1196
+#: ../../library/codecs.rst:1199
 msgid "iso2022_jp_2004"
 msgstr "iso2022_jp_2004"
 
-#: ../../library/codecs.rst:1196
+#: ../../library/codecs.rst:1199
 msgid "iso2022jp-2004, iso-2022-jp-2004"
 msgstr "iso2022jp-2004, iso-2022-jp-2004"
 
-#: ../../library/codecs.rst:1199
+#: ../../library/codecs.rst:1202
 msgid "iso2022_jp_3"
 msgstr "iso2022_jp_3"
 
-#: ../../library/codecs.rst:1199
+#: ../../library/codecs.rst:1202
 msgid "iso2022jp-3, iso-2022-jp-3"
 msgstr "iso2022jp-3, iso-2022-jp-3"
 
-#: ../../library/codecs.rst:1201
+#: ../../library/codecs.rst:1204
 msgid "iso2022_jp_ext"
 msgstr "iso2022_jp_ext"
 
-#: ../../library/codecs.rst:1201
+#: ../../library/codecs.rst:1204
 msgid "iso2022jp-ext, iso-2022-jp-ext"
 msgstr "iso2022jp-ext, iso-2022-jp-ext"
 
-#: ../../library/codecs.rst:1203
+#: ../../library/codecs.rst:1206
 msgid "iso2022_kr"
 msgstr "iso2022_kr"
 
-#: ../../library/codecs.rst:1203
+#: ../../library/codecs.rst:1206
 msgid "csiso2022kr, iso2022kr, iso-2022-kr"
 msgstr "csiso2022kr, iso2022kr, iso-2022-kr"
 
-#: ../../library/codecs.rst:1206
+#: ../../library/codecs.rst:1209
 msgid "latin_1"
 msgstr "latin_1"
 
-#: ../../library/codecs.rst:1206
+#: ../../library/codecs.rst:1209
 msgid "iso-8859-1, iso8859-1, 8859, cp819, latin, latin1, L1"
 msgstr "iso-8859-1, iso8859-1, 8859, cp819, latin, latin1, L1"
 
-#: ../../library/codecs.rst:1209
+#: ../../library/codecs.rst:1212
 msgid "iso8859_2"
 msgstr "iso8859_2"
 
-#: ../../library/codecs.rst:1209
+#: ../../library/codecs.rst:1212
 msgid "iso-8859-2, latin2, L2"
 msgstr "iso-8859-2, latin2, L2"
 
-#: ../../library/codecs.rst:1211
+#: ../../library/codecs.rst:1214
 msgid "iso8859_3"
 msgstr "iso8859_3"
 
-#: ../../library/codecs.rst:1211
+#: ../../library/codecs.rst:1214
 msgid "iso-8859-3, latin3, L3"
 msgstr "iso-8859-3, latin3, L3"
 
-#: ../../library/codecs.rst:1211
+#: ../../library/codecs.rst:1214
 msgid "Esperanto, Maltese"
 msgstr "Есперанто, мальтійська"
 
-#: ../../library/codecs.rst:1213
+#: ../../library/codecs.rst:1216
 msgid "iso8859_4"
 msgstr "iso8859_4"
 
-#: ../../library/codecs.rst:1213
+#: ../../library/codecs.rst:1216
 msgid "iso-8859-4, latin4, L4"
 msgstr "iso-8859-4, latin4, L4"
 
-#: ../../library/codecs.rst:1215
+#: ../../library/codecs.rst:1218
 msgid "iso8859_5"
 msgstr "iso8859_5"
 
-#: ../../library/codecs.rst:1215
+#: ../../library/codecs.rst:1218
 msgid "iso-8859-5, cyrillic"
 msgstr "iso-8859-5, кирил"
 
-#: ../../library/codecs.rst:1218
+#: ../../library/codecs.rst:1221
 msgid "iso8859_6"
 msgstr "iso8859_6"
 
-#: ../../library/codecs.rst:1218
+#: ../../library/codecs.rst:1221
 msgid "iso-8859-6, arabic"
 msgstr "iso-8859-6, араб"
 
-#: ../../library/codecs.rst:1220
+#: ../../library/codecs.rst:1223
 msgid "iso8859_7"
 msgstr "iso8859_7"
 
-#: ../../library/codecs.rst:1220
+#: ../../library/codecs.rst:1223
 msgid "iso-8859-7, greek, greek8"
 msgstr "iso-8859-7, грецький, грецький8"
 
-#: ../../library/codecs.rst:1222
+#: ../../library/codecs.rst:1225
 msgid "iso8859_8"
 msgstr "iso8859_8"
 
-#: ../../library/codecs.rst:1222
+#: ../../library/codecs.rst:1225
 msgid "iso-8859-8, hebrew"
 msgstr "iso-8859-8, іврит"
 
-#: ../../library/codecs.rst:1224
+#: ../../library/codecs.rst:1227
 msgid "iso8859_9"
 msgstr "iso8859_9"
 
-#: ../../library/codecs.rst:1224
+#: ../../library/codecs.rst:1227
 msgid "iso-8859-9, latin5, L5"
 msgstr "iso-8859-9, latin5, L5"
 
-#: ../../library/codecs.rst:1226
+#: ../../library/codecs.rst:1229
 msgid "iso8859_10"
 msgstr "iso8859_10"
 
-#: ../../library/codecs.rst:1226
+#: ../../library/codecs.rst:1229
 msgid "iso-8859-10, latin6, L6"
 msgstr "iso-8859-10, latin6, L6"
 
-#: ../../library/codecs.rst:1226
+#: ../../library/codecs.rst:1229
 msgid "Nordic languages"
 msgstr "Скандинавські мови"
 
-#: ../../library/codecs.rst:1228
+#: ../../library/codecs.rst:1231
 msgid "iso8859_11"
 msgstr "iso8859_11"
 
-#: ../../library/codecs.rst:1228
+#: ../../library/codecs.rst:1231
 msgid "iso-8859-11, thai"
 msgstr "iso-8859-11, тай"
 
-#: ../../library/codecs.rst:1228
+#: ../../library/codecs.rst:1231
 msgid "Thai languages"
 msgstr "тайські мови"
 
-#: ../../library/codecs.rst:1230
+#: ../../library/codecs.rst:1233
 msgid "iso8859_13"
 msgstr "iso8859_13"
 
-#: ../../library/codecs.rst:1230
+#: ../../library/codecs.rst:1233
 msgid "iso-8859-13, latin7, L7"
 msgstr "iso-8859-13, latin7, L7"
 
-#: ../../library/codecs.rst:1232
+#: ../../library/codecs.rst:1235
 msgid "iso8859_14"
 msgstr "iso8859_14"
 
-#: ../../library/codecs.rst:1232
+#: ../../library/codecs.rst:1235
 msgid "iso-8859-14, latin8, L8"
 msgstr "iso-8859-14, latin8, L8"
 
-#: ../../library/codecs.rst:1232
+#: ../../library/codecs.rst:1235
 msgid "Celtic languages"
 msgstr "кельтські мови"
 
-#: ../../library/codecs.rst:1234
+#: ../../library/codecs.rst:1237
 msgid "iso8859_15"
 msgstr "iso8859_15"
 
-#: ../../library/codecs.rst:1234
+#: ../../library/codecs.rst:1237
 msgid "iso-8859-15, latin9, L9"
 msgstr "iso-8859-15, latin9, L9"
 
-#: ../../library/codecs.rst:1236
+#: ../../library/codecs.rst:1239
 msgid "iso8859_16"
 msgstr "iso8859_16"
 
-#: ../../library/codecs.rst:1236
+#: ../../library/codecs.rst:1239
 msgid "iso-8859-16, latin10, L10"
 msgstr "iso-8859-16, latin10, L10"
 
-#: ../../library/codecs.rst:1236
+#: ../../library/codecs.rst:1239
 msgid "South-Eastern Europe"
 msgstr "Південно-Східна Європа"
 
-#: ../../library/codecs.rst:1238
+#: ../../library/codecs.rst:1241
 msgid "johab"
 msgstr "Йохаб"
 
-#: ../../library/codecs.rst:1238
+#: ../../library/codecs.rst:1241
 msgid "cp1361, ms1361"
 msgstr "cp1361, ms1361"
 
-#: ../../library/codecs.rst:1240
+#: ../../library/codecs.rst:1243
 msgid "koi8_r"
 msgstr "koi8_r"
 
-#: ../../library/codecs.rst:1242
+#: ../../library/codecs.rst:1245
 msgid "koi8_t"
 msgstr "koi8_t"
 
-#: ../../library/codecs.rst:1242
+#: ../../library/codecs.rst:1245
 msgid "Tajik"
 msgstr "таджицька"
 
-#: ../../library/codecs.rst:1246
+#: ../../library/codecs.rst:1249
 msgid "koi8_u"
 msgstr "koi8_u"
 
-#: ../../library/codecs.rst:1248
+#: ../../library/codecs.rst:1251
 msgid "kz1048"
 msgstr "kz1048"
 
-#: ../../library/codecs.rst:1248
+#: ../../library/codecs.rst:1251
 msgid "kz_1048, strk1048_2002, rk1048"
 msgstr "kz_1048, strk1048_2002, rk1048"
 
-#: ../../library/codecs.rst:1248 ../../library/codecs.rst:1266
+#: ../../library/codecs.rst:1251 ../../library/codecs.rst:1269
 msgid "Kazakh"
 msgstr "казахська"
 
-#: ../../library/codecs.rst:1252
+#: ../../library/codecs.rst:1255
 msgid "mac_cyrillic"
 msgstr "mac_cyrillic"
 
-#: ../../library/codecs.rst:1252
+#: ../../library/codecs.rst:1255
 msgid "maccyrillic"
 msgstr "макирилицею"
 
-#: ../../library/codecs.rst:1255
+#: ../../library/codecs.rst:1258
 msgid "mac_greek"
 msgstr "mac_greek"
 
-#: ../../library/codecs.rst:1255
+#: ../../library/codecs.rst:1258
 msgid "macgreek"
 msgstr "макгрік"
 
-#: ../../library/codecs.rst:1257
+#: ../../library/codecs.rst:1260
 msgid "mac_iceland"
 msgstr "mac_iceland"
 
-#: ../../library/codecs.rst:1257
+#: ../../library/codecs.rst:1260
 msgid "maciceland"
 msgstr "maciceland"
 
-#: ../../library/codecs.rst:1259
+#: ../../library/codecs.rst:1262
 msgid "mac_latin2"
 msgstr "mac_latin2"
 
-#: ../../library/codecs.rst:1259
+#: ../../library/codecs.rst:1262
 msgid "maclatin2, maccentraleurope, mac_centeuro"
 msgstr "maclatin2, maccentraleurope, mac_centeuro"
 
-#: ../../library/codecs.rst:1262
+#: ../../library/codecs.rst:1265
 msgid "mac_roman"
 msgstr "mac_roman"
 
-#: ../../library/codecs.rst:1262
+#: ../../library/codecs.rst:1265
 msgid "macroman, macintosh"
 msgstr "макромен, макінтош"
 
-#: ../../library/codecs.rst:1264
+#: ../../library/codecs.rst:1267
 msgid "mac_turkish"
 msgstr "mac_turkish"
 
-#: ../../library/codecs.rst:1264
+#: ../../library/codecs.rst:1267
 msgid "macturkish"
 msgstr "macturkish"
 
-#: ../../library/codecs.rst:1266
+#: ../../library/codecs.rst:1269
 msgid "ptcp154"
 msgstr "ptcp154"
 
-#: ../../library/codecs.rst:1266
+#: ../../library/codecs.rst:1269
 msgid "csptcp154, pt154, cp154, cyrillic-asian"
 msgstr "csptcp154, pt154, cp154, кирилиця-азійська"
 
-#: ../../library/codecs.rst:1269
+#: ../../library/codecs.rst:1272
 msgid "shift_jis"
 msgstr "shift_jis"
 
-#: ../../library/codecs.rst:1269
+#: ../../library/codecs.rst:1272
 msgid "csshiftjis, shiftjis, sjis, s_jis"
 msgstr "csshiftjis, shiftjis, sjis, s_jis"
 
-#: ../../library/codecs.rst:1272
+#: ../../library/codecs.rst:1275
 msgid "shift_jis_2004"
 msgstr "shift_jis_2004"
 
-#: ../../library/codecs.rst:1272
+#: ../../library/codecs.rst:1275
 msgid "shiftjis2004, sjis_2004, sjis2004"
 msgstr "shiftjis2004, sjis_2004, sjis2004"
 
-#: ../../library/codecs.rst:1275
+#: ../../library/codecs.rst:1278
 msgid "shift_jisx0213"
 msgstr "shift_jisx0213"
 
-#: ../../library/codecs.rst:1275
+#: ../../library/codecs.rst:1278
 msgid "shiftjisx0213, sjisx0213, s_jisx0213"
 msgstr "shiftjisx0213, sjisx0213, s_jisx0213"
 
-#: ../../library/codecs.rst:1278
+#: ../../library/codecs.rst:1281
 msgid "utf_32"
 msgstr "utf_32"
 
-#: ../../library/codecs.rst:1278
+#: ../../library/codecs.rst:1281
 msgid "U32, utf32"
 msgstr "U32, utf32"
 
-#: ../../library/codecs.rst:1278 ../../library/codecs.rst:1280
-#: ../../library/codecs.rst:1282 ../../library/codecs.rst:1284
-#: ../../library/codecs.rst:1286 ../../library/codecs.rst:1288
-#: ../../library/codecs.rst:1290 ../../library/codecs.rst:1292
-#: ../../library/codecs.rst:1294
+#: ../../library/codecs.rst:1281 ../../library/codecs.rst:1283
+#: ../../library/codecs.rst:1285 ../../library/codecs.rst:1287
+#: ../../library/codecs.rst:1289 ../../library/codecs.rst:1291
+#: ../../library/codecs.rst:1293 ../../library/codecs.rst:1295
+#: ../../library/codecs.rst:1297
 msgid "all languages"
 msgstr "всі мови"
 
-#: ../../library/codecs.rst:1280
+#: ../../library/codecs.rst:1283
 msgid "utf_32_be"
 msgstr "utf_32_be"
 
-#: ../../library/codecs.rst:1280
+#: ../../library/codecs.rst:1283
 msgid "UTF-32BE"
 msgstr "UTF-32BE"
 
-#: ../../library/codecs.rst:1282
+#: ../../library/codecs.rst:1285
 msgid "utf_32_le"
 msgstr "utf_32_le"
 
-#: ../../library/codecs.rst:1282
+#: ../../library/codecs.rst:1285
 msgid "UTF-32LE"
 msgstr "UTF-32LE"
 
-#: ../../library/codecs.rst:1284
+#: ../../library/codecs.rst:1287
 msgid "utf_16"
 msgstr "utf_16"
 
-#: ../../library/codecs.rst:1284
+#: ../../library/codecs.rst:1287
 msgid "U16, utf16"
 msgstr "U16, utf16"
 
-#: ../../library/codecs.rst:1286
+#: ../../library/codecs.rst:1289
 msgid "utf_16_be"
 msgstr "utf_16_be"
 
-#: ../../library/codecs.rst:1286
+#: ../../library/codecs.rst:1289
 msgid "UTF-16BE"
 msgstr "UTF-16BE"
 
-#: ../../library/codecs.rst:1288
+#: ../../library/codecs.rst:1291
 msgid "utf_16_le"
 msgstr "utf_16_le"
 
-#: ../../library/codecs.rst:1288
+#: ../../library/codecs.rst:1291
 msgid "UTF-16LE"
 msgstr "UTF-16LE"
 
-#: ../../library/codecs.rst:1290
+#: ../../library/codecs.rst:1293
 msgid "utf_7"
 msgstr "utf_7"
 
-#: ../../library/codecs.rst:1290
+#: ../../library/codecs.rst:1293
 msgid "U7, unicode-1-1-utf-7"
 msgstr "U7, unicode-1-1-utf-7"
 
-#: ../../library/codecs.rst:1292
+#: ../../library/codecs.rst:1295
 msgid "utf_8"
 msgstr "utf_8"
 
-#: ../../library/codecs.rst:1292
+#: ../../library/codecs.rst:1295
 msgid "U8, UTF, utf8, cp65001"
 msgstr "U8, UTF, utf8, cp65001"
 
-#: ../../library/codecs.rst:1294
+#: ../../library/codecs.rst:1297
 msgid "utf_8_sig"
 msgstr "utf_8_sig"
 
-#: ../../library/codecs.rst:1297
+#: ../../library/codecs.rst:1300
 msgid ""
 "The utf-16\\* and utf-32\\* encoders no longer allow surrogate code points "
 "(``U+D800``--``U+DFFF``) to be encoded. The utf-32\\* decoders no longer "
@@ -2793,15 +2785,15 @@ msgstr ""
 "точки (``U+D800``--``U+DFFF``). Декодери utf-32\\* більше не декодують "
 "послідовності байтів, які відповідають сурогатним кодовим точкам."
 
-#: ../../library/codecs.rst:1303
+#: ../../library/codecs.rst:1306
 msgid "``cp65001`` is now an alias to ``utf_8``."
 msgstr "``cp65001`` тепер є псевдонімом ``utf_8``."
 
-#: ../../library/codecs.rst:1308
+#: ../../library/codecs.rst:1311
 msgid "Python Specific Encodings"
 msgstr "Спеціальні кодування Python"
 
-#: ../../library/codecs.rst:1310
+#: ../../library/codecs.rst:1313
 msgid ""
 "A number of predefined codecs are specific to Python, so their codec names "
 "have no meaning outside Python. These are listed in the tables below based "
@@ -2818,11 +2810,11 @@ msgstr ""
 "кодування тексту). Для асиметричних кодеків вказане значення описує напрямок"
 " кодування."
 
-#: ../../library/codecs.rst:1318
+#: ../../library/codecs.rst:1321
 msgid "Text Encodings"
 msgstr "Кодування тексту"
 
-#: ../../library/codecs.rst:1320
+#: ../../library/codecs.rst:1323
 msgid ""
 "The following codecs provide :class:`str` to :class:`bytes` encoding and "
 ":term:`bytes-like object` to :class:`str` decoding, similar to the Unicode "
@@ -2832,11 +2824,11 @@ msgstr ""
 "декодування :term:`bytes-like object` до :class:`str`, подібне до кодування "
 "тексту Unicode."
 
-#: ../../library/codecs.rst:1329
+#: ../../library/codecs.rst:1332
 msgid "idna"
 msgstr "idna"
 
-#: ../../library/codecs.rst:1329
+#: ../../library/codecs.rst:1332
 msgid ""
 "Implement :rfc:`3490`, see also :mod:`encodings.idna`. Only "
 "``errors='strict'`` is supported."
@@ -2844,64 +2836,64 @@ msgstr ""
 "Реалізація :rfc:`3490`, див. також :mod:`encodings.idna`. Підтримується лише"
 " ``errors='strict'``."
 
-#: ../../library/codecs.rst:1335
+#: ../../library/codecs.rst:1338
 msgid "mbcs"
 msgstr "mbcs"
 
-#: ../../library/codecs.rst:1335
+#: ../../library/codecs.rst:1338
 msgid "ansi, dbcs"
 msgstr "ansi, dbcs"
 
-#: ../../library/codecs.rst:1335
+#: ../../library/codecs.rst:1338
 msgid ""
 "Windows only: Encode the operand according to the ANSI codepage (CP_ACP)."
 msgstr ""
 "Лише для Windows: кодуйте операнд відповідно до кодової сторінки ANSI "
 "(CP_ACP)."
 
-#: ../../library/codecs.rst:1339
+#: ../../library/codecs.rst:1342
 msgid "oem"
 msgstr "oem"
 
-#: ../../library/codecs.rst:1339
+#: ../../library/codecs.rst:1342
 msgid ""
 "Windows only: Encode the operand according to the OEM codepage (CP_OEMCP)."
 msgstr ""
 "Лише для Windows: кодуйте операнд відповідно до кодової сторінки OEM "
 "(CP_OEMCP)."
 
-#: ../../library/codecs.rst:1345
+#: ../../library/codecs.rst:1348
 msgid "palmos"
 msgstr "palmos"
 
-#: ../../library/codecs.rst:1345
+#: ../../library/codecs.rst:1348
 msgid "Encoding of PalmOS 3.5."
 msgstr "Кодування PalmOS 3.5."
 
-#: ../../library/codecs.rst:1347
+#: ../../library/codecs.rst:1350
 msgid "punycode"
 msgstr "punycode"
 
-#: ../../library/codecs.rst:1347
+#: ../../library/codecs.rst:1350
 msgid "Implement :rfc:`3492`. Stateful codecs are not supported."
 msgstr "Впровадити :rfc:`3492`. Кодеки з підтримкою стану не підтримуються."
 
-#: ../../library/codecs.rst:1351
+#: ../../library/codecs.rst:1354
 msgid "raw_unicode_escape"
 msgstr "raw_unicode_escape"
 
-#: ../../library/codecs.rst:1351
+#: ../../library/codecs.rst:1354
 msgid ""
 "Latin-1 encoding with :samp:`\\\\u{XXXX}` and :samp:`\\\\U{XXXXXXXX}` for "
 "other code points. Existing backslashes are not escaped in any way. It is "
 "used in the Python pickle protocol."
 msgstr ""
 
-#: ../../library/codecs.rst:1361
+#: ../../library/codecs.rst:1364
 msgid "undefined"
 msgstr "невизначений"
 
-#: ../../library/codecs.rst:1361
+#: ../../library/codecs.rst:1364
 msgid ""
 "Raise an exception for all conversions, even empty strings. The error "
 "handler is ignored."
@@ -2909,11 +2901,11 @@ msgstr ""
 "Викликати виняток для всіх перетворень, навіть для порожніх рядків. Обробник"
 " помилок ігнорується."
 
-#: ../../library/codecs.rst:1366
+#: ../../library/codecs.rst:1369
 msgid "unicode_escape"
 msgstr "unicode_escape"
 
-#: ../../library/codecs.rst:1366
+#: ../../library/codecs.rst:1369
 msgid ""
 "Encoding suitable as the contents of a Unicode literal in ASCII-encoded "
 "Python source code, except that quotes are not escaped. Decode from Latin-1 "
@@ -2924,15 +2916,15 @@ msgstr ""
 "вихідного коду Latin-1. Майте на увазі, що вихідний код Python насправді "
 "використовує UTF-8 за замовчуванням."
 
-#: ../../library/codecs.rst:1378
+#: ../../library/codecs.rst:1381
 msgid "\"unicode_internal\" codec is removed."
 msgstr "Кодек \"unicode_internal\" видалено."
 
-#: ../../library/codecs.rst:1385
+#: ../../library/codecs.rst:1388
 msgid "Binary Transforms"
 msgstr "Двійкові перетворення"
 
-#: ../../library/codecs.rst:1387
+#: ../../library/codecs.rst:1390
 msgid ""
 "The following codecs provide binary transforms: :term:`bytes-like object` to"
 " :class:`bytes` mappings. They are not supported by :meth:`bytes.decode` "
@@ -2942,19 +2934,19 @@ msgstr ""
 "object` у :class:`bytes` зіставлення. Вони не підтримуються "
 ":meth:`bytes.decode` (який виводить лише :class:`str`)."
 
-#: ../../library/codecs.rst:1395
+#: ../../library/codecs.rst:1398
 msgid "Encoder / decoder"
 msgstr "Кодер / декодер"
 
-#: ../../library/codecs.rst:1397
+#: ../../library/codecs.rst:1400
 msgid "base64_codec [#b64]_"
 msgstr "base64_codec [#b64]_"
 
-#: ../../library/codecs.rst:1397
+#: ../../library/codecs.rst:1400
 msgid "base64, base_64"
 msgstr "base64, base_64"
 
-#: ../../library/codecs.rst:1397
+#: ../../library/codecs.rst:1400
 msgid ""
 "Convert the operand to multiline MIME base64 (the result always includes a "
 "trailing ``'\\n'``)."
@@ -2962,99 +2954,100 @@ msgstr ""
 "Перетворіть операнд на багаторядковий MIME base64 (результат завжди включає "
 "``'\\n'``)."
 
-#: ../../library/codecs.rst:1402
+#: ../../library/codecs.rst:1405
 msgid ""
 "accepts any :term:`bytes-like object` as input for encoding and decoding"
 msgstr ""
 "приймає будь-який :term:`bytes-like object` як вхідні дані для кодування та "
 "декодування"
 
-#: ../../library/codecs.rst:1397
+#: ../../library/codecs.rst:1400
 msgid ":meth:`base64.encodebytes` / :meth:`base64.decodebytes`"
 msgstr ":meth:`base64.encodebytes` / :meth:`base64.decodebytes`"
 
-#: ../../library/codecs.rst:1408
+#: ../../library/codecs.rst:1411
 msgid "bz2_codec"
 msgstr "bz2_codec"
 
-#: ../../library/codecs.rst:1408
+#: ../../library/codecs.rst:1411
 msgid "bz2"
 msgstr "bz2"
 
-#: ../../library/codecs.rst:1408
+#: ../../library/codecs.rst:1411
 msgid "Compress the operand using bz2."
 msgstr "Стисніть операнд за допомогою bz2."
 
-#: ../../library/codecs.rst:1408
+#: ../../library/codecs.rst:1411
 msgid ":meth:`bz2.compress` / :meth:`bz2.decompress`"
 msgstr ":meth:`bz2.compress` / :meth:`bz2.decompress`"
 
-#: ../../library/codecs.rst:1411
+#: ../../library/codecs.rst:1414
 msgid "hex_codec"
 msgstr "hex_codec"
 
-#: ../../library/codecs.rst:1411
+#: ../../library/codecs.rst:1414
 msgid "hex"
 msgstr "шістнадцятковий"
 
-#: ../../library/codecs.rst:1411
+#: ../../library/codecs.rst:1414
 msgid ""
 "Convert the operand to hexadecimal representation, with two digits per byte."
 msgstr "Перетворіть операнд у шістнадцяткове подання з двома цифрами на байт."
 
-#: ../../library/codecs.rst:1411
+#: ../../library/codecs.rst:1414
 msgid ":meth:`binascii.b2a_hex` / :meth:`binascii.a2b_hex`"
 msgstr ":meth:`binascii.b2a_hex` / :meth:`binascii.a2b_hex`"
 
-#: ../../library/codecs.rst:1416
+#: ../../library/codecs.rst:1419
 msgid "quopri_codec"
 msgstr "quopri_codec"
 
-#: ../../library/codecs.rst:1416
+#: ../../library/codecs.rst:1419
 msgid "quopri, quotedprintable, quoted_printable"
 msgstr "quopri, quotedprintable, quoted_printable"
 
-#: ../../library/codecs.rst:1416
+#: ../../library/codecs.rst:1419
 msgid "Convert the operand to MIME quoted printable."
 msgstr "Перетворіть операнд на MIME-цитований для друку."
 
-#: ../../library/codecs.rst:1416
+#: ../../library/codecs.rst:1419
 msgid ":meth:`quopri.encode` with ``quotetabs=True`` / :meth:`quopri.decode`"
 msgstr ":meth:`quopri.encode` з ``quotetabs=True`` / :meth:`quopri.decode`"
 
-#: ../../library/codecs.rst:1420
+#: ../../library/codecs.rst:1423
 msgid "uu_codec"
 msgstr "uu_codec"
 
-#: ../../library/codecs.rst:1420
+#: ../../library/codecs.rst:1423
 msgid "uu"
 msgstr "uu"
 
-#: ../../library/codecs.rst:1420
+#: ../../library/codecs.rst:1423
 msgid "Convert the operand using uuencode."
 msgstr "Перетворіть операнд за допомогою uuencode."
 
-#: ../../library/codecs.rst:1420
-msgid ":meth:`uu.encode` / :meth:`uu.decode`"
-msgstr ":meth:`uu.encode` / :meth:`uu.decode`"
-
 #: ../../library/codecs.rst:1423
+msgid ""
+":meth:`!uu.encode` / :meth:`!uu.decode` (Note: :mod:`uu` is deprecated.)"
+msgstr ""
+
+#: ../../library/codecs.rst:1428
 msgid "zlib_codec"
 msgstr "zlib_codec"
 
-#: ../../library/codecs.rst:1423
+#: ../../library/codecs.rst:1428
 msgid "zip, zlib"
 msgstr "zip, zlib"
 
-#: ../../library/codecs.rst:1423
+#: ../../library/codecs.rst:1428
 msgid "Compress the operand using gzip."
 msgstr "Стисніть операнд за допомогою gzip."
 
-#: ../../library/codecs.rst:1423
+#: ../../library/codecs.rst:1428
 msgid ":meth:`zlib.compress` / :meth:`zlib.decompress`"
 msgstr ":meth:`zlib.compress` / :meth:`zlib.decompress`"
 
-#: ../../library/codecs.rst:1427
+#: ../../library/codecs.rst:1432
 msgid ""
 "In addition to :term:`bytes-like objects <bytes-like object>`, "
 "``'base64_codec'`` also accepts ASCII-only instances of :class:`str` for "
@@ -3064,19 +3057,19 @@ msgstr ""
 "``'base64_codec''`` також приймає лише ASCII-примірники :class:`str` для "
 "декодування"
 
-#: ../../library/codecs.rst:1431
+#: ../../library/codecs.rst:1436
 msgid "Restoration of the binary transforms."
 msgstr "Відновлення двійкових перетворень."
 
-#: ../../library/codecs.rst:1434
+#: ../../library/codecs.rst:1439
 msgid "Restoration of the aliases for the binary transforms."
 msgstr "Відновлення псевдонімів для бінарних перетворень."
 
-#: ../../library/codecs.rst:1441
+#: ../../library/codecs.rst:1446
 msgid "Text Transforms"
 msgstr "Перетворення тексту"
 
-#: ../../library/codecs.rst:1443
+#: ../../library/codecs.rst:1448
 msgid ""
 "The following codec provides a text transform: a :class:`str` to "
 ":class:`str` mapping. It is not supported by :meth:`str.encode` (which only "
@@ -3086,33 +3079,33 @@ msgstr ""
 ":class:`str`. Він не підтримується :meth:`str.encode` (який виводить лише "
 ":class:`bytes`)."
 
-#: ../../library/codecs.rst:1452
+#: ../../library/codecs.rst:1457
 msgid "rot_13"
 msgstr "rot_13"
 
-#: ../../library/codecs.rst:1452
+#: ../../library/codecs.rst:1457
 msgid "rot13"
 msgstr "гниль13"
 
-#: ../../library/codecs.rst:1452
+#: ../../library/codecs.rst:1457
 msgid "Return the Caesar-cypher encryption of the operand."
 msgstr "Повернути шифрування операнда за допомогою шифру Цезаря."
 
-#: ../../library/codecs.rst:1457
+#: ../../library/codecs.rst:1462
 msgid "Restoration of the ``rot_13`` text transform."
 msgstr "Відновлення текстового перетворення ``rot_13``."
 
-#: ../../library/codecs.rst:1460
+#: ../../library/codecs.rst:1465
 msgid "Restoration of the ``rot13`` alias."
 msgstr "Відновлення псевдоніма ``rot13``."
 
-#: ../../library/codecs.rst:1465
+#: ../../library/codecs.rst:1470
 msgid ""
 ":mod:`encodings.idna` --- Internationalized Domain Names in Applications"
 msgstr ""
 ":mod:`encodings.idna` --- Інтернаціоналізовані доменні імена в програмах"
 
-#: ../../library/codecs.rst:1471
+#: ../../library/codecs.rst:1476
 msgid ""
 "This module implements :rfc:`3490` (Internationalized Domain Names in "
 "Applications) and :rfc:`3492` (Nameprep: A Stringprep Profile for "
@@ -3124,7 +3117,7 @@ msgstr ""
 "інтернаціоналізованих доменних імен (IDN)). Він побудований на основі "
 "кодування ``punycode`` і :mod:`stringprep`."
 
-#: ../../library/codecs.rst:1476
+#: ../../library/codecs.rst:1481
 msgid ""
 "If you need the IDNA 2008 standard from :rfc:`5891` and :rfc:`5895`, use the"
 " third-party `idna module <https://pypi.org/project/idna/>`_."
@@ -3132,7 +3125,7 @@ msgstr ""
 "Якщо вам потрібен стандарт IDNA 2008 від :rfc:`5891` і :rfc:`5895`, "
 "використовуйте сторонній `idna module <https://pypi.org/project/idna/>`_."
 
-#: ../../library/codecs.rst:1479
+#: ../../library/codecs.rst:1484
 msgid ""
 "These RFCs together define a protocol to support non-ASCII characters in "
 "domain names. A domain name containing non-ASCII characters (such as "
@@ -3156,7 +3149,7 @@ msgstr ""
 "мітки домену Unicode на IDNA на дроті та перетворювати мітки ACE назад у "
 "Unicode перед тим, як представляти їх користувачеві."
 
-#: ../../library/codecs.rst:1490
+#: ../../library/codecs.rst:1495
 msgid ""
 "Python supports this conversion in several ways:  the ``idna`` codec "
 "performs conversion between Unicode and ACE, separating an input string into"
@@ -3186,7 +3179,7 @@ msgstr ""
 "надсилає IDNA ім’я хоста в полі :mailheader:`Host`, якщо воно взагалі "
 "надсилає це поле)."
 
-#: ../../library/codecs.rst:1503
+#: ../../library/codecs.rst:1508
 msgid ""
 "When receiving host names from the wire (such as in reverse name lookup), no"
 " automatic conversion to Unicode is performed: applications wishing to "
@@ -3197,7 +3190,7 @@ msgstr ""
 "які бажають надати такі імена хостів користувачеві, повинні декодувати їх у "
 "Unicode."
 
-#: ../../library/codecs.rst:1507
+#: ../../library/codecs.rst:1512
 msgid ""
 "The module :mod:`encodings.idna` also implements the nameprep procedure, "
 "which performs certain normalizations on host names, to achieve case-"
@@ -3209,7 +3202,7 @@ msgstr ""
 "міжнародних доменних імен і уніфікувати схожі символи. За бажанням можна "
 "безпосередньо використовувати функції nameprep."
 
-#: ../../library/codecs.rst:1515
+#: ../../library/codecs.rst:1520
 msgid ""
 "Return the nameprepped version of *label*. The implementation currently "
 "assumes query strings, so ``AllowUnassigned`` is true."
@@ -3217,7 +3210,7 @@ msgstr ""
 "Повертає запрограмовану версію *мітки*. Реалізація наразі передбачає рядки "
 "запиту, тому ``AllowUnassigned`` є істинним."
 
-#: ../../library/codecs.rst:1521
+#: ../../library/codecs.rst:1526
 msgid ""
 "Convert a label to ASCII, as specified in :rfc:`3490`. ``UseSTD3ASCIIRules``"
 " is assumed to be false."
@@ -3225,27 +3218,27 @@ msgstr ""
 "Перетворіть мітку на ASCII, як зазначено в :rfc:`3490`. "
 "``UseSTD3ASCIIRules`` вважається false."
 
-#: ../../library/codecs.rst:1527
+#: ../../library/codecs.rst:1532
 msgid "Convert a label to Unicode, as specified in :rfc:`3490`."
 msgstr "Перетворіть мітку в Unicode, як зазначено в :rfc:`3490`."
 
-#: ../../library/codecs.rst:1531
+#: ../../library/codecs.rst:1536
 msgid ":mod:`encodings.mbcs` --- Windows ANSI codepage"
 msgstr ":mod:`encodings.mbcs` --- кодова сторінка Windows ANSI"
 
-#: ../../library/codecs.rst:1536
+#: ../../library/codecs.rst:1541
 msgid "This module implements the ANSI codepage (CP_ACP)."
 msgstr "Цей модуль реалізує кодову сторінку ANSI (CP_ACP)."
 
-#: ../../library/codecs.rst:1538
+#: ../../library/codecs.rst:1543
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ":ref:`Наявність <availability>`: Windows."
 
-#: ../../library/codecs.rst:1540
+#: ../../library/codecs.rst:1545
 msgid "Support any error handler."
 msgstr "Підтримка будь-якого засобу обробки помилок."
 
-#: ../../library/codecs.rst:1543
+#: ../../library/codecs.rst:1548
 msgid ""
 "Before 3.2, the *errors* argument was ignored; ``'replace'`` was always used"
 " to encode, and ``'ignore'`` to decode."
@@ -3253,11 +3246,11 @@ msgstr ""
 "До версії 3.2 аргумент *errors* ігнорувався; ``'replace'`` завжди "
 "використовувався для кодування, а ``'ignore''`` для декодування."
 
-#: ../../library/codecs.rst:1549
+#: ../../library/codecs.rst:1554
 msgid ":mod:`encodings.utf_8_sig` --- UTF-8 codec with BOM signature"
 msgstr ":mod:`encodings.utf_8_sig` --- кодек UTF-8 із підписом BOM"
 
-#: ../../library/codecs.rst:1555
+#: ../../library/codecs.rst:1560
 msgid ""
 "This module implements a variant of the UTF-8 codec. On encoding, a UTF-8 "
 "encoded BOM will be prepended to the UTF-8 encoded bytes. For the stateful "
