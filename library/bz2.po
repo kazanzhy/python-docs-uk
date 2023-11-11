@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-20 14:13+0000\n"
+"POT-Creation-Date: 2023-10-27 14:49+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -126,11 +126,11 @@ msgstr ""
 " в екземпляр :class:`io.TextIOWrapper` із вказаним кодуванням, поведінкою "
 "обробки помилок і закінченнями рядків."
 
-#: ../../library/bz2.rst:59 ../../library/bz2.rst:125
+#: ../../library/bz2.rst:59 ../../library/bz2.rst:163
 msgid "The ``'x'`` (exclusive creation) mode was added."
 msgstr "Додано режим ``'x`` (ексклюзивне створення)."
 
-#: ../../library/bz2.rst:62 ../../library/bz2.rst:132
+#: ../../library/bz2.rst:62 ../../library/bz2.rst:170
 msgid "Accepts a :term:`path-like object`."
 msgstr "Приймає :term:`path-like object`."
 
@@ -196,8 +196,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/bz2.rst:94
-msgid ":class:`BZ2File` also provides the following method:"
-msgstr ":class:`BZ2File` також надає наступний метод:"
+msgid ":class:`BZ2File` also provides the following methods:"
+msgstr ""
 
 #: ../../library/bz2.rst:98
 msgid ""
@@ -221,19 +221,46 @@ msgstr ""
 ":class:`BZ2File` було створено шляхом передачі файлового об’єкта для *ім'я "
 "файлу*)."
 
-#: ../../library/bz2.rst:110
+#: ../../library/bz2.rst:111
+msgid "Return the file descriptor for the underlying file."
+msgstr ""
+
+#: ../../library/bz2.rst:117
+msgid "Return whether the file was opened for reading."
+msgstr ""
+
+#: ../../library/bz2.rst:123
+msgid "Return whether the file supports seeking."
+msgstr ""
+
+#: ../../library/bz2.rst:129
+msgid "Return whether the file was opened for writing."
+msgstr ""
+
+#: ../../library/bz2.rst:135
+msgid ""
+"Read up to *size* uncompressed bytes, while trying to avoid making multiple "
+"reads from the underlying stream. Reads up to a buffer's worth of data if "
+"size is negative."
+msgstr ""
+
+#: ../../library/bz2.rst:139
+msgid "Returns ``b''`` if the file is at EOF."
+msgstr ""
+
+#: ../../library/bz2.rst:145
+msgid "Read bytes into *b*."
+msgstr ""
+
+#: ../../library/bz2.rst:147
+msgid "Returns the number of bytes read (0 for EOF)."
+msgstr ""
+
+#: ../../library/bz2.rst:152
 msgid "Support for the :keyword:`with` statement was added."
 msgstr "Додано підтримку оператора :keyword:`with`."
 
-#: ../../library/bz2.rst:113
-msgid ""
-"The :meth:`fileno`, :meth:`readable`, :meth:`seekable`, :meth:`writable`, "
-":meth:`read1` and :meth:`readinto` methods were added."
-msgstr ""
-"Додано методи :meth:`fileno`, :meth:`readable`, :meth:`seekable`, "
-":meth:`writable`, :meth:`read1` і :meth:`readinto`."
-
-#: ../../library/bz2.rst:117
+#: ../../library/bz2.rst:155
 msgid ""
 "Support was added for *filename* being a :term:`file object` instead of an "
 "actual filename."
@@ -241,7 +268,7 @@ msgstr ""
 "Було додано підтримку для *filename* як :term:`file object` замість "
 "фактичної назви файлу."
 
-#: ../../library/bz2.rst:121
+#: ../../library/bz2.rst:159
 msgid ""
 "The ``'a'`` (append) mode was added, along with support for reading multi-"
 "stream files."
@@ -249,14 +276,14 @@ msgstr ""
 "Було додано режим ``'a'`` (додавання) разом із підтримкою читання "
 "багатопотокових файлів."
 
-#: ../../library/bz2.rst:128
+#: ../../library/bz2.rst:166
 msgid ""
 "The :meth:`~io.BufferedIOBase.read` method now accepts an argument of "
 "``None``."
 msgstr ""
 "Метод :meth:`~io.BufferedIOBase.read` тепер приймає аргумент ``None``."
 
-#: ../../library/bz2.rst:135
+#: ../../library/bz2.rst:173
 msgid ""
 "The *buffering* parameter has been removed. It was ignored and deprecated "
 "since Python 3.0. Pass an open file object to control how the file is "
@@ -266,11 +293,11 @@ msgstr ""
 "починаючи з Python 3.0. Передайте відкритий файловий об’єкт, щоб "
 "контролювати, як відкривається файл."
 
-#: ../../library/bz2.rst:140
+#: ../../library/bz2.rst:178
 msgid "The *compresslevel* parameter became keyword-only."
 msgstr "Параметр *compresslevel* став лише ключовим словом."
 
-#: ../../library/bz2.rst:142
+#: ../../library/bz2.rst:180
 msgid ""
 "This class is thread unsafe in the face of multiple simultaneous readers or "
 "writers, just like its equivalent classes in :mod:`gzip` and :mod:`lzma` "
@@ -280,11 +307,11 @@ msgstr ""
 "або записувачів, як завжди були його еквівалентні класи в :mod:`gzip` і "
 ":mod:`lzma`."
 
-#: ../../library/bz2.rst:149
+#: ../../library/bz2.rst:187
 msgid "Incremental (de)compression"
 msgstr "Поступове (роз)стиснення"
 
-#: ../../library/bz2.rst:153
+#: ../../library/bz2.rst:191
 msgid ""
 "Create a new compressor object. This object may be used to compress data "
 "incrementally. For one-shot compression, use the :func:`compress` function "
@@ -294,7 +321,7 @@ msgstr ""
 "поступового стиснення даних. Для одноразового стиснення замість цього "
 "використовуйте функцію :func:`compress`."
 
-#: ../../library/bz2.rst:157 ../../library/bz2.rst:245
+#: ../../library/bz2.rst:195 ../../library/bz2.rst:283
 msgid ""
 "*compresslevel*, if given, must be an integer between ``1`` and ``9``. The "
 "default is ``9``."
@@ -302,7 +329,7 @@ msgstr ""
 "*compresslevel*, якщо задано, має бути цілим числом від ``1`` до ``9``. "
 "Типовим значенням є ``9``."
 
-#: ../../library/bz2.rst:162
+#: ../../library/bz2.rst:200
 msgid ""
 "Provide data to the compressor object. Returns a chunk of compressed data if"
 " possible, or an empty byte string otherwise."
@@ -310,7 +337,7 @@ msgstr ""
 "Надайте дані об’єкту компресора. Повертає фрагмент стиснутих даних, якщо це "
 "можливо, або порожній рядок байтів в іншому випадку."
 
-#: ../../library/bz2.rst:165
+#: ../../library/bz2.rst:203
 msgid ""
 "When you have finished providing data to the compressor, call the "
 ":meth:`flush` method to finish the compression process."
@@ -318,7 +345,7 @@ msgstr ""
 "Коли ви закінчите надсилати дані компресору, викличте метод :meth:`flush`, "
 "щоб завершити процес стиснення."
 
-#: ../../library/bz2.rst:171
+#: ../../library/bz2.rst:209
 msgid ""
 "Finish the compression process. Returns the compressed data left in internal"
 " buffers."
@@ -326,13 +353,13 @@ msgstr ""
 "Завершіть процес стиснення. Повертає стислі дані, що залишилися у внутрішніх"
 " буферах."
 
-#: ../../library/bz2.rst:174
+#: ../../library/bz2.rst:212
 msgid ""
 "The compressor object may not be used after this method has been called."
 msgstr ""
 "Об’єкт компресора не можна використовувати після виклику цього методу."
 
-#: ../../library/bz2.rst:179
+#: ../../library/bz2.rst:217
 msgid ""
 "Create a new decompressor object. This object may be used to decompress data"
 " incrementally. For one-shot compression, use the :func:`decompress` "
@@ -342,7 +369,7 @@ msgstr ""
 "поступового розпакування даних. Для одноразового стиснення замість цього "
 "використовуйте функцію :func:`decompress`."
 
-#: ../../library/bz2.rst:184
+#: ../../library/bz2.rst:222
 msgid ""
 "This class does not transparently handle inputs containing multiple "
 "compressed streams, unlike :func:`decompress` and :class:`BZ2File`. If you "
@@ -355,7 +382,7 @@ msgstr ""
 ":class:`BZ2Decompressor`, ви повинні використовувати новий розпаковувач для "
 "кожного потоку."
 
-#: ../../library/bz2.rst:191
+#: ../../library/bz2.rst:229
 msgid ""
 "Decompress *data* (a :term:`bytes-like object`), returning uncompressed data"
 " as bytes. Some of *data* may be buffered internally, for use in later calls"
@@ -368,7 +395,7 @@ msgstr ""
 "мають бути об’єднані з результатами будь-яких попередніх викликів "
 ":meth:`decompress`."
 
-#: ../../library/bz2.rst:197
+#: ../../library/bz2.rst:235
 msgid ""
 "If *max_length* is nonnegative, returns at most *max_length* bytes of "
 "decompressed data. If this limit is reached and further output can be "
@@ -382,7 +409,7 @@ msgstr ""
 " випадку наступний виклик :meth:`~.decompress` може надати *data* як "
 "``b''``, щоб отримати більше вихідних даних."
 
-#: ../../library/bz2.rst:204
+#: ../../library/bz2.rst:242
 msgid ""
 "If all of the input data was decompressed and returned (either because this "
 "was less than *max_length* bytes, or because *max_length* was negative), the"
@@ -393,26 +420,26 @@ msgstr ""
 "від’ємним), для атрибута :attr:`~.needs_input` буде встановлено значення "
 "``True`` ."
 
-#: ../../library/bz2.rst:209
+#: ../../library/bz2.rst:247
 msgid ""
 "Attempting to decompress data after the end of stream is reached raises an "
 ":exc:`EOFError`.  Any data found after the end of the stream is ignored and "
 "saved in the :attr:`~.unused_data` attribute."
 msgstr ""
 
-#: ../../library/bz2.rst:213
+#: ../../library/bz2.rst:251
 msgid "Added the *max_length* parameter."
 msgstr "Додано параметр *max_length*."
 
-#: ../../library/bz2.rst:218
+#: ../../library/bz2.rst:256
 msgid "``True`` if the end-of-stream marker has been reached."
 msgstr "``True``, якщо досягнуто маркера кінця потоку."
 
-#: ../../library/bz2.rst:225
+#: ../../library/bz2.rst:263
 msgid "Data found after the end of the compressed stream."
 msgstr "Дані знайдено після закінчення стисненого потоку."
 
-#: ../../library/bz2.rst:227
+#: ../../library/bz2.rst:265
 msgid ""
 "If this attribute is accessed before the end of the stream has been reached,"
 " its value will be ``b''``."
@@ -420,7 +447,7 @@ msgstr ""
 "Якщо цей атрибут доступний до досягнення кінця потоку, його значення буде "
 "``b''``."
 
-#: ../../library/bz2.rst:232
+#: ../../library/bz2.rst:270
 msgid ""
 "``False`` if the :meth:`.decompress` method can provide more decompressed "
 "data before requiring new uncompressed input."
@@ -428,26 +455,26 @@ msgstr ""
 "``False``, якщо метод :meth:`.decompress` може надати більше розпакованих "
 "даних перед запитом нового нестисненого введення."
 
-#: ../../library/bz2.rst:239
+#: ../../library/bz2.rst:277
 msgid "One-shot (de)compression"
 msgstr "Одноразова (де)компресія"
 
-#: ../../library/bz2.rst:243
+#: ../../library/bz2.rst:281
 msgid "Compress *data*, a :term:`bytes-like object <bytes-like object>`."
 msgstr "Стиснути *data*, :term:`байт-подібний об’єкт <bytes-like object>`."
 
-#: ../../library/bz2.rst:248
+#: ../../library/bz2.rst:286
 msgid "For incremental compression, use a :class:`BZ2Compressor` instead."
 msgstr ""
 "Для інкрементного стиснення замість цього використовуйте "
 ":class:`BZ2Compressor`."
 
-#: ../../library/bz2.rst:253
+#: ../../library/bz2.rst:291
 msgid "Decompress *data*, a :term:`bytes-like object <bytes-like object>`."
 msgstr ""
 "Розархівуйте *data*, :term:`байт-подібний об’єкт <bytes-like object>`."
 
-#: ../../library/bz2.rst:255
+#: ../../library/bz2.rst:293
 msgid ""
 "If *data* is the concatenation of multiple compressed streams, decompress "
 "all of the streams."
@@ -455,26 +482,26 @@ msgstr ""
 "Якщо *data* є конкатенацією кількох стиснутих потоків, розпакуйте всі "
 "потоки."
 
-#: ../../library/bz2.rst:258
+#: ../../library/bz2.rst:296
 msgid "For incremental decompression, use a :class:`BZ2Decompressor` instead."
 msgstr ""
 "Для інкрементної декомпресії замість цього використовуйте "
 ":class:`BZ2Decompressor`."
 
-#: ../../library/bz2.rst:260
+#: ../../library/bz2.rst:298
 msgid "Support for multi-stream inputs was added."
 msgstr "Додано підтримку багатопотокових входів."
 
-#: ../../library/bz2.rst:266
+#: ../../library/bz2.rst:304
 msgid "Examples of usage"
 msgstr "Приклади вживання"
 
-#: ../../library/bz2.rst:268
+#: ../../library/bz2.rst:306
 msgid "Below are some examples of typical usage of the :mod:`bz2` module."
 msgstr ""
 "Нижче наведено декілька прикладів типового використання модуля :mod:`bz2`."
 
-#: ../../library/bz2.rst:270
+#: ../../library/bz2.rst:308
 msgid ""
 "Using :func:`compress` and :func:`decompress` to demonstrate round-trip "
 "compression:"
@@ -482,17 +509,17 @@ msgstr ""
 "Використання :func:`compress` і :func:`decompress` для демонстрації "
 "двостороннього стиснення:"
 
-#: ../../library/bz2.rst:288
+#: ../../library/bz2.rst:326
 msgid "Using :class:`BZ2Compressor` for incremental compression:"
 msgstr "Використання :class:`BZ2Compressor` для поступового стиснення:"
 
-#: ../../library/bz2.rst:306
+#: ../../library/bz2.rst:344
 msgid ""
 "The example above uses a very \"nonrandom\" stream of data (a stream of "
 "``b\"z\"`` chunks).  Random data tends to compress poorly, while ordered, "
 "repetitive data usually yields a high compression ratio."
 msgstr ""
 
-#: ../../library/bz2.rst:310
+#: ../../library/bz2.rst:348
 msgid "Writing and reading a bzip2-compressed file in binary mode:"
 msgstr "Запис і читання файлу, стисненого bzip2, у двійковому режимі:"

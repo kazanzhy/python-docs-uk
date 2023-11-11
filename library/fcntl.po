@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:14+0000\n"
+"POT-Creation-Date: 2023-11-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -37,15 +37,8 @@ msgstr ""
 ":c:func:`ioctl`. Щоб отримати повний опис цих викликів, перегляньте "
 ":manpage:`fcntl(2)` і :manpage:`ioctl(2)` сторінки посібника Unix."
 
-#: ../../includes/wasm-notavail.rst:3
-msgid ":ref:`Availability <availability>`: not Emscripten, not WASI."
-msgstr ""
-
-#: ../../includes/wasm-notavail.rst:5
-msgid ""
-"This module does not work or is not available on WebAssembly platforms "
-"``wasm32-emscripten`` and ``wasm32-wasi``. See :ref:`wasm-availability` for "
-"more information."
+#: ../../library/fcntl.rst:21
+msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
 msgstr ""
 
 #: ../../library/fcntl.rst:23
@@ -160,7 +153,7 @@ msgstr ""
 msgid "If the :c:func:`fcntl` fails, an :exc:`OSError` is raised."
 msgstr "Якщо :c:func:`fcntl` не вдається, виникає :exc:`OSError`."
 
-#: ../../library/fcntl.rst:94
+#: ../../library/fcntl.rst:85
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.fcntl`` with arguments "
 "``fd``, ``cmd``, ``arg``."
@@ -253,7 +246,7 @@ msgstr "Якщо :c:func:`ioctl` не вдається, виникає виня�
 msgid "An example::"
 msgstr "Приклад::"
 
-#: ../../library/fcntl.rst:145
+#: ../../library/fcntl.rst:136
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.ioctl`` with arguments "
 "``fd``, ``request``, ``arg``."
@@ -278,7 +271,7 @@ msgstr ""
 msgid "If the :c:func:`flock` fails, an :exc:`OSError` exception is raised."
 msgstr "Якщо :c:func:`flock` не вдається, виникає виняток :exc:`OSError`."
 
-#: ../../library/fcntl.rst:157
+#: ../../library/fcntl.rst:148
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.flock`` with arguments "
 "``fd``, ``operation``."
@@ -364,7 +357,7 @@ msgstr ""
 "Типовим значенням для *len* є 0, що означає блокування до кінця файлу. За "
 "замовчуванням для *whence* також дорівнює 0."
 
-#: ../../library/fcntl.rst:192
+#: ../../library/fcntl.rst:183
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.lockf`` with arguments "
 "``fd``, ``cmd``, ``len``, ``start``, ``whence``."
