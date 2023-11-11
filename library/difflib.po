@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:14+0000\n"
+"POT-Creation-Date: 2023-11-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -106,7 +106,7 @@ msgstr ""
 "для аргументу ``autojunk`` значення ``False`` під час створення "
 ":class:`SequenceMatcher`."
 
-#: ../../library/difflib.rst:55 ../../library/difflib.rst:384
+#: ../../library/difflib.rst:55 ../../library/difflib.rst:386
 msgid "The *autojunk* parameter."
 msgstr "Параметр *autojunk*."
 
@@ -130,7 +130,7 @@ msgstr "Кожен рядок дельти :class:`Differ` починаєтьс�
 msgid "Code"
 msgstr "Код"
 
-#: ../../library/difflib.rst:69 ../../library/difflib.rst:494
+#: ../../library/difflib.rst:69 ../../library/difflib.rst:496
 msgid "Meaning"
 msgstr "Значення"
 
@@ -338,7 +338,7 @@ msgstr ""
 "відмінностей, які придатні для використання з :func:`io.IOBase.writelines`, "
 "оскільки і вхідні, і вихідні дані мають кінцеві символи нового рядка."
 
-#: ../../library/difflib.rst:165 ../../library/difflib.rst:294
+#: ../../library/difflib.rst:165 ../../library/difflib.rst:297
 msgid ""
 "For inputs that do not have trailing newlines, set the *lineterm* argument "
 "to ``\"\"`` so that the output will be uniformly newline free."
@@ -347,7 +347,7 @@ msgstr ""
 "для аргументу *lineterm* значення ``\"\"``, щоб вихідні дані не містили "
 "символів нового рядка."
 
-#: ../../library/difflib.rst:168 ../../library/difflib.rst:297
+#: ../../library/difflib.rst:168
 msgid ""
 "The context diff format normally has a header for filenames and modification"
 " times.  Any or all of these may be specified using strings for *fromfile*, "
@@ -361,11 +361,11 @@ msgstr ""
 "зазвичай виражається у форматі ISO 8601. Якщо не вказано, рядки за "
 "умовчанням пусті."
 
-#: ../../library/difflib.rst:191 ../../library/difflib.rst:318
+#: ../../library/difflib.rst:194 ../../library/difflib.rst:320
 msgid "See :ref:`difflib-interface` for a more detailed example."
 msgstr "Дивіться :ref:`difflib-interface` для більш детального прикладу."
 
-#: ../../library/difflib.rst:196
+#: ../../library/difflib.rst:199
 msgid ""
 "Return a list of the best \"good enough\" matches.  *word* is a sequence for"
 " which close matches are desired (typically a string), and *possibilities* "
@@ -377,7 +377,7 @@ msgstr ""
 "*можливості* — це список послідовностей, з якими потрібно зіставити *слово* "
 "(зазвичай список рядків)."
 
-#: ../../library/difflib.rst:200
+#: ../../library/difflib.rst:203
 msgid ""
 "Optional argument *n* (default ``3``) is the maximum number of close matches"
 " to return; *n* must be greater than ``0``."
@@ -385,7 +385,7 @@ msgstr ""
 "Необов'язковий аргумент *n* (за замовчуванням ``3``) — це максимальна "
 "кількість близьких збігів для повернення; *n* має бути більше, ніж ``0``."
 
-#: ../../library/difflib.rst:203
+#: ../../library/difflib.rst:206
 msgid ""
 "Optional argument *cutoff* (default ``0.6``) is a float in the range [0, 1]."
 " Possibilities that don't score at least that similar to *word* are ignored."
@@ -394,7 +394,7 @@ msgstr ""
 "плаваючою точкою в діапазоні [0, 1]. Можливості, які не схожі на *слово*, "
 "ігноруються."
 
-#: ../../library/difflib.rst:206
+#: ../../library/difflib.rst:209
 msgid ""
 "The best (no more than *n*) matches among the possibilities are returned in "
 "a list, sorted by similarity score, most similar first."
@@ -402,7 +402,7 @@ msgstr ""
 "Найкращі (не більше ніж *n*) збіги серед можливих повертаються у списку, "
 "відсортованому за показником подібності, найбільш схожі першими."
 
-#: ../../library/difflib.rst:222
+#: ../../library/difflib.rst:225
 msgid ""
 "Compare *a* and *b* (lists of strings); return a :class:`Differ`\\ -style "
 "delta (a :term:`generator` generating the delta lines)."
@@ -410,7 +410,7 @@ msgstr ""
 "Порівняти *a* і *b* (списки рядків); повертає :class:`Differ`\\ -стиль "
 "дельти (:term:`generator`, який генерує дельта-лінії)."
 
-#: ../../library/difflib.rst:225
+#: ../../library/difflib.rst:228
 msgid ""
 "Optional keyword parameters *linejunk* and *charjunk* are filtering "
 "functions (or ``None``):"
@@ -418,7 +418,7 @@ msgstr ""
 "Додаткові параметри ключових слів *linejunk* і *charjunk* є функціями "
 "фільтрації (або ``None``):"
 
-#: ../../library/difflib.rst:228
+#: ../../library/difflib.rst:231
 msgid ""
 "*linejunk*: A function that accepts a single string argument, and returns "
 "true if the string is junk, or false if not. The default is ``None``. There "
@@ -436,7 +436,7 @@ msgstr ""
 "аналіз того, які рядки є настільки частими, що створюють шум, і це зазвичай "
 "працює краще, ніж використання цієї функції."
 
-#: ../../library/difflib.rst:236
+#: ../../library/difflib.rst:239
 msgid ""
 "*charjunk*: A function that accepts a character (a string of length 1), and "
 "returns if the character is junk, or false if not. The default is module-"
@@ -448,11 +448,11 @@ msgstr ""
 "функція рівня модуля :func:`IS_CHARACTER_JUNK`, яка відфільтровує пробіли "
 "(пробіл або символ табуляції; це погана ідея включати новий рядок у це!)."
 
-#: ../../library/difflib.rst:257
+#: ../../library/difflib.rst:260
 msgid "Return one of the two sequences that generated a delta."
 msgstr "Повертає одну з двох послідовностей, які створили дельту."
 
-#: ../../library/difflib.rst:259
+#: ../../library/difflib.rst:262
 msgid ""
 "Given a *sequence* produced by :meth:`Differ.compare` or :func:`ndiff`, "
 "extract lines originating from file 1 or 2 (parameter *which*), stripping "
@@ -462,11 +462,11 @@ msgstr ""
 ":func:`ndiff`, витягти рядки, що походять із файлу 1 або 2 (параметр "
 "*which*), видаливши префікси рядків."
 
-#: ../../library/difflib.rst:263
+#: ../../library/difflib.rst:266
 msgid "Example:"
 msgstr "приклад:"
 
-#: ../../library/difflib.rst:280
+#: ../../library/difflib.rst:283
 msgid ""
 "Compare *a* and *b* (lists of strings); return a delta (a :term:`generator` "
 "generating the delta lines) in unified diff format."
@@ -474,7 +474,7 @@ msgstr ""
 "Порівняти *a* і *b* (списки рядків); повертає дельту (:term:`generator`, що "
 "генерує дельта-лінії) в уніфікованому форматі різниці."
 
-#: ../../library/difflib.rst:283
+#: ../../library/difflib.rst:286
 msgid ""
 "Unified diffs are a compact way of showing just the lines that have changed "
 "plus a few lines of context.  The changes are shown in an inline style "
@@ -486,7 +486,7 @@ msgstr ""
 "стилі (замість окремих блоків до/після). Кількість рядків контексту "
 "встановлюється *n*, яке за замовчуванням дорівнює трьом."
 
-#: ../../library/difflib.rst:288
+#: ../../library/difflib.rst:291
 msgid ""
 "By default, the diff control lines (those with ``---``, ``+++``, or ``@@``) "
 "are created with a trailing newline.  This is helpful so that inputs created"
@@ -500,7 +500,16 @@ msgstr ""
 "які придатні для використання з :func:`io.IOBase.writelines`, оскільки і "
 "вхідні, і вихідні дані мають кінцеві символи нового рядка."
 
-#: ../../library/difflib.rst:322
+#: ../../library/difflib.rst:300
+msgid ""
+"The unified diff format normally has a header for filenames and modification"
+" times.  Any or all of these may be specified using strings for *fromfile*, "
+"*tofile*, *fromfiledate*, and *tofiledate*.  The modification times are "
+"normally expressed in the ISO 8601 format. If not specified, the strings "
+"default to blanks."
+msgstr ""
+
+#: ../../library/difflib.rst:324
 msgid ""
 "Compare *a* and *b* (lists of bytes objects) using *dfunc*; yield a sequence"
 " of delta lines (also bytes) in the format returned by *dfunc*. *dfunc* must"
@@ -512,7 +521,7 @@ msgstr ""
 " *dfunc* має бути викликом, як правило, :func:`unified_diff` або "
 ":func:`context_diff`."
 
-#: ../../library/difflib.rst:327
+#: ../../library/difflib.rst:329
 msgid ""
 "Allows you to compare data with unknown or inconsistent encoding. All inputs"
 " except *n* must be bytes objects, not str. Works by losslessly converting "
@@ -529,7 +538,7 @@ msgstr ""
 "які ви отримуєте, мають таке ж невідоме/непослідовне кодування, що й *a* і "
 "*b*."
 
-#: ../../library/difflib.rst:338
+#: ../../library/difflib.rst:340
 msgid ""
 "Return ``True`` for ignorable lines.  The line *line* is ignorable if *line*"
 " is blank or contains a single ``'#'``, otherwise it is not ignorable.  Used"
@@ -540,7 +549,7 @@ msgstr ""
 "Використовується за замовчуванням для параметра *linejunk* у :func:`ndiff` у"
 " старих версіях."
 
-#: ../../library/difflib.rst:345
+#: ../../library/difflib.rst:347
 msgid ""
 "Return ``True`` for ignorable characters.  The character *ch* is ignorable "
 "if *ch* is a space or tab, otherwise it is not ignorable.  Used as a default"
@@ -550,29 +559,29 @@ msgstr ""
 "*ch* є пробілом або табуляцією, інакше він не ігнорується. Використовується "
 "за замовчуванням для параметра *charjunk* у :func:`ndiff`."
 
-#: ../../library/difflib.rst:353
+#: ../../library/difflib.rst:355
 msgid ""
 "`Pattern Matching: The Gestalt Approach "
 "<https://www.drdobbs.com/database/pattern-matching-the-gestalt-"
 "approach/184407970>`_"
 msgstr ""
 
-#: ../../library/difflib.rst:353
+#: ../../library/difflib.rst:355
 msgid ""
 "Discussion of a similar algorithm by John W. Ratcliff and D. E. Metzener. "
 "This was published in `Dr. Dobb's Journal <https://www.drdobbs.com/>`_ in "
 "July, 1988."
 msgstr ""
 
-#: ../../library/difflib.rst:360
+#: ../../library/difflib.rst:362
 msgid "SequenceMatcher Objects"
 msgstr "Об’єкти SequenceMatcher"
 
-#: ../../library/difflib.rst:362
+#: ../../library/difflib.rst:364
 msgid "The :class:`SequenceMatcher` class has this constructor:"
 msgstr "Клас :class:`SequenceMatcher` має такий конструктор:"
 
-#: ../../library/difflib.rst:367
+#: ../../library/difflib.rst:369
 msgid ""
 "Optional argument *isjunk* must be ``None`` (the default) or a one-argument "
 "function that takes a sequence element and returns true if and only if the "
@@ -586,7 +595,7 @@ msgstr ""
 "ігнорувати. Передача ``None`` для *isjunk* еквівалентна передачі ``lambda x:"
 " False``; іншими словами, жоден елемент не ігнорується. Наприклад, pass::"
 
-#: ../../library/difflib.rst:375
+#: ../../library/difflib.rst:377
 msgid ""
 "if you're comparing lines as sequences of characters, and don't want to "
 "synch up on blanks or hard tabs."
@@ -594,7 +603,7 @@ msgstr ""
 "якщо ви порівнюєте рядки як послідовності символів і не хочете "
 "синхронізувати пробіли чи жорсткі табуляції."
 
-#: ../../library/difflib.rst:378
+#: ../../library/difflib.rst:380
 msgid ""
 "The optional arguments *a* and *b* are sequences to be compared; both "
 "default to empty strings.  The elements of both sequences must be "
@@ -604,7 +613,7 @@ msgstr ""
 "за замовчуванням порожні рядки. Елементи обох послідовностей мають бути "
 ":term:`hashable`."
 
-#: ../../library/difflib.rst:381
+#: ../../library/difflib.rst:383
 msgid ""
 "The optional argument *autojunk* can be used to disable the automatic junk "
 "heuristic."
@@ -612,7 +621,7 @@ msgstr ""
 "Необов’язковий аргумент *autojunk* можна використовувати для вимкнення "
 "автоматичної евристики сміття."
 
-#: ../../library/difflib.rst:387
+#: ../../library/difflib.rst:389
 msgid ""
 "SequenceMatcher objects get three data attributes: *bjunk* is the set of "
 "elements of *b* for which *isjunk* is ``True``; *bpopular* is the set of "
@@ -628,19 +637,19 @@ msgstr ""
 "список позицій, де вони зустрічаються. Усі три скидаються щоразу, коли *b* "
 "скидається за допомогою :meth:`set_seqs` або :meth:`set_seq2`."
 
-#: ../../library/difflib.rst:394
+#: ../../library/difflib.rst:396
 msgid "The *bjunk* and *bpopular* attributes."
 msgstr "Атрибути *bjunk* і *bpopular*."
 
-#: ../../library/difflib.rst:397
+#: ../../library/difflib.rst:399
 msgid ":class:`SequenceMatcher` objects have the following methods:"
 msgstr "Об’єкти :class:`SequenceMatcher` мають такі методи:"
 
-#: ../../library/difflib.rst:401
+#: ../../library/difflib.rst:403
 msgid "Set the two sequences to be compared."
 msgstr "Встановіть дві послідовності для порівняння."
 
-#: ../../library/difflib.rst:403
+#: ../../library/difflib.rst:405
 msgid ""
 ":class:`SequenceMatcher` computes and caches detailed information about the "
 "second sequence, so if you want to compare one sequence against many "
@@ -653,7 +662,7 @@ msgstr ""
 "типову послідовність і викликати :meth:`set_seq1` повторно, один раз для "
 "кожної з інших послідовностей."
 
-#: ../../library/difflib.rst:411
+#: ../../library/difflib.rst:413
 msgid ""
 "Set the first sequence to be compared.  The second sequence to be compared "
 "is not changed."
@@ -661,7 +670,7 @@ msgstr ""
 "Встановіть першу послідовність для порівняння. Друга послідовність для "
 "порівняння не змінюється."
 
-#: ../../library/difflib.rst:417
+#: ../../library/difflib.rst:419
 msgid ""
 "Set the second sequence to be compared.  The first sequence to be compared "
 "is not changed."
@@ -669,11 +678,11 @@ msgstr ""
 "Встановіть другу послідовність для порівняння. Перша послідовність для "
 "порівняння не змінюється."
 
-#: ../../library/difflib.rst:423
+#: ../../library/difflib.rst:425
 msgid "Find longest matching block in ``a[alo:ahi]`` and ``b[blo:bhi]``."
 msgstr "Знайти найдовший відповідний блок у ``a[alo:ahi]`` і ``b[blo:bhi]``."
 
-#: ../../library/difflib.rst:425
+#: ../../library/difflib.rst:427
 msgid ""
 "If *isjunk* was omitted or ``None``, :meth:`find_longest_match` returns "
 "``(i, j, k)`` such that ``a[i:i+k]`` is equal to ``b[j:j+k]``, where ``alo "
@@ -694,7 +703,7 @@ msgstr ""
 "які починаються раніше в *a*, поверніть той, який починається найраніше в "
 "*b*."
 
-#: ../../library/difflib.rst:438
+#: ../../library/difflib.rst:440
 msgid ""
 "If *isjunk* was provided, first the longest matching block is determined as "
 "above, but with the additional restriction that no junk element appears in "
@@ -710,7 +719,7 @@ msgstr ""
 "Таким чином, отриманий блок ніколи не збігається зі сміттям, за винятком "
 "випадків, коли ідентичне сміття буває поруч із цікавим збігом."
 
-#: ../../library/difflib.rst:445
+#: ../../library/difflib.rst:447
 msgid ""
 "Here's the same example as before, but considering blanks to be junk. That "
 "prevents ``' abcd'`` from matching the ``' abcd'`` at the tail end of the "
@@ -722,19 +731,19 @@ msgstr ""
 "послідовності. Замість цього може збігатися лише ``'abcd'`` і збігається з "
 "крайнім лівим ``'abcd'`` у другій послідовності:"
 
-#: ../../library/difflib.rst:454
+#: ../../library/difflib.rst:456
 msgid "If no blocks match, this returns ``(alo, blo, 0)``."
 msgstr "Якщо жоден блок не збігається, повертається ``(alo, blo, 0)``."
 
-#: ../../library/difflib.rst:456
+#: ../../library/difflib.rst:458
 msgid "This method returns a :term:`named tuple` ``Match(a, b, size)``."
 msgstr "Цей метод повертає :term:`named tuple` ``Match(a, b, size)``."
 
-#: ../../library/difflib.rst:458
+#: ../../library/difflib.rst:460
 msgid "Added default arguments."
 msgstr "Додано типові аргументи."
 
-#: ../../library/difflib.rst:464
+#: ../../library/difflib.rst:466
 msgid ""
 "Return list of triples describing non-overlapping matching subsequences. "
 "Each triple is of the form ``(i, j, n)``, and means that ``a[i:i+n] == "
@@ -744,7 +753,7 @@ msgstr ""
 "перекриваються. Кожна трійка має форму ``(i, j, n)`` і означає, що "
 "``a[i:i+n] == b[j:j+n]``. Трійки монотонно зростають у *i* та *j*."
 
-#: ../../library/difflib.rst:469
+#: ../../library/difflib.rst:471
 msgid ""
 "The last triple is a dummy, and has the value ``(len(a), len(b), 0)``.  It "
 "is the only triple with ``n == 0``.  If ``(i, j, n)`` and ``(i', j', n')`` "
@@ -758,7 +767,7 @@ msgstr ""
 "i'`` або ``j+n < j'``; іншими словами, сусідні трійки завжди описують "
 "несуміжні рівні блоки."
 
-#: ../../library/difflib.rst:486
+#: ../../library/difflib.rst:488
 msgid ""
 "Return list of 5-tuples describing how to turn *a* into *b*. Each tuple is "
 "of the form ``(tag, i1, i2, j1, j2)``.  The first tuple has ``i1 == j1 == "
@@ -770,36 +779,36 @@ msgstr ""
 "j1 == 0``, а решта кортежів мають *i1*, що дорівнює *i2* з попереднього "
 "кортежу, і, так само, *j1* дорівнює попередньому *j2*."
 
-#: ../../library/difflib.rst:491
+#: ../../library/difflib.rst:493
 msgid "The *tag* values are strings, with these meanings:"
 msgstr "Значення *тегу* є рядками з такими значеннями:"
 
-#: ../../library/difflib.rst:494
+#: ../../library/difflib.rst:496
 msgid "Value"
 msgstr "Значення"
 
-#: ../../library/difflib.rst:496
+#: ../../library/difflib.rst:498
 msgid "``'replace'``"
 msgstr "``'замінити'``"
 
-#: ../../library/difflib.rst:496
+#: ../../library/difflib.rst:498
 msgid "``a[i1:i2]`` should be replaced by ``b[j1:j2]``."
 msgstr "``a[i1:i2]`` слід замінити на ``b[j1:j2]``."
 
-#: ../../library/difflib.rst:499
+#: ../../library/difflib.rst:501
 msgid "``'delete'``"
 msgstr "``'видалити'``"
 
-#: ../../library/difflib.rst:499
+#: ../../library/difflib.rst:501
 msgid "``a[i1:i2]`` should be deleted.  Note that ``j1 == j2`` in this case."
 msgstr ""
 "``a[i1:i2]`` слід видалити. Зверніть увагу, що в цьому випадку ``j1 == j2``."
 
-#: ../../library/difflib.rst:502
+#: ../../library/difflib.rst:504
 msgid "``'insert'``"
 msgstr "``'вставити'``"
 
-#: ../../library/difflib.rst:502
+#: ../../library/difflib.rst:504
 msgid ""
 "``b[j1:j2]`` should be inserted at ``a[i1:i1]``. Note that ``i1 == i2`` in "
 "this case."
@@ -807,23 +816,23 @@ msgstr ""
 "``b[j1:j2]`` слід вставити в ``a[i1:i1]``. Зверніть увагу, що в цьому "
 "випадку ``i1 == i2``."
 
-#: ../../library/difflib.rst:506
+#: ../../library/difflib.rst:508
 msgid "``'equal'``"
 msgstr "``'рівний''``"
 
-#: ../../library/difflib.rst:506
+#: ../../library/difflib.rst:508
 msgid "``a[i1:i2] == b[j1:j2]`` (the sub-sequences are equal)."
 msgstr "``a[i1:i2] == b[j1:j2]`` (підпослідовності рівні)."
 
-#: ../../library/difflib.rst:510
+#: ../../library/difflib.rst:512
 msgid "For example::"
 msgstr "Наприклад::"
 
-#: ../../library/difflib.rst:527
+#: ../../library/difflib.rst:529
 msgid "Return a :term:`generator` of groups with up to *n* lines of context."
 msgstr "Повертає :term:`generator` груп із до *n* рядків контексту."
 
-#: ../../library/difflib.rst:529
+#: ../../library/difflib.rst:531
 msgid ""
 "Starting with the groups returned by :meth:`get_opcodes`, this method splits"
 " out smaller change clusters and eliminates intervening ranges which have no"
@@ -832,11 +841,11 @@ msgstr ""
 "Починаючи з груп, повернутих :meth:`get_opcodes`, цей метод розділяє менші "
 "кластери змін і усуває проміжні діапазони, які не мають змін."
 
-#: ../../library/difflib.rst:533
+#: ../../library/difflib.rst:535
 msgid "The groups are returned in the same format as :meth:`get_opcodes`."
 msgstr "Групи повертаються у тому самому форматі, що й :meth:`get_opcodes`."
 
-#: ../../library/difflib.rst:538
+#: ../../library/difflib.rst:540
 msgid ""
 "Return a measure of the sequences' similarity as a float in the range [0, "
 "1]."
@@ -844,7 +853,7 @@ msgstr ""
 "Повертає міру подібності послідовностей як число з плаваючою точкою в "
 "діапазоні [0, 1]."
 
-#: ../../library/difflib.rst:541
+#: ../../library/difflib.rst:543
 msgid ""
 "Where T is the total number of elements in both sequences, and M is the "
 "number of matches, this is 2.0\\*M / T. Note that this is ``1.0`` if the "
@@ -854,7 +863,7 @@ msgstr ""
 "збігів, це 2,0\\*M / T. Зауважте, що це \"1,0\", якщо послідовності "
 "ідентичні, і \"0,0\" якщо вони не мають нічого спільного."
 
-#: ../../library/difflib.rst:545
+#: ../../library/difflib.rst:547
 msgid ""
 "This is expensive to compute if :meth:`get_matching_blocks` or "
 ":meth:`get_opcodes` hasn't already been called, in which case you may want "
@@ -866,7 +875,7 @@ msgstr ""
 "спочатку спробувати :meth:`quick_ratio` або :meth:`real_quick_ratio`, щоб "
 "отримати верхня межа."
 
-#: ../../library/difflib.rst:552
+#: ../../library/difflib.rst:554
 msgid ""
 "Caution: The result of a :meth:`ratio` call may depend on the order of the "
 "arguments. For instance::"
@@ -874,15 +883,15 @@ msgstr ""
 "Застереження: результат виклику :meth:`ratio` може залежати від порядку "
 "аргументів. Наприклад::"
 
-#: ../../library/difflib.rst:563
+#: ../../library/difflib.rst:565
 msgid "Return an upper bound on :meth:`ratio` relatively quickly."
 msgstr "Відносно швидко повертає верхню межу :meth:`ratio`."
 
-#: ../../library/difflib.rst:568
+#: ../../library/difflib.rst:570
 msgid "Return an upper bound on :meth:`ratio` very quickly."
 msgstr "Дуже швидко повертає верхню межу :meth:`ratio`."
 
-#: ../../library/difflib.rst:571
+#: ../../library/difflib.rst:573
 msgid ""
 "The three methods that return the ratio of matching to total characters can "
 "give different results due to differing levels of approximation, although "
@@ -891,15 +900,15 @@ msgid ""
 ":meth:`~SequenceMatcher.ratio`:"
 msgstr ""
 
-#: ../../library/difflib.rst:588
+#: ../../library/difflib.rst:590
 msgid "SequenceMatcher Examples"
 msgstr "Приклади SequenceMatcher"
 
-#: ../../library/difflib.rst:590
+#: ../../library/difflib.rst:592
 msgid "This example compares two strings, considering blanks to be \"junk\":"
 msgstr "У цьому прикладі порівнюються два рядки, вважаючи пробіли \"сміттєвими\":"
 
-#: ../../library/difflib.rst:596
+#: ../../library/difflib.rst:598
 msgid ""
 ":meth:`~SequenceMatcher.ratio` returns a float in [0, 1], measuring the "
 "similarity of the sequences.  As a rule of thumb, a "
@@ -907,13 +916,13 @@ msgid ""
 "matches:"
 msgstr ""
 
-#: ../../library/difflib.rst:603
+#: ../../library/difflib.rst:605
 msgid ""
 "If you're only interested in where the sequences match, "
 ":meth:`~SequenceMatcher.get_matching_blocks` is handy:"
 msgstr ""
 
-#: ../../library/difflib.rst:612
+#: ../../library/difflib.rst:614
 msgid ""
 "Note that the last tuple returned by "
 ":meth:`~SequenceMatcher.get_matching_blocks` is always a dummy, ``(len(a), "
@@ -921,13 +930,13 @@ msgid ""
 "(number of elements matched) is ``0``."
 msgstr ""
 
-#: ../../library/difflib.rst:616
+#: ../../library/difflib.rst:618
 msgid ""
 "If you want to know how to change the first sequence into the second, use "
 ":meth:`~SequenceMatcher.get_opcodes`:"
 msgstr ""
 
-#: ../../library/difflib.rst:627
+#: ../../library/difflib.rst:629
 msgid ""
 "The :func:`get_close_matches` function in this module which shows how simple"
 " code building on :class:`SequenceMatcher` can be used to do useful work."
@@ -936,7 +945,7 @@ msgstr ""
 "код, створений на :class:`SequenceMatcher`, можна використовувати для "
 "виконання корисної роботи."
 
-#: ../../library/difflib.rst:631
+#: ../../library/difflib.rst:633
 msgid ""
 "`Simple version control recipe "
 "<https://code.activestate.com/recipes/576729/>`_ for a small application "
@@ -946,11 +955,11 @@ msgstr ""
 "<https://code.activestate.com/recipes/576729/>`_ для невеликої програми, "
 "створеної за допомогою :class:`SequenceMatcher`."
 
-#: ../../library/difflib.rst:639
+#: ../../library/difflib.rst:641
 msgid "Differ Objects"
 msgstr "Різні об'єкти"
 
-#: ../../library/difflib.rst:641
+#: ../../library/difflib.rst:643
 msgid ""
 "Note that :class:`Differ`\\ -generated deltas make no claim to be "
 "**minimal** diffs. To the contrary, minimal diffs are often counter-"
@@ -966,11 +975,11 @@ msgstr ""
 "синхронізації суміжними збігами зберігає деяке уявлення про локальність за "
 "рахунок випадкових витрат на створення довшої різниці."
 
-#: ../../library/difflib.rst:647
+#: ../../library/difflib.rst:649
 msgid "The :class:`Differ` class has this constructor:"
 msgstr "Клас :class:`Differ` має такий конструктор:"
 
-#: ../../library/difflib.rst:653
+#: ../../library/difflib.rst:655
 msgid ""
 "Optional keyword parameters *linejunk* and *charjunk* are for filter "
 "functions (or ``None``):"
@@ -978,7 +987,7 @@ msgstr ""
 "Додаткові параметри ключових слів *linejunk* і *charjunk* призначені для "
 "функцій фільтра (або ``None``):"
 
-#: ../../library/difflib.rst:656
+#: ../../library/difflib.rst:658
 msgid ""
 "*linejunk*: A function that accepts a single string argument, and returns "
 "true if the string is junk.  The default is ``None``, meaning that no line "
@@ -988,7 +997,7 @@ msgstr ""
 "якщо рядок є небажаним. Типовим значенням є ``None``, що означає, що жоден "
 "рядок не вважається небажаним."
 
-#: ../../library/difflib.rst:660
+#: ../../library/difflib.rst:662
 msgid ""
 "*charjunk*: A function that accepts a single character argument (a string of"
 " length 1), and returns true if the character is junk. The default is "
@@ -998,7 +1007,7 @@ msgstr ""
 "і повертає істину, якщо символ непотрібний. Типовим значенням є ``None``, що"
 " означає, що жоден символ не вважається небажаним."
 
-#: ../../library/difflib.rst:664
+#: ../../library/difflib.rst:666
 msgid ""
 "These junk-filtering functions speed up matching to find differences and do "
 "not cause any differing lines or characters to be ignored.  Read the "
@@ -1010,14 +1019,14 @@ msgstr ""
 "символів. Щоб отримати пояснення, прочитайте опис параметра *isjunk* методу "
 ":meth:`~SequenceMatcher.find_longest_match`."
 
-#: ../../library/difflib.rst:670
+#: ../../library/difflib.rst:672
 msgid ""
 ":class:`Differ` objects are used (deltas generated) via a single method:"
 msgstr ""
 "Об’єкти :class:`Differ` використовуються (генеруються дельти) за допомогою "
 "одного методу:"
 
-#: ../../library/difflib.rst:675
+#: ../../library/difflib.rst:677
 msgid ""
 "Compare two sequences of lines, and generate the delta (a sequence of "
 "lines)."
@@ -1025,7 +1034,7 @@ msgstr ""
 "Порівняйте дві послідовності рядків і згенеруйте дельту (послідовність "
 "рядків)."
 
-#: ../../library/difflib.rst:677
+#: ../../library/difflib.rst:679
 msgid ""
 "Each sequence must contain individual single-line strings ending with "
 "newlines.  Such sequences can be obtained from the "
@@ -1040,11 +1049,11 @@ msgstr ""
 "друку як є за допомогою методу :meth:`~io.IOBase.writelines` файлоподібного "
 "об’єкта."
 
-#: ../../library/difflib.rst:688
+#: ../../library/difflib.rst:690
 msgid "Differ Example"
 msgstr "Різний приклад"
 
-#: ../../library/difflib.rst:690
+#: ../../library/difflib.rst:692
 msgid ""
 "This example compares two texts. First we set up the texts, sequences of "
 "individual single-line strings ending with newlines (such sequences can also"
@@ -1052,11 +1061,11 @@ msgid ""
 "objects):"
 msgstr ""
 
-#: ../../library/difflib.rst:709
+#: ../../library/difflib.rst:711
 msgid "Next we instantiate a Differ object:"
 msgstr "Далі ми створюємо екземпляр об’єкта Differ:"
 
-#: ../../library/difflib.rst:713
+#: ../../library/difflib.rst:715
 msgid ""
 "Note that when instantiating a :class:`Differ` object we may pass functions "
 "to filter out line and character \"junk.\"  See the :meth:`Differ` "
@@ -1066,32 +1075,32 @@ msgstr ""
 "передати функції для фільтрації \"сміття\" рядків і символів. Подробиці див."
 " у конструкторі :meth:`Differ`."
 
-#: ../../library/difflib.rst:717
+#: ../../library/difflib.rst:719
 msgid "Finally, we compare the two:"
 msgstr "Нарешті, ми порівнюємо два:"
 
-#: ../../library/difflib.rst:721
+#: ../../library/difflib.rst:723
 msgid "``result`` is a list of strings, so let's pretty-print it:"
 msgstr ""
 "``результат`` - це список рядків, тож давайте красиво надрукуємо його:"
 
-#: ../../library/difflib.rst:736
+#: ../../library/difflib.rst:738
 msgid "As a single multi-line string it looks like this:"
 msgstr "Як один багаторядковий рядок це виглядає так:"
 
-#: ../../library/difflib.rst:755
+#: ../../library/difflib.rst:757
 msgid "A command-line interface to difflib"
 msgstr "Інтерфейс командного рядка для difflib"
 
-#: ../../library/difflib.rst:757
+#: ../../library/difflib.rst:759
 msgid ""
 "This example shows how to use difflib to create a ``diff``-like utility."
 msgstr ""
 
-#: ../../library/difflib.rst:762
+#: ../../library/difflib.rst:764
 msgid "ndiff example"
 msgstr ""
 
-#: ../../library/difflib.rst:764
+#: ../../library/difflib.rst:766
 msgid "This example shows how to use :func:`difflib.ndiff`."
 msgstr ""
