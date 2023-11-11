@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:14+0000\n"
+"POT-Creation-Date: 2023-11-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1113,13 +1113,11 @@ msgid ""
 "Tries to create a socket and, if it's not a datagram socket, connect it to "
 "the other end. This method is called during handler initialization, but it's"
 " not regarded as an error if the other end isn't listening at this point - "
-"the method will be called again when emitting an event, if but it's not "
-"regarded as an error if the other end isn't listening yet --- the method "
-"will be called again when emitting an event, if there is no socket at that "
-"point."
+"the method will be called again when emitting an event, if there is no "
+"socket at that point."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:667
+#: ../../library/logging.handlers.rst:665
 msgid ""
 "The record is formatted, and then sent to the syslog server. If exception "
 "information is present, it is *not* sent to the server."
@@ -1127,7 +1125,7 @@ msgstr ""
 "Запис форматується, а потім надсилається на сервер syslog. Якщо присутня "
 "інформація про винятки, вона *не* надсилається на сервер."
 
-#: ../../library/logging.handlers.rst:670
+#: ../../library/logging.handlers.rst:668
 msgid ""
 "(See: :issue:`12168`.) In earlier versions, the message sent to the syslog "
 "daemons was always terminated with a NUL byte, because early versions of "
@@ -1145,7 +1143,7 @@ msgstr ""
 "він там є, і навіть новіші демони (які більше дотримуються RFC 5424) "
 "передають байт NUL як частину повідомлення."
 
-#: ../../library/logging.handlers.rst:679
+#: ../../library/logging.handlers.rst:677
 msgid ""
 "To enable easier handling of syslog messages in the face of all these "
 "differing daemon behaviours, the appending of the NUL byte has been made "
@@ -1161,7 +1159,7 @@ msgstr ""
 "встановити ``False`` для екземпляра ``SysLogHandler``, щоб цей екземпляр "
 "*не* додавав термінатор NUL."
 
-#: ../../library/logging.handlers.rst:686
+#: ../../library/logging.handlers.rst:684
 msgid ""
 "(See: :issue:`12419`.) In earlier versions, there was no facility for an "
 "\"ident\" or \"tag\" prefix to identify the source of the message. This can "
@@ -1180,7 +1178,7 @@ msgstr ""
 "ідентифікатор має бути текстом, а не байтами, і додається до повідомлення "
 "точно так, як є."
 
-#: ../../library/logging.handlers.rst:697
+#: ../../library/logging.handlers.rst:695
 msgid ""
 "Encodes the facility and priority into an integer. You can pass in strings "
 "or integers - if strings are passed, internal mapping dictionaries are used "
@@ -1190,7 +1188,7 @@ msgstr ""
 "числа - якщо рядки передаються, внутрішні словники відображення "
 "використовуються для їх перетворення на цілі числа."
 
-#: ../../library/logging.handlers.rst:701
+#: ../../library/logging.handlers.rst:699
 msgid ""
 "The symbolic ``LOG_`` values are defined in :class:`SysLogHandler` and "
 "mirror the values defined in the ``sys/syslog.h`` header file."
@@ -1198,249 +1196,249 @@ msgstr ""
 "Символічні значення ``LOG_`` визначені в :class:`SysLogHandler` і "
 "відображають значення, визначені у файлі заголовка ``sys/syslog.h``."
 
-#: ../../library/logging.handlers.rst:704
+#: ../../library/logging.handlers.rst:702
 msgid "**Priorities**"
 msgstr "**Пріоритети**"
 
-#: ../../library/logging.handlers.rst:707
-#: ../../library/logging.handlers.rst:729
+#: ../../library/logging.handlers.rst:705
+#: ../../library/logging.handlers.rst:727
 msgid "Name (string)"
 msgstr "Ім'я (рядок)"
 
-#: ../../library/logging.handlers.rst:707
-#: ../../library/logging.handlers.rst:729
+#: ../../library/logging.handlers.rst:705
+#: ../../library/logging.handlers.rst:727
 msgid "Symbolic value"
 msgstr "Символічне значення"
 
-#: ../../library/logging.handlers.rst:709
+#: ../../library/logging.handlers.rst:707
 msgid "``alert``"
 msgstr "``сповіщення``"
 
-#: ../../library/logging.handlers.rst:709
+#: ../../library/logging.handlers.rst:707
 msgid "LOG_ALERT"
 msgstr "LOG_ALERT"
 
-#: ../../library/logging.handlers.rst:711
+#: ../../library/logging.handlers.rst:709
 msgid "``crit`` or ``critical``"
 msgstr "``crit`` або ``critical``"
 
-#: ../../library/logging.handlers.rst:711
+#: ../../library/logging.handlers.rst:709
 msgid "LOG_CRIT"
 msgstr "LOG_CRIT"
 
-#: ../../library/logging.handlers.rst:713
+#: ../../library/logging.handlers.rst:711
 msgid "``debug``"
 msgstr "``debug``"
 
-#: ../../library/logging.handlers.rst:713
+#: ../../library/logging.handlers.rst:711
 msgid "LOG_DEBUG"
 msgstr "LOG_DEBUG"
 
-#: ../../library/logging.handlers.rst:715
+#: ../../library/logging.handlers.rst:713
 msgid "``emerg`` or ``panic``"
 msgstr "``emerg`` або ``panic``"
 
-#: ../../library/logging.handlers.rst:715
+#: ../../library/logging.handlers.rst:713
 msgid "LOG_EMERG"
 msgstr "LOG_EMERG"
 
-#: ../../library/logging.handlers.rst:717
+#: ../../library/logging.handlers.rst:715
 msgid "``err`` or ``error``"
 msgstr "``помилка`` або ``помилка``"
 
-#: ../../library/logging.handlers.rst:717
+#: ../../library/logging.handlers.rst:715
 msgid "LOG_ERR"
 msgstr "LOG_ERROR"
 
-#: ../../library/logging.handlers.rst:719
+#: ../../library/logging.handlers.rst:717
 msgid "``info``"
 msgstr "``інформація``"
 
-#: ../../library/logging.handlers.rst:719
+#: ../../library/logging.handlers.rst:717
 msgid "LOG_INFO"
 msgstr "LOG_INFO"
 
-#: ../../library/logging.handlers.rst:721
+#: ../../library/logging.handlers.rst:719
 msgid "``notice``"
 msgstr "``повідомлення``"
 
-#: ../../library/logging.handlers.rst:721
+#: ../../library/logging.handlers.rst:719
 msgid "LOG_NOTICE"
 msgstr "LOG_NOTICE"
 
-#: ../../library/logging.handlers.rst:723
+#: ../../library/logging.handlers.rst:721
 msgid "``warn`` or ``warning``"
 msgstr "``попередження`` або ``попередження``"
 
-#: ../../library/logging.handlers.rst:723
+#: ../../library/logging.handlers.rst:721
 msgid "LOG_WARNING"
 msgstr "LOG_WARNING"
 
-#: ../../library/logging.handlers.rst:726
+#: ../../library/logging.handlers.rst:724
 msgid "**Facilities**"
 msgstr "**Інфраструктура**"
 
-#: ../../library/logging.handlers.rst:731
+#: ../../library/logging.handlers.rst:729
 msgid "``auth``"
 msgstr "``автентика``"
 
-#: ../../library/logging.handlers.rst:731
+#: ../../library/logging.handlers.rst:729
 msgid "LOG_AUTH"
 msgstr "LOG_AUTH"
 
-#: ../../library/logging.handlers.rst:733
+#: ../../library/logging.handlers.rst:731
 msgid "``authpriv``"
 msgstr "``authpriv``"
 
-#: ../../library/logging.handlers.rst:733
+#: ../../library/logging.handlers.rst:731
 msgid "LOG_AUTHPRIV"
 msgstr "LOG_AUTHPRIV"
 
-#: ../../library/logging.handlers.rst:735
+#: ../../library/logging.handlers.rst:733
 msgid "``cron``"
 msgstr "``cron``"
 
-#: ../../library/logging.handlers.rst:735
+#: ../../library/logging.handlers.rst:733
 msgid "LOG_CRON"
 msgstr "LOG_CRON"
 
-#: ../../library/logging.handlers.rst:737
+#: ../../library/logging.handlers.rst:735
 msgid "``daemon``"
 msgstr "``демон``"
 
-#: ../../library/logging.handlers.rst:737
+#: ../../library/logging.handlers.rst:735
 msgid "LOG_DAEMON"
 msgstr "LOG_DAEMON"
 
-#: ../../library/logging.handlers.rst:739
+#: ../../library/logging.handlers.rst:737
 msgid "``ftp``"
 msgstr "``ftp``"
 
-#: ../../library/logging.handlers.rst:739
+#: ../../library/logging.handlers.rst:737
 msgid "LOG_FTP"
 msgstr "LOG_FTP"
 
-#: ../../library/logging.handlers.rst:741
+#: ../../library/logging.handlers.rst:739
 msgid "``kern``"
 msgstr "``керн``"
 
-#: ../../library/logging.handlers.rst:741
+#: ../../library/logging.handlers.rst:739
 msgid "LOG_KERN"
 msgstr "LOG_KERN"
 
-#: ../../library/logging.handlers.rst:743
+#: ../../library/logging.handlers.rst:741
 msgid "``lpr``"
 msgstr "``lpr``"
 
-#: ../../library/logging.handlers.rst:743
+#: ../../library/logging.handlers.rst:741
 msgid "LOG_LPR"
 msgstr "LOG_LPR"
 
-#: ../../library/logging.handlers.rst:745
+#: ../../library/logging.handlers.rst:743
 msgid "``mail``"
 msgstr "``пошта``"
 
-#: ../../library/logging.handlers.rst:745
+#: ../../library/logging.handlers.rst:743
 msgid "LOG_MAIL"
 msgstr "LOG_MAIL"
 
-#: ../../library/logging.handlers.rst:747
+#: ../../library/logging.handlers.rst:745
 msgid "``news``"
 msgstr "``новини``"
 
-#: ../../library/logging.handlers.rst:747
+#: ../../library/logging.handlers.rst:745
 msgid "LOG_NEWS"
 msgstr "LOG_NEWS"
 
-#: ../../library/logging.handlers.rst:749
+#: ../../library/logging.handlers.rst:747
 msgid "``syslog``"
 msgstr "``системний журнал``"
 
-#: ../../library/logging.handlers.rst:749
+#: ../../library/logging.handlers.rst:747
 msgid "LOG_SYSLOG"
 msgstr "LOG_SYSLOG"
 
-#: ../../library/logging.handlers.rst:751
+#: ../../library/logging.handlers.rst:749
 msgid "``user``"
 msgstr "``користувач``"
 
-#: ../../library/logging.handlers.rst:751
+#: ../../library/logging.handlers.rst:749
 msgid "LOG_USER"
 msgstr "LOG_USER"
 
-#: ../../library/logging.handlers.rst:753
+#: ../../library/logging.handlers.rst:751
 msgid "``uucp``"
 msgstr "``uucp``"
 
-#: ../../library/logging.handlers.rst:753
+#: ../../library/logging.handlers.rst:751
 msgid "LOG_UUCP"
 msgstr "LOG_UUCP"
 
-#: ../../library/logging.handlers.rst:755
+#: ../../library/logging.handlers.rst:753
 msgid "``local0``"
 msgstr "``локальний0``"
 
-#: ../../library/logging.handlers.rst:755
+#: ../../library/logging.handlers.rst:753
 msgid "LOG_LOCAL0"
 msgstr "LOG_LOCAL0"
 
-#: ../../library/logging.handlers.rst:757
+#: ../../library/logging.handlers.rst:755
 msgid "``local1``"
 msgstr "``локальний1``"
 
-#: ../../library/logging.handlers.rst:757
+#: ../../library/logging.handlers.rst:755
 msgid "LOG_LOCAL1"
 msgstr "LOG_LOCAL1"
 
-#: ../../library/logging.handlers.rst:759
+#: ../../library/logging.handlers.rst:757
 msgid "``local2``"
 msgstr "``локальний2``"
 
-#: ../../library/logging.handlers.rst:759
+#: ../../library/logging.handlers.rst:757
 msgid "LOG_LOCAL2"
 msgstr "LOG_LOCAL2"
 
-#: ../../library/logging.handlers.rst:761
+#: ../../library/logging.handlers.rst:759
 msgid "``local3``"
 msgstr "``локальний3``"
 
-#: ../../library/logging.handlers.rst:761
+#: ../../library/logging.handlers.rst:759
 msgid "LOG_LOCAL3"
 msgstr "LOG_LOCAL3"
 
-#: ../../library/logging.handlers.rst:763
+#: ../../library/logging.handlers.rst:761
 msgid "``local4``"
 msgstr "``локальний4``"
 
-#: ../../library/logging.handlers.rst:763
+#: ../../library/logging.handlers.rst:761
 msgid "LOG_LOCAL4"
 msgstr "LOG_LOCAL4"
 
-#: ../../library/logging.handlers.rst:765
+#: ../../library/logging.handlers.rst:763
 msgid "``local5``"
 msgstr "``локальний5``"
 
-#: ../../library/logging.handlers.rst:765
+#: ../../library/logging.handlers.rst:763
 msgid "LOG_LOCAL5"
 msgstr "LOG_LOCAL5"
 
-#: ../../library/logging.handlers.rst:767
+#: ../../library/logging.handlers.rst:765
 msgid "``local6``"
 msgstr "``локальний6``"
 
-#: ../../library/logging.handlers.rst:767
+#: ../../library/logging.handlers.rst:765
 msgid "LOG_LOCAL6"
 msgstr "LOG_LOCAL6"
 
-#: ../../library/logging.handlers.rst:769
+#: ../../library/logging.handlers.rst:767
 msgid "``local7``"
 msgstr "``локальний7``"
 
-#: ../../library/logging.handlers.rst:769
+#: ../../library/logging.handlers.rst:767
 msgid "LOG_LOCAL7"
 msgstr "LOG_LOCAL7"
 
-#: ../../library/logging.handlers.rst:774
+#: ../../library/logging.handlers.rst:772
 msgid ""
 "Maps a logging level name to a syslog priority name. You may need to "
 "override this if you are using custom levels, or if the default algorithm is"
@@ -1455,11 +1453,11 @@ msgstr ""
 "``ERROR`` і ``CRITICAL`` на еквівалентні назви системного журналу, а всі "
 "інші назви рівнів на \"попередження\"."
 
-#: ../../library/logging.handlers.rst:784
+#: ../../library/logging.handlers.rst:782
 msgid "NTEventLogHandler"
 msgstr "NTEventLogHandler"
 
-#: ../../library/logging.handlers.rst:786
+#: ../../library/logging.handlers.rst:784
 msgid ""
 "The :class:`NTEventLogHandler` class, located in the :mod:`logging.handlers`"
 " module, supports sending logging messages to a local Windows NT, Windows "
@@ -1472,7 +1470,7 @@ msgstr ""
 "використовувати його, вам потрібно встановити розширення Win32 Марка "
 "Хаммонда для Python."
 
-#: ../../library/logging.handlers.rst:794
+#: ../../library/logging.handlers.rst:792
 msgid ""
 "Returns a new instance of the :class:`NTEventLogHandler` class. The "
 "*appname* is used to define the application name as it appears in the event "
@@ -1501,7 +1499,7 @@ msgstr ""
 "*logtype* є одним із ``'Application'``, ``'System'`` або ``'Security'``, і "
 "за замовчуванням ``'Application'``."
 
-#: ../../library/logging.handlers.rst:810
+#: ../../library/logging.handlers.rst:808
 msgid ""
 "At this point, you can remove the application name from the registry as a "
 "source of event log entries. However, if you do this, you will not be able "
@@ -1514,7 +1512,7 @@ msgstr ""
 "події, як ви планували, у засобі перегляду журналу подій - йому потрібен "
 "доступ до реєстру, щоб отримати назву .dll. Поточна версія цього не робить."
 
-#: ../../library/logging.handlers.rst:819
+#: ../../library/logging.handlers.rst:817
 msgid ""
 "Determines the message ID, event category and event type, and then logs the "
 "message in the NT event log."
@@ -1522,7 +1520,7 @@ msgstr ""
 "Визначає ідентифікатор повідомлення, категорію події та тип події, а потім "
 "записує повідомлення в журнал подій NT."
 
-#: ../../library/logging.handlers.rst:825
+#: ../../library/logging.handlers.rst:823
 msgid ""
 "Returns the event category for the record. Override this if you want to "
 "specify your own categories. This version returns 0."
@@ -1530,7 +1528,7 @@ msgstr ""
 "Повертає категорію події для запису. Перевизначте це, якщо хочете вказати "
 "власні категорії. Ця версія повертає 0."
 
-#: ../../library/logging.handlers.rst:831
+#: ../../library/logging.handlers.rst:829
 msgid ""
 "Returns the event type for the record. Override this if you want to specify "
 "your own types. This version does a mapping using the handler's typemap "
@@ -1548,7 +1546,7 @@ msgstr ""
 "перевизначити цей метод або розмістити відповідний словник в атрибуті "
 "*typemap* обробника."
 
-#: ../../library/logging.handlers.rst:842
+#: ../../library/logging.handlers.rst:840
 msgid ""
 "Returns the message ID for the record. If you are using your own messages, "
 "you could do this by having the *msg* passed to the logger being an ID "
@@ -1563,11 +1561,11 @@ msgstr ""
 " версія повертає 1, який є основним ідентифікатором повідомлення в "
 ":file:`win32service.pyd`."
 
-#: ../../library/logging.handlers.rst:851
+#: ../../library/logging.handlers.rst:849
 msgid "SMTPHandler"
 msgstr "SMTPHandler"
 
-#: ../../library/logging.handlers.rst:853
+#: ../../library/logging.handlers.rst:851
 msgid ""
 "The :class:`SMTPHandler` class, located in the :mod:`logging.handlers` "
 "module, supports sending logging messages to an email address via SMTP."
@@ -1576,7 +1574,7 @@ msgstr ""
 "підтримує надсилання повідомлень журналу на адресу електронної пошти через "
 "SMTP."
 
-#: ../../library/logging.handlers.rst:859
+#: ../../library/logging.handlers.rst:857
 msgid ""
 "Returns a new instance of the :class:`SMTPHandler` class. The instance is "
 "initialized with the from and to addresses and subject line of the email. "
@@ -1595,7 +1593,7 @@ msgstr ""
 "можете вказати кортеж (ім’я користувача, пароль) для аргументу *облікові "
 "дані*."
 
-#: ../../library/logging.handlers.rst:866
+#: ../../library/logging.handlers.rst:864
 msgid ""
 "To specify the use of a secure protocol (TLS), pass in a tuple to the "
 "*secure* argument. This will only be used when authentication credentials "
@@ -1611,7 +1609,7 @@ msgstr ""
 "іменами файлу ключів і файлу сертифіката. (Цей кортеж передається в метод "
 ":meth:`smtplib.SMTP.starttls`.)"
 
-#: ../../library/logging.handlers.rst:873
+#: ../../library/logging.handlers.rst:871
 msgid ""
 "A timeout can be specified for communication with the SMTP server using the "
 "*timeout* argument."
@@ -1619,15 +1617,15 @@ msgstr ""
 "Тайм-аут можна вказати для зв’язку з сервером SMTP за допомогою аргументу "
 "*timeout*."
 
-#: ../../library/logging.handlers.rst:876
+#: ../../library/logging.handlers.rst:874
 msgid "The *timeout* argument was added."
 msgstr "Додано аргумент *timeout*."
 
-#: ../../library/logging.handlers.rst:881
+#: ../../library/logging.handlers.rst:879
 msgid "Formats the record and sends it to the specified addressees."
 msgstr "Форматує запис і надсилає його вказаним адресатам."
 
-#: ../../library/logging.handlers.rst:886
+#: ../../library/logging.handlers.rst:884
 msgid ""
 "If you want to specify a subject line which is record-dependent, override "
 "this method."
@@ -1635,11 +1633,11 @@ msgstr ""
 "Якщо ви хочете вказати рядок теми, який залежить від запису, замініть цей "
 "метод."
 
-#: ../../library/logging.handlers.rst:892
+#: ../../library/logging.handlers.rst:890
 msgid "MemoryHandler"
 msgstr "MemoryHandler"
 
-#: ../../library/logging.handlers.rst:894
+#: ../../library/logging.handlers.rst:892
 msgid ""
 "The :class:`MemoryHandler` class, located in the :mod:`logging.handlers` "
 "module, supports buffering of logging records in memory, periodically "
@@ -1651,7 +1649,7 @@ msgstr ""
 "обробника :dfn:`target`. Очищення відбувається кожного разу, коли буфер "
 "заповнений або коли спостерігається подія певної або більшої серйозності."
 
-#: ../../library/logging.handlers.rst:899
+#: ../../library/logging.handlers.rst:897
 msgid ""
 ":class:`MemoryHandler` is a subclass of the more general "
 ":class:`BufferingHandler`, which is an abstract class. This buffers logging "
@@ -1666,7 +1664,7 @@ msgstr ""
 "потрібно скидати буфер. Якщо має бути, то очікується, що :meth:`flush` "
 "виконає змивання."
 
-#: ../../library/logging.handlers.rst:908
+#: ../../library/logging.handlers.rst:906
 msgid ""
 "Initializes the handler with a buffer of the specified capacity. Here, "
 "*capacity* means the number of logging records buffered."
@@ -1674,7 +1672,7 @@ msgstr ""
 "Ініціалізує обробник буфером зазначеної ємності. Тут *ємність* означає "
 "кількість буферизованих записів журналу."
 
-#: ../../library/logging.handlers.rst:914
+#: ../../library/logging.handlers.rst:912
 msgid ""
 "Append the record to the buffer. If :meth:`shouldFlush` returns true, call "
 ":meth:`flush` to process the buffer."
@@ -1682,14 +1680,14 @@ msgstr ""
 "Додайте запис до буфера. Якщо :meth:`shouldFlush` повертає true, викликайте "
 ":meth:`flush` для обробки буфера."
 
-#: ../../library/logging.handlers.rst:920
+#: ../../library/logging.handlers.rst:918
 msgid ""
 "For a :class:`BufferingHandler` instance, flushing means that it sets the "
 "buffer to an empty list. This method can be overwritten to implement more "
 "useful flushing behavior."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:927
+#: ../../library/logging.handlers.rst:925
 msgid ""
 "Return ``True`` if the buffer is up to capacity. This method can be "
 "overridden to implement custom flushing strategies."
@@ -1697,7 +1695,7 @@ msgstr ""
 "Повертає ``True``, якщо буфер вичерпано. Цей метод можна замінити, щоб "
 "реалізувати власні стратегії очищення."
 
-#: ../../library/logging.handlers.rst:933
+#: ../../library/logging.handlers.rst:931
 msgid ""
 "Returns a new instance of the :class:`MemoryHandler` class. The instance is "
 "initialized with a buffer size of *capacity* (number of records buffered). "
@@ -1717,16 +1715,16 @@ msgstr ""
 "обробник закрито. Якщо не вказано або вказано як ``True``, попередня "
 "поведінка очищення буфера відбуватиметься, коли обробник буде закрито."
 
-#: ../../library/logging.handlers.rst:942
+#: ../../library/logging.handlers.rst:940
 msgid "The *flushOnClose* parameter was added."
 msgstr "Додано параметр *flushOnClose*."
 
-#: ../../library/logging.handlers.rst:948
+#: ../../library/logging.handlers.rst:946
 msgid ""
 "Calls :meth:`flush`, sets the target to ``None`` and clears the buffer."
 msgstr "Викликає :meth:`flush`, встановлює ціль на ``None`` і очищає буфер."
 
-#: ../../library/logging.handlers.rst:954
+#: ../../library/logging.handlers.rst:952
 msgid ""
 "For a :class:`MemoryHandler` instance, flushing means just sending the "
 "buffered records to the target, if there is one. The buffer is also cleared "
@@ -1734,19 +1732,19 @@ msgid ""
 " behavior."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:961
+#: ../../library/logging.handlers.rst:959
 msgid "Sets the target handler for this handler."
 msgstr "Встановлює цільовий обробник для цього обробника."
 
-#: ../../library/logging.handlers.rst:966
+#: ../../library/logging.handlers.rst:964
 msgid "Checks for buffer full or a record at the *flushLevel* or higher."
 msgstr "Перевіряє заповненість буфера або запис на *flushLevel* або вище."
 
-#: ../../library/logging.handlers.rst:972
+#: ../../library/logging.handlers.rst:970
 msgid "HTTPHandler"
 msgstr "HTTPHandler"
 
-#: ../../library/logging.handlers.rst:974
+#: ../../library/logging.handlers.rst:972
 msgid ""
 "The :class:`HTTPHandler` class, located in the :mod:`logging.handlers` "
 "module, supports sending logging messages to a web server, using either "
@@ -1756,7 +1754,7 @@ msgstr ""
 "підтримує надсилання повідомлень журналу на веб-сервер, використовуючи "
 "семантику ``GET`` або ``POST``."
 
-#: ../../library/logging.handlers.rst:981
+#: ../../library/logging.handlers.rst:979
 msgid ""
 "Returns a new instance of the :class:`HTTPHandler` class. The *host* can be "
 "of the form ``host:port``, should you need to use a specific port number.  "
@@ -1781,11 +1779,11 @@ msgstr ""
 "вказати secure=True, щоб ваш ідентифікатор користувача та пароль не "
 "передавалися у вигляді відкритого тексту по мережі."
 
-#: ../../library/logging.handlers.rst:992
+#: ../../library/logging.handlers.rst:990
 msgid "The *context* parameter was added."
 msgstr "Додано параметр *context*."
 
-#: ../../library/logging.handlers.rst:997
+#: ../../library/logging.handlers.rst:995
 msgid ""
 "Provides a dictionary, based on ``record``, which is to be URL-encoded and "
 "sent to the web server. The default implementation just returns "
@@ -1799,7 +1797,7 @@ msgstr ""
 "підмножина :class:`~logging.LogRecord` має бути надіслана на веб-сервер, або"
 " якщо потрібна більш точна настройка того, що надсилається на сервер."
 
-#: ../../library/logging.handlers.rst:1005
+#: ../../library/logging.handlers.rst:1003
 msgid ""
 "Sends the record to the web server as a URL-encoded dictionary. The "
 ":meth:`mapLogRecord` method is used to convert the record to the dictionary "
@@ -1809,7 +1807,7 @@ msgstr ""
 ":meth:`mapLogRecord` використовується для перетворення запису в словник для "
 "надсилання."
 
-#: ../../library/logging.handlers.rst:1009
+#: ../../library/logging.handlers.rst:1007
 msgid ""
 "Since preparing a record for sending it to a web server is not the same as a"
 " generic formatting operation, using :meth:`~logging.Handler.setFormatter` "
@@ -1826,11 +1824,11 @@ msgstr ""
 ":meth:`mapLogRecord`, а потім :func:`urllib.parse.urlencode`, щоб закодувати"
 " словник у формі, придатній для надсилання на веб-сервер ."
 
-#: ../../library/logging.handlers.rst:1022
+#: ../../library/logging.handlers.rst:1020
 msgid "QueueHandler"
 msgstr "QueueHandler"
 
-#: ../../library/logging.handlers.rst:1026
+#: ../../library/logging.handlers.rst:1024
 msgid ""
 "The :class:`QueueHandler` class, located in the :mod:`logging.handlers` "
 "module, supports sending logging messages to a queue, such as those "
@@ -1840,7 +1838,7 @@ msgstr ""
 "підтримує надсилання повідомлень журналу до черги, таких як реалізовані в "
 "модулях :mod:`queue` або :mod:`multiprocessing` ."
 
-#: ../../library/logging.handlers.rst:1030
+#: ../../library/logging.handlers.rst:1028
 msgid ""
 "Along with the :class:`QueueListener` class, :class:`QueueHandler` can be "
 "used to let handlers do their work on a separate thread from the one which "
@@ -1857,7 +1855,7 @@ msgstr ""
 "(такі як надсилання електронного листа через :class:`SMTPHandler`) "
 "виконуються в окремому потоці."
 
-#: ../../library/logging.handlers.rst:1039
+#: ../../library/logging.handlers.rst:1037
 msgid ""
 "Returns a new instance of the :class:`QueueHandler` class. The instance is "
 "initialized with the queue to send messages to. The *queue* can be any "
@@ -1873,14 +1871,14 @@ msgstr ""
 "черги не *обов’язково* бути API відстеження завдань, що означає, що ви "
 "можете використовувати екземпляри :class:`~queue.SimpleQueue` для *черги*."
 
-#: ../../library/logging.handlers.rst:1046
-#: ../../library/logging.handlers.rst:1135
+#: ../../library/logging.handlers.rst:1044
+#: ../../library/logging.handlers.rst:1133
 msgid ""
 "If you are using :mod:`multiprocessing`, you should avoid using "
 ":class:`~queue.SimpleQueue` and instead use :class:`multiprocessing.Queue`."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:1051
+#: ../../library/logging.handlers.rst:1049
 msgid ""
 "Enqueues the result of preparing the LogRecord. Should an exception occur "
 "(e.g. because a bounded queue has filled up), the "
@@ -1890,7 +1888,7 @@ msgid ""
 "``sys.stderr`` (if :data:`logging.raiseExceptions` is ``True``)."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:1060
+#: ../../library/logging.handlers.rst:1058
 msgid ""
 "Prepares a record for queuing. The object returned by this method is "
 "enqueued."
@@ -1898,7 +1896,7 @@ msgstr ""
 "Готує запис для постановки в чергу. Об’єкт, повернутий цим методом, "
 "ставиться в чергу."
 
-#: ../../library/logging.handlers.rst:1063
+#: ../../library/logging.handlers.rst:1061
 msgid ""
 "The base implementation formats the record to merge the message, arguments, "
 "exception and stack information, if present.  It also removes unpickleable "
@@ -1908,7 +1906,7 @@ msgid ""
 " :attr:`exc_info` and :attr:`exc_text` attributes to ``None``."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:1071
+#: ../../library/logging.handlers.rst:1069
 msgid ""
 "You might want to override this method if you want to convert the record to "
 "a dict or JSON string, or send a modified copy of the record while leaving "
@@ -1918,7 +1916,7 @@ msgstr ""
 "або JSON або надіслати змінену копію запису, залишивши оригінал "
 "недоторканим."
 
-#: ../../library/logging.handlers.rst:1075
+#: ../../library/logging.handlers.rst:1073
 msgid ""
 "The base implementation formats the message with arguments, sets the "
 "``message`` and ``msg`` attributes to the formatted message and sets the "
@@ -1934,7 +1932,7 @@ msgid ""
 "libraries that you use.)"
 msgstr ""
 
-#: ../../library/logging.handlers.rst:1091
+#: ../../library/logging.handlers.rst:1089
 msgid ""
 "Enqueues the record on the queue using ``put_nowait()``; you may want to "
 "override this if you want to use blocking behaviour, or a timeout, or a "
@@ -1944,18 +1942,18 @@ msgstr ""
 "ви хочете використовувати поведінку блокування, або тайм-аут, або "
 "налаштовану реалізацію черги."
 
-#: ../../library/logging.handlers.rst:1097
+#: ../../library/logging.handlers.rst:1095
 msgid ""
 "When created via configuration using :func:`~logging.config.dictConfig`, "
 "this attribute will contain a :class:`QueueListener` instance for use with "
 "this handler. Otherwise, it will be ``None``."
 msgstr ""
 
-#: ../../library/logging.handlers.rst:1106
+#: ../../library/logging.handlers.rst:1104
 msgid "QueueListener"
 msgstr "QueueListener"
 
-#: ../../library/logging.handlers.rst:1110
+#: ../../library/logging.handlers.rst:1108
 msgid ""
 "The :class:`QueueListener` class, located in the :mod:`logging.handlers` "
 "module, supports receiving logging messages from a queue, such as those "
@@ -1973,7 +1971,7 @@ msgstr ""
 ":class:`QueueListener` сам по собі не є обробником, він задокументований "
 "тут, оскільки він працює рука об руку з :class:`QueueHandler`."
 
-#: ../../library/logging.handlers.rst:1118
+#: ../../library/logging.handlers.rst:1116
 msgid ""
 "Along with the :class:`QueueHandler` class, :class:`QueueListener` can be "
 "used to let handlers do their work on a separate thread from the one which "
@@ -1990,7 +1988,7 @@ msgstr ""
 "(такі як надсилання електронного листа через :class:`SMTPHandler`) "
 "виконуються в окремому потоці."
 
-#: ../../library/logging.handlers.rst:1127
+#: ../../library/logging.handlers.rst:1125
 msgid ""
 "Returns a new instance of the :class:`QueueListener` class. The instance is "
 "initialized with the queue to send messages to and a list of handlers which "
@@ -2009,7 +2007,7 @@ msgstr ""
 "доступний), що означає, що ви можете використовувати екземпляри "
 ":class:`~queue.SimpleQueue` для *черги*."
 
-#: ../../library/logging.handlers.rst:1138
+#: ../../library/logging.handlers.rst:1136
 msgid ""
 "If ``respect_handler_level`` is ``True``, a handler's level is respected "
 "(compared with the level for the message) when deciding whether to pass "
@@ -2022,15 +2020,15 @@ msgstr ""
 "попередніх версіях Python - завжди передавати кожне повідомлення кожному "
 "обробнику."
 
-#: ../../library/logging.handlers.rst:1143
+#: ../../library/logging.handlers.rst:1141
 msgid "The ``respect_handler_level`` argument was added."
 msgstr "Додано аргумент ``respect_handler_level``."
 
-#: ../../library/logging.handlers.rst:1148
+#: ../../library/logging.handlers.rst:1146
 msgid "Dequeues a record and return it, optionally blocking."
 msgstr "Вилучає запис із черги та повертає його, за бажанням блокуючи."
 
-#: ../../library/logging.handlers.rst:1150
+#: ../../library/logging.handlers.rst:1148
 msgid ""
 "The base implementation uses ``get()``. You may want to override this method"
 " if you want to use timeouts or work with custom queue implementations."
@@ -2039,11 +2037,11 @@ msgstr ""
 " метод, якщо ви хочете використовувати тайм-аути або працювати з власними "
 "реалізаціями черги."
 
-#: ../../library/logging.handlers.rst:1156
+#: ../../library/logging.handlers.rst:1154
 msgid "Prepare a record for handling."
 msgstr "Підготуйте протокол для обробки."
 
-#: ../../library/logging.handlers.rst:1158
+#: ../../library/logging.handlers.rst:1156
 msgid ""
 "This implementation just returns the passed-in record. You may want to "
 "override this method if you need to do any custom marshalling or "
@@ -2053,11 +2051,11 @@ msgstr ""
 "якщо вам потрібно виконати будь-яку спеціальну сортування або маніпуляції із"
 " записом перед передачею його обробникам."
 
-#: ../../library/logging.handlers.rst:1164
+#: ../../library/logging.handlers.rst:1162
 msgid "Handle a record."
 msgstr "Обробка запису."
 
-#: ../../library/logging.handlers.rst:1166
+#: ../../library/logging.handlers.rst:1164
 msgid ""
 "This just loops through the handlers offering them the record to handle. The"
 " actual object passed to the handlers is that which is returned from "
@@ -2067,22 +2065,22 @@ msgstr ""
 "Фактичний об’єкт, який передається обробникам, — це той, який повертається з"
 " :meth:`prepare`."
 
-#: ../../library/logging.handlers.rst:1172
+#: ../../library/logging.handlers.rst:1170
 msgid "Starts the listener."
 msgstr "Запускає слухача."
 
-#: ../../library/logging.handlers.rst:1174
+#: ../../library/logging.handlers.rst:1172
 msgid ""
 "This starts up a background thread to monitor the queue for LogRecords to "
 "process."
 msgstr ""
 "Це запускає фоновий потік для моніторингу черги для обробки LogRecords."
 
-#: ../../library/logging.handlers.rst:1179
+#: ../../library/logging.handlers.rst:1177
 msgid "Stops the listener."
 msgstr "Зупиняє слухача."
 
-#: ../../library/logging.handlers.rst:1181
+#: ../../library/logging.handlers.rst:1179
 msgid ""
 "This asks the thread to terminate, and then waits for it to do so. Note that"
 " if you don't call this before your application exits, there may be some "
@@ -2092,7 +2090,7 @@ msgstr ""
 " якщо ви не викличете це перед виходом програми, у черзі можуть залишитися "
 "деякі записи, які не будуть оброблені."
 
-#: ../../library/logging.handlers.rst:1187
+#: ../../library/logging.handlers.rst:1185
 msgid ""
 "Writes a sentinel to the queue to tell the listener to quit. This "
 "implementation uses ``put_nowait()``.  You may want to override this method "
@@ -2103,18 +2101,18 @@ msgstr ""
 "хочете використовувати тайм-аути або працювати з власними реалізаціями "
 "черги."
 
-#: ../../library/logging.handlers.rst:1198
+#: ../../library/logging.handlers.rst:1196
 msgid "Module :mod:`logging`"
 msgstr "Модуль :mod:`logging`"
 
-#: ../../library/logging.handlers.rst:1198
+#: ../../library/logging.handlers.rst:1196
 msgid "API reference for the logging module."
 msgstr "Довідник API для модуля журналювання."
 
-#: ../../library/logging.handlers.rst:1200
+#: ../../library/logging.handlers.rst:1198
 msgid "Module :mod:`logging.config`"
 msgstr "Модуль :mod:`logging.config`"
 
-#: ../../library/logging.handlers.rst:1201
+#: ../../library/logging.handlers.rst:1199
 msgid "Configuration API for the logging module."
 msgstr "API конфігурації для модуля журналювання."
