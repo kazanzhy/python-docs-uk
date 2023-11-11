@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-13 14:14+0000\n"
+"POT-Creation-Date: 2023-10-27 14:49+0000\n"
 "PO-Revision-Date: 2021-06-28 01:08+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1037,6 +1037,12 @@ msgstr ""
 
 #: ../../library/inspect.rst:643
 msgid ""
+"If the passed object has a ``__signature__`` attribute, this function "
+"returns it without further computations."
+msgstr ""
+
+#: ../../library/inspect.rst:646
+msgid ""
 "For objects defined in modules using stringized annotations (``from "
 "__future__ import annotations``), :func:`signature` will attempt to "
 "automatically un-stringize the annotations using "
@@ -1055,7 +1061,7 @@ msgstr ""
 ":func:`inspect.get_annotations()`, щоб дізнатися, як використовувати ці "
 "параметри."
 
-#: ../../library/inspect.rst:652
+#: ../../library/inspect.rst:655
 msgid ""
 "Raises :exc:`ValueError` if no signature can be provided, and "
 ":exc:`TypeError` if that type of object is not supported.  Also, if the "
@@ -1069,7 +1075,7 @@ msgstr ""
 "``eval()`` для скасування ланцюжків анотацій може потенційно викликати будь-"
 "який виняток."
 
-#: ../../library/inspect.rst:658
+#: ../../library/inspect.rst:661
 msgid ""
 "A slash(/) in the signature of a function denotes that the parameters prior "
 "to it are positional-only. For more info, see :ref:`the FAQ entry on "
@@ -1080,7 +1086,7 @@ msgstr ""
 "поширених питаннях щодо позиційних параметрів <faq-positional-only-"
 "arguments>`."
 
-#: ../../library/inspect.rst:662
+#: ../../library/inspect.rst:665
 msgid ""
 "``follow_wrapped`` parameter. Pass ``False`` to get a signature of "
 "``callable`` specifically (``callable.__wrapped__`` will not be used to "
@@ -1090,11 +1096,11 @@ msgstr ""
 "``callable`` конкретно (``callable.__wrapped__`` не використовуватиметься "
 "для розгортання декорованих викликів.)"
 
-#: ../../library/inspect.rst:667
+#: ../../library/inspect.rst:670
 msgid "``globals``, ``locals``, and ``eval_str`` parameters."
 msgstr "Параметри ``globals``, ``locals`` і ``eval_str``."
 
-#: ../../library/inspect.rst:672
+#: ../../library/inspect.rst:675
 msgid ""
 "Some callables may not be introspectable in certain implementations of "
 "Python.  For example, in CPython, some built-in functions defined in C "
@@ -1104,7 +1110,7 @@ msgstr ""
 " Python. Наприклад, у CPython деякі вбудовані функції, визначені в C, не "
 "надають метаданих про свої аргументи."
 
-#: ../../library/inspect.rst:679
+#: ../../library/inspect.rst:682
 msgid ""
 "A Signature object represents the call signature of a function and its "
 "return annotation.  For each parameter accepted by the function it stores a "
@@ -1114,7 +1120,7 @@ msgstr ""
 "повернення. Для кожного параметра, прийнятого функцією, вона зберігає об’єкт"
 " :class:`Parameter` у своїй колекції :attr:`parameters`."
 
-#: ../../library/inspect.rst:683
+#: ../../library/inspect.rst:686
 msgid ""
 "The optional *parameters* argument is a sequence of :class:`Parameter` "
 "objects, which is validated to check that there are no parameters with "
@@ -1129,7 +1135,7 @@ msgstr ""
 " зі значеннями за замовчуванням слідують за параметрами без значень за "
 "замовчуванням."
 
-#: ../../library/inspect.rst:689
+#: ../../library/inspect.rst:692
 msgid ""
 "The optional *return_annotation* argument, can be an arbitrary Python "
 "object, is the \"return\" annotation of the callable."
@@ -1137,7 +1143,7 @@ msgstr ""
 "Необов’язковий аргумент *return_annotation*, може бути довільним об’єктом "
 "Python, є анотацією \"повернення\" викликаного."
 
-#: ../../library/inspect.rst:692
+#: ../../library/inspect.rst:695
 msgid ""
 "Signature objects are *immutable*.  Use :meth:`Signature.replace` to make a "
 "modified copy."
@@ -1145,17 +1151,17 @@ msgstr ""
 "Об’єкти підпису *незмінні*. Використовуйте :meth:`Signature.replace`, щоб "
 "створити змінену копію."
 
-#: ../../library/inspect.rst:695
+#: ../../library/inspect.rst:698
 msgid "Signature objects are picklable and :term:`hashable`."
 msgstr ""
 
-#: ../../library/inspect.rst:700
+#: ../../library/inspect.rst:703
 msgid ""
 "A special class-level marker to specify absence of a return annotation."
 msgstr ""
 "Спеціальний маркер рівня класу, щоб вказати відсутність анотації повернення."
 
-#: ../../library/inspect.rst:704
+#: ../../library/inspect.rst:707
 msgid ""
 "An ordered mapping of parameters' names to the corresponding "
 ":class:`Parameter` objects.  Parameters appear in strict definition order, "
@@ -1165,7 +1171,7 @@ msgstr ""
 ":class:`Parameter`. Параметри відображаються в строгому порядку визначення, "
 "включаючи параметри лише ключових слів."
 
-#: ../../library/inspect.rst:708 ../../library/inspect.rst:1034
+#: ../../library/inspect.rst:711 ../../library/inspect.rst:1039
 msgid ""
 "Python only explicitly guaranteed that it preserved the declaration order of"
 " keyword-only parameters as of version 3.7, although in practice this order "
@@ -1175,7 +1181,7 @@ msgstr ""
 "лише за ключовими словами, починаючи з версії 3.7, хоча на практиці цей "
 "порядок завжди зберігався в Python 3."
 
-#: ../../library/inspect.rst:715
+#: ../../library/inspect.rst:718
 msgid ""
 "The \"return\" annotation for the callable.  If the callable has no "
 "\"return\" annotation, this attribute is set to :attr:`Signature.empty`."
@@ -1183,7 +1189,7 @@ msgstr ""
 "Анотація \"повернення\" для викликаного. Якщо викликаний не має анотації "
 "\"повернення\", цей атрибут має значення :attr:`Signature.empty`."
 
-#: ../../library/inspect.rst:720
+#: ../../library/inspect.rst:723
 msgid ""
 "Create a mapping from positional and keyword arguments to parameters. "
 "Returns :class:`BoundArguments` if ``*args`` and ``**kwargs`` match the "
@@ -1193,7 +1199,7 @@ msgstr ""
 "параметри. Повертає :class:`BoundArguments`, якщо ``*args`` і ``**kwargs`` "
 "збігаються з підписом, або викликає :exc:`TypeError`."
 
-#: ../../library/inspect.rst:726
+#: ../../library/inspect.rst:729
 msgid ""
 "Works the same way as :meth:`Signature.bind`, but allows the omission of "
 "some required arguments (mimics :func:`functools.partial` behavior.) Returns"
@@ -1205,7 +1211,7 @@ msgstr ""
 ":class:`BoundArguments` або викликає :exc:`TypeError`, якщо передані "
 "аргументи не збігаються з підписом."
 
-#: ../../library/inspect.rst:733
+#: ../../library/inspect.rst:736
 msgid ""
 "Create a new Signature instance based on the instance :meth:`replace` was "
 "invoked on.  It is possible to pass different ``parameters`` and/or "
@@ -1214,7 +1220,7 @@ msgid ""
 ":attr:`Signature.empty`."
 msgstr ""
 
-#: ../../library/inspect.rst:751
+#: ../../library/inspect.rst:754
 msgid ""
 "Return a :class:`Signature` (or its subclass) object for a given callable "
 "``obj``.  Pass ``follow_wrapped=False`` to get a signature of ``obj`` "
@@ -1227,15 +1233,19 @@ msgstr ""
 "``localns`` використовуватимуться як простори імен під час вирішення "
 "анотацій."
 
-#: ../../library/inspect.rst:756
+#: ../../library/inspect.rst:759
 msgid "This method simplifies subclassing of :class:`Signature`::"
 msgstr "Цей метод спрощує підкласи :class:`Signature`::"
 
-#: ../../library/inspect.rst:765
+#: ../../library/inspect.rst:766
+msgid "Its behavior is otherwise identical to that of :func:`signature`."
+msgstr ""
+
+#: ../../library/inspect.rst:770
 msgid "``globalns`` and ``localns`` parameters."
 msgstr "Параметри ``globalns`` і ``localns``."
 
-#: ../../library/inspect.rst:771
+#: ../../library/inspect.rst:776
 msgid ""
 "Parameter objects are *immutable*.  Instead of modifying a Parameter object,"
 " you can use :meth:`Parameter.replace` to create a modified copy."
@@ -1244,11 +1254,11 @@ msgstr ""
 " ви можете використовувати :meth:`Parameter.replace` для створення зміненої "
 "копії."
 
-#: ../../library/inspect.rst:774
+#: ../../library/inspect.rst:779
 msgid "Parameter objects are picklable and :term:`hashable`."
 msgstr ""
 
-#: ../../library/inspect.rst:779
+#: ../../library/inspect.rst:784
 msgid ""
 "A special class-level marker to specify absence of default values and "
 "annotations."
@@ -1256,7 +1266,7 @@ msgstr ""
 "Спеціальний маркер рівня класу для визначення відсутності значень за "
 "замовчуванням і приміток."
 
-#: ../../library/inspect.rst:784
+#: ../../library/inspect.rst:789
 msgid ""
 "The name of the parameter as a string.  The name must be a valid Python "
 "identifier."
@@ -1264,7 +1274,7 @@ msgstr ""
 "Ім'я параметра у вигляді рядка. Ім’я має бути дійсним ідентифікатором "
 "Python."
 
-#: ../../library/inspect.rst:789
+#: ../../library/inspect.rst:794
 msgid ""
 "CPython generates implicit parameter names of the form ``.0`` on the code "
 "objects used to implement comprehensions and generator expressions."
@@ -1272,14 +1282,14 @@ msgstr ""
 "CPython генерує неявні імена параметрів у формі ``.0`` для об’єктів коду, "
 "які використовуються для реалізації розуміння та виразів генератора."
 
-#: ../../library/inspect.rst:793
+#: ../../library/inspect.rst:798
 msgid ""
 "These parameter names are exposed by this module as names like "
 "``implicit0``."
 msgstr ""
 "Ці назви параметрів надаються цим модулем як імена на зразок ``implicit0``."
 
-#: ../../library/inspect.rst:799
+#: ../../library/inspect.rst:804
 msgid ""
 "The default value for the parameter.  If the parameter has no default value,"
 " this attribute is set to :attr:`Parameter.empty`."
@@ -1287,7 +1297,7 @@ msgstr ""
 "Стандартне значення для параметра. Якщо параметр не має значення за "
 "замовчуванням, цей атрибут має значення :attr:`Parameter.empty`."
 
-#: ../../library/inspect.rst:804
+#: ../../library/inspect.rst:809
 msgid ""
 "The annotation for the parameter.  If the parameter has no annotation, this "
 "attribute is set to :attr:`Parameter.empty`."
@@ -1295,7 +1305,7 @@ msgstr ""
 "Анотація до параметра. Якщо параметр не має анотації, цей атрибут має "
 "значення :attr:`Parameter.empty`."
 
-#: ../../library/inspect.rst:809
+#: ../../library/inspect.rst:814
 msgid ""
 "Describes how argument values are bound to the parameter.  The possible "
 "values are accessible via :class:`Parameter` (like "
@@ -1303,19 +1313,19 @@ msgid ""
 "following order:"
 msgstr ""
 
-#: ../../library/inspect.rst:816
+#: ../../library/inspect.rst:821
 msgid "Name"
 msgstr "Ім'я"
 
-#: ../../library/inspect.rst:816
+#: ../../library/inspect.rst:821
 msgid "Meaning"
 msgstr "Значення"
 
-#: ../../library/inspect.rst:818
+#: ../../library/inspect.rst:823
 msgid "*POSITIONAL_ONLY*"
 msgstr "*ПОЗИЦІЙНЕ_ЛИШЕ*"
 
-#: ../../library/inspect.rst:818
+#: ../../library/inspect.rst:823
 msgid ""
 "Value must be supplied as a positional argument. Positional only parameters "
 "are those which appear before a ``/`` entry (if present) in a Python "
@@ -1325,11 +1335,11 @@ msgstr ""
 "це ті, які з’являються перед записом ``/`` (якщо він є) у визначенні функції"
 " Python."
 
-#: ../../library/inspect.rst:823
+#: ../../library/inspect.rst:828
 msgid "*POSITIONAL_OR_KEYWORD*"
 msgstr "*POSITIONAL_OR_KEYWORD*"
 
-#: ../../library/inspect.rst:823
+#: ../../library/inspect.rst:828
 msgid ""
 "Value may be supplied as either a keyword or positional argument (this is "
 "the standard binding behaviour for functions implemented in Python.)"
@@ -1337,11 +1347,11 @@ msgstr ""
 "Значення може бути надано як ключове слово або позиційний аргумент (це "
 "стандартна поведінка зв’язування для функцій, реалізованих у Python)."
 
-#: ../../library/inspect.rst:828
+#: ../../library/inspect.rst:833
 msgid "*VAR_POSITIONAL*"
 msgstr "*VAR_POSITIONAL*"
 
-#: ../../library/inspect.rst:828
+#: ../../library/inspect.rst:833
 msgid ""
 "A tuple of positional arguments that aren't bound to any other parameter. "
 "This corresponds to a ``*args`` parameter in a Python function definition."
@@ -1349,11 +1359,11 @@ msgstr ""
 "Кортеж позиційних аргументів, які не прив’язані до жодного іншого параметра."
 " Це відповідає параметру ``*args`` у визначенні функції Python."
 
-#: ../../library/inspect.rst:833
+#: ../../library/inspect.rst:838
 msgid "*KEYWORD_ONLY*"
 msgstr "*KEYWORD_ONLY*"
 
-#: ../../library/inspect.rst:833
+#: ../../library/inspect.rst:838
 msgid ""
 "Value must be supplied as a keyword argument. Keyword only parameters are "
 "those which appear after a ``*`` or ``*args`` entry in a Python function "
@@ -1363,11 +1373,11 @@ msgstr ""
 "ключових слів – це ті, які з’являються після запису ``*`` або ``*args`` у "
 "визначенні функції Python."
 
-#: ../../library/inspect.rst:838
+#: ../../library/inspect.rst:843
 msgid "*VAR_KEYWORD*"
 msgstr "*VAR_KEYWORD*"
 
-#: ../../library/inspect.rst:838
+#: ../../library/inspect.rst:843
 msgid ""
 "A dict of keyword arguments that aren't bound to any other parameter. This "
 "corresponds to a ``**kwargs`` parameter in a Python function definition."
@@ -1375,21 +1385,21 @@ msgstr ""
 "Набір аргументів ключових слів, які не прив’язані до жодного іншого "
 "параметра. Це відповідає параметру ``**kwargs`` у визначенні функції Python."
 
-#: ../../library/inspect.rst:844
+#: ../../library/inspect.rst:849
 msgid "Example: print all keyword-only arguments without default values::"
 msgstr ""
 "Приклад: надрукувати всі аргументи лише з ключовими словами без значень за "
 "замовчуванням::"
 
-#: ../../library/inspect.rst:858
+#: ../../library/inspect.rst:863
 msgid "Describes a enum value of Parameter.kind."
 msgstr "Описує значення переліку Parameter.kind."
 
-#: ../../library/inspect.rst:862
+#: ../../library/inspect.rst:867
 msgid "Example: print all descriptions of arguments::"
 msgstr "Приклад: надрукувати всі описи аргументів::"
 
-#: ../../library/inspect.rst:877
+#: ../../library/inspect.rst:882
 msgid ""
 "Create a new Parameter instance based on the instance replaced was invoked "
 "on.  To override a :class:`Parameter` attribute, pass the corresponding "
@@ -1401,7 +1411,7 @@ msgstr ""
 "відповідний аргумент. Щоб видалити значення за замовчуванням або/або "
 "анотацію з параметра, передайте :attr:`Parameter.empty`."
 
-#: ../../library/inspect.rst:895
+#: ../../library/inspect.rst:900
 msgid ""
 "In Python 3.3 Parameter objects were allowed to have ``name`` set to "
 "``None`` if their ``kind`` was set to ``POSITIONAL_ONLY``. This is no longer"
@@ -1411,7 +1421,7 @@ msgstr ""
 "``None``, якщо для їх ``tind`` було встановлено ``POSITIONAL_ONLY``. Це "
 "більше не дозволено."
 
-#: ../../library/inspect.rst:902
+#: ../../library/inspect.rst:907
 msgid ""
 "Result of a :meth:`Signature.bind` or :meth:`Signature.bind_partial` call. "
 "Holds the mapping of arguments to the function's parameters."
@@ -1419,7 +1429,7 @@ msgstr ""
 "Результат виклику :meth:`Signature.bind` або :meth:`Signature.bind_partial`."
 " Зберігає відображення аргументів у параметри функції."
 
-#: ../../library/inspect.rst:907
+#: ../../library/inspect.rst:912
 msgid ""
 "A mutable mapping of parameters' names to arguments' values. Contains only "
 "explicitly bound arguments.  Changes in :attr:`arguments` will reflect in "
@@ -1429,7 +1439,7 @@ msgstr ""
 "явно пов’язані аргументи. Зміни в :attr:`arguments` відображатимуться в "
 ":attr:`args` і :attr:`kwargs`."
 
-#: ../../library/inspect.rst:911
+#: ../../library/inspect.rst:916
 msgid ""
 "Should be used in conjunction with :attr:`Signature.parameters` for any "
 "argument processing purposes."
@@ -1437,7 +1447,7 @@ msgstr ""
 "Слід використовувати разом із :attr:`Signature.parameters` для будь-яких "
 "цілей обробки аргументів."
 
-#: ../../library/inspect.rst:916
+#: ../../library/inspect.rst:921
 msgid ""
 "Arguments for which :meth:`Signature.bind` or :meth:`Signature.bind_partial`"
 " relied on a default value are skipped. However, if needed, use "
@@ -1448,7 +1458,7 @@ msgstr ""
 "пропускаються. Однак, якщо потрібно, використовуйте "
 ":meth:`BoundArguments.apply_defaults`, щоб додати їх."
 
-#: ../../library/inspect.rst:921
+#: ../../library/inspect.rst:926
 msgid ""
 ":attr:`arguments` is now of type :class:`dict`. Formerly, it was of type "
 ":class:`collections.OrderedDict`."
@@ -1456,7 +1466,7 @@ msgstr ""
 ":attr:`arguments` тепер має тип :class:`dict`. Раніше він мав тип "
 ":class:`collections.OrderedDict`."
 
-#: ../../library/inspect.rst:927
+#: ../../library/inspect.rst:932
 msgid ""
 "A tuple of positional arguments values.  Dynamically computed from the "
 ":attr:`arguments` attribute."
@@ -1464,7 +1474,7 @@ msgstr ""
 "Кортеж значень позиційних аргументів. Динамічно обчислюється з атрибута "
 ":attr:`arguments`."
 
-#: ../../library/inspect.rst:932
+#: ../../library/inspect.rst:937
 msgid ""
 "A dict of keyword arguments values.  Dynamically computed from the "
 ":attr:`arguments` attribute."
@@ -1472,29 +1482,29 @@ msgstr ""
 "Набір значень аргументів ключового слова. Динамічно обчислюється з атрибута "
 ":attr:`arguments`."
 
-#: ../../library/inspect.rst:937
+#: ../../library/inspect.rst:942
 msgid "A reference to the parent :class:`Signature` object."
 msgstr "Посилання на батьківський об’єкт :class:`Signature`."
 
-#: ../../library/inspect.rst:941
+#: ../../library/inspect.rst:946
 msgid "Set default values for missing arguments."
 msgstr "Установіть значення за замовчуванням для відсутніх аргументів."
 
-#: ../../library/inspect.rst:943
+#: ../../library/inspect.rst:948
 msgid ""
 "For variable-positional arguments (``*args``) the default is an empty tuple."
 msgstr ""
 "Для змінних позиційних аргументів (``*args``) за умовчанням є порожній "
 "кортеж."
 
-#: ../../library/inspect.rst:946
+#: ../../library/inspect.rst:951
 msgid ""
 "For variable-keyword arguments (``**kwargs``) the default is an empty dict."
 msgstr ""
 "Для аргументів зі змінними ключовими словами (``**kwargs``) типовим є "
 "порожній dict."
 
-#: ../../library/inspect.rst:959
+#: ../../library/inspect.rst:964
 msgid ""
 "The :attr:`args` and :attr:`kwargs` properties can be used to invoke "
 "functions::"
@@ -1502,19 +1512,19 @@ msgstr ""
 "Властивості :attr:`args` і :attr:`kwargs` можна використовувати для виклику "
 "функцій::"
 
-#: ../../library/inspect.rst:972
+#: ../../library/inspect.rst:977
 msgid ":pep:`362` - Function Signature Object."
 msgstr ":pep:`362` - Об'єкт підпису функції."
 
-#: ../../library/inspect.rst:973
+#: ../../library/inspect.rst:978
 msgid "The detailed specification, implementation details and examples."
 msgstr "Детальна специфікація, деталі реалізації та приклади."
 
-#: ../../library/inspect.rst:979
+#: ../../library/inspect.rst:984
 msgid "Classes and functions"
 msgstr "Класи та функції"
 
-#: ../../library/inspect.rst:983
+#: ../../library/inspect.rst:988
 msgid ""
 "Arrange the given list of classes into a hierarchy of nested lists. Where a "
 "nested list appears, it contains classes derived from the class whose entry "
@@ -1532,7 +1542,7 @@ msgstr ""
 "заданому списку. В іншому випадку класи, які використовують множинне "
 "успадкування, та їхні нащадки з’являтимуться кілька разів."
 
-#: ../../library/inspect.rst:994
+#: ../../library/inspect.rst:999
 msgid ""
 "Get the names and default values of a Python function's parameters.  A "
 ":term:`named tuple` is returned:"
@@ -1540,7 +1550,7 @@ msgstr ""
 "Отримати імена та значення за замовчуванням параметрів функції Python. "
 "Повертається :term:`named tuple`:"
 
-#: ../../library/inspect.rst:997
+#: ../../library/inspect.rst:1002
 msgid ""
 "``FullArgSpec(args, varargs, varkw, defaults, kwonlyargs, kwonlydefaults, "
 "annotations)``"
@@ -1548,7 +1558,7 @@ msgstr ""
 "``FullArgSpec(args, varargs, varkw, defaults, kwonlyargs, kwonlydefaults, "
 "анотації)``"
 
-#: ../../library/inspect.rst:1000
+#: ../../library/inspect.rst:1005
 msgid ""
 "*args* is a list of the positional parameter names. *varargs* is the name of"
 " the ``*`` parameter or ``None`` if arbitrary positional arguments are not "
@@ -1576,7 +1586,7 @@ msgstr ""
 "використовується для повідомлення анотації значення, що повертається "
 "функцією (якщо є)."
 
-#: ../../library/inspect.rst:1015
+#: ../../library/inspect.rst:1020
 msgid ""
 "Note that :func:`signature` and :ref:`Signature Object <inspect-signature-"
 "object>` provide the recommended API for callable introspection, and support"
@@ -1592,7 +1602,7 @@ msgstr ""
 "головним чином для використання в коді, який потребує підтримки сумісності з"
 " API модуля ``inspect`` Python 2."
 
-#: ../../library/inspect.rst:1022
+#: ../../library/inspect.rst:1027
 msgid ""
 "This function is now based on :func:`signature`, but still ignores "
 "``__wrapped__`` attributes and includes the already bound first parameter in"
@@ -1602,7 +1612,7 @@ msgstr ""
 " ``__wrapped__`` і включає вже зв’язаний перший параметр у вихідні дані "
 "підпису для зв’язаних методів."
 
-#: ../../library/inspect.rst:1027
+#: ../../library/inspect.rst:1032
 msgid ""
 "This method was previously documented as deprecated in favour of "
 ":func:`signature` in Python 3.5, but that decision has been reversed in "
@@ -1614,7 +1624,7 @@ msgstr ""
 " чітко підтримуваний стандартний інтерфейс для єдиного вихідного коду Python"
 " 2/3, що переходить із застарілої версії :func:`getargspec` API."
 
-#: ../../library/inspect.rst:1042
+#: ../../library/inspect.rst:1047
 msgid ""
 "Get information about arguments passed into a particular frame.  A "
 ":term:`named tuple` ``ArgInfo(args, varargs, keywords, locals)`` is "
@@ -1628,11 +1638,11 @@ msgstr ""
 "``*`` і ``**`` або ``None``. *locals* — це словник місцевих значень даного "
 "кадру."
 
-#: ../../library/inspect.rst:1049 ../../library/inspect.rst:1059
+#: ../../library/inspect.rst:1054 ../../library/inspect.rst:1064
 msgid "This function was inadvertently marked as deprecated in Python 3.5."
 msgstr "Ця функція була випадково позначена як застаріла в Python 3.5."
 
-#: ../../library/inspect.rst:1054
+#: ../../library/inspect.rst:1059
 msgid ""
 "Format a pretty argument spec from the four values returned by "
 ":func:`getargvalues`.  The format\\* arguments are the corresponding "
@@ -1643,7 +1653,7 @@ msgstr ""
 ":func:`getargvalues`. Аргументи format\\* — це відповідні додаткові функції "
 "форматування, які викликаються для перетворення імен і значень у рядки."
 
-#: ../../library/inspect.rst:1064
+#: ../../library/inspect.rst:1069
 msgid ""
 "Return a tuple of class cls's base classes, including cls, in method "
 "resolution order.  No class appears more than once in this tuple. Note that "
@@ -1656,7 +1666,7 @@ msgstr ""
 "використовується дуже специфічний метатип, визначений користувачем, cls буде"
 " першим елементом кортежу."
 
-#: ../../library/inspect.rst:1072
+#: ../../library/inspect.rst:1077
 msgid ""
 "Bind the *args* and *kwds* to the argument names of the Python function or "
 "method *func*, as if it was called with them. For bound methods, bind also "
@@ -1677,13 +1687,13 @@ msgstr ""
 "**kwds)`` викликає виняток через несумісність підпису, викликається виняток "
 "того самого типу та те саме або подібне повідомлення. Наприклад::"
 
-#: ../../library/inspect.rst:1096
+#: ../../library/inspect.rst:1101
 msgid "Use :meth:`Signature.bind` and :meth:`Signature.bind_partial` instead."
 msgstr ""
 "Замість цього використовуйте :meth:`Signature.bind` і "
 ":meth:`Signature.bind_partial`."
 
-#: ../../library/inspect.rst:1102
+#: ../../library/inspect.rst:1107
 msgid ""
 "Get the mapping of external name references in a Python function or method "
 "*func* to their current values. A :term:`named tuple` "
@@ -1703,13 +1713,13 @@ msgstr ""
 "не можуть бути розпізнані з урахуванням поточних глобальних і вбудованих "
 "модулів."
 
-#: ../../library/inspect.rst:1111
+#: ../../library/inspect.rst:1116
 msgid ""
 ":exc:`TypeError` is raised if *func* is not a Python function or method."
 msgstr ""
 ":exc:`TypeError` виникає, якщо *func* не є функцією або методом Python."
 
-#: ../../library/inspect.rst:1118
+#: ../../library/inspect.rst:1123
 msgid ""
 "Get the object wrapped by *func*. It follows the chain of "
 ":attr:`__wrapped__` attributes returning the last object in the chain."
@@ -1717,7 +1727,7 @@ msgstr ""
 "Оберніть об’єкт за допомогою *func*. Він слідує за ланцюжком атрибутів "
 ":attr:`__wrapped__`, повертаючи останній об’єкт у ланцюжку."
 
-#: ../../library/inspect.rst:1121
+#: ../../library/inspect.rst:1126
 msgid ""
 "*stop* is an optional callback accepting an object in the wrapper chain as "
 "its sole argument that allows the unwrapping to be terminated early if the "
@@ -1734,15 +1744,15 @@ msgstr ""
 " зупинити розгортання, якщо будь-який об’єкт у ланцюжку має визначений "
 "атрибут ``__signature__``."
 
-#: ../../library/inspect.rst:1128
+#: ../../library/inspect.rst:1133
 msgid ":exc:`ValueError` is raised if a cycle is encountered."
 msgstr ":exc:`ValueError` виникає, якщо зустрічається цикл."
 
-#: ../../library/inspect.rst:1135
+#: ../../library/inspect.rst:1140
 msgid "Compute the annotations dict for an object."
 msgstr "Обчисліть анотації dict для об’єкта."
 
-#: ../../library/inspect.rst:1137
+#: ../../library/inspect.rst:1142
 msgid ""
 "``obj`` may be a callable, class, or module. Passing in an object of any "
 "other type raises :exc:`TypeError`."
@@ -1750,7 +1760,7 @@ msgstr ""
 "``obj`` може бути викликаним, класом або модулем. Передача об’єкта будь-"
 "якого іншого типу викликає :exc:`TypeError`."
 
-#: ../../library/inspect.rst:1140
+#: ../../library/inspect.rst:1145
 msgid ""
 "Returns a dict.  ``get_annotations()`` returns a new dict every time it's "
 "called; calling it twice on the same object will return two different but "
@@ -1760,11 +1770,11 @@ msgstr ""
 "виклику; виклик його двічі для того самого об’єкта поверне два різні, але "
 "еквівалентні слова."
 
-#: ../../library/inspect.rst:1144
+#: ../../library/inspect.rst:1149
 msgid "This function handles several details for you:"
 msgstr "Ця функція обробляє декілька деталей для вас:"
 
-#: ../../library/inspect.rst:1146
+#: ../../library/inspect.rst:1151
 msgid ""
 "If ``eval_str`` is true, values of type ``str`` will be un-stringized using "
 ":func:`eval()`.  This is intended for use with stringized annotations "
@@ -1774,7 +1784,7 @@ msgstr ""
 "рядків за допомогою :func:`eval()`. Це призначено для використання з "
 "рядковими анотаціями (``з __future__ імпортних анотацій``)."
 
-#: ../../library/inspect.rst:1150
+#: ../../library/inspect.rst:1155
 msgid ""
 "If ``obj`` doesn't have an annotations dict, returns an empty dict.  "
 "(Functions and methods always have an annotations dict; classes, modules, "
@@ -1784,7 +1794,7 @@ msgstr ""
 "методи завжди мають анотації dict; класи, модулі та інші типи викликів "
 "можуть не мати.)"
 
-#: ../../library/inspect.rst:1154
+#: ../../library/inspect.rst:1159
 msgid ""
 "Ignores inherited annotations on classes.  If a class doesn't have its own "
 "annotations dict, returns an empty dict."
@@ -1792,7 +1802,7 @@ msgstr ""
 "Ігнорує успадковані анотації до класів. Якщо клас не має власного dict "
 "анотацій, повертає порожній dict."
 
-#: ../../library/inspect.rst:1156
+#: ../../library/inspect.rst:1161
 msgid ""
 "All accesses to object members and dict values are done using ``getattr()`` "
 "and ``dict.get()`` for safety."
@@ -1800,11 +1810,11 @@ msgstr ""
 "Усі доступи до членів об’єктів і значень dict здійснюються за допомогою "
 "``getattr()`` і ``dict.get()`` для безпеки."
 
-#: ../../library/inspect.rst:1158
+#: ../../library/inspect.rst:1163
 msgid "Always, always, always returns a freshly created dict."
 msgstr ""
 
-#: ../../library/inspect.rst:1160
+#: ../../library/inspect.rst:1165
 msgid ""
 "``eval_str`` controls whether or not values of type ``str`` are replaced "
 "with the result of calling :func:`eval()` on those values:"
@@ -1812,7 +1822,7 @@ msgstr ""
 "``eval_str`` контролює, чи значення типу ``str`` замінюються на результат "
 "виклику :func:`eval()` для цих значень:"
 
-#: ../../library/inspect.rst:1163
+#: ../../library/inspect.rst:1168
 msgid ""
 "If eval_str is true, :func:`eval()` is called on values of type ``str``. "
 "(Note that ``get_annotations`` doesn't catch exceptions; if :func:`eval()` "
@@ -1824,14 +1834,14 @@ msgstr ""
 " якщо :func:`eval()` викликає виключення, він розмотує стек після виклику "
 "``get_annotations``.)"
 
-#: ../../library/inspect.rst:1167
+#: ../../library/inspect.rst:1172
 msgid ""
 "If eval_str is false (the default), values of type ``str`` are unchanged."
 msgstr ""
 "Якщо eval_str має значення false (за замовчуванням), значення типу ``str`` "
 "не змінюються."
 
-#: ../../library/inspect.rst:1169
+#: ../../library/inspect.rst:1174
 msgid ""
 "``globals`` and ``locals`` are passed in to :func:`eval()`; see the "
 "documentation for :func:`eval()` for more information.  If ``globals`` or "
@@ -1843,12 +1853,12 @@ msgstr ""
 "або ``locals`` має значення ``None``, ця функція може замінити це значення "
 "на контекстне значення за замовчуванням, залежне від ``type(obj)``:"
 
-#: ../../library/inspect.rst:1174
+#: ../../library/inspect.rst:1179
 msgid "If ``obj`` is a module, ``globals`` defaults to ``obj.__dict__``."
 msgstr ""
 "Якщо ``obj`` є модулем, ``globals`` за замовчуванням ``obj.__dict__``."
 
-#: ../../library/inspect.rst:1175
+#: ../../library/inspect.rst:1180
 msgid ""
 "If ``obj`` is a class, ``globals`` defaults to "
 "``sys.modules[obj.__module__].__dict__`` and ``locals`` defaults to the "
@@ -1858,7 +1868,7 @@ msgstr ""
 "``sys.modules[obj.__module__].__dict__``, а ``locals`` за замовчуванням має "
 "простір імен класу ``obj``."
 
-#: ../../library/inspect.rst:1178
+#: ../../library/inspect.rst:1183
 msgid ""
 "If ``obj`` is a callable, ``globals`` defaults to ``obj.__globals__``, "
 "although if ``obj`` is a wrapped function (using "
@@ -1868,7 +1878,7 @@ msgstr ""
 " хоча якщо ``obj`` є оберненою функцією (з використанням "
 "``functools.update_wrapper()``), це спочатку розгорнуто."
 
-#: ../../library/inspect.rst:1182
+#: ../../library/inspect.rst:1187
 msgid ""
 "Calling ``get_annotations`` is best practice for accessing the annotations "
 "dict of any object.  See :ref:`annotations-howto` for more information on "
@@ -1878,11 +1888,11 @@ msgstr ""
 "анотацій будь-якого об’єкта. Дивіться :ref:`annotations-howto` для отримання"
 " додаткової інформації про найкращі практики анотацій."
 
-#: ../../library/inspect.rst:1192
+#: ../../library/inspect.rst:1197
 msgid "The interpreter stack"
 msgstr "Стек інтерпретатора"
 
-#: ../../library/inspect.rst:1194
+#: ../../library/inspect.rst:1199
 msgid ""
 "Some of the following functions return :class:`FrameInfo` objects. For "
 "backwards compatibility these objects allow tuple-like operations on all "
@@ -1890,96 +1900,96 @@ msgid ""
 "may be removed in the future."
 msgstr ""
 
-#: ../../library/inspect.rst:1203
+#: ../../library/inspect.rst:1208
 msgid ""
 "The :ref:`frame object <frame-objects>` that the record corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1207
+#: ../../library/inspect.rst:1212
 msgid ""
 "The file name associated with the code being executed by the frame this "
 "record corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1212
+#: ../../library/inspect.rst:1217
 msgid ""
 "The line number of the current line associated with the code being executed "
 "by the frame this record corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1217
+#: ../../library/inspect.rst:1222
 msgid ""
 "The function name that is being executed by the frame this record "
 "corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1221
+#: ../../library/inspect.rst:1226
 msgid ""
 "A list of lines of context from the source code that's being executed by the"
 " frame this record corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1226 ../../library/inspect.rst:1265
+#: ../../library/inspect.rst:1231 ../../library/inspect.rst:1270
 msgid ""
 "The index of the current line being executed in the :attr:`code_context` "
 "list."
 msgstr ""
 
-#: ../../library/inspect.rst:1230
+#: ../../library/inspect.rst:1235
 msgid ""
 "A :class:`dis.Positions` object containing the start line number, end line "
 "number, start column offset, and end column offset associated with the "
 "instruction being executed by the frame this record corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1234
+#: ../../library/inspect.rst:1239
 msgid "Return a :term:`named tuple` instead of a :class:`tuple`."
 msgstr ""
 
-#: ../../library/inspect.rst:1237
+#: ../../library/inspect.rst:1242
 msgid ""
 ":class:`!FrameInfo` is now a class instance (that is backwards compatible "
 "with the previous :term:`named tuple`)."
 msgstr ""
 
-#: ../../library/inspect.rst:1246
+#: ../../library/inspect.rst:1251
 msgid ""
 "The file name associated with the code being executed by the frame this "
 "traceback corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1251
+#: ../../library/inspect.rst:1256
 msgid ""
 "The line number of the current line associated with the code being executed "
 "by the frame this traceback corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1256
+#: ../../library/inspect.rst:1261
 msgid ""
 "The function name that is being executed by the frame this traceback "
 "corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1260
+#: ../../library/inspect.rst:1265
 msgid ""
 "A list of lines of context from the source code that's being executed by the"
 " frame this traceback corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1269
+#: ../../library/inspect.rst:1274
 msgid ""
 "A :class:`dis.Positions` object containing the start line number, end line "
 "number, start column offset, and end column offset associated with the "
 "instruction being executed by the frame this traceback corresponds to."
 msgstr ""
 
-#: ../../library/inspect.rst:1274
+#: ../../library/inspect.rst:1279
 msgid ""
 ":class:`!Traceback` is now a class instance (that is backwards compatible "
 "with the previous :term:`named tuple`)."
 msgstr ""
 
-#: ../../library/inspect.rst:1281
+#: ../../library/inspect.rst:1286
 msgid ""
 "Keeping references to frame objects, as found in the first element of the "
 "frame records these functions return, can cause your program to create "
@@ -1999,7 +2009,7 @@ msgstr ""
 "важливо переконатися, що вони явно розірвані, щоб уникнути затримки "
 "руйнування об’єктів і збільшення споживання пам’яті, яке відбувається."
 
-#: ../../library/inspect.rst:1289
+#: ../../library/inspect.rst:1294
 msgid ""
 "Though the cycle detector will catch these, destruction of the frames (and "
 "local variables) can be made deterministic by removing the cycle in a "
@@ -2012,7 +2022,7 @@ msgstr ""
 "також важливо, якщо детектор циклу було вимкнено під час компіляції Python "
 "або використання :func:`gc.disable`. Наприклад::"
 
-#: ../../library/inspect.rst:1301
+#: ../../library/inspect.rst:1306
 msgid ""
 "If you want to keep the frame around (for example to print a traceback "
 "later), you can also break reference cycles by using the :meth:`frame.clear`"
@@ -2022,7 +2032,7 @@ msgstr ""
 "трасування), ви також можете розірвати цикли посилань за допомогою методу "
 ":meth:`frame.clear`."
 
-#: ../../library/inspect.rst:1305
+#: ../../library/inspect.rst:1310
 msgid ""
 "The optional *context* argument supported by most of these functions "
 "specifies the number of lines of context to return, which are centered "
@@ -2032,17 +2042,17 @@ msgstr ""
 " визначає кількість рядків контексту для повернення, які розташовані навколо"
 " поточного рядка."
 
-#: ../../library/inspect.rst:1312
+#: ../../library/inspect.rst:1317
 msgid ""
 "Get information about a frame or traceback object.  A :class:`Traceback` "
 "object is returned."
 msgstr ""
 
-#: ../../library/inspect.rst:1315
+#: ../../library/inspect.rst:1320
 msgid "A :class:`Traceback` object is returned instead of a named tuple."
 msgstr ""
 
-#: ../../library/inspect.rst:1320
+#: ../../library/inspect.rst:1325
 msgid ""
 "Get a list of :class:`FrameInfo` objects for a frame and all outer frames. "
 "These frames represent the calls that lead to the creation of *frame*. The "
@@ -2050,8 +2060,8 @@ msgid ""
 "represents the outermost call on *frame*'s stack."
 msgstr ""
 
-#: ../../library/inspect.rst:1325 ../../library/inspect.rst:1340
-#: ../../library/inspect.rst:1366 ../../library/inspect.rst:1381
+#: ../../library/inspect.rst:1330 ../../library/inspect.rst:1345
+#: ../../library/inspect.rst:1371 ../../library/inspect.rst:1386
 msgid ""
 "A list of :term:`named tuples <named tuple>` ``FrameInfo(frame, filename, "
 "lineno, function, code_context, index)`` is returned."
@@ -2060,12 +2070,12 @@ msgstr ""
 "``FrameInfo(frame, filename, lineno, function, code_context, index)`` "
 "повертається."
 
-#: ../../library/inspect.rst:1330 ../../library/inspect.rst:1345
-#: ../../library/inspect.rst:1371 ../../library/inspect.rst:1386
+#: ../../library/inspect.rst:1335 ../../library/inspect.rst:1350
+#: ../../library/inspect.rst:1376 ../../library/inspect.rst:1391
 msgid "A list of :class:`FrameInfo` objects is returned."
 msgstr ""
 
-#: ../../library/inspect.rst:1335
+#: ../../library/inspect.rst:1340
 msgid ""
 "Get a list of :class:`FrameInfo` objects for a traceback's frame and all "
 "inner frames.  These frames represent calls made as a consequence of "
@@ -2073,11 +2083,11 @@ msgid ""
 "represents where the exception was raised."
 msgstr ""
 
-#: ../../library/inspect.rst:1350
+#: ../../library/inspect.rst:1355
 msgid "Return the frame object for the caller's stack frame."
 msgstr "Повертає об’єкт кадру для кадру стека абонента."
 
-#: ../../library/inspect.rst:1354
+#: ../../library/inspect.rst:1359
 msgid ""
 "This function relies on Python stack frame support in the interpreter, which"
 " isn't guaranteed to exist in all implementations of Python.  If running in "
@@ -2089,14 +2099,14 @@ msgstr ""
 "в реалізації без підтримки фрейму стека Python, ця функція повертає "
 "``None``."
 
-#: ../../library/inspect.rst:1362
+#: ../../library/inspect.rst:1367
 msgid ""
 "Return a list of :class:`FrameInfo` objects for the caller's stack.  The "
 "first entry in the returned list represents the caller; the last entry "
 "represents the outermost call on the stack."
 msgstr ""
 
-#: ../../library/inspect.rst:1376
+#: ../../library/inspect.rst:1381
 msgid ""
 "Return a list of :class:`FrameInfo` objects for the stack between the "
 "current frame and the frame in which an exception currently being handled "
@@ -2104,11 +2114,11 @@ msgid ""
 "entry represents where the exception was raised."
 msgstr ""
 
-#: ../../library/inspect.rst:1390
+#: ../../library/inspect.rst:1395
 msgid "Fetching attributes statically"
 msgstr "Отримання атрибутів статично"
 
-#: ../../library/inspect.rst:1392
+#: ../../library/inspect.rst:1397
 msgid ""
 "Both :func:`getattr` and :func:`hasattr` can trigger code execution when "
 "fetching or checking for the existence of attributes. Descriptors, like "
@@ -2120,7 +2130,7 @@ msgstr ""
 " як і властивості, і можна буде викликати :meth:`__getattr__` і "
 ":meth:`__getattribute__`."
 
-#: ../../library/inspect.rst:1397
+#: ../../library/inspect.rst:1402
 msgid ""
 "For cases where you want passive introspection, like documentation tools, "
 "this can be inconvenient. :func:`getattr_static` has the same signature as "
@@ -2131,7 +2141,7 @@ msgstr ""
 "самий підпис, як і :func:`getattr`, але уникає виконання коду, коли він "
 "отримує атрибути."
 
-#: ../../library/inspect.rst:1403
+#: ../../library/inspect.rst:1408
 msgid ""
 "Retrieve attributes without triggering dynamic lookup via the descriptor "
 "protocol, :meth:`__getattr__` or :meth:`__getattribute__`."
@@ -2139,7 +2149,7 @@ msgstr ""
 "Отримувати атрибути без запуску динамічного пошуку через протокол "
 "дескриптора, :meth:`__getattr__` або :meth:`__getattribute__`."
 
-#: ../../library/inspect.rst:1406
+#: ../../library/inspect.rst:1411
 msgid ""
 "Note: this function may not be able to retrieve all attributes that getattr "
 "can fetch (like dynamically created attributes) and may find attributes that"
@@ -2152,7 +2162,7 @@ msgstr ""
 "викликають AttributeError). Він також може повертати об’єкти дескрипторів "
 "замість членів екземпляра."
 
-#: ../../library/inspect.rst:1412
+#: ../../library/inspect.rst:1417
 msgid ""
 "If the instance :attr:`~object.__dict__` is shadowed by another member (for "
 "example a property) then this function will be unable to find instance "
@@ -2161,7 +2171,7 @@ msgstr ""
 "Якщо примірник :attr:`~object.__dict__` затінений іншим членом (наприклад, "
 "властивістю), тоді ця функція не зможе знайти члени примірника."
 
-#: ../../library/inspect.rst:1418
+#: ../../library/inspect.rst:1423
 msgid ""
 ":func:`getattr_static` does not resolve descriptors, for example slot "
 "descriptors or getset descriptors on objects implemented in C. The "
@@ -2171,7 +2181,7 @@ msgstr ""
 "слотів або дескриптори getset в об’єктах, реалізованих у C. Об’єкт "
 "дескриптора повертається замість основного атрибута."
 
-#: ../../library/inspect.rst:1422
+#: ../../library/inspect.rst:1427
 msgid ""
 "You can handle these with code like the following. Note that for arbitrary "
 "getset descriptors invoking these may trigger code execution::"
@@ -2179,11 +2189,11 @@ msgstr ""
 "Ви можете впоратися з цим за допомогою такого коду. Зауважте, що виклик "
 "довільних дескрипторів getset може ініціювати виконання коду::"
 
-#: ../../library/inspect.rst:1448
+#: ../../library/inspect.rst:1453
 msgid "Current State of Generators, Coroutines, and Asynchronous Generators"
 msgstr ""
 
-#: ../../library/inspect.rst:1450
+#: ../../library/inspect.rst:1455
 msgid ""
 "When implementing coroutine schedulers and for other advanced uses of "
 "generators, it is useful to determine whether a generator is currently "
@@ -2196,32 +2206,32 @@ msgstr ""
 "очікує на запуск, відновлення чи виконання, чи вже завершив роботу. "
 ":func:`getgeneratorstate` дозволяє легко визначити поточний стан генератора."
 
-#: ../../library/inspect.rst:1458
+#: ../../library/inspect.rst:1463
 msgid "Get current state of a generator-iterator."
 msgstr "Отримати поточний стан генератора-ітератора."
 
-#: ../../library/inspect.rst:1460 ../../library/inspect.rst:1476
-#: ../../library/inspect.rst:1493
+#: ../../library/inspect.rst:1465 ../../library/inspect.rst:1481
+#: ../../library/inspect.rst:1498
 msgid "Possible states are:"
 msgstr "Можливі стани:"
 
-#: ../../library/inspect.rst:1462
+#: ../../library/inspect.rst:1467
 msgid "GEN_CREATED: Waiting to start execution."
 msgstr "GEN_CREATED: Очікування на початок виконання."
 
-#: ../../library/inspect.rst:1463
+#: ../../library/inspect.rst:1468
 msgid "GEN_RUNNING: Currently being executed by the interpreter."
 msgstr "GEN_RUNNING: наразі виконується інтерпретатором."
 
-#: ../../library/inspect.rst:1464
+#: ../../library/inspect.rst:1469
 msgid "GEN_SUSPENDED: Currently suspended at a yield expression."
 msgstr "GEN_SUSPENDED: наразі призупинено на виразі yield."
 
-#: ../../library/inspect.rst:1465
+#: ../../library/inspect.rst:1470
 msgid "GEN_CLOSED: Execution has completed."
 msgstr "GEN_CLOSED: виконання завершено."
 
-#: ../../library/inspect.rst:1471
+#: ../../library/inspect.rst:1476
 msgid ""
 "Get current state of a coroutine object.  The function is intended to be "
 "used with coroutine objects created by :keyword:`async def` functions, but "
@@ -2233,23 +2243,23 @@ msgstr ""
 "def`, але вона приймає будь-який об’єкт, подібний до співпрограми, який має "
 "атрибути ``cr_running`` і ``cr_frame``."
 
-#: ../../library/inspect.rst:1478
+#: ../../library/inspect.rst:1483
 msgid "CORO_CREATED: Waiting to start execution."
 msgstr "CORO_CREATED: Очікування на початок виконання."
 
-#: ../../library/inspect.rst:1479
+#: ../../library/inspect.rst:1484
 msgid "CORO_RUNNING: Currently being executed by the interpreter."
 msgstr "CORO_RUNNING: наразі виконується інтерпретатором."
 
-#: ../../library/inspect.rst:1480
+#: ../../library/inspect.rst:1485
 msgid "CORO_SUSPENDED: Currently suspended at an await expression."
 msgstr "CORO_SUSPENDED: наразі призупинено через вираз очікування."
 
-#: ../../library/inspect.rst:1481
+#: ../../library/inspect.rst:1486
 msgid "CORO_CLOSED: Execution has completed."
 msgstr "CORO_CLOSED: виконання завершено."
 
-#: ../../library/inspect.rst:1487
+#: ../../library/inspect.rst:1492
 msgid ""
 "Get current state of an asynchronous generator object.  The function is "
 "intended to be used with asynchronous iterator objects created by "
@@ -2258,23 +2268,23 @@ msgid ""
 "and ``ag_frame`` attributes."
 msgstr ""
 
-#: ../../library/inspect.rst:1495
+#: ../../library/inspect.rst:1500
 msgid "AGEN_CREATED: Waiting to start execution."
 msgstr ""
 
-#: ../../library/inspect.rst:1496
+#: ../../library/inspect.rst:1501
 msgid "AGEN_RUNNING: Currently being executed by the interpreter."
 msgstr ""
 
-#: ../../library/inspect.rst:1497
+#: ../../library/inspect.rst:1502
 msgid "AGEN_SUSPENDED: Currently suspended at a yield expression."
 msgstr ""
 
-#: ../../library/inspect.rst:1498
+#: ../../library/inspect.rst:1503
 msgid "AGEN_CLOSED: Execution has completed."
 msgstr ""
 
-#: ../../library/inspect.rst:1502
+#: ../../library/inspect.rst:1507
 msgid ""
 "The current internal state of the generator can also be queried. This is "
 "mostly useful for testing purposes, to ensure that internal state is being "
@@ -2284,7 +2294,7 @@ msgstr ""
 "корисно для цілей тестування, щоб переконатися, що внутрішній стан "
 "оновлюється належним чином:"
 
-#: ../../library/inspect.rst:1508
+#: ../../library/inspect.rst:1513
 msgid ""
 "Get the mapping of live local variables in *generator* to their current "
 "values.  A dictionary is returned that maps from variable names to values. "
@@ -2296,7 +2306,7 @@ msgstr ""
 " значення. Це еквівалент виклику :func:`locals` у тілі генератора, і "
 "застосовуються всі ті самі застереження."
 
-#: ../../library/inspect.rst:1513
+#: ../../library/inspect.rst:1518
 msgid ""
 "If *generator* is a :term:`generator` with no currently associated frame, "
 "then an empty dictionary is returned.  :exc:`TypeError` is raised if "
@@ -2306,7 +2316,7 @@ msgstr ""
 "порожній словник. :exc:`TypeError` виникає, якщо *generator* не є об’єктом "
 "генератора Python."
 
-#: ../../library/inspect.rst:1519
+#: ../../library/inspect.rst:1524
 msgid ""
 "This function relies on the generator exposing a Python stack frame for "
 "introspection, which isn't guaranteed to be the case in all implementations "
@@ -2317,7 +2327,7 @@ msgstr ""
 " самоаналізу, що не гарантовано буде у всіх реалізаціях Python. У таких "
 "випадках ця функція завжди повертатиме порожній словник."
 
-#: ../../library/inspect.rst:1528
+#: ../../library/inspect.rst:1533
 msgid ""
 "This function is analogous to :func:`~inspect.getgeneratorlocals`, but works"
 " for coroutine objects created by :keyword:`async def` functions."
@@ -2325,18 +2335,18 @@ msgstr ""
 "Ця функція аналогічна :func:`~inspect.getgeneratorlocals`, але працює для "
 "об’єктів співпрограми, створених функціями :keyword:`async def`."
 
-#: ../../library/inspect.rst:1535
+#: ../../library/inspect.rst:1540
 msgid ""
 "This function is analogous to :func:`~inspect.getgeneratorlocals`, but works"
 " for asynchronous generator objects created by :keyword:`async def` "
 "functions which use the :keyword:`yield` statement."
 msgstr ""
 
-#: ../../library/inspect.rst:1545
+#: ../../library/inspect.rst:1550
 msgid "Code Objects Bit Flags"
 msgstr "Кодові об’єкти Бітові прапорці"
 
-#: ../../library/inspect.rst:1547
+#: ../../library/inspect.rst:1552
 msgid ""
 "Python code objects have a ``co_flags`` attribute, which is a bitmap of the "
 "following flags:"
@@ -2344,11 +2354,11 @@ msgstr ""
 "Об’єкти коду Python мають атрибут ``co_flags``, який є бітовою картою таких "
 "прапорів:"
 
-#: ../../library/inspect.rst:1552
+#: ../../library/inspect.rst:1557
 msgid "The code object is optimized, using fast locals."
 msgstr "Об’єкт коду оптимізовано за допомогою швидких локальних кодів."
 
-#: ../../library/inspect.rst:1556
+#: ../../library/inspect.rst:1561
 msgid ""
 "If set, a new dict will be created for the frame's ``f_locals`` when the "
 "code object is executed."
@@ -2356,19 +2366,19 @@ msgstr ""
 "Якщо встановлено, новий dict буде створено для ``f_locals`` кадру під час "
 "виконання об’єкта коду."
 
-#: ../../library/inspect.rst:1561
+#: ../../library/inspect.rst:1566
 msgid "The code object has a variable positional parameter (``*args``-like)."
 msgstr "Об’єкт коду має змінний позиційний параметр (``*args``)."
 
-#: ../../library/inspect.rst:1565
+#: ../../library/inspect.rst:1570
 msgid "The code object has a variable keyword parameter (``**kwargs``-like)."
 msgstr "Об’єкт коду має змінний параметр ключового слова (``**kwargs``-like)."
 
-#: ../../library/inspect.rst:1569
+#: ../../library/inspect.rst:1574
 msgid "The flag is set when the code object is a nested function."
 msgstr "Прапорець встановлюється, коли об’єкт коду є вкладеною функцією."
 
-#: ../../library/inspect.rst:1573
+#: ../../library/inspect.rst:1578
 msgid ""
 "The flag is set when the code object is a generator function, i.e. a "
 "generator object is returned when the code object is executed."
@@ -2376,7 +2386,7 @@ msgstr ""
 "Прапорець встановлюється, коли об’єкт коду є функцією генератора, тобто "
 "об’єкт генератора повертається під час виконання об’єкта коду."
 
-#: ../../library/inspect.rst:1578
+#: ../../library/inspect.rst:1583
 msgid ""
 "The flag is set when the code object is a coroutine function. When the code "
 "object is executed it returns a coroutine object. See :pep:`492` for more "
@@ -2386,7 +2396,7 @@ msgstr ""
 "виконується, він повертає об’єкт співпрограми. Дивіться :pep:`492` для більш"
 " детальної інформації."
 
-#: ../../library/inspect.rst:1586
+#: ../../library/inspect.rst:1591
 msgid ""
 "The flag is used to transform generators into generator-based coroutines.  "
 "Generator objects with this flag can be used in ``await`` expression, and "
@@ -2397,7 +2407,7 @@ msgstr ""
 "у виразі ``очікування`` і можуть ``поступати від`` об’єктів співпрограми. "
 "Дивіться :pep:`492` для більш детальної інформації."
 
-#: ../../library/inspect.rst:1595
+#: ../../library/inspect.rst:1600
 msgid ""
 "The flag is set when the code object is an asynchronous generator function."
 "  When the code object is executed it returns an asynchronous generator "
@@ -2407,7 +2417,7 @@ msgstr ""
 "генератора. Коли об’єкт коду виконується, він повертає об’єкт асинхронного "
 "генератора. Дивіться :pep:`525` для більш детальної інформації."
 
-#: ../../library/inspect.rst:1602
+#: ../../library/inspect.rst:1607
 msgid ""
 "The flags are specific to CPython, and may not be defined in other Python "
 "implementations.  Furthermore, the flags are an implementation detail, and "
@@ -2420,26 +2430,26 @@ msgstr ""
 "використовувати загальнодоступні API з модуля :mod:`inspect` для будь-яких "
 "потреб самоаналізу."
 
-#: ../../library/inspect.rst:1610
+#: ../../library/inspect.rst:1615
 msgid "Buffer flags"
 msgstr ""
 
-#: ../../library/inspect.rst:1614
+#: ../../library/inspect.rst:1619
 msgid ""
 "This is an :class:`enum.IntFlag` that represents the flags that can be "
 "passed to the :meth:`~object.__buffer__` method of objects implementing the "
 ":ref:`buffer protocol <bufferobjects>`."
 msgstr ""
 
-#: ../../library/inspect.rst:1618
+#: ../../library/inspect.rst:1623
 msgid "The meaning of the flags is explained at :ref:`buffer-request-types`."
 msgstr ""
 
-#: ../../library/inspect.rst:1645
+#: ../../library/inspect.rst:1650
 msgid "Command Line Interface"
 msgstr "Інтерфейс командного рядка"
 
-#: ../../library/inspect.rst:1647
+#: ../../library/inspect.rst:1652
 msgid ""
 "The :mod:`inspect` module also provides a basic introspection capability "
 "from the command line."
@@ -2447,7 +2457,7 @@ msgstr ""
 "Модуль :mod:`inspect` також надає базову можливість самоаналізу з командного"
 " рядка."
 
-#: ../../library/inspect.rst:1652
+#: ../../library/inspect.rst:1657
 msgid ""
 "By default, accepts the name of a module and prints the source of that "
 "module. A class or function within the module can be printed instead by "
@@ -2457,7 +2467,7 @@ msgstr ""
 "Натомість клас або функцію в модулі можна надрукувати, додавши двокрапку та "
 "кваліфіковане ім’я цільового об’єкта."
 
-#: ../../library/inspect.rst:1658
+#: ../../library/inspect.rst:1663
 msgid ""
 "Print information about the specified object rather than the source code"
 msgstr "Надрукувати інформацію про вказаний об’єкт, а не вихідний код"
