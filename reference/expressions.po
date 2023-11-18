@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-10 14:13+0000\n"
+"POT-Creation-Date: 2023-11-17 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1592,7 +1592,7 @@ msgstr ""
 "Клас повинен визначати метод :meth:`__call__`; тоді ефект буде таким самим, "
 "якби цей метод був викликаний."
 
-#: ../../reference/expressions.rst:1156 ../../reference/expressions.rst:1937
+#: ../../reference/expressions.rst:1156 ../../reference/expressions.rst:1938
 msgid "Await expression"
 msgstr "Очікуйте вираження"
 
@@ -2567,24 +2567,25 @@ msgstr "Або при обробці потоку файлів у частина
 
 #: ../../reference/expressions.rst:1777
 msgid ""
-"Assignment expressions must be surrounded by parentheses when used as sub-"
-"expressions in slicing, conditional, lambda, keyword-argument, and "
-"comprehension-if expressions and in ``assert`` and ``with`` statements. In "
-"all other places where they can be used, parentheses are not required, "
-"including in ``if`` and ``while`` statements."
+"Assignment expressions must be surrounded by parentheses when used as "
+"expression statements and when used as sub-expressions in slicing, "
+"conditional, lambda, keyword-argument, and comprehension-if expressions and "
+"in ``assert``, ``with``, and ``assignment`` statements. In all other places "
+"where they can be used, parentheses are not required, including in ``if`` "
+"and ``while`` statements."
 msgstr ""
 
-#: ../../reference/expressions.rst:1784
+#: ../../reference/expressions.rst:1785
 msgid "See :pep:`572` for more details about assignment expressions."
 msgstr ""
 "Перегляньте :pep:`572` для отримання додаткової інформації про вирази "
 "присвоєння."
 
-#: ../../reference/expressions.rst:1791
+#: ../../reference/expressions.rst:1792
 msgid "Conditional expressions"
 msgstr "Умовні вирази"
 
-#: ../../reference/expressions.rst:1803
+#: ../../reference/expressions.rst:1804
 msgid ""
 "Conditional expressions (sometimes called a \"ternary operator\") have the "
 "lowest priority of all Python operations."
@@ -2592,7 +2593,7 @@ msgstr ""
 "Умовні вирази (іноді їх називають \"потрійним оператором\") мають найнижчий "
 "пріоритет з усіх операцій Python."
 
-#: ../../reference/expressions.rst:1806
+#: ../../reference/expressions.rst:1807
 msgid ""
 "The expression ``x if C else y`` first evaluates the condition, *C* rather "
 "than *x*. If *C* is true, *x* is evaluated and its value is returned; "
@@ -2602,17 +2603,17 @@ msgstr ""
 " *x* обчислюється і повертається його значення; інакше обчислюється *y* і "
 "повертається його значення."
 
-#: ../../reference/expressions.rst:1810
+#: ../../reference/expressions.rst:1811
 msgid "See :pep:`308` for more details about conditional expressions."
 msgstr ""
 "Перегляньте :pep:`308` для отримання додаткової інформації про умовні "
 "вирази."
 
-#: ../../reference/expressions.rst:1817
+#: ../../reference/expressions.rst:1818
 msgid "Lambdas"
 msgstr "Лямбда"
 
-#: ../../reference/expressions.rst:1828
+#: ../../reference/expressions.rst:1829
 msgid ""
 "Lambda expressions (sometimes called lambda forms) are used to create "
 "anonymous functions. The expression ``lambda parameters: expression`` yields"
@@ -2624,7 +2625,7 @@ msgstr ""
 "функції. Безіменний об’єкт поводиться як об’єкт-функція, визначений за "
 "допомогою:"
 
-#: ../../reference/expressions.rst:1837
+#: ../../reference/expressions.rst:1838
 msgid ""
 "See section :ref:`function` for the syntax of parameter lists.  Note that "
 "functions created with lambda expressions cannot contain statements or "
@@ -2634,11 +2635,11 @@ msgstr ""
 "Зауважте, що функції, створені за допомогою лямбда-виразів, не можуть "
 "містити оператори чи анотації."
 
-#: ../../reference/expressions.rst:1845
+#: ../../reference/expressions.rst:1846
 msgid "Expression lists"
 msgstr "Списки виразів"
 
-#: ../../reference/expressions.rst:1859
+#: ../../reference/expressions.rst:1860
 msgid ""
 "Except when part of a list or set display, an expression list containing at "
 "least one comma yields a tuple.  The length of the tuple is the number of "
@@ -2648,7 +2649,7 @@ msgstr ""
 " виразів, що містить принаймні одну кому, дає кортеж. Довжина кортежу — це "
 "кількість виразів у списку. Вирази обчислюються зліва направо."
 
-#: ../../reference/expressions.rst:1868
+#: ../../reference/expressions.rst:1869
 msgid ""
 "An asterisk ``*`` denotes :dfn:`iterable unpacking`.  Its operand must be an"
 " :term:`iterable`.  The iterable is expanded into a sequence of items, which"
@@ -2658,14 +2659,14 @@ msgstr ""
 ":term:`iterable`. Ітерація розгортається в послідовність елементів, які "
 "включені в новий кортеж, список або набір на місці розпакування."
 
-#: ../../reference/expressions.rst:1873
+#: ../../reference/expressions.rst:1874
 msgid ""
 "Iterable unpacking in expression lists, originally proposed by :pep:`448`."
 msgstr ""
 "Ітераційне розпакування в списках виразів, спочатку запропоноване "
 ":pep:`448`."
 
-#: ../../reference/expressions.rst:1878
+#: ../../reference/expressions.rst:1879
 msgid ""
 "The trailing comma is required only to create a single tuple (a.k.a. a "
 "*singleton*); it is optional in all other cases.  A single expression "
@@ -2679,11 +2680,11 @@ msgstr ""
 " створити порожній кортеж, використовуйте порожню пару круглих дужок: "
 "``()``.)"
 
-#: ../../reference/expressions.rst:1888
+#: ../../reference/expressions.rst:1889
 msgid "Evaluation order"
 msgstr "Порядок оцінювання"
 
-#: ../../reference/expressions.rst:1892
+#: ../../reference/expressions.rst:1893
 msgid ""
 "Python evaluates expressions from left to right.  Notice that while "
 "evaluating an assignment, the right-hand side is evaluated before the left-"
@@ -2692,7 +2693,7 @@ msgstr ""
 "Python обчислює вирази зліва направо. Зауважте, що під час оцінювання "
 "завдання права частина оцінюється перед лівою."
 
-#: ../../reference/expressions.rst:1895
+#: ../../reference/expressions.rst:1896
 msgid ""
 "In the following lines, expressions will be evaluated in the arithmetic "
 "order of their suffixes::"
@@ -2700,11 +2701,11 @@ msgstr ""
 "У наступних рядках вирази обчислюватимуться в арифметичному порядку їх "
 "суфіксів:"
 
-#: ../../reference/expressions.rst:1909
+#: ../../reference/expressions.rst:1910
 msgid "Operator precedence"
 msgstr "Пріоритет оператора"
 
-#: ../../reference/expressions.rst:1914
+#: ../../reference/expressions.rst:1915
 msgid ""
 "The following table summarizes the operator precedence in Python, from "
 "highest precedence (most binding) to lowest precedence (least binding).  "
@@ -2714,7 +2715,7 @@ msgid ""
 "group from right to left)."
 msgstr ""
 
-#: ../../reference/expressions.rst:1920
+#: ../../reference/expressions.rst:1921
 msgid ""
 "Note that comparisons, membership tests, and identity tests, all have the "
 "same precedence and have a left-to-right chaining feature as described in "
@@ -2724,23 +2725,23 @@ msgstr ""
 "однаковий пріоритет і функцію ланцюжка зліва направо, як описано в розділі "
 ":ref:`comparisons`."
 
-#: ../../reference/expressions.rst:1926
+#: ../../reference/expressions.rst:1927
 msgid "Operator"
 msgstr "Оператор"
 
-#: ../../reference/expressions.rst:1926
+#: ../../reference/expressions.rst:1927
 msgid "Description"
 msgstr "опис"
 
-#: ../../reference/expressions.rst:1928
+#: ../../reference/expressions.rst:1929
 msgid "``(expressions...)``,"
 msgstr "``(вирази...)``,"
 
-#: ../../reference/expressions.rst:1930
+#: ../../reference/expressions.rst:1931
 msgid "``[expressions...]``, ``{key: value...}``, ``{expressions...}``"
 msgstr "``[вирази...]``, ``{ключ: значення...}``, ``{вирази...}``"
 
-#: ../../reference/expressions.rst:1928
+#: ../../reference/expressions.rst:1929
 msgid ""
 "Binding or parenthesized expression, list display, dictionary display, set "
 "display"
@@ -2748,86 +2749,86 @@ msgstr ""
 "Прив’язка або вираз у дужках, відображення списку, відображення словника, "
 "відображення набору"
 
-#: ../../reference/expressions.rst:1934
+#: ../../reference/expressions.rst:1935
 msgid "``x[index]``, ``x[index:index]``, ``x(arguments...)``, ``x.attribute``"
 msgstr ""
 "``x[index]``, ``x[index:index]``, ``x(arguments...)``, ``x.attribute``"
 
-#: ../../reference/expressions.rst:1934
+#: ../../reference/expressions.rst:1935
 msgid "Subscription, slicing, call, attribute reference"
 msgstr "Підписка, нарізка, виклик, посилання на атрибути"
 
-#: ../../reference/expressions.rst:1937
+#: ../../reference/expressions.rst:1938
 msgid ":keyword:`await x <await>`"
 msgstr ":keyword:`await x <await>`"
 
-#: ../../reference/expressions.rst:1939
+#: ../../reference/expressions.rst:1940
 msgid "``**``"
 msgstr "``**``"
 
-#: ../../reference/expressions.rst:1939
+#: ../../reference/expressions.rst:1940
 msgid "Exponentiation [#]_"
 msgstr "Піднесення до степеня [#]_"
 
-#: ../../reference/expressions.rst:1941
+#: ../../reference/expressions.rst:1942
 msgid "``+x``, ``-x``, ``~x``"
 msgstr "``+x``, ``-x``, ``~x``"
 
-#: ../../reference/expressions.rst:1941
+#: ../../reference/expressions.rst:1942
 msgid "Positive, negative, bitwise NOT"
 msgstr "Позитивне, негативне, побітове НІ"
 
-#: ../../reference/expressions.rst:1943
+#: ../../reference/expressions.rst:1944
 msgid "``*``, ``@``, ``/``, ``//``, ``%``"
 msgstr "``*``, ``@``, ``/``, ``//``, ``%``"
 
-#: ../../reference/expressions.rst:1943
+#: ../../reference/expressions.rst:1944
 msgid ""
 "Multiplication, matrix multiplication, division, floor division, remainder "
 "[#]_"
 msgstr "Множення, матричне множення, ділення, поверхове ділення, залишок [#]_"
 
-#: ../../reference/expressions.rst:1947
+#: ../../reference/expressions.rst:1948
 msgid "``+``, ``-``"
 msgstr "``+``, ``-``"
 
-#: ../../reference/expressions.rst:1947
+#: ../../reference/expressions.rst:1948
 msgid "Addition and subtraction"
 msgstr "Додавання і віднімання"
 
-#: ../../reference/expressions.rst:1949
+#: ../../reference/expressions.rst:1950
 msgid "``<<``, ``>>``"
 msgstr "``<<``, ``>>``"
 
-#: ../../reference/expressions.rst:1949
+#: ../../reference/expressions.rst:1950
 msgid "Shifts"
 msgstr "Зміни"
 
-#: ../../reference/expressions.rst:1951
+#: ../../reference/expressions.rst:1952
 msgid "``&``"
 msgstr "``&``"
 
-#: ../../reference/expressions.rst:1951
+#: ../../reference/expressions.rst:1952
 msgid "Bitwise AND"
 msgstr "Побітове І"
 
-#: ../../reference/expressions.rst:1953
+#: ../../reference/expressions.rst:1954
 msgid "``^``"
 msgstr "``^``"
 
-#: ../../reference/expressions.rst:1953
+#: ../../reference/expressions.rst:1954
 msgid "Bitwise XOR"
 msgstr "Побітове XOR"
 
-#: ../../reference/expressions.rst:1955
+#: ../../reference/expressions.rst:1956
 msgid "``|``"
 msgstr "``|``"
 
-#: ../../reference/expressions.rst:1955
+#: ../../reference/expressions.rst:1956
 msgid "Bitwise OR"
 msgstr "Порозрядне АБО"
 
-#: ../../reference/expressions.rst:1957
+#: ../../reference/expressions.rst:1958
 msgid ""
 ":keyword:`in`, :keyword:`not in`, :keyword:`is`, :keyword:`is not`, ``<``, "
 "``<=``, ``>``, ``>=``, ``!=``, ``==``"
@@ -2835,63 +2836,63 @@ msgstr ""
 ":keyword:`in`, :keyword:`not in`, :keyword:`is`, :keyword:`is not`, ``<``, "
 "``<=``, ``>``, ``>=``, ``!=``, ``==``"
 
-#: ../../reference/expressions.rst:1957
+#: ../../reference/expressions.rst:1958
 msgid "Comparisons, including membership tests and identity tests"
 msgstr "Порівняння, включаючи тести на приналежність і тести на ідентифікацію"
 
-#: ../../reference/expressions.rst:1961
+#: ../../reference/expressions.rst:1962
 msgid ":keyword:`not x <not>`"
 msgstr ":keyword:`not x <not>`"
 
-#: ../../reference/expressions.rst:1961
+#: ../../reference/expressions.rst:1962
 msgid "Boolean NOT"
 msgstr "Логічне НІ"
 
-#: ../../reference/expressions.rst:1963
+#: ../../reference/expressions.rst:1964
 msgid ":keyword:`and`"
 msgstr ":keyword:`and`"
 
-#: ../../reference/expressions.rst:1963
+#: ../../reference/expressions.rst:1964
 msgid "Boolean AND"
 msgstr "Логічне І"
 
-#: ../../reference/expressions.rst:1965
+#: ../../reference/expressions.rst:1966
 msgid ":keyword:`or`"
 msgstr ":keyword:`or`"
 
-#: ../../reference/expressions.rst:1965
+#: ../../reference/expressions.rst:1966
 msgid "Boolean OR"
 msgstr "Логічне АБО"
 
-#: ../../reference/expressions.rst:1967
+#: ../../reference/expressions.rst:1968
 msgid ":keyword:`if <if_expr>` -- :keyword:`!else`"
 msgstr ":keyword:`if <if_expr>` -- :keyword:`!else`"
 
-#: ../../reference/expressions.rst:1967
+#: ../../reference/expressions.rst:1968
 msgid "Conditional expression"
 msgstr "Умовний вираз"
 
-#: ../../reference/expressions.rst:1969
+#: ../../reference/expressions.rst:1970
 msgid ":keyword:`lambda`"
 msgstr ":keyword:`lambda`"
 
-#: ../../reference/expressions.rst:1969
+#: ../../reference/expressions.rst:1970
 msgid "Lambda expression"
 msgstr "Лямбда-вираз"
 
-#: ../../reference/expressions.rst:1971
+#: ../../reference/expressions.rst:1972
 msgid "``:=``"
 msgstr "``:=``"
 
-#: ../../reference/expressions.rst:1971
+#: ../../reference/expressions.rst:1972
 msgid "Assignment expression"
 msgstr "Вираз присвоєння"
 
-#: ../../reference/expressions.rst:1976
+#: ../../reference/expressions.rst:1977
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../reference/expressions.rst:1977
+#: ../../reference/expressions.rst:1978
 msgid ""
 "While ``abs(x%y) < abs(y)`` is true mathematically, for floats it may not be"
 " true numerically due to roundoff.  For example, and assuming a platform on "
@@ -2911,7 +2912,7 @@ msgstr ""
 "збігається зі знаком першого аргументу, і тому в цьому випадку повертає "
 "``-1e-100``. Який підхід є більш доцільним, залежить від програми."
 
-#: ../../reference/expressions.rst:1986
+#: ../../reference/expressions.rst:1987
 msgid ""
 "If x is very close to an exact integer multiple of y, it's possible for "
 "``x//y`` to be one larger than ``(x-x%y)//y`` due to rounding.  In such "
@@ -2923,7 +2924,7 @@ msgstr ""
 "Python повертає останній результат, щоб зберегти те, що ``divmod(x,y)[0] * y"
 " + x % y`` буде дуже близьким до ``x``."
 
-#: ../../reference/expressions.rst:1991
+#: ../../reference/expressions.rst:1992
 msgid ""
 "The Unicode standard distinguishes between :dfn:`code points` (e.g. U+0041) "
 "and :dfn:`abstract characters` (e.g. \"LATIN CAPITAL LETTER A\"). While most"
@@ -2947,7 +2948,7 @@ msgstr ""
 "коду U+0043 (ВЕЛИКА ЛАТИНСЬКА ЛІТЕРА C), за якою йде :dfn:`combining "
 "character` у позиції коду U+0327 (КОМБІНУЮЧА CEDILLA)."
 
-#: ../../reference/expressions.rst:2002
+#: ../../reference/expressions.rst:2003
 msgid ""
 "The comparison operators on strings compare at the level of Unicode code "
 "points. This may be counter-intuitive to humans.  For example, ``\"\\u00C7\""
@@ -2959,7 +2960,7 @@ msgstr ""
 "\"\\u0043\\u0327\"`` є ``False``, навіть якщо обидва рядки представляють той"
 " самий абстрактний символ \"ЛАТИНСЬКА ВЕЛИКА ЛІТЕРА C З ЦЕДІЛЬЄЮ\"."
 
-#: ../../reference/expressions.rst:2007
+#: ../../reference/expressions.rst:2008
 msgid ""
 "To compare strings at the level of abstract characters (that is, in a way "
 "intuitive to humans), use :func:`unicodedata.normalize`."
@@ -2967,7 +2968,7 @@ msgstr ""
 "Щоб порівняти рядки на рівні абстрактних символів (тобто інтуїтивно "
 "зрозумілим людям), використовуйте :func:`unicodedata.normalize`."
 
-#: ../../reference/expressions.rst:2010
+#: ../../reference/expressions.rst:2011
 msgid ""
 "Due to automatic garbage-collection, free lists, and the dynamic nature of "
 "descriptors, you may notice seemingly unusual behaviour in certain uses of "
@@ -2980,7 +2981,7 @@ msgstr ""
 " екземплярів або константами. Щоб дізнатися більше, перегляньте їхню "
 "документацію."
 
-#: ../../reference/expressions.rst:2015
+#: ../../reference/expressions.rst:2016
 msgid ""
 "The power operator ``**`` binds less tightly than an arithmetic or bitwise "
 "unary operator on its right, that is, ``2**-1`` is ``0.5``."
@@ -2988,7 +2989,7 @@ msgstr ""
 "Оператор степені ``**`` прив’язує менш тісно, ніж арифметичний або "
 "порозрядний унарний оператор справа, тобто ``2**-1`` дорівнює ``0,5``."
 
-#: ../../reference/expressions.rst:2018
+#: ../../reference/expressions.rst:2019
 msgid ""
 "The ``%`` operator is also used for string formatting; the same precedence "
 "applies."
@@ -2998,8 +2999,8 @@ msgstr ""
 
 #: ../../reference/expressions.rst:8 ../../reference/expressions.rst:362
 #: ../../reference/expressions.rst:417 ../../reference/expressions.rst:1706
-#: ../../reference/expressions.rst:1793 ../../reference/expressions.rst:1819
-#: ../../reference/expressions.rst:1847
+#: ../../reference/expressions.rst:1794 ../../reference/expressions.rst:1820
+#: ../../reference/expressions.rst:1848
 msgid "expression"
 msgstr "вираз"
 
@@ -3084,7 +3085,7 @@ msgstr "тип"
 #: ../../reference/expressions.rst:1113 ../../reference/expressions.rst:1113
 #: ../../reference/expressions.rst:1113 ../../reference/expressions.rst:1127
 #: ../../reference/expressions.rst:1134 ../../reference/expressions.rst:1134
-#: ../../reference/expressions.rst:1671 ../../reference/expressions.rst:1857
+#: ../../reference/expressions.rst:1671 ../../reference/expressions.rst:1858
 msgid "object"
 msgstr "об'єкт"
 
@@ -3106,18 +3107,18 @@ msgid "empty"
 msgstr ""
 
 #: ../../reference/expressions.rst:146 ../../reference/expressions.rst:835
-#: ../../reference/expressions.rst:908 ../../reference/expressions.rst:1857
+#: ../../reference/expressions.rst:908 ../../reference/expressions.rst:1858
 msgid "tuple"
 msgstr "кортеж"
 
-#: ../../reference/expressions.rst:152 ../../reference/expressions.rst:1876
+#: ../../reference/expressions.rst:152 ../../reference/expressions.rst:1877
 msgid "comma"
 msgstr ""
 
 #: ../../reference/expressions.rst:152 ../../reference/expressions.rst:244
 #: ../../reference/expressions.rst:270 ../../reference/expressions.rst:298
 #: ../../reference/expressions.rst:902 ../../reference/expressions.rst:952
-#: ../../reference/expressions.rst:1847
+#: ../../reference/expressions.rst:1848
 msgid ", (comma)"
 msgstr ""
 
@@ -3135,7 +3136,7 @@ msgstr ""
 msgid "in comprehensions"
 msgstr ""
 
-#: ../../reference/expressions.rst:177 ../../reference/expressions.rst:1793
+#: ../../reference/expressions.rst:177 ../../reference/expressions.rst:1794
 msgid "if"
 msgstr ""
 
@@ -3150,7 +3151,7 @@ msgstr ""
 #: ../../reference/expressions.rst:244 ../../reference/expressions.rst:244
 #: ../../reference/expressions.rst:244 ../../reference/expressions.rst:244
 #: ../../reference/expressions.rst:812 ../../reference/expressions.rst:835
-#: ../../reference/expressions.rst:908 ../../reference/expressions.rst:1847
+#: ../../reference/expressions.rst:908 ../../reference/expressions.rst:1848
 msgid "list"
 msgstr "список"
 
@@ -3168,7 +3169,7 @@ msgid "list expression"
 msgstr ""
 
 #: ../../reference/expressions.rst:244 ../../reference/expressions.rst:270
-#: ../../reference/expressions.rst:1847
+#: ../../reference/expressions.rst:1848
 msgid "expression list"
 msgstr ""
 
@@ -3208,7 +3209,7 @@ msgid "dictionary expression"
 msgstr ""
 
 #: ../../reference/expressions.rst:298 ../../reference/expressions.rst:902
-#: ../../reference/expressions.rst:1819
+#: ../../reference/expressions.rst:1820
 msgid ": (colon)"
 msgstr ""
 
@@ -3221,7 +3222,7 @@ msgid "in dictionary displays"
 msgstr ""
 
 #: ../../reference/expressions.rst:324 ../../reference/expressions.rst:1035
-#: ../../reference/expressions.rst:1864
+#: ../../reference/expressions.rst:1865
 msgid "unpacking"
 msgstr ""
 
@@ -3260,7 +3261,7 @@ msgstr "від"
 #: ../../reference/expressions.rst:417 ../../reference/expressions.rst:1100
 #: ../../reference/expressions.rst:1100 ../../reference/expressions.rst:1100
 #: ../../reference/expressions.rst:1113 ../../reference/expressions.rst:1113
-#: ../../reference/expressions.rst:1819
+#: ../../reference/expressions.rst:1820
 msgid "function"
 msgstr "функція"
 
@@ -3406,7 +3407,7 @@ msgid "parameter"
 msgstr "параметр"
 
 #: ../../reference/expressions.rst:1035 ../../reference/expressions.rst:1268
-#: ../../reference/expressions.rst:1864
+#: ../../reference/expressions.rst:1865
 msgid "* (asterisk)"
 msgstr ""
 
@@ -3475,8 +3476,8 @@ msgstr ""
 #: ../../reference/expressions.rst:1671 ../../reference/expressions.rst:1671
 #: ../../reference/expressions.rst:1680 ../../reference/expressions.rst:1680
 #: ../../reference/expressions.rst:1722 ../../reference/expressions.rst:1727
-#: ../../reference/expressions.rst:1732 ../../reference/expressions.rst:1793
-#: ../../reference/expressions.rst:1911
+#: ../../reference/expressions.rst:1732 ../../reference/expressions.rst:1794
+#: ../../reference/expressions.rst:1912
 msgid "operator"
 msgstr "оператор"
 
@@ -3729,58 +3730,58 @@ msgstr ""
 msgid "named expression"
 msgstr ""
 
-#: ../../reference/expressions.rst:1793
+#: ../../reference/expressions.rst:1794
 msgid "conditional"
 msgstr ""
 
-#: ../../reference/expressions.rst:1793
+#: ../../reference/expressions.rst:1794
 msgid "ternary"
 msgstr ""
 
-#: ../../reference/expressions.rst:1793 ../../reference/expressions.rst:1793
+#: ../../reference/expressions.rst:1794 ../../reference/expressions.rst:1794
 msgid "conditional expression"
 msgstr ""
 
-#: ../../reference/expressions.rst:1793
+#: ../../reference/expressions.rst:1794
 msgid "else"
 msgstr ""
 
-#: ../../reference/expressions.rst:1819 ../../reference/expressions.rst:1819
+#: ../../reference/expressions.rst:1820 ../../reference/expressions.rst:1820
 msgid "lambda"
 msgstr "лямбда"
 
-#: ../../reference/expressions.rst:1819
+#: ../../reference/expressions.rst:1820
 msgid "form"
 msgstr ""
 
-#: ../../reference/expressions.rst:1819
+#: ../../reference/expressions.rst:1820
 msgid "anonymous"
 msgstr ""
 
-#: ../../reference/expressions.rst:1819
+#: ../../reference/expressions.rst:1820
 msgid "lambda expression"
 msgstr ""
 
-#: ../../reference/expressions.rst:1864
+#: ../../reference/expressions.rst:1865
 msgid "iterable"
 msgstr "ітерований"
 
-#: ../../reference/expressions.rst:1864
+#: ../../reference/expressions.rst:1865
 msgid "in expression lists"
 msgstr ""
 
-#: ../../reference/expressions.rst:1876
+#: ../../reference/expressions.rst:1877
 msgid "trailing"
 msgstr ""
 
-#: ../../reference/expressions.rst:1890
+#: ../../reference/expressions.rst:1891
 msgid "evaluation"
 msgstr ""
 
-#: ../../reference/expressions.rst:1890
+#: ../../reference/expressions.rst:1891
 msgid "order"
 msgstr ""
 
-#: ../../reference/expressions.rst:1911
+#: ../../reference/expressions.rst:1912
 msgid "precedence"
 msgstr ""
