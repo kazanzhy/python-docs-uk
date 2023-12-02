@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-17 14:14+0000\n"
+"POT-Creation-Date: 2023-12-01 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -3542,11 +3542,11 @@ msgstr ""
 "Параметр *defaultTest* було змінено, щоб також приймати ітерацію імен "
 "тестів."
 
-#: ../../library/unittest.rst:2322
+#: ../../library/unittest.rst:2324
 msgid "load_tests Protocol"
 msgstr "протокол load_tests"
 
-#: ../../library/unittest.rst:2326
+#: ../../library/unittest.rst:2328
 msgid ""
 "Modules or packages can customize how tests are loaded from them during "
 "normal test runs or test discovery by implementing a function called "
@@ -3556,7 +3556,7 @@ msgstr ""
 "час звичайних тестових прогонів або виявлення тестів, реалізувавши функцію "
 "під назвою ``load_tests``."
 
-#: ../../library/unittest.rst:2329
+#: ../../library/unittest.rst:2331
 msgid ""
 "If a test module defines ``load_tests`` it will be called by "
 ":meth:`TestLoader.loadTestsFromModule` with the following arguments::"
@@ -3564,7 +3564,7 @@ msgstr ""
 "Якщо тестовий модуль визначає ``load_tests``, він буде викликаний "
 ":meth:`TestLoader.loadTestsFromModule` з такими аргументами::"
 
-#: ../../library/unittest.rst:2334
+#: ../../library/unittest.rst:2336
 msgid ""
 "where *pattern* is passed straight through from ``loadTestsFromModule``.  It"
 " defaults to ``None``."
@@ -3572,11 +3572,11 @@ msgstr ""
 "де *шаблон* передається безпосередньо з ``loadTestsFromModule``. За "
 "замовчуванням ``None``."
 
-#: ../../library/unittest.rst:2337
+#: ../../library/unittest.rst:2339
 msgid "It should return a :class:`TestSuite`."
 msgstr "Він має повернути :class:`TestSuite`."
 
-#: ../../library/unittest.rst:2339
+#: ../../library/unittest.rst:2341
 msgid ""
 "*loader* is the instance of :class:`TestLoader` doing the loading. "
 "*standard_tests* are the tests that would be loaded by default from the "
@@ -3590,7 +3590,7 @@ msgstr ""
 "стандартного набору тестів. Третій аргумент використовується під час "
 "завантаження пакетів у рамках виявлення тесту."
 
-#: ../../library/unittest.rst:2345
+#: ../../library/unittest.rst:2347
 msgid ""
 "A typical ``load_tests`` function that loads tests from a specific set of "
 ":class:`TestCase` classes may look like::"
@@ -3598,7 +3598,7 @@ msgstr ""
 "Типова функція ``load_tests``, яка завантажує тести з певного набору класів "
 ":class:`TestCase`, може виглядати так:"
 
-#: ../../library/unittest.rst:2357
+#: ../../library/unittest.rst:2359
 msgid ""
 "If discovery is started in a directory containing a package, either from the"
 " command line or by calling :meth:`TestLoader.discover`, then the package "
@@ -3614,7 +3614,7 @@ msgstr ""
 "іншому випадку виявлення тестів пакета буде залишено до ``load_tests``, який"
 " викликається з такими аргументами::"
 
-#: ../../library/unittest.rst:2366
+#: ../../library/unittest.rst:2368
 msgid ""
 "This should return a :class:`TestSuite` representing all the tests from the "
 "package. (``standard_tests`` will only contain tests collected from "
@@ -3623,7 +3623,7 @@ msgstr ""
 "Це має повернути :class:`TestSuite`, що представляє всі тести з пакета. "
 "(``standard_tests`` міститиме лише тести, зібрані з :file:`__init__.py`.)"
 
-#: ../../library/unittest.rst:2370
+#: ../../library/unittest.rst:2372
 msgid ""
 "Because the pattern is passed into ``load_tests`` the package is free to "
 "continue (and potentially modify) test discovery. A 'do nothing' "
@@ -3633,7 +3633,7 @@ msgstr ""
 "потенційно змінювати) пошук тестів. Функція ``load_tests`` 'нічого не "
 "робити' для тестового пакета виглядатиме так:"
 
-#: ../../library/unittest.rst:2381
+#: ../../library/unittest.rst:2383
 msgid ""
 "Discovery no longer checks package names for matching *pattern* due to the "
 "impossibility of package names matching the default pattern."
@@ -3641,11 +3641,11 @@ msgstr ""
 "Discovery більше не перевіряє назви пакетів на відповідність *шаблону* через"
 " те, що назви пакетів не відповідають шаблону за замовчуванням."
 
-#: ../../library/unittest.rst:2388
+#: ../../library/unittest.rst:2390
 msgid "Class and Module Fixtures"
 msgstr "Фікстури класів і модулів"
 
-#: ../../library/unittest.rst:2390
+#: ../../library/unittest.rst:2392
 msgid ""
 "Class and module level fixtures are implemented in :class:`TestSuite`. When "
 "the test suite encounters a test from a new class then :meth:`tearDownClass`"
@@ -3656,7 +3656,7 @@ msgstr ""
 "тестів зустрічає тест з нового класу, викликається :meth:`tearDownClass` з "
 "попереднього класу (якщо він є), а потім :meth:`setUpClass` з нового класу."
 
-#: ../../library/unittest.rst:2395
+#: ../../library/unittest.rst:2397
 msgid ""
 "Similarly if a test is from a different module from the previous test then "
 "``tearDownModule`` from the previous module is run, followed by "
@@ -3666,7 +3666,7 @@ msgstr ""
 " тоді запускається ``tearDownModule`` з попереднього модуля, а потім "
 "``setUpModule`` з нового модуля."
 
-#: ../../library/unittest.rst:2399
+#: ../../library/unittest.rst:2401
 msgid ""
 "After all the tests have run the final ``tearDownClass`` and "
 "``tearDownModule`` are run."
@@ -3674,7 +3674,7 @@ msgstr ""
 "Після виконання всіх тестів запускаються остаточні ``tearDownClass`` і "
 "``tearDownModule``."
 
-#: ../../library/unittest.rst:2402
+#: ../../library/unittest.rst:2404
 msgid ""
 "Note that shared fixtures do not play well with [potential] features like "
 "test parallelization and they break test isolation. They should be used with"
@@ -3684,7 +3684,7 @@ msgstr ""
 "такими як розпаралелювання тестів, і вони порушують ізоляцію тестів. Їх слід"
 " використовувати обережно."
 
-#: ../../library/unittest.rst:2405
+#: ../../library/unittest.rst:2407
 msgid ""
 "The default ordering of tests created by the unittest test loaders is to "
 "group all tests from the same modules and classes together. This will lead "
@@ -3700,7 +3700,7 @@ msgstr ""
 "різних модулів і класів були суміжними один з одним, тоді ці спільні функції"
 " фікстури можуть викликатися кілька разів під час одного запуску тесту."
 
-#: ../../library/unittest.rst:2412
+#: ../../library/unittest.rst:2414
 msgid ""
 "Shared fixtures are not intended to work with suites with non-standard "
 "ordering. A ``BaseTestSuite`` still exists for frameworks that don't want to"
@@ -3710,7 +3710,7 @@ msgstr ""
 "упорядкуванням. ``BaseTestSuite`` все ще існує для фреймворків, які не "
 "хочуть підтримувати спільні фікстури."
 
-#: ../../library/unittest.rst:2416
+#: ../../library/unittest.rst:2418
 msgid ""
 "If there are any exceptions raised during one of the shared fixture "
 "functions the test is reported as an error. Because there is no "
@@ -3726,15 +3726,15 @@ msgstr ""
 "Якщо ви просто використовуєте стандартний модуль тестування, ця деталь не "
 "має значення, але якщо ви є автором фреймворку, вона може бути актуальною."
 
-#: ../../library/unittest.rst:2425
+#: ../../library/unittest.rst:2427
 msgid "setUpClass and tearDownClass"
 msgstr "setUpClass і tearDownClass"
 
-#: ../../library/unittest.rst:2427
+#: ../../library/unittest.rst:2429
 msgid "These must be implemented as class methods::"
 msgstr "Вони повинні бути реалізовані як методи класу:"
 
-#: ../../library/unittest.rst:2440
+#: ../../library/unittest.rst:2442
 msgid ""
 "If you want the ``setUpClass`` and ``tearDownClass`` on base classes called "
 "then you must call up to them yourself. The implementations in "
@@ -3743,7 +3743,7 @@ msgstr ""
 "Якщо ви хочете викликати ``setUpClass`` і ``tearDownClass`` базових класів, "
 "ви повинні викликати їх самостійно. Реалізації в :class:`TestCase` порожні."
 
-#: ../../library/unittest.rst:2444
+#: ../../library/unittest.rst:2446
 msgid ""
 "If an exception is raised during a ``setUpClass`` then the tests in the "
 "class are not run and the ``tearDownClass`` is not run. Skipped classes will"
@@ -3756,15 +3756,15 @@ msgstr ""
 "запускатимуть ``setUpClass`` або ``tearDownClass``. Якщо виняток є винятком "
 ":exc:`SkipTest`, тоді клас буде повідомлено як пропущений, а не як помилку."
 
-#: ../../library/unittest.rst:2452
+#: ../../library/unittest.rst:2454
 msgid "setUpModule and tearDownModule"
 msgstr "setUpModule і tearDownModule"
 
-#: ../../library/unittest.rst:2454
+#: ../../library/unittest.rst:2456
 msgid "These should be implemented as functions::"
 msgstr "Вони повинні бути реалізовані як функції:"
 
-#: ../../library/unittest.rst:2462
+#: ../../library/unittest.rst:2464
 msgid ""
 "If an exception is raised in a ``setUpModule`` then none of the tests in the"
 " module will be run and the ``tearDownModule`` will not be run. If the "
@@ -3776,7 +3776,7 @@ msgstr ""
 "винятком :exc:`SkipTest`, тоді модуль буде повідомлено як пропущений, а не "
 "як помилку."
 
-#: ../../library/unittest.rst:2467
+#: ../../library/unittest.rst:2469
 msgid ""
 "To add cleanup code that must be run even in the case of an exception, use "
 "``addModuleCleanup``:"
@@ -3784,7 +3784,7 @@ msgstr ""
 "Щоб додати код очищення, який потрібно запускати навіть у випадку винятку, "
 "використовуйте ``addModuleCleanup``:"
 
-#: ../../library/unittest.rst:2473
+#: ../../library/unittest.rst:2475
 msgid ""
 "Add a function to be called after :func:`tearDownModule` to cleanup "
 "resources used during the test class. Functions will be called in reverse "
@@ -3799,7 +3799,7 @@ msgstr ""
 "ключовими аргументами, які передаються в :meth:`addModuleCleanup` під час їх"
 " додавання."
 
-#: ../../library/unittest.rst:2479
+#: ../../library/unittest.rst:2481
 msgid ""
 "If :meth:`setUpModule` fails, meaning that :func:`tearDownModule` is not "
 "called, then any cleanup functions added will still be called."
@@ -3808,7 +3808,7 @@ msgstr ""
 "викликається, тоді будь-які додані функції очищення все одно будуть "
 "викликані."
 
-#: ../../library/unittest.rst:2487
+#: ../../library/unittest.rst:2489
 msgid ""
 "Enter the supplied :term:`context manager`.  If successful, also add its "
 ":meth:`~object.__exit__` method as a cleanup function by "
@@ -3816,7 +3816,7 @@ msgid ""
 ":meth:`~object.__enter__` method."
 msgstr ""
 
-#: ../../library/unittest.rst:2497
+#: ../../library/unittest.rst:2499
 msgid ""
 "This function is called unconditionally after :func:`tearDownModule`, or "
 "after :func:`setUpModule` if :func:`setUpModule` raises an exception."
@@ -3824,7 +3824,7 @@ msgstr ""
 "Ця функція викликається безумовно після :func:`tearDownModule` або після "
 ":func:`setUpModule`, якщо :func:`setUpModule` викликає виняткову ситуацію."
 
-#: ../../library/unittest.rst:2500
+#: ../../library/unittest.rst:2502
 msgid ""
 "It is responsible for calling all the cleanup functions added by "
 ":func:`addModuleCleanup`. If you need cleanup functions to be called *prior*"
@@ -3836,7 +3836,7 @@ msgstr ""
 "викликалися *перед* :func:`tearDownModule`, ви можете викликати "
 ":func:`doModuleCleanups` самостійно."
 
-#: ../../library/unittest.rst:2505
+#: ../../library/unittest.rst:2507
 msgid ""
 ":func:`doModuleCleanups` pops methods off the stack of cleanup functions one"
 " at a time, so it can be called at any time."
@@ -3844,11 +3844,11 @@ msgstr ""
 ":func:`doModuleCleanups` витягує методи зі стеку функцій очищення по одному,"
 " тому їх можна викликати будь-коли."
 
-#: ../../library/unittest.rst:2512
+#: ../../library/unittest.rst:2514
 msgid "Signal Handling"
 msgstr "Обробка сигналів"
 
-#: ../../library/unittest.rst:2516
+#: ../../library/unittest.rst:2518
 msgid ""
 "The :option:`-c/--catch <unittest -c>` command-line option to unittest, "
 "along with the ``catchbreak`` parameter to :func:`unittest.main()`, provide "
@@ -3864,7 +3864,7 @@ msgstr ""
 "чого тестовий запуск завершиться та повідомить усі результати. Другий "
 "control-c викличе :exc:`KeyboardInterrupt` у звичайний спосіб."
 
-#: ../../library/unittest.rst:2523
+#: ../../library/unittest.rst:2525
 msgid ""
 "The control-c handling signal handler attempts to remain compatible with "
 "code or tests that install their own :const:`signal.SIGINT` handler. If the "
@@ -3884,7 +3884,7 @@ msgstr ""
 " Для окремих тестів, які потребують вимкнення обробки ``unittest`` "
 "control-c, можна використовувати декоратор :func:`removeHandler`."
 
-#: ../../library/unittest.rst:2532
+#: ../../library/unittest.rst:2534
 msgid ""
 "There are a few utility functions for framework authors to enable control-c "
 "handling functionality within test frameworks."
@@ -3892,7 +3892,7 @@ msgstr ""
 "Існує кілька службових функцій для авторів фреймворків, щоб увімкнути "
 "функціональність обробки control-c у тестових фреймворках."
 
-#: ../../library/unittest.rst:2537
+#: ../../library/unittest.rst:2539
 msgid ""
 "Install the control-c handler. When a :const:`signal.SIGINT` is received "
 "(usually in response to the user pressing control-c) all registered results "
@@ -3902,7 +3902,7 @@ msgstr ""
 "(зазвичай у відповідь на натискання користувачем control-c), усі "
 "зареєстровані результати викликають :meth:`~TestResult.stop`."
 
-#: ../../library/unittest.rst:2544
+#: ../../library/unittest.rst:2546
 msgid ""
 "Register a :class:`TestResult` object for control-c handling. Registering a "
 "result stores a weak reference to it, so it doesn't prevent the result from "
@@ -3912,7 +3912,7 @@ msgstr ""
 "результату зберігає слабке посилання на нього, тому це не запобігає збиранню"
 " сміття результату."
 
-#: ../../library/unittest.rst:2548
+#: ../../library/unittest.rst:2550
 msgid ""
 "Registering a :class:`TestResult` object has no side-effects if control-c "
 "handling is not enabled, so test frameworks can unconditionally register all"
@@ -3923,7 +3923,7 @@ msgstr ""
 "реєструвати всі створені ними результати незалежно від того, увімкнено "
 "обробку чи ні."
 
-#: ../../library/unittest.rst:2555
+#: ../../library/unittest.rst:2557
 msgid ""
 "Remove a registered result. Once a result has been removed then "
 ":meth:`~TestResult.stop` will no longer be called on that result object in "
@@ -3933,7 +3933,7 @@ msgstr ""
 ":meth:`~TestResult.stop` більше не викликатиметься для цього об’єкта "
 "результату у відповідь на control-c."
 
-#: ../../library/unittest.rst:2562
+#: ../../library/unittest.rst:2564
 msgid ""
 "When called without arguments this function removes the control-c handler if"
 " it has been installed. This function can also be used as a test decorator "

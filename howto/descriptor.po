@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-24 14:13+0000\n"
+"POT-Creation-Date: 2023-12-01 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:53+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -946,7 +946,7 @@ msgstr ""
 "Щоб побачити, як :func:`property` реалізовано в термінах протоколу "
 "дескриптора, ось чистий еквівалент Python:"
 
-#: ../../howto/descriptor.rst:1095
+#: ../../howto/descriptor.rst:1132
 msgid ""
 "The :func:`property` builtin helps whenever a user interface has granted "
 "attribute access and then subsequent changes require the intervention of a "
@@ -956,7 +956,7 @@ msgstr ""
 "користувача надає доступ до атрибутів, а подальші зміни вимагають втручання "
 "методу."
 
-#: ../../howto/descriptor.rst:1099
+#: ../../howto/descriptor.rst:1136
 msgid ""
 "For instance, a spreadsheet class may grant access to a cell value through "
 "``Cell('b10').value``. Subsequent improvements to the program require the "
@@ -972,7 +972,7 @@ msgstr ""
 "Рішення полягає в тому, щоб загорнути доступ до атрибута значення в "
 "дескриптор даних властивості:"
 
-#: ../../howto/descriptor.rst:1116
+#: ../../howto/descriptor.rst:1153
 msgid ""
 "Either the built-in :func:`property` or our :func:`Property` equivalent "
 "would work in this example."
@@ -980,11 +980,11 @@ msgstr ""
 "У цьому прикладі працюватиме або вбудований :func:`property`, або наш "
 "еквівалент :func:`Property`."
 
-#: ../../howto/descriptor.rst:1121
+#: ../../howto/descriptor.rst:1158
 msgid "Functions and methods"
 msgstr "Функції та методи"
 
-#: ../../howto/descriptor.rst:1123
+#: ../../howto/descriptor.rst:1160
 msgid ""
 "Python's object oriented features are built upon a function based "
 "environment. Using non-data descriptors, the two are merged seamlessly."
@@ -993,7 +993,7 @@ msgstr ""
 "середовищі. Використовуючи дескриптори, не пов’язані з даними, ці два "
 "об’єднуються без проблем."
 
-#: ../../howto/descriptor.rst:1126
+#: ../../howto/descriptor.rst:1163
 msgid ""
 "Functions stored in class dictionaries get turned into methods when invoked."
 " Methods only differ from regular functions in that the object instance is "
@@ -1006,7 +1006,7 @@ msgstr ""
 "називається *self*, але може мати назву *this* або будь-яке інше ім’я "
 "змінної."
 
-#: ../../howto/descriptor.rst:1131
+#: ../../howto/descriptor.rst:1168
 msgid ""
 "Methods can be created manually with :class:`types.MethodType` which is "
 "roughly equivalent to:"
@@ -1014,7 +1014,7 @@ msgstr ""
 "Методи можна створити вручну за допомогою :class:`types.MethodType`, що "
 "приблизно еквівалентно:"
 
-#: ../../howto/descriptor.rst:1148
+#: ../../howto/descriptor.rst:1185
 msgid ""
 "To support automatic creation of methods, functions include the "
 ":meth:`__get__` method for binding methods during attribute access.  This "
@@ -1026,7 +1026,7 @@ msgstr ""
 "означає, що функції є дескрипторами, не пов’язаними з даними, які повертають"
 " пов’язані методи під час пошуку з пунктиром з екземпляра. Ось як це працює:"
 
-#: ../../howto/descriptor.rst:1164
+#: ../../howto/descriptor.rst:1201
 msgid ""
 "Running the following class in the interpreter shows how the function "
 "descriptor works in practice:"
@@ -1034,13 +1034,13 @@ msgstr ""
 "Запуск наступного класу в інтерпретаторі показує, як дескриптор функції "
 "працює на практиці:"
 
-#: ../../howto/descriptor.rst:1173
+#: ../../howto/descriptor.rst:1210
 msgid ""
 "The function has a :term:`qualified name` attribute to support "
 "introspection:"
 msgstr "Функція має атрибут :term:`qualified name` для підтримки самоаналізу:"
 
-#: ../../howto/descriptor.rst:1180
+#: ../../howto/descriptor.rst:1217
 msgid ""
 "Accessing the function through the class dictionary does not invoke "
 ":meth:`__get__`.  Instead, it just returns the underlying function object::"
@@ -1048,7 +1048,7 @@ msgstr ""
 "Доступ до функції через словник класу не викликає :meth:`__get__`. Замість "
 "цього він просто повертає базовий об’єкт функції::"
 
-#: ../../howto/descriptor.rst:1186
+#: ../../howto/descriptor.rst:1223
 msgid ""
 "Dotted access from a class calls :meth:`__get__` which just returns the "
 "underlying function unchanged::"
@@ -1056,7 +1056,7 @@ msgstr ""
 "Пунктирний доступ із класу викликає :meth:`__get__`, який просто повертає "
 "базову функцію без змін::"
 
-#: ../../howto/descriptor.rst:1192
+#: ../../howto/descriptor.rst:1229
 msgid ""
 "The interesting behavior occurs during dotted access from an instance.  The "
 "dotted lookup calls :meth:`__get__` which returns a bound method object::"
@@ -1065,14 +1065,14 @@ msgstr ""
 "Пошук із пунктиром викликає :meth:`__get__`, який повертає пов’язаний об’єкт"
 " методу::"
 
-#: ../../howto/descriptor.rst:1199
+#: ../../howto/descriptor.rst:1236
 msgid ""
 "Internally, the bound method stores the underlying function and the bound "
 "instance::"
 msgstr ""
 "Внутрішньо зв’язаний метод зберігає базову функцію та зв’язаний екземпляр::"
 
-#: ../../howto/descriptor.rst:1208
+#: ../../howto/descriptor.rst:1245
 msgid ""
 "If you have ever wondered where *self* comes from in regular methods or "
 "where *cls* comes from in class methods, this is it!"
@@ -1080,11 +1080,11 @@ msgstr ""
 "Якщо ви коли-небудь задавалися питанням, звідки береться *self* у звичайних "
 "методах або звідки *cls* у методах класу, то це все!"
 
-#: ../../howto/descriptor.rst:1213
+#: ../../howto/descriptor.rst:1250
 msgid "Kinds of methods"
 msgstr "Види методів"
 
-#: ../../howto/descriptor.rst:1215
+#: ../../howto/descriptor.rst:1252
 msgid ""
 "Non-data descriptors provide a simple mechanism for variations on the usual "
 "patterns of binding functions into methods."
@@ -1092,7 +1092,7 @@ msgstr ""
 "Дескриптори, не пов’язані з даними, надають простий механізм для варіацій "
 "звичайних шаблонів зв’язування функцій у методи."
 
-#: ../../howto/descriptor.rst:1218
+#: ../../howto/descriptor.rst:1255
 msgid ""
 "To recap, functions have a :meth:`__get__` method so that they can be "
 "converted to a method when accessed as attributes.  The non-data descriptor "
@@ -1104,56 +1104,56 @@ msgstr ""
 "перетворює виклик ``obj.f(*args)`` на ``f(obj, *args)``. Виклик "
 "``cls.f(*args)`` перетворюється на ``f(*args)``."
 
-#: ../../howto/descriptor.rst:1223
+#: ../../howto/descriptor.rst:1260
 msgid "This chart summarizes the binding and its two most useful variants:"
 msgstr "Ця діаграма підсумовує прив’язку та два її найкорисніші варіанти:"
 
-#: ../../howto/descriptor.rst:1226
+#: ../../howto/descriptor.rst:1263
 msgid "Transformation"
 msgstr "Трансформація"
 
-#: ../../howto/descriptor.rst:1226
+#: ../../howto/descriptor.rst:1263
 msgid "Called from an object"
 msgstr "Викликано з об'єкта"
 
-#: ../../howto/descriptor.rst:1226
+#: ../../howto/descriptor.rst:1263
 msgid "Called from a class"
 msgstr "Подзвонили з класу"
 
-#: ../../howto/descriptor.rst:1229
+#: ../../howto/descriptor.rst:1266
 msgid "function"
 msgstr "функція"
 
-#: ../../howto/descriptor.rst:1229
+#: ../../howto/descriptor.rst:1266
 msgid "f(obj, \\*args)"
 msgstr "f(obj, \\*args)"
 
-#: ../../howto/descriptor.rst:1229 ../../howto/descriptor.rst:1231
-#: ../../howto/descriptor.rst:1231
+#: ../../howto/descriptor.rst:1266 ../../howto/descriptor.rst:1268
+#: ../../howto/descriptor.rst:1268
 msgid "f(\\*args)"
 msgstr "f(\\*args)"
 
-#: ../../howto/descriptor.rst:1231
+#: ../../howto/descriptor.rst:1268
 msgid "staticmethod"
 msgstr "статичний метод"
 
-#: ../../howto/descriptor.rst:1233
+#: ../../howto/descriptor.rst:1270
 msgid "classmethod"
 msgstr "метод класу"
 
-#: ../../howto/descriptor.rst:1233
+#: ../../howto/descriptor.rst:1270
 msgid "f(type(obj), \\*args)"
 msgstr "f(type(obj), \\*args)"
 
-#: ../../howto/descriptor.rst:1233
+#: ../../howto/descriptor.rst:1270
 msgid "f(cls, \\*args)"
 msgstr "f(cls, \\*args)"
 
-#: ../../howto/descriptor.rst:1238
+#: ../../howto/descriptor.rst:1275
 msgid "Static methods"
 msgstr "Статичні методи"
 
-#: ../../howto/descriptor.rst:1240
+#: ../../howto/descriptor.rst:1277
 msgid ""
 "Static methods return the underlying function without changes.  Calling "
 "either ``c.f`` or ``C.f`` is the equivalent of a direct lookup into "
@@ -1166,7 +1166,7 @@ msgstr ""
 "або ``object.__getattribute__(C, \"f\")`` . У результаті функція стає "
 "однаково доступною з об’єкта або класу."
 
-#: ../../howto/descriptor.rst:1246
+#: ../../howto/descriptor.rst:1283
 msgid ""
 "Good candidates for static methods are methods that do not reference the "
 "``self`` variable."
@@ -1174,7 +1174,7 @@ msgstr ""
 "Хорошими кандидатами на статичні методи є методи, які не посилаються на "
 "змінну ``self``."
 
-#: ../../howto/descriptor.rst:1249
+#: ../../howto/descriptor.rst:1286
 msgid ""
 "For instance, a statistics package may include a container class for "
 "experimental data.  The class provides normal methods for computing the "
@@ -1195,7 +1195,7 @@ msgstr ""
 "об’єкта, або з класу: ``s.erf(1.5) --> .9332`` або ``Sample.erf(1.5) --> "
 ".9332``."
 
-#: ../../howto/descriptor.rst:1258
+#: ../../howto/descriptor.rst:1295
 msgid ""
 "Since static methods return the underlying function with no changes, the "
 "example calls are unexciting:"
@@ -1203,7 +1203,7 @@ msgstr ""
 "Оскільки статичні методи повертають базову функцію без змін, приклади "
 "викликів нецікаві:"
 
-#: ../../howto/descriptor.rst:1275
+#: ../../howto/descriptor.rst:1312
 msgid ""
 "Using the non-data descriptor protocol, a pure Python version of "
 ":func:`staticmethod` would look like this:"
@@ -1211,7 +1211,7 @@ msgstr ""
 "Використовуючи протокол дескриптора без даних, чиста версія "
 ":func:`staticmethod` на Python виглядала б так:"
 
-#: ../../howto/descriptor.rst:1295
+#: ../../howto/descriptor.rst:1332
 msgid ""
 "The :func:`functools.update_wrapper` call adds a ``__wrapped__`` attribute "
 "that refers to the underlying function.  Also it carries forward the "
@@ -1219,11 +1219,11 @@ msgid ""
 "``__name__``, ``__qualname__``, ``__doc__``, and ``__annotations__``."
 msgstr ""
 
-#: ../../howto/descriptor.rst:1363
+#: ../../howto/descriptor.rst:1400
 msgid "Class methods"
 msgstr "Методи класу"
 
-#: ../../howto/descriptor.rst:1365
+#: ../../howto/descriptor.rst:1402
 msgid ""
 "Unlike static methods, class methods prepend the class reference to the "
 "argument list before calling the function.  This format is the same for "
@@ -1233,7 +1233,7 @@ msgstr ""
 "списку аргументів перед викликом функції. Цей формат є однаковим для того, "
 "чи є викликаючий об’єкт чи клас:"
 
-#: ../../howto/descriptor.rst:1383
+#: ../../howto/descriptor.rst:1420
 msgid ""
 "This behavior is useful whenever the method only needs to have a class "
 "reference and does not rely on data stored in a specific instance.  One use "
@@ -1247,11 +1247,11 @@ msgstr ""
 " класу. Наприклад, метод класу :func:`dict.fromkeys` створює новий словник "
 "зі списку ключів. Чистий еквівалент Python:"
 
-#: ../../howto/descriptor.rst:1400
+#: ../../howto/descriptor.rst:1437
 msgid "Now a new dictionary of unique keys can be constructed like this:"
 msgstr "Тепер новий словник унікальних ключів можна сконструювати так:"
 
-#: ../../howto/descriptor.rst:1410
+#: ../../howto/descriptor.rst:1447
 msgid ""
 "Using the non-data descriptor protocol, a pure Python version of "
 ":func:`classmethod` would look like this:"
@@ -1259,7 +1259,7 @@ msgstr ""
 "Використовуючи протокол дескриптора без даних, чиста версія "
 ":func:`classmethod` на Python виглядала б так:"
 
-#: ../../howto/descriptor.rst:1488
+#: ../../howto/descriptor.rst:1525
 msgid ""
 "The code path for ``hasattr(type(self.f), '__get__')`` was added in Python "
 "3.9 and makes it possible for :func:`classmethod` to support chained "
@@ -1267,7 +1267,7 @@ msgid ""
 "together.  In Python 3.11, this functionality was deprecated."
 msgstr ""
 
-#: ../../howto/descriptor.rst:1506
+#: ../../howto/descriptor.rst:1543
 msgid ""
 "The :func:`functools.update_wrapper` call in ``ClassMethod`` adds a "
 "``__wrapped__`` attribute that refers to the underlying function.  Also it "
@@ -1276,11 +1276,11 @@ msgid ""
 "``__annotations__``."
 msgstr ""
 
-#: ../../howto/descriptor.rst:1514
+#: ../../howto/descriptor.rst:1551
 msgid "Member objects and __slots__"
 msgstr "Об'єкти-члени та __slots__"
 
-#: ../../howto/descriptor.rst:1516
+#: ../../howto/descriptor.rst:1553
 msgid ""
 "When a class defines ``__slots__``, it replaces instance dictionaries with a"
 " fixed-length array of slot values.  From a user point of view that has "
@@ -1290,7 +1290,7 @@ msgstr ""
 "значень слотів фіксованої довжини. З точки зору користувача, це має кілька "
 "ефектів:"
 
-#: ../../howto/descriptor.rst:1520
+#: ../../howto/descriptor.rst:1557
 msgid ""
 "1. Provides immediate detection of bugs due to misspelled attribute "
 "assignments.  Only attribute names specified in ``__slots__`` are allowed:"
@@ -1298,7 +1298,7 @@ msgstr ""
 "1. Забезпечує негайне виявлення помилок через неправильно написані атрибути."
 " Дозволяються лише імена атрибутів, указані в ``__slots__``:"
 
-#: ../../howto/descriptor.rst:1536
+#: ../../howto/descriptor.rst:1573
 msgid ""
 "2. Helps create immutable objects where descriptors manage access to private"
 " attributes stored in ``__slots__``:"
@@ -1306,7 +1306,7 @@ msgstr ""
 "2. Допомагає створювати незмінні об’єкти, де дескриптори керують доступом до"
 " приватних атрибутів, що зберігаються в ``__slots__``:"
 
-#: ../../howto/descriptor.rst:1571
+#: ../../howto/descriptor.rst:1608
 msgid ""
 "3. Saves memory.  On a 64-bit Linux build, an instance with two attributes "
 "takes 48 bytes with ``__slots__`` and 152 bytes without.  This `flyweight "
@@ -1319,7 +1319,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Flyweight_pattern>`_, ймовірно, має значення "
 "лише тоді, коли буде створено велику кількість екземплярів."
 
-#: ../../howto/descriptor.rst:1576
+#: ../../howto/descriptor.rst:1613
 msgid ""
 "4. Improves speed.  Reading instance variables is 35% faster with "
 "``__slots__`` (as measured with Python 3.10 on an Apple M1 processor)."
@@ -1328,7 +1328,7 @@ msgstr ""
 "швидше за допомогою ``__slots__`` (виміряно за допомогою Python 3.10 на "
 "процесорі Apple M1)."
 
-#: ../../howto/descriptor.rst:1579
+#: ../../howto/descriptor.rst:1616
 msgid ""
 "5. Blocks tools like :func:`functools.cached_property` which require an "
 "instance dictionary to function correctly:"
@@ -1336,7 +1336,7 @@ msgstr ""
 "5. Блокує такі інструменти, як :func:`functools.cached_property`, яким для "
 "коректної роботи потрібен словник екземплярів:"
 
-#: ../../howto/descriptor.rst:1601
+#: ../../howto/descriptor.rst:1638
 msgid ""
 "It is not possible to create an exact drop-in pure Python version of "
 "``__slots__`` because it requires direct access to C structures and control "
@@ -1352,7 +1352,7 @@ msgstr ""
 "``_slotvalues``. Читанням і записом у цю приватну структуру керують "
 "дескриптори членів:"
 
-#: ../../howto/descriptor.rst:1646
+#: ../../howto/descriptor.rst:1683
 msgid ""
 "The :meth:`type.__new__` method takes care of adding member objects to class"
 " variables:"
@@ -1360,7 +1360,7 @@ msgstr ""
 "Метод :meth:`type.__new__` піклується про додавання об’єктів-членів до "
 "змінних класу:"
 
-#: ../../howto/descriptor.rst:1662
+#: ../../howto/descriptor.rst:1699
 msgid ""
 "The :meth:`object.__new__` method takes care of creating instances that have"
 " slots instead of an instance dictionary.  Here is a rough simulation in "
@@ -1370,7 +1370,7 @@ msgstr ""
 " слоти замість словника екземплярів. Ось приблизне моделювання на чистому "
 "Python:"
 
-#: ../../howto/descriptor.rst:1697
+#: ../../howto/descriptor.rst:1734
 msgid ""
 "To use the simulation in a real class, just inherit from :class:`Object` and"
 " set the :term:`metaclass` to :class:`Type`:"
@@ -1378,12 +1378,12 @@ msgstr ""
 "Щоб використовувати симуляцію в реальному класі, просто успадкуйте від "
 ":class:`Object` і встановіть :term:`metaclass` на :class:`Type`:"
 
-#: ../../howto/descriptor.rst:1711
+#: ../../howto/descriptor.rst:1748
 msgid ""
 "At this point, the metaclass has loaded member objects for *x* and *y*::"
 msgstr "На даний момент метаклас завантажив об’єкти-члени для *x* і *y*::"
 
-#: ../../howto/descriptor.rst:1732
+#: ../../howto/descriptor.rst:1769
 msgid ""
 "When instances are created, they have a ``slot_values`` list where the "
 "attributes are stored:"
@@ -1391,6 +1391,6 @@ msgstr ""
 "Коли екземпляри створюються, вони мають список ``slot_values``, де "
 "зберігаються атрибути:"
 
-#: ../../howto/descriptor.rst:1744
+#: ../../howto/descriptor.rst:1781
 msgid "Misspelled or unassigned attributes will raise an exception:"
 msgstr "Помилково введені або непризначені атрибути викликають виняток:"
