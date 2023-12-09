@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 14:14+0000\n"
+"POT-Creation-Date: 2023-12-08 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -123,19 +123,15 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:78
 msgid ""
-"Return true if the object *o* is a Unicode object or an instance of a "
+"Return true if the object *obj* is a Unicode object or an instance of a "
 "Unicode subtype.  This function always succeeds."
 msgstr ""
-"Повертає true, якщо об’єкт *o* є об’єктом Unicode або екземпляром підтипу "
-"Unicode. Ця функція завжди успішна."
 
 #: ../../c-api/unicode.rst:84
 msgid ""
-"Return true if the object *o* is a Unicode object, but not an instance of a "
-"subtype.  This function always succeeds."
+"Return true if the object *obj* is a Unicode object, but not an instance of "
+"a subtype.  This function always succeeds."
 msgstr ""
-"Повертає true, якщо об’єкт *o* є об’єктом Unicode, але не екземпляром "
-"підтипу. Ця функція завжди успішна."
 
 #: ../../c-api/unicode.rst:90
 msgid "Returns ``0``. This API is kept only for backward compatibility."
@@ -147,11 +143,9 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:100
 msgid ""
-"Return the length of the Unicode string, in code points.  *o* has to be a "
-"Unicode object in the \"canonical\" representation (not checked)."
+"Return the length of the Unicode string, in code points.  *unicode* has to "
+"be a Unicode object in the \"canonical\" representation (not checked)."
 msgstr ""
-"Повертає довжину рядка Юнікод у кодових точках. *o* має бути об’єктом "
-"Unicode у \"канонічному\" представленні (не позначено)."
 
 #: ../../c-api/unicode.rst:110
 msgid ""
@@ -172,22 +166,16 @@ msgstr ""
 #: ../../c-api/unicode.rst:132
 msgid ""
 "Return one of the PyUnicode kind constants (see above) that indicate how "
-"many bytes per character this Unicode object uses to store its data.  *o* "
-"has to be a Unicode object in the \"canonical\" representation (not "
-"checked)."
+"many bytes per character this Unicode object uses to store its data.  "
+"*unicode* has to be a Unicode object in the \"canonical\" representation "
+"(not checked)."
 msgstr ""
-"Повертає одну з констант типу PyUnicode (див. вище), яка вказує, скільки "
-"байтів на символ цей об’єкт Unicode використовує для зберігання своїх даних."
-" *o* має бути об’єктом Unicode у \"канонічному\" представленні (не "
-"позначено)."
 
 #: ../../c-api/unicode.rst:141
 msgid ""
-"Return a void pointer to the raw Unicode buffer.  *o* has to be a Unicode "
-"object in the \"canonical\" representation (not checked)."
+"Return a void pointer to the raw Unicode buffer.  *unicode* has to be a "
+"Unicode object in the \"canonical\" representation (not checked)."
 msgstr ""
-"Повертає вказівник недійсності на необроблений буфер Unicode. *o* має бути "
-"об’єктом Unicode у \"канонічному\" представленні (не позначено)."
 
 #: ../../c-api/unicode.rst:150
 msgid ""
@@ -210,23 +198,18 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:171
 msgid ""
-"Read a character from a Unicode object *o*, which must be in the "
+"Read a character from a Unicode object *unicode*, which must be in the "
 "\"canonical\" representation.  This is less efficient than "
 ":c:func:`PyUnicode_READ` if you do multiple consecutive reads."
 msgstr ""
-"Прочитати символ з об’єкта Unicode *o*, який має бути в \"канонічному\" "
-"представленні. Це менш ефективно, ніж :c:func:`PyUnicode_READ`, якщо ви "
-"виконуєте кілька послідовних читань."
 
 #: ../../c-api/unicode.rst:180
 msgid ""
 "Return the maximum code point that is suitable for creating another string "
-"based on *o*, which must be in the \"canonical\" representation.  This is "
-"always an approximation but more efficient than iterating over the string."
+"based on *unicode*, which must be in the \"canonical\" representation.  This"
+" is always an approximation but more efficient than iterating over the "
+"string."
 msgstr ""
-"Повертає максимальну кодову точку, придатну для створення іншого рядка на "
-"основі *o*, який має бути в \"канонічному\" представленні. Це завжди "
-"наближення, але ефективніше, ніж ітерація по рядку."
 
 #: ../../c-api/unicode.rst:189
 msgid ""
@@ -449,7 +432,7 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:370
 msgid ""
-"Create a Unicode object from the char buffer *u*.  The bytes will be "
+"Create a Unicode object from the char buffer *str*.  The bytes will be "
 "interpreted as being UTF-8 encoded.  The buffer is copied into the new "
 "object. The return value might be a shared object, i.e. modification of the "
 "data is not allowed."
@@ -464,20 +447,18 @@ msgid "*size* < 0,"
 msgstr ""
 
 #: ../../c-api/unicode.rst:379
-msgid "*u* is ``NULL`` and *size* > 0"
+msgid "*str* is ``NULL`` and *size* > 0"
 msgstr ""
 
 #: ../../c-api/unicode.rst:381
-msgid "*u* == ``NULL`` with *size* > 0 is not allowed anymore."
+msgid "*str* == ``NULL`` with *size* > 0 is not allowed anymore."
 msgstr ""
 
 #: ../../c-api/unicode.rst:387
 msgid ""
 "Create a Unicode object from a UTF-8 encoded null-terminated char buffer "
-"*u*."
+"*str*."
 msgstr ""
-"Створіть об’єкт Юнікод із буфера символів *u* із кодуванням UTF-8 із "
-"закінченням нулем."
 
 #: ../../c-api/unicode.rst:393
 msgid ""
@@ -959,35 +940,25 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:659
 msgid ""
-"Return a substring of *str*, from character index *start* (included) to "
+"Return a substring of *unicode*, from character index *start* (included) to "
 "character index *end* (excluded).  Negative indices are not supported."
 msgstr ""
-"Повертає підрядок *str* від символьного індексу *start* (включено) до "
-"символьного індексу *end* (виключено). Негативні індекси не підтримуються."
 
 #: ../../c-api/unicode.rst:668
 msgid ""
-"Copy the string *u* into a UCS4 buffer, including a null character, if "
-"*copy_null* is set.  Returns ``NULL`` and sets an exception on error (in "
+"Copy the string *unicode* into a UCS4 buffer, including a null character, if"
+" *copy_null* is set.  Returns ``NULL`` and sets an exception on error (in "
 "particular, a :exc:`SystemError` if *buflen* is smaller than the length of "
-"*u*).  *buffer* is returned on success."
+"*unicode*).  *buffer* is returned on success."
 msgstr ""
-"Скопіюйте рядок *u* у буфер UCS4, включаючи нульовий символ, якщо "
-"встановлено *copy_null*. Повертає ``NULL`` і встановлює виняток у випадку "
-"помилки (зокрема, :exc:`SystemError`, якщо *buflen* менший за довжину *u*). "
-"*buffer* повертається в разі успіху."
 
 #: ../../c-api/unicode.rst:678
 msgid ""
-"Copy the string *u* into a new UCS4 buffer that is allocated using "
+"Copy the string *unicode* into a new UCS4 buffer that is allocated using "
 ":c:func:`PyMem_Malloc`.  If this fails, ``NULL`` is returned with a "
 ":exc:`MemoryError` set.  The returned buffer always has an extra null code "
 "point appended."
 msgstr ""
-"Скопіюйте рядок *u* у новий буфер UCS4, який виділено за допомогою "
-":c:func:`PyMem_Malloc`. Якщо це не вдається, повертається ``NULL`` із "
-"набором :exc:`MemoryError`. Повернений буфер завжди має додаткову нульову "
-"кодову точку."
 
 #: ../../c-api/unicode.rst:687
 msgid "Locale Encoding"
@@ -1189,19 +1160,17 @@ msgstr ":c:type:`wchar_t` підтримка платформ, які її пі�
 
 #: ../../c-api/unicode.rst:853
 msgid ""
-"Create a Unicode object from the :c:type:`wchar_t` buffer *w* of the given "
-"*size*. Passing ``-1`` as the *size* indicates that the function must itself"
-" compute the length, using wcslen. Return ``NULL`` on failure."
+"Create a Unicode object from the :c:type:`wchar_t` buffer *wstr* of the "
+"given *size*. Passing ``-1`` as the *size* indicates that the function must "
+"itself compute the length, using :c:func:`!wcslen`. Return ``NULL`` on "
+"failure."
 msgstr ""
-"Створіть об’єкт Юнікод із буфера :c:type:`wchar_t` *w* заданого *розміру*. "
-"Передача ``-1`` як *size* вказує на те, що функція повинна сама обчислити "
-"довжину за допомогою wcslen. Повертає ``NULL`` у разі помилки."
 
 #: ../../c-api/unicode.rst:861
 msgid ""
-"Copy the Unicode object contents into the :c:type:`wchar_t` buffer *w*.  At "
-"most *size* :c:type:`wchar_t` characters are copied (excluding a possibly "
-"trailing null termination character).  Return the number of "
+"Copy the Unicode object contents into the :c:type:`wchar_t` buffer *wstr*.  "
+"At most *size* :c:type:`wchar_t` characters are copied (excluding a possibly"
+" trailing null termination character).  Return the number of "
 ":c:type:`wchar_t` characters copied or ``-1`` in case of an error.  Note "
 "that the resulting :c:expr:`wchar_t*` string may or may not be null-"
 "terminated.  It is the responsibility of the caller to make sure that the "
@@ -1296,17 +1265,12 @@ msgstr "Це загальні кодеки API:"
 
 #: ../../c-api/unicode.rst:928
 msgid ""
-"Create a Unicode object by decoding *size* bytes of the encoded string *s*. "
-"*encoding* and *errors* have the same meaning as the parameters of the same "
-"name in the :func:`str` built-in function.  The codec to be used is looked "
-"up using the Python codec registry.  Return ``NULL`` if an exception was "
-"raised by the codec."
+"Create a Unicode object by decoding *size* bytes of the encoded string "
+"*str*. *encoding* and *errors* have the same meaning as the parameters of "
+"the same name in the :func:`str` built-in function.  The codec to be used is"
+" looked up using the Python codec registry.  Return ``NULL`` if an exception"
+" was raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти закодованого рядка *s*. "
-"*encoding* і *errors* мають те саме значення, що й однойменні параметри у "
-"вбудованій функції :func:`str`. Кодек, який буде використовуватися, "
-"шукається за допомогою реєстру кодеків Python. Повертає ``NULL``, якщо кодек"
-" викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:938
 msgid ""
@@ -1333,10 +1297,8 @@ msgstr "Це API кодека UTF-8:"
 #: ../../c-api/unicode.rst:953
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the UTF-8 encoded string"
-" *s*. Return ``NULL`` if an exception was raised by the codec."
+" *str*. Return ``NULL`` if an exception was raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s* у кодуванні UTF-8."
-" Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:960
 msgid ""
@@ -1566,10 +1528,8 @@ msgstr "Це API кодека UTF-7:"
 #: ../../c-api/unicode.rst:1117
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the UTF-7 encoded string"
-" *s*.  Return ``NULL`` if an exception was raised by the codec."
+" *str*.  Return ``NULL`` if an exception was raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s* у кодуванні UTF-7."
-" Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1124
 msgid ""
@@ -1595,11 +1555,9 @@ msgstr "Це API кодека \"Unicode Escape\":"
 #: ../../c-api/unicode.rst:1139
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the Unicode-Escape "
-"encoded string *s*.  Return ``NULL`` if an exception was raised by the "
+"encoded string *str*.  Return ``NULL`` if an exception was raised by the "
 "codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s*, закодованого "
-"Unicode-Escape. Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1145
 msgid ""
@@ -1622,11 +1580,9 @@ msgstr "Це API кодека \"Raw Unicode Escape\":"
 #: ../../c-api/unicode.rst:1159
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the Raw-Unicode-Escape "
-"encoded string *s*.  Return ``NULL`` if an exception was raised by the "
+"encoded string *str*.  Return ``NULL`` if an exception was raised by the "
 "codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s*, закодованого Raw-"
-"Unicode-Escape. Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1165
 msgid ""
@@ -1653,10 +1609,8 @@ msgstr ""
 #: ../../c-api/unicode.rst:1179
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the Latin-1 encoded "
-"string *s*.  Return ``NULL`` if an exception was raised by the codec."
+"string *str*.  Return ``NULL`` if an exception was raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s* у кодуванні "
-"Latin-1. Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1185
 msgid ""
@@ -1683,10 +1637,8 @@ msgstr ""
 #: ../../c-api/unicode.rst:1199
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the ASCII encoded string"
-" *s*.  Return ``NULL`` if an exception was raised by the codec."
+" *str*.  Return ``NULL`` if an exception was raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s* у кодуванні ASCII."
-" Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1205
 msgid ""
@@ -1718,13 +1670,10 @@ msgstr "Це API кодека відображення:"
 
 #: ../../c-api/unicode.rst:1224
 msgid ""
-"Create a Unicode object by decoding *size* bytes of the encoded string *s* "
-"using the given *mapping* object.  Return ``NULL`` if an exception was "
+"Create a Unicode object by decoding *size* bytes of the encoded string *str*"
+" using the given *mapping* object.  Return ``NULL`` if an exception was "
 "raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти закодованого рядка *s* за "
-"допомогою заданого об’єкта *mapping*. Повертає ``NULL``, якщо кодек викликав"
-" виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1228
 msgid ""
@@ -1824,10 +1773,8 @@ msgstr ""
 #: ../../c-api/unicode.rst:1278
 msgid ""
 "Create a Unicode object by decoding *size* bytes of the MBCS encoded string "
-"*s*. Return ``NULL`` if an exception was raised by the codec."
+"*str*. Return ``NULL`` if an exception was raised by the codec."
 msgstr ""
-"Створіть об’єкт Unicode, декодуючи *size* байти рядка *s* у кодуванні MBCS. "
-"Повертає ``NULL``, якщо кодек викликав виняткову ситуацію."
 
 #: ../../c-api/unicode.rst:1285
 msgid ""
@@ -1902,12 +1849,9 @@ msgstr ""
 #: ../../c-api/unicode.rst:1338
 msgid ""
 "Split a Unicode string at line breaks, returning a list of Unicode strings. "
-"CRLF is considered to be one line break.  If *keepend* is ``0``, the line "
+"CRLF is considered to be one line break.  If *keepends* is ``0``, the Line "
 "break characters are not included in the resulting strings."
 msgstr ""
-"Розділіть рядок Unicode на розриви рядків, повертаючи список рядків Unicode."
-" CRLF вважається розривом одного рядка. Якщо *keepend* дорівнює ``0``, "
-"символи розриву рядка не включаються в отримані рядки."
 
 #: ../../c-api/unicode.rst:1345
 msgid ""
@@ -1919,64 +1863,47 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:1352
 msgid ""
-"Return ``1`` if *substr* matches ``str[start:end]`` at the given tail end "
-"(*direction* == ``-1`` means to do a prefix match, *direction* == ``1`` a "
-"suffix match), ``0`` otherwise. Return ``-1`` if an error occurred."
+"Return ``1`` if *substr* matches ``unicode[start:end]`` at the given tail "
+"end (*direction* == ``-1`` means to do a prefix match, *direction* == ``1`` "
+"a suffix match), ``0`` otherwise. Return ``-1`` if an error occurred."
 msgstr ""
-"Повертає ``1``, якщо *substr* збігається з ``str[start:end]`` у вказаному "
-"кінці (*direction* == ``-1`` означає збіг префікса, *direction* == ``1`` "
-"відповідає суфіксу), ``0`` інакше. Повертає ``-1``, якщо сталася помилка."
 
 #: ../../c-api/unicode.rst:1360
 msgid ""
-"Return the first position of *substr* in ``str[start:end]`` using the given "
-"*direction* (*direction* == ``1`` means to do a forward search, *direction* "
-"== ``-1`` a backward search).  The return value is the index of the first "
-"match; a value of ``-1`` indicates that no match was found, and ``-2`` "
-"indicates that an error occurred and an exception has been set."
-msgstr ""
-"Повертає першу позицію *substr* у ``str[start:end]``, використовуючи заданий"
-" *напрям* (*напрямок* == ``1`` означає пошук вперед, *напрямок* == ``-1`` "
-"пошук назад). Повернене значення є індексом першого збігу; значення ``-1`` "
-"вказує на те, що відповідності не знайдено, а ``-2`` вказує на те, що "
-"сталася помилка та встановлено виняток."
-
-#: ../../c-api/unicode.rst:1370
-msgid ""
-"Return the first position of the character *ch* in ``str[start:end]`` using "
-"the given *direction* (*direction* == ``1`` means to do a forward search, "
+"Return the first position of *substr* in ``unicode[start:end]`` using the "
+"given *direction* (*direction* == ``1`` means to do a forward search, "
 "*direction* == ``-1`` a backward search).  The return value is the index of "
 "the first match; a value of ``-1`` indicates that no match was found, and "
 "``-2`` indicates that an error occurred and an exception has been set."
 msgstr ""
-"Повертає першу позицію символу *ch* у ``str[start:end]``, використовуючи "
-"вказаний *напрямок* (*напрямок* == ``1`` означає пошук вперед, *напрямок* =="
-" ``-1`` пошук у зворотному напрямку). Повернене значення є індексом першого "
-"збігу; значення ``-1`` вказує на те, що відповідності не знайдено, а ``-2`` "
-"вказує на те, що сталася помилка та встановлено виняток."
+
+#: ../../c-api/unicode.rst:1370
+msgid ""
+"Return the first position of the character *ch* in ``unicode[start:end]`` "
+"using the given *direction* (*direction* == ``1`` means to do a forward "
+"search, *direction* == ``-1`` a backward search).  The return value is the "
+"index of the first match; a value of ``-1`` indicates that no match was "
+"found, and ``-2`` indicates that an error occurred and an exception has been"
+" set."
+msgstr ""
 
 #: ../../c-api/unicode.rst:1378
-msgid "*start* and *end* are now adjusted to behave like ``str[start:end]``."
+msgid ""
+"*start* and *end* are now adjusted to behave like ``unicode[start:end]``."
 msgstr ""
-"*start* і *end* тепер налаштовані так, щоб поводитися як ``str[start:end]``."
 
 #: ../../c-api/unicode.rst:1385
 msgid ""
 "Return the number of non-overlapping occurrences of *substr* in "
-"``str[start:end]``.  Return ``-1`` if an error occurred."
+"``unicode[start:end]``.  Return ``-1`` if an error occurred."
 msgstr ""
-"Повертає кількість неперекриваючих входжень *substr* у ``str[start:end]``. "
-"Повертає ``-1``, якщо сталася помилка."
 
 #: ../../c-api/unicode.rst:1392
 msgid ""
-"Replace at most *maxcount* occurrences of *substr* in *str* with *replstr* "
-"and return the resulting Unicode object. *maxcount* == ``-1`` means replace "
-"all occurrences."
+"Replace at most *maxcount* occurrences of *substr* in *unicode* with "
+"*replstr* and return the resulting Unicode object. *maxcount* == ``-1`` "
+"means replace all occurrences."
 msgstr ""
-"Замініть щонайбільше *maxcount* входжень *substr* у *str* на *replstr* і "
-"поверніть отриманий об’єкт Unicode. *maxcount* == ``-1`` означає заміну всіх"
-" входжень."
 
 #: ../../c-api/unicode.rst:1399
 msgid ""
@@ -1996,15 +1923,11 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:1408
 msgid ""
-"Compare a Unicode object, *uni*, with *string* and return ``-1``, ``0``, "
-"``1`` for less than, equal, and greater than, respectively. It is best to "
+"Compare a Unicode object, *unicode*, with *string* and return ``-1``, ``0``,"
+" ``1`` for less than, equal, and greater than, respectively. It is best to "
 "pass only ASCII-encoded strings, but the function interprets the input "
 "string as ISO-8859-1 if it contains non-ASCII characters."
 msgstr ""
-"Порівняйте об’єкт Unicode, *uni*, з *string* і поверніть ``-1``, ``0``, "
-"``1`` для меншого, рівного та більшого відповідно. Найкраще передавати лише "
-"рядки в кодуванні ASCII, але функція інтерпретує вхідний рядок як "
-"ISO-8859-1, якщо він містить символи, відмінні від ASCII."
 
 #: ../../c-api/unicode.rst:1413
 msgid "This function does not raise exceptions."
@@ -2042,31 +1965,28 @@ msgstr ""
 
 #: ../../c-api/unicode.rst:1436
 msgid ""
-"Check whether *element* is contained in *container* and return true or false"
-" accordingly."
+"Check whether *substr* is contained in *unicode* and return true or false "
+"accordingly."
 msgstr ""
-"Перевірте, чи *елемент* міститься в *контейнері*, і поверніть відповідно "
-"true або false."
 
 #: ../../c-api/unicode.rst:1439
 msgid ""
-"*element* has to coerce to a one element Unicode string. ``-1`` is returned "
+"*substr* has to coerce to a one element Unicode string. ``-1`` is returned "
 "if there was an error."
 msgstr ""
-"*element* має привести до одноелементного рядка Unicode. ``-1`` "
-"повертається, якщо була помилка."
 
 #: ../../c-api/unicode.rst:1445
 msgid ""
-"Intern the argument *\\*string* in place.  The argument must be the address "
-"of a pointer variable pointing to a Python Unicode string object.  If there "
-"is an existing interned string that is the same as *\\*string*, it sets "
-"*\\*string* to it (releasing the reference to the old string object and "
-"creating a new :term:`strong reference` to the interned string object), "
-"otherwise it leaves *\\*string* alone and interns it (creating a new "
-":term:`strong reference`). (Clarification: even though there is a lot of "
-"talk about references, think of this function as reference-neutral; you own "
-"the object after the call if and only if you owned it before the call.)"
+"Intern the argument :c:expr:`*p_unicode` in place.  The argument must be the"
+" address of a pointer variable pointing to a Python Unicode string object.  "
+"If there is an existing interned string that is the same as "
+":c:expr:`*p_unicode`, it sets :c:expr:`*p_unicode` to it (releasing the "
+"reference to the old string object and creating a new :term:`strong "
+"reference` to the interned string object), otherwise it leaves "
+":c:expr:`*p_unicode` alone and interns it (creating a new :term:`strong "
+"reference`). (Clarification: even though there is a lot of talk about "
+"references, think of this function as reference-neutral; you own the object "
+"after the call if and only if you owned it before the call.)"
 msgstr ""
 
 #: ../../c-api/unicode.rst:1458

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-24 14:13+0000\n"
+"POT-Creation-Date: 2023-12-08 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -31,13 +31,10 @@ msgstr "**Вихідний код:** :source:`Lib/reprlib.py`"
 
 #: ../../library/reprlib.rst:13
 msgid ""
-"The :mod:`reprlib` module provides a means for producing object "
+"The :mod:`!reprlib` module provides a means for producing object "
 "representations with limits on the size of the resulting strings. This is "
 "used in the Python debugger and may be useful in other contexts as well."
 msgstr ""
-"Модуль :mod:`reprlib` надає засоби для створення представлень об’єктів з "
-"обмеженнями на розмір результуючих рядків. Це використовується в "
-"налагоджувачі Python і може бути корисним і в інших контекстах."
 
 #: ../../library/reprlib.rst:17
 msgid "This module provides a class, an instance, and a function:"
@@ -101,29 +98,22 @@ msgstr ""
 #: ../../library/reprlib.rst:60
 msgid ""
 "In addition to size-limiting tools, the module also provides a decorator for"
-" detecting recursive calls to :meth:`__repr__` and substituting a "
+" detecting recursive calls to :meth:`~object.__repr__` and substituting a "
 "placeholder string instead."
 msgstr ""
-"На додаток до інструментів обмеження розміру, модуль також надає декоратор "
-"для виявлення рекурсивних викликів :meth:`__repr__` і замість цього замінює "
-"рядок-заповнювач."
 
 #: ../../library/reprlib.rst:69
 msgid ""
-"Decorator for :meth:`__repr__` methods to detect recursive calls within the "
-"same thread.  If a recursive call is made, the *fillvalue* is returned, "
-"otherwise, the usual :meth:`__repr__` call is made.  For example:"
+"Decorator for :meth:`~object.__repr__` methods to detect recursive calls "
+"within the same thread.  If a recursive call is made, the *fillvalue* is "
+"returned, otherwise, the usual :meth:`!__repr__` call is made.  For example:"
 msgstr ""
-"Декоратор для методів :meth:`__repr__` для виявлення рекурсивних викликів у "
-"межах одного потоку. Якщо виконується рекурсивний виклик, повертається "
-"*fillvalue*, інакше виконується звичайний виклик :meth:`__repr__`. "
-"Наприклад:"
 
-#: ../../library/reprlib.rst:91
+#: ../../library/reprlib.rst:93
 msgid "Repr Objects"
 msgstr "Repr Objects"
 
-#: ../../library/reprlib.rst:93
+#: ../../library/reprlib.rst:95
 msgid ""
 ":class:`Repr` instances provide several attributes which can be used to "
 "provide size limits for the representations of different object types,  and "
@@ -133,19 +123,19 @@ msgstr ""
 " для встановлення обмежень розміру для представлень різних типів об’єктів, і"
 " методів, які форматують певні типи об’єктів."
 
-#: ../../library/reprlib.rst:100
+#: ../../library/reprlib.rst:102
 msgid ""
 "This string is displayed for recursive references. It defaults to ``...``."
 msgstr ""
 
-#: ../../library/reprlib.rst:108
+#: ../../library/reprlib.rst:110
 msgid ""
 "Depth limit on the creation of recursive representations.  The default is "
 "``6``."
 msgstr ""
 "Обмеження глибини створення рекурсивних представлень. Типовим є ``6``."
 
-#: ../../library/reprlib.rst:119
+#: ../../library/reprlib.rst:121
 msgid ""
 "Limits on the number of entries represented for the named object type.  The "
 "default is ``4`` for :attr:`maxdict`, ``5`` for :attr:`maxarray`, and  ``6``"
@@ -155,7 +145,7 @@ msgstr ""
 "Типовим значенням є ``4`` для :attr:`maxdict`, ``5`` для :attr:`maxarray` та"
 " ``6`` для інших."
 
-#: ../../library/reprlib.rst:126
+#: ../../library/reprlib.rst:128
 msgid ""
 "Maximum number of characters in the representation for an integer.  Digits "
 "are dropped from the middle.  The default is ``40``."
@@ -163,7 +153,7 @@ msgstr ""
 "Максимальна кількість символів у представленні цілого числа. Цифри випадають"
 " із середини. Типовим є ``40``."
 
-#: ../../library/reprlib.rst:132
+#: ../../library/reprlib.rst:134
 msgid ""
 "Limit on the number of characters in the representation of the string.  Note"
 " that the \"normal\" representation of the string is used as the character "
@@ -175,7 +165,7 @@ msgstr ""
 "в представленні потрібні керуючі послідовності, вони можуть бути спотворені,"
 " коли представлення скорочено. Типовим значенням є ``30``."
 
-#: ../../library/reprlib.rst:140
+#: ../../library/reprlib.rst:142
 msgid ""
 "This limit is used to control the size of object types for which no specific"
 " formatting method is available on the :class:`Repr` object. It is applied "
@@ -186,26 +176,26 @@ msgstr ""
 "застосовують подібним чином до :attr:`maxstring`. Типовим значенням є "
 "``20``."
 
-#: ../../library/reprlib.rst:147
+#: ../../library/reprlib.rst:149
 msgid ""
 "If this attribute is set to ``None`` (the default), the output is formatted "
 "with no line breaks or indentation, like the standard :func:`repr`. For "
 "example:"
 msgstr ""
 
-#: ../../library/reprlib.rst:160
+#: ../../library/reprlib.rst:162
 msgid ""
 "If :attr:`~Repr.indent` is set to a string, each recursion level is placed "
 "on its own line, indented by that string:"
 msgstr ""
 
-#: ../../library/reprlib.rst:181
+#: ../../library/reprlib.rst:183
 msgid ""
 "Setting :attr:`~Repr.indent` to a positive integer value behaves as if it "
 "was set to a string with that number of spaces:"
 msgstr ""
 
-#: ../../library/reprlib.rst:207
+#: ../../library/reprlib.rst:209
 msgid ""
 "The equivalent to the built-in :func:`repr` that uses the formatting imposed"
 " by the instance."
@@ -213,7 +203,7 @@ msgstr ""
 "Еквівалент вбудованого :func:`repr`, який використовує форматування, "
 "накладене екземпляром."
 
-#: ../../library/reprlib.rst:213
+#: ../../library/reprlib.rst:215
 msgid ""
 "Recursive implementation used by :meth:`.repr`.  This uses the type of *obj*"
 " to determine which formatting method to call, passing it *obj* and *level*."
@@ -227,7 +217,7 @@ msgstr ""
 "для виконання рекурсивного форматування з ``level - 1`` для значення *level*"
 " у рекурсивному виклику."
 
-#: ../../library/reprlib.rst:222
+#: ../../library/reprlib.rst:224
 msgid ""
 "Formatting methods for specific types are implemented as methods with a name"
 " based on the type name.  In the method name, **TYPE** is replaced by "
@@ -242,21 +232,17 @@ msgstr ""
 "рекурсивного форматування значення, мають викликати ``self.repr1(subobj, "
 "level - 1)``."
 
-#: ../../library/reprlib.rst:232
+#: ../../library/reprlib.rst:234
 msgid "Subclassing Repr Objects"
 msgstr "Підкласифікація Repr Objects"
 
-#: ../../library/reprlib.rst:234
+#: ../../library/reprlib.rst:236
 msgid ""
 "The use of dynamic dispatching by :meth:`Repr.repr1` allows subclasses of "
 ":class:`Repr` to add support for additional built-in object types or to "
 "modify the handling of types already supported. This example shows how "
-"special support for file objects could be added::"
+"special support for file objects could be added:"
 msgstr ""
-"Використання динамічної диспетчеризації :meth:`Repr.repr1` дозволяє "
-"підкласам :class:`Repr` додавати підтримку для додаткових вбудованих типів "
-"об’єктів або змінювати обробку вже підтримуваних типів. У цьому прикладі "
-"показано, як можна додати спеціальну підтримку файлових об’єктів:"
 
 #: ../../library/reprlib.rst:65
 msgid "..."
