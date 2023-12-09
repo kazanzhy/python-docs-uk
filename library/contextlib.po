@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-24 14:13+0000\n"
+"POT-Creation-Date: 2023-12-08 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:57+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -184,15 +184,10 @@ msgstr ""
 msgid ""
 "This function is a :term:`decorator` that can be used to define a factory "
 "function for :keyword:`async with` statement asynchronous context managers, "
-"without needing to create a class or separate :meth:`__aenter__` and "
-":meth:`__aexit__` methods. It must be applied to an :term:`asynchronous "
-"generator` function."
+"without needing to create a class or separate :meth:`~object.__aenter__` and"
+" :meth:`~object.__aexit__` methods. It must be applied to an "
+":term:`asynchronous generator` function."
 msgstr ""
-"Ця функція є :term:`decorator`, який можна використовувати для визначення "
-"фабричної функції для :keyword:`async with` менеджерів асинхронного "
-"контексту без необхідності створювати клас або розділяти Методи "
-":meth:`__aenter__` і :meth:`__aexit__`. Його потрібно застосувати до функції"
-" :term:`asynchronous generator`."
 
 #: ../../library/contextlib.rst:113
 msgid "A simple example::"
@@ -718,19 +713,15 @@ msgstr ""
 
 #: ../../library/contextlib.rst:619
 msgid ""
-"The :meth:`close` method is not implemented, :meth:`aclose` must be used "
-"instead."
+"The :meth:`~ExitStack.close` method is not implemented; :meth:`aclose` must "
+"be used instead."
 msgstr ""
-"Метод :meth:`close` не реалізовано, замість нього потрібно використовувати "
-":meth:`aclose`."
 
 #: ../../library/contextlib.rst:624
 msgid ""
-"Similar to :meth:`enter_context` but expects an asynchronous context "
-"manager."
+"Similar to :meth:`ExitStack.enter_context` but expects an asynchronous "
+"context manager."
 msgstr ""
-"Подібно до :meth:`enter_context`, але передбачає асинхронний менеджер "
-"контексту."
 
 #: ../../library/contextlib.rst:627
 msgid ""
@@ -740,19 +731,18 @@ msgstr ""
 
 #: ../../library/contextlib.rst:633
 msgid ""
-"Similar to :meth:`push` but expects either an asynchronous context manager "
-"or a coroutine function."
+"Similar to :meth:`ExitStack.push` but expects either an asynchronous context"
+" manager or a coroutine function."
 msgstr ""
-"Подібно до :meth:`push`, але передбачає або асинхронний менеджер контексту, "
-"або функцію співпрограми."
 
 #: ../../library/contextlib.rst:638
-msgid "Similar to :meth:`callback` but expects a coroutine function."
-msgstr "Подібно до :meth:`callback`, але очікує функцію співпрограми."
+msgid ""
+"Similar to :meth:`ExitStack.callback` but expects a coroutine function."
+msgstr ""
 
 #: ../../library/contextlib.rst:642
-msgid "Similar to :meth:`close` but properly handles awaitables."
-msgstr "Подібно до :meth:`close`, але належним чином обробляє очікування."
+msgid "Similar to :meth:`ExitStack.close` but properly handles awaitables."
+msgstr ""
 
 #: ../../library/contextlib.rst:644
 msgid "Continuing the example for :func:`asynccontextmanager`::"
