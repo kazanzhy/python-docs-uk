@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-17 14:14+0000\n"
+"POT-Creation-Date: 2023-12-08 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -64,11 +64,11 @@ msgstr ""
 "яку можна перевірити програмним шляхом, імпортувавши :mod:`__future__` і "
 "перевіривши його вміст."
 
-#: ../../library/__future__.rst:25
+#: ../../library/__future__.rst:29
 msgid "Each statement in :file:`__future__.py` is of the form::"
 msgstr "Кожен оператор у :file:`__future__.py` має форму::"
 
-#: ../../library/__future__.rst:31
+#: ../../library/__future__.rst:34
 msgid ""
 "where, normally, *OptionalRelease* is less than *MandatoryRelease*, and both"
 " are 5-tuples of the same form as :data:`sys.version_info`::"
@@ -76,14 +76,14 @@ msgstr ""
 "де, як правило, *OptionalRelease* менше ніж *MandatoryRelease*, і обидва є "
 "5-кортежами тієї самої форми, що й :data:`sys.version_info`::"
 
-#: ../../library/__future__.rst:41
+#: ../../library/__future__.rst:46
 msgid ""
 "*OptionalRelease* records the first release in which the feature was "
 "accepted."
 msgstr ""
 "*OptionalRelease* записує перший випуск, у якому цю функцію було прийнято."
 
-#: ../../library/__future__.rst:43
+#: ../../library/__future__.rst:50
 msgid ""
 "In the case of a *MandatoryRelease* that has not yet occurred, "
 "*MandatoryRelease* predicts the release in which the feature will become "
@@ -92,7 +92,7 @@ msgstr ""
 "У випадку *MandatoryRelease*, який ще не відбувся, *MandatoryRelease* "
 "передбачає випуск, у якому ця функція стане частиною мови."
 
-#: ../../library/__future__.rst:47
+#: ../../library/__future__.rst:54
 msgid ""
 "Else *MandatoryRelease* records when the feature became part of the "
 "language; in releases at or after that, modules no longer need a future "
@@ -104,35 +104,21 @@ msgstr ""
 "оператор для використання відповідної функції, але вони можуть продовжувати "
 "використовувати такий імпорт."
 
-#: ../../library/__future__.rst:51
+#: ../../library/__future__.rst:58
 msgid ""
 "*MandatoryRelease* may also be ``None``, meaning that a planned feature got "
-"dropped."
+"dropped or that it is not yet decided."
 msgstr ""
-"*MandatoryRelease* також може бути ``None``, що означає, що заплановану "
-"функцію було видалено."
 
-#: ../../library/__future__.rst:54
-msgid ""
-"Instances of class :class:`_Feature` have two corresponding methods, "
-":meth:`getOptionalRelease` and :meth:`getMandatoryRelease`."
-msgstr ""
-"Екземпляри класу :class:`_Feature` мають два відповідні методи, "
-":meth:`getOptionalRelease` і :meth:`getMandatoryRelease`."
-
-#: ../../library/__future__.rst:57
+#: ../../library/__future__.rst:63
 msgid ""
 "*CompilerFlag* is the (bitfield) flag that should be passed in the fourth "
 "argument to the built-in function :func:`compile` to enable the feature in "
-"dynamically compiled code.  This flag is stored in the :attr:`compiler_flag`"
-" attribute on :class:`_Feature` instances."
+"dynamically compiled code.  This flag is stored in the "
+":attr:`_Feature.compiler_flag` attribute on :class:`_Feature` instances."
 msgstr ""
-"*CompilerFlag* — це прапор (бітове поле), який слід передати в четвертому "
-"аргументі вбудованої функції :func:`compile`, щоб увімкнути функцію в "
-"динамічно скомпільованому коді. Цей прапорець зберігається в атрибуті "
-":attr:`compiler_flag` екземплярів :class:`_Feature`."
 
-#: ../../library/__future__.rst:62
+#: ../../library/__future__.rst:68
 msgid ""
 "No feature description will ever be deleted from :mod:`__future__`. Since "
 "its introduction in Python 2.1 the following features have found their way "
@@ -142,148 +128,148 @@ msgstr ""
 "появи в Python 2.1 наступні функції знайшли шлях до мови за допомогою цього "
 "механізму:"
 
-#: ../../library/__future__.rst:67
+#: ../../library/__future__.rst:73
 msgid "feature"
 msgstr "функція"
 
-#: ../../library/__future__.rst:67
+#: ../../library/__future__.rst:73
 msgid "optional in"
 msgstr "факультативно в"
 
-#: ../../library/__future__.rst:67
+#: ../../library/__future__.rst:73
 msgid "mandatory in"
 msgstr "обов'язкове в"
 
-#: ../../library/__future__.rst:67
+#: ../../library/__future__.rst:73
 msgid "effect"
 msgstr "ефект"
 
-#: ../../library/__future__.rst:69
+#: ../../library/__future__.rst:75
 msgid "nested_scopes"
 msgstr "вкладені_області"
 
-#: ../../library/__future__.rst:69
+#: ../../library/__future__.rst:75
 msgid "2.1.0b1"
 msgstr "2.1.0b1"
 
-#: ../../library/__future__.rst:69
+#: ../../library/__future__.rst:75
 msgid "2.2"
 msgstr "2.2"
 
-#: ../../library/__future__.rst:69
+#: ../../library/__future__.rst:75
 msgid ":pep:`227`: *Statically Nested Scopes*"
 msgstr ":pep:`227`: *Статично вкладені області*"
 
-#: ../../library/__future__.rst:72
+#: ../../library/__future__.rst:78
 msgid "generators"
 msgstr "генератори"
 
-#: ../../library/__future__.rst:72
+#: ../../library/__future__.rst:78
 msgid "2.2.0a1"
 msgstr "2.2.0a1"
 
-#: ../../library/__future__.rst:72
+#: ../../library/__future__.rst:78
 msgid "2.3"
 msgstr "2.3"
 
-#: ../../library/__future__.rst:72
+#: ../../library/__future__.rst:78
 msgid ":pep:`255`: *Simple Generators*"
 msgstr ":pep:`255`: *Прості генератори*"
 
-#: ../../library/__future__.rst:75
+#: ../../library/__future__.rst:81
 msgid "division"
 msgstr "поділ"
 
-#: ../../library/__future__.rst:75
+#: ../../library/__future__.rst:81
 msgid "2.2.0a2"
 msgstr "2.2.0a2"
 
-#: ../../library/__future__.rst:75 ../../library/__future__.rst:78
-#: ../../library/__future__.rst:84 ../../library/__future__.rst:87
+#: ../../library/__future__.rst:81 ../../library/__future__.rst:84
+#: ../../library/__future__.rst:90 ../../library/__future__.rst:93
 msgid "3.0"
 msgstr "3.0"
 
-#: ../../library/__future__.rst:75
+#: ../../library/__future__.rst:81
 msgid ":pep:`238`: *Changing the Division Operator*"
 msgstr ":pep:`238`: *Зміна оператора ділення*"
 
-#: ../../library/__future__.rst:78
+#: ../../library/__future__.rst:84
 msgid "absolute_import"
 msgstr "абсолютний_імпорт"
 
-#: ../../library/__future__.rst:78 ../../library/__future__.rst:81
+#: ../../library/__future__.rst:84 ../../library/__future__.rst:87
 msgid "2.5.0a1"
 msgstr "2.5.0a1"
 
-#: ../../library/__future__.rst:78
+#: ../../library/__future__.rst:84
 msgid ":pep:`328`: *Imports: Multi-Line and Absolute/Relative*"
 msgstr ":pep:`328`: *Імпорт: багаторядковий і абсолютний/відносний*"
 
-#: ../../library/__future__.rst:81
+#: ../../library/__future__.rst:87
 msgid "with_statement"
 msgstr "with_statement"
 
-#: ../../library/__future__.rst:81
+#: ../../library/__future__.rst:87
 msgid "2.6"
 msgstr "2.6"
 
-#: ../../library/__future__.rst:81
+#: ../../library/__future__.rst:87
 msgid ":pep:`343`: *The \"with\" Statement*"
 msgstr ":pep:`343`: *Заява \"з\"*"
 
-#: ../../library/__future__.rst:84
+#: ../../library/__future__.rst:90
 msgid "print_function"
 msgstr "функція друку"
 
-#: ../../library/__future__.rst:84 ../../library/__future__.rst:87
+#: ../../library/__future__.rst:90 ../../library/__future__.rst:93
 msgid "2.6.0a2"
 msgstr "2.6.0a2"
 
-#: ../../library/__future__.rst:84
+#: ../../library/__future__.rst:90
 msgid ":pep:`3105`: *Make print a function*"
 msgstr ":pep:`3105`: *Зробити функцію друку*"
 
-#: ../../library/__future__.rst:87
+#: ../../library/__future__.rst:93
 msgid "unicode_literals"
 msgstr "unicode_literals"
 
-#: ../../library/__future__.rst:87
+#: ../../library/__future__.rst:93
 msgid ":pep:`3112`: *Bytes literals in Python 3000*"
 msgstr ":pep:`3112`: *Байтові літерали в Python 3000*"
 
-#: ../../library/__future__.rst:90
+#: ../../library/__future__.rst:96
 msgid "generator_stop"
 msgstr "generator_stop"
 
-#: ../../library/__future__.rst:90
+#: ../../library/__future__.rst:96
 msgid "3.5.0b1"
 msgstr "3.5.0b1"
 
-#: ../../library/__future__.rst:90
+#: ../../library/__future__.rst:96
 msgid "3.7"
 msgstr "3.7"
 
-#: ../../library/__future__.rst:90
+#: ../../library/__future__.rst:96
 msgid ":pep:`479`: *StopIteration handling inside generators*"
 msgstr ":pep:`479`: *Обробка StopIteration всередині генераторів*"
 
-#: ../../library/__future__.rst:93
+#: ../../library/__future__.rst:99
 msgid "annotations"
 msgstr "анотації"
 
-#: ../../library/__future__.rst:93
+#: ../../library/__future__.rst:99
 msgid "3.7.0b1"
 msgstr "3.7.0b1"
 
-#: ../../library/__future__.rst:93
+#: ../../library/__future__.rst:99
 msgid "TBD [1]_"
 msgstr "Уточнюється [1]_"
 
-#: ../../library/__future__.rst:93
+#: ../../library/__future__.rst:99
 msgid ":pep:`563`: *Postponed evaluation of annotations*"
 msgstr ":pep:`563`: *Відкладена оцінка анотацій*"
 
-#: ../../library/__future__.rst:100
+#: ../../library/__future__.rst:106
 msgid ""
 "``from __future__ import annotations`` was previously scheduled to become "
 "mandatory in Python 3.10, but the Python Steering Council twice decided to "
@@ -303,10 +289,10 @@ msgstr ""
 "dev@python.org/message/VIZEBX5EYMSYIJNDBF6DMUMZOCWHARSO/>`__). Остаточне "
 "рішення ще не прийнято. Дивіться також :pep:`563` і :pep:`649`."
 
-#: ../../library/__future__.rst:110
+#: ../../library/__future__.rst:116
 msgid ":ref:`future`"
 msgstr ":ref:`future`"
 
-#: ../../library/__future__.rst:111
+#: ../../library/__future__.rst:117
 msgid "How the compiler treats future imports."
 msgstr "Як компілятор обробляє майбутні імпорти."
