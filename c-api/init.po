@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 14:14+0000\n"
+"POT-Creation-Date: 2023-12-08 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -2788,15 +2788,11 @@ msgstr ""
 msgid ""
 "The value passed as the *what* parameter to a :c:type:`Py_tracefunc` "
 "function (but not a profiling function) when a line-number event is being "
-"reported. It may be disabled for a frame by setting :attr:`f_trace_lines` to"
-" *0* on that frame."
+"reported. It may be disabled for a frame by setting "
+":attr:`~frame.f_trace_lines` to *0* on that frame."
 msgstr ""
-"Значення, передане як параметр *what* до функції :c:type:`Py_tracefunc` (але"
-" не функції профілювання), коли повідомляється про подію номера рядка. Його "
-"можна вимкнути для кадру, встановивши :attr:`f_trace_lines` на *0* для цього"
-" кадру."
 
-#: ../../c-api/init.rst:1917
+#: ../../c-api/init.rst:1918
 msgid ""
 "The value for the *what* parameter to :c:type:`Py_tracefunc` functions when "
 "a call is about to return."
@@ -2804,7 +2800,7 @@ msgstr ""
 "Значення для параметра *what* для :c:type:`Py_tracefunc` функціонує, коли "
 "виклик збирається повернутися."
 
-#: ../../c-api/init.rst:1923
+#: ../../c-api/init.rst:1924
 msgid ""
 "The value for the *what* parameter to :c:type:`Py_tracefunc` functions when "
 "a C function is about to be called."
@@ -2812,7 +2808,7 @@ msgstr ""
 "Значення параметра *what* для функцій :c:type:`Py_tracefunc`, коли має бути "
 "викликана функція C."
 
-#: ../../c-api/init.rst:1929
+#: ../../c-api/init.rst:1930
 msgid ""
 "The value for the *what* parameter to :c:type:`Py_tracefunc` functions when "
 "a C function has raised an exception."
@@ -2820,7 +2816,7 @@ msgstr ""
 "Значення для параметра *what* для функцій :c:type:`Py_tracefunc`, коли "
 "функція C викликала виняткову ситуацію."
 
-#: ../../c-api/init.rst:1935
+#: ../../c-api/init.rst:1936
 msgid ""
 "The value for the *what* parameter to :c:type:`Py_tracefunc` functions when "
 "a C function has returned."
@@ -2828,19 +2824,15 @@ msgstr ""
 "Значення для параметра *what* для функцій :c:type:`Py_tracefunc`, коли "
 "функція C повертає."
 
-#: ../../c-api/init.rst:1941
+#: ../../c-api/init.rst:1942
 msgid ""
 "The value for the *what* parameter to :c:type:`Py_tracefunc` functions (but "
 "not profiling functions) when a new opcode is about to be executed.  This "
 "event is not emitted by default: it must be explicitly requested by setting "
-":attr:`f_trace_opcodes` to *1* on the frame."
+":attr:`~frame.f_trace_opcodes` to *1* on the frame."
 msgstr ""
-"Значення параметра *what* для функцій :c:type:`Py_tracefunc` (але не для "
-"функцій профілювання), коли має бути виконано новий код операції. Ця подія "
-"не генерується за замовчуванням: її потрібно явно запитати, встановивши для "
-":attr:`f_trace_opcodes` значення *1* у кадрі."
 
-#: ../../c-api/init.rst:1949
+#: ../../c-api/init.rst:1950
 msgid ""
 "Set the profiler function to *func*.  The *obj* parameter is passed to the "
 "function as its first parameter, and may be any Python object, or ``NULL``."
@@ -2851,29 +2843,29 @@ msgid ""
 ":c:data:`PyTrace_EXCEPTION`."
 msgstr ""
 
-#: ../../c-api/init.rst:1956
+#: ../../c-api/init.rst:1957
 msgid "See also the :func:`sys.setprofile` function."
 msgstr ""
 
-#: ../../c-api/init.rst:1958 ../../c-api/init.rst:1965
-#: ../../c-api/init.rst:1984 ../../c-api/init.rst:1991
+#: ../../c-api/init.rst:1959 ../../c-api/init.rst:1966
+#: ../../c-api/init.rst:1985 ../../c-api/init.rst:1992
 msgid "The caller must hold the :term:`GIL`."
 msgstr "Абонент повинен утримувати :term:`GIL`."
 
-#: ../../c-api/init.rst:1962
+#: ../../c-api/init.rst:1963
 msgid ""
 "Like :c:func:`PyEval_SetProfile` but sets the profile function in all "
 "running threads belonging to the current interpreter instead of the setting "
 "it only on the current thread."
 msgstr ""
 
-#: ../../c-api/init.rst:1967
+#: ../../c-api/init.rst:1968
 msgid ""
 "As :c:func:`PyEval_SetProfile`, this function ignores any exceptions raised "
 "while setting the profile functions in all threads."
 msgstr ""
 
-#: ../../c-api/init.rst:1975
+#: ../../c-api/init.rst:1976
 msgid ""
 "Set the tracing function to *func*.  This is similar to "
 ":c:func:`PyEval_SetProfile`, except the tracing function does receive line-"
@@ -2884,46 +2876,46 @@ msgid ""
 "the *what* parameter."
 msgstr ""
 
-#: ../../c-api/init.rst:1982
+#: ../../c-api/init.rst:1983
 msgid "See also the :func:`sys.settrace` function."
 msgstr ""
 
-#: ../../c-api/init.rst:1988
+#: ../../c-api/init.rst:1989
 msgid ""
 "Like :c:func:`PyEval_SetTrace` but sets the tracing function in all running "
 "threads belonging to the current interpreter instead of the setting it only "
 "on the current thread."
 msgstr ""
 
-#: ../../c-api/init.rst:1993
+#: ../../c-api/init.rst:1994
 msgid ""
 "As :c:func:`PyEval_SetTrace`, this function ignores any exceptions raised "
 "while setting the trace functions in all threads."
 msgstr ""
 
-#: ../../c-api/init.rst:2002
+#: ../../c-api/init.rst:2003
 msgid "Advanced Debugger Support"
 msgstr "Розширена підтримка налагоджувача"
 
-#: ../../c-api/init.rst:2007
+#: ../../c-api/init.rst:2008
 msgid ""
 "These functions are only intended to be used by advanced debugging tools."
 msgstr ""
 "Ці функції призначені лише для використання розширеними інструментами "
 "налагодження."
 
-#: ../../c-api/init.rst:2012
+#: ../../c-api/init.rst:2013
 msgid ""
 "Return the interpreter state object at the head of the list of all such "
 "objects."
 msgstr ""
 "Повертає об’єкт стану інтерпретатора на початку списку всіх таких об’єктів."
 
-#: ../../c-api/init.rst:2017
+#: ../../c-api/init.rst:2018
 msgid "Return the main interpreter state object."
 msgstr "Повертає основний об'єкт стану інтерпретатора."
 
-#: ../../c-api/init.rst:2022
+#: ../../c-api/init.rst:2023
 msgid ""
 "Return the next interpreter state object after *interp* from the list of all"
 " such objects."
@@ -2931,7 +2923,7 @@ msgstr ""
 "Повертає наступний об’єкт стану інтерпретатора після *interp* зі списку всіх"
 " таких об’єктів."
 
-#: ../../c-api/init.rst:2028
+#: ../../c-api/init.rst:2029
 msgid ""
 "Return the pointer to the first :c:type:`PyThreadState` object in the list "
 "of threads associated with the interpreter *interp*."
@@ -2939,7 +2931,7 @@ msgstr ""
 "Поверніть вказівник на перший об’єкт :c:type:`PyThreadState` у списку "
 "потоків, пов’язаних з інтерпретатором *interp*."
 
-#: ../../c-api/init.rst:2034
+#: ../../c-api/init.rst:2035
 msgid ""
 "Return the next thread state object after *tstate* from the list of all such"
 " objects belonging to the same :c:type:`PyInterpreterState` object."
@@ -2947,11 +2939,11 @@ msgstr ""
 "Повертає наступний об’єкт стану потоку після *tstate* зі списку всіх таких "
 "об’єктів, що належать до того самого об’єкта :c:type:`PyInterpreterState`."
 
-#: ../../c-api/init.rst:2041
+#: ../../c-api/init.rst:2042
 msgid "Thread Local Storage Support"
 msgstr "Підтримка потокового локального сховища"
 
-#: ../../c-api/init.rst:2045
+#: ../../c-api/init.rst:2046
 msgid ""
 "The Python interpreter provides low-level support for thread-local storage "
 "(TLS) which wraps the underlying native TLS implementation to support the "
@@ -2961,7 +2953,7 @@ msgid ""
 "thread."
 msgstr ""
 
-#: ../../c-api/init.rst:2052
+#: ../../c-api/init.rst:2053
 msgid ""
 "The GIL does *not* need to be held when calling these functions; they supply"
 " their own locking."
@@ -2969,7 +2961,7 @@ msgstr ""
 "GIL *не* потрібно утримувати під час виклику цих функцій; вони забезпечують "
 "власний замок."
 
-#: ../../c-api/init.rst:2055
+#: ../../c-api/init.rst:2056
 msgid ""
 "Note that :file:`Python.h` does not include the declaration of the TLS APIs,"
 " you need to include :file:`pythread.h` to use thread-local storage."
@@ -2977,7 +2969,7 @@ msgstr ""
 "Зауважте, що :file:`Python.h` не містить оголошення TLS API, вам потрібно "
 "включити :file:`pythread.h`, щоб використовувати локальне сховище потоків."
 
-#: ../../c-api/init.rst:2059
+#: ../../c-api/init.rst:2060
 msgid ""
 "None of these API functions handle memory management on behalf of the "
 ":c:expr:`void*` values.  You need to allocate and deallocate them yourself. "
@@ -2985,22 +2977,22 @@ msgid ""
 "functions don't do refcount operations on them either."
 msgstr ""
 
-#: ../../c-api/init.rst:2067
+#: ../../c-api/init.rst:2068
 msgid "Thread Specific Storage (TSS) API"
 msgstr "API для спеціального зберігання потоків (TSS)."
 
-#: ../../c-api/init.rst:2069
+#: ../../c-api/init.rst:2070
 msgid ""
 "TSS API is introduced to supersede the use of the existing TLS API within "
 "the CPython interpreter.  This API uses a new type :c:type:`Py_tss_t` "
 "instead of :c:expr:`int` to represent thread keys."
 msgstr ""
 
-#: ../../c-api/init.rst:2075
+#: ../../c-api/init.rst:2076
 msgid "\"A New C-API for Thread-Local Storage in CPython\" (:pep:`539`)"
 msgstr "\"Новий C-API для локального зберігання потоків у CPython\" (:pep:`539`)"
 
-#: ../../c-api/init.rst:2080
+#: ../../c-api/init.rst:2081
 msgid ""
 "This data structure represents the state of a thread key, the definition of "
 "which may depend on the underlying TLS implementation, and it has an "
@@ -3012,7 +3004,7 @@ msgstr ""
 "представляє стан ініціалізації ключа. У цій структурі немає громадських "
 "учасників."
 
-#: ../../c-api/init.rst:2085
+#: ../../c-api/init.rst:2086
 msgid ""
 "When :ref:`Py_LIMITED_API <stable>` is not defined, static allocation of "
 "this type by :c:macro:`Py_tss_NEEDS_INIT` is allowed."
@@ -3020,7 +3012,7 @@ msgstr ""
 "Якщо :ref:`Py_LIMITED_API <stable>` не визначено, статичний розподіл цього "
 "типу за допомогою :c:macro:`Py_tss_NEEDS_INIT` дозволений."
 
-#: ../../c-api/init.rst:2091
+#: ../../c-api/init.rst:2092
 msgid ""
 "This macro expands to the initializer for :c:type:`Py_tss_t` variables. Note"
 " that this macro won't be defined with :ref:`Py_LIMITED_API <stable>`."
@@ -3029,11 +3021,11 @@ msgstr ""
 "Зауважте, що цей макрос не буде визначено за допомогою :ref:`Py_LIMITED_API "
 "<stable>`."
 
-#: ../../c-api/init.rst:2096
+#: ../../c-api/init.rst:2097
 msgid "Dynamic Allocation"
 msgstr "Динамічний розподіл"
 
-#: ../../c-api/init.rst:2098
+#: ../../c-api/init.rst:2099
 msgid ""
 "Dynamic allocation of the :c:type:`Py_tss_t`, required in extension modules "
 "built with :ref:`Py_LIMITED_API <stable>`, where static allocation of this "
@@ -3044,7 +3036,7 @@ msgstr ""
 "розміщення цього типу неможливе через те, що його реалізація непрозора під "
 "час створення."
 
-#: ../../c-api/init.rst:2105
+#: ../../c-api/init.rst:2106
 msgid ""
 "Return a value which is the same state as a value initialized with "
 ":c:macro:`Py_tss_NEEDS_INIT`, or ``NULL`` in the case of dynamic allocation "
@@ -3054,24 +3046,24 @@ msgstr ""
 "за допомогою :c:macro:`Py_tss_NEEDS_INIT` або ``NULL`` у разі помилки "
 "динамічного розподілу."
 
-#: ../../c-api/init.rst:2112
+#: ../../c-api/init.rst:2113
 msgid ""
 "Free the given *key* allocated by :c:func:`PyThread_tss_alloc`, after first "
 "calling :c:func:`PyThread_tss_delete` to ensure any associated thread locals"
 " have been unassigned. This is a no-op if the *key* argument is ``NULL``."
 msgstr ""
 
-#: ../../c-api/init.rst:2118
+#: ../../c-api/init.rst:2119
 msgid ""
 "A freed key becomes a dangling pointer. You should reset the key to "
 "``NULL``."
 msgstr ""
 
-#: ../../c-api/init.rst:2123
+#: ../../c-api/init.rst:2124
 msgid "Methods"
 msgstr "методи"
 
-#: ../../c-api/init.rst:2125
+#: ../../c-api/init.rst:2126
 msgid ""
 "The parameter *key* of these functions must not be ``NULL``.  Moreover, the "
 "behaviors of :c:func:`PyThread_tss_set` and :c:func:`PyThread_tss_get` are "
@@ -3083,7 +3075,7 @@ msgstr ""
 " даний :c:type:`Py_tss_t` не був ініціалізований "
 ":c:func:`PyThread_tss_create`."
 
-#: ../../c-api/init.rst:2133
+#: ../../c-api/init.rst:2134
 msgid ""
 "Return a non-zero value if the given :c:type:`Py_tss_t` has been initialized"
 " by :c:func:`PyThread_tss_create`."
@@ -3091,7 +3083,7 @@ msgstr ""
 "Повертає ненульове значення, якщо заданий :c:type:`Py_tss_t` ініціалізовано "
 ":c:func:`PyThread_tss_create`."
 
-#: ../../c-api/init.rst:2139
+#: ../../c-api/init.rst:2140
 msgid ""
 "Return a zero value on successful initialization of a TSS key.  The behavior"
 " is undefined if the value pointed to by the *key* argument is not "
@@ -3105,7 +3097,7 @@ msgstr ""
 "неодноразово для одного і того ж ключа — виклик її для вже ініціалізованого "
 "ключа є безопераційним і негайно повертає успіх."
 
-#: ../../c-api/init.rst:2148
+#: ../../c-api/init.rst:2149
 msgid ""
 "Destroy a TSS key to forget the values associated with the key across all "
 "threads, and change the key's initialization state to uninitialized.  A "
@@ -3119,25 +3111,25 @@ msgstr ""
 "можна багаторазово викликати для одного і того ж ключа – виклик її для вже "
 "знищеного ключа є безопераційним."
 
-#: ../../c-api/init.rst:2157
+#: ../../c-api/init.rst:2158
 msgid ""
 "Return a zero value to indicate successfully associating a :c:expr:`void*` "
 "value with a TSS key in the current thread.  Each thread has a distinct "
 "mapping of the key to a :c:expr:`void*` value."
 msgstr ""
 
-#: ../../c-api/init.rst:2164
+#: ../../c-api/init.rst:2165
 msgid ""
 "Return the :c:expr:`void*` value associated with a TSS key in the current "
 "thread.  This returns ``NULL`` if no value is associated with the key in the"
 " current thread."
 msgstr ""
 
-#: ../../c-api/init.rst:2172
+#: ../../c-api/init.rst:2173
 msgid "Thread Local Storage (TLS) API"
 msgstr "API локального зберігання потоків (TLS)."
 
-#: ../../c-api/init.rst:2174
+#: ../../c-api/init.rst:2175
 msgid ""
 "This API is superseded by :ref:`Thread Specific Storage (TSS) API <thread-"
 "specific-storage-api>`."
@@ -3145,7 +3137,7 @@ msgstr ""
 "Цей API замінено :ref:`API спеціального зберігання потоків (TSS) <thread-"
 "specific-storage-api>`."
 
-#: ../../c-api/init.rst:2179
+#: ../../c-api/init.rst:2180
 msgid ""
 "This version of the API does not support platforms where the native TLS key "
 "is defined in a way that cannot be safely cast to ``int``.  On such "
@@ -3158,7 +3150,7 @@ msgstr ""
 ":c:func:`PyThread_create_key` негайно повернеться зі статусом помилки, а всі"
 " інші функції TLS будуть безопераційними на таких платформах."
 
-#: ../../c-api/init.rst:2184
+#: ../../c-api/init.rst:2185
 msgid ""
 "Due to the compatibility problem noted above, this version of the API should"
 " not be used in new code."
