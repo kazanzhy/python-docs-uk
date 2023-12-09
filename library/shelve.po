@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-17 14:14+0000\n"
+"POT-Creation-Date: 2023-12-08 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -266,27 +266,18 @@ msgstr "Додано підтримку менеджера контексту."
 
 #: ../../library/shelve.rst:152
 msgid ""
-"A subclass of :class:`Shelf` which exposes :meth:`first`, :meth:`!next`, "
-":meth:`previous`, :meth:`last` and :meth:`set_location` which are available "
-"in the third-party :mod:`bsddb` module from `pybsddb "
+"A subclass of :class:`Shelf` which exposes :meth:`!first`, :meth:`!next`, "
+":meth:`!previous`, :meth:`!last` and :meth:`!set_location` methods. These "
+"are available in the third-party :mod:`!bsddb` module from `pybsddb "
 "<https://www.jcea.es/programacion/pybsddb.htm>`_ but not in other database "
 "modules.  The *dict* object passed to the constructor must support those "
 "methods.  This is generally accomplished by calling one of "
-":func:`bsddb.hashopen`, :func:`bsddb.btopen` or :func:`bsddb.rnopen`.  The "
-"optional *protocol*, *writeback*, and *keyencoding* parameters have the same"
-" interpretation as for the :class:`Shelf` class."
+":func:`!bsddb.hashopen`, :func:`!bsddb.btopen` or :func:`!bsddb.rnopen`.  "
+"The optional *protocol*, *writeback*, and *keyencoding* parameters have the "
+"same interpretation as for the :class:`Shelf` class."
 msgstr ""
-"Підклас :class:`Shelf`, який відкриває :meth:`first`, :meth:`!next`, "
-":meth:`previous`, :meth:`last` і :meth:`set_location`, які доступні в "
-"сторонній модуль :mod:`bsddb` з `pybsddb "
-"<https://www.jcea.es/programacion/pybsddb.htm>`_, але не в інших модулях "
-"бази даних. Об’єкт *dict*, переданий конструктору, повинен підтримувати ці "
-"методи. Зазвичай це досягається викликом одного з :func:`bsddb.hashopen`, "
-":func:`bsddb.btopen` або :func:`bsddb.rnopen`. Додаткові параметри "
-"*protocol*, *writeback* і *keyencoding* мають таку саму інтерпретацію, що й "
-"для класу :class:`Shelf`."
 
-#: ../../library/shelve.rst:165
+#: ../../library/shelve.rst:166
 msgid ""
 "A subclass of :class:`Shelf` which accepts a *filename* instead of a dict-"
 "like object.  The underlying file will be opened using :func:`dbm.open`.  By"
@@ -302,30 +293,30 @@ msgstr ""
 ":func:`.open`. Необов’язкові параметри *protocol* і *writeback* мають таку "
 "саму інтерпретацію, що й для класу :class:`Shelf`."
 
-#: ../../library/shelve.rst:176
+#: ../../library/shelve.rst:177
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/shelve.rst:178
+#: ../../library/shelve.rst:179
 msgid ""
 "To summarize the interface (``key`` is a string, ``data`` is an arbitrary "
 "object)::"
 msgstr ""
 "Підсумовуючи інтерфейс (``key`` — це рядок, ``data`` — це довільний об’єкт):"
 
-#: ../../library/shelve.rst:215
+#: ../../library/shelve.rst:216
 msgid "Module :mod:`dbm`"
 msgstr "Модуль :mod:`dbm`"
 
-#: ../../library/shelve.rst:215
+#: ../../library/shelve.rst:216
 msgid "Generic interface to ``dbm``-style databases."
 msgstr "Загальний інтерфейс до баз даних у стилі ``dbm``."
 
-#: ../../library/shelve.rst:217
+#: ../../library/shelve.rst:218
 msgid "Module :mod:`pickle`"
 msgstr "Модуль :mod:`pickle`"
 
-#: ../../library/shelve.rst:218
+#: ../../library/shelve.rst:219
 msgid "Object serialization used by :mod:`shelve`."
 msgstr "Серіалізація об’єктів, яку використовує :mod:`shelve`."
 
