@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-24 14:13+0000\n"
+"POT-Creation-Date: 2023-12-15 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:07+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -45,33 +45,24 @@ msgstr ""
 msgid ""
 "The module formerly strictly applied the parsing rules described in the "
 ":rfc:`2109` and :rfc:`2068` specifications.  It has since been discovered "
-"that MSIE 3.0x doesn't follow the character rules outlined in those specs "
-"and also many current day browsers and servers have relaxed parsing rules "
-"when comes to Cookie handling.  As a result, the parsing rules used are a "
-"bit less strict."
+"that MSIE 3.0x didn't follow the character rules outlined in those specs; "
+"many current-day browsers and servers have also relaxed parsing rules when "
+"it comes to cookie handling.  As a result, this module now uses parsing "
+"rules that are a bit less strict than they once were."
 msgstr ""
-"Раніше модуль суворо застосовував правила аналізу, описані в специфікаціях "
-":rfc:`2109` і :rfc:`2068`. Відтоді було виявлено, що MSIE 3.0x не "
-"дотримується правил символів, викладених у цих специфікаціях, а також багато"
-" сучасних браузерів і серверів мають пом’якшені правила синтаксичного "
-"аналізу, коли йдеться про обробку файлів cookie. Як наслідок, "
-"використовувані правила розбору є трохи менш суворими."
 
-#: ../../library/http.cookies.rst:25
+#: ../../library/http.cookies.rst:26
 msgid ""
 "The character set, :data:`string.ascii_letters`, :data:`string.digits` and "
 "``!#$%&'*+-.^_`|~:`` denote the set of valid characters allowed by this "
-"module in Cookie name (as :attr:`~Morsel.key`)."
+"module in a cookie name (as :attr:`~Morsel.key`)."
 msgstr ""
-"Набір символів :data:`string.ascii_letters`, :data:`string.digits` і "
-"``!#$%&'*+-.^_`|~:`` позначає набір дійсних символів, дозволених цей модуль "
-"у імені файлу cookie (як :attr:`~Morsel.key`)."
 
-#: ../../library/http.cookies.rst:29
-msgid "Allowed ':' as a valid Cookie name character."
-msgstr "Дозволено \":\" як дійсний символ імені файлу cookie."
+#: ../../library/http.cookies.rst:30
+msgid "Allowed ':' as a valid cookie name character."
+msgstr ""
 
-#: ../../library/http.cookies.rst:35
+#: ../../library/http.cookies.rst:36
 msgid ""
 "On encountering an invalid cookie, :exc:`CookieError` is raised, so if your "
 "cookie data comes from a browser you should always prepare for invalid data "
@@ -82,7 +73,7 @@ msgstr ""
 " бути готовими до недійсних даних і виявляти помилку :exc:`CookieError` під "
 "час синтаксичного аналізу."
 
-#: ../../library/http.cookies.rst:42
+#: ../../library/http.cookies.rst:43
 msgid ""
 "Exception failing because of :rfc:`2109` invalidity: incorrect attributes, "
 "incorrect :mailheader:`Set-Cookie` header, etc."
@@ -90,7 +81,7 @@ msgstr ""
 "Помилка виключення через недійсність :rfc:`2109`: неправильні атрибути, "
 "неправильний заголовок :mailheader:`Set-Cookie` тощо."
 
-#: ../../library/http.cookies.rst:48
+#: ../../library/http.cookies.rst:49
 msgid ""
 "This class is a dictionary-like object whose keys are strings and whose "
 "values are :class:`Morsel` instances. Note that upon setting a key to a "
@@ -102,29 +93,24 @@ msgstr ""
 "значення, значення спочатку перетворюється на :class:`Morsel`, що містить "
 "ключ і значення."
 
-#: ../../library/http.cookies.rst:52
+#: ../../library/http.cookies.rst:53
 msgid "If *input* is given, it is passed to the :meth:`load` method."
 msgstr "Якщо задано *input*, воно передається в метод :meth:`load`."
 
-#: ../../library/http.cookies.rst:57
+#: ../../library/http.cookies.rst:58
 msgid ""
 "This class derives from :class:`BaseCookie` and overrides "
-":meth:`value_decode` and :meth:`value_encode`. SimpleCookie supports strings"
-" as cookie values. When setting the value, SimpleCookie calls the builtin "
-":func:`str()` to convert the value to a string. Values received from HTTP "
-"are kept as strings."
+":meth:`~BaseCookie.value_decode` and :meth:`~BaseCookie.value_encode`. "
+":class:`!SimpleCookie` supports strings as cookie values. When setting the "
+"value, :class:`!SimpleCookie` calls the builtin :func:`str` to convert the "
+"value to a string. Values received from HTTP are kept as strings."
 msgstr ""
-"Цей клас походить від :class:`BaseCookie` і замінює :meth:`value_decode` і "
-":meth:`value_encode`. SimpleCookie підтримує рядки як значення cookie. Під "
-"час встановлення значення SimpleCookie викликає вбудований :func:`str()`, "
-"щоб перетворити значення на рядок. Значення, отримані з HTTP, зберігаються "
-"як рядки."
 
-#: ../../library/http.cookies.rst:66
+#: ../../library/http.cookies.rst:68
 msgid "Module :mod:`http.cookiejar`"
 msgstr "Модуль :mod:`http.cookiejar`"
 
-#: ../../library/http.cookies.rst:65
+#: ../../library/http.cookies.rst:67
 msgid ""
 "HTTP cookie handling for web *clients*.  The :mod:`http.cookiejar` and "
 ":mod:`http.cookies` modules do not depend on each other."
@@ -132,19 +118,19 @@ msgstr ""
 "Обробка файлів cookie HTTP для веб-*клієнтів*. Модулі :mod:`http.cookiejar` "
 "і :mod:`http.cookies` не залежать один від одного."
 
-#: ../../library/http.cookies.rst:68
+#: ../../library/http.cookies.rst:70
 msgid ":rfc:`2109` - HTTP State Management Mechanism"
 msgstr ":rfc:`2109` - механізм керування станом HTTP"
 
-#: ../../library/http.cookies.rst:69
+#: ../../library/http.cookies.rst:71
 msgid "This is the state management specification implemented by this module."
 msgstr "Це специфікація управління станом, реалізована цим модулем."
 
-#: ../../library/http.cookies.rst:75
+#: ../../library/http.cookies.rst:77
 msgid "Cookie Objects"
 msgstr "Об'єкти cookie"
 
-#: ../../library/http.cookies.rst:80
+#: ../../library/http.cookies.rst:82
 msgid ""
 "Return a tuple ``(real_value, coded_value)`` from a string representation. "
 "``real_value`` can be any type. This method does no decoding in "
@@ -154,7 +140,7 @@ msgstr ""
 "``real_value`` може мати будь-який тип. Цей метод не виконує декодування в "
 ":class:`BaseCookie` --- він існує, тому його можна замінити."
 
-#: ../../library/http.cookies.rst:87
+#: ../../library/http.cookies.rst:89
 msgid ""
 "Return a tuple ``(real_value, coded_value)``. *val* can be any type, but "
 "``coded_value`` will always be converted to a string. This method does no "
@@ -164,7 +150,7 @@ msgstr ""
 "тип, але ``coded_value`` завжди буде перетворено на рядок. Цей метод не "
 "кодує в :class:`BaseCookie` --- він існує, тому його можна замінити."
 
-#: ../../library/http.cookies.rst:92
+#: ../../library/http.cookies.rst:94
 msgid ""
 "In general, it should be the case that :meth:`value_encode` and "
 ":meth:`value_decode` are inverses on the range of *value_decode*."
@@ -172,7 +158,7 @@ msgstr ""
 "Загалом має бути так, що :meth:`value_encode` і :meth:`value_decode` є "
 "зворотними в діапазоні *value_decode*."
 
-#: ../../library/http.cookies.rst:98
+#: ../../library/http.cookies.rst:100
 msgid ""
 "Return a string representation suitable to be sent as HTTP headers. *attrs* "
 "and *header* are sent to each :class:`Morsel`'s :meth:`output` method. *sep*"
@@ -184,7 +170,7 @@ msgstr ""
 ":class:`Morsel`. *sep* використовується для об’єднання заголовків і за "
 "замовчуванням є комбінацією ``'\\r\\n'`` (CRLF)."
 
-#: ../../library/http.cookies.rst:106
+#: ../../library/http.cookies.rst:108
 msgid ""
 "Return an embeddable JavaScript snippet, which, if run on a browser which "
 "supports JavaScript, will act the same as if the HTTP headers was sent."
@@ -193,12 +179,12 @@ msgstr ""
 "браузері, який підтримує JavaScript, діятиме так само, як якщо б було "
 "надіслано заголовки HTTP."
 
-#: ../../library/http.cookies.rst:109 ../../library/http.cookies.rst:205
-#: ../../library/http.cookies.rst:213
+#: ../../library/http.cookies.rst:111 ../../library/http.cookies.rst:207
+#: ../../library/http.cookies.rst:215
 msgid "The meaning for *attrs* is the same as in :meth:`output`."
 msgstr "Значення *attrs* таке ж, як і в :meth:`output`."
 
-#: ../../library/http.cookies.rst:114
+#: ../../library/http.cookies.rst:116
 msgid ""
 "If *rawdata* is a string, parse it as an ``HTTP_COOKIE`` and add the values "
 "found there as :class:`Morsel`\\ s. If it is a dictionary, it is equivalent "
@@ -208,59 +194,21 @@ msgstr ""
 "знайдені значення як :class:`Morsel`\\ s. Якщо це словник, він "
 "еквівалентний::"
 
-#: ../../library/http.cookies.rst:124
+#: ../../library/http.cookies.rst:126
 msgid "Morsel Objects"
 msgstr "Шматок об'єктів"
 
-#: ../../library/http.cookies.rst:129
+#: ../../library/http.cookies.rst:131
 msgid "Abstract a key/value pair, which has some :rfc:`2109` attributes."
 msgstr "Абстрагуйте пару ключ/значення, яка має деякі атрибути :rfc:`2109`."
 
-#: ../../library/http.cookies.rst:131
+#: ../../library/http.cookies.rst:133
 msgid ""
 "Morsels are dictionary-like objects, whose set of keys is constant --- the "
-"valid :rfc:`2109` attributes, which are"
+"valid :rfc:`2109` attributes, which are:"
 msgstr ""
-"Morsels — це об’єкти, подібні до словника, чий набір ключів постійний --- "
-"дійсні атрибути :rfc:`2109`, які"
 
-#: ../../library/http.cookies.rst:134
-msgid "``expires``"
-msgstr "``закінчується``"
-
-#: ../../library/http.cookies.rst:135
-msgid "``path``"
-msgstr "``шлях``"
-
-#: ../../library/http.cookies.rst:136
-msgid "``comment``"
-msgstr "``коментар``"
-
-#: ../../library/http.cookies.rst:137
-msgid "``domain``"
-msgstr "``домен``"
-
-#: ../../library/http.cookies.rst:138
-msgid "``max-age``"
-msgstr "``максимальний вік``"
-
-#: ../../library/http.cookies.rst:139
-msgid "``secure``"
-msgstr "``безпечний``"
-
-#: ../../library/http.cookies.rst:140
-msgid "``version``"
-msgstr "``версія``"
-
-#: ../../library/http.cookies.rst:141
-msgid "``httponly``"
-msgstr "``httply``"
-
-#: ../../library/http.cookies.rst:142
-msgid "``samesite``"
-msgstr "``самий сайт``"
-
-#: ../../library/http.cookies.rst:144
+#: ../../library/http.cookies.rst:146
 msgid ""
 "The attribute :attr:`httponly` specifies that the cookie is only transferred"
 " in HTTP requests, and is not accessible through JavaScript. This is "
@@ -270,7 +218,7 @@ msgstr ""
 "запитах і не доступний через JavaScript. Це призначено для пом’якшення "
 "деяких форм міжсайтових сценаріїв."
 
-#: ../../library/http.cookies.rst:148
+#: ../../library/http.cookies.rst:150
 msgid ""
 "The attribute :attr:`samesite` specifies that the browser is not allowed to "
 "send the cookie along with cross-site requests. This helps to mitigate CSRF "
@@ -280,20 +228,18 @@ msgstr ""
 "cookie разом із міжсайтовими запитами. Це допомагає пом’якшити атаки CSRF. "
 "Дійсні значення для цього атрибута: \"Strict\" і \"Lax\"."
 
-#: ../../library/http.cookies.rst:152
+#: ../../library/http.cookies.rst:154
 msgid "The keys are case-insensitive and their default value is ``''``."
 msgstr ""
 "Ключі нечутливі до регістру, а їхнє значення за замовчуванням – ``''``."
 
-#: ../../library/http.cookies.rst:154
+#: ../../library/http.cookies.rst:156
 msgid ""
-":meth:`~Morsel.__eq__` now takes :attr:`~Morsel.key` and "
-":attr:`~Morsel.value` into account."
+":meth:`!__eq__` now takes :attr:`~Morsel.key` and :attr:`~Morsel.value` into"
+" account."
 msgstr ""
-":meth:`~Morsel.__eq__` тепер враховує :attr:`~Morsel.key` і "
-":attr:`~Morsel.value`."
 
-#: ../../library/http.cookies.rst:158
+#: ../../library/http.cookies.rst:160
 msgid ""
 "Attributes :attr:`~Morsel.key`, :attr:`~Morsel.value` and "
 ":attr:`~Morsel.coded_value` are read-only.  Use :meth:`~Morsel.set` for "
@@ -303,31 +249,31 @@ msgstr ""
 ":attr:`~Morsel.coded_value` доступні лише для читання. Використовуйте "
 ":meth:`~Morsel.set` для їх налаштування."
 
-#: ../../library/http.cookies.rst:163
+#: ../../library/http.cookies.rst:165
 msgid "Added support for the :attr:`samesite` attribute."
 msgstr "Додано підтримку атрибута :attr:`samesite`."
 
-#: ../../library/http.cookies.rst:169
+#: ../../library/http.cookies.rst:171
 msgid "The value of the cookie."
 msgstr "Значення файлу cookie."
 
-#: ../../library/http.cookies.rst:174
+#: ../../library/http.cookies.rst:176
 msgid "The encoded value of the cookie --- this is what should be sent."
 msgstr "Закодоване значення файлу cookie --- це те, що потрібно надіслати."
 
-#: ../../library/http.cookies.rst:179
+#: ../../library/http.cookies.rst:181
 msgid "The name of the cookie."
 msgstr "Назва файлу cookie."
 
-#: ../../library/http.cookies.rst:184
+#: ../../library/http.cookies.rst:186
 msgid "Set the *key*, *value* and *coded_value* attributes."
 msgstr "Установіть атрибути *key*, *value* і *coded_value*."
 
-#: ../../library/http.cookies.rst:189
+#: ../../library/http.cookies.rst:191
 msgid "Whether *K* is a member of the set of keys of a :class:`Morsel`."
 msgstr "Чи є *K* членом набору ключів :class:`Morsel`."
 
-#: ../../library/http.cookies.rst:194
+#: ../../library/http.cookies.rst:196
 msgid ""
 "Return a string representation of the Morsel, suitable to be sent as an HTTP"
 " header. By default, all the attributes are included, unless *attrs* is "
@@ -339,7 +285,7 @@ msgstr ""
 "цьому випадку це має бути список атрибутів для використання. *заголовок* за "
 "замовчуванням ``\"Set-Cookie:\"``."
 
-#: ../../library/http.cookies.rst:202
+#: ../../library/http.cookies.rst:204
 msgid ""
 "Return an embeddable JavaScript snippet, which, if run on a browser which "
 "supports JavaScript, will act the same as if the HTTP header was sent."
@@ -348,7 +294,7 @@ msgstr ""
 "який підтримує JavaScript, діятиме так само, як якщо б було надіслано "
 "заголовок HTTP."
 
-#: ../../library/http.cookies.rst:210
+#: ../../library/http.cookies.rst:212
 msgid ""
 "Return a string representing the Morsel, without any surrounding HTTP or "
 "JavaScript."
@@ -356,7 +302,7 @@ msgstr ""
 "Повертає рядок, що представляє Morsel, без будь-якого оточуючого HTTP або "
 "JavaScript."
 
-#: ../../library/http.cookies.rst:218
+#: ../../library/http.cookies.rst:220
 msgid ""
 "Update the values in the Morsel dictionary with the values in the dictionary"
 " *values*.  Raise an error if any of the keys in the *values* dict is not a "
@@ -366,19 +312,19 @@ msgstr ""
 "помилку, якщо будь-який із ключів у *values* dict не є дійсним атрибутом "
 ":rfc:`2109`."
 
-#: ../../library/http.cookies.rst:222
+#: ../../library/http.cookies.rst:224
 msgid "an error is raised for invalid keys."
 msgstr "виникає помилка для недійсних ключів."
 
-#: ../../library/http.cookies.rst:228
+#: ../../library/http.cookies.rst:230
 msgid "Return a shallow copy of the Morsel object."
 msgstr "Поверніть дрібну копію об’єкта Morsel."
 
-#: ../../library/http.cookies.rst:230
+#: ../../library/http.cookies.rst:232
 msgid "return a Morsel object instead of a dict."
 msgstr "повертає об’єкт Morsel замість dict."
 
-#: ../../library/http.cookies.rst:236
+#: ../../library/http.cookies.rst:238
 msgid ""
 "Raise an error if key is not a valid :rfc:`2109` attribute, otherwise behave"
 " the same as :meth:`dict.setdefault`."
@@ -386,11 +332,11 @@ msgstr ""
 "Викликає помилку, якщо ключ не є дійсним атрибутом :rfc:`2109`, інакше веде "
 "себе так само, як :meth:`dict.setdefault`."
 
-#: ../../library/http.cookies.rst:243
+#: ../../library/http.cookies.rst:245
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/http.cookies.rst:245
+#: ../../library/http.cookies.rst:247
 msgid ""
 "The following example demonstrates how to use the :mod:`http.cookies` "
 "module."
