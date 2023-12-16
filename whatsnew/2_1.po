@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 14:14+0000\n"
+"POT-Creation-Date: 2023-12-15 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -670,7 +670,7 @@ msgstr ""
 msgid ":pep:`229` - Using Distutils to Build Python"
 msgstr ":pep:`229` - Використання Distutils для створення Python"
 
-#: ../../whatsnew/2.1.rst:336 ../../whatsnew/2.1.rst:574
+#: ../../whatsnew/2.1.rst:336 ../../whatsnew/2.1.rst:575
 msgid "Written and implemented by A.M. Kuchling."
 msgstr "Написана та реалізована А.М. Кухлінг."
 
@@ -784,28 +784,17 @@ msgstr "PEP 232: Атрибути функцій"
 msgid ""
 "In Python 2.1, functions can now have arbitrary information attached to "
 "them. People were often using docstrings to hold information about functions"
-" and methods, because the ``__doc__`` attribute was the only way of "
-"attaching any information to a function.  For example, in the Zope web "
-"application server, functions are marked as safe for public access by having"
-" a docstring, and in John Aycock's SPARK parsing framework, docstrings hold "
-"parts of the BNF grammar to be parsed.  This overloading is unfortunate, "
-"since docstrings are really intended to hold a function's documentation; for"
-" example, it means you can't properly document functions intended for "
-"private use in Zope."
+" and methods, because the :attr:`~function.__doc__` attribute was the only "
+"way of attaching any information to a function.  For example, in the Zope "
+"web application server, functions are marked as safe for public access by "
+"having a docstring, and in John Aycock's SPARK parsing framework, docstrings"
+" hold parts of the BNF grammar to be parsed.  This overloading is "
+"unfortunate, since docstrings are really intended to hold a function's "
+"documentation; for example, it means you can't properly document functions "
+"intended for private use in Zope."
 msgstr ""
-"У Python 2.1 функції тепер можуть мати довільну інформацію, приєднану до "
-"них. Люди часто використовували рядки документів для зберігання інформації "
-"про функції та методи, тому що атрибут ``__doc__`` був єдиним способом "
-"приєднання будь-якої інформації до функції. Наприклад, на сервері веб-"
-"додатків Zope функції позначаються як безпечні для загального доступу за "
-"допомогою рядка документації, а в системі аналізу Джона Ейкока SPARK рядки "
-"документів містять частини граматики BNF, які потрібно розібрати. Це "
-"перевантаження викликає жаль, оскільки рядки документації дійсно призначені "
-"для зберігання документації функції; наприклад, це означає, що ви не можете "
-"належним чином документувати функції, призначені для приватного використання"
-" в Zope."
 
-#: ../../whatsnew/2.1.rst:435
+#: ../../whatsnew/2.1.rst:436
 msgid ""
 "Arbitrary attributes can now be set and retrieved on functions using the "
 "regular Python syntax::"
@@ -813,7 +802,7 @@ msgstr ""
 "Довільні атрибути тепер можна встановлювати та отримувати для функцій за "
 "допомогою звичайного синтаксису Python:"
 
-#: ../../whatsnew/2.1.rst:444
+#: ../../whatsnew/2.1.rst:445
 msgid ""
 "The dictionary containing attributes can be accessed as the function's "
 ":attr:`~object.__dict__`. Unlike the :attr:`~object.__dict__` attribute of "
@@ -830,19 +819,19 @@ msgstr ""
 "встановити для нього екземпляр :class:`UserDict` або будь-який інший "
 "випадковий об’єкт, який поводиться як відображення."
 
-#: ../../whatsnew/2.1.rst:454
+#: ../../whatsnew/2.1.rst:455
 msgid ":pep:`232` - Function Attributes"
 msgstr ":pep:`232` - Атрибути функції"
 
-#: ../../whatsnew/2.1.rst:455
+#: ../../whatsnew/2.1.rst:456
 msgid "Written and implemented by Barry Warsaw."
 msgstr "Написав і реалізував Баррі Варшау."
 
-#: ../../whatsnew/2.1.rst:461
+#: ../../whatsnew/2.1.rst:462
 msgid "PEP 235: Importing Modules on Case-Insensitive Platforms"
 msgstr "PEP 235: Імпорт модулів на платформах без урахування регістру"
 
-#: ../../whatsnew/2.1.rst:463
+#: ../../whatsnew/2.1.rst:464
 msgid ""
 "Some operating systems have filesystems that are case-insensitive, MacOS and"
 " Windows being the primary examples; on these systems, it's impossible to "
@@ -854,7 +843,7 @@ msgstr ""
 "назви файлів ``FILE.PY`` і ``file.py``, навіть якщо вони зберігають назву "
 "файлу в оригінальному регістрі (вони також зберігають регістр)."
 
-#: ../../whatsnew/2.1.rst:468
+#: ../../whatsnew/2.1.rst:469
 msgid ""
 "In Python 2.1, the :keyword:`import` statement will work to simulate case-"
 "sensitivity on case-insensitive platforms.  Python will now search for the "
@@ -872,11 +861,11 @@ msgstr ""
 "регістру можна запитати, встановивши змінну середовища "
 ":envvar:`PYTHONCASEOK` перед запуском інтерпретатора Python."
 
-#: ../../whatsnew/2.1.rst:479
+#: ../../whatsnew/2.1.rst:480
 msgid "PEP 217: Interactive Display Hook"
 msgstr "PEP 217: інтерактивний дисплей"
 
-#: ../../whatsnew/2.1.rst:481
+#: ../../whatsnew/2.1.rst:482
 msgid ""
 "When using the Python interpreter interactively, the output of commands is "
 "displayed using the built-in :func:`repr` function. In Python 2.1, the "
@@ -890,19 +879,19 @@ msgstr ""
 "об’єкт, який буде викликатися замість :func:`repr`. Наприклад, ви можете "
 "встановити для нього спеціальну функцію красивого друку:"
 
-#: ../../whatsnew/2.1.rst:502
+#: ../../whatsnew/2.1.rst:503
 msgid ":pep:`217` - Display Hook for Interactive Use"
 msgstr ":pep:`217` - Дисплей Хук для інтерактивного використання"
 
-#: ../../whatsnew/2.1.rst:503
+#: ../../whatsnew/2.1.rst:504
 msgid "Written and implemented by Moshe Zadka."
 msgstr "Написав і реалізував Моше Задка."
 
-#: ../../whatsnew/2.1.rst:509
+#: ../../whatsnew/2.1.rst:510
 msgid "PEP 208: New Coercion Model"
 msgstr "PEP 208: Нова модель примусу"
 
-#: ../../whatsnew/2.1.rst:511
+#: ../../whatsnew/2.1.rst:512
 msgid ""
 "How numeric coercion is done at the C level was significantly modified.  "
 "This will only affect the authors of C extensions to Python, allowing them "
@@ -912,7 +901,7 @@ msgstr ""
 "вплине лише на авторів розширень C для Python, надаючи їм більше гнучкості в"
 " написанні типів розширень, які підтримують числові операції."
 
-#: ../../whatsnew/2.1.rst:515
+#: ../../whatsnew/2.1.rst:516
 msgid ""
 "Extension types can now set the type flag ``Py_TPFLAGS_CHECKTYPES`` in their"
 " ``PyTypeObject`` structure to indicate that they support the new coercion "
@@ -945,11 +934,11 @@ msgstr ""
 " (можливо, викликаючи :exc:`TypeError`, можливо, намагаючись використовувати"
 " числові методи іншого об’єкта)."
 
-#: ../../whatsnew/2.1.rst:534
+#: ../../whatsnew/2.1.rst:535
 msgid ":pep:`208` - Reworking the Coercion Model"
 msgstr ":pep:`208` - Переробка моделі примусу"
 
-#: ../../whatsnew/2.1.rst:533
+#: ../../whatsnew/2.1.rst:534
 msgid ""
 "Written and implemented by Neil Schemenauer, heavily based upon earlier work"
 " by Marc-André Lemburg.  Read this to understand the fine points of how "
@@ -959,11 +948,11 @@ msgstr ""
 "попередніх роботах Марка-Андре Лембурга. Прочитайте це, щоб зрозуміти "
 "тонкощі того, як числові операції тепер оброблятимуться на рівні C."
 
-#: ../../whatsnew/2.1.rst:541
+#: ../../whatsnew/2.1.rst:542
 msgid "PEP 241: Metadata in Python Packages"
 msgstr "PEP 241: Метадані в пакетах Python"
 
-#: ../../whatsnew/2.1.rst:543
+#: ../../whatsnew/2.1.rst:544
 msgid ""
 "A common complaint from Python users is that there's no single catalog of "
 "all the Python modules in existence.  T. Middleton's Vaults of Parnassus at "
@@ -974,7 +963,7 @@ msgid ""
 "Vaults is optional, and many people did not bother."
 msgstr ""
 
-#: ../../whatsnew/2.1.rst:551
+#: ../../whatsnew/2.1.rst:552
 msgid ""
 "As a first small step toward fixing the problem, Python software packaged "
 "using the Distutils :command:`sdist` command will include a file named "
@@ -1003,7 +992,7 @@ msgstr ""
 "можуть підтримувати опцію ``upload``, яка автоматично завантажуватиме ваш "
 "пакет на сервер каталогу."
 
-#: ../../whatsnew/2.1.rst:564
+#: ../../whatsnew/2.1.rst:565
 msgid ""
 "You can start creating packages containing :file:`PKG-INFO` even if you're "
 "not using Python 2.1, since a new release of the Distutils will be made for "
@@ -1019,15 +1008,15 @@ msgstr ""
 "вдосконалення. Він буде доступний у Distutils SIG за адресою "
 "https://www.python.org/community/sigs/current/distutils-sig/."
 
-#: ../../whatsnew/2.1.rst:574
+#: ../../whatsnew/2.1.rst:575
 msgid ":pep:`241` - Metadata for Python Software Packages"
 msgstr ":pep:`241` - метадані для програмних пакетів Python"
 
-#: ../../whatsnew/2.1.rst:577
+#: ../../whatsnew/2.1.rst:578
 msgid ":pep:`243` - Module Repository Upload Mechanism"
 msgstr ":pep:`243` - Механізм завантаження сховища модулів"
 
-#: ../../whatsnew/2.1.rst:577
+#: ../../whatsnew/2.1.rst:578
 msgid ""
 "Written by Sean Reifschneider, this draft PEP describes a proposed mechanism"
 " for uploading  Python packages to a central server."
@@ -1035,11 +1024,11 @@ msgstr ""
 "Цей проект PEP, написаний Шоном Райфшнайдером, описує запропонований "
 "механізм для завантаження пакетів Python на центральний сервер."
 
-#: ../../whatsnew/2.1.rst:584
+#: ../../whatsnew/2.1.rst:585
 msgid "New and Improved Modules"
 msgstr "Нові та вдосконалені модулі"
 
-#: ../../whatsnew/2.1.rst:586
+#: ../../whatsnew/2.1.rst:587
 msgid ""
 "Ka-Ping Yee contributed two new modules: :mod:`inspect.py`, a module for "
 "getting information about live Python code, and :mod:`pydoc.py`, a module "
@@ -1055,7 +1044,7 @@ msgstr ""
 "використовує :mod:`pydoc.py` для відображення документації з назвою модуля, "
 "пакета чи класу Python. Наприклад, ``pydoc xml.dom`` відображає наступне:"
 
-#: ../../whatsnew/2.1.rst:608
+#: ../../whatsnew/2.1.rst:609
 msgid ""
 ":file:`pydoc` also includes a Tk-based interactive help browser.   "
 ":file:`pydoc` quickly becomes addictive; try it out!"
@@ -1063,7 +1052,7 @@ msgstr ""
 ":file:`pydoc` також містить інтерактивний довідковий браузер на основі Tk. "
 ":file:`pydoc` швидко викликає звикання; Спробуй!"
 
-#: ../../whatsnew/2.1.rst:611
+#: ../../whatsnew/2.1.rst:612
 msgid ""
 "Two different modules for unit testing were added to the standard library. "
 "The :mod:`doctest` module, contributed by Tim Peters, provides a testing "
@@ -1074,7 +1063,7 @@ msgid ""
 "https://pyunit.sourceforge.net/ for more information about PyUnit."
 msgstr ""
 
-#: ../../whatsnew/2.1.rst:619
+#: ../../whatsnew/2.1.rst:620
 msgid ""
 "The :mod:`difflib` module contains a class, :class:`SequenceMatcher`, which "
 "compares two sequences and computes the changes required to transform one "
@@ -1090,7 +1079,7 @@ msgstr ""
 "фактично приклад програми :file:`Tools/scripts/ndiff.py` демонструє, як "
 "написати такий сценарій."
 
-#: ../../whatsnew/2.1.rst:625
+#: ../../whatsnew/2.1.rst:626
 msgid ""
 ":mod:`curses.panel`, a wrapper for the panel library, part of ncurses and of"
 " SYSV curses, was contributed by Thomas Gellekum.  The panel library "
@@ -1104,7 +1093,7 @@ msgstr ""
 "порядку глибини, а бібліотека панелей визначає, де панелі перекриваються та "
 "які розділи видно."
 
-#: ../../whatsnew/2.1.rst:631
+#: ../../whatsnew/2.1.rst:632
 msgid ""
 "The PyXML package has gone through a few releases since Python 2.0, and "
 "Python 2.1 includes an updated version of the :mod:`xml` package.  Some of "
@@ -1118,7 +1107,7 @@ msgstr ""
 "Expat обробляти файли в будь-якому кодуванні, що підтримується Python, а "
 "також різні виправлення помилок для SAX, DOM і модуля :mod:`minidom`."
 
-#: ../../whatsnew/2.1.rst:637
+#: ../../whatsnew/2.1.rst:638
 msgid ""
 "Ping also contributed another hook for handling uncaught exceptions. "
 ":func:`sys.excepthook` can be set to a callable object.  When an exception "
@@ -1138,7 +1127,7 @@ msgstr ""
 "яке не лише містить перелік фреймів стека, але також перераховує аргументи "
 "функції та локальні змінні для кожного фрейму."
 
-#: ../../whatsnew/2.1.rst:645
+#: ../../whatsnew/2.1.rst:646
 msgid ""
 "Various functions in the :mod:`time` module, such as :func:`asctime` and "
 ":func:`localtime`, require a floating point argument containing the time in "
@@ -1158,11 +1147,11 @@ msgstr ""
 "2.1 можна використовувати ``time.asctime()`` замість довшого "
 "``time.asctime(time.localtime(time.time()))``, який був необхідний раніше."
 
-#: ../../whatsnew/2.1.rst:654
+#: ../../whatsnew/2.1.rst:655
 msgid "This change was proposed and implemented by Thomas Wouters."
 msgstr "Цю зміну запропонував і впровадив Томас Воутерс."
 
-#: ../../whatsnew/2.1.rst:656
+#: ../../whatsnew/2.1.rst:657
 msgid ""
 "The :mod:`ftplib` module now defaults to retrieving files in passive mode, "
 "because passive mode is more likely to work from behind a firewall.  This "
@@ -1183,7 +1172,7 @@ msgstr ""
 " програми чи налаштувань мережі, викличте ``set_pasv(0)`` для об’єктів FTP, "
 "щоб вимкнути пасивний режим."
 
-#: ../../whatsnew/2.1.rst:665
+#: ../../whatsnew/2.1.rst:666
 msgid ""
 "Support for raw socket access has been added to the :mod:`socket` module, "
 "contributed by Grant Edwards."
@@ -1191,7 +1180,7 @@ msgstr ""
 "До модуля :mod:`socket`, наданого Грантом Едвардсом, додано підтримку "
 "необробленого доступу до сокетів."
 
-#: ../../whatsnew/2.1.rst:668
+#: ../../whatsnew/2.1.rst:669
 msgid ""
 "The :mod:`pstats` module now contains a simple interactive statistics "
 "browser for displaying timing profiles for Python programs, invoked when the"
@@ -1201,7 +1190,7 @@ msgstr ""
 "для відображення профілів часу для програм Python, викликаних, коли модуль "
 "запускається як сценарій. Надав Ерік С. Реймонд."
 
-#: ../../whatsnew/2.1.rst:672
+#: ../../whatsnew/2.1.rst:673
 msgid ""
 "A new implementation-dependent function, ``sys._getframe([depth])``, has "
 "been added to return a given frame object from the current call stack. "
@@ -1217,7 +1206,7 @@ msgstr ""
 "який *depth* викликає нижче верхньої частини стека. Наприклад, "
 "``sys._getframe(1)`` повертає об’єкт кадру викликаючого."
 
-#: ../../whatsnew/2.1.rst:679
+#: ../../whatsnew/2.1.rst:680
 msgid ""
 "This function is only present in CPython, not in Jython or the .NET "
 "implementation.  Use it for debugging, and resist the temptation to put it "
@@ -1227,11 +1216,11 @@ msgstr ""
 "Використовуйте його для налагодження та втримайтеся від спокуси вставити "
 "його у робочий код."
 
-#: ../../whatsnew/2.1.rst:687
+#: ../../whatsnew/2.1.rst:688
 msgid "Other Changes and Fixes"
 msgstr "Інші зміни та виправлення"
 
-#: ../../whatsnew/2.1.rst:689
+#: ../../whatsnew/2.1.rst:690
 msgid ""
 "There were relatively few smaller changes made in Python 2.1 due to the "
 "shorter release cycle.  A search through the CVS change logs turns up 117 "
@@ -1243,7 +1232,7 @@ msgstr ""
 "виправлених помилок; обидві цифри, ймовірно, занижені. Деякі з найбільш "
 "помітних змін:"
 
-#: ../../whatsnew/2.1.rst:694
+#: ../../whatsnew/2.1.rst:695
 msgid ""
 "A specialized object allocator is now optionally available, that should be "
 "faster than the system :c:func:`malloc` and have less memory overhead.  The "
@@ -1254,7 +1243,7 @@ msgid ""
 "implementation details."
 msgstr ""
 
-#: ../../whatsnew/2.1.rst:701
+#: ../../whatsnew/2.1.rst:702
 msgid ""
 "Authors of C extension modules should test their code with the object "
 "allocator enabled, because some incorrect code may break, causing core dumps"
@@ -1271,11 +1260,11 @@ msgid ""
 " the same problem."
 msgstr ""
 
-#: ../../whatsnew/2.1.rst:714
+#: ../../whatsnew/2.1.rst:715
 msgid "The object allocator was contributed by Vladimir Marangozov."
 msgstr "Розподільник об’єктів надав Володимир Марангозов."
 
-#: ../../whatsnew/2.1.rst:716
+#: ../../whatsnew/2.1.rst:717
 msgid ""
 "The speed of line-oriented file I/O has been improved because people often "
 "complain about its lack of speed, and because it's often been used as a "
@@ -1287,7 +1276,7 @@ msgid ""
 "coding for this change, motivated by a discussion in comp.lang.python."
 msgstr ""
 
-#: ../../whatsnew/2.1.rst:725
+#: ../../whatsnew/2.1.rst:726
 msgid ""
 "A new module and method for file objects was also added, contributed by Jeff"
 " Epler. The new method, :meth:`xreadlines`, is similar to the existing "
@@ -1303,7 +1292,7 @@ msgstr ""
 "ітерації, але не зчитування всього файлу в пам’ять, як це робить існуючий "
 "метод :meth:`readlines`. Ви б використали це так::"
 
-#: ../../whatsnew/2.1.rst:736
+#: ../../whatsnew/2.1.rst:737
 msgid ""
 "For a fuller discussion of the line I/O changes, see the python-dev summary "
 "for January 1--15, 2001 at https://mail.python.org/pipermail/python-"
@@ -1313,7 +1302,7 @@ msgstr ""
 "dev за 1--15 січня 2001 року на https://mail.python.org/pipermail/python-"
 "dev/2001-January/."
 
-#: ../../whatsnew/2.1.rst:739
+#: ../../whatsnew/2.1.rst:740
 msgid ""
 "A new method, :meth:`popitem`, was added to dictionaries to enable "
 "destructively iterating through the contents of a dictionary; this can be "
@@ -1331,7 +1320,7 @@ msgstr ""
 "Тімом Пітерсом і Гвідо ван Россумом за пропозицією та попереднім "
 "виправленням Моше Цадка."
 
-#: ../../whatsnew/2.1.rst:747
+#: ../../whatsnew/2.1.rst:748
 msgid ""
 "Modules can now control which names are imported when ``from module import "
 "*`` is used, by defining an ``__all__`` attribute containing a list of names"
@@ -1348,7 +1337,7 @@ msgstr ""
 "імпорту. Щоб виправити це, просто перелічіть загальнодоступні імена в "
 "``__all__``::"
 
-#: ../../whatsnew/2.1.rst:757
+#: ../../whatsnew/2.1.rst:758
 msgid ""
 "A stricter version of this patch was first suggested and implemented by Ben "
 "Wolfson, but after some python-dev discussion, a weaker final version was "
@@ -1358,7 +1347,7 @@ msgstr ""
 "Вольфсон, але після деякого обговорення розробників python була перевірена "
 "слабша остаточна версія."
 
-#: ../../whatsnew/2.1.rst:761
+#: ../../whatsnew/2.1.rst:762
 msgid ""
 "Applying :func:`repr` to strings previously used octal escapes for non-"
 "printable characters; for example, a newline was ``'\\012'``.  This was a "
@@ -1375,7 +1364,7 @@ msgstr ""
 "використовувати символи ``\\n``, ``\\t``, ``\\r`` для відповідних символів, "
 "і реалізував це нове форматування."
 
-#: ../../whatsnew/2.1.rst:768
+#: ../../whatsnew/2.1.rst:769
 msgid ""
 "Syntax errors detected at compile-time can now raise exceptions containing "
 "the filename and line number of the error, a pleasant side effect of the "
@@ -1385,7 +1374,7 @@ msgstr ""
 "винятки, що містять назву файлу та номер рядка помилки, приємний побічний "
 "ефект реорганізації компілятора, виконаної Джеремі Гілтоном."
 
-#: ../../whatsnew/2.1.rst:772
+#: ../../whatsnew/2.1.rst:773
 msgid ""
 "C extensions which import other modules have been changed to use "
 ":c:func:`PyImport_ImportModule`, which means that they will use any import "
@@ -1393,7 +1382,7 @@ msgid ""
 "extensions that need to import some other module from C code."
 msgstr ""
 
-#: ../../whatsnew/2.1.rst:777
+#: ../../whatsnew/2.1.rst:778
 msgid ""
 "The size of the Unicode character database was shrunk by another 340K thanks"
 " to Fredrik Lundh."
@@ -1401,7 +1390,7 @@ msgstr ""
 "Завдяки Фредріку Лунду розмір бази даних символів Unicode було зменшено ще "
 "на 340 КБ."
 
-#: ../../whatsnew/2.1.rst:780
+#: ../../whatsnew/2.1.rst:781
 msgid ""
 "Some new ports were contributed: MacOS X (by Steven Majewski), Cygwin (by "
 "Jason Tishler); RISCOS (by Dietmar Schwertberger); Unixware 7  (by Billy G. "
@@ -1411,7 +1400,7 @@ msgstr ""
 "Джейсона Тішлера); RISCOS (автор Дітмар Швертбергер); Unixware 7 (автор "
 "Billy G. Allie)."
 
-#: ../../whatsnew/2.1.rst:784
+#: ../../whatsnew/2.1.rst:785
 msgid ""
 "And there's the usual list of minor bugfixes, minor memory leaks, docstring "
 "edits, and other tweaks, too lengthy to be worth itemizing; see the CVS logs"
@@ -1422,11 +1411,11 @@ msgstr ""
 "щоб його варто було б перерахувати; перегляньте журнали CVS, щоб отримати "
 "повну інформацію, якщо ви її бажаєте."
 
-#: ../../whatsnew/2.1.rst:792
+#: ../../whatsnew/2.1.rst:793
 msgid "Acknowledgements"
 msgstr "Подяки"
 
-#: ../../whatsnew/2.1.rst:794
+#: ../../whatsnew/2.1.rst:795
 msgid ""
 "The author would like to thank the following people for offering suggestions"
 " on various drafts of this article: Graeme Cross, David Goodger, Jay Graves,"
