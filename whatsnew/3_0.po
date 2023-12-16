@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 14:14+0000\n"
+"POT-Creation-Date: 2023-12-15 14:14+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1392,14 +1392,9 @@ msgid ""
 ":pep:`3109`: Raising exceptions.  You must now use :samp:`raise "
 "{Exception}({args})` instead of :samp:`raise {Exception}, {args}`. "
 "Additionally, you can no longer explicitly specify a traceback; instead, if "
-"you *have* to do this, you can assign directly to the :attr:`__traceback__` "
-"attribute (see below)."
+"you *have* to do this, you can assign directly to the "
+":attr:`~BaseException.__traceback__` attribute (see below)."
 msgstr ""
-":pep:`3109`: Створення винятків. Тепер ви повинні використовувати "
-":samp:`raise {Exception}({args})` замість :samp:`raise {Exception}, {args}`."
-" Крім того, ви більше не можете явно вказати відстеження; натомість, якщо "
-"вам *потрібно* це зробити, ви можете призначити безпосередньо атрибуту "
-":attr:`__traceback__` (див. нижче)."
 
 #: ../../whatsnew/3.0.rst:716
 msgid ""
@@ -1420,50 +1415,32 @@ msgid ""
 "in an :keyword:`except` or :keyword:`finally` handler block.  This usually "
 "happens due to a bug in the handler block; we call this a *secondary* "
 "exception.  In this case, the original exception (that was being handled) is"
-" saved as the :attr:`__context__` attribute of the secondary exception. "
-"Explicit chaining is invoked with this syntax::"
+" saved as the :attr:`~BaseException.__context__` attribute of the secondary "
+"exception. Explicit chaining is invoked with this syntax::"
 msgstr ""
-":pep:`3134`: ланцюжок винятків. Є два випадки: неявне з’єднання та явне "
-"з’єднання. Неявне з’єднання відбувається, коли виникає виняток у блоці "
-"обробки :keyword:`except` або :keyword:`finally`. Зазвичай це відбувається "
-"через помилку в блоці обробки; ми називаємо це *вторинним* винятком. У цьому"
-" випадку вихідний виняток (який оброблявся) зберігається як атрибут "
-":attr:`__context__` вторинного виключення. Явне ланцюжок викликається з "
-"таким синтаксисом::"
 
 #: ../../whatsnew/3.0.rst:733
 msgid ""
 "(where *primary_exception* is any expression that produces an exception "
 "object, probably an exception that was previously caught). In this case, the"
-" primary exception is stored on the :attr:`__cause__` attribute of the "
-"secondary exception.  The traceback printed when an unhandled exception "
-"occurs walks the chain of :attr:`__cause__` and :attr:`__context__` "
-"attributes and prints a separate traceback for each component of the chain, "
-"with the primary exception at the top.  (Java users may recognize this "
-"behavior.)"
+" primary exception is stored on the :attr:`~BaseException.__cause__` "
+"attribute of the secondary exception.  The traceback printed when an "
+"unhandled exception occurs walks the chain of :attr:`!__cause__` and "
+":attr:`~BaseException.__context__` attributes and prints a separate "
+"traceback for each component of the chain, with the primary exception at the"
+" top.  (Java users may recognize this behavior.)"
 msgstr ""
-"(де *primary_exception* — це будь-який вираз, який створює об’єкт винятку, "
-"ймовірно, виняток, який був раніше перехоплений). У цьому випадку первинний "
-"виняток зберігається в атрибуті :attr:`__cause__` вторинного виключення. "
-"Зворотне відстеження, яке друкується, коли виникає необроблена виняткова "
-"ситуація, проходить по ланцюжку атрибутів :attr:`__cause__` і "
-":attr:`__context__` і друкує окреме відстеження для кожного компонента "
-"ланцюжка з основним винятком у верхній частині. (Користувачі Java можуть "
-"розпізнати цю поведінку.)"
 
-#: ../../whatsnew/3.0.rst:742
+#: ../../whatsnew/3.0.rst:743
 msgid ""
 ":pep:`3134`: Exception objects now store their traceback as the "
-":attr:`__traceback__` attribute.  This means that an exception object now "
-"contains all the information pertaining to an exception, and there are fewer"
-" reasons to use :func:`sys.exc_info` (though the latter is not removed)."
+":attr:`~BaseException.__traceback__` attribute.  This means that an "
+"exception object now contains all the information pertaining to an "
+"exception, and there are fewer reasons to use :func:`sys.exc_info` (though "
+"the latter is not removed)."
 msgstr ""
-":pep:`3134`: Об’єкти винятків тепер зберігають свою трасування як атрибут "
-":attr:`__traceback__`. Це означає, що об’єкт винятку тепер містить всю "
-"інформацію, що стосується винятку, і є менше причин для використання "
-":func:`sys.exc_info` (хоча останній не видаляється)."
 
-#: ../../whatsnew/3.0.rst:748
+#: ../../whatsnew/3.0.rst:749
 msgid ""
 "A few exception messages are improved when Windows fails to load an "
 "extension module.  For example, ``error code 193`` is now ``%1 is not a "
@@ -1474,15 +1451,15 @@ msgstr ""
 "є дійсною програмою Win32``. Рядки тепер мають справу з неанглійськими "
 "локалями."
 
-#: ../../whatsnew/3.0.rst:755
+#: ../../whatsnew/3.0.rst:756
 msgid "Miscellaneous Other Changes"
 msgstr "Інші інші зміни"
 
-#: ../../whatsnew/3.0.rst:758
+#: ../../whatsnew/3.0.rst:759
 msgid "Operators And Special Methods"
 msgstr "Оператори та спеціальні методи"
 
-#: ../../whatsnew/3.0.rst:760
+#: ../../whatsnew/3.0.rst:761
 msgid ""
 "``!=`` now returns the opposite of ``==``, unless ``==`` returns "
 ":data:`NotImplemented`."
@@ -1490,7 +1467,7 @@ msgstr ""
 "``!=`` тепер повертає протилежність ``==``, якщо ``==`` не повертає "
 ":data:`NotImplemented`."
 
-#: ../../whatsnew/3.0.rst:763
+#: ../../whatsnew/3.0.rst:764
 msgid ""
 "The concept of \"unbound methods\" has been removed from the language. When "
 "referencing a method as a class attribute, you now get a plain function "
@@ -1499,7 +1476,7 @@ msgstr ""
 "Поняття \"незв'язаних методів\" було видалено з мови. Посилаючись на метод "
 "як на атрибут класу, тепер ви отримуєте звичайний об’єкт функції."
 
-#: ../../whatsnew/3.0.rst:767
+#: ../../whatsnew/3.0.rst:768
 msgid ""
 ":meth:`__getslice__`, :meth:`__setslice__` and :meth:`__delslice__` were "
 "killed.  The syntax ``a[i:j]`` now translates to ``a.__getitem__(slice(i, "
@@ -1511,7 +1488,7 @@ msgstr ""
 " j))`` (або :meth:`__setitem__` або :meth:`__delitem__`, коли "
 "використовується як ціль призначення або видалення відповідно)."
 
-#: ../../whatsnew/3.0.rst:773
+#: ../../whatsnew/3.0.rst:774
 msgid ""
 ":pep:`3114`: the standard :meth:`next` method has been renamed to "
 ":meth:`~iterator.__next__`."
@@ -1519,7 +1496,7 @@ msgstr ""
 ":pep:`3114`: стандартний метод :meth:`next` було перейменовано на "
 ":meth:`~iterator.__next__`."
 
-#: ../../whatsnew/3.0.rst:776
+#: ../../whatsnew/3.0.rst:777
 msgid ""
 "The :meth:`__oct__` and :meth:`__hex__` special methods are removed -- "
 ":func:`oct` and :func:`hex` use :meth:`__index__` now to convert the "
@@ -1529,39 +1506,32 @@ msgstr ""
 "і :func:`hex` тепер використовують :meth:`__index__` для перетворення "
 "аргументу в ціле число."
 
-#: ../../whatsnew/3.0.rst:780
+#: ../../whatsnew/3.0.rst:781
 msgid "Removed support for :attr:`__members__` and :attr:`__methods__`."
 msgstr "Видалено підтримку :attr:`__members__` і :attr:`__methods__`."
 
-#: ../../whatsnew/3.0.rst:782
+#: ../../whatsnew/3.0.rst:783
 msgid ""
-"The function attributes named :attr:`func_X` have been renamed to use the "
-":data:`__X__` form, freeing up these names in the function attribute "
-"namespace for user-defined attributes.  To wit, :attr:`func_closure`, "
-":attr:`func_code`, :attr:`func_defaults`, :attr:`func_dict`, "
-":attr:`func_doc`, :attr:`func_globals`, :attr:`func_name` were renamed to "
-":attr:`__closure__`, :attr:`__code__`, :attr:`__defaults__`, "
-":attr:`~object.__dict__`, :attr:`__doc__`, :attr:`__globals__`, "
-":attr:`~definition.__name__`, respectively."
+"The function attributes named :attr:`!func_X` have been renamed to use the "
+":attr:`!__X__` form, freeing up these names in the function attribute "
+"namespace for user-defined attributes.  To wit, :attr:`!func_closure`, "
+":attr:`!func_code`, :attr:`!func_defaults`, :attr:`!func_dict`, "
+":attr:`!func_doc`, :attr:`!func_globals`, :attr:`!func_name` were renamed to"
+" :attr:`~function.__closure__`, :attr:`~function.__code__`, "
+":attr:`~function.__defaults__`, :attr:`~function.__dict__`, "
+":attr:`~function.__doc__`, :attr:`~function.__globals__`, "
+":attr:`~function.__name__`, respectively."
 msgstr ""
-"Атрибути функції з назвою :attr:`func_X` було перейменовано, щоб "
-"використовувати форму :data:`__X__`, звільнивши ці імена в просторі імен "
-"атрибутів функції для атрибутів, визначених користувачем. Зокрема, "
-":attr:`func_closure`, :attr:`func_code`, :attr:`func_defaults`, "
-":attr:`func_dict`, :attr:`func_doc`, :attr:`func_globals`, :attr:`func_name`"
-" були перейменовані на :attr:`__closure__`, :attr:`__code__`, "
-":attr:`__defaults__`, :attr:`~object.__dict__`, :attr:`__doc__`, "
-":attr:`__globals__`,  :attr:`~definition.__name__` відповідно."
 
-#: ../../whatsnew/3.0.rst:792
+#: ../../whatsnew/3.0.rst:794
 msgid ":meth:`!__nonzero__` is now :meth:`~object.__bool__`."
 msgstr ""
 
-#: ../../whatsnew/3.0.rst:795
+#: ../../whatsnew/3.0.rst:797
 msgid "Builtins"
 msgstr "Вбудовані"
 
-#: ../../whatsnew/3.0.rst:797
+#: ../../whatsnew/3.0.rst:799
 msgid ""
 ":pep:`3135`: New :func:`super`.  You can now invoke :func:`super` without "
 "arguments and (assuming this is in a regular instance method defined inside "
@@ -1575,7 +1545,7 @@ msgstr ""
 "екземпляр будуть вибрані автоматично. З аргументами поведінка :func:`super` "
 "не змінюється."
 
-#: ../../whatsnew/3.0.rst:803
+#: ../../whatsnew/3.0.rst:805
 msgid ""
 ":pep:`3111`: :func:`raw_input` was renamed to :func:`input`.  That is, the "
 "new :func:`input` function reads a line from :data:`sys.stdin` and returns "
@@ -1589,7 +1559,7 @@ msgstr ""
 "введення завершується передчасно. Щоб отримати стару поведінку "
 ":func:`input`, використовуйте ``eval(input())``."
 
-#: ../../whatsnew/3.0.rst:809
+#: ../../whatsnew/3.0.rst:811
 msgid ""
 "A new built-in function :func:`next` was added to call the "
 ":meth:`~iterator.__next__` method on an object."
@@ -1597,7 +1567,7 @@ msgstr ""
 "Додано нову вбудовану функцію :func:`next` для виклику методу "
 ":meth:`~iterator.__next__` для об’єкта."
 
-#: ../../whatsnew/3.0.rst:812
+#: ../../whatsnew/3.0.rst:814
 msgid ""
 "The :func:`round` function rounding strategy and return type have changed.  "
 "Exact halfway cases are now rounded to the nearest even result instead of "
@@ -1615,18 +1585,18 @@ msgstr ""
 " якщо викликається з одним аргументом, і значення того самого типу, що й "
 "``x``, коли викликається з двома аргументами."
 
-#: ../../whatsnew/3.0.rst:821
+#: ../../whatsnew/3.0.rst:823
 msgid "Moved :func:`intern` to :func:`sys.intern`."
 msgstr "Переміщено :func:`intern` до :func:`sys.intern`."
 
-#: ../../whatsnew/3.0.rst:823
+#: ../../whatsnew/3.0.rst:825
 msgid ""
 "Removed: :func:`apply`.  Instead of ``apply(f, args)`` use ``f(*args)``."
 msgstr ""
 "Видалено: :func:`apply`. Замість ``apply(f, args)`` використовуйте "
 "``f(*args)``."
 
-#: ../../whatsnew/3.0.rst:826
+#: ../../whatsnew/3.0.rst:828
 msgid ""
 "Removed :func:`callable`.  Instead of ``callable(f)`` you can use "
 "``isinstance(f, collections.Callable)``.  The :func:`operator.isCallable` "
@@ -1636,7 +1606,7 @@ msgstr ""
 " ``isinstance(f, collections.Callable)``. Функція "
 ":func:`operator.isCallable` також зникла."
 
-#: ../../whatsnew/3.0.rst:830
+#: ../../whatsnew/3.0.rst:832
 msgid ""
 "Removed :func:`coerce`.  This function no longer serves a purpose now that "
 "classic classes are gone."
@@ -1644,7 +1614,7 @@ msgstr ""
 "Видалено :func:`coerce`. Ця функція більше не служить меті, оскільки "
 "класичні класи зникли."
 
-#: ../../whatsnew/3.0.rst:833
+#: ../../whatsnew/3.0.rst:835
 msgid ""
 "Removed :func:`execfile`.  Instead of ``execfile(fn)`` use "
 "``exec(open(fn).read())``."
@@ -1652,7 +1622,7 @@ msgstr ""
 "Видалено :func:`execfile`. Замість ``execfile(fn)`` використовуйте "
 "``exec(open(fn).read())``."
 
-#: ../../whatsnew/3.0.rst:836
+#: ../../whatsnew/3.0.rst:838
 msgid ""
 "Removed the :class:`file` type.  Use :func:`open`.  There are now several "
 "different kinds of streams that open can return in the :mod:`io` module."
@@ -1661,7 +1631,7 @@ msgstr ""
 "різних типів потоків, які відкриваються і можуть повертатися в модулі "
 ":mod:`io`."
 
-#: ../../whatsnew/3.0.rst:839
+#: ../../whatsnew/3.0.rst:841
 msgid ""
 "Removed :func:`reduce`.  Use :func:`functools.reduce` if you really need it;"
 " however, 99 percent of the time an explicit :keyword:`for` loop is more "
@@ -1671,28 +1641,28 @@ msgstr ""
 "це дійсно потрібно; однак у 99% випадків явний цикл :keyword:`for` "
 "читабельніший."
 
-#: ../../whatsnew/3.0.rst:843
+#: ../../whatsnew/3.0.rst:845
 msgid "Removed :func:`reload`.  Use :func:`!imp.reload`."
 msgstr ""
 
-#: ../../whatsnew/3.0.rst:845
+#: ../../whatsnew/3.0.rst:847
 msgid ""
 "Removed. :meth:`dict.has_key` -- use the :keyword:`in` operator instead."
 msgstr ""
 "Видалено. :meth:`dict.has_key` -- замість цього використовуйте оператор "
 ":keyword:`in`."
 
-#: ../../whatsnew/3.0.rst:852
+#: ../../whatsnew/3.0.rst:854
 msgid "Build and C API Changes"
 msgstr "Зміни збірки та C API"
 
-#: ../../whatsnew/3.0.rst:854
+#: ../../whatsnew/3.0.rst:856
 msgid ""
 "Due to time constraints, here is a *very* incomplete list of changes to the "
 "C API."
 msgstr "Через обмеження часу ось *дуже* неповний список змін до C API."
 
-#: ../../whatsnew/3.0.rst:857
+#: ../../whatsnew/3.0.rst:859
 msgid ""
 "Support for several platforms was dropped, including but not limited to Mac "
 "OS 9, BeOS, RISCOS, Irix, and Tru64."
@@ -1700,29 +1670,29 @@ msgstr ""
 "Було припинено підтримку кількох платформ, зокрема Mac OS 9, BeOS, RISCOS, "
 "Irix і Tru64."
 
-#: ../../whatsnew/3.0.rst:860
+#: ../../whatsnew/3.0.rst:862
 msgid ":pep:`3118`: New Buffer API."
 msgstr ":pep:`3118`: Новий API буфера."
 
-#: ../../whatsnew/3.0.rst:862
+#: ../../whatsnew/3.0.rst:864
 msgid ":pep:`3121`: Extension Module Initialization & Finalization."
 msgstr ":pep:`3121`: Ініціалізація та завершення модуля розширення."
 
-#: ../../whatsnew/3.0.rst:864
+#: ../../whatsnew/3.0.rst:866
 msgid ":pep:`3123`: Making :c:macro:`PyObject_HEAD` conform to standard C."
 msgstr ":pep:`3123`: Приведення :c:macro:`PyObject_HEAD` до стандарту C."
 
-#: ../../whatsnew/3.0.rst:866
+#: ../../whatsnew/3.0.rst:868
 msgid "No more C API support for restricted execution."
 msgstr "Більше немає підтримки C API для обмеженого виконання."
 
-#: ../../whatsnew/3.0.rst:868
+#: ../../whatsnew/3.0.rst:870
 msgid ""
 ":c:func:`!PyNumber_Coerce`, :c:func:`!PyNumber_CoerceEx`, "
 ":c:func:`!PyMember_Get`, and :c:func:`!PyMember_Set` C APIs are removed."
 msgstr ""
 
-#: ../../whatsnew/3.0.rst:871
+#: ../../whatsnew/3.0.rst:873
 msgid ""
 "New C API :c:func:`PyImport_ImportModuleNoBlock`, works like "
 ":c:func:`PyImport_ImportModule` but won't block on the import lock "
@@ -1732,7 +1702,7 @@ msgstr ""
 ":c:func:`PyImport_ImportModule`, але не блокує блокування імпорту (натомість"
 " повертає помилку)."
 
-#: ../../whatsnew/3.0.rst:875
+#: ../../whatsnew/3.0.rst:877
 msgid ""
 "Renamed the boolean conversion C-level slot and method: ``nb_nonzero`` is "
 "now ``nb_bool``."
@@ -1740,17 +1710,17 @@ msgstr ""
 "Перейменовано слот і метод логічного перетворення C-рівня: ``nb_nonzero`` "
 "тепер ``nb_bool``."
 
-#: ../../whatsnew/3.0.rst:878
+#: ../../whatsnew/3.0.rst:880
 msgid ""
 "Removed :c:macro:`!METH_OLDARGS` and :c:macro:`!WITH_CYCLE_GC` from the C "
 "API."
 msgstr ""
 
-#: ../../whatsnew/3.0.rst:884
+#: ../../whatsnew/3.0.rst:886
 msgid "Performance"
 msgstr "Продуктивність"
 
-#: ../../whatsnew/3.0.rst:886
+#: ../../whatsnew/3.0.rst:888
 msgid ""
 "The net result of the 3.0 generalizations is that Python 3.0 runs the "
 "pystone benchmark around 10% slower than Python 2.5.  Most likely the "
@@ -1762,11 +1732,11 @@ msgstr ""
 "найбільшою причиною є видалення спеціального регістра для малих цілих чисел."
 " Є місце для вдосконалення, але це станеться після випуску 3.0!"
 
-#: ../../whatsnew/3.0.rst:896
+#: ../../whatsnew/3.0.rst:898
 msgid "Porting To Python 3.0"
 msgstr "Перенесення на Python 3.0"
 
-#: ../../whatsnew/3.0.rst:898
+#: ../../whatsnew/3.0.rst:900
 msgid ""
 "For porting existing Python 2.5 or 2.6 source code to Python 3.0, the best "
 "strategy is the following:"
@@ -1774,11 +1744,11 @@ msgstr ""
 "Для перенесення існуючого вихідного коду Python 2.5 або 2.6 на Python 3.0 "
 "найкраща стратегія така:"
 
-#: ../../whatsnew/3.0.rst:901
+#: ../../whatsnew/3.0.rst:903
 msgid "(Prerequisite:) Start with excellent test coverage."
 msgstr "(Обов’язкова умова:) Почніть із чудового тестового покриття."
 
-#: ../../whatsnew/3.0.rst:903
+#: ../../whatsnew/3.0.rst:905
 msgid ""
 "Port to Python 2.6.  This should be no more work than the average port from "
 "Python 2.x to Python 2.(x+1).  Make sure all your tests pass."
@@ -1787,7 +1757,7 @@ msgstr ""
 "перенесення з Python 2.x на Python 2. (x+1). Переконайтеся, що всі ваші "
 "тести пройдені."
 
-#: ../../whatsnew/3.0.rst:907
+#: ../../whatsnew/3.0.rst:909
 msgid ""
 "(Still using 2.6:) Turn on the :option:`!-3` command line switch. This "
 "enables warnings about features that will be removed (or change) in 3.0.  "
@@ -1800,7 +1770,7 @@ msgstr ""
 " ви отримуєте попередження, доки попередження не зникнуть, і всі ваші тести "
 "все одно пройдуть."
 
-#: ../../whatsnew/3.0.rst:913
+#: ../../whatsnew/3.0.rst:915
 msgid ""
 "Run the ``2to3`` source-to-source translator over your source code tree.  "
 "(See :ref:`2to3-reference` for more on this tool.)  Run the result of the "
@@ -1813,7 +1783,7 @@ msgstr ""
 "проблеми, що залишилися, виправляючи проблеми, доки всі тести не пройдуть "
 "знову."
 
-#: ../../whatsnew/3.0.rst:918
+#: ../../whatsnew/3.0.rst:920
 msgid ""
 "It is not recommended to try to write source code that runs unchanged under "
 "both Python 2.6 and 3.0; you'd have to use a very contorted coding style, "
@@ -1831,7 +1801,7 @@ msgstr ""
 "вихідного коду 2.6 і знову запустивши перекладач ``2to3`` замість "
 "редагування Версія вихідного коду 3.0."
 
-#: ../../whatsnew/3.0.rst:927
+#: ../../whatsnew/3.0.rst:929
 msgid ""
 "For porting C extensions to Python 3.0, please see :ref:`cporting-howto`."
 msgstr "Для перенесення розширень C на Python 3.0 див. :ref:`cporting-howto`."
