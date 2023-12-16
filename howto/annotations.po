@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 14:14+0000\n"
+"POT-Creation-Date: 2023-12-15 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -296,13 +296,11 @@ msgstr ""
 
 #: ../../howto/annotations.rst:155
 msgid ""
-"If ``o`` is a callable (but not a class), use ``o.__globals__`` as the "
-"globals when calling :func:`eval`."
+"If ``o`` is a callable (but not a class), use :attr:`o.__globals__ "
+"<function.__globals__>` as the globals when calling :func:`eval`."
 msgstr ""
-"Якщо ``o`` є викликаним (але не класом), використовуйте ``o.__globals__`` як"
-" глобальні під час виклику :func:`eval`."
 
-#: ../../howto/annotations.rst:158
+#: ../../howto/annotations.rst:159
 msgid ""
 "However, not all string values used as annotations can be successfully "
 "turned into Python values by :func:`eval`. String values could theoretically"
@@ -316,7 +314,7 @@ msgstr ""
 "дійсні випадки використання підказок типу, які вимагають анотування "
 "рядковими значеннями, які конкретно *неможливо* оцінити. Наприклад:"
 
-#: ../../howto/annotations.rst:165
+#: ../../howto/annotations.rst:166
 msgid ""
 ":pep:`604` union types using ``|``, before support for this was added to "
 "Python 3.10."
@@ -324,7 +322,7 @@ msgstr ""
 ":pep:`604` типи об’єднання з використанням ``|``, перш ніж підтримку цього "
 "було додано в Python 3.10."
 
-#: ../../howto/annotations.rst:167
+#: ../../howto/annotations.rst:168
 msgid ""
 "Definitions that aren't needed at runtime, only imported when "
 ":const:`typing.TYPE_CHECKING` is true."
@@ -332,7 +330,7 @@ msgstr ""
 "Визначення, які не потрібні під час виконання, імпортуються лише тоді, коли "
 ":const:`typing.TYPE_CHECKING` має значення true."
 
-#: ../../howto/annotations.rst:170
+#: ../../howto/annotations.rst:171
 msgid ""
 "If :func:`eval` attempts to evaluate such values, it will fail and raise an "
 "exception.  So, when designing a library API that works with annotations, "
@@ -344,12 +342,12 @@ msgstr ""
 "анотаціями, рекомендується намагатися оцінити значення рядка лише тоді, коли"
 " це явно вимагається від викликаючого."
 
-#: ../../howto/annotations.rst:178
+#: ../../howto/annotations.rst:179
 msgid "Best Practices For ``__annotations__`` In Any Python Version"
 msgstr ""
 "Найкращі методи роботи з ``__annotations__`` в будь-якій версії Python"
 
-#: ../../howto/annotations.rst:180
+#: ../../howto/annotations.rst:181
 msgid ""
 "You should avoid assigning to the ``__annotations__`` member of objects "
 "directly.  Let Python manage setting ``__annotations__``."
@@ -357,7 +355,7 @@ msgstr ""
 "Вам слід уникати безпосереднього призначення члену ``__annotations__`` "
 "об’єктів. Дозвольте Python керувати налаштуванням ``__annotations__``."
 
-#: ../../howto/annotations.rst:183
+#: ../../howto/annotations.rst:184
 msgid ""
 "If you do assign directly to the ``__annotations__`` member of an object, "
 "you should always set it to a ``dict`` object."
@@ -365,7 +363,7 @@ msgstr ""
 "Якщо ви призначаєте безпосередньо члену ``__annotations__`` об’єкта, ви "
 "завжди повинні встановлювати його на об’єкт ``dict``."
 
-#: ../../howto/annotations.rst:186
+#: ../../howto/annotations.rst:187
 msgid ""
 "If you directly access the ``__annotations__`` member of an object, you "
 "should ensure that it's a dictionary before attempting to examine its "
@@ -375,20 +373,20 @@ msgstr ""
 " повинні переконатися, що це словник, перш ніж намагатися перевірити його "
 "вміст."
 
-#: ../../howto/annotations.rst:190
+#: ../../howto/annotations.rst:191
 msgid "You should avoid modifying ``__annotations__`` dicts."
 msgstr "Слід уникати змінення ``__annotations__`` dicts."
 
-#: ../../howto/annotations.rst:192
+#: ../../howto/annotations.rst:193
 msgid ""
 "You should avoid deleting the ``__annotations__`` attribute of an object."
 msgstr "Слід уникати видалення атрибута ``__annotations__`` об’єкта."
 
-#: ../../howto/annotations.rst:197
+#: ../../howto/annotations.rst:198
 msgid "``__annotations__`` Quirks"
 msgstr "``__annotations__`` Примхи"
 
-#: ../../howto/annotations.rst:199
+#: ../../howto/annotations.rst:200
 msgid ""
 "In all versions of Python 3, function objects lazy-create an annotations "
 "dict if no annotations are defined on that object.  You can delete the "
@@ -408,7 +406,7 @@ msgstr ""
 "dict, викличе ``AttributeError``; використання ``del fn.__annotations__`` "
 "двічі поспіль гарантовано завжди викидає ``AttributeError``."
 
-#: ../../howto/annotations.rst:209
+#: ../../howto/annotations.rst:210
 msgid ""
 "Everything in the above paragraph also applies to class and module objects "
 "in Python 3.10 and newer."
@@ -416,7 +414,7 @@ msgstr ""
 "Усе, що наведено вище, також стосується об’єктів класу та модуля в Python "
 "3.10 і новіших версіях."
 
-#: ../../howto/annotations.rst:212
+#: ../../howto/annotations.rst:213
 msgid ""
 "In all versions of Python 3, you can set ``__annotations__`` on a function "
 "object to ``None``.  However, subsequently accessing the annotations on that"
@@ -434,7 +432,7 @@ msgstr ""
 "дозволяють установлювати ``__annotations__`` на будь-яке значення Python і "
 "збережуть будь-яке встановлене значення."
 
-#: ../../howto/annotations.rst:220
+#: ../../howto/annotations.rst:221
 msgid ""
 "If Python stringizes your annotations for you (using ``from __future__ "
 "import annotations``), and you specify a string as an annotation, the string"
@@ -445,7 +443,7 @@ msgstr ""
 "__future__ import annotations``), і ви вкажете рядок як анотацію, сам рядок "
 "буде взято в лапки. По суті, анотація взята в лапки *двічі.* Наприклад::"
 
-#: ../../howto/annotations.rst:231
+#: ../../howto/annotations.rst:232
 msgid ""
 "This prints ``{'a': \"'str'\"}``.  This shouldn't really be considered a "
 "\"quirk\"; it's mentioned here simply because it might be surprising."

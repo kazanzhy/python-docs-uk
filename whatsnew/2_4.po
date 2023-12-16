@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-01 14:14+0000\n"
+"POT-Creation-Date: 2023-12-15 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -465,21 +465,17 @@ msgstr ""
 
 #: ../../whatsnew/2.4.rst:327
 msgid ""
-"A small related change makes the :attr:`func_name` attribute of functions "
-"writable.  This attribute is used to display function names in tracebacks, "
-"so decorators should change the name of any new function that's constructed "
-"and returned."
+"A small related change makes the :attr:`func_name <function.__name__>` "
+"attribute of functions writable.  This attribute is used to display function"
+" names in tracebacks, so decorators should change the name of any new "
+"function that's constructed and returned."
 msgstr ""
-"Невелика відповідна зміна робить атрибут :attr:`func_name` функцій доступним"
-" для запису. Цей атрибут використовується для відображення імен функцій у "
-"зворотних трасуваннях, тому декоратори повинні змінити назву будь-якої нової"
-" функції, яка створена та повернута."
 
-#: ../../whatsnew/2.4.rst:338
+#: ../../whatsnew/2.4.rst:339
 msgid ":pep:`318` - Decorators for Functions, Methods and Classes"
 msgstr ":pep:`318` - Декоратори для функцій, методів і класів"
 
-#: ../../whatsnew/2.4.rst:336
+#: ../../whatsnew/2.4.rst:337
 msgid ""
 "Written  by Kevin D. Smith, Jim Jewett, and Skip Montanaro.  Several people "
 "wrote patches implementing function decorators, but the one that was "
@@ -489,19 +485,19 @@ msgstr ""
 "патчі, що реалізують декоратори функцій, але фактично зареєстровано патч "
 "№979728, написаний Марком Расселом."
 
-#: ../../whatsnew/2.4.rst:340
+#: ../../whatsnew/2.4.rst:341
 msgid "https://wiki.python.org/moin/PythonDecoratorLibrary"
 msgstr "https://wiki.python.org/moin/PythonDecoratorLibrary"
 
-#: ../../whatsnew/2.4.rst:341
+#: ../../whatsnew/2.4.rst:342
 msgid "This Wiki page contains several examples of decorators."
 msgstr "Ця сторінка Wiki містить кілька прикладів декораторів."
 
-#: ../../whatsnew/2.4.rst:347
+#: ../../whatsnew/2.4.rst:348
 msgid "PEP 322: Reverse Iteration"
 msgstr "PEP 322: Зворотна ітерація"
 
-#: ../../whatsnew/2.4.rst:349
+#: ../../whatsnew/2.4.rst:350
 msgid ""
 "A new built-in function, ``reversed(seq)``, takes a sequence and returns an "
 "iterator that loops over the elements of the sequence  in reverse order.   "
@@ -510,7 +506,7 @@ msgstr ""
 "Нова вбудована функція, ``reversed(seq)``, приймає послідовність і повертає "
 "ітератор, який перебирає елементи послідовності у зворотному порядку. ::"
 
-#: ../../whatsnew/2.4.rst:359
+#: ../../whatsnew/2.4.rst:360
 msgid ""
 "Compared to extended slicing, such as ``range(1,4)[::-1]``, :func:`reversed`"
 " is easier to read, runs faster, and uses substantially less memory."
@@ -519,7 +515,7 @@ msgstr ""
 ":func:`reversed` легше читати, працює швидше та використовує значно менше "
 "пам’яті."
 
-#: ../../whatsnew/2.4.rst:362
+#: ../../whatsnew/2.4.rst:363
 msgid ""
 "Note that :func:`reversed` only accepts sequences, not arbitrary iterators."
 "  If you want to reverse an iterator, first convert it to  a list with "
@@ -529,19 +525,19 @@ msgstr ""
 "ітератори. Якщо ви хочете змінити ітератор, спочатку перетворіть його на "
 "список за допомогою :func:`list`. ::"
 
-#: ../../whatsnew/2.4.rst:376
+#: ../../whatsnew/2.4.rst:377
 msgid ":pep:`322` - Reverse Iteration"
 msgstr ":pep:`322` - Зворотна ітерація"
 
-#: ../../whatsnew/2.4.rst:377
+#: ../../whatsnew/2.4.rst:378
 msgid "Written and implemented by Raymond Hettinger."
 msgstr "Написаний і реалізований Раймондом Геттінгером."
 
-#: ../../whatsnew/2.4.rst:383
+#: ../../whatsnew/2.4.rst:384
 msgid "PEP 324: New subprocess Module"
 msgstr "PEP 324: Новий модуль підпроцесу"
 
-#: ../../whatsnew/2.4.rst:385
+#: ../../whatsnew/2.4.rst:386
 msgid ""
 "The standard library provides a number of ways to execute a subprocess, "
 "offering different features and different levels of complexity. "
@@ -562,7 +558,7 @@ msgstr ""
 "викликає плутанину. Модуль :mod:`subprocess` очищає це, надаючи уніфікований"
 " інтерфейс, який пропонує всі функції, які можуть вам знадобитися."
 
-#: ../../whatsnew/2.4.rst:394
+#: ../../whatsnew/2.4.rst:395
 msgid ""
 "Instead of :mod:`popen2`'s collection of classes, :mod:`subprocess` contains"
 " a single class called :class:`Popen`  whose constructor supports a number "
@@ -572,7 +568,7 @@ msgstr ""
 " під назвою :class:`Popen`, конструктор якого підтримує низку різних "
 "ключових аргументів. ::"
 
-#: ../../whatsnew/2.4.rst:404
+#: ../../whatsnew/2.4.rst:405
 msgid ""
 "*args* is commonly a sequence of strings that will be the arguments to the "
 "program executed as the subprocess.  (If the *shell* argument is true, "
@@ -584,7 +580,7 @@ msgstr ""
 "може бути рядком, який потім буде передано в оболонку для інтерпретації, як "
 "це робить :func:`os.system`.)"
 
-#: ../../whatsnew/2.4.rst:409
+#: ../../whatsnew/2.4.rst:410
 msgid ""
 "*stdin*, *stdout*, and *stderr* specify what the subprocess's input, output,"
 " and error streams will be.  You can provide a file object or a file "
@@ -596,11 +592,11 @@ msgstr ""
 " файлу, або ви можете використовувати константу ``subprocess.PIPE`` для "
 "створення каналу між підпроцесом і батьківським процесом."
 
-#: ../../whatsnew/2.4.rst:417
+#: ../../whatsnew/2.4.rst:418
 msgid "The constructor has a number of handy options:"
 msgstr "Конструктор має ряд зручних опцій:"
 
-#: ../../whatsnew/2.4.rst:419
+#: ../../whatsnew/2.4.rst:420
 msgid ""
 "*close_fds* requests that all file descriptors be closed before running the "
 "subprocess."
@@ -608,7 +604,7 @@ msgstr ""
 "*close_fds* просить закрити всі файлові дескриптори перед запуском "
 "підпроцесу."
 
-#: ../../whatsnew/2.4.rst:422
+#: ../../whatsnew/2.4.rst:423
 msgid ""
 "*cwd* specifies the working directory in which the subprocess will be "
 "executed (defaulting to whatever the parent's working directory is)."
@@ -616,18 +612,18 @@ msgstr ""
 "*cwd* визначає робочий каталог, у якому виконуватиметься підпроцес (за "
 "замовчуванням це будь-який робочий каталог батьківського процесу)."
 
-#: ../../whatsnew/2.4.rst:425
+#: ../../whatsnew/2.4.rst:426
 msgid "*env* is a dictionary specifying environment variables."
 msgstr "*env* — це словник, який визначає змінні середовища."
 
-#: ../../whatsnew/2.4.rst:427
+#: ../../whatsnew/2.4.rst:428
 msgid ""
 "*preexec_fn* is a function that gets called before the child is started."
 msgstr ""
 "*preexec_fn* — це функція, яка викликається перед запуском дочірнього "
 "елемента."
 
-#: ../../whatsnew/2.4.rst:429
+#: ../../whatsnew/2.4.rst:430
 msgid ""
 "*universal_newlines* opens the child's input and output using Python's "
 ":term:`universal newlines` feature."
@@ -635,7 +631,7 @@ msgstr ""
 "*universal_newlines* відкриває введення та виведення дочірнього елемента за "
 "допомогою функції Python :term:`universal newlines`."
 
-#: ../../whatsnew/2.4.rst:432
+#: ../../whatsnew/2.4.rst:433
 msgid ""
 "Once you've created the :class:`Popen` instance,  you can call its "
 ":meth:`wait` method to pause until the subprocess has exited, :meth:`poll` "
@@ -653,7 +649,7 @@ msgstr ""
 "надіслав на свій стандартний вихід або стандартну помилку, повертаючи кортеж"
 " ``(stdout_data, stderr_data)``."
 
-#: ../../whatsnew/2.4.rst:439
+#: ../../whatsnew/2.4.rst:440
 msgid ""
 ":func:`call` is a shortcut that passes its arguments along to the "
 ":class:`Popen` constructor, waits for the command to complete, and returns "
@@ -664,7 +660,7 @@ msgstr ""
 ":class:`Popen`, очікує на завершення команди та повертає код статусу "
 "підпроцесу. Він може служити безпечнішим аналогом :func:`os.system`::"
 
-#: ../../whatsnew/2.4.rst:451
+#: ../../whatsnew/2.4.rst:452
 msgid ""
 "The command is invoked without use of the shell.  If you really do want to  "
 "use the shell, you can add ``shell=True`` as a keyword argument and provide "
@@ -674,7 +670,7 @@ msgstr ""
 "використовувати оболонку, ви можете додати ``shell=True`` як ключовий "
 "аргумент і надати рядок замість послідовності::"
 
-#: ../../whatsnew/2.4.rst:457
+#: ../../whatsnew/2.4.rst:458
 msgid ""
 "The PEP takes various examples of shell and Python code and shows how they'd"
 " be translated into Python code that uses :mod:`subprocess`.  Reading this "
@@ -684,11 +680,11 @@ msgstr ""
 "бути переведені в код Python, який використовує :mod:`subprocess`. Настійно "
 "рекомендується прочитати цей розділ PEP."
 
-#: ../../whatsnew/2.4.rst:465
+#: ../../whatsnew/2.4.rst:466
 msgid ":pep:`324` - subprocess - New process module"
 msgstr ":pep:`324` - підпроцес - Новий модуль процесу"
 
-#: ../../whatsnew/2.4.rst:465
+#: ../../whatsnew/2.4.rst:466
 msgid ""
 "Written and implemented by Peter Åstrand, with assistance from Fredrik Lundh"
 " and others."
@@ -696,11 +692,11 @@ msgstr ""
 "Написано та реалізовано Пітером Естрандом за сприяння Фредріка Лунда та "
 "інших."
 
-#: ../../whatsnew/2.4.rst:472
+#: ../../whatsnew/2.4.rst:473
 msgid "PEP 327: Decimal Data Type"
 msgstr "PEP 327: десятковий тип даних"
 
-#: ../../whatsnew/2.4.rst:474
+#: ../../whatsnew/2.4.rst:475
 msgid ""
 "Python has always supported floating-point (FP) numbers, based on the "
 "underlying C :c:expr:`double` type, as a data type.  However, while most "
@@ -710,11 +706,11 @@ msgid ""
 "these fractions accurately, up to a user-specified precision limit."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:483
+#: ../../whatsnew/2.4.rst:484
 msgid "Why is Decimal needed?"
 msgstr "Навіщо потрібен Decimal?"
 
-#: ../../whatsnew/2.4.rst:485
+#: ../../whatsnew/2.4.rst:486
 msgid ""
 "The limitations arise from the representation used for floating-point "
 "numbers. FP numbers are made up of three components:"
@@ -722,11 +718,11 @@ msgstr ""
 "Обмеження виникають через представлення чисел з плаваючою комою. Номери FP "
 "складаються з трьох компонентів:"
 
-#: ../../whatsnew/2.4.rst:488
+#: ../../whatsnew/2.4.rst:489
 msgid "The sign, which is positive or negative."
 msgstr "Знак, який є позитивним чи негативним."
 
-#: ../../whatsnew/2.4.rst:490
+#: ../../whatsnew/2.4.rst:491
 msgid ""
 "The mantissa, which is a single-digit binary number   followed by a "
 "fractional part.  For example, ``1.01`` in base-2 notation is ``1 + 0/2 + "
@@ -736,13 +732,13 @@ msgstr ""
 "частина. Наприклад, \"1,01\" у нотації з основою 2 — це \"1 + 0/2 + 1/4\" "
 "або 1,25 у десятковій системі числення."
 
-#: ../../whatsnew/2.4.rst:494
+#: ../../whatsnew/2.4.rst:495
 msgid ""
 "The exponent, which tells where the decimal point is located in the number "
 "represented."
 msgstr "Експонента, яка вказує, де в представленому числі розташована кома."
 
-#: ../../whatsnew/2.4.rst:497
+#: ../../whatsnew/2.4.rst:498
 msgid ""
 "For example, the number 1.25 has positive sign, a mantissa value of 1.01 (in"
 " binary), and an exponent of 0 (the decimal point doesn't need to be "
@@ -755,7 +751,7 @@ msgstr ""
 "той самий знак і мантису, але показник степеня дорівнює 2, оскільки мантиса "
 "множиться на 4 (2 у ступені степеня 2); 1,25 \\* 4 дорівнює 5."
 
-#: ../../whatsnew/2.4.rst:503
+#: ../../whatsnew/2.4.rst:504
 msgid ""
 "Modern systems usually provide floating-point support that conforms to a "
 "standard called IEEE 754.  C's :c:expr:`double` type is usually implemented "
@@ -770,11 +766,11 @@ msgid ""
 "decimal after 52 digits, so the representation is slightly inaccurate."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:515
+#: ../../whatsnew/2.4.rst:516
 msgid "Sometimes you can see this inaccuracy when the number is printed::"
 msgstr "Іноді ви можете побачити цю неточність, коли надруковано номер:"
 
-#: ../../whatsnew/2.4.rst:520
+#: ../../whatsnew/2.4.rst:521
 msgid ""
 "The inaccuracy isn't always visible when you print the number because the "
 "FP-to-decimal-string conversion is provided by the C library, and most C "
@@ -788,7 +784,7 @@ msgstr ""
 "не відображається, неточність все одно існує, і наступні операції можуть "
 "збільшити помилку."
 
-#: ../../whatsnew/2.4.rst:525
+#: ../../whatsnew/2.4.rst:526
 msgid ""
 "For many applications this doesn't matter.  If I'm plotting points and "
 "displaying them on my monitor, the difference between 1.1 and "
@@ -806,15 +802,15 @@ msgstr ""
 "реалізація власних користувацьких арифметичних процедур вимагає багато "
 "роботи."
 
-#: ../../whatsnew/2.4.rst:533
+#: ../../whatsnew/2.4.rst:534
 msgid "Hence, the :class:`Decimal` type was created."
 msgstr "Таким чином, був створений тип :class:`Decimal`."
 
-#: ../../whatsnew/2.4.rst:537
+#: ../../whatsnew/2.4.rst:538
 msgid "The :class:`Decimal` type"
 msgstr "Тип :class:`Decimal`"
 
-#: ../../whatsnew/2.4.rst:539
+#: ../../whatsnew/2.4.rst:540
 msgid ""
 "A new module, :mod:`decimal`, was added to Python's standard library.  It "
 "contains two classes, :class:`Decimal` and :class:`Context`.  "
@@ -828,7 +824,7 @@ msgstr ""
 "використовуються для завершення різних налаштувань, таких як точність і "
 "режим округлення за замовчуванням."
 
-#: ../../whatsnew/2.4.rst:544
+#: ../../whatsnew/2.4.rst:545
 msgid ""
 ":class:`Decimal` instances are immutable, like regular Python integers and "
 "FP numbers; once it's been created, you can't change the value an instance "
@@ -840,7 +836,7 @@ msgstr ""
 "яке представляє екземпляр. :class:`Decimal` екземпляри можна створити з "
 "цілих чисел або рядків::"
 
-#: ../../whatsnew/2.4.rst:555
+#: ../../whatsnew/2.4.rst:556
 msgid ""
 "You can also provide tuples containing the sign, the mantissa represented  "
 "as a tuple of decimal digits, and the exponent::"
@@ -848,7 +844,7 @@ msgstr ""
 "Ви також можете надати кортежі, що містять знак, мантису, представлену як "
 "кортеж десяткових цифр, і експоненту:"
 
-#: ../../whatsnew/2.4.rst:561
+#: ../../whatsnew/2.4.rst:562
 msgid ""
 "Cautionary note: the sign bit is a Boolean value, so 0 is positive and 1 is "
 "negative."
@@ -856,7 +852,7 @@ msgstr ""
 "Застереження: знаковий біт є логічним значенням, тому 0 є позитивним, а 1 – "
 "негативним."
 
-#: ../../whatsnew/2.4.rst:564
+#: ../../whatsnew/2.4.rst:565
 msgid ""
 "Converting from floating-point numbers poses a bit of a problem: should the "
 "FP number representing 1.1 turn into the decimal number for exactly 1.1, or "
@@ -872,7 +868,7 @@ msgstr ""
 "слід перетворити число з плаваючою комою на рядок із потрібною точністю та "
 "передати рядок у конструктор :class:`Decimal`::"
 
-#: ../../whatsnew/2.4.rst:577
+#: ../../whatsnew/2.4.rst:578
 msgid ""
 "Once you have :class:`Decimal` instances, you can perform the usual "
 "mathematical operations on them.  One limitation: exponentiation requires an"
@@ -882,7 +878,7 @@ msgstr ""
 "звичайні математичні операції. Одне обмеження: для піднесення до степеня "
 "потрібен цілий показник:"
 
-#: ../../whatsnew/2.4.rst:598
+#: ../../whatsnew/2.4.rst:599
 msgid ""
 "You can combine :class:`Decimal` instances with integers, but not with "
 "floating-point numbers::"
@@ -890,7 +886,7 @@ msgstr ""
 "Ви можете комбінувати екземпляри :class:`Decimal` з цілими числами, але не з"
 " числами з плаваючою комою::"
 
-#: ../../whatsnew/2.4.rst:609
+#: ../../whatsnew/2.4.rst:610
 msgid ""
 ":class:`Decimal` numbers can be used with the :mod:`math` and :mod:`cmath` "
 "modules, but note that they'll be immediately converted to  floating-point "
@@ -904,7 +900,7 @@ msgstr ""
 "точності та акуратності. Ви також отримаєте звичайне число з плаваючою "
 "комою, а не :class:`Decimal`. ::"
 
-#: ../../whatsnew/2.4.rst:622
+#: ../../whatsnew/2.4.rst:623
 msgid ""
 ":class:`Decimal` instances have a :meth:`sqrt` method that returns a "
 ":class:`Decimal`, but if you need other things such as trigonometric "
@@ -914,11 +910,11 @@ msgstr ""
 ":class:`Decimal`, але якщо вам потрібні інші речі, такі як тригонометричні "
 "функції, вам доведеться їх реалізувати. ::"
 
-#: ../../whatsnew/2.4.rst:631
+#: ../../whatsnew/2.4.rst:632
 msgid "The :class:`Context` type"
 msgstr "Тип :class:`Context`"
 
-#: ../../whatsnew/2.4.rst:633
+#: ../../whatsnew/2.4.rst:634
 msgid ""
 "Instances of the :class:`Context` class encapsulate several settings for "
 "decimal operations:"
@@ -926,11 +922,11 @@ msgstr ""
 "Екземпляри класу :class:`Context` інкапсулюють кілька параметрів для "
 "десяткових операцій:"
 
-#: ../../whatsnew/2.4.rst:636
+#: ../../whatsnew/2.4.rst:637
 msgid ":attr:`prec` is the precision, the number of decimal places."
 msgstr ":attr:`prec` — це точність, кількість знаків після коми."
 
-#: ../../whatsnew/2.4.rst:638
+#: ../../whatsnew/2.4.rst:639
 msgid ""
 ":attr:`rounding` specifies the rounding mode.  The :mod:`decimal` module has"
 " constants for the various possibilities: :const:`ROUND_DOWN`, "
@@ -940,7 +936,7 @@ msgstr ""
 "константи для різних можливостей: :const:`ROUND_DOWN`, "
 ":const:`ROUND_CEILING`, :const:`ROUND_HALF_EVEN` та інші."
 
-#: ../../whatsnew/2.4.rst:642
+#: ../../whatsnew/2.4.rst:643
 msgid ""
 ":attr:`traps` is a dictionary specifying what happens on encountering "
 "certain error conditions: either  an exception is raised or  a value is "
@@ -952,7 +948,7 @@ msgstr ""
 "значення. Деякі приклади помилок: ділення на нуль, втрата точності та "
 "переповнення."
 
-#: ../../whatsnew/2.4.rst:647
+#: ../../whatsnew/2.4.rst:648
 msgid ""
 "There's a thread-local default context available by calling "
 ":func:`getcontext`; you can change the properties of this context to alter "
@@ -965,7 +961,7 @@ msgstr ""
 " наступному прикладі показано вплив зміни точності контексту за "
 "замовчуванням:"
 
-#: ../../whatsnew/2.4.rst:660
+#: ../../whatsnew/2.4.rst:661
 msgid ""
 "The default action for error conditions is selectable; the module can either"
 " return a special value such as infinity or not-a-number, or exceptions can "
@@ -975,7 +971,7 @@ msgstr ""
 "спеціальне значення, наприклад нескінченність або не-число, або можуть бути "
 "викликані винятки::"
 
-#: ../../whatsnew/2.4.rst:673
+#: ../../whatsnew/2.4.rst:674
 msgid ""
 "The :class:`Context` instance also has various methods for formatting  "
 "numbers such as :meth:`to_eng_string` and :meth:`to_sci_string`."
@@ -983,7 +979,7 @@ msgstr ""
 "Екземпляр :class:`Context` також має різні методи форматування чисел, "
 "наприклад :meth:`to_eng_string` і :meth:`to_sci_string`."
 
-#: ../../whatsnew/2.4.rst:676
+#: ../../whatsnew/2.4.rst:677
 msgid ""
 "For more information, see the documentation for the :mod:`decimal` module, "
 "which includes a quick-start tutorial and a reference."
@@ -991,11 +987,11 @@ msgstr ""
 "Для отримання додаткової інформації перегляньте документацію до модуля "
 ":mod:`decimal`, яка містить короткий посібник і довідку."
 
-#: ../../whatsnew/2.4.rst:684
+#: ../../whatsnew/2.4.rst:685
 msgid ":pep:`327` - Decimal Data Type"
 msgstr ":pep:`327` - десятковий тип даних"
 
-#: ../../whatsnew/2.4.rst:683
+#: ../../whatsnew/2.4.rst:684
 msgid ""
 "Written by Facundo Batista and implemented by Facundo Batista, Eric Price, "
 "Raymond Hettinger, Aahz, and Tim Peters."
@@ -1003,11 +999,11 @@ msgstr ""
 "Написаний Факундо Батістою та реалізований Факундо Батістою, Еріком Прайсом,"
 " Реймондом Геттінгером, Аазом і Тімом Пітерсом."
 
-#: ../../whatsnew/2.4.rst:688
+#: ../../whatsnew/2.4.rst:689
 msgid "http://www.lahey.com/float.htm"
 msgstr "http://www.lahey.com/float.htm"
 
-#: ../../whatsnew/2.4.rst:687
+#: ../../whatsnew/2.4.rst:688
 msgid ""
 "The article uses Fortran code to illustrate many of the problems that "
 "floating-point inaccuracy can cause."
@@ -1015,11 +1011,11 @@ msgstr ""
 "У статті використовується код Fortran, щоб проілюструвати багато проблем, до"
 " яких може призвести неточність числа з плаваючою комою."
 
-#: ../../whatsnew/2.4.rst:692
+#: ../../whatsnew/2.4.rst:693
 msgid "http://speleotrove.com/decimal/"
 msgstr "http://speleotrove.com/decimal/"
 
-#: ../../whatsnew/2.4.rst:691
+#: ../../whatsnew/2.4.rst:692
 msgid ""
 "A description of a decimal-based representation.  This representation is "
 "being proposed as a standard, and underlies the new Python decimal type.  "
@@ -1030,11 +1026,11 @@ msgstr ""
 "лежить в основі нового десяткового типу Python. Значну частину цього "
 "матеріалу написав Майк Коулішоу, розробник мови Rexx."
 
-#: ../../whatsnew/2.4.rst:699
+#: ../../whatsnew/2.4.rst:700
 msgid "PEP 328: Multi-line Imports"
 msgstr "PEP 328: Багаторядковий імпорт"
 
-#: ../../whatsnew/2.4.rst:701
+#: ../../whatsnew/2.4.rst:702
 msgid ""
 "One language change is a small syntactic tweak aimed at making it easier to "
 "import many names from a module.  In a ``from module import names`` "
@@ -1049,7 +1045,7 @@ msgstr ""
 "модуля, або ви можете використовувати зворотні похилі риски, щоб уникнути "
 "закінчення рядків, як це::"
 
-#: ../../whatsnew/2.4.rst:712
+#: ../../whatsnew/2.4.rst:713
 msgid ""
 "The syntactic change in Python 2.4 simply allows putting the names within "
 "parentheses.  Python ignores newlines within a parenthesized expression, so "
@@ -1059,7 +1055,7 @@ msgstr ""
 "Python ігнорує нові рядки у виразі в дужках, тому зворотна похила риска "
 "більше не потрібна::"
 
-#: ../../whatsnew/2.4.rst:721
+#: ../../whatsnew/2.4.rst:722
 msgid ""
 "The PEP also proposes that all :keyword:`import` statements be absolute "
 "imports, with a leading ``.`` character to indicate a relative import.  This"
@@ -1071,19 +1067,19 @@ msgstr ""
 " частина PEP не була реалізована для Python 2.4, але була завершена для "
 "Python 2.5."
 
-#: ../../whatsnew/2.4.rst:728
+#: ../../whatsnew/2.4.rst:729
 msgid ":pep:`328` - Imports: Multi-Line and Absolute/Relative"
 msgstr ":pep:`328` - Імпорт: багаторядковий і абсолютний/відносний"
 
-#: ../../whatsnew/2.4.rst:729
+#: ../../whatsnew/2.4.rst:730
 msgid "Written by Aahz.  Multi-line imports were implemented by Dima Dorfman."
 msgstr "Написав Ааз. Багаторядковий імпорт реалізував Діма Дорфман."
 
-#: ../../whatsnew/2.4.rst:735
+#: ../../whatsnew/2.4.rst:736
 msgid "PEP 331: Locale-Independent Float/String Conversions"
 msgstr "PEP 331: Незалежне від мови перетворення Float/String"
 
-#: ../../whatsnew/2.4.rst:737
+#: ../../whatsnew/2.4.rst:738
 msgid ""
 "The :mod:`locale` modules lets Python software select various conversions "
 "and display conventions that are localized to a particular country or "
@@ -1099,7 +1095,7 @@ msgstr ""
 "залишалася встановленою на ``'C''`` локалі. Часто це було тому, що код "
 "використовував функцію :c:func:`atof` бібліотеки C."
 
-#: ../../whatsnew/2.4.rst:744
+#: ../../whatsnew/2.4.rst:745
 msgid ""
 "Not setting the numeric locale caused trouble for extensions that used "
 "third-party C libraries, however, because they wouldn't have the correct "
@@ -1111,7 +1107,7 @@ msgstr ""
 "налаштування локалі. Мотивуючим прикладом був GTK+, віджети інтерфейсу "
 "користувача якого не відображали числа в поточній локалі."
 
-#: ../../whatsnew/2.4.rst:749
+#: ../../whatsnew/2.4.rst:750
 msgid ""
 "The solution described in the PEP is to add three new functions to the "
 "Python API that perform ASCII-only conversions, ignoring the locale setting:"
@@ -1119,19 +1115,19 @@ msgstr ""
 "Рішення, описане в PEP, полягає в додаванні трьох нових функцій до API "
 "Python, які виконують перетворення лише ASCII, ігноруючи налаштування мови:"
 
-#: ../../whatsnew/2.4.rst:752
+#: ../../whatsnew/2.4.rst:753
 msgid ""
 "``PyOS_ascii_strtod(str, ptr)``  and ``PyOS_ascii_atof(str, ptr)`` both "
 "convert a string to a C :c:expr:`double`."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:755
+#: ../../whatsnew/2.4.rst:756
 msgid ""
 "``PyOS_ascii_formatd(buffer, buf_len, format, d)`` converts a "
 ":c:expr:`double` to an ASCII string."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:758
+#: ../../whatsnew/2.4.rst:759
 msgid ""
 "The code for these functions came from the GLib library (https://developer-"
 "old.gnome.org/glib/2.26/), whose developers kindly relicensed the relevant "
@@ -1140,29 +1136,29 @@ msgid ""
 "such as GTK+  produce the correct results."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:767
+#: ../../whatsnew/2.4.rst:768
 msgid ":pep:`331` - Locale-Independent Float/String Conversions"
 msgstr ":pep:`331` - Незалежне від мови перетворення Float/String"
 
-#: ../../whatsnew/2.4.rst:768
+#: ../../whatsnew/2.4.rst:769
 msgid "Written by Christian R. Reis, and implemented by Gustavo Carneiro."
 msgstr "Написаний Крістіаном Р. Рейсом, реалізований Густаво Карнейро."
 
-#: ../../whatsnew/2.4.rst:774
+#: ../../whatsnew/2.4.rst:775
 msgid "Other Language Changes"
 msgstr "Інші зміни мови"
 
-#: ../../whatsnew/2.4.rst:776
+#: ../../whatsnew/2.4.rst:777
 msgid ""
 "Here are all of the changes that Python 2.4 makes to the core Python "
 "language."
 msgstr "Ось усі зміни, які Python 2.4 вносить у основну мову Python."
 
-#: ../../whatsnew/2.4.rst:778
+#: ../../whatsnew/2.4.rst:779
 msgid "Decorators for functions and methods were added (:pep:`318`)."
 msgstr "Додано декоратори для функцій і методів (:pep:`318`)."
 
-#: ../../whatsnew/2.4.rst:780
+#: ../../whatsnew/2.4.rst:781
 msgid ""
 "Built-in :func:`set` and :func:`frozenset` types were  added (:pep:`218`). "
 "Other new built-ins include the ``reversed(seq)`` function (:pep:`322`)."
@@ -1170,11 +1166,11 @@ msgstr ""
 "Додано вбудовані типи :func:`set` і :func:`frozenset` (:pep:`218`). Інші "
 "нові вбудовані функції включають функцію ``reversed(seq)`` (:pep:`322`)."
 
-#: ../../whatsnew/2.4.rst:783
+#: ../../whatsnew/2.4.rst:784
 msgid "Generator expressions were added (:pep:`289`)."
 msgstr "Додано генератор виразів (:pep:`289`)."
 
-#: ../../whatsnew/2.4.rst:785
+#: ../../whatsnew/2.4.rst:786
 msgid ""
 "Certain numeric expressions no longer return values restricted to 32 or 64 "
 "bits (:pep:`237`)."
@@ -1182,7 +1178,7 @@ msgstr ""
 "Деякі числові вирази більше не повертають значення, обмежені 32 або 64 "
 "бітами (:pep:`237`)."
 
-#: ../../whatsnew/2.4.rst:788
+#: ../../whatsnew/2.4.rst:789
 msgid ""
 "You can now put parentheses around the list of names in a ``from module "
 "import names`` statement (:pep:`328`)."
@@ -1190,7 +1186,7 @@ msgstr ""
 "Тепер ви можете взяти дужки навколо списку імен у операторі ``from module "
 "import names`` (:pep:`328`)."
 
-#: ../../whatsnew/2.4.rst:791
+#: ../../whatsnew/2.4.rst:792
 msgid ""
 "The :meth:`dict.update` method now accepts the same argument forms as the "
 ":class:`dict` constructor.  This includes any mapping, any iterable of "
@@ -1201,7 +1197,7 @@ msgstr ""
 "повторення пар ключ/значення та аргументи ключового слова. (Надав Реймонд "
 "Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:795
+#: ../../whatsnew/2.4.rst:796
 msgid ""
 "The string methods :meth:`ljust`, :meth:`rjust`, and :meth:`center` now take"
 " an optional argument for specifying a fill character other than a space. "
@@ -1211,7 +1207,7 @@ msgstr ""
 " необов’язковий аргумент для визначення символу заповнення, відмінного від "
 "пробілу. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:799
+#: ../../whatsnew/2.4.rst:800
 msgid ""
 "Strings also gained an :meth:`rsplit` method that works like the "
 ":meth:`split` method but splits from the end of the string.   (Contributed "
@@ -1220,7 +1216,7 @@ msgstr ""
 "Рядки також отримали метод :meth:`rsplit`, який працює як метод "
 ":meth:`split`, але розділяється з кінця рядка. (Надав Шон Райфшнайдер.) ::"
 
-#: ../../whatsnew/2.4.rst:808
+#: ../../whatsnew/2.4.rst:809
 msgid ""
 "Three keyword parameters, *cmp*, *key*, and *reverse*, were added to the "
 ":meth:`sort` method of lists. These parameters make some common usages of "
@@ -1230,7 +1226,7 @@ msgstr ""
 " :meth:`sort` списків. Ці параметри спрощують деякі типові використання "
 ":meth:`sort`. Усі ці параметри є необов’язковими."
 
-#: ../../whatsnew/2.4.rst:812
+#: ../../whatsnew/2.4.rst:813
 msgid ""
 "For the *cmp* parameter, the value should be a comparison function that "
 "takes two parameters and returns -1, 0, or +1 depending on how the "
@@ -1243,7 +1239,7 @@ msgstr ""
 "порівнюються. Потім ця функція буде використана для сортування списку. "
 "Раніше це був єдиний параметр, який можна було надати для :meth:`sort`."
 
-#: ../../whatsnew/2.4.rst:817
+#: ../../whatsnew/2.4.rst:818
 msgid ""
 "*key* should be a single-parameter function that takes a list element and "
 "returns a comparison key for the element.  The list is then sorted using the"
@@ -1253,7 +1249,7 @@ msgstr ""
 "повертає ключ порівняння для елемента. Потім список сортується за допомогою "
 "ключів порівняння. Наступний приклад сортує список без урахування регістру::"
 
-#: ../../whatsnew/2.4.rst:834
+#: ../../whatsnew/2.4.rst:835
 msgid ""
 "The last example, which uses the *cmp* parameter, is the old way to perform "
 "a case-insensitive sort.  It works but is slower than using a *key* "
@@ -1268,7 +1264,7 @@ msgstr ""
 "*cmp* викликає його двічі для кожного порівняння, тому використання *key* "
 "економить на викликах методу :meth:`lower`."
 
-#: ../../whatsnew/2.4.rst:840
+#: ../../whatsnew/2.4.rst:841
 msgid ""
 "For simple key functions and comparison functions, it is often possible to "
 "avoid a :keyword:`lambda` expression by using an unbound method instead.  "
@@ -1279,7 +1275,7 @@ msgstr ""
 "Наприклад, наведене вище сортування без урахування регістру найкраще "
 "записати як::"
 
-#: ../../whatsnew/2.4.rst:848
+#: ../../whatsnew/2.4.rst:849
 msgid ""
 "Finally, the *reverse* parameter takes a Boolean value.  If the value is "
 "true, the list will be sorted into reverse order. Instead of ``L.sort(); "
@@ -1290,7 +1286,7 @@ msgstr ""
 "``L.sort(); L.reverse()``, тепер ви можете написати "
 "``L.sort(reverse=True)``."
 
-#: ../../whatsnew/2.4.rst:852
+#: ../../whatsnew/2.4.rst:853
 msgid ""
 "The results of sorting are now guaranteed to be stable.  This means that two"
 " entries with equal keys will be returned in the same order as they were "
@@ -1304,11 +1300,11 @@ msgstr ""
 "відсортувати список за віком, у результаті чого вийде список, відсортований "
 "за віком, де люди одного віку розташовані в порядку за іменами."
 
-#: ../../whatsnew/2.4.rst:858
+#: ../../whatsnew/2.4.rst:859
 msgid "(All changes to :meth:`sort` contributed by Raymond Hettinger.)"
 msgstr "(Усі зміни до :meth:`sort` внесено Раймондом Геттінгером.)"
 
-#: ../../whatsnew/2.4.rst:860
+#: ../../whatsnew/2.4.rst:861
 msgid ""
 "There is a new built-in function ``sorted(iterable)`` that works like the "
 "in-place :meth:`list.sort` method but can be used in expressions.  The "
@@ -1318,24 +1314,24 @@ msgstr ""
 "place :meth:`list.sort`, але її можна використовувати у виразах. "
 "Відмінності:"
 
-#: ../../whatsnew/2.4.rst:864
+#: ../../whatsnew/2.4.rst:865
 msgid "the input may be any iterable;"
 msgstr "вхід може бути будь-яким ітерованим;"
 
-#: ../../whatsnew/2.4.rst:866
+#: ../../whatsnew/2.4.rst:867
 msgid "a newly formed copy is sorted, leaving the original intact; and"
 msgstr "новосформовану копію сортують, залишаючи оригінал недоторканим; і"
 
-#: ../../whatsnew/2.4.rst:868
+#: ../../whatsnew/2.4.rst:869
 msgid "the expression returns the new sorted copy"
 msgstr "вираз повертає нову відсортовану копію"
 
-#: ../../whatsnew/2.4.rst:891 ../../whatsnew/2.4.rst:919
-#: ../../whatsnew/2.4.rst:1212
+#: ../../whatsnew/2.4.rst:892 ../../whatsnew/2.4.rst:920
+#: ../../whatsnew/2.4.rst:1213
 msgid "(Contributed by Raymond Hettinger.)"
 msgstr "(Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:893 ../../whatsnew/2.4.rst:1519
+#: ../../whatsnew/2.4.rst:894 ../../whatsnew/2.4.rst:1520
 msgid ""
 "Integer operations will no longer trigger an :exc:`OverflowWarning`. The "
 ":exc:`OverflowWarning` warning will disappear in Python 2.5."
@@ -1343,7 +1339,7 @@ msgstr ""
 "Цілочисельні операції більше не викликатимуть :exc:`OverflowWarning`. "
 "Попередження :exc:`OverflowWarning` зникне в Python 2.5."
 
-#: ../../whatsnew/2.4.rst:896
+#: ../../whatsnew/2.4.rst:897
 msgid ""
 "The interpreter gained a new switch, :option:`-m`, that takes a name, "
 "searches for the corresponding  module on ``sys.path``, and runs the module "
@@ -1355,7 +1351,7 @@ msgstr ""
 "Наприклад, тепер ви можете запустити профайлер Python за допомогою ``python "
 "-m profile``. (Надав Нік Коглан.)"
 
-#: ../../whatsnew/2.4.rst:901
+#: ../../whatsnew/2.4.rst:902
 msgid ""
 "The ``eval(expr, globals, locals)`` and ``execfile(filename, globals, "
 "locals)`` functions and the ``exec`` statement now accept any mapping type "
@@ -1367,7 +1363,7 @@ msgstr ""
 "параметра *locals*. Раніше це мав бути звичайний словник Python. (Надав "
 "Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:906
+#: ../../whatsnew/2.4.rst:907
 msgid ""
 "The :func:`zip` built-in function and :func:`itertools.izip` now return an "
 "empty list if called with no arguments. Previously they raised a "
@@ -1379,7 +1375,7 @@ msgstr ""
 "виняток :exc:`TypeError`. Це робить їх більш придатними для використання зі "
 "списками аргументів змінної довжини:"
 
-#: ../../whatsnew/2.4.rst:921
+#: ../../whatsnew/2.4.rst:922
 msgid ""
 "Encountering a failure while importing a module no longer leaves a partially"
 " initialized module object in ``sys.modules``.  The incomplete module object"
@@ -1387,7 +1383,7 @@ msgid ""
 "leading to confusing errors.   (Fixed by Tim Peters.)"
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:926
+#: ../../whatsnew/2.4.rst:927
 msgid ""
 ":const:`None` is now a constant; code that binds a new value to  the name "
 "``None`` is now a syntax error. (Contributed by Raymond Hettinger.)"
@@ -1395,11 +1391,11 @@ msgstr ""
 ":const:`None` тепер константа; код, який прив’язує нове значення до імені "
 "``None``, тепер є синтаксичною помилкою. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:933
+#: ../../whatsnew/2.4.rst:934
 msgid "Optimizations"
 msgstr "Оптимізації"
 
-#: ../../whatsnew/2.4.rst:935
+#: ../../whatsnew/2.4.rst:936
 msgid ""
 "The inner loops for list and tuple slicing were optimized and now run about "
 "one-third faster.  The inner loops for dictionaries were also optimized, "
@@ -1413,7 +1409,7 @@ msgstr ""
 ":meth:`values`, :meth:`items`, :meth:`iterkeys`, :meth:`itervalues` та "
 ":meth:`iteritems`. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:941
+#: ../../whatsnew/2.4.rst:942
 msgid ""
 "The machinery for growing and shrinking lists was optimized for speed and "
 "for space efficiency.  Appending and popping from lists now runs faster due "
@@ -1430,7 +1426,7 @@ msgstr ""
 "аргумент у тимчасовий список перед розширенням базового списку. (Надав "
 "Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:948
+#: ../../whatsnew/2.4.rst:949
 msgid ""
 ":func:`list`, :func:`tuple`, :func:`map`, :func:`filter`, and :func:`zip` "
 "now run several times faster with non-sequence arguments that supply a "
@@ -1440,7 +1436,7 @@ msgstr ""
 " працюють у кілька разів швидше з непослідовними аргументами, які надають "
 ":meth:`__len__` метод. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:952
+#: ../../whatsnew/2.4.rst:953
 msgid ""
 "The methods :meth:`list.__getitem__`, :meth:`dict.__getitem__`, and "
 ":meth:`dict.__contains__` are now implemented as :class:`method_descriptor` "
@@ -1456,7 +1452,7 @@ msgstr ""
 "використання як аргументів функціоналу: ``map(mydict.__getitem__, "
 "keylist)``. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:959
+#: ../../whatsnew/2.4.rst:960
 msgid ""
 "Added a new opcode, ``LIST_APPEND``, that simplifies the generated bytecode "
 "for list comprehensions and speeds them up by about a third.  (Contributed "
@@ -1466,7 +1462,7 @@ msgstr ""
 "код для розуміння списків і прискорює їх приблизно на третину. (Надав "
 "Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:963
+#: ../../whatsnew/2.4.rst:964
 msgid ""
 "The peephole bytecode optimizer has been improved to  produce shorter, "
 "faster bytecode; remarkably, the resulting bytecode is  more readable.  "
@@ -1476,7 +1472,7 @@ msgstr ""
 "швидшого байт-коду; примітно, що отриманий байт-код більш читабельний. "
 "(Покращено Раймондом Геттінгером.)"
 
-#: ../../whatsnew/2.4.rst:967
+#: ../../whatsnew/2.4.rst:968
 msgid ""
 "String concatenations in statements of the form ``s = s + \"abc\"`` and ``s "
 "+= \"abc\"`` are now performed more efficiently in certain circumstances.  "
@@ -1492,7 +1488,7 @@ msgstr ""
 " все ще рекомендується, якщо ви хочете ефективно склеїти велику кількість "
 "рядків. (Надав Армін Ріго.)"
 
-#: ../../whatsnew/2.4.rst:974
+#: ../../whatsnew/2.4.rst:975
 msgid ""
 "The net result of the 2.4 optimizations is that Python 2.4 runs the pystone "
 "benchmark around 5% faster than Python 2.3 and 35% faster than Python 2.2. "
@@ -1506,11 +1502,11 @@ msgstr ""
 "використовуваний метод вимірювання продуктивності Python. Ваші власні "
 "програми можуть продемонструвати більшу чи меншу користь від Python 2.4.)"
 
-#: ../../whatsnew/2.4.rst:990
+#: ../../whatsnew/2.4.rst:991
 msgid "New, Improved, and Deprecated Modules"
 msgstr "Нові, покращені та застарілі модулі"
 
-#: ../../whatsnew/2.4.rst:992
+#: ../../whatsnew/2.4.rst:993
 msgid ""
 "As usual, Python's standard library received a number of enhancements and "
 "bug fixes.  Here's a partial list of the most notable changes, sorted "
@@ -1524,7 +1520,7 @@ msgstr ""
 ":file:`Misc/NEWS` у дереві вихідних кодів, щоб отримати більш повний список "
 "змін, або перегляньте журнали CVS, щоб отримати всі деталі."
 
-#: ../../whatsnew/2.4.rst:997
+#: ../../whatsnew/2.4.rst:998
 msgid ""
 "The :mod:`asyncore` module's :func:`loop` function now has a *count* "
 "parameter that lets you perform a limited number of passes through the "
@@ -1534,7 +1530,7 @@ msgstr ""
 " дозволяє виконувати обмежену кількість проходів через цикл опитування. За "
 "замовчуванням все ще цикл вічно."
 
-#: ../../whatsnew/2.4.rst:1001
+#: ../../whatsnew/2.4.rst:1002
 msgid ""
 "The :mod:`base64` module now has more complete :rfc:`3548` support for "
 "Base64, Base32, and Base16 encoding and decoding, including optional case "
@@ -1544,7 +1540,7 @@ msgstr ""
 "та декодування Base64, Base32 і Base16, включаючи необов’язкове згортання "
 "регістру та альтернативні алфавіти. (Надав Баррі Варшау.)"
 
-#: ../../whatsnew/2.4.rst:1005
+#: ../../whatsnew/2.4.rst:1006
 msgid ""
 "The :mod:`bisect` module now has an underlying C implementation for improved"
 " performance. (Contributed by Dmitry Vasiliev.)"
@@ -1552,7 +1548,7 @@ msgstr ""
 "Модуль :mod:`bisect` тепер має базову реалізацію C для покращення "
 "продуктивності. (Надав Дмитро Васильєв.)"
 
-#: ../../whatsnew/2.4.rst:1008
+#: ../../whatsnew/2.4.rst:1009
 msgid ""
 "The CJKCodecs collections of East Asian codecs, maintained by Hye-Shik "
 "Chang, was integrated into 2.4.   The new encodings are:"
@@ -1560,19 +1556,19 @@ msgstr ""
 "Колекції кодеків Східної Азії CJKCodecs, які підтримує Hye-Shik Chang, були "
 "інтегровані у 2.4. Нові кодування:"
 
-#: ../../whatsnew/2.4.rst:1011
+#: ../../whatsnew/2.4.rst:1012
 msgid "Chinese (PRC): gb2312, gbk, gb18030, big5hkscs, hz"
 msgstr "Китайська (КНР): gb2312, gbk, gb18030, big5hkscs, hz"
 
-#: ../../whatsnew/2.4.rst:1013
+#: ../../whatsnew/2.4.rst:1014
 msgid "Chinese (ROC): big5, cp950"
 msgstr "Китайська (ROC): big5, cp950"
 
-#: ../../whatsnew/2.4.rst:1017
+#: ../../whatsnew/2.4.rst:1018
 msgid "Japanese: cp932, euc-jis-2004, euc-jp, euc-jisx0213, iso-2022-jp,"
 msgstr "Японська: cp932, euc-jis-2004, euc-jp, euc-jisx0213, iso-2022-jp,"
 
-#: ../../whatsnew/2.4.rst:1016
+#: ../../whatsnew/2.4.rst:1017
 msgid ""
 "iso-2022-jp-1, iso-2022-jp-2, iso-2022-jp-3, iso-2022-jp-ext, "
 "iso-2022-jp-2004, shift-jis, shift-jisx0213, shift-jis-2004"
@@ -1580,11 +1576,11 @@ msgstr ""
 "iso-2022-jp-1, iso-2022-jp-2, iso-2022-jp-3, iso-2022-jp-ext, "
 "iso-2022-jp-2004, shift-jis, shift-jisx0213, shift- jis-2004"
 
-#: ../../whatsnew/2.4.rst:1019
+#: ../../whatsnew/2.4.rst:1020
 msgid "Korean: cp949, euc-kr, johab, iso-2022-kr"
 msgstr "Корейська: cp949, euc-kr, johab, iso-2022-kr"
 
-#: ../../whatsnew/2.4.rst:1021
+#: ../../whatsnew/2.4.rst:1022
 msgid ""
 "Some other new encodings were added: HP Roman8,  ISO_8859-11, ISO_8859-16, "
 "PCTP-154, and TIS-620."
@@ -1592,7 +1588,7 @@ msgstr ""
 "Додано деякі інші нові кодування: HP Roman8, ISO_8859-11, ISO_8859-16, "
 "PCTP-154 і TIS-620."
 
-#: ../../whatsnew/2.4.rst:1024
+#: ../../whatsnew/2.4.rst:1025
 msgid ""
 "The UTF-8 and UTF-16 codecs now cope better with receiving partial input. "
 "Previously the :class:`StreamReader` class would try to read more data, "
@@ -1607,7 +1603,7 @@ msgstr ""
 "відновлюватимуть декодування там, де зупинилися попередні. (Реалізовано "
 "Вальтером Дьорвальдом.)"
 
-#: ../../whatsnew/2.4.rst:1030
+#: ../../whatsnew/2.4.rst:1031
 msgid ""
 "There is a new :mod:`collections` module for  various specialized collection"
 " datatypes.  Currently it contains just one type, :class:`deque`, a double-"
@@ -1619,7 +1615,7 @@ msgstr ""
 "чергу, яка підтримує ефективне додавання та видалення елементів з будь-якого"
 " кінця::"
 
-#: ../../whatsnew/2.4.rst:1050
+#: ../../whatsnew/2.4.rst:1051
 msgid ""
 "Several modules, such as the :mod:`Queue` and :mod:`threading` modules, now "
 "take advantage of :class:`collections.deque` for improved performance.  "
@@ -1629,7 +1625,7 @@ msgstr ""
 "використовують переваги :class:`collections.deque` для покращення "
 "продуктивності. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1054
+#: ../../whatsnew/2.4.rst:1055
 msgid ""
 "The :mod:`ConfigParser` classes have been enhanced slightly. The "
 ":meth:`read` method now returns a list of the files that were successfully "
@@ -1642,7 +1638,7 @@ msgstr ""
 " викликає :exc:`TypeError`, якщо передано аргумент *value*, який не є "
 "рядком. (Надано Джоном Белмонте та Девідом Гуджером.)"
 
-#: ../../whatsnew/2.4.rst:1059
+#: ../../whatsnew/2.4.rst:1060
 msgid ""
 "The :mod:`curses` module now supports the ncurses extension "
 ":func:`use_default_colors`.  On platforms where the terminal supports "
@@ -1653,7 +1649,7 @@ msgstr ""
 ":func:`use_default_colors`. На платформах, де термінал підтримує прозорість,"
 " це дає змогу використовувати прозорий фон. (Надав Йорг Леманн.)"
 
-#: ../../whatsnew/2.4.rst:1064
+#: ../../whatsnew/2.4.rst:1065
 msgid ""
 "The :mod:`difflib` module now includes an :class:`HtmlDiff` class that "
 "creates an HTML table showing a side by side comparison of two versions of a"
@@ -1663,7 +1659,7 @@ msgstr ""
 "HTML-таблицю, що показує пліч-о-пліч порівняння двох версій тексту. (Надав "
 "Ден Гасс.)"
 
-#: ../../whatsnew/2.4.rst:1068
+#: ../../whatsnew/2.4.rst:1069
 msgid ""
 "The :mod:`email` package was updated to version 3.0,  which dropped various "
 "deprecated APIs and removes support for Python versions earlier than 2.3.  "
@@ -1683,7 +1679,7 @@ msgstr ""
 "записує всі проблеми в атрибуті :attr:`defect` повідомлення. (Розроблено "
 "Ентоні Бакстером, Баррі Варсоу, Томасом Воутерсом та іншими.)"
 
-#: ../../whatsnew/2.4.rst:1077
+#: ../../whatsnew/2.4.rst:1078
 msgid ""
 "The :mod:`heapq` module has been converted to C.  The resulting tenfold "
 "improvement in speed makes the module suitable for handling high volumes of "
@@ -1698,7 +1694,7 @@ msgstr ""
 "використовують купи для пошуку N найбільших або найменших значень у наборі "
 "даних без витрат на повне сортування. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1083
+#: ../../whatsnew/2.4.rst:1084
 msgid ""
 "The :mod:`httplib` module now contains constants for HTTP status codes "
 "defined in various HTTP-related RFC documents.  Constants have names such as"
@@ -1712,7 +1708,7 @@ msgstr ""
 ":const:`MOVED_PERMANENTLY`; використовуйте pydoc, щоб отримати повний "
 "список. (Надав Ендрю Еланд.)"
 
-#: ../../whatsnew/2.4.rst:1089
+#: ../../whatsnew/2.4.rst:1090
 msgid ""
 "The :mod:`imaplib` module now supports IMAP's THREAD command (contributed by"
 " Yves Dionne) and new :meth:`deleteacl` and :meth:`myrights` methods "
@@ -1722,7 +1718,7 @@ msgstr ""
 "Dionne) і нові методи :meth:`deleteacl` і :meth:`myrights` (надано Arnaud "
 "Mazin)."
 
-#: ../../whatsnew/2.4.rst:1093
+#: ../../whatsnew/2.4.rst:1094
 msgid ""
 "The :mod:`itertools` module gained a ``groupby(iterable[, *func*])`` "
 "function. *iterable* is something that can be iterated over to return a "
@@ -1740,7 +1736,7 @@ msgstr ""
 "значення ключа, і повертає серію 2-кортежів, що містять значення ключа та "
 "ітератор над підпослідовністю."
 
-#: ../../whatsnew/2.4.rst:1101
+#: ../../whatsnew/2.4.rst:1102
 msgid ""
 "Here's an example to make this clearer.  The *key* function simply returns "
 "whether a number is even or odd, so the result of :func:`groupby` is to "
@@ -1750,7 +1746,7 @@ msgstr ""
 "число парним чи непарним, тому результатом :func:`groupby` є повернення "
 "послідовних циклів парних чи непарних чисел. ::"
 
-#: ../../whatsnew/2.4.rst:1117
+#: ../../whatsnew/2.4.rst:1118
 msgid ""
 ":func:`groupby` is typically used with sorted input.  The logic for "
 ":func:`groupby` is similar to the Unix ``uniq`` filter which makes it handy "
@@ -1760,11 +1756,11 @@ msgstr ""
 "для :func:`groupby` подібна до фільтра Unix ``uniq``, що робить його зручним"
 " для видалення, підрахунку або ідентифікації повторюваних елементів:"
 
-#: ../../whatsnew/2.4.rst:1140
+#: ../../whatsnew/2.4.rst:1141
 msgid "(Contributed by Hye-Shik Chang.)"
 msgstr "(Надано Hye-Shik Chang.)"
 
-#: ../../whatsnew/2.4.rst:1142
+#: ../../whatsnew/2.4.rst:1143
 msgid ""
 ":mod:`itertools` also gained a function named ``tee(iterator, N)`` that "
 "returns *N* independent iterators that replicate *iterator*.  If *N* is "
@@ -1774,7 +1770,7 @@ msgstr ""
 "повертає *N* незалежних ітераторів, які копіюють *iterator*. Якщо *N* "
 "опущено, за замовчуванням буде 2. ::"
 
-#: ../../whatsnew/2.4.rst:1155
+#: ../../whatsnew/2.4.rst:1156
 msgid ""
 "Note that :func:`tee` has to keep copies of the values returned  by the "
 "iterator; in the worst case, it may need to keep all of them.   This should "
@@ -1794,19 +1790,15 @@ msgstr ""
 "програми включають закладки, вікна або ітератори з попереднім переглядом. "
 "(Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1164
+#: ../../whatsnew/2.4.rst:1165
 msgid ""
 "A number of functions were added to the :mod:`locale`  module, such as "
 ":func:`bind_textdomain_codeset` to specify a particular encoding and a "
-"family of :func:`l\\*gettext` functions that return messages in the chosen "
+"family of :func:`!l\\*gettext` functions that return messages in the chosen "
 "encoding. (Contributed by Gustavo Niemeyer.)"
 msgstr ""
-"До модуля :mod:`locale` було додано ряд функцій, наприклад "
-":func:`bind_textdomain_codeset` для визначення конкретного кодування та "
-"сімейство функцій :func:`l\\*gettext`, які повертають повідомлення у "
-"вибраному кодуванні. . (Надав Густаво Німейєр.)"
 
-#: ../../whatsnew/2.4.rst:1169
+#: ../../whatsnew/2.4.rst:1170
 msgid ""
 "Some keyword arguments were added to the :mod:`logging` package's "
 ":func:`basicConfig` function to simplify log configuration.  The default "
@@ -1820,7 +1812,7 @@ msgstr ""
 "вказати різні ключові аргументи для реєстрації в певному файлі, зміни "
 "формату журналювання або встановлення рівня журналювання. Наприклад::"
 
-#: ../../whatsnew/2.4.rst:1180
+#: ../../whatsnew/2.4.rst:1181
 msgid ""
 "Other additions to the :mod:`logging` package include a ``log(level, msg)`` "
 "convenience method, as well as a :class:`TimedRotatingFileHandler` class "
@@ -1837,11 +1829,11 @@ msgstr ""
 ":class:`BaseRotatingHandler`, який можна використовувати для реалізації "
 "інших обертових обробників."
 
-#: ../../whatsnew/2.4.rst:1187
+#: ../../whatsnew/2.4.rst:1188
 msgid "(Changes implemented by Vinay Sajip.)"
 msgstr "(Зміни внесено Вінаєм Саджипом.)"
 
-#: ../../whatsnew/2.4.rst:1189
+#: ../../whatsnew/2.4.rst:1190
 msgid ""
 "The :mod:`marshal` module now shares interned strings on unpacking a  data "
 "structure.  This may shrink the size of certain pickle strings, but the "
@@ -1853,7 +1845,7 @@ msgstr ""
 "але основний ефект полягає в тому, щоб зробити файли :file:`.pyc` значно "
 "меншими. (Надав Мартін фон Льовіс.)"
 
-#: ../../whatsnew/2.4.rst:1194
+#: ../../whatsnew/2.4.rst:1195
 msgid ""
 "The :mod:`nntplib` module's :class:`NNTP` class gained :meth:`description` "
 "and :meth:`descriptions` methods to retrieve  newsgroup descriptions for a "
@@ -1863,7 +1855,7 @@ msgstr ""
 "і :meth:`descriptions` для отримання описів груп новин для однієї групи або "
 "для діапазону груп. (Надав Юрген А. Ерхард.)"
 
-#: ../../whatsnew/2.4.rst:1198
+#: ../../whatsnew/2.4.rst:1199
 msgid ""
 "Two new functions were added to the :mod:`operator` module, "
 "``attrgetter(attr)`` and ``itemgetter(index)``. Both functions return "
@@ -1877,7 +1869,7 @@ msgstr ""
 " чудові екстрактори даних при використанні з :func:`map` або :func:`sorted`."
 " Наприклад::"
 
-#: ../../whatsnew/2.4.rst:1214
+#: ../../whatsnew/2.4.rst:1215
 msgid ""
 "The :mod:`optparse` module was updated in various ways.  The module now "
 "passes its messages through :func:`gettext.gettext`, making it possible to "
@@ -1891,7 +1883,7 @@ msgstr ""
 "довідки для параметрів тепер можуть містити рядок ``'%default``, який буде "
 "замінено значенням параметра за замовчуванням. (Надав Грег Ворд.)"
 
-#: ../../whatsnew/2.4.rst:1220
+#: ../../whatsnew/2.4.rst:1221
 msgid ""
 "The long-term plan is to deprecate the :mod:`rfc822` module in some future "
 "Python release in favor of the :mod:`email` package. To this end, the "
@@ -1907,7 +1899,7 @@ msgstr ""
 " на увазі, ви можете написати новий код обробки електронної пошти. (Зміну "
 "вніс Ентоні Бакстер.)"
 
-#: ../../whatsnew/2.4.rst:1226
+#: ../../whatsnew/2.4.rst:1227
 msgid ""
 "A new ``urandom(n)`` function was added to the :mod:`os` module, returning a"
 " string containing *n* bytes of random data.  This function provides access "
@@ -1919,7 +1911,7 @@ msgstr ""
 "специфічних для платформи джерел випадковості, таких як :file:`/dev/urandom`"
 " у Linux або Windows CryptoAPI. (Надано Тревором Перріном.)"
 
-#: ../../whatsnew/2.4.rst:1231
+#: ../../whatsnew/2.4.rst:1232
 msgid ""
 "Another new function: ``os.path.lexists(path)``  returns true if the file "
 "specified by *path* exists, whether or not it's a symbolic link.  This "
@@ -1933,7 +1925,7 @@ msgstr ""
 "яка повертає false, якщо *path* є символічним посиланням, яке вказує на "
 "пункт призначення, якого не існує. (Надав Бені Чернявський.)"
 
-#: ../../whatsnew/2.4.rst:1237
+#: ../../whatsnew/2.4.rst:1238
 msgid ""
 "A new :func:`getsid` function was added to the :mod:`posix` module that "
 "underlies the :mod:`os` module. (Contributed by J. Raynor.)"
@@ -1941,14 +1933,14 @@ msgstr ""
 "Нову функцію :func:`getsid` було додано до модуля :mod:`posix`, який лежить "
 "в основі модуля :mod:`os`. (Надав Дж. Рейнор.)"
 
-#: ../../whatsnew/2.4.rst:1240
+#: ../../whatsnew/2.4.rst:1241
 msgid ""
 "The :mod:`poplib` module now supports POP over SSL.  (Contributed by Hector "
 "Urtubia.)"
 msgstr ""
 "Модуль :mod:`poplib` тепер підтримує POP через SSL. (Надав Гектор Уртубія.)"
 
-#: ../../whatsnew/2.4.rst:1243
+#: ../../whatsnew/2.4.rst:1244
 msgid ""
 "The :mod:`profile` module can now profile C extension functions. "
 "(Contributed by Nick Bastin.)"
@@ -1956,7 +1948,7 @@ msgstr ""
 "Модуль :mod:`profile` тепер може профілювати функції розширення C. (Надав "
 "Нік Бастін.)"
 
-#: ../../whatsnew/2.4.rst:1246
+#: ../../whatsnew/2.4.rst:1247
 msgid ""
 "The :mod:`random` module has a new method called ``getrandbits(N)`` that "
 "returns a long integer *N* bits in length.  The existing :meth:`randrange` "
@@ -1970,7 +1962,7 @@ msgstr ""
 "довільно великих випадкових чисел більш ефективною. (Надав Реймонд "
 "Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1252
+#: ../../whatsnew/2.4.rst:1253
 msgid ""
 "The regular expression language accepted by the :mod:`re` module was "
 "extended with simple conditional expressions, written as ``(?(group)A|B)``."
@@ -1987,7 +1979,7 @@ msgstr ""
 "виразу *A* буде перевірено на відповідність рядку; якщо група не збігається,"
 " замість неї буде використано шаблон *B*. (Надав Густаво Німейєр.)"
 
-#: ../../whatsnew/2.4.rst:1259
+#: ../../whatsnew/2.4.rst:1260
 msgid ""
 "The :mod:`re` module is also no longer recursive, thanks to a massive amount"
 " of work by Gustavo Niemeyer.  In a recursive regular expression engine, "
@@ -2010,7 +2002,7 @@ msgstr ""
 " пощастило, Python міг стати segfault. Механізм регулярних виразів Python "
 "2.4 може без проблем відповідати цьому шаблону."
 
-#: ../../whatsnew/2.4.rst:1269
+#: ../../whatsnew/2.4.rst:1270
 msgid ""
 "The :mod:`signal` module now performs tighter error-checking on the "
 "parameters to the :func:`signal.signal` function.  For example, you can't "
@@ -2023,7 +2015,7 @@ msgstr ""
 "обробник для сигналу :const:`SIGKILL`; попередні версії Python спокійно "
 "прийняли це, але 2.4 викличе виняток :exc:`RuntimeError`."
 
-#: ../../whatsnew/2.4.rst:1274
+#: ../../whatsnew/2.4.rst:1275
 msgid ""
 "Two new functions were added to the :mod:`socket` module. :func:`socketpair`"
 " returns a pair of connected sockets and ``getservbyport(port)`` looks up "
@@ -2034,7 +2026,7 @@ msgstr ""
 " пару підключених сокетів, а ``getservbyport(port)`` шукає назву служби для "
 "даного номера порту. (Надано Дейвом Коулом і Баррі Варшау.)"
 
-#: ../../whatsnew/2.4.rst:1279
+#: ../../whatsnew/2.4.rst:1280
 msgid ""
 "The :func:`sys.exitfunc` function has been deprecated.  Code should be using"
 " the existing :mod:`atexit` module, which correctly handles calling multiple"
@@ -2046,7 +2038,7 @@ msgstr ""
 "функцій виходу. Згодом :func:`sys.exitfunc` стане суто внутрішнім "
 "інтерфейсом, доступ до якого буде мати лише :mod:`atexit`."
 
-#: ../../whatsnew/2.4.rst:1284
+#: ../../whatsnew/2.4.rst:1285
 msgid ""
 "The :mod:`tarfile` module now generates GNU-format tar files by default. "
 "(Contributed by Lars Gustäbel.)"
@@ -2054,7 +2046,7 @@ msgstr ""
 "Модуль :mod:`tarfile` тепер за замовчуванням створює файли tar у форматі "
 "GNU. (Надав Ларс Густебель.)"
 
-#: ../../whatsnew/2.4.rst:1287
+#: ../../whatsnew/2.4.rst:1288
 msgid ""
 "The :mod:`threading` module now has an elegantly simple way to support "
 "thread-local data.  The module contains a :class:`local` class whose "
@@ -2064,7 +2056,7 @@ msgstr ""
 "локальних даних потоку. Модуль містить клас :class:`local`, значення "
 "атрибутів якого є локальними для різних потоків. ::"
 
-#: ../../whatsnew/2.4.rst:1297
+#: ../../whatsnew/2.4.rst:1298
 msgid ""
 "Other threads can assign and retrieve their own values for the "
 ":attr:`number` and :attr:`url` attributes.  You can subclass :class:`local` "
@@ -2074,7 +2066,7 @@ msgstr ""
 ":attr:`number` і :attr:`url`. Ви можете створити підклас :class:`local`, щоб"
 " ініціалізувати атрибути або додати методи. (Надав Джим Фултон.)"
 
-#: ../../whatsnew/2.4.rst:1301
+#: ../../whatsnew/2.4.rst:1302
 msgid ""
 "The :mod:`timeit` module now automatically disables periodic garbage "
 "collection during the timing loop.  This change makes consecutive timings "
@@ -2084,7 +2076,7 @@ msgstr ""
 "під час циклу синхронізації. Ця зміна робить послідовні таймінги більш "
 "порівнянними. (Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1305
+#: ../../whatsnew/2.4.rst:1306
 msgid ""
 "The :mod:`weakref` module now supports a wider variety of objects including "
 "Python functions, class instances, sets, frozensets, deques, arrays, files, "
@@ -2096,7 +2088,7 @@ msgstr ""
 "версії, масиви, файли, сокети та шаблони регулярних виразів. (Надав Реймонд "
 "Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1310
+#: ../../whatsnew/2.4.rst:1311
 msgid ""
 "The :mod:`xmlrpclib` module now supports a multi-call extension for "
 "transmitting multiple XML-RPC calls in a single HTTP operation. (Contributed"
@@ -2106,17 +2098,17 @@ msgstr ""
 "передачі кількох викликів XML-RPC в одній операції HTTP. (Надав Браян "
 "Квінлан.)"
 
-#: ../../whatsnew/2.4.rst:1314
+#: ../../whatsnew/2.4.rst:1315
 msgid ""
 "The :mod:`mpz`, :mod:`rotor`, and :mod:`xreadlines` modules have  been "
 "removed."
 msgstr "Модулі :mod:`mpz`, :mod:`rotor` і :mod:`xreadlines` видалено."
 
-#: ../../whatsnew/2.4.rst:1323
+#: ../../whatsnew/2.4.rst:1324
 msgid "cookielib"
 msgstr "cookielib"
 
-#: ../../whatsnew/2.4.rst:1325
+#: ../../whatsnew/2.4.rst:1326
 msgid ""
 "The :mod:`cookielib` library supports client-side handling for HTTP cookies,"
 " mirroring the :mod:`Cookie` module's server-side cookie support. Cookies "
@@ -2133,7 +2125,7 @@ msgstr ""
 "Як і у веб-браузерах, об’єкти політики контролюють, приймаються чи ні файли "
 "cookie."
 
-#: ../../whatsnew/2.4.rst:1332
+#: ../../whatsnew/2.4.rst:1333
 msgid ""
 "In order to store cookies across sessions, two implementations of cookie "
 "jars are provided: one that stores cookies in the Netscape format so "
@@ -2145,7 +2137,7 @@ msgstr ""
 "програми могли використовувати файли cookie Mozilla або Lynx, і інший, який "
 "зберігає файли cookie у тому самому форматі, що й бібліотека Perl libwww."
 
-#: ../../whatsnew/2.4.rst:1337
+#: ../../whatsnew/2.4.rst:1338
 msgid ""
 ":mod:`urllib2` has been changed to interact with :mod:`cookielib`: "
 ":class:`HTTPCookieProcessor` manages a cookie jar that is used when "
@@ -2155,15 +2147,15 @@ msgstr ""
 ":class:`HTTPCookieProcessor` керує файлом cookie, який використовується під "
 "час доступу до URL-адрес."
 
-#: ../../whatsnew/2.4.rst:1341
+#: ../../whatsnew/2.4.rst:1342
 msgid "This module was contributed by John J. Lee."
 msgstr "Цей модуль створено Джоном Дж. Лі."
 
-#: ../../whatsnew/2.4.rst:1347
+#: ../../whatsnew/2.4.rst:1348
 msgid "doctest"
 msgstr "doctest"
 
-#: ../../whatsnew/2.4.rst:1349
+#: ../../whatsnew/2.4.rst:1350
 msgid ""
 "The :mod:`doctest` module underwent considerable refactoring thanks to "
 "Edward Loper and Tim Peters.  Testing can still be as simple as running "
@@ -2175,7 +2167,7 @@ msgstr ""
 ":func:`doctest.testmod`, але рефакторинг дозволяє налаштувати роботу модуля "
 "різними способами"
 
-#: ../../whatsnew/2.4.rst:1354
+#: ../../whatsnew/2.4.rst:1355
 msgid ""
 "The new :class:`DocTestFinder` class extracts the tests from a given  "
 "object's docstrings::"
@@ -2183,7 +2175,7 @@ msgstr ""
 "Новий клас :class:`DocTestFinder` витягує тести з рядків документації даного"
 " об’єкта::"
 
-#: ../../whatsnew/2.4.rst:1370
+#: ../../whatsnew/2.4.rst:1371
 msgid ""
 "The new :class:`DocTestRunner` class then runs individual tests and can "
 "produce a summary of the results::"
@@ -2191,11 +2183,11 @@ msgstr ""
 "Потім новий клас :class:`DocTestRunner` запускає окремі тести та може "
 "створювати зведення результатів:"
 
-#: ../../whatsnew/2.4.rst:1379
+#: ../../whatsnew/2.4.rst:1380
 msgid "The above example produces the following output::"
 msgstr "Наведений вище приклад дає такий вихід:"
 
-#: ../../whatsnew/2.4.rst:1387
+#: ../../whatsnew/2.4.rst:1388
 msgid ""
 ":class:`DocTestRunner` uses an instance of the :class:`OutputChecker` class "
 "to compare the expected output with the actual output.  This class takes a "
@@ -2208,7 +2200,7 @@ msgstr ""
 "користувачі також можуть написати абсолютно новий підклас "
 ":class:`OutputChecker`."
 
-#: ../../whatsnew/2.4.rst:1392
+#: ../../whatsnew/2.4.rst:1393
 msgid ""
 "The default output checker provides a number of handy features. For example,"
 " with the :const:`doctest.ELLIPSIS` option flag, an ellipsis (``...``) in "
@@ -2220,12 +2212,12 @@ msgstr ""
 "в очікуваному виведенні відповідають будь-якому підрядку, що полегшує "
 "розміщення виходів, які незначно відрізняються:"
 
-#: ../../whatsnew/2.4.rst:1403
+#: ../../whatsnew/2.4.rst:1404
 msgid "Another special string, ``<BLANKLINE>``, matches a blank line::"
 msgstr ""
 "Інший спеціальний рядок, ``<BLANKLINE>``, відповідає порожньому рядку::"
 
-#: ../../whatsnew/2.4.rst:1411
+#: ../../whatsnew/2.4.rst:1412
 msgid ""
 "Another new capability is producing a diff-style display of the output by "
 "specifying the :const:`doctest.REPORT_UDIFF` (unified diffs), "
@@ -2238,7 +2230,7 @@ msgstr ""
 ":const:`doctest.REPORT_NDIFF` (дельта-стиль) позначки параметрів. "
 "Наприклад::"
 
-#: ../../whatsnew/2.4.rst:1427
+#: ../../whatsnew/2.4.rst:1428
 msgid ""
 "Running the above function's tests with :const:`doctest.REPORT_UDIFF` "
 "specified, you get the following output:"
@@ -2246,15 +2238,15 @@ msgstr ""
 "Запустивши тести наведеної вище функції з указаним "
 ":const:`doctest.REPORT_UDIFF`, ви отримаєте такий результат:"
 
-#: ../../whatsnew/2.4.rst:1448
+#: ../../whatsnew/2.4.rst:1449
 msgid "Build and C API Changes"
 msgstr "Зміни збірки та C API"
 
-#: ../../whatsnew/2.4.rst:1450
+#: ../../whatsnew/2.4.rst:1451
 msgid "Some of the changes to Python's build process and to the C API are:"
 msgstr "Деякі зміни в процесі збирання Python і в API C:"
 
-#: ../../whatsnew/2.4.rst:1452
+#: ../../whatsnew/2.4.rst:1453
 msgid ""
 "Three new convenience macros were added for common return values from "
 "extension functions: :c:macro:`Py_RETURN_NONE`, :c:macro:`Py_RETURN_TRUE`, "
@@ -2264,13 +2256,13 @@ msgstr ""
 "функціями розширення: :c:macro:`Py_RETURN_NONE`, :c:macro:`Py_RETURN_TRUE` і"
 " :c:macro:`Py_RETURN_FALSE`. (Надав Бретт Кеннон.)"
 
-#: ../../whatsnew/2.4.rst:1456
+#: ../../whatsnew/2.4.rst:1457
 msgid ""
 "Another new macro, :c:macro:`Py_CLEAR`,  decreases the reference count of "
 "*obj* and sets *obj* to the null pointer.  (Contributed by Jim Fulton.)"
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:1459
+#: ../../whatsnew/2.4.rst:1460
 msgid ""
 "A new function, ``PyTuple_Pack(N, obj1, obj2, ..., objN)``, constructs "
 "tuples from a variable length argument list of Python objects.  (Contributed"
@@ -2280,7 +2272,7 @@ msgstr ""
 " списку аргументів змінної довжини об’єктів Python. (Надав Реймонд "
 "Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1463
+#: ../../whatsnew/2.4.rst:1464
 msgid ""
 "A new function, ``PyDict_Contains(d, k)``, implements fast dictionary "
 "lookups without masking exceptions raised during the look-up process. "
@@ -2290,13 +2282,13 @@ msgstr ""
 "без маскування винятків, які виникають під час процесу пошуку. (Надав "
 "Реймонд Геттінгер.)"
 
-#: ../../whatsnew/2.4.rst:1467
+#: ../../whatsnew/2.4.rst:1468
 msgid ""
 "The :c:expr:`Py_IS_NAN(X)` macro returns 1 if  its float or double argument "
 "*X* is a NaN.   (Contributed by Tim Peters.)"
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:1470
+#: ../../whatsnew/2.4.rst:1471
 msgid ""
 "C code can avoid unnecessary locking by using the new "
 ":c:func:`!PyEval_ThreadsInitialized` function to tell  if any thread "
@@ -2304,7 +2296,7 @@ msgid ""
 "operations are needed. (Contributed by Nick Coghlan.)"
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:1475
+#: ../../whatsnew/2.4.rst:1476
 msgid ""
 "A new function, :c:func:`PyArg_VaParseTupleAndKeywords`, is the same as "
 ":c:func:`PyArg_ParseTupleAndKeywords` but takes a  :c:type:`va_list` instead"
@@ -2314,7 +2306,7 @@ msgstr ""
 ":c:func:`PyArg_ParseTupleAndKeywords`, але приймає :c:type:`va_list` замість"
 " кількох аргументів. (Надав Грег Чепмен.)"
 
-#: ../../whatsnew/2.4.rst:1479
+#: ../../whatsnew/2.4.rst:1480
 msgid ""
 "A new method flag, :c:macro:`METH_COEXIST`, allows a function defined in "
 "slots to co-exist with a :c:type:`PyCFunction` having the same name.  This "
@@ -2322,7 +2314,7 @@ msgid ""
 "(Contributed by Raymond Hettinger.)"
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:1484
+#: ../../whatsnew/2.4.rst:1485
 msgid ""
 "Python can now be built with additional profiling for the interpreter "
 "itself, intended as an aid to people developing the Python core.  Providing "
@@ -2344,17 +2336,17 @@ msgstr ""
 " платформі PowerPC, хоча ця архітектура процесора не називає цей регістр "
 "\"реєстром TSC\". (Надав Джеремі Гілтон.)"
 
-#: ../../whatsnew/2.4.rst:1494
+#: ../../whatsnew/2.4.rst:1495
 msgid ""
 "The :c:type:`!tracebackobject` type has been renamed to "
 ":c:type:`PyTracebackObject`."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:1501
+#: ../../whatsnew/2.4.rst:1502
 msgid "Port-Specific Changes"
 msgstr "Зміни, що стосуються порту"
 
-#: ../../whatsnew/2.4.rst:1503
+#: ../../whatsnew/2.4.rst:1504
 msgid ""
 "The Windows port now builds under MSVC++ 7.1 as well as version 6. "
 "(Contributed by Martin von Löwis.)"
@@ -2362,11 +2354,11 @@ msgstr ""
 "Порт Windows тепер створено під MSVC++ 7.1, а також версію 6. (Надано "
 "Мартіном фон Льовісом.)"
 
-#: ../../whatsnew/2.4.rst:1510
+#: ../../whatsnew/2.4.rst:1511
 msgid "Porting to Python 2.4"
 msgstr "Перенесення на Python 2.4"
 
-#: ../../whatsnew/2.4.rst:1512
+#: ../../whatsnew/2.4.rst:1513
 msgid ""
 "This section lists previously described changes that may require changes to "
 "your code:"
@@ -2374,7 +2366,7 @@ msgstr ""
 "У цьому розділі перераховано описані раніше зміни, які можуть потребувати "
 "змін у вашому коді:"
 
-#: ../../whatsnew/2.4.rst:1515
+#: ../../whatsnew/2.4.rst:1516
 msgid ""
 "Left shifts and hexadecimal/octal constants that are too  large no longer "
 "trigger a :exc:`FutureWarning` and return  a value limited to 32 or 64 bits;"
@@ -2384,7 +2376,7 @@ msgstr ""
 "великими, більше не викликають :exc:`FutureWarning` і повертають значення, "
 "обмежене 32 або 64 бітами; замість цього вони повертають довге ціле число."
 
-#: ../../whatsnew/2.4.rst:1522
+#: ../../whatsnew/2.4.rst:1523
 msgid ""
 "The :func:`zip` built-in function and :func:`itertools.izip` now return  an "
 "empty list instead of raising a :exc:`TypeError` exception if called with no"
@@ -2394,7 +2386,7 @@ msgstr ""
 "порожній список замість того, щоб викликати виняток :exc:`TypeError`, якщо "
 "викликати її без аргументів."
 
-#: ../../whatsnew/2.4.rst:1526
+#: ../../whatsnew/2.4.rst:1527
 msgid ""
 "You can no longer compare the :class:`date` and :class:`~datetime.datetime` "
 "instances provided by the :mod:`datetime` module.  Two  instances of "
@@ -2406,7 +2398,7 @@ msgstr ""
 "різних класів тепер завжди будуть нерівними, а відносні порівняння (``<``, "
 "``>``) викличуть :exc:`TypeError`."
 
-#: ../../whatsnew/2.4.rst:1531
+#: ../../whatsnew/2.4.rst:1532
 msgid ""
 ":func:`dircache.listdir` now passes exceptions to the caller instead of "
 "returning empty lists."
@@ -2414,7 +2406,7 @@ msgstr ""
 ":func:`dircache.listdir` тепер передає винятки викликаючому замість того, "
 "щоб повертати порожні списки."
 
-#: ../../whatsnew/2.4.rst:1534
+#: ../../whatsnew/2.4.rst:1535
 msgid ""
 ":func:`LexicalHandler.startDTD` used to receive the public and system IDs in"
 " the wrong order.  This has been corrected; applications relying on the "
@@ -2424,7 +2416,7 @@ msgstr ""
 "системних ідентифікаторів у неправильному порядку. Це було виправлено; "
 "потрібно виправити програми, які використовують неправильний порядок."
 
-#: ../../whatsnew/2.4.rst:1538
+#: ../../whatsnew/2.4.rst:1539
 msgid ""
 ":func:`fcntl.ioctl` now warns if the *mutate*  argument is omitted and "
 "relevant."
@@ -2432,20 +2424,20 @@ msgstr ""
 ":func:`fcntl.ioctl` тепер попереджає, якщо аргумент *mutate* пропущений і "
 "доречний."
 
-#: ../../whatsnew/2.4.rst:1541
+#: ../../whatsnew/2.4.rst:1542
 msgid ""
 "The :mod:`tarfile` module now generates GNU-format tar files by default."
 msgstr ""
 "Модуль :mod:`tarfile` тепер за замовчуванням створює файли tar у форматі "
 "GNU."
 
-#: ../../whatsnew/2.4.rst:1543
+#: ../../whatsnew/2.4.rst:1544
 msgid ""
 "Encountering a failure while importing a module no longer leaves a partially"
 " initialized module object in ``sys.modules``."
 msgstr ""
 
-#: ../../whatsnew/2.4.rst:1546
+#: ../../whatsnew/2.4.rst:1547
 msgid ""
 ":const:`None` is now a constant; code that binds a new value to  the name "
 "``None`` is now a syntax error."
@@ -2453,7 +2445,7 @@ msgstr ""
 ":const:`None` тепер константа; код, який прив’язує нове значення до імені "
 "``None``, тепер є синтаксичною помилкою."
 
-#: ../../whatsnew/2.4.rst:1549
+#: ../../whatsnew/2.4.rst:1550
 msgid ""
 "The :func:`signals.signal` function now raises a :exc:`RuntimeError` "
 "exception for certain illegal values; previously these errors would pass "
@@ -2465,11 +2457,11 @@ msgstr ""
 "Наприклад, ви більше не можете встановити обробник для сигналу "
 ":const:`SIGKILL`."
 
-#: ../../whatsnew/2.4.rst:1559
+#: ../../whatsnew/2.4.rst:1560
 msgid "Acknowledgements"
 msgstr "Подяки"
 
-#: ../../whatsnew/2.4.rst:1561
+#: ../../whatsnew/2.4.rst:1562
 msgid ""
 "The author would like to thank the following people for offering "
 "suggestions, corrections and assistance with various drafts of this article:"
@@ -2481,10 +2473,10 @@ msgstr ""
 "Дайк, Реймонд Геттінгер, Браян Херт, Хеміш Лоусон, Фредрік Лунд, Шон "
 "Рейфшнайдер, Садруддін Реджеб."
 
-#: ../../whatsnew/2.4.rst:414
+#: ../../whatsnew/2.4.rst:415
 msgid "universal newlines"
 msgstr "універсальні символи нового рядка"
 
-#: ../../whatsnew/2.4.rst:414
+#: ../../whatsnew/2.4.rst:415
 msgid "What's new"
 msgstr ""
