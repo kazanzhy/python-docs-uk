@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 14:14+0000\n"
+"POT-Creation-Date: 2023-12-22 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1270,7 +1270,7 @@ msgstr ""
 "Аргумент *not_exported* може бути набором імен, які не можна розглядати як "
 "частину загальнодоступного API, навіть якщо їхні імена вказують на інше."
 
-#: ../../library/test.rst:949 ../../library/test.rst:1575
+#: ../../library/test.rst:949 ../../library/test.rst:1576
 msgid "Example use::"
 msgstr "Приклад використання::"
 
@@ -1874,36 +1874,34 @@ msgstr "Додано інтерфейс словника."
 
 #: ../../library/test.rst:1411
 msgid ""
-"Simple :term:`path-like object`.  It implements the :meth:`__fspath__` "
-"method which just returns the *path* argument.  If *path* is an exception, "
-"it will be raised in :meth:`!__fspath__`."
+"Simple :term:`path-like object`.  It implements the "
+":meth:`~os.PathLike.__fspath__` method which just returns the *path* "
+"argument.  If *path* is an exception, it will be raised in "
+":meth:`!__fspath__`."
 msgstr ""
-"Простий :term:`path-like object`. Він реалізує метод :meth:`__fspath__`, "
-"який просто повертає аргумент *path*. Якщо *path* є винятком, він буде "
-"викликаний у :meth:`!__fspath__`."
 
-#: ../../library/test.rst:1418
+#: ../../library/test.rst:1419
 msgid ""
 "Temporarily set the environment variable ``envvar`` to the value of "
 "``value``."
 msgstr ""
 "Тимчасово встановіть для змінної середовища ``envvar`` значення ``value``."
 
-#: ../../library/test.rst:1424
+#: ../../library/test.rst:1425
 msgid "Temporarily unset the environment variable ``envvar``."
 msgstr "Тимчасово вимкнути змінну середовища ``envvar``."
 
-#: ../../library/test.rst:1429
+#: ../../library/test.rst:1430
 msgid ""
 "Return ``True`` if the OS supports symbolic links, ``False`` otherwise."
 msgstr ""
 "Повертає ``True``, якщо ОС підтримує символічні посилання, ``False`` інакше."
 
-#: ../../library/test.rst:1435
+#: ../../library/test.rst:1436
 msgid "Return ``True`` if the OS supports xattr, ``False`` otherwise."
 msgstr "Повертає ``True``, якщо ОС підтримує xattr, ``False`` інакше."
 
-#: ../../library/test.rst:1441
+#: ../../library/test.rst:1442
 msgid ""
 "A context manager that temporarily changes the current working directory to "
 "*path* and yields the directory."
@@ -1911,7 +1909,7 @@ msgstr ""
 "Менеджер контексту, який тимчасово змінює поточний робочий каталог на *шлях*"
 " і повертає каталог."
 
-#: ../../library/test.rst:1444
+#: ../../library/test.rst:1445
 msgid ""
 "If *quiet* is ``False``, the context manager raises an exception on error.  "
 "Otherwise, it issues only a warning and keeps the current working directory "
@@ -1921,23 +1919,23 @@ msgstr ""
 "разі помилки. В іншому випадку він видає лише попередження та зберігає "
 "поточний робочий каталог незмінним."
 
-#: ../../library/test.rst:1451
+#: ../../library/test.rst:1452
 msgid ""
 "Create an empty file with *filename*.  If it already exists, truncate it."
 msgstr "Створіть порожній файл із *ім’ям*. Якщо він уже існує, обріжте його."
 
-#: ../../library/test.rst:1456
+#: ../../library/test.rst:1457
 msgid "Count the number of open file descriptors."
 msgstr "Підрахуйте кількість відкритих файлових дескрипторів."
 
-#: ../../library/test.rst:1461
+#: ../../library/test.rst:1462
 msgid ""
 "Return ``True`` if the file system for *directory* is case-insensitive."
 msgstr ""
 "Повертає ``True``, якщо файлова система для *каталогу* нечутлива до "
 "регістру."
 
-#: ../../library/test.rst:1466
+#: ../../library/test.rst:1467
 msgid ""
 "Create an invalid file descriptor by opening and closing a temporary file, "
 "and returning its descriptor."
@@ -1945,7 +1943,7 @@ msgstr ""
 "Створіть недійсний дескриптор файлу, відкривши та закриваючи тимчасовий файл"
 " і повертаючи його дескриптор."
 
-#: ../../library/test.rst:1472
+#: ../../library/test.rst:1473
 msgid ""
 "Call :func:`os.rmdir` on *filename*.  On Windows platforms, this is wrapped "
 "with a wait loop that checks for the existence of the file, which is needed "
@@ -1956,7 +1954,7 @@ msgstr ""
 "через антивірусні програми, які можуть утримувати файли відкритими та "
 "запобігати видаленню."
 
-#: ../../library/test.rst:1480
+#: ../../library/test.rst:1481
 msgid ""
 "Call :func:`shutil.rmtree` on *path* or call :func:`os.lstat` and "
 ":func:`os.rmdir` to remove a path and its contents.  As with :func:`rmdir`, "
@@ -1968,16 +1966,16 @@ msgstr ""
 ":func:`rmdir`, на платформах Windows це обертається циклом очікування, який "
 "перевіряє існування файлів."
 
-#: ../../library/test.rst:1488
+#: ../../library/test.rst:1489
 msgid "A decorator for running tests that require support for symbolic links."
 msgstr ""
 "Декоратор для запуску тестів, які потребують підтримки символьних посилань."
 
-#: ../../library/test.rst:1493
+#: ../../library/test.rst:1494
 msgid "A decorator for running tests that require support for xattr."
 msgstr "Декоратор для запуску тестів, які потребують підтримки xattr."
 
-#: ../../library/test.rst:1498
+#: ../../library/test.rst:1499
 msgid ""
 "A context manager that temporarily creates a new directory and changes the "
 "current working directory (CWD)."
@@ -1985,7 +1983,7 @@ msgstr ""
 "Менеджер контексту, який тимчасово створює новий каталог і змінює поточний "
 "робочий каталог (CWD)."
 
-#: ../../library/test.rst:1501
+#: ../../library/test.rst:1502
 msgid ""
 "The context manager creates a temporary directory in the current directory "
 "with name *name* before temporarily changing the current working directory."
@@ -1997,7 +1995,7 @@ msgstr ""
 " має значення ``None``, тимчасовий каталог створюється за допомогою "
 ":func:`tempfile.mkdtemp`."
 
-#: ../../library/test.rst:1506
+#: ../../library/test.rst:1507
 msgid ""
 "If *quiet* is ``False`` and it is not possible to create or change the CWD, "
 "an error is raised.  Otherwise, only a warning is raised and the original "
@@ -2007,7 +2005,7 @@ msgstr ""
 "виникає помилка. В іншому випадку виводиться лише попередження та "
 "використовується оригінальний CWD."
 
-#: ../../library/test.rst:1513
+#: ../../library/test.rst:1514
 msgid ""
 "A context manager that creates a temporary directory at *path* and yields "
 "the directory."
@@ -2015,7 +2013,7 @@ msgstr ""
 "Менеджер контексту, який створює тимчасовий каталог за *шляхом* і дає "
 "каталог."
 
-#: ../../library/test.rst:1516
+#: ../../library/test.rst:1517
 msgid ""
 "If *path* is ``None``, the temporary directory is created using "
 ":func:`tempfile.mkdtemp`.  If *quiet* is ``False``, the context manager "
@@ -2027,11 +2025,11 @@ msgstr ""
 "менеджер контексту створює виняток у разі помилки. В іншому випадку, якщо "
 "вказано *шлях* і його неможливо створити, видається лише попередження."
 
-#: ../../library/test.rst:1524
+#: ../../library/test.rst:1525
 msgid "A context manager that temporarily sets the process umask."
 msgstr "Менеджер контексту, який тимчасово встановлює umask процесу."
 
-#: ../../library/test.rst:1529
+#: ../../library/test.rst:1530
 msgid ""
 "Call :func:`os.unlink` on *filename*.  As with :func:`rmdir`, on Windows "
 "platforms, this is wrapped with a wait loop that checks for the existence of"
@@ -2041,11 +2039,11 @@ msgstr ""
 "на платформах Windows це обернуто циклом очікування, який перевіряє "
 "існування файлу."
 
-#: ../../library/test.rst:1535
+#: ../../library/test.rst:1536
 msgid ":mod:`test.support.import_helper` --- Utilities for import tests"
 msgstr ":mod:`test.support.import_helper` --- Утиліти для імпортування тестів"
 
-#: ../../library/test.rst:1540
+#: ../../library/test.rst:1541
 msgid ""
 "The :mod:`test.support.import_helper` module provides support for import "
 "tests."
@@ -2053,7 +2051,7 @@ msgstr ""
 "Модуль :mod:`test.support.import_helper` забезпечує підтримку тестів "
 "імпорту."
 
-#: ../../library/test.rst:1547
+#: ../../library/test.rst:1548
 msgid ""
 "Remove the module named *module_name* from ``sys.modules`` and delete any "
 "byte-compiled files of the module."
@@ -2061,7 +2059,7 @@ msgstr ""
 "Видаліть модуль із назвою *module_name* із ``sys.modules`` і видаліть усі "
 "скомпільовані файли модуля."
 
-#: ../../library/test.rst:1553
+#: ../../library/test.rst:1554
 msgid ""
 "This function imports and returns a fresh copy of the named Python module by"
 " removing the named module from ``sys.modules`` before doing the import. "
@@ -2073,7 +2071,7 @@ msgstr ""
 "Зауважте, що на відміну від :func:`reload`, ця операція не впливає на "
 "вихідний модуль."
 
-#: ../../library/test.rst:1558
+#: ../../library/test.rst:1559
 msgid ""
 "*fresh* is an iterable of additional module names that are also removed from"
 " the ``sys.modules`` cache before doing the import."
@@ -2081,7 +2079,7 @@ msgstr ""
 "*fresh* — це ітерація додаткових назв модулів, які також видаляються з кешу "
 "``sys.modules`` перед виконанням імпорту."
 
-#: ../../library/test.rst:1561
+#: ../../library/test.rst:1562
 msgid ""
 "*blocked* is an iterable of module names that are replaced with ``None`` in "
 "the module cache during the import to ensure that attempts to import them "
@@ -2091,7 +2089,7 @@ msgstr ""
 "модуля під час імпорту, щоб гарантувати, що спроби їх імпортувати викликають"
 " :exc:`ImportError`."
 
-#: ../../library/test.rst:1565
+#: ../../library/test.rst:1566
 msgid ""
 "The named module and any modules named in the *fresh* and *blocked* "
 "parameters are saved before starting the import and then reinserted into "
@@ -2101,7 +2099,7 @@ msgstr ""
 " зберігаються перед початком імпорту, а потім знову вставляються в "
 "``sys.modules``, коли новий імпорт буде завершено."
 
-#: ../../library/test.rst:1569
+#: ../../library/test.rst:1570
 msgid ""
 "Module and package deprecation messages are suppressed during this import if"
 " *deprecated* is ``True``."
@@ -2109,7 +2107,7 @@ msgstr ""
 "Повідомлення про застарілі модулі та пакети пригнічуються під час цього "
 "імпорту, якщо *deprecated* має значення ``True``."
 
-#: ../../library/test.rst:1572
+#: ../../library/test.rst:1573
 msgid ""
 "This function will raise :exc:`ImportError` if the named module cannot be "
 "imported."
@@ -2117,7 +2115,7 @@ msgstr ""
 "Ця функція викличе :exc:`ImportError`, якщо вказаний модуль неможливо "
 "імпортувати."
 
-#: ../../library/test.rst:1589
+#: ../../library/test.rst:1590
 msgid ""
 "This function imports and returns the named module. Unlike a normal import, "
 "this function raises :exc:`unittest.SkipTest` if the module cannot be "
@@ -2127,7 +2125,7 @@ msgstr ""
 "імпорту, ця функція викликає :exc:`unittest.SkipTest`, якщо модуль неможливо"
 " імпортувати."
 
-#: ../../library/test.rst:1593
+#: ../../library/test.rst:1594
 msgid ""
 "Module and package deprecation messages are suppressed during this import if"
 " *deprecated* is ``True``.  If a module is required on a platform but "
@@ -2139,11 +2137,11 @@ msgstr ""
 "платформі, але необов’язковий для інших, установіть *required_on* на "
 "ітерацію префіксів платформи, які порівнюватимуться з :data:`sys.platform`."
 
-#: ../../library/test.rst:1603
+#: ../../library/test.rst:1604
 msgid "Return a copy of :data:`sys.modules`."
 msgstr "Повернути копію :data:`sys.modules`."
 
-#: ../../library/test.rst:1608
+#: ../../library/test.rst:1609
 msgid ""
 "Remove modules except for *oldmodules* and ``encodings`` in order to "
 "preserve internal cache."
@@ -2151,11 +2149,11 @@ msgstr ""
 "Видаліть модулі, за винятком *oldmodules* і ``encoding``, щоб зберегти "
 "внутрішній кеш."
 
-#: ../../library/test.rst:1614
+#: ../../library/test.rst:1615
 msgid "Delete *name* from ``sys.modules``."
 msgstr "Видалити *name* з ``sys.modules``."
 
-#: ../../library/test.rst:1619
+#: ../../library/test.rst:1620
 msgid ""
 "Move a :pep:`3147`/:pep:`488` pyc file to its legacy pyc location and return"
 " the file system path to the legacy pyc file.  The *source* value is the "
@@ -2167,7 +2165,7 @@ msgstr ""
 "*source* — це шлях файлової системи до вихідного файлу. Він не обов’язково "
 "існує, однак файл PEP 3147/488 pyc має існувати."
 
-#: ../../library/test.rst:1627
+#: ../../library/test.rst:1628
 msgid ""
 "A context manager to force import to return a new module reference.  This is"
 " useful for testing module-level behaviors, such as the emission of a "
@@ -2178,12 +2176,12 @@ msgstr ""
 "наприклад виведення :exc:`DeprecationWarning` під час імпорту. Приклад "
 "використання::"
 
-#: ../../library/test.rst:1637
+#: ../../library/test.rst:1638
 msgid "A context manager to temporarily add directories to :data:`sys.path`."
 msgstr ""
 "Менеджер контексту для тимчасового додавання каталогів до :data:`sys.path`."
 
-#: ../../library/test.rst:1639
+#: ../../library/test.rst:1640
 msgid ""
 "This makes a copy of :data:`sys.path`, appends any directories given as "
 "positional arguments, then reverts :data:`sys.path` to the copied settings "
@@ -2193,7 +2191,7 @@ msgstr ""
 "позиційні аргументи, а потім повертає :data:`sys.path` скопійовані "
 "налаштування, коли контекст закінчується."
 
-#: ../../library/test.rst:1643
+#: ../../library/test.rst:1644
 msgid ""
 "Note that *all* :data:`sys.path` modifications in the body of the context "
 "manager, including replacement of the object, will be reverted at the end of"
@@ -2202,12 +2200,12 @@ msgstr ""
 "Зауважте, що *всі* :data:`sys.path` зміни в тілі контекстного менеджера, "
 "включаючи заміну об’єкта, буде скасовано в кінці блоку."
 
-#: ../../library/test.rst:1649
+#: ../../library/test.rst:1650
 msgid ":mod:`test.support.warnings_helper` --- Utilities for warnings tests"
 msgstr ""
 ":mod:`test.support.warnings_helper` --- Утиліти для перевірки попереджень"
 
-#: ../../library/test.rst:1654
+#: ../../library/test.rst:1655
 msgid ""
 "The :mod:`test.support.warnings_helper` module provides support for warnings"
 " tests."
@@ -2215,7 +2213,7 @@ msgstr ""
 "Модуль :mod:`test.support.warnings_helper` забезпечує підтримку тестів "
 "попереджень."
 
-#: ../../library/test.rst:1661
+#: ../../library/test.rst:1662
 msgid ""
 "Suppress warnings that are instances of *category*, which must be "
 ":exc:`Warning` or a subclass. Roughly equivalent to "
@@ -2223,7 +2221,7 @@ msgid ""
 "category=category) <warnings.simplefilter>`. For example::"
 msgstr ""
 
-#: ../../library/test.rst:1676
+#: ../../library/test.rst:1677
 msgid ""
 "Context manager to check that no :exc:`ResourceWarning` was raised.  You "
 "must remove the object which may emit :exc:`ResourceWarning` before the end "
@@ -2233,7 +2231,7 @@ msgstr ""
 "повинні видалити об’єкт, який може видати :exc:`ResourceWarning` перед "
 "завершенням контекстного менеджера."
 
-#: ../../library/test.rst:1683
+#: ../../library/test.rst:1684
 msgid ""
 "Test for syntax warning in *statement* by attempting to compile *statement*."
 " Test also that the :exc:`SyntaxWarning` is emitted only once, and that it "
@@ -2253,7 +2251,7 @@ msgstr ""
 "``None``, порівнюється з рядком попередження та винятку. Якщо *offset* не є "
 "``None``, порівнюється зі зміщенням винятку."
 
-#: ../../library/test.rst:1697
+#: ../../library/test.rst:1698
 msgid ""
 "A convenience wrapper for :func:`warnings.catch_warnings()` that makes it "
 "easier to test that a warning was correctly raised.  It is approximately "
@@ -2267,7 +2265,7 @@ msgstr ""
 ":meth:`warnings.simplefilter`, встановленим на ``always`` і з опцією "
 "автоматичної перевірки результатів, які записуються."
 
-#: ../../library/test.rst:1703
+#: ../../library/test.rst:1704
 msgid ""
 "``check_warnings`` accepts 2-tuples of the form ``(\"message regexp\", "
 "WarningCategory)`` as positional arguments. If one or more *filters* are "
@@ -2288,15 +2286,15 @@ msgstr ""
 "указаних фільтрів, тест не вдається. Щоб вимкнути першу з цих перевірок, "
 "установіть *quiet* на ``True``."
 
-#: ../../library/test.rst:1712
+#: ../../library/test.rst:1713
 msgid "If no arguments are specified, it defaults to::"
 msgstr "Якщо аргументи не вказано, за замовчуванням::"
 
-#: ../../library/test.rst:1716
+#: ../../library/test.rst:1717
 msgid "In this case all warnings are caught and no errors are raised."
 msgstr "У цьому випадку всі попередження вловлюються, а помилки не виникають."
 
-#: ../../library/test.rst:1718
+#: ../../library/test.rst:1719
 msgid ""
 "On entry to the context manager, a :class:`WarningRecorder` instance is "
 "returned. The underlying warnings list from :func:`~warnings.catch_warnings`"
@@ -2316,7 +2314,7 @@ msgstr ""
 "атрибутів, які в іншому випадку очікувалися б для об’єкта, що представляє "
 "попередження, поверне ``None``."
 
-#: ../../library/test.rst:1727
+#: ../../library/test.rst:1728
 msgid ""
 "The recorder object also has a :meth:`reset` method, which clears the "
 "warnings list."
@@ -2324,11 +2322,11 @@ msgstr ""
 "Об’єкт recorder також має метод :meth:`reset`, який очищає список "
 "попереджень."
 
-#: ../../library/test.rst:1730
+#: ../../library/test.rst:1731
 msgid "The context manager is designed to be used like this::"
 msgstr "Контекстний менеджер призначений для використання таким чином:"
 
-#: ../../library/test.rst:1737
+#: ../../library/test.rst:1738
 msgid ""
 "In this case if either warning was not raised, or some other warning was "
 "raised, :func:`check_warnings` would raise an error."
@@ -2336,7 +2334,7 @@ msgstr ""
 "У цьому випадку, якщо попередження не було викликано, або якесь інше "
 "попередження було викликано, :func:`check_warnings` викличе помилку."
 
-#: ../../library/test.rst:1740
+#: ../../library/test.rst:1741
 msgid ""
 "When a test needs to look more deeply into the warnings, rather than just "
 "checking whether or not they occurred, code like this can be used::"
@@ -2344,7 +2342,7 @@ msgstr ""
 "Коли під час тестування потрібно глибше вивчити попередження, а не просто "
 "перевірити, чи вони виникли чи ні, можна використати такий код:"
 
-#: ../../library/test.rst:1754
+#: ../../library/test.rst:1755
 msgid ""
 "Here all warnings will be caught, and the test code tests the captured "
 "warnings directly."
@@ -2352,11 +2350,11 @@ msgstr ""
 "Тут будуть перехоплені всі попередження, а тестовий код безпосередньо "
 "перевірить захоплені попередження."
 
-#: ../../library/test.rst:1757
+#: ../../library/test.rst:1758
 msgid "New optional arguments *filters* and *quiet*."
 msgstr "Нові необов'язкові аргументи *фільтри* та *тихий*."
 
-#: ../../library/test.rst:1763
+#: ../../library/test.rst:1764
 msgid ""
 "Class used to record warnings for unit tests. See documentation of "
 ":func:`check_warnings` above for more details."
