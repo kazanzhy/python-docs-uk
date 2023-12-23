@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 14:14+0000\n"
+"POT-Creation-Date: 2023-12-22 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -71,7 +71,13 @@ msgstr ""
 "дочірнього, а *fd* — це дескриптор файлу, підключений до керуючого терміналу"
 " дочірнього (а також до стандартного введення та виведення дочірнього)."
 
-#: ../../library/pty.rst:39
+#: ../../library/pty.rst:36
+msgid ""
+"On macOS the use of this function is unsafe when mixed with using higher-"
+"level system APIs, and that includes using :mod:`urllib.request`."
+msgstr ""
+
+#: ../../library/pty.rst:42
 msgid ""
 "Open a new pseudo-terminal pair, using :func:`os.openpty` if possible, or "
 "emulation code for generic Unix systems. Return a pair of file descriptors "
@@ -82,7 +88,7 @@ msgstr ""
 "файлових дескрипторів ``(master, slave)`` для головного та підлеглого кінця "
 "відповідно."
 
-#: ../../library/pty.rst:46
+#: ../../library/pty.rst:49
 msgid ""
 "Spawn a process, and connect its controlling terminal with the current "
 "process's standard io. This is often used to baffle programs which insist on"
@@ -96,7 +102,7 @@ msgstr ""
 "породжений за pty, зрештою завершиться, і коли це станеться, *spawn* "
 "повернеться."
 
-#: ../../library/pty.rst:52
+#: ../../library/pty.rst:55
 msgid ""
 "A loop copies STDIN of the current process to the child and data received "
 "from the child to STDOUT of the current process. It is not signaled to the "
@@ -106,7 +112,7 @@ msgstr ""
 "від дочірнього процесу, до STDOUT поточного процесу. Дочірній процес не "
 "повідомляється, якщо STDIN поточного процесу закривається."
 
-#: ../../library/pty.rst:56
+#: ../../library/pty.rst:59
 msgid ""
 "The functions *master_read* and *stdin_read* are passed a file descriptor "
 "which they should read from, and they should always return a byte string. In"
@@ -118,7 +124,7 @@ msgstr ""
 "змусити spawn повернутися до того, як дочірній процес завершить роботу, слід"
 " повернути порожній масив байтів до кінця файлу."
 
-#: ../../library/pty.rst:61
+#: ../../library/pty.rst:64
 msgid ""
 "The default implementation for both functions will read and return up to "
 "1024 bytes each time the function is called. The *master_read* callback is "
@@ -132,7 +138,7 @@ msgstr ""
 "читання виводу з дочірнього процесу, а *stdin_read* передається дескриптор "
 "файлу 0 для читання зі стандартного введення батьківського процесу."
 
-#: ../../library/pty.rst:67
+#: ../../library/pty.rst:70
 msgid ""
 "Returning an empty byte string from either callback is interpreted as an "
 "end-of-file (EOF) condition, and that callback will not be called after "
@@ -149,26 +155,26 @@ msgstr ""
 "*spawn* буде зациклюватися назавжди. Якщо *master_read* сигналізує EOF, це "
 "призводить до такої ж поведінки (принаймні в Linux)."
 
-#: ../../library/pty.rst:74
+#: ../../library/pty.rst:77
 msgid ""
 "Return the exit status value from :func:`os.waitpid` on the child process."
 msgstr ""
 "Повертає значення статусу виходу з :func:`os.waitpid` дочірнього процесу."
 
-#: ../../library/pty.rst:76
+#: ../../library/pty.rst:79
 msgid ""
 ":func:`os.waitstatus_to_exitcode` can be used to convert the exit status "
 "into an exit code."
 msgstr ""
 
-#: ../../library/pty.rst:79
+#: ../../library/pty.rst:82
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``pty.spawn`` with argument "
 "``argv``."
 msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``pty.spawn`` з аргументом ``argv``."
 
-#: ../../library/pty.rst:81
+#: ../../library/pty.rst:84
 msgid ""
 ":func:`spawn` now returns the status value from :func:`os.waitpid` on the "
 "child process."
@@ -176,11 +182,11 @@ msgstr ""
 ":func:`spawn` тепер повертає значення стану з :func:`os.waitpid` дочірнього "
 "процесу."
 
-#: ../../library/pty.rst:86
+#: ../../library/pty.rst:89
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/pty.rst:90
+#: ../../library/pty.rst:93
 msgid ""
 "The following program acts like the Unix command :manpage:`script(1)`, using"
 " a pseudo-terminal to record all input and output of a terminal session in a"
