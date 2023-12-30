@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 14:14+0000\n"
+"POT-Creation-Date: 2023-12-29 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -311,12 +311,10 @@ msgstr ""
 #: ../../c-api/bytes.rst:156
 msgid ""
 "Return the null-terminated contents of the object *obj* through the output "
-"variables *buffer* and *length*."
+"variables *buffer* and *length*. Returns ``0`` on success."
 msgstr ""
-"Повертає нульовий вміст об’єкта *obj* через вихідні змінні *buffer* і "
-"*length*."
 
-#: ../../c-api/bytes.rst:159
+#: ../../c-api/bytes.rst:160
 msgid ""
 "If *length* is ``NULL``, the bytes object may not contain embedded null "
 "bytes; if it does, the function returns ``-1`` and a :exc:`ValueError` is "
@@ -326,7 +324,7 @@ msgstr ""
 "нульових байтів; якщо це так, функція повертає ``-1`` і викликає "
 ":exc:`ValueError`."
 
-#: ../../c-api/bytes.rst:163
+#: ../../c-api/bytes.rst:164
 msgid ""
 "The buffer refers to an internal buffer of *obj*, which includes an "
 "additional null byte at the end (not counted in *length*).  The data must "
@@ -342,7 +340,7 @@ msgstr ""
 "*obj* взагалі не є об’єктом bytes, :c:func:`PyBytes_AsStringAndSize` "
 "повертає ``-1`` і викликає :exc:`TypeError`."
 
-#: ../../c-api/bytes.rst:170
+#: ../../c-api/bytes.rst:171
 msgid ""
 "Previously, :exc:`TypeError` was raised when embedded null bytes were "
 "encountered in the bytes object."
@@ -350,7 +348,7 @@ msgstr ""
 "Раніше :exc:`TypeError` виникало, коли в об’єкті bytes зустрічалися "
 "вбудовані нульові байти."
 
-#: ../../c-api/bytes.rst:177
+#: ../../c-api/bytes.rst:178
 msgid ""
 "Create a new bytes object in *\\*bytes* containing the contents of *newpart*"
 " appended to *bytes*; the caller will own the new reference.  The reference "
@@ -365,14 +363,14 @@ msgstr ""
 " старе посилання на *bytes* все одно буде відкинуто, а значення *\\*bytes* "
 "буде встановлено на ``NULL``; буде встановлено відповідний виняток."
 
-#: ../../c-api/bytes.rst:186
+#: ../../c-api/bytes.rst:187
 msgid ""
 "Create a new bytes object in *\\*bytes* containing the contents of *newpart*"
 " appended to *bytes*.  This version releases the :term:`strong reference` to"
 " *newpart* (i.e. decrements its reference count)."
 msgstr ""
 
-#: ../../c-api/bytes.rst:193
+#: ../../c-api/bytes.rst:194
 msgid ""
 "A way to resize a bytes object even though it is \"immutable\". Only use "
 "this to build up a brand new bytes object; don't use this if the bytes may "

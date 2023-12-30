@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-08 14:14+0000\n"
+"POT-Creation-Date: 2023-12-29 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -78,7 +78,7 @@ msgstr ""
 "наприклад dbm.ndbm або dbm.gnu."
 
 #: ../../library/dbm.rst:36 ../../library/dbm.rst:210
-#: ../../library/dbm.rst:309 ../../library/dbm.rst:393
+#: ../../library/dbm.rst:316 ../../library/dbm.rst:400
 msgid "Accepts :term:`path-like object` for filename."
 msgstr ""
 
@@ -98,66 +98,66 @@ msgstr ""
 "імпортувати."
 
 #: ../../library/dbm.rst:47 ../../library/dbm.rst:166
-#: ../../library/dbm.rst:357
+#: ../../library/dbm.rst:364
 msgid "The optional *flag* argument can be:"
 msgstr "Додатковий аргумент *flag* може бути:"
 
 #: ../../library/dbm.rst:50 ../../library/dbm.rst:169
-#: ../../library/dbm.rst:188 ../../library/dbm.rst:287
-#: ../../library/dbm.rst:360
+#: ../../library/dbm.rst:188 ../../library/dbm.rst:294
+#: ../../library/dbm.rst:367
 msgid "Value"
 msgstr "Значення"
 
 #: ../../library/dbm.rst:50 ../../library/dbm.rst:169
-#: ../../library/dbm.rst:188 ../../library/dbm.rst:287
-#: ../../library/dbm.rst:360
+#: ../../library/dbm.rst:188 ../../library/dbm.rst:294
+#: ../../library/dbm.rst:367
 msgid "Meaning"
 msgstr "Значення"
 
 #: ../../library/dbm.rst:52 ../../library/dbm.rst:171
-#: ../../library/dbm.rst:289 ../../library/dbm.rst:362
+#: ../../library/dbm.rst:296 ../../library/dbm.rst:369
 msgid "``'r'``"
 msgstr "``'r''``"
 
 #: ../../library/dbm.rst:52 ../../library/dbm.rst:171
-#: ../../library/dbm.rst:289 ../../library/dbm.rst:362
+#: ../../library/dbm.rst:296 ../../library/dbm.rst:369
 msgid "Open existing database for reading only (default)"
 msgstr "Відкрити існуючу базу даних лише для читання (за замовчуванням)"
 
 #: ../../library/dbm.rst:55 ../../library/dbm.rst:174
-#: ../../library/dbm.rst:292 ../../library/dbm.rst:365
+#: ../../library/dbm.rst:299 ../../library/dbm.rst:372
 msgid "``'w'``"
 msgstr "``'w'``"
 
 #: ../../library/dbm.rst:55 ../../library/dbm.rst:174
-#: ../../library/dbm.rst:292 ../../library/dbm.rst:365
+#: ../../library/dbm.rst:299 ../../library/dbm.rst:372
 msgid "Open existing database for reading and writing"
 msgstr "Відкрити існуючу базу даних для читання та запису"
 
 #: ../../library/dbm.rst:58 ../../library/dbm.rst:177
-#: ../../library/dbm.rst:295 ../../library/dbm.rst:368
+#: ../../library/dbm.rst:302 ../../library/dbm.rst:375
 msgid "``'c'``"
 msgstr "``'c''``"
 
 #: ../../library/dbm.rst:58 ../../library/dbm.rst:177
-#: ../../library/dbm.rst:295 ../../library/dbm.rst:368
+#: ../../library/dbm.rst:302 ../../library/dbm.rst:375
 msgid "Open database for reading and writing, creating it if it doesn't exist"
 msgstr ""
 "Відкрити базу даних для читання та запису, створити її, якщо вона не існує"
 
 #: ../../library/dbm.rst:61 ../../library/dbm.rst:180
-#: ../../library/dbm.rst:298 ../../library/dbm.rst:371
+#: ../../library/dbm.rst:305 ../../library/dbm.rst:378
 msgid "``'n'``"
 msgstr "``'n'``"
 
 #: ../../library/dbm.rst:61 ../../library/dbm.rst:180
-#: ../../library/dbm.rst:298 ../../library/dbm.rst:371
+#: ../../library/dbm.rst:305 ../../library/dbm.rst:378
 msgid "Always create a new, empty database, open for reading and writing"
 msgstr ""
 "Завжди створюйте нову порожню базу даних, відкриту для читання та запису"
 
-#: ../../library/dbm.rst:65 ../../library/dbm.rst:302
-#: ../../library/dbm.rst:375
+#: ../../library/dbm.rst:65 ../../library/dbm.rst:309
+#: ../../library/dbm.rst:382
 msgid ""
 "The optional *mode* argument is the Unix mode of the file, used only when "
 "the database has to be created.  It defaults to octal ``0o666`` (and will be"
@@ -445,6 +445,14 @@ msgstr ""
 
 #: ../../library/dbm.rst:270
 msgid ""
+"The ndbm library shipped as part of macOS has an undocumented limitation on "
+"the size of values, which can result in corrupted database files when "
+"storing values larger than this limit. Reading such corrupted files can "
+"result in a hard crash (segmentation fault)."
+msgstr ""
+
+#: ../../library/dbm.rst:277
+msgid ""
 "Raised on :mod:`dbm.ndbm`-specific errors, such as I/O errors. "
 ":exc:`KeyError` is raised for general mapping errors like specifying an "
 "incorrect key."
@@ -453,11 +461,11 @@ msgstr ""
 "введення/виведення. :exc:`KeyError` виникає для загальних помилок "
 "зіставлення, як-от введення неправильного ключа."
 
-#: ../../library/dbm.rst:276
+#: ../../library/dbm.rst:283
 msgid "Name of the ``ndbm`` implementation library used."
 msgstr "Назва використаної бібліотеки реалізації ``ndbm``."
 
-#: ../../library/dbm.rst:281
+#: ../../library/dbm.rst:288
 msgid ""
 "Open a dbm database and return a ``ndbm`` object.  The *filename* argument "
 "is the name of the database file (without the :file:`.dir` or :file:`.pag` "
@@ -466,11 +474,11 @@ msgstr ""
 "Відкрийте базу даних dbm і поверніть об’єкт ``ndbm``. Аргумент *filename* — "
 "це ім’я файлу бази даних (без розширень :file:`.dir` або :file:`.pag`)."
 
-#: ../../library/dbm.rst:284
+#: ../../library/dbm.rst:291
 msgid "The optional *flag* argument must be one of these values:"
 msgstr "Необов’язковий аргумент *flag* має мати одне з цих значень:"
 
-#: ../../library/dbm.rst:306
+#: ../../library/dbm.rst:313
 msgid ""
 "In addition to the dictionary-like methods, ``ndbm`` objects provide the "
 "following method:"
@@ -478,19 +486,19 @@ msgstr ""
 "На додаток до методів, подібних до словника, об’єкти ``ndbm`` забезпечують "
 "наступний метод:"
 
-#: ../../library/dbm.rst:314
+#: ../../library/dbm.rst:321
 msgid "Close the ``ndbm`` database."
 msgstr "Закрийте базу даних ``ndbm``."
 
-#: ../../library/dbm.rst:318
+#: ../../library/dbm.rst:325
 msgid ":mod:`dbm.dumb` --- Portable DBM implementation"
 msgstr ":mod:`dbm.dumb` --- Переносна реалізація DBM"
 
-#: ../../library/dbm.rst:323
+#: ../../library/dbm.rst:330
 msgid "**Source code:** :source:`Lib/dbm/dumb.py`"
 msgstr "**Вихідний код:** :source:`Lib/dbm/dumb.py`"
 
-#: ../../library/dbm.rst:329
+#: ../../library/dbm.rst:336
 msgid ""
 "The :mod:`dbm.dumb` module is intended as a last resort fallback for the "
 ":mod:`dbm` module when a more robust module is not available. The "
@@ -502,7 +510,7 @@ msgstr ""
 "не створений для швидкості і використовується не так активно, як інші модулі"
 " бази даних."
 
-#: ../../library/dbm.rst:336
+#: ../../library/dbm.rst:343
 msgid ""
 "The :mod:`dbm.dumb` module provides a persistent dictionary-like interface "
 "which is written entirely in Python.  Unlike other modules such as "
@@ -514,11 +522,11 @@ msgstr ""
 " :mod:`dbm.gnu`, зовнішня бібліотека не потрібна. Як і в інших постійних "
 "відображеннях, ключі та значення завжди зберігаються як байти."
 
-#: ../../library/dbm.rst:341
+#: ../../library/dbm.rst:348
 msgid "The module defines the following:"
 msgstr "Модуль визначає наступне:"
 
-#: ../../library/dbm.rst:346
+#: ../../library/dbm.rst:353
 msgid ""
 "Raised on :mod:`dbm.dumb`-specific errors, such as I/O errors.  "
 ":exc:`KeyError` is raised for general mapping errors like specifying an "
@@ -528,7 +536,7 @@ msgstr ""
 "введення/виведення. :exc:`KeyError` виникає для загальних помилок "
 "зіставлення, як-от введення неправильного ключа."
 
-#: ../../library/dbm.rst:352
+#: ../../library/dbm.rst:359
 msgid ""
 "Open a ``dumbdbm`` database and return a dumbdbm object.  The *filename* "
 "argument is the basename of the database file (without any specific "
@@ -540,7 +548,7 @@ msgstr ""
 "розширень). Коли створюється база даних dumbdbm, створюються файли з "
 "розширеннями :file:`.dat` і :file:`.dir`."
 
-#: ../../library/dbm.rst:380
+#: ../../library/dbm.rst:387
 msgid ""
 "It is possible to crash the Python interpreter when loading a database with "
 "a sufficiently large/complex entry due to stack depth limitations in "
@@ -550,7 +558,7 @@ msgstr ""
 "достатньо великим/складним записом через обмеження глибини стеку в "
 "компіляторі AST Python."
 
-#: ../../library/dbm.rst:384
+#: ../../library/dbm.rst:391
 msgid ""
 ":func:`.open` always creates a new database when the flag has the value "
 "``'n'``."
@@ -558,7 +566,7 @@ msgstr ""
 ":func:`.open` завжди створює нову базу даних, якщо прапорець має значення "
 "``'n'``."
 
-#: ../../library/dbm.rst:388
+#: ../../library/dbm.rst:395
 msgid ""
 "A database opened with flags ``'r'`` is now read-only.  Opening with flags "
 "``'r'`` and ``'w'`` no longer creates a database if it does not exist."
@@ -567,7 +575,7 @@ msgstr ""
 "Відкриття з прапорцями ``'r'`` і ``'w'`` більше не створює базу даних, якщо "
 "вона не існує."
 
-#: ../../library/dbm.rst:396
+#: ../../library/dbm.rst:403
 msgid ""
 "In addition to the methods provided by the "
 ":class:`collections.abc.MutableMapping` class, :class:`dumbdbm` objects "
@@ -577,7 +585,7 @@ msgstr ""
 ":class:`collections.abc.MutableMapping`, об’єкти :class:`dumbdbm` надають "
 "такі методи:"
 
-#: ../../library/dbm.rst:402
+#: ../../library/dbm.rst:409
 msgid ""
 "Synchronize the on-disk directory and data files.  This method is called by "
 "the :meth:`Shelve.sync` method."
@@ -585,10 +593,10 @@ msgstr ""
 "Синхронізувати каталог на диску та файли даних. Цей метод викликається "
 "методом :meth:`Shelve.sync`."
 
-#: ../../library/dbm.rst:407
+#: ../../library/dbm.rst:414
 msgid "Close the ``dumbdbm`` database."
 msgstr "Закрийте базу даних ``dumbdbm``."
 
-#: ../../library/dbm.rst:325
+#: ../../library/dbm.rst:332
 msgid "databases"
 msgstr ""
