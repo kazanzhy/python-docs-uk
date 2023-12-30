@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-15 14:14+0000\n"
+"POT-Creation-Date: 2023-12-29 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -135,16 +135,11 @@ msgstr "Кінець файлу при введенні передається �
 #: ../../library/cmd.rst:68
 msgid ""
 "An interpreter instance will recognize a command name ``foo`` if and only if"
-" it has a method :meth:`do_foo`.  As a special case, a line beginning with "
+" it has a method :meth:`!do_foo`.  As a special case, a line beginning with "
 "the character ``'?'`` is dispatched to the method :meth:`do_help`.  As "
 "another special case, a line beginning with the character ``'!'`` is "
-"dispatched to the method :meth:`do_shell` (if such a method is defined)."
+"dispatched to the method :meth:`!do_shell` (if such a method is defined)."
 msgstr ""
-"Екземпляр інтерпретатора розпізнає ім’я команди ``foo`` тоді і тільки якщо "
-"він має метод :meth:`do_foo`. Як особливий випадок, рядок, що починається "
-"символом ``'?''`` надсилається в метод :meth:`do_help`. Як інший особливий "
-"випадок, рядок, що починається символом ``'!''`` відправляється в метод "
-":meth:`do_shell` (якщо такий метод визначено)."
 
 #: ../../library/cmd.rst:74
 msgid ""
@@ -156,35 +151,27 @@ msgstr ""
 #: ../../library/cmd.rst:78
 msgid ""
 "If completion is enabled, completing commands will be done automatically, "
-"and completing of commands args is done by calling :meth:`complete_foo` with"
-" arguments *text*, *line*, *begidx*, and *endidx*.  *text* is the string "
-"prefix we are attempting to match: all returned matches must begin with it. "
-"*line* is the current input line with leading whitespace removed, *begidx* "
+"and completing of commands args is done by calling :meth:`!complete_foo` "
+"with arguments *text*, *line*, *begidx*, and *endidx*.  *text* is the string"
+" prefix we are attempting to match: all returned matches must begin with it."
+" *line* is the current input line with leading whitespace removed, *begidx* "
 "and *endidx* are the beginning and ending indexes of the prefix text, which "
 "could be used to provide different completion depending upon which position "
 "the argument is in."
 msgstr ""
-"Якщо завершення ввімкнено, завершення команд виконуватиметься автоматично, а"
-" завершення аргументів команд здійснюється викликом :meth:`complete_foo` з "
-"аргументами *text*, *line*, *begidx* і *endidx*. *текст* — це префікс рядка,"
-" який ми намагаємось зіставити: усі повернуті збіги мають починатися з "
-"нього. *рядок* — це поточний рядок введення з видаленими пробілами на "
-"початку, *begidx* і *endidx* — це початковий і кінцевий індекси тексту "
-"префікса, які можна використовувати для забезпечення різного завершення "
-"залежно від того, в якій позиції знаходиться аргумент."
 
-#: ../../library/cmd.rst:86
+#: ../../library/cmd.rst:89
 msgid ""
-"All subclasses of :class:`Cmd` inherit a predefined :meth:`do_help`.  This "
+"All subclasses of :class:`Cmd` inherit a predefined :meth:`!do_help`.  This "
 "method, called with an argument ``'bar'``, invokes the corresponding method "
-":meth:`help_bar`, and if that is not present, prints the docstring of "
-":meth:`do_bar`, if available.  With no argument, :meth:`do_help` lists all "
-"available help topics (that is, all commands with corresponding "
+":meth:`!help_bar`, and if that is not present, prints the docstring of "
+":meth:`!do_bar`, if available.  With no argument, :meth:`!do_help` lists all"
+" available help topics (that is, all commands with corresponding "
 ":meth:`!help_\\*` methods or commands that have docstrings), and also lists "
 "any undocumented commands."
 msgstr ""
 
-#: ../../library/cmd.rst:97
+#: ../../library/cmd.rst:100
 msgid ""
 "Interpret the argument as though it had been typed in response to the "
 "prompt. This may be overridden, but should not normally need to be; see the "
@@ -195,7 +182,7 @@ msgid ""
 "return value from the :meth:`default` method is returned."
 msgstr ""
 
-#: ../../library/cmd.rst:108
+#: ../../library/cmd.rst:111
 msgid ""
 "Method called when an empty line is entered in response to the prompt. If "
 "this method is not overridden, it repeats the last nonempty command entered."
@@ -204,7 +191,7 @@ msgstr ""
 "Якщо цей метод не перевизначено, він повторює останню введену непорожню "
 "команду."
 
-#: ../../library/cmd.rst:114
+#: ../../library/cmd.rst:117
 msgid ""
 "Method called on an input line when the command prefix is not recognized. If"
 " this method is not overridden, it prints an error message and returns."
@@ -213,21 +200,21 @@ msgstr ""
 "розпізнається. Якщо цей метод не перевизначено, він друкує повідомлення про "
 "помилку та повертається."
 
-#: ../../library/cmd.rst:120
+#: ../../library/cmd.rst:123
 msgid ""
 "Method called to complete an input line when no command-specific "
 ":meth:`!complete_\\*` method is available.  By default, it returns an empty "
 "list."
 msgstr ""
 
-#: ../../library/cmd.rst:126
+#: ../../library/cmd.rst:129
 msgid ""
 "Method called to display a list of strings as a compact set of columns. Each"
 " column is only as wide as necessary. Columns are separated by two spaces "
 "for readability."
 msgstr ""
 
-#: ../../library/cmd.rst:133
+#: ../../library/cmd.rst:136
 msgid ""
 "Hook method executed just before the command line *line* is interpreted, but"
 " after the input prompt is generated and issued.  This method is a stub in "
@@ -243,7 +230,7 @@ msgstr ""
 ":meth:`onecmd`; реалізація :meth:`precmd` може переписати команду або просто"
 " повернути *рядок* без змін."
 
-#: ../../library/cmd.rst:143
+#: ../../library/cmd.rst:146
 msgid ""
 "Hook method executed just after a command dispatch is finished.  This method"
 " is a stub in :class:`Cmd`; it exists to be overridden by subclasses.  "
@@ -263,7 +250,7 @@ msgstr ""
 "внутрішнього прапора, який відповідає *stop*; повернення false призведе до "
 "продовження інтерпретації."
 
-#: ../../library/cmd.rst:154
+#: ../../library/cmd.rst:157
 msgid ""
 "Hook method executed once when :meth:`cmdloop` is called.  This method is a "
 "stub in :class:`Cmd`; it exists to be overridden by subclasses."
@@ -271,7 +258,7 @@ msgstr ""
 "Метод підхоплення виконується один раз під час виклику :meth:`cmdloop`. Цей "
 "метод є заглушкою в :class:`Cmd`; він існує, щоб бути заміненим підкласами."
 
-#: ../../library/cmd.rst:160
+#: ../../library/cmd.rst:163
 msgid ""
 "Hook method executed once when :meth:`cmdloop` is about to return. This "
 "method is a stub in :class:`Cmd`; it exists to be overridden by subclasses."
@@ -280,25 +267,25 @@ msgstr ""
 "повернутися. Цей метод є заглушкою в :class:`Cmd`; він існує, щоб бути "
 "заміненим підкласами."
 
-#: ../../library/cmd.rst:164
+#: ../../library/cmd.rst:167
 msgid ""
 "Instances of :class:`Cmd` subclasses have some public instance variables:"
 msgstr ""
 "Екземпляри підкласів :class:`Cmd` мають деякі публічні змінні екземпляра:"
 
-#: ../../library/cmd.rst:168
+#: ../../library/cmd.rst:171
 msgid "The prompt issued to solicit input."
 msgstr "Підказка, видана для запиту введення."
 
-#: ../../library/cmd.rst:173
+#: ../../library/cmd.rst:176
 msgid "The string of characters accepted for the command prefix."
 msgstr "Рядок символів, прийнятний для префікса команди."
 
-#: ../../library/cmd.rst:178
+#: ../../library/cmd.rst:181
 msgid "The last nonempty command prefix seen."
 msgstr "Останній непорожній префікс команди."
 
-#: ../../library/cmd.rst:183
+#: ../../library/cmd.rst:186
 msgid ""
 "A list of queued input lines.  The cmdqueue list is checked in "
 ":meth:`cmdloop` when new input is needed; if it is nonempty, its elements "
@@ -308,7 +295,7 @@ msgstr ""
 ":meth:`cmdloop`, коли потрібен новий вхід; якщо він непорожній, його "
 "елементи будуть оброблені в порядку, ніби введені під час підказки."
 
-#: ../../library/cmd.rst:190
+#: ../../library/cmd.rst:193
 msgid ""
 "A string to issue as an intro or banner.  May be overridden by giving the "
 ":meth:`cmdloop` method an argument."
@@ -316,7 +303,7 @@ msgstr ""
 "Рядок для випуску як вступ або банер. Може бути перевизначено, надавши "
 "методу :meth:`cmdloop` аргумент."
 
-#: ../../library/cmd.rst:196
+#: ../../library/cmd.rst:199
 msgid ""
 "The header to issue if the help output has a section for documented "
 "commands."
@@ -324,21 +311,21 @@ msgstr ""
 "Заголовок, який потрібно видавати, якщо вихід довідки містить розділ для "
 "задокументованих команд."
 
-#: ../../library/cmd.rst:201
+#: ../../library/cmd.rst:204
 msgid ""
 "The header to issue if the help output has a section for miscellaneous  help"
 " topics (that is, there are :meth:`!help_\\*` methods without corresponding "
 ":meth:`!do_\\*` methods)."
 msgstr ""
 
-#: ../../library/cmd.rst:208
+#: ../../library/cmd.rst:211
 msgid ""
 "The header to issue if the help output has a section for undocumented  "
 "commands (that is, there are :meth:`!do_\\*` methods without corresponding "
 ":meth:`!help_\\*` methods)."
 msgstr ""
 
-#: ../../library/cmd.rst:215
+#: ../../library/cmd.rst:218
 msgid ""
 "The character used to draw separator lines under the help-message headers.  "
 "If empty, no ruler line is drawn.  It defaults to ``'='``."
@@ -347,27 +334,21 @@ msgstr ""
 " довідкових повідомлень. Якщо поле пусте, лінія лінійки не малюється. За "
 "замовчуванням ``'='``."
 
-#: ../../library/cmd.rst:221
+#: ../../library/cmd.rst:224
 msgid ""
 "A flag, defaulting to true.  If true, :meth:`cmdloop` uses :func:`input` to "
 "display a prompt and read the next command; if false, "
-":meth:`sys.stdout.write` and :meth:`sys.stdin.readline` are used. (This "
-"means that by importing :mod:`readline`, on systems that support it, the "
-"interpreter will automatically support :program:`Emacs`\\ -like line editing"
-"  and command-history keystrokes.)"
+":data:`sys.stdout.write() <sys.stdout>` and :data:`sys.stdin.readline() "
+"<sys.stdin>` are used. (This means that by importing :mod:`readline`, on "
+"systems that support it, the interpreter will automatically support "
+":program:`Emacs`\\ -like line editing  and command-history keystrokes.)"
 msgstr ""
-"Прапор, за замовчуванням значення true. Якщо істина, :meth:`cmdloop` "
-"використовує :func:`input` для відображення підказки та читання наступної "
-"команди; якщо false, використовуються :meth:`sys.stdout.write` і "
-":meth:`sys.stdin.readline`. (Це означає, що імпортуючи :mod:`readline`, у "
-"системах, які його підтримують, інтерпретатор автоматично підтримуватиме "
-":program:`Emacs`\\ -редагування рядка та натискання клавіш історії команд.)"
 
-#: ../../library/cmd.rst:231
+#: ../../library/cmd.rst:234
 msgid "Cmd Example"
 msgstr "Приклад команди"
 
-#: ../../library/cmd.rst:235
+#: ../../library/cmd.rst:238
 msgid ""
 "The :mod:`cmd` module is mainly useful for building custom shells that let a"
 " user work with a program interactively."
@@ -375,7 +356,7 @@ msgstr ""
 "Модуль :mod:`cmd` в основному корисний для створення спеціальних оболонок, "
 "які дозволяють користувачеві працювати з програмою в інтерактивному режимі."
 
-#: ../../library/cmd.rst:238
+#: ../../library/cmd.rst:241
 msgid ""
 "This section presents a simple example of how to build a shell around a few "
 "of the commands in the :mod:`turtle` module."
@@ -383,33 +364,24 @@ msgstr ""
 "У цьому розділі представлено простий приклад того, як створити оболонку "
 "навколо кількох команд у модулі :mod:`turtle`."
 
-#: ../../library/cmd.rst:241
+#: ../../library/cmd.rst:244
 msgid ""
 "Basic turtle commands such as :meth:`~turtle.forward` are added to a "
-":class:`Cmd` subclass with method named :meth:`do_forward`.  The argument is"
-" converted to a number and dispatched to the turtle module.  The docstring "
-"is used in the help utility provided by the shell."
+":class:`Cmd` subclass with method named :meth:`!do_forward`.  The argument "
+"is converted to a number and dispatched to the turtle module.  The docstring"
+" is used in the help utility provided by the shell."
 msgstr ""
-"Базові команди черепахи, такі як :meth:`~turtle.forward`, додаються до "
-"підкласу :class:`Cmd` із методом під назвою :meth:`do_forward`. Аргумент "
-"перетворюється на число та надсилається до модуля turtle. Рядок документації"
-" використовується в утиліті довідки, що надається оболонкою."
 
-#: ../../library/cmd.rst:246
+#: ../../library/cmd.rst:249
 msgid ""
 "The example also includes a basic record and playback facility implemented "
 "with the :meth:`~Cmd.precmd` method which is responsible for converting the "
 "input to lowercase and writing the commands to a file.  The "
-":meth:`do_playback` method reads the file and adds the recorded commands to "
-"the :attr:`cmdqueue` for immediate playback::"
+":meth:`!do_playback` method reads the file and adds the recorded commands to"
+" the :attr:`~Cmd.cmdqueue` for immediate playback::"
 msgstr ""
-"Приклад також містить базову можливість запису та відтворення, реалізовану "
-"за допомогою методу :meth:`~Cmd.precmd`, який відповідає за перетворення "
-"введення на нижній регістр і запис команд у файл. Метод :meth:`do_playback` "
-"читає файл і додає записані команди до :attr:`cmdqueue` для негайного "
-"відтворення::"
 
-#: ../../library/cmd.rst:327
+#: ../../library/cmd.rst:330
 msgid ""
 "Here is a sample session with the turtle shell showing the help functions, "
 "using blank lines to repeat commands, and the simple record and playback "
