@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-22 14:13+0000\n"
+"POT-Creation-Date: 2023-12-29 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -94,7 +94,7 @@ msgstr ""
 "записи записуються назад ( немає способу визначити, які записи є змінними, а"
 " також які з них були змінені)."
 
-#: ../../library/shelve.rst:44 ../../library/shelve.rst:145
+#: ../../library/shelve.rst:44 ../../library/shelve.rst:148
 msgid ""
 ":const:`pickle.DEFAULT_PROTOCOL` is now used as the default pickle protocol."
 msgstr ""
@@ -207,7 +207,13 @@ msgstr ""
 "можна використовувати блокування файлів Unix, але це відрізняється в різних "
 "версіях Unix і вимагає знання про використовувану реалізацію бази даних."
 
-#: ../../library/shelve.rst:119
+#: ../../library/shelve.rst:116
+msgid ""
+"On macOS :mod:`dbm.ndbm` can silently corrupt the database file on updates, "
+"which can cause hard crashes when trying to read from the database."
+msgstr ""
+
+#: ../../library/shelve.rst:122
 msgid ""
 "A subclass of :class:`collections.abc.MutableMapping` which stores pickled "
 "values in the *dict* object."
@@ -215,7 +221,7 @@ msgstr ""
 "Підклас :class:`collections.abc.MutableMapping`, який зберігає обрані "
 "значення в об’єкті *dict*."
 
-#: ../../library/shelve.rst:122
+#: ../../library/shelve.rst:125
 msgid ""
 "By default, pickles created with :const:`pickle.DEFAULT_PROTOCOL` are used "
 "to serialize values.  The version of the pickle protocol can be specified "
@@ -223,7 +229,7 @@ msgid ""
 "discussion of the pickle protocols."
 msgstr ""
 
-#: ../../library/shelve.rst:127
+#: ../../library/shelve.rst:130
 msgid ""
 "If the *writeback* parameter is ``True``, the object will hold a cache of "
 "all entries accessed and write them back to the *dict* at sync and close "
@@ -236,7 +242,7 @@ msgstr ""
 "змінними записами, але може споживати набагато більше пам’яті, а "
 "синхронізація та закриття триватимуть довго."
 
-#: ../../library/shelve.rst:132
+#: ../../library/shelve.rst:135
 msgid ""
 "The *keyencoding* parameter is the encoding used to encode keys before they "
 "are used with the underlying dict."
@@ -244,7 +250,7 @@ msgstr ""
 "Параметр *keyencoding* — це кодування, яке використовується для кодування "
 "ключів перед їх використанням із базовим dict."
 
-#: ../../library/shelve.rst:135
+#: ../../library/shelve.rst:138
 msgid ""
 "A :class:`Shelf` object can also be used as a context manager, in which case"
 " it will be automatically closed when the :keyword:`with` block ends."
@@ -253,18 +259,18 @@ msgstr ""
 " цьому випадку він буде автоматично закритий, коли блок :keyword:`with` "
 "завершиться."
 
-#: ../../library/shelve.rst:138
+#: ../../library/shelve.rst:141
 msgid ""
 "Added the *keyencoding* parameter; previously, keys were always encoded in "
 "UTF-8."
 msgstr ""
 "Додано параметр *keyencoding*; раніше ключі завжди кодувалися в UTF-8."
 
-#: ../../library/shelve.rst:142
+#: ../../library/shelve.rst:145
 msgid "Added context manager support."
 msgstr "Додано підтримку менеджера контексту."
 
-#: ../../library/shelve.rst:152
+#: ../../library/shelve.rst:155
 msgid ""
 "A subclass of :class:`Shelf` which exposes :meth:`!first`, :meth:`!next`, "
 ":meth:`!previous`, :meth:`!last` and :meth:`!set_location` methods. These "
@@ -277,7 +283,7 @@ msgid ""
 "same interpretation as for the :class:`Shelf` class."
 msgstr ""
 
-#: ../../library/shelve.rst:166
+#: ../../library/shelve.rst:169
 msgid ""
 "A subclass of :class:`Shelf` which accepts a *filename* instead of a dict-"
 "like object.  The underlying file will be opened using :func:`dbm.open`.  By"
@@ -293,30 +299,30 @@ msgstr ""
 ":func:`.open`. Необов’язкові параметри *protocol* і *writeback* мають таку "
 "саму інтерпретацію, що й для класу :class:`Shelf`."
 
-#: ../../library/shelve.rst:177
+#: ../../library/shelve.rst:180
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/shelve.rst:179
+#: ../../library/shelve.rst:182
 msgid ""
 "To summarize the interface (``key`` is a string, ``data`` is an arbitrary "
 "object)::"
 msgstr ""
 "Підсумовуючи інтерфейс (``key`` — це рядок, ``data`` — це довільний об’єкт):"
 
-#: ../../library/shelve.rst:216
+#: ../../library/shelve.rst:219
 msgid "Module :mod:`dbm`"
 msgstr "Модуль :mod:`dbm`"
 
-#: ../../library/shelve.rst:216
+#: ../../library/shelve.rst:219
 msgid "Generic interface to ``dbm``-style databases."
 msgstr "Загальний інтерфейс до баз даних у стилі ``dbm``."
 
-#: ../../library/shelve.rst:218
+#: ../../library/shelve.rst:221
 msgid "Module :mod:`pickle`"
 msgstr "Модуль :mod:`pickle`"
 
-#: ../../library/shelve.rst:219
+#: ../../library/shelve.rst:222
 msgid "Object serialization used by :mod:`shelve`."
 msgstr "Серіалізація об’єктів, яку використовує :mod:`shelve`."
 
