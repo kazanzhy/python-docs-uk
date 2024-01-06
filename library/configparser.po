@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2023, Python Software Foundation
+# Copyright (C) 2001-2024, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 14:13+0000\n"
+"POT-Creation-Date: 2024-01-05 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:57+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -203,11 +203,9 @@ msgstr "Запасні значення"
 
 #: ../../library/configparser.rst:211
 msgid ""
-"As with a dictionary, you can use a section's :meth:`get` method to provide "
-"fallback values:"
+"As with a dictionary, you can use a section's :meth:`~ConfigParser.get` "
+"method to provide fallback values:"
 msgstr ""
-"Як і у випадку зі словником, ви можете використовувати метод розділу "
-":meth:`get` для надання резервних значень:"
 
 #: ../../library/configparser.rst:224
 msgid ""
@@ -220,16 +218,11 @@ msgstr ""
 
 #: ../../library/configparser.rst:235
 msgid ""
-"One more thing to be aware of is that the parser-level :meth:`get` method "
-"provides a custom, more complex interface, maintained for backwards "
-"compatibility.  When using this method, a fallback value can be provided via"
-" the ``fallback`` keyword-only argument:"
+"One more thing to be aware of is that the parser-level "
+":meth:`~ConfigParser.get` method provides a custom, more complex interface, "
+"maintained for backwards compatibility.  When using this method, a fallback "
+"value can be provided via the ``fallback`` keyword-only argument:"
 msgstr ""
-"Ще одна річ, про яку слід пам’ятати, це те, що метод :meth:`get` на рівні "
-"аналізатора надає спеціальний, більш складний інтерфейс, який підтримується "
-"для зворотної сумісності. Під час використання цього методу резервне "
-"значення може бути надано за допомогою лише ключового аргументу "
-"``fallback``:"
 
 #: ../../library/configparser.rst:246
 msgid ""
@@ -270,12 +263,9 @@ msgstr ""
 
 #: ../../library/configparser.rst:274
 msgid ""
-"By default,  a valid section name can be any string that does not contain "
-"'\\\\n' or ']'. To change this, see :attr:`ConfigParser.SECTCRE`."
+"By default, a valid section name can be any string that does not contain "
+"'\\\\n'. To change this, see :attr:`ConfigParser.SECTCRE`."
 msgstr ""
-"За замовчуванням дійсна назва розділу може бути будь-яким рядком, який не "
-"містить '\\\\n' або ']'. Щоб змінити це, перегляньте "
-":attr:`ConfigParser.SECTCRE`."
 
 #: ../../library/configparser.rst:277
 msgid ""
@@ -517,10 +507,8 @@ msgstr ""
 #: ../../library/configparser.rst:483
 msgid ""
 "The most common way to change the way a specific config parser works is to "
-"use the :meth:`__init__` options:"
+"use the :meth:`!__init__` options:"
 msgstr ""
-"Найпоширеніший спосіб змінити спосіб роботи конкретного парсера конфігурації"
-" — це використовувати параметри :meth:`__init__`:"
 
 #: ../../library/configparser.rst:486
 msgid "*defaults*, default value: ``None``"
@@ -541,11 +529,8 @@ msgstr ""
 #: ../../library/configparser.rst:493
 msgid ""
 "Hint: if you want to specify default values for a specific section, use "
-":meth:`read_dict` before you read the actual file."
+":meth:`~ConfigParser.read_dict` before you read the actual file."
 msgstr ""
-"Підказка: якщо ви хочете вказати значення за замовчуванням для певного "
-"розділу, використовуйте :meth:`read_dict` перед тим, як читати фактичний "
-"файл."
 
 #: ../../library/configparser.rst:496
 msgid "*dict_type*, default value: :class:`dict`"
@@ -676,15 +661,11 @@ msgstr "*строгий*, значення за умовчанням: ``True``"
 #: ../../library/configparser.rst:637
 msgid ""
 "When set to ``True``, the parser will not allow for any section or option "
-"duplicates while reading from a single source (using :meth:`read_file`, "
-":meth:`read_string` or :meth:`read_dict`).  It is recommended to use strict "
-"parsers in new applications."
+"duplicates while reading from a single source (using "
+":meth:`~ConfigParser.read_file`, :meth:`~ConfigParser.read_string` or "
+":meth:`~ConfigParser.read_dict`).  It is recommended to use strict parsers "
+"in new applications."
 msgstr ""
-"Якщо встановлено значення ``True``, синтаксичний аналізатор не допускатиме "
-"жодних дублікатів розділів чи параметрів під час читання з одного джерела (з"
-" використанням :meth:`read_file`, :meth:`read_string` або "
-":meth:`read_dict`). Рекомендується використовувати строгі парсери в нових "
-"програмах."
 
 #: ../../library/configparser.rst:642
 msgid ""
@@ -795,22 +776,11 @@ msgid ""
 "desirable, users may define them in a subclass or pass a dictionary where "
 "each key is a name of the converter and each value is a callable "
 "implementing said conversion.  For instance, passing ``{'decimal': "
-"decimal.Decimal}`` would add :meth:`getdecimal` on both the parser object "
+"decimal.Decimal}`` would add :meth:`!getdecimal` on both the parser object "
 "and all section proxies.  In other words, it will be possible to write both "
 "``parser_instance.getdecimal('section', 'key', fallback=0)`` and "
 "``parser_instance['section'].getdecimal('key', 0)``."
 msgstr ""
-"Синтаксичні аналізатори конфігурації забезпечують отримання значень "
-"параметрів, які виконують перетворення типів. За замовчуванням реалізовано "
-":meth:`~ConfigParser.getint`, :meth:`~ConfigParser.getfloat` і "
-":meth:`~ConfigParser.getboolean`. Якщо потрібні інші геттери, користувачі "
-"можуть визначити їх у підкласі або передати словник, де кожен ключ є назвою "
-"конвертера, а кожне значення є викликом, що реалізує вказане перетворення. "
-"Наприклад, передача ``{'decimal': decimal.Decimal}`` додасть "
-":meth:`getdecimal` як до об’єкта аналізатора, так і до всіх проксі-серверів "
-"розділів. Іншими словами, можна буде написати як "
-"``parser_instance.getdecimal('section', 'key', fallback=0)``, так і "
-"``parser_instance['section'].getdecimal('key', 0)``."
 
 #: ../../library/configparser.rst:705
 msgid ""
@@ -1198,16 +1168,13 @@ msgstr ""
 #: ../../library/configparser.rst:1064
 msgid ""
 "Optional argument *source* specifies the name of the file being read.  If "
-"not given and *f* has a :attr:`name` attribute, that is used for *source*; "
+"not given and *f* has a :attr:`!name` attribute, that is used for *source*; "
 "the default is ``'<???>'``."
 msgstr ""
-"Необов'язковий аргумент *джерело* вказує назву файлу, який читається. Якщо "
-"не вказано і *f* має атрибут :attr:`name`, який використовується для "
-"*source*; типовим є ``' <???> ''``."
 
 #: ../../library/configparser.rst:1068
-msgid "Replaces :meth:`readfp`."
-msgstr "Замінює :meth:`readfp`."
+msgid "Replaces :meth:`!readfp`."
+msgstr ""
 
 #: ../../library/configparser.rst:1073
 msgid "Parse configuration data from a string."
@@ -1437,13 +1404,10 @@ msgstr ""
 
 #: ../../library/configparser.rst:1217
 msgid ""
-"The maximum depth for recursive interpolation for :meth:`get` when the *raw*"
-" parameter is false.  This is relevant only when the default *interpolation*"
-" is used."
+"The maximum depth for recursive interpolation for "
+":meth:`~configparser.ConfigParser.get` when the *raw* parameter is false.  "
+"This is relevant only when the default *interpolation* is used."
 msgstr ""
-"Максимальна глибина для рекурсивної інтерполяції для :meth:`get`, коли "
-"параметр *raw* має значення false. Це актуально лише тоді, коли "
-"використовується типова *інтерполяція*."
 
 #: ../../library/configparser.rst:1225
 msgid "RawConfigParser Objects"
@@ -1533,21 +1497,17 @@ msgstr "Виняток виникає, коли вказаний розділ н
 
 #: ../../library/configparser.rst:1290
 msgid ""
-"Exception raised if :meth:`add_section` is called with the name of a section"
-" that is already present or in strict parsers when a section if found more "
-"than once in a single input file, string or dictionary."
+"Exception raised if :meth:`~ConfigParser.add_section` is called with the "
+"name of a section that is already present or in strict parsers when a "
+"section if found more than once in a single input file, string or "
+"dictionary."
 msgstr ""
-"Виняток виникає, якщо :meth:`add_section` викликається з назвою розділу, "
-"який уже присутній, або в строгих синтаксичних аналізаторах, коли розділ "
-"знайдено більше одного разу в одному вхідному файлі, рядку чи словнику."
 
 #: ../../library/configparser.rst:1294
 msgid ""
 "Optional ``source`` and ``lineno`` attributes and arguments to "
-":meth:`__init__` were added."
+":meth:`!__init__` were added."
 msgstr ""
-"Було додано додаткові атрибути ``source`` і ``lineno`` і аргументи до "
-":meth:`__init__`."
 
 #: ../../library/configparser.rst:1301
 msgid ""
@@ -1617,7 +1577,7 @@ msgstr "Виняток виникає, коли виникають помилк�
 
 #: ../../library/configparser.rst:1348
 msgid ""
-"The ``filename`` attribute and :meth:`__init__` constructor argument were "
+"The ``filename`` attribute and :meth:`!__init__` constructor argument were "
 "removed.  They have been available using the name ``source`` since 3.2."
 msgstr ""
 

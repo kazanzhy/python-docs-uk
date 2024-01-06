@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2001-2023, Python Software Foundation
+# Copyright (C) 2001-2024, Python Software Foundation
 # This file is distributed under the same license as the Python package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-29 14:13+0000\n"
+"POT-Creation-Date: 2024-01-05 14:14+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -176,17 +176,11 @@ msgstr "PEP 391: Конфігурація на основі словника д�
 msgid ""
 "The :mod:`logging` module provided two kinds of configuration, one style "
 "with function calls for each option or another style driven by an external "
-"file saved in a :mod:`ConfigParser` format.  Those options did not provide "
+"file saved in a :mod:`configparser` format.  Those options did not provide "
 "the flexibility to create configurations from JSON or YAML files, nor did "
 "they support incremental configuration, which is needed for specifying "
 "logger options from a command line."
 msgstr ""
-"Модуль :mod:`logging` надав два види конфігурації: один стиль із викликами "
-"функцій для кожного параметра або інший стиль, керований зовнішнім файлом, "
-"збереженим у форматі :mod:`ConfigParser`. Ці параметри не забезпечували "
-"гнучкості для створення конфігурацій із файлів JSON або YAML, а також не "
-"підтримували інкрементну конфігурацію, яка потрібна для вказівки параметрів "
-"журналу з командного рядка."
 
 #: ../../whatsnew/3.2.rst:191
 msgid ""
@@ -2811,12 +2805,11 @@ msgstr "несиндром"
 
 #: ../../whatsnew/3.2.rst:1861
 msgid ""
-":class:`asyncore.dispatcher` now provides a "
-":meth:`~asyncore.dispatcher.handle_accepted()` method returning a ``(sock, "
-"addr)`` pair which is called when a connection has actually been established"
-" with a new remote endpoint. This is supposed to be used as a replacement "
-"for old :meth:`~asyncore.dispatcher.handle_accept()` and avoids the user  to"
-" call :meth:`~asyncore.dispatcher.accept()` directly."
+":class:`!asyncore.dispatcher` now provides a :meth:`!handle_accepted()` "
+"method returning a ``(sock, addr)`` pair which is called when a connection "
+"has actually been established with a new remote endpoint. This is supposed "
+"to be used as a replacement for old :meth:`!handle_accept()` and avoids the "
+"user  to call :meth:`!accept()` directly."
 msgstr ""
 
 #: ../../whatsnew/3.2.rst:1868
@@ -3141,19 +3134,12 @@ msgstr "аналізатор конфігурації"
 msgid ""
 "The :mod:`configparser` module was modified to improve usability and "
 "predictability of the default parser and its supported INI syntax.  The old "
-":class:`ConfigParser` class was removed in favor of "
-":class:`SafeConfigParser` which has in turn been renamed to "
+":class:`!ConfigParser` class was removed in favor of "
+":class:`!SafeConfigParser` which has in turn been renamed to "
 ":class:`~configparser.ConfigParser`. Support for inline comments is now "
 "turned off by default and section or option duplicates are not allowed in a "
 "single configuration source."
 msgstr ""
-"Модуль :mod:`configparser` було змінено, щоб покращити зручність і "
-"передбачуваність синтаксичного аналізатора за замовчуванням і його "
-"підтримуваного синтаксису INI. Старий клас :class:`ConfigParser` було "
-"видалено на користь :class:`SafeConfigParser`, який, у свою чергу, було "
-"перейменовано на :class:`~configparser.ConfigParser`. Підтримку вбудованих "
-"коментарів тепер вимкнено за замовчуванням, а дублікати розділів або "
-"параметрів не допускаються в одному джерелі конфігурації."
 
 #: ../../whatsnew/3.2.rst:2142
 msgid "Config parsers gained a new API based on the mapping protocol::"
@@ -3578,17 +3564,10 @@ msgid ""
 "implementation (:issue:`1569291` by Alexander Belopolsky). The "
 ":class:`BaseHTTPRequestHandler` has more efficient buffering (:issue:`3709` "
 "by Andrew Schaaf).  The :func:`operator.attrgetter` function has been sped-"
-"up (:issue:`10160` by Christos Georgiou).  And :class:`ConfigParser` loads "
-"multi-line arguments a bit faster (:issue:`7113` by Łukasz Langa)."
+"up (:issue:`10160` by Christos Georgiou).  And "
+":class:`~configparser.ConfigParser` loads multi-line arguments a bit faster "
+"(:issue:`7113` by Łukasz Langa)."
 msgstr ""
-"Було ще кілька незначних оптимізацій. Розрізнення наборів тепер працює "
-"швидше, коли один операнд значно більший за інший (патч від Андресса "
-"Беннетса в :issue:`8685`). Метод :meth:`array.repeat` має швидшу реалізацію "
-"(:issue:`1569291` від Alexander Belopolsky). :class:`BaseHTTPRequestHandler`"
-" має більш ефективну буферизацію (:issue:`3709` від Ендрю Шаафа). Функцію "
-":func:`operator.attrgetter` було пришвидшено (:issue:`10160` від Christos "
-"Georgiou). А :class:`ConfigParser` завантажує багаторядкові аргументи трохи "
-"швидше (:issue:`7113` від Łukasz Langa)."
 
 #: ../../whatsnew/3.2.rst:2422
 msgid "Unicode"
@@ -4010,13 +3989,10 @@ msgstr ""
 #: ../../whatsnew/3.2.rst:2616
 msgid ""
 "The :mod:`configparser` module has a number of clean-ups.  The major change "
-"is to replace the old :class:`ConfigParser` class with long-standing "
-"preferred alternative :class:`SafeConfigParser`.  In addition there are a "
+"is to replace the old :class:`!ConfigParser` class with long-standing "
+"preferred alternative :class:`!SafeConfigParser`.  In addition there are a "
 "number of smaller incompatibilities:"
 msgstr ""
-"Модуль :mod:`configparser` має ряд очищення. Основна зміна полягає в заміні "
-"старого класу :class:`ConfigParser` на давню бажану альтернативу "
-":class:`SafeConfigParser`. Крім того, існує ряд менших несумісностей:"
 
 #: ../../whatsnew/3.2.rst:2621
 msgid ""
@@ -4294,12 +4270,10 @@ msgstr ""
 
 #: ../../whatsnew/3.2.rst:2740
 msgid ""
-"Due to security risks, :func:`asyncore.handle_accept` has been deprecated, "
-"and a new function, :func:`asyncore.handle_accepted`, was added to replace "
+"Due to security risks, :func:`!asyncore.handle_accept` has been deprecated, "
+"and a new function, :func:`!asyncore.handle_accepted`, was added to replace "
 "it."
 msgstr ""
-"Через ризики безпеці :func:`asyncore.handle_accept` застаріло, і на його "
-"заміну додано нову функцію :func:`asyncore.handle_accepted`."
 
 #: ../../whatsnew/3.2.rst:2743
 msgid "(Contributed by Giampaolo Rodola in :issue:`6706`.)"
