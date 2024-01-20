@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-12 14:14+0000\n"
+"POT-Creation-Date: 2024-01-19 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -648,31 +648,20 @@ msgstr ""
 
 #: ../../tutorial/classes.rst:389
 msgid ""
-"If you still don't understand how methods work, a look at the implementation"
-" can perhaps clarify matters.  When a non-data attribute of an instance is "
-"referenced, the instance's class is searched.  If the name denotes a valid "
-"class attribute that is a function object, a method object is created by "
-"packing (pointers to) the instance object and the function object just found"
-" together in an abstract object: this is the method object.  When the method"
-" object is called with an argument list, a new argument list is constructed "
-"from the instance object and the argument list, and the function object is "
-"called with this new argument list."
+"In general, methods work as follows.  When a non-data attribute of an "
+"instance is referenced, the instance's class is searched. If the name "
+"denotes a valid class attribute that is a function object, references to "
+"both the instance object and the function object are packed into a method "
+"object.  When the method object is called with an argument list, a new "
+"argument list is constructed from the instance object and the argument list,"
+" and the function object is called with this new argument list."
 msgstr ""
-"Якщо ви все ще не розумієте, як працюють методи, погляд на реалізацію може "
-"прояснити ситуацію. Коли посилається на атрибут екземпляра, що не є даними, "
-"виконується пошук у класі екземпляра. Якщо ім’я вказує на дійсний атрибут "
-"класу, який є об’єктом функції, об’єкт методу створюється шляхом упаковки "
-"(вказівників на) об’єкта екземпляра та об’єкта функції, щойно знайдених "
-"разом в абстрактному об’єкті: це об’єкт методу. Коли об’єкт методу "
-"викликається зі списком аргументів, новий список аргументів створюється з "
-"об’єкта екземпляра та списку аргументів, а об’єкт функції викликається з цим"
-" новим списком аргументів."
 
-#: ../../tutorial/classes.rst:403
+#: ../../tutorial/classes.rst:402
 msgid "Class and Instance Variables"
 msgstr "Змінні класу та екземпляра"
 
-#: ../../tutorial/classes.rst:405
+#: ../../tutorial/classes.rst:404
 msgid ""
 "Generally speaking, instance variables are for data unique to each instance "
 "and class variables are for attributes and methods shared by all instances "
@@ -682,7 +671,7 @@ msgstr ""
 "екземпляра, а змінні класу призначені для атрибутів і методів, спільних для "
 "всіх екземплярів класу::"
 
-#: ../../tutorial/classes.rst:427
+#: ../../tutorial/classes.rst:426
 msgid ""
 "As discussed in :ref:`tut-object`, shared data can have possibly surprising "
 "effects with involving :term:`mutable` objects such as lists and "
@@ -696,16 +685,16 @@ msgstr ""
 "змінну класу, тому що лише один список буде спільний для всіх екземплярів "
 "*Dog*::"
 
-#: ../../tutorial/classes.rst:450
+#: ../../tutorial/classes.rst:449
 msgid "Correct design of the class should use an instance variable instead::"
 msgstr ""
 "Правильний дизайн класу повинен використовувати замість змінної екземпляра::"
 
-#: ../../tutorial/classes.rst:474
+#: ../../tutorial/classes.rst:473
 msgid "Random Remarks"
 msgstr "Випадкові зауваження"
 
-#: ../../tutorial/classes.rst:478
+#: ../../tutorial/classes.rst:477
 msgid ""
 "If the same attribute name occurs in both an instance and in a class, then "
 "attribute lookup prioritizes the instance::"
@@ -713,7 +702,7 @@ msgstr ""
 "Якщо однакове ім’я атрибута зустрічається як в екземплярі, так і в класі, "
 "пошук атрибутів визначає пріоритет екземпляру::"
 
-#: ../../tutorial/classes.rst:493
+#: ../../tutorial/classes.rst:492
 msgid ""
 "Data attributes may be referenced by methods as well as by ordinary users "
 "(\"clients\") of an object.  In other words, classes are not usable to "
@@ -731,7 +720,7 @@ msgstr ""
 "деталі реалізації та контролювати доступ до об’єкта, якщо це необхідно; це "
 "можна використовувати розширеннями Python, написаними мовою C.)"
 
-#: ../../tutorial/classes.rst:501
+#: ../../tutorial/classes.rst:500
 msgid ""
 "Clients should use data attributes with care --- clients may mess up "
 "invariants maintained by the methods by stamping on their data attributes.  "
@@ -746,7 +735,7 @@ msgstr ""
 "конфліктів імен --- знову ж таки, угода про іменування може позбавити тут "
 "багато головного болю."
 
-#: ../../tutorial/classes.rst:507
+#: ../../tutorial/classes.rst:506
 msgid ""
 "There is no shorthand for referencing data attributes (or other methods!) "
 "from within methods.  I find that this actually increases the readability of"
@@ -758,7 +747,7 @@ msgstr ""
 "жодного шансу сплутати локальні змінні та змінні екземпляра під час "
 "перегляду методу."
 
-#: ../../tutorial/classes.rst:512
+#: ../../tutorial/classes.rst:511
 msgid ""
 "Often, the first argument of a method is called ``self``.  This is nothing "
 "more than a convention: the name ``self`` has absolutely no special meaning "
@@ -773,7 +762,7 @@ msgstr ""
 "читабельним для інших програмістів на Python, і також можливо, що програма "
 "*браузера класів* може бути написана, яка спирається на таку угоду."
 
-#: ../../tutorial/classes.rst:518
+#: ../../tutorial/classes.rst:517
 msgid ""
 "Any function object that is a class attribute defines a method for instances"
 " of that class.  It is not necessary that the function definition is "
@@ -785,7 +774,7 @@ msgstr ""
 "текстово укладено у визначення класу: присвоєння об’єкта функції локальній "
 "змінній у класі також є нормальним. Наприклад::"
 
-#: ../../tutorial/classes.rst:535
+#: ../../tutorial/classes.rst:534
 msgid ""
 "Now ``f``, ``g`` and ``h`` are all attributes of class :class:`!C` that "
 "refer to function objects, and consequently they are all methods of "
@@ -793,7 +782,7 @@ msgid ""
 "that this practice usually only serves to confuse the reader of a program."
 msgstr ""
 
-#: ../../tutorial/classes.rst:540
+#: ../../tutorial/classes.rst:539
 msgid ""
 "Methods may call other methods by using method attributes of the ``self`` "
 "argument::"
@@ -801,7 +790,7 @@ msgstr ""
 "Методи можуть викликати інші методи, використовуючи атрибути методу "
 "аргументу ``self``::"
 
-#: ../../tutorial/classes.rst:554
+#: ../../tutorial/classes.rst:553
 msgid ""
 "Methods may reference global names in the same way as ordinary functions.  "
 "The global scope associated with a method is the module containing its "
@@ -824,7 +813,7 @@ msgstr ""
 "визначений у цій глобальній області видимості, і в наступному розділі ми "
 "знайдемо кілька вагомих причин, чому метод хоче посилатися на власний клас."
 
-#: ../../tutorial/classes.rst:564
+#: ../../tutorial/classes.rst:563
 msgid ""
 "Each value is an object, and therefore has a *class* (also called its "
 "*type*). It is stored as ``object.__class__``."
@@ -832,11 +821,11 @@ msgstr ""
 "Кожне значення є об’єктом і, отже, має *клас* (також називається його "
 "*типом*). Він зберігається як ``object.__class__``."
 
-#: ../../tutorial/classes.rst:571
+#: ../../tutorial/classes.rst:570
 msgid "Inheritance"
 msgstr "Спадщина"
 
-#: ../../tutorial/classes.rst:573
+#: ../../tutorial/classes.rst:572
 msgid ""
 "Of course, a language feature would not be worthy of the name \"class\" "
 "without supporting inheritance.  The syntax for a derived class definition "
@@ -845,7 +834,7 @@ msgstr ""
 "Звичайно, функція мови не була б гідною назви \"клас\" без підтримки "
 "успадкування. Синтаксис для визначення похідного класу виглядає так:"
 
-#: ../../tutorial/classes.rst:584
+#: ../../tutorial/classes.rst:583
 msgid ""
 "The name :class:`!BaseClassName` must be defined in a namespace accessible "
 "from the scope containing the derived class definition.  In place of a base "
@@ -853,7 +842,7 @@ msgid ""
 "useful, for example, when the base class is defined in another module::"
 msgstr ""
 
-#: ../../tutorial/classes.rst:592
+#: ../../tutorial/classes.rst:591
 msgid ""
 "Execution of a derived class definition proceeds the same as for a base "
 "class. When the class object is constructed, the base class is remembered.  "
@@ -869,7 +858,7 @@ msgstr ""
 "правило застосовується рекурсивно, якщо сам базовий клас є похідним від "
 "якогось іншого класу."
 
-#: ../../tutorial/classes.rst:598
+#: ../../tutorial/classes.rst:597
 msgid ""
 "There's nothing special about instantiation of derived classes: "
 "``DerivedClassName()`` creates a new instance of the class.  Method "
@@ -883,7 +872,7 @@ msgstr ""
 "ланцюжку базових класів, якщо необхідно, і посилання на метод є дійсним, "
 "якщо це дає об’єкт функції."
 
-#: ../../tutorial/classes.rst:604
+#: ../../tutorial/classes.rst:603
 msgid ""
 "Derived classes may override methods of their base classes.  Because methods"
 " have no special privileges when calling other methods of the same object, a"
@@ -898,7 +887,7 @@ msgstr ""
 "класу, який замінює його. (Для програмістів C++: усі методи в Python "
 "фактично \"віртуальні\".)"
 
-#: ../../tutorial/classes.rst:610
+#: ../../tutorial/classes.rst:609
 msgid ""
 "An overriding method in a derived class may in fact want to extend rather "
 "than simply replace the base class method of the same name. There is a "
@@ -914,11 +903,11 @@ msgstr ""
 "клієнтів. (Зауважте, що це працює, лише якщо базовий клас доступний як "
 "``BaseClassName`` у глобальній області.)"
 
-#: ../../tutorial/classes.rst:617
+#: ../../tutorial/classes.rst:616
 msgid "Python has two built-in functions that work with inheritance:"
 msgstr "Python має дві вбудовані функції, які працюють із успадкуванням:"
 
-#: ../../tutorial/classes.rst:619
+#: ../../tutorial/classes.rst:618
 msgid ""
 "Use :func:`isinstance` to check an instance's type: ``isinstance(obj, int)``"
 " will be ``True`` only if ``obj.__class__`` is :class:`int` or some class "
@@ -928,7 +917,7 @@ msgstr ""
 "``isinstance(obj, int)`` буде ``True`` лише якщо ``obj.__class__`` є "
 ":class:`int` або якийсь похідний клас з :class:`int`."
 
-#: ../../tutorial/classes.rst:623
+#: ../../tutorial/classes.rst:622
 msgid ""
 "Use :func:`issubclass` to check class inheritance: ``issubclass(bool, int)``"
 " is ``True`` since :class:`bool` is a subclass of :class:`int`.  However, "
@@ -940,11 +929,11 @@ msgstr ""
 "підкласом :class:`int`. Однак ``issubclass(float, int)`` є ``False``, "
 "оскільки :class:`float` не є підкласом :class:`int`."
 
-#: ../../tutorial/classes.rst:633
+#: ../../tutorial/classes.rst:632
 msgid "Multiple Inheritance"
 msgstr "Множинне успадкування"
 
-#: ../../tutorial/classes.rst:635
+#: ../../tutorial/classes.rst:634
 msgid ""
 "Python supports a form of multiple inheritance as well.  A class definition "
 "with multiple base classes looks like this::"
@@ -952,7 +941,7 @@ msgstr ""
 "Python також підтримує форму множинного успадкування. Визначення класу з "
 "кількома базовими класами виглядає так:"
 
-#: ../../tutorial/classes.rst:645
+#: ../../tutorial/classes.rst:644
 msgid ""
 "For most purposes, in the simplest cases, you can think of the search for "
 "attributes inherited from a parent class as depth-first, left-to-right, not "
@@ -963,7 +952,7 @@ msgid ""
 "for in :class:`!Base2`, and so on."
 msgstr ""
 
-#: ../../tutorial/classes.rst:652
+#: ../../tutorial/classes.rst:651
 msgid ""
 "In fact, it is slightly more complex than that; the method resolution order "
 "changes dynamically to support cooperative calls to :func:`super`.  This "
@@ -976,7 +965,7 @@ msgstr ""
 "деяких інших мовах із множинним успадкуванням як call-next-method і є "
 "потужнішим, ніж супервиклик у мовах з одним успадкуванням."
 
-#: ../../tutorial/classes.rst:658
+#: ../../tutorial/classes.rst:657
 msgid ""
 "Dynamic ordering is necessary because all cases of multiple inheritance "
 "exhibit one or more diamond relationships (where at least one of the parent "
@@ -1007,11 +996,11 @@ msgstr ""
 "додаткової інформації див. "
 "https://www.python.org/download/releases/2.3/mro/."
 
-#: ../../tutorial/classes.rst:675
+#: ../../tutorial/classes.rst:674
 msgid "Private Variables"
 msgstr "Приватні змінні"
 
-#: ../../tutorial/classes.rst:677
+#: ../../tutorial/classes.rst:676
 msgid ""
 "\"Private\" instance variables that cannot be accessed except from inside an"
 " object don't exist in Python.  However, there is a convention that is "
@@ -1027,7 +1016,7 @@ msgstr ""
 "функція, метод чи член даних). Це слід розглядати як деталь впровадження та "
 "може бути змінено без попередження."
 
-#: ../../tutorial/classes.rst:687
+#: ../../tutorial/classes.rst:686
 msgid ""
 "Since there is a valid use-case for class-private members (namely to avoid "
 "name clashes of names with names defined by subclasses), there is limited "
@@ -1048,7 +1037,7 @@ msgstr ""
 " без урахування синтаксичної позиції ідентифікатора, доки воно трапляється у"
 " визначенні класу."
 
-#: ../../tutorial/classes.rst:696
+#: ../../tutorial/classes.rst:695
 msgid ""
 "Name mangling is helpful for letting subclasses override methods without "
 "breaking intraclass method calls.  For example::"
@@ -1056,7 +1045,7 @@ msgstr ""
 "Викривлення імен корисне для того, щоб дозволити підкласам перевизначати "
 "методи, не порушуючи виклики внутрішньокласових методів. Наприклад::"
 
-#: ../../tutorial/classes.rst:718
+#: ../../tutorial/classes.rst:717
 msgid ""
 "The above example would work even if ``MappingSubclass`` were to introduce a"
 " ``__update`` identifier since it is replaced with ``_Mapping__update`` in "
@@ -1068,7 +1057,7 @@ msgstr ""
 " ``Mapping`` класі ``_MappingSubclass__update`` у ``Клас MappingSubclass`` "
 "відповідно."
 
-#: ../../tutorial/classes.rst:723
+#: ../../tutorial/classes.rst:722
 msgid ""
 "Note that the mangling rules are designed mostly to avoid accidents; it "
 "still is possible to access or modify a variable that is considered private."
@@ -1079,7 +1068,7 @@ msgstr ""
 "приватною. Це навіть може бути корисним за особливих обставин, наприклад, у "
 "налагоджувачі."
 
-#: ../../tutorial/classes.rst:727
+#: ../../tutorial/classes.rst:726
 msgid ""
 "Notice that code passed to ``exec()`` or ``eval()`` does not consider the "
 "classname of the invoking class to be the current class; this is similar to "
@@ -1094,18 +1083,18 @@ msgstr ""
 "саме обмеження стосується getattr(), setattr() і delattr(), а також прямого "
 "посилання на __dict__."
 
-#: ../../tutorial/classes.rst:738
+#: ../../tutorial/classes.rst:737
 msgid "Odds and Ends"
 msgstr "Обривки"
 
-#: ../../tutorial/classes.rst:740
+#: ../../tutorial/classes.rst:739
 msgid ""
 "Sometimes it is useful to have a data type similar to the Pascal \"record\" "
 "or C \"struct\", bundling together a few named data items. The idiomatic "
 "approach is to use :mod:`dataclasses` for this purpose::"
 msgstr ""
 
-#: ../../tutorial/classes.rst:760
+#: ../../tutorial/classes.rst:759
 msgid ""
 "A piece of Python code that expects a particular abstract data type can "
 "often be passed a class that emulates the methods of that data type instead."
@@ -1115,7 +1104,7 @@ msgid ""
 "instead, and pass it as an argument."
 msgstr ""
 
-#: ../../tutorial/classes.rst:772
+#: ../../tutorial/classes.rst:771
 msgid ""
 ":ref:`Instance method objects <instance-methods>` have attributes, too: "
 ":attr:`m.__self__ <method.__self__>` is the instance object with the method "
@@ -1123,11 +1112,11 @@ msgid ""
 "object <user-defined-funcs>` corresponding to the method."
 msgstr ""
 
-#: ../../tutorial/classes.rst:782
+#: ../../tutorial/classes.rst:781
 msgid "Iterators"
 msgstr "Ітератори"
 
-#: ../../tutorial/classes.rst:784
+#: ../../tutorial/classes.rst:783
 msgid ""
 "By now you have probably noticed that most container objects can be looped "
 "over using a :keyword:`for` statement::"
@@ -1135,7 +1124,7 @@ msgstr ""
 "Наразі ви, мабуть, помітили, що більшість об’єктів-контейнерів можна "
 "зациклювати за допомогою оператора :keyword:`for`::"
 
-#: ../../tutorial/classes.rst:798
+#: ../../tutorial/classes.rst:797
 msgid ""
 "This style of access is clear, concise, and convenient.  The use of "
 "iterators pervades and unifies Python.  Behind the scenes, the "
@@ -1157,7 +1146,7 @@ msgstr ""
 ":meth:`~iterator.__next__` за допомогою вбудованої функції :func:`next`; цей"
 " приклад показує, як це все працює:"
 
-#: ../../tutorial/classes.rst:823
+#: ../../tutorial/classes.rst:822
 msgid ""
 "Having seen the mechanics behind the iterator protocol, it is easy to add "
 "iterator behavior to your classes.  Define an :meth:`~container.__iter__` "
@@ -1166,11 +1155,11 @@ msgid ""
 " ``self``::"
 msgstr ""
 
-#: ../../tutorial/classes.rst:860
+#: ../../tutorial/classes.rst:859
 msgid "Generators"
 msgstr "Генератори"
 
-#: ../../tutorial/classes.rst:862
+#: ../../tutorial/classes.rst:861
 msgid ""
 ":term:`Generators <generator>` are a simple and powerful tool for creating "
 "iterators.  They are written like regular functions but use the "
@@ -1187,7 +1176,7 @@ msgstr ""
 "виконаний останнім). Приклад показує, що генератори можна тривіально легко "
 "створити:"
 
-#: ../../tutorial/classes.rst:883
+#: ../../tutorial/classes.rst:882
 msgid ""
 "Anything that can be done with generators can also be done with class-based "
 "iterators as described in the previous section.  What makes generators so "
@@ -1195,7 +1184,7 @@ msgid ""
 ":meth:`~generator.__next__` methods are created automatically."
 msgstr ""
 
-#: ../../tutorial/classes.rst:888
+#: ../../tutorial/classes.rst:887
 msgid ""
 "Another key feature is that the local variables and execution state are "
 "automatically saved between calls.  This made the function easier to write "
@@ -1207,7 +1196,7 @@ msgstr ""
 "для написання та набагато зрозумілішою, ніж підхід із використанням змінних "
 "екземплярів, таких як ``self.index`` і ``self.data``."
 
-#: ../../tutorial/classes.rst:893
+#: ../../tutorial/classes.rst:892
 msgid ""
 "In addition to automatic method creation and saving program state, when "
 "generators terminate, they automatically raise :exc:`StopIteration`. In "
@@ -1219,11 +1208,11 @@ msgstr ""
 ":exc:`StopIteration`. У поєднанні ці функції дозволяють легко створювати "
 "ітератори без зусиль, ніж написання звичайної функції."
 
-#: ../../tutorial/classes.rst:902
+#: ../../tutorial/classes.rst:901
 msgid "Generator Expressions"
 msgstr "Генератор виразів"
 
-#: ../../tutorial/classes.rst:904
+#: ../../tutorial/classes.rst:903
 msgid ""
 "Some simple generators can be coded succinctly as expressions using a syntax"
 " similar to list comprehensions but with parentheses instead of square "
@@ -1239,15 +1228,15 @@ msgstr ""
 "компактними, але менш універсальними, ніж повні визначення генераторів, і, "
 "як правило, більш зручні для пам’яті, ніж еквівалентні списки."
 
-#: ../../tutorial/classes.rst:911
+#: ../../tutorial/classes.rst:910
 msgid "Examples::"
 msgstr "Приклади::"
 
-#: ../../tutorial/classes.rst:932
+#: ../../tutorial/classes.rst:931
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/classes.rst:933
+#: ../../tutorial/classes.rst:932
 msgid ""
 "Except for one thing.  Module objects have a secret read-only attribute "
 "called :attr:`~object.__dict__` which returns the dictionary used to "
@@ -1271,10 +1260,10 @@ msgstr "об'єкт"
 msgid "method"
 msgstr "метод"
 
-#: ../../tutorial/classes.rst:684
+#: ../../tutorial/classes.rst:683
 msgid "name"
 msgstr "name"
 
-#: ../../tutorial/classes.rst:684
+#: ../../tutorial/classes.rst:683
 msgid "mangling"
 msgstr ""
