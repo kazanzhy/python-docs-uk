@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 14:14+0000\n"
+"POT-Creation-Date: 2024-01-19 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:17+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -190,14 +190,10 @@ msgstr ""
 #: ../../library/urllib.request.rst:88
 msgid ""
 "In addition, if proxy settings are detected (for example, when a ``*_proxy``"
-" environment variable like :envvar:`http_proxy` is set), "
+" environment variable like :envvar:`!http_proxy` is set), "
 ":class:`ProxyHandler` is default installed and makes sure the requests are "
 "handled through the proxy."
 msgstr ""
-"Крім того, якщо виявлено налаштування проксі (наприклад, коли встановлено "
-"змінну середовища ``*_proxy``, як-от :envvar:`http_proxy`), "
-":class:`ProxyHandler` встановлено за замовчуванням і гарантує, що запити "
-"обробляються через проксі."
 
 #: ../../library/urllib.request.rst:93
 msgid ""
@@ -257,12 +253,8 @@ msgstr "додано *контекст*."
 msgid ""
 "HTTPS connection now send an ALPN extension with protocol indicator "
 "``http/1.1`` when no *context* is given. Custom *context* should set ALPN "
-"protocols with :meth:`~ssl.SSLContext.set_alpn_protocol`."
+"protocols with :meth:`~ssl.SSLContext.set_alpn_protocols`."
 msgstr ""
-"З’єднання HTTPS тепер надсилає розширення ALPN з індикатором протоколу "
-"``http/1.1``, якщо *контексту* не вказано. Спеціальний *контекст* має "
-"встановлювати протоколи ALPN за допомогою "
-":meth:`~ssl.SSSLContext.set_alpn_protocol`."
 
 #: ../../library/urllib.request.rst:128
 msgid ""
@@ -1041,11 +1033,9 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:632
 msgid ""
-":meth:`<protocol>_open` --- signal that the handler knows how to open "
+":meth:`!<protocol>_open` --- signal that the handler knows how to open "
 "*protocol* URLs."
 msgstr ""
-":meth:`<protocol> _open` --- означає, що обробник знає, як відкривати "
-"*протокольні* URL-адреси."
 
 #: ../../library/urllib.request.rst:635
 msgid "See |protocol_open|_ for more information."
@@ -1053,11 +1043,9 @@ msgstr "Перегляньте |protocol_open|_ для отримання дод
 
 #: ../../library/urllib.request.rst:637
 msgid ""
-":meth:`http_error_\\<type\\>` --- signal that the handler knows how to "
+":meth:`!http_error_\\<type\\>` --- signal that the handler knows how to "
 "handle HTTP errors with HTTP error code *type*."
 msgstr ""
-":meth:`http_error_\\ <type\\>` --- означає, що обробник знає, як обробляти "
-"помилки HTTP з кодом помилки HTTP *тип*."
 
 #: ../../library/urllib.request.rst:640
 msgid "See |http_error_nnn|_ for more information."
@@ -1065,19 +1053,15 @@ msgstr "Перегляньте |http_error_nnn|_ для отримання до�
 
 #: ../../library/urllib.request.rst:642
 msgid ""
-":meth:`<protocol>_error` --- signal that the handler knows how to handle "
+":meth:`!<protocol>_error` --- signal that the handler knows how to handle "
 "errors from (non-\\ ``http``) *protocol*."
 msgstr ""
-":meth:`<protocol> _error` --- означає, що обробник знає, як обробляти "
-"помилки з (не\\ ``http``) *протоколу*."
 
 #: ../../library/urllib.request.rst:645
 msgid ""
-":meth:`<protocol>_request` --- signal that the handler knows how to pre-"
+":meth:`!<protocol>_request` --- signal that the handler knows how to pre-"
 "process *protocol* requests."
 msgstr ""
-":meth:`<protocol> _request` --- означає, що обробник знає, як попередньо "
-"обробляти *протокольні* запити."
 
 #: ../../library/urllib.request.rst:648
 msgid "See |protocol_request|_ for more information."
@@ -1085,11 +1069,9 @@ msgstr "Перегляньте |protocol_request|_ для отримання д�
 
 #: ../../library/urllib.request.rst:650
 msgid ""
-":meth:`<protocol>_response` --- signal that the handler knows how to post-"
+":meth:`!<protocol>_response` --- signal that the handler knows how to post-"
 "process *protocol* responses."
 msgstr ""
-":meth:`<protocol> _response` --- означає, що обробник знає, як постобробити "
-"*протокольні* відповіді."
 
 #: ../../library/urllib.request.rst:653
 msgid "See |protocol_response|_ for more information."
@@ -1122,13 +1104,8 @@ msgid ""
 "handlers for the given protocol with the given arguments (which are protocol"
 " specific).  The HTTP protocol is a special case which uses the HTTP "
 "response code to determine the specific error handler; refer to the "
-":meth:`http_error_\\<type\\>` methods of the handler classes."
+":meth:`!http_error_\\<type\\>` methods of the handler classes."
 msgstr ""
-"Обробка помилки заданого протоколу. Це викличе зареєстровані обробники "
-"помилок для даного протоколу з заданими аргументами (які є специфічними для "
-"протоколу). Протокол HTTP є окремим випадком, який використовує код "
-"відповіді HTTP для визначення конкретного обробника помилок; зверніться до "
-"методів :meth:`http_error_\\ <type\\>` класів обробників."
 
 #: ../../library/urllib.request.rst:680
 msgid ""
@@ -1151,38 +1128,26 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:687
 msgid ""
-"Every handler with a method named like :meth:`<protocol>_request` has that "
+"Every handler with a method named like :meth:`!<protocol>_request` has that "
 "method called to pre-process the request."
 msgstr ""
-"Кожен обробник із таким методом, як :meth:`<protocol> _request` має цей "
-"метод, який викликається для попередньої обробки запиту."
 
 #: ../../library/urllib.request.rst:690
 msgid ""
-"Handlers with a method named like :meth:`<protocol>_open` are called to "
+"Handlers with a method named like :meth:`!<protocol>_open` are called to "
 "handle the request. This stage ends when a handler either returns a non-\\ "
 ":const:`None` value (ie. a response), or raises an exception (usually "
 ":exc:`~urllib.error.URLError`).  Exceptions are allowed to propagate."
 msgstr ""
-"Для обробки запиту викликаються обробники з таким методом, як "
-":meth:`<protocol> _open`. Цей етап закінчується, коли обробник або повертає "
-"не\\ :const:`None` значення (тобто відповідь), або викликає виняткову "
-"ситуацію (зазвичай :exc:`~urllib.error.URLError`). Винятки дозволені для "
-"поширення."
 
 #: ../../library/urllib.request.rst:695
 msgid ""
 "In fact, the above algorithm is first tried for methods named "
-":meth:`default_open`.  If all such methods return :const:`None`, the "
-"algorithm is repeated for methods named like :meth:`<protocol>_open`.  If "
-"all such methods return :const:`None`, the algorithm is repeated for methods"
-" named :meth:`unknown_open`."
+":meth:`~BaseHandler.default_open`.  If all such methods return "
+":const:`None`, the algorithm is repeated for methods named like "
+":meth:`!<protocol>_open`.  If all such methods return :const:`None`, the "
+"algorithm is repeated for methods named :meth:`~BaseHandler.unknown_open`."
 msgstr ""
-"Фактично, наведений вище алгоритм спочатку випробувано для методів з іменем "
-":meth:`default_open`. Якщо всі такі методи повертають :const:`None`, "
-"алгоритм повторюється для методів із назвами :meth:`<protocol> _open`. Якщо "
-"всі такі методи повертають :const:`None`, алгоритм повторюється для методів "
-"з назвою :meth:`unknown_open`."
 
 #: ../../library/urllib.request.rst:701
 msgid ""
@@ -1196,11 +1161,9 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:705
 msgid ""
-"Every handler with a method named like :meth:`<protocol>_response` has that "
-"method called to post-process the response."
+"Every handler with a method named like :meth:`!<protocol>_response` has that"
+" method called to post-process the response."
 msgstr ""
-"Кожен обробник із таким методом, як :meth:`<protocol> _response`, має цей "
-"метод, який викликається для постобробки відповіді."
 
 #: ../../library/urllib.request.rst:712
 msgid "BaseHandler Objects"
@@ -1262,14 +1225,9 @@ msgid ""
 "in the return value of the :meth:`~OpenerDirector.open` method of "
 ":class:`OpenerDirector`, or ``None``. It should raise "
 ":exc:`~urllib.error.URLError`, unless a truly exceptional thing happens (for"
-" example, :exc:`MemoryError` should not be mapped to :exc:`URLError`)."
+" example, :exc:`MemoryError` should not be mapped to "
+":exc:`~urllib.error.URLError`)."
 msgstr ""
-"Цей метод, якщо він реалізований, буде викликаний батьківським "
-":class:`OpenerDirector`. Він має повертати файлоподібний об’єкт, як описано "
-"в поверненому значенні методу :meth:`~OpenerDirector.open` "
-":class:`OpenerDirector` або ``None``. Він повинен викликати "
-":exc:`~urllib.error.URLError`, якщо не станеться справді виняткова річ "
-"(наприклад, :exc:`MemoryError` не має зіставлятися з :exc:`URLError`)."
 
 #: ../../library/urllib.request.rst:756
 msgid "This method will be called before any protocol-specific open method."
@@ -1288,11 +1246,8 @@ msgstr ""
 msgid ""
 "This method, if defined, will be called by the parent "
 ":class:`OpenerDirector`. Return values should be the same as for  "
-":meth:`default_open`."
+":meth:`~BaseHandler.default_open`."
 msgstr ""
-"Цей метод, якщо його визначено, буде викликано батьківським "
-":class:`OpenerDirector`. Повернуті значення мають бути такими ж, як і для "
-":meth:`default_open`."
 
 #: ../../library/urllib.request.rst:772
 msgid ""
@@ -1366,10 +1321,8 @@ msgstr ""
 #: ../../library/urllib.request.rst:806
 msgid ""
 "Arguments, return values and exceptions raised should be the same as for "
-":meth:`http_error_default`."
+":meth:`~BaseHandler.http_error_default`."
 msgstr ""
-"Аргументи, значення, що повертаються, і викликані винятки мають бути такими "
-"самими, як і для :meth:`http_error_default`."
 
 #: ../../library/urllib.request.rst:814
 msgid ""
@@ -1428,13 +1381,10 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:847
 msgid ""
-"An :class:`HTTPError` exception raised as a security consideration if the "
-"HTTPRedirectHandler is presented with a redirected URL which is not an HTTP,"
-" HTTPS or FTP URL."
+"An :exc:`~urllib.error.HTTPError` exception raised as a security "
+"consideration if the HTTPRedirectHandler is presented with a redirected URL "
+"which is not an HTTP, HTTPS or FTP URL."
 msgstr ""
-"Виняток :class:`HTTPError` виникає з міркувань безпеки, якщо "
-"HTTPRedirectHandler представлено з перенаправленою URL-адресою, яка не є "
-"URL-адресою HTTP, HTTPS або FTP."
 
 #: ../../library/urllib.request.rst:854
 msgid ""
@@ -1517,17 +1467,12 @@ msgstr "Об’єкти ProxyHandler"
 
 #: ../../library/urllib.request.rst:924
 msgid ""
-"The :class:`ProxyHandler` will have a method :meth:`<protocol>_open` for "
+"The :class:`ProxyHandler` will have a method :meth:`!<protocol>_open` for "
 "every *protocol* which has a proxy in the *proxies* dictionary given in the "
 "constructor.  The method will modify requests to go through the proxy, by "
 "calling ``request.set_proxy()``, and call the next handler in the chain to "
 "actually execute the protocol."
 msgstr ""
-":class:`ProxyHandler` матиме метод :meth:`<protocol> _open` для кожного "
-"*протоколу*, який має проксі у словнику *proxies*, указаному в конструкторі."
-" Метод змінюватиме запити для проходження через проксі, викликаючи "
-"``request.set_proxy()``, і викличе наступний обробник у ланцюжку для "
-"фактичного виконання протоколу."
 
 #: ../../library/urllib.request.rst:934
 msgid "HTTPPasswordMgr Objects"
@@ -1797,16 +1742,11 @@ msgstr "Для 200 кодів помилок об’єкт відповіді п
 #: ../../library/urllib.request.rst:1179
 msgid ""
 "For non-200 error codes, this simply passes the job on to the "
-":meth:`http_error_\\<type\\>` handler methods, via "
+":meth:`!http_error_\\<type\\>` handler methods, via "
 ":meth:`OpenerDirector.error`. Eventually, :class:`HTTPDefaultErrorHandler` "
 "will raise an :exc:`~urllib.error.HTTPError` if no other handler handles the"
 " error."
 msgstr ""
-"Для кодів помилок, відмінних від 200, це просто передає завдання методам "
-"обробки :meth:`http_error_\\ <type\\>` через :meth:`OpenerDirector.error`. "
-"Згодом :class:`HTTPDefaultErrorHandler` викличе "
-":exc:`~urllib.error.HTTPError`, якщо жоден інший обробник не обробляє "
-"помилку."
 
 #: ../../library/urllib.request.rst:1187
 msgid "Process HTTPS error responses."
@@ -1904,14 +1844,9 @@ msgid ""
 ":func:`build_opener` provides many handlers by default, including a "
 ":class:`ProxyHandler`.  By default, :class:`ProxyHandler` uses the "
 "environment variables named ``<scheme>_proxy``, where ``<scheme>`` is the "
-"URL scheme involved.  For example, the :envvar:`http_proxy` environment "
+"URL scheme involved.  For example, the :envvar:`!http_proxy` environment "
 "variable is read to obtain the HTTP proxy's URL."
 msgstr ""
-":func:`build_opener` за умовчанням надає багато обробників, включаючи "
-":class:`ProxyHandler`. За замовчуванням :class:`ProxyHandler` використовує "
-"змінні середовища з іменем ``<scheme> _proxy``, де ``<scheme>`` — це схема "
-"URL-адреси. Наприклад, змінна середовища :envvar:`http_proxy` зчитується для"
-" отримання URL-адреси HTTP-проксі."
 
 #: ../../library/urllib.request.rst:1290
 msgid ""
@@ -2003,16 +1938,9 @@ msgid ""
 " a local file, the object will not be copied unless filename is supplied. "
 "Return a tuple ``(filename, headers)`` where *filename* is the local file "
 "name under which the object can be found, and *headers* is whatever the "
-":meth:`info` method of the object returned by :func:`urlopen` returned (for "
-"a remote object). Exceptions are the same as for :func:`urlopen`."
+":meth:`!info` method of the object returned by :func:`urlopen` returned (for"
+" a remote object). Exceptions are the same as for :func:`urlopen`."
 msgstr ""
-"Скопіюйте мережевий об’єкт, позначений URL-адресою, у локальний файл. Якщо "
-"URL-адреса вказує на локальний файл, об’єкт не буде скопійовано, якщо не "
-"буде вказано назву файлу. Повертає кортеж ``(ім’я файлу, заголовки)``, де "
-"*ім’я_файлу* — це ім’я локального файлу, під яким можна знайти об’єкт, а "
-"*headers* — будь-який метод :meth:`info` об’єкта, який повертає "
-":func:`urlopen` повернуто (для віддаленого об’єкта). Винятки такі ж, як і "
-"для :func:`urlopen`."
 
 #: ../../library/urllib.request.rst:1385
 msgid ""
@@ -2054,15 +1982,11 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:1407
 msgid ""
-":func:`urlretrieve` will raise :exc:`ContentTooShortError` when it detects "
-"that the amount of data available  was less than the expected amount (which "
-"is the size reported by a  *Content-Length* header). This can occur, for "
-"example, when the  download is interrupted."
+":func:`urlretrieve` will raise :exc:`~urllib.error.ContentTooShortError` "
+"when it detects that the amount of data available  was less than the "
+"expected amount (which is the size reported by a  *Content-Length* header). "
+"This can occur, for example, when the  download is interrupted."
 msgstr ""
-":func:`urlretrieve` викличе :exc:`ContentTooShortError`, коли виявить, що "
-"обсяг доступних даних був меншим за очікуваний обсяг (який є розміром, про "
-"який повідомляє заголовок *Content-Length*). Це може статися, наприклад, "
-"коли завантаження переривається."
 
 #: ../../library/urllib.request.rst:1412
 msgid ""
@@ -2076,11 +2000,9 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:1416
 msgid ""
-"You can still retrieve the downloaded data in this case, it is stored  in "
-"the :attr:`content` attribute of the exception instance."
+"You can still retrieve the downloaded data in this case, it is stored in the"
+" :attr:`!content` attribute of the exception instance."
 msgstr ""
-"У цьому випадку ви все ще можете отримати завантажені дані, вони "
-"зберігаються в атрибуті :attr:`content` екземпляра винятку."
 
 #: ../../library/urllib.request.rst:1419
 msgid ""
@@ -2262,13 +2184,10 @@ msgstr ""
 
 #: ../../library/urllib.request.rst:1511
 msgid ""
-"For all other response codes, the method :meth:`http_error_default` is "
-"called which you can override in subclasses to handle the error "
-"appropriately."
+"For all other response codes, the method "
+":meth:`~BaseHandler.http_error_default` is called which you can override in "
+"subclasses to handle the error appropriately."
 msgstr ""
-"Для всіх інших кодів відповіді викликається метод "
-":meth:`http_error_default`, який ви можете змінити в підкласах, щоб належним"
-" чином обробити помилку."
 
 #: ../../library/urllib.request.rst:1516
 msgid ""
