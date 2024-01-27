@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-12 14:14+0000\n"
+"POT-Creation-Date: 2024-01-26 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:57+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -244,7 +244,16 @@ msgstr ""
 "помилка, ``page.close()`` буде викликано під час виходу з блоку "
 ":keyword:`with`."
 
-#: ../../library/contextlib.rst:188
+#: ../../library/contextlib.rst:187
+msgid ""
+"Most types managing resources support the :term:`context manager` protocol, "
+"which closes *thing* on leaving the :keyword:`with` statement. As such, "
+":func:`!closing` is most useful for third party types that don't support "
+"context managers. This example is purely for illustration purposes, as "
+":func:`~urllib.request.urlopen` would normally be used in a context manager."
+msgstr ""
+
+#: ../../library/contextlib.rst:196
 msgid ""
 "Return an async context manager that calls the ``aclose()`` method of "
 "*thing* upon completion of the block.  This is basically equivalent to::"
@@ -252,7 +261,7 @@ msgstr ""
 "Повертає менеджер асинхронного контексту, який викликає метод ``aclose()`` "
 "*thing* після завершення блоку. Це в основному еквівалентно:"
 
-#: ../../library/contextlib.rst:200
+#: ../../library/contextlib.rst:208
 msgid ""
 "Significantly, ``aclosing()`` supports deterministic cleanup of async "
 "generators when they happen to exit early by :keyword:`break` or an "
@@ -262,7 +271,7 @@ msgstr ""
 "генераторів, коли вони виходять раніше через :keyword:`break` або виняток. "
 "Наприклад::"
 
-#: ../../library/contextlib.rst:211
+#: ../../library/contextlib.rst:219
 msgid ""
 "This pattern ensures that the generator's async exit code is executed in the"
 " same context as its iterations (so that exceptions and context variables "
@@ -274,7 +283,7 @@ msgstr ""
 "працювали належним чином, а код виходу не запускався після закінчення часу "
 "існування певного завдання, від якого він залежить)."
 
-#: ../../library/contextlib.rst:223
+#: ../../library/contextlib.rst:231
 msgid ""
 "Return a context manager that returns *enter_result* from ``__enter__``, but"
 " otherwise does nothing. It is intended to be used as a stand-in for an "
@@ -284,11 +293,11 @@ msgstr ""
 "``__enter__``, але в іншому випадку нічого не робить. Він призначений для "
 "використання як резервний для додаткового контекстного менеджера, наприклад:"
 
-#: ../../library/contextlib.rst:237
+#: ../../library/contextlib.rst:245
 msgid "An example using *enter_result*::"
 msgstr "Приклад використання *enter_result*::"
 
-#: ../../library/contextlib.rst:250
+#: ../../library/contextlib.rst:258
 msgid ""
 "It can also be used as a stand-in for :ref:`asynchronous context managers "
 "<async-context-managers>`::"
@@ -296,11 +305,11 @@ msgstr ""
 "Його також можна використовувати як заміну для :ref:`асинхронних контекстних"
 " менеджерів <async-context-managers>`::"
 
-#: ../../library/contextlib.rst:266
+#: ../../library/contextlib.rst:274
 msgid ":term:`asynchronous context manager` support was added."
 msgstr "Додано підтримку :term:`asynchronous context manager`."
 
-#: ../../library/contextlib.rst:273
+#: ../../library/contextlib.rst:281
 msgid ""
 "Return a context manager that suppresses any of the specified exceptions if "
 "they occur in the body of a :keyword:`!with` statement and then resumes "
@@ -312,7 +321,7 @@ msgstr ""
 "виконання з першим оператором, що йде після кінця оператора "
 ":keyword:`!with`."
 
-#: ../../library/contextlib.rst:278
+#: ../../library/contextlib.rst:286
 msgid ""
 "As with any other mechanism that completely suppresses exceptions, this "
 "context manager should be used only to cover very specific errors where "
@@ -323,20 +332,20 @@ msgstr ""
 " контексту слід використовувати лише для покриття дуже конкретних помилок, "
 "коли, як відомо, правильно продовжувати виконання програми."
 
-#: ../../library/contextlib.rst:283
+#: ../../library/contextlib.rst:291
 msgid "For example::"
 msgstr "Наприклад::"
 
-#: ../../library/contextlib.rst:293
+#: ../../library/contextlib.rst:301
 msgid "This code is equivalent to::"
 msgstr "Цей код еквівалентний:"
 
-#: ../../library/contextlib.rst:305 ../../library/contextlib.rst:352
-#: ../../library/contextlib.rst:362 ../../library/contextlib.rst:379
+#: ../../library/contextlib.rst:313 ../../library/contextlib.rst:360
+#: ../../library/contextlib.rst:370 ../../library/contextlib.rst:387
 msgid "This context manager is :ref:`reentrant <reentrant-cms>`."
 msgstr "Цей контекстний менеджер є :ref:`reentrant <reentrant-cms>`."
 
-#: ../../library/contextlib.rst:307
+#: ../../library/contextlib.rst:315
 msgid ""
 "If the code within the :keyword:`!with` block raises a "
 ":exc:`BaseExceptionGroup`, suppressed exceptions are removed from the group."
@@ -344,13 +353,13 @@ msgid ""
 " is re-raised."
 msgstr ""
 
-#: ../../library/contextlib.rst:313
+#: ../../library/contextlib.rst:321
 msgid ""
 "``suppress`` now supports suppressing exceptions raised as part of an "
 ":exc:`BaseExceptionGroup`."
 msgstr ""
 
-#: ../../library/contextlib.rst:319
+#: ../../library/contextlib.rst:327
 msgid ""
 "Context manager for temporarily redirecting :data:`sys.stdout` to another "
 "file or file-like object."
@@ -358,7 +367,7 @@ msgstr ""
 "Менеджер контексту для тимчасового переспрямування :data:`sys.stdout` на "
 "інший файл або файлоподібний об’єкт."
 
-#: ../../library/contextlib.rst:322
+#: ../../library/contextlib.rst:330
 msgid ""
 "This tool adds flexibility to existing functions or classes whose output is "
 "hardwired to stdout."
@@ -366,7 +375,7 @@ msgstr ""
 "Цей інструмент додає гнучкості існуючим функціям або класам, вихід яких "
 "підключено до стандартного виводу."
 
-#: ../../library/contextlib.rst:325
+#: ../../library/contextlib.rst:333
 msgid ""
 "For example, the output of :func:`help` normally is sent to *sys.stdout*. "
 "You can capture that output in a string by redirecting the output to an "
@@ -379,7 +388,7 @@ msgstr ""
 ":class:`io.StringIO`. Потік заміни повертається з методу ``__enter__`` і "
 "тому доступний як ціль оператора :keyword:`with`::"
 
-#: ../../library/contextlib.rst:335
+#: ../../library/contextlib.rst:343
 msgid ""
 "To send the output of :func:`help` to a file on disk, redirect the output to"
 " a regular file::"
@@ -387,11 +396,11 @@ msgstr ""
 "Щоб надіслати вивід :func:`help` у файл на диску, перенаправте вивід у "
 "звичайний файл::"
 
-#: ../../library/contextlib.rst:342
+#: ../../library/contextlib.rst:350
 msgid "To send the output of :func:`help` to *sys.stderr*::"
 msgstr "Щоб надіслати результат :func:`help` до *sys.stderr*::"
 
-#: ../../library/contextlib.rst:347
+#: ../../library/contextlib.rst:355
 msgid ""
 "Note that the global side effect on :data:`sys.stdout` means that this "
 "context manager is not suitable for use in library code and most threaded "
@@ -404,7 +413,7 @@ msgstr ""
 "підпроцесів. Однак це все ще корисний підхід для багатьох службових "
 "сценаріїв."
 
-#: ../../library/contextlib.rst:359
+#: ../../library/contextlib.rst:367
 msgid ""
 "Similar to :func:`~contextlib.redirect_stdout` but redirecting "
 ":data:`sys.stderr` to another file or file-like object."
@@ -412,7 +421,7 @@ msgstr ""
 "Подібно до :func:`~contextlib.redirect_stdout`, але перенаправляє "
 ":data:`sys.stderr` до іншого файлу або файлоподібного об’єкта."
 
-#: ../../library/contextlib.rst:369
+#: ../../library/contextlib.rst:377
 msgid ""
 "Non parallel-safe context manager to change the current working directory. "
 "As this changes a global state, the working directory, it is not suitable "
@@ -422,20 +431,20 @@ msgid ""
 "when this context manager is active."
 msgstr ""
 
-#: ../../library/contextlib.rst:376
+#: ../../library/contextlib.rst:384
 msgid ""
 "This is a simple wrapper around :func:`~os.chdir`, it changes the current "
 "working directory upon entering and restores the old one on exit."
 msgstr ""
 
-#: ../../library/contextlib.rst:386
+#: ../../library/contextlib.rst:394
 msgid ""
 "A base class that enables a context manager to also be used as a decorator."
 msgstr ""
 "Базовий клас, який дозволяє менеджеру контексту також використовуватися як "
 "декоратор."
 
-#: ../../library/contextlib.rst:388
+#: ../../library/contextlib.rst:396
 msgid ""
 "Context managers inheriting from ``ContextDecorator`` have to implement "
 "``__enter__`` and ``__exit__`` as normal. ``__exit__`` retains its optional "
@@ -445,7 +454,7 @@ msgstr ""
 " ``__enter__`` і ``__exit__`` як зазвичай. ``__exit__`` зберігає "
 "необов'язкову обробку винятків, навіть якщо використовується як декоратор."
 
-#: ../../library/contextlib.rst:392
+#: ../../library/contextlib.rst:400
 msgid ""
 "``ContextDecorator`` is used by :func:`contextmanager`, so you get this "
 "functionality automatically."
@@ -453,15 +462,15 @@ msgstr ""
 "``ContextDecorator`` використовується :func:`contextmanager`, тому ви "
 "отримуєте цю функціональність автоматично."
 
-#: ../../library/contextlib.rst:395
+#: ../../library/contextlib.rst:403
 msgid "Example of ``ContextDecorator``::"
 msgstr "Приклад ``ContextDecorator``::"
 
-#: ../../library/contextlib.rst:408 ../../library/contextlib.rst:480
+#: ../../library/contextlib.rst:416 ../../library/contextlib.rst:488
 msgid "The class can then be used like this::"
 msgstr ""
 
-#: ../../library/contextlib.rst:426
+#: ../../library/contextlib.rst:434
 msgid ""
 "This change is just syntactic sugar for any construct of the following "
 "form::"
@@ -469,11 +478,11 @@ msgstr ""
 "Ця зміна є просто синтаксичним цукром для будь-якої конструкції наступної "
 "форми::"
 
-#: ../../library/contextlib.rst:432
+#: ../../library/contextlib.rst:440
 msgid "``ContextDecorator`` lets you instead write::"
 msgstr "``ContextDecorator`` дозволяє замість цього писати::"
 
-#: ../../library/contextlib.rst:438
+#: ../../library/contextlib.rst:446
 msgid ""
 "It makes it clear that the ``cm`` applies to the whole function, rather than"
 " just a piece of it (and saving an indentation level is nice, too)."
@@ -481,7 +490,7 @@ msgstr ""
 "Це дає зрозуміти, що ``cm`` застосовується до всієї функції, а не лише до її"
 " частини (і зберегти рівень відступу теж добре)."
 
-#: ../../library/contextlib.rst:441
+#: ../../library/contextlib.rst:449
 msgid ""
 "Existing context managers that already have a base class can be extended by "
 "using ``ContextDecorator`` as a mixin class::"
@@ -489,7 +498,7 @@ msgstr ""
 "Існуючі контекстні менеджери, які вже мають базовий клас, можна розширити за"
 " допомогою ``ContextDecorator`` як класу mixin::"
 
-#: ../../library/contextlib.rst:454
+#: ../../library/contextlib.rst:462
 msgid ""
 "As the decorated function must be able to be called multiple times, the "
 "underlying context manager must support use in multiple :keyword:`with` "
@@ -502,17 +511,17 @@ msgstr ""
 "використовувати оригінальну конструкцію з явним оператором :keyword:`!with` "
 "усередині функції."
 
-#: ../../library/contextlib.rst:464
+#: ../../library/contextlib.rst:472
 msgid ""
 "Similar to :class:`ContextDecorator` but only for asynchronous functions."
 msgstr ""
 "Подібно до :class:`ContextDecorator`, але лише для асинхронних функцій."
 
-#: ../../library/contextlib.rst:466
+#: ../../library/contextlib.rst:474
 msgid "Example of ``AsyncContextDecorator``::"
 msgstr "Приклад ``AsyncContextDecorator``::"
 
-#: ../../library/contextlib.rst:505
+#: ../../library/contextlib.rst:513
 msgid ""
 "A context manager that is designed to make it easy to programmatically "
 "combine other context managers and cleanup functions, especially those that "
@@ -522,7 +531,7 @@ msgstr ""
 "менеджерів контексту та функцій очищення, особливо тих, які є "
 "необов’язковими або іншим чином керуються вхідними даними."
 
-#: ../../library/contextlib.rst:509
+#: ../../library/contextlib.rst:517
 msgid ""
 "For example, a set of files may easily be handled in a single with statement"
 " as follows::"
@@ -530,13 +539,13 @@ msgstr ""
 "Наприклад, набір файлів можна легко обробити в одному операторі with "
 "наступним чином:"
 
-#: ../../library/contextlib.rst:518
+#: ../../library/contextlib.rst:526
 msgid ""
 "The :meth:`~object.__enter__` method returns the :class:`ExitStack` "
 "instance, and performs no additional operations."
 msgstr ""
 
-#: ../../library/contextlib.rst:521
+#: ../../library/contextlib.rst:529
 msgid ""
 "Each instance maintains a stack of registered callbacks that are called in "
 "reverse order when the instance is closed (either explicitly or implicitly "
@@ -548,7 +557,7 @@ msgstr ""
 "неявно в кінці оператора :keyword:`with`). Зауважте, що зворотні виклики "
 "*не* викликаються неявно, коли примірник стеку контексту збирається сміттям."
 
-#: ../../library/contextlib.rst:526
+#: ../../library/contextlib.rst:534
 msgid ""
 "This stack model is used so that context managers that acquire their "
 "resources in their ``__init__`` method (such as file objects) can be handled"
@@ -558,7 +567,7 @@ msgstr ""
 "отримують свої ресурси у своєму методі ``__init__`` (наприклад, файлові "
 "об’єкти), могли оброблятися правильно."
 
-#: ../../library/contextlib.rst:530
+#: ../../library/contextlib.rst:538
 msgid ""
 "Since registered callbacks are invoked in the reverse order of registration,"
 " this ends up behaving as if multiple nested :keyword:`with` statements had "
@@ -575,7 +584,7 @@ msgstr ""
 "зворотним викликам будуть передані аргументи на основі цього оновленого "
 "стану."
 
-#: ../../library/contextlib.rst:537
+#: ../../library/contextlib.rst:545
 msgid ""
 "This is a relatively low level API that takes care of the details of "
 "correctly unwinding the stack of exit callbacks. It provides a suitable "
@@ -587,14 +596,14 @@ msgstr ""
 "основу для контекстних менеджерів вищого рівня, які маніпулюють стеком "
 "виходу у специфічних для програми способах."
 
-#: ../../library/contextlib.rst:546
+#: ../../library/contextlib.rst:554
 msgid ""
 "Enters a new context manager and adds its :meth:`~object.__exit__` method to"
 " the callback stack. The return value is the result of the context manager's"
 " own :meth:`~object.__enter__` method."
 msgstr ""
 
-#: ../../library/contextlib.rst:550
+#: ../../library/contextlib.rst:558
 msgid ""
 "These context managers may suppress exceptions just as they normally would "
 "if used directly as part of a :keyword:`with` statement."
@@ -603,39 +612,39 @@ msgstr ""
 "зазвичай робили б, якщо використовувати безпосередньо як частину оператора "
 ":keyword:`with`."
 
-#: ../../library/contextlib.rst:553
+#: ../../library/contextlib.rst:561
 msgid ""
 "Raises :exc:`TypeError` instead of :exc:`AttributeError` if *cm* is not a "
 "context manager."
 msgstr ""
 
-#: ../../library/contextlib.rst:559
+#: ../../library/contextlib.rst:567
 msgid ""
 "Adds a context manager's :meth:`~object.__exit__` method to the callback "
 "stack."
 msgstr ""
 
-#: ../../library/contextlib.rst:561
+#: ../../library/contextlib.rst:569
 msgid ""
 "As ``__enter__`` is *not* invoked, this method can be used to cover part of "
 "an :meth:`~object.__enter__` implementation with a context manager's own "
 ":meth:`~object.__exit__` method."
 msgstr ""
 
-#: ../../library/contextlib.rst:565
+#: ../../library/contextlib.rst:573
 msgid ""
 "If passed an object that is not a context manager, this method assumes it is"
 " a callback with the same signature as a context manager's "
 ":meth:`~object.__exit__` method and adds it directly to the callback stack."
 msgstr ""
 
-#: ../../library/contextlib.rst:569
+#: ../../library/contextlib.rst:577
 msgid ""
 "By returning true values, these callbacks can suppress exceptions the same "
 "way context manager :meth:`~object.__exit__` methods can."
 msgstr ""
 
-#: ../../library/contextlib.rst:572
+#: ../../library/contextlib.rst:580
 msgid ""
 "The passed in object is returned from the function, allowing this method to "
 "be used as a function decorator."
@@ -643,7 +652,7 @@ msgstr ""
 "Переданий об’єкт повертається функцією, що дозволяє використовувати цей "
 "метод як декоратор функції."
 
-#: ../../library/contextlib.rst:577
+#: ../../library/contextlib.rst:585
 msgid ""
 "Accepts an arbitrary callback function and arguments and adds it to the "
 "callback stack."
@@ -651,7 +660,7 @@ msgstr ""
 "Приймає довільну функцію зворотного виклику та аргументи та додає їх до "
 "стеку зворотного виклику."
 
-#: ../../library/contextlib.rst:580
+#: ../../library/contextlib.rst:588
 msgid ""
 "Unlike the other methods, callbacks added this way cannot suppress "
 "exceptions (as they are never passed the exception details)."
@@ -660,7 +669,7 @@ msgstr ""
 "можуть придушувати винятки (оскільки їм ніколи не передаються деталі "
 "винятку)."
 
-#: ../../library/contextlib.rst:583
+#: ../../library/contextlib.rst:591
 msgid ""
 "The passed in callback is returned from the function, allowing this method "
 "to be used as a function decorator."
@@ -668,7 +677,7 @@ msgstr ""
 "Переданий зворотний виклик повертається функцією, що дозволяє "
 "використовувати цей метод як декоратор функції."
 
-#: ../../library/contextlib.rst:588
+#: ../../library/contextlib.rst:596
 msgid ""
 "Transfers the callback stack to a fresh :class:`ExitStack` instance and "
 "returns it. No callbacks are invoked by this operation - instead, they will "
@@ -680,7 +689,7 @@ msgstr ""
 "замість цього вони тепер будуть викликані, коли новий стек закривається "
 "(явно чи неявно в кінці оператора :keyword:`with`)."
 
-#: ../../library/contextlib.rst:593
+#: ../../library/contextlib.rst:601
 msgid ""
 "For example, a group of files can be opened as an \"all or nothing\" "
 "operation as follows::"
@@ -688,7 +697,7 @@ msgstr ""
 "Наприклад, групу файлів можна відкрити за допомогою операції \"все або "
 "нічого\" наступним чином:"
 
-#: ../../library/contextlib.rst:607
+#: ../../library/contextlib.rst:615
 msgid ""
 "Immediately unwinds the callback stack, invoking callbacks in the reverse "
 "order of registration. For any context managers and exit callbacks "
@@ -700,7 +709,7 @@ msgstr ""
 "зареєстрованих зворотних викликів виходу передані аргументи вказуватимуть, "
 "що винятків не сталося."
 
-#: ../../library/contextlib.rst:614
+#: ../../library/contextlib.rst:622
 msgid ""
 "An :ref:`asynchronous context manager <async-context-managers>`, similar to "
 ":class:`ExitStack`, that supports combining both synchronous and "
@@ -711,48 +720,48 @@ msgstr ""
 "до :class:`ExitStack`, який підтримує поєднання синхронних і асинхронних "
 "контекстних менеджерів, а також має співпрограми для логіки очищення."
 
-#: ../../library/contextlib.rst:619
+#: ../../library/contextlib.rst:627
 msgid ""
 "The :meth:`~ExitStack.close` method is not implemented; :meth:`aclose` must "
 "be used instead."
 msgstr ""
 
-#: ../../library/contextlib.rst:624
+#: ../../library/contextlib.rst:632
 msgid ""
 "Similar to :meth:`ExitStack.enter_context` but expects an asynchronous "
 "context manager."
 msgstr ""
 
-#: ../../library/contextlib.rst:627
+#: ../../library/contextlib.rst:635
 msgid ""
 "Raises :exc:`TypeError` instead of :exc:`AttributeError` if *cm* is not an "
 "asynchronous context manager."
 msgstr ""
 
-#: ../../library/contextlib.rst:633
+#: ../../library/contextlib.rst:641
 msgid ""
 "Similar to :meth:`ExitStack.push` but expects either an asynchronous context"
 " manager or a coroutine function."
 msgstr ""
 
-#: ../../library/contextlib.rst:638
+#: ../../library/contextlib.rst:646
 msgid ""
 "Similar to :meth:`ExitStack.callback` but expects a coroutine function."
 msgstr ""
 
-#: ../../library/contextlib.rst:642
+#: ../../library/contextlib.rst:650
 msgid "Similar to :meth:`ExitStack.close` but properly handles awaitables."
 msgstr ""
 
-#: ../../library/contextlib.rst:644
+#: ../../library/contextlib.rst:652
 msgid "Continuing the example for :func:`asynccontextmanager`::"
 msgstr "Продовжуємо приклад для :func:`asynccontextmanager`::"
 
-#: ../../library/contextlib.rst:656
+#: ../../library/contextlib.rst:664
 msgid "Examples and Recipes"
 msgstr "Приклади та рецепти"
 
-#: ../../library/contextlib.rst:658
+#: ../../library/contextlib.rst:666
 msgid ""
 "This section describes some examples and recipes for making effective use of"
 " the tools provided by :mod:`contextlib`."
@@ -760,11 +769,11 @@ msgstr ""
 "У цьому розділі описано деякі приклади та рецепти ефективного використання "
 "інструментів, наданих :mod:`contextlib`."
 
-#: ../../library/contextlib.rst:663
+#: ../../library/contextlib.rst:671
 msgid "Supporting a variable number of context managers"
 msgstr "Підтримка змінної кількості контекстних менеджерів"
 
-#: ../../library/contextlib.rst:665
+#: ../../library/contextlib.rst:673
 msgid ""
 "The primary use case for :class:`ExitStack` is the one given in the class "
 "documentation: supporting a variable number of context managers and other "
@@ -780,7 +789,7 @@ msgstr ""
 " введенням користувача (наприклад, відкриття вказаної користувачем колекції "
 "файлів), або через те, що деякі менеджери контексту є необов’язковими:"
 
-#: ../../library/contextlib.rst:680
+#: ../../library/contextlib.rst:688
 msgid ""
 "As shown, :class:`ExitStack` also makes it quite easy to use :keyword:`with`"
 " statements to manage arbitrary resources that don't natively support the "
@@ -790,11 +799,11 @@ msgstr ""
 "оператори :keyword:`with` для керування довільними ресурсами, які спочатку "
 "не підтримують протокол керування контекстом."
 
-#: ../../library/contextlib.rst:686
+#: ../../library/contextlib.rst:694
 msgid "Catching exceptions from ``__enter__`` methods"
 msgstr "Перехоплення винятків із методів ``__enter__``"
 
-#: ../../library/contextlib.rst:688
+#: ../../library/contextlib.rst:696
 msgid ""
 "It is occasionally desirable to catch exceptions from an ``__enter__`` "
 "method implementation, *without* inadvertently catching exceptions from the "
@@ -808,7 +817,7 @@ msgstr ""
 ":class:`ExitStack` кроки в протоколі керування контекстом можна трохи "
 "розділити, щоб дозволити це:"
 
-#: ../../library/contextlib.rst:703
+#: ../../library/contextlib.rst:711
 msgid ""
 "Actually needing to do this is likely to indicate that the underlying API "
 "should be providing a direct resource management interface for use with "
@@ -826,18 +835,18 @@ msgstr ""
 "різноманітних ситуацій, які не можна обробити безпосередньо в операторі "
 ":keyword:`with`."
 
-#: ../../library/contextlib.rst:713
+#: ../../library/contextlib.rst:721
 msgid "Cleaning up in an ``__enter__`` implementation"
 msgstr "Очищення в реалізації ``__enter__``"
 
-#: ../../library/contextlib.rst:715
+#: ../../library/contextlib.rst:723
 msgid ""
 "As noted in the documentation of :meth:`ExitStack.push`, this method can be "
 "useful in cleaning up an already allocated resource if later steps in the "
 ":meth:`~object.__enter__` implementation fail."
 msgstr ""
 
-#: ../../library/contextlib.rst:719
+#: ../../library/contextlib.rst:727
 msgid ""
 "Here's an example of doing this for a context manager that accepts resource "
 "acquisition and release functions, along with an optional validation "
@@ -847,11 +856,11 @@ msgstr ""
 " отримання та звільнення ресурсів разом із додатковою функцією перевірки та "
 "відображає їх у протоколі керування контекстом::"
 
-#: ../../library/contextlib.rst:759
+#: ../../library/contextlib.rst:767
 msgid "Replacing any use of ``try-finally`` and flag variables"
 msgstr "Заміна будь-якого використання змінних ``try-finally`` і прапорців"
 
-#: ../../library/contextlib.rst:761
+#: ../../library/contextlib.rst:769
 msgid ""
 "A pattern you will sometimes see is a ``try-finally`` statement with a flag "
 "variable to indicate whether or not the body of the ``finally`` clause "
@@ -863,7 +872,7 @@ msgstr ""
 "своїй найпростішій формі (з якою вже не можна впоратися лише за допомогою "
 "пропозиції ``except``), це виглядає приблизно так:"
 
-#: ../../library/contextlib.rst:775
+#: ../../library/contextlib.rst:783
 msgid ""
 "As with any ``try`` statement based code, this can cause problems for "
 "development and review, because the setup code and the cleanup code can end "
@@ -873,7 +882,7 @@ msgstr ""
 " спричинити проблеми з розробкою та переглядом, оскільки код налаштування та"
 " код очищення можуть бути розділені довільно довгими частинами коду."
 
-#: ../../library/contextlib.rst:779
+#: ../../library/contextlib.rst:787
 msgid ""
 ":class:`ExitStack` makes it possible to instead register a callback for "
 "execution at the end of a ``with`` statement, and then later decide to skip "
@@ -883,7 +892,7 @@ msgstr ""
 "для виконання в кінці оператора ``with``, а потім вирішити пропустити "
 "виконання цього зворотного виклику::"
 
-#: ../../library/contextlib.rst:791
+#: ../../library/contextlib.rst:799
 msgid ""
 "This allows the intended cleanup up behaviour to be made explicit up front, "
 "rather than requiring a separate flag variable."
@@ -891,7 +900,7 @@ msgstr ""
 "Це дозволяє чітко визначити заплановану поведінку очищення, а не вимагати "
 "окремої змінної прапора."
 
-#: ../../library/contextlib.rst:794
+#: ../../library/contextlib.rst:802
 msgid ""
 "If a particular application uses this pattern a lot, it can be simplified "
 "even further by means of a small helper class::"
@@ -899,7 +908,7 @@ msgstr ""
 "Якщо певна програма часто використовує цей шаблон, його можна ще більше "
 "спростити за допомогою невеликого допоміжного класу:"
 
-#: ../../library/contextlib.rst:812
+#: ../../library/contextlib.rst:820
 msgid ""
 "If the resource cleanup isn't already neatly bundled into a standalone "
 "function, then it is still possible to use the decorator form of "
@@ -909,7 +918,7 @@ msgstr ""
 "можна використовувати форму декоратора :meth:`ExitStack.callback`, щоб "
 "оголосити очищення ресурсу заздалегідь::"
 
-#: ../../library/contextlib.rst:827
+#: ../../library/contextlib.rst:835
 msgid ""
 "Due to the way the decorator protocol works, a callback function declared "
 "this way cannot take any parameters. Instead, any resources to be released "
@@ -920,11 +929,11 @@ msgstr ""
 "до будь-яких ресурсів, які потрібно звільнити, має здійснюватися як змінні "
 "закриття."
 
-#: ../../library/contextlib.rst:833
+#: ../../library/contextlib.rst:841
 msgid "Using a context manager as a function decorator"
 msgstr "Використання контекстного менеджера як декоратора функції"
 
-#: ../../library/contextlib.rst:835
+#: ../../library/contextlib.rst:843
 msgid ""
 ":class:`ContextDecorator` makes it possible to use a context manager in both"
 " an ordinary ``with`` statement and also as a function decorator."
@@ -932,7 +941,7 @@ msgstr ""
 ":class:`ContextDecorator` дає змогу використовувати менеджер контексту як у "
 "звичайному операторі ``with``, так і як декоратор функції."
 
-#: ../../library/contextlib.rst:838
+#: ../../library/contextlib.rst:846
 msgid ""
 "For example, it is sometimes useful to wrap functions or groups of "
 "statements with a logger that can track the time of entry and time of exit."
@@ -946,15 +955,15 @@ msgstr ""
 "успадкування від :class:`ContextDecorator` надає обидві можливості в одному "
 "визначенні::"
 
-#: ../../library/contextlib.rst:859
+#: ../../library/contextlib.rst:867
 msgid "Instances of this class can be used as both a context manager::"
 msgstr "Екземпляри цього класу можна використовувати і як менеджер контексту:"
 
-#: ../../library/contextlib.rst:865
+#: ../../library/contextlib.rst:873
 msgid "And also as a function decorator::"
 msgstr "А також як декоратор функцій::"
 
-#: ../../library/contextlib.rst:872
+#: ../../library/contextlib.rst:880
 msgid ""
 "Note that there is one additional limitation when using context managers as "
 "function decorators: there's no way to access the return value of "
@@ -962,23 +971,23 @@ msgid ""
 "necessary to use an explicit ``with`` statement."
 msgstr ""
 
-#: ../../library/contextlib.rst:880
+#: ../../library/contextlib.rst:888
 msgid ":pep:`343` - The \"with\" statement"
 msgstr ":pep:`343` - оператор \"з\"."
 
-#: ../../library/contextlib.rst:880
+#: ../../library/contextlib.rst:888
 msgid ""
 "The specification, background, and examples for the Python :keyword:`with` "
 "statement."
 msgstr ""
 "Специфікація, передумови та приклади оператора Python :keyword:`with`."
 
-#: ../../library/contextlib.rst:886
+#: ../../library/contextlib.rst:894
 msgid "Single use, reusable and reentrant context managers"
 msgstr ""
 "Менеджери контексту для одноразового, багаторазового та повторного входу"
 
-#: ../../library/contextlib.rst:888
+#: ../../library/contextlib.rst:896
 msgid ""
 "Most context managers are written in a way that means they can only be used "
 "effectively in a :keyword:`with` statement once. These single use context "
@@ -992,7 +1001,7 @@ msgstr ""
 "коли вони використовуються — спроба використати їх вдруге призведе до "
 "виключення або іншим чином не працюватиме належним чином."
 
-#: ../../library/contextlib.rst:894
+#: ../../library/contextlib.rst:902
 msgid ""
 "This common limitation means that it is generally advisable to create "
 "context managers directly in the header of the :keyword:`with` statement "
@@ -1002,7 +1011,7 @@ msgstr ""
 "контексту безпосередньо в заголовку оператора :keyword:`with`, де вони "
 "використовуються (як показано в усіх наведених вище прикладах використання)."
 
-#: ../../library/contextlib.rst:898
+#: ../../library/contextlib.rst:906
 msgid ""
 "Files are an example of effectively single use context managers, since the "
 "first :keyword:`with` statement will close the file, preventing any further "
@@ -1012,7 +1021,7 @@ msgstr ""
 "перший оператор :keyword:`with` закриває файл, запобігаючи будь-яким "
 "подальшим операціям вводу-виводу з використанням цього файлового об’єкта."
 
-#: ../../library/contextlib.rst:902
+#: ../../library/contextlib.rst:910
 msgid ""
 "Context managers created using :func:`contextmanager` are also single use "
 "context managers, and will complain about the underlying generator failing "
@@ -1022,11 +1031,11 @@ msgstr ""
 "одноразовими менеджерами контексту, і вони скаржаться на те, що базовий "
 "генератор не працює, якщо буде зроблена спроба використати їх вдруге:"
 
-#: ../../library/contextlib.rst:930
+#: ../../library/contextlib.rst:938
 msgid "Reentrant context managers"
 msgstr "Реентерабельні контекстні менеджери"
 
-#: ../../library/contextlib.rst:932
+#: ../../library/contextlib.rst:940
 msgid ""
 "More sophisticated context managers may be \"reentrant\". These context "
 "managers can not only be used in multiple :keyword:`with` statements, but "
@@ -1038,14 +1047,14 @@ msgstr ""
 ":keyword:`with`, але також *всередині* оператора :keyword:`!with`, який уже "
 "використовує той самий менеджер контексту."
 
-#: ../../library/contextlib.rst:937
+#: ../../library/contextlib.rst:945
 msgid ""
 ":class:`threading.RLock` is an example of a reentrant context manager, as "
 "are :func:`suppress`, :func:`redirect_stdout`, and :func:`chdir`. Here's a "
 "very simple example of reentrant use::"
 msgstr ""
 
-#: ../../library/contextlib.rst:956
+#: ../../library/contextlib.rst:964
 msgid ""
 "Real world examples of reentrancy are more likely to involve multiple "
 "functions calling each other and hence be far more complicated than this "
@@ -1055,7 +1064,7 @@ msgstr ""
 " функцій, які викликають одна одну, і, отже, вони набагато складніші, ніж "
 "цей приклад."
 
-#: ../../library/contextlib.rst:960
+#: ../../library/contextlib.rst:968
 msgid ""
 "Note also that being reentrant is *not* the same thing as being thread safe."
 " :func:`redirect_stdout`, for example, is definitely not thread safe, as it "
@@ -1067,11 +1076,11 @@ msgstr ""
 "потоків, оскільки він робить глобальну модифікацію стану системи шляхом "
 "прив’язки :data:`sys.stdout` до іншого потоку."
 
-#: ../../library/contextlib.rst:969
+#: ../../library/contextlib.rst:977
 msgid "Reusable context managers"
 msgstr "Багаторазові контекстні менеджери"
 
-#: ../../library/contextlib.rst:971
+#: ../../library/contextlib.rst:979
 msgid ""
 "Distinct from both single use and reentrant context managers are "
 "\"reusable\" context managers (or, to be completely explicit, \"reusable, "
@@ -1088,7 +1097,7 @@ msgstr ""
 "працюватимуть належним чином), якщо конкретний екземпляр контекстного "
 "менеджера вже використовувався в операторі containing with."
 
-#: ../../library/contextlib.rst:978
+#: ../../library/contextlib.rst:986
 msgid ""
 ":class:`threading.Lock` is an example of a reusable, but not reentrant, "
 "context manager (for a reentrant lock, it is necessary to use "
@@ -1098,7 +1107,7 @@ msgstr ""
 "реентрантного, контекстного менеджера (для повторного вхідного блокування "
 "замість цього необхідно використовувати :class:`threading.RLock`)."
 
-#: ../../library/contextlib.rst:982
+#: ../../library/contextlib.rst:990
 msgid ""
 "Another example of a reusable, but not reentrant, context manager is "
 ":class:`ExitStack`, as it invokes *all* currently registered callbacks when "
@@ -1109,7 +1118,7 @@ msgstr ""
 "зареєстровані наразі зворотні виклики, коли залишає будь-який оператор with,"
 " незалежно від того, де ці зворотні виклики було додано::"
 
-#: ../../library/contextlib.rst:1013
+#: ../../library/contextlib.rst:1021
 msgid ""
 "As the output from the example shows, reusing a single stack object across "
 "multiple with statements works correctly, but attempting to nest them will "
@@ -1121,7 +1130,7 @@ msgstr ""
 "спричинить очищення стека в кінці внутрішнього оператора with, що навряд чи "
 "буде бажаною поведінкою."
 
-#: ../../library/contextlib.rst:1018
+#: ../../library/contextlib.rst:1026
 msgid ""
 "Using separate :class:`ExitStack` instances instead of reusing a single "
 "instance avoids that problem::"
