@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 14:14+0000\n"
+"POT-Creation-Date: 2024-02-02 15:40+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -691,7 +691,7 @@ msgstr "Приклади"
 msgid ":class:`socketserver.TCPServer` Example"
 msgstr ":class:`socketserver.TCPServer` Приклад"
 
-#: ../../library/socketserver.rst:481 ../../library/socketserver.rst:580
+#: ../../library/socketserver.rst:481 ../../library/socketserver.rst:581
 msgid "This is the server side::"
 msgstr "Це сторона сервера::"
 
@@ -710,34 +710,31 @@ msgid ""
 "The difference is that the ``readline()`` call in the second handler will "
 "call ``recv()`` multiple times until it encounters a newline character, "
 "while the single ``recv()`` call in the first handler will just return what "
-"has been sent from the client in one ``sendall()`` call."
+"has been received so far from the client's ``sendall()`` call (typically all"
+" of it, but this is not guaranteed by the TCP protocol)."
 msgstr ""
-"Різниця полягає в тому, що виклик ``readline()`` у другому обробнику "
-"викликає ``recv()`` кілька разів, доки не зустріне символ нового рядка, тоді"
-" як один виклик ``recv()`` у першому обробнику просто поверне те, що було "
-"надіслано від клієнта в одному виклику ``sendall()``."
 
-#: ../../library/socketserver.rst:532 ../../library/socketserver.rst:604
+#: ../../library/socketserver.rst:533 ../../library/socketserver.rst:605
 msgid "This is the client side::"
 msgstr "Це сторона клієнта::"
 
-#: ../../library/socketserver.rst:553 ../../library/socketserver.rst:679
+#: ../../library/socketserver.rst:554 ../../library/socketserver.rst:680
 msgid "The output of the example should look something like this:"
 msgstr "Результат прикладу має виглядати приблизно так:"
 
-#: ../../library/socketserver.rst:555
+#: ../../library/socketserver.rst:556
 msgid "Server:"
 msgstr "сервер:"
 
-#: ../../library/socketserver.rst:565
+#: ../../library/socketserver.rst:566
 msgid "Client:"
 msgstr "Клієнт:"
 
-#: ../../library/socketserver.rst:578
+#: ../../library/socketserver.rst:579
 msgid ":class:`socketserver.UDPServer` Example"
 msgstr ":class:`socketserver.UDPServer` Приклад"
 
-#: ../../library/socketserver.rst:623
+#: ../../library/socketserver.rst:624
 msgid ""
 "The output of the example should look exactly like for the TCP server "
 "example."
@@ -745,11 +742,11 @@ msgstr ""
 "Вихідні дані прикладу мають виглядати точно так само, як для прикладу "
 "сервера TCP."
 
-#: ../../library/socketserver.rst:627
+#: ../../library/socketserver.rst:628
 msgid "Asynchronous Mixins"
 msgstr "Асинхронні міксини"
 
-#: ../../library/socketserver.rst:629
+#: ../../library/socketserver.rst:630
 msgid ""
 "To build asynchronous handlers, use the :class:`ThreadingMixIn` and "
 ":class:`ForkingMixIn` classes."
@@ -757,11 +754,11 @@ msgstr ""
 "Для створення асинхронних обробників використовуйте класи "
 ":class:`ThreadingMixIn` і :class:`ForkingMixIn`."
 
-#: ../../library/socketserver.rst:632
+#: ../../library/socketserver.rst:633
 msgid "An example for the :class:`ThreadingMixIn` class::"
 msgstr "Приклад класу :class:`ThreadingMixIn`::"
 
-#: ../../library/socketserver.rst:690
+#: ../../library/socketserver.rst:691
 msgid ""
 "The :class:`ForkingMixIn` class is used in the same way, except that the "
 "server will spawn a new process for each request. Available only on POSIX "
