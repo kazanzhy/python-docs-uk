@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-12 14:14+0000\n"
+"POT-Creation-Date: 2024-02-02 15:40+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -80,22 +80,15 @@ msgstr ""
 msgid ""
 "Remove the item at the given position in the list, and return it.  If no "
 "index is specified, ``a.pop()`` removes and returns the last item in the "
-"list.  (The square brackets around the *i* in the method signature denote "
-"that the parameter is optional, not that you should type square brackets at "
-"that position.  You will see this notation frequently in the Python Library "
-"Reference.)"
+"list. It raises an :exc:`IndexError` if the list is empty or the index is "
+"outside the list range."
 msgstr ""
-"Видаліть елемент у вказаній позиції у списку та поверніть його. Якщо індекс "
-"не вказано, ``a.pop()`` видаляє та повертає останній елемент у списку. "
-"(Квадратні дужки навколо *i* в сигнатурі методу означають, що параметр є "
-"необов’язковим, а не те, що ви повинні вводити квадратні дужки в цій "
-"позиції. Ви часто побачите це позначення в Довіднику з бібліотеки Python.)"
 
-#: ../../tutorial/datastructures.rst:60
+#: ../../tutorial/datastructures.rst:59
 msgid "Remove all items from the list.  Equivalent to ``del a[:]``."
 msgstr "Видалити всі елементи зі списку. Еквівалент ``del a[:]``."
 
-#: ../../tutorial/datastructures.rst:66
+#: ../../tutorial/datastructures.rst:65
 msgid ""
 "Return zero-based index in the list of the first item whose value is equal "
 "to *x*. Raises a :exc:`ValueError` if there is no such item."
@@ -103,7 +96,7 @@ msgstr ""
 "Повертає індекс від нуля в списку першого елемента, значення якого дорівнює "
 "*x*. Викликає :exc:`ValueError`, якщо такого елемента немає."
 
-#: ../../tutorial/datastructures.rst:69
+#: ../../tutorial/datastructures.rst:68
 msgid ""
 "The optional arguments *start* and *end* are interpreted as in the slice "
 "notation and are used to limit the search to a particular subsequence of the"
@@ -115,11 +108,11 @@ msgstr ""
 "підпослідовністю списку. Повернений індекс обчислюється відносно початку "
 "повної послідовності, а не аргументу *start*."
 
-#: ../../tutorial/datastructures.rst:78
+#: ../../tutorial/datastructures.rst:77
 msgid "Return the number of times *x* appears in the list."
 msgstr "Повертає кількість разів *x* у списку."
 
-#: ../../tutorial/datastructures.rst:84
+#: ../../tutorial/datastructures.rst:83
 msgid ""
 "Sort the items of the list in place (the arguments can be used for sort "
 "customization, see :func:`sorted` for their explanation)."
@@ -127,19 +120,19 @@ msgstr ""
 "Відсортуйте елементи списку за місцем (аргументи можна використовувати для "
 "налаштування сортування, див. :func:`sorted` для їх пояснення)."
 
-#: ../../tutorial/datastructures.rst:91
+#: ../../tutorial/datastructures.rst:90
 msgid "Reverse the elements of the list in place."
 msgstr "Переверніть елементи списку на місці."
 
-#: ../../tutorial/datastructures.rst:97
+#: ../../tutorial/datastructures.rst:96
 msgid "Return a shallow copy of the list.  Equivalent to ``a[:]``."
 msgstr "Поверніть мілку копію списку. Еквівалент ``a[:]``."
 
-#: ../../tutorial/datastructures.rst:100
+#: ../../tutorial/datastructures.rst:99
 msgid "An example that uses most of the list methods::"
 msgstr "Приклад, який використовує більшість методів списку::"
 
-#: ../../tutorial/datastructures.rst:123
+#: ../../tutorial/datastructures.rst:122
 msgid ""
 "You might have noticed that methods like ``insert``, ``remove`` or ``sort`` "
 "that only modify the list have no return value printed -- they return the "
@@ -151,7 +144,7 @@ msgstr ""
 "за замовчуванням ``None``. [#]_ Це принцип проектування всіх змінюваних "
 "структур даних у Python."
 
-#: ../../tutorial/datastructures.rst:128
+#: ../../tutorial/datastructures.rst:127
 msgid ""
 "Another thing you might notice is that not all data can be sorted or "
 "compared.  For instance, ``[None, 'hello', 10]`` doesn't sort because "
@@ -165,11 +158,11 @@ msgstr ""
 "типами. Крім того, є деякі типи, які не мають визначеного зв’язку порядку. "
 "Наприклад, ``3+4j < 5+7j`` не є дійсним порівнянням."
 
-#: ../../tutorial/datastructures.rst:139
+#: ../../tutorial/datastructures.rst:138
 msgid "Using Lists as Stacks"
 msgstr "Використання списків як стеків"
 
-#: ../../tutorial/datastructures.rst:144
+#: ../../tutorial/datastructures.rst:143
 msgid ""
 "The list methods make it very easy to use a list as a stack, where the last "
 "element added is the first element retrieved (\"last-in, first-out\").  To "
@@ -178,11 +171,11 @@ msgid ""
 " index.  For example::"
 msgstr ""
 
-#: ../../tutorial/datastructures.rst:169
+#: ../../tutorial/datastructures.rst:168
 msgid "Using Lists as Queues"
 msgstr "Використання списків як черг"
 
-#: ../../tutorial/datastructures.rst:173
+#: ../../tutorial/datastructures.rst:172
 msgid ""
 "It is also possible to use a list as a queue, where the first element added "
 "is the first element retrieved (\"first-in, first-out\"); however, lists are"
@@ -197,7 +190,7 @@ msgstr ""
 "відбувається повільно (оскільки всі інші елементи мають бути зміщені на "
 "одиницю)."
 
-#: ../../tutorial/datastructures.rst:179
+#: ../../tutorial/datastructures.rst:178
 msgid ""
 "To implement a queue, use :class:`collections.deque` which was designed to "
 "have fast appends and pops from both ends.  For example::"
@@ -205,11 +198,11 @@ msgstr ""
 "Щоб реалізувати чергу, використовуйте :class:`collections.deque`, який був "
 "розроблений для швидкого додавання та висування з обох кінців. Наприклад::"
 
-#: ../../tutorial/datastructures.rst:197
+#: ../../tutorial/datastructures.rst:196
 msgid "List Comprehensions"
 msgstr "Розуміння списку"
 
-#: ../../tutorial/datastructures.rst:199
+#: ../../tutorial/datastructures.rst:198
 msgid ""
 "List comprehensions provide a concise way to create lists. Common "
 "applications are to make new lists where each element is the result of some "
@@ -222,12 +215,12 @@ msgstr ""
 "послідовності або ітерації, або створення підпослідовності тих елементів, "
 "які задовольняють певну умову."
 
-#: ../../tutorial/datastructures.rst:204
+#: ../../tutorial/datastructures.rst:203
 msgid "For example, assume we want to create a list of squares, like::"
 msgstr ""
 "Наприклад, припустимо, що ми хочемо створити список квадратів, наприклад:"
 
-#: ../../tutorial/datastructures.rst:213
+#: ../../tutorial/datastructures.rst:212
 msgid ""
 "Note that this creates (or overwrites) a variable named ``x`` that still "
 "exists after the loop completes.  We can calculate the list of squares "
@@ -237,15 +230,15 @@ msgstr ""
 "існує після завершення циклу. Ми можемо обчислити список квадратів без "
 "побічних ефектів за допомогою:"
 
-#: ../../tutorial/datastructures.rst:219
+#: ../../tutorial/datastructures.rst:218
 msgid "or, equivalently::"
 msgstr "або, що еквівалентно::"
 
-#: ../../tutorial/datastructures.rst:223
+#: ../../tutorial/datastructures.rst:222
 msgid "which is more concise and readable."
 msgstr "який більш стислий і читабельний."
 
-#: ../../tutorial/datastructures.rst:225
+#: ../../tutorial/datastructures.rst:224
 msgid ""
 "A list comprehension consists of brackets containing an expression followed "
 "by a :keyword:`!for` clause, then zero or more :keyword:`!for` or "
@@ -261,11 +254,11 @@ msgstr ""
 "слідують за ним. Наприклад, цей listcomp поєднує елементи двох списків, якщо"
 " вони не рівні:"
 
-#: ../../tutorial/datastructures.rst:235
+#: ../../tutorial/datastructures.rst:234
 msgid "and it's equivalent to::"
 msgstr "і це еквівалентно::"
 
-#: ../../tutorial/datastructures.rst:246
+#: ../../tutorial/datastructures.rst:245
 msgid ""
 "Note how the order of the :keyword:`for` and :keyword:`if` statements is the"
 " same in both these snippets."
@@ -273,7 +266,7 @@ msgstr ""
 "Зверніть увагу, що порядок операторів :keyword:`for` і :keyword:`if` "
 "однаковий в обох цих фрагментах."
 
-#: ../../tutorial/datastructures.rst:249
+#: ../../tutorial/datastructures.rst:248
 msgid ""
 "If the expression is a tuple (e.g. the ``(x, y)`` in the previous example), "
 "it must be parenthesized. ::"
@@ -281,16 +274,16 @@ msgstr ""
 "Якщо вираз є кортежем (наприклад, ``(x, y)`` у попередньому прикладі), його "
 "потрібно взяти в дужки. ::"
 
-#: ../../tutorial/datastructures.rst:280
+#: ../../tutorial/datastructures.rst:279
 msgid ""
 "List comprehensions can contain complex expressions and nested functions::"
 msgstr "Розуміння списків може містити складні вирази та вкладені функції:"
 
-#: ../../tutorial/datastructures.rst:287
+#: ../../tutorial/datastructures.rst:286
 msgid "Nested List Comprehensions"
 msgstr "Розуміння вкладених списків"
 
-#: ../../tutorial/datastructures.rst:289
+#: ../../tutorial/datastructures.rst:288
 msgid ""
 "The initial expression in a list comprehension can be any arbitrary "
 "expression, including another list comprehension."
@@ -298,7 +291,7 @@ msgstr ""
 "Початковим виразом у розуміння списку може бути будь-який довільний вираз, "
 "включаючи інший розуміння списку."
 
-#: ../../tutorial/datastructures.rst:292
+#: ../../tutorial/datastructures.rst:291
 msgid ""
 "Consider the following example of a 3x4 matrix implemented as a list of 3 "
 "lists of length 4::"
@@ -306,11 +299,11 @@ msgstr ""
 "Розглянемо наступний приклад матриці 3x4, реалізованої як список із 3 "
 "списків довжини 4::"
 
-#: ../../tutorial/datastructures.rst:301
+#: ../../tutorial/datastructures.rst:300
 msgid "The following list comprehension will transpose rows and columns::"
 msgstr "Наступне включення списку транспонує рядки та стовпці:"
 
-#: ../../tutorial/datastructures.rst:306
+#: ../../tutorial/datastructures.rst:305
 msgid ""
 "As we saw in the previous section, the inner list comprehension is evaluated"
 " in the context of the :keyword:`for` that follows it, so this example is "
@@ -320,11 +313,11 @@ msgstr ""
 " в контексті :keyword:`for`, який слідує за ним, тому цей приклад "
 "еквівалентний::"
 
-#: ../../tutorial/datastructures.rst:317
+#: ../../tutorial/datastructures.rst:316
 msgid "which, in turn, is the same as::"
 msgstr "що, у свою чергу, те саме, що::"
 
-#: ../../tutorial/datastructures.rst:330
+#: ../../tutorial/datastructures.rst:329
 msgid ""
 "In the real world, you should prefer built-in functions to complex flow "
 "statements. The :func:`zip` function would do a great job for this use "
@@ -334,18 +327,18 @@ msgstr ""
 "складними операторами потоку. Функція :func:`zip` чудово впорається з цим "
 "випадком використання::"
 
-#: ../../tutorial/datastructures.rst:336
+#: ../../tutorial/datastructures.rst:335
 msgid ""
 "See :ref:`tut-unpacking-arguments` for details on the asterisk in this line."
 msgstr ""
 "Перегляньте :ref:`tut-unpacking-arguments`, щоб дізнатися більше про зірочку"
 " в цьому рядку."
 
-#: ../../tutorial/datastructures.rst:341
+#: ../../tutorial/datastructures.rst:340
 msgid "The :keyword:`!del` statement"
 msgstr "Оператор :keyword:`!del`"
 
-#: ../../tutorial/datastructures.rst:343
+#: ../../tutorial/datastructures.rst:342
 msgid ""
 "There is a way to remove an item from a list given its index instead of its "
 "value: the :keyword:`del` statement.  This differs from the "
@@ -355,12 +348,12 @@ msgid ""
 "For example::"
 msgstr ""
 
-#: ../../tutorial/datastructures.rst:360
+#: ../../tutorial/datastructures.rst:359
 msgid ":keyword:`del` can also be used to delete entire variables::"
 msgstr ""
 ":keyword:`del` також можна використовувати для видалення змінних повністю::"
 
-#: ../../tutorial/datastructures.rst:364
+#: ../../tutorial/datastructures.rst:363
 msgid ""
 "Referencing the name ``a`` hereafter is an error (at least until another "
 "value is assigned to it).  We'll find other uses for :keyword:`del` later."
@@ -369,11 +362,11 @@ msgstr ""
 " буде присвоєно інше значення). Пізніше ми знайдемо інші способи "
 "використання :keyword:`del`."
 
-#: ../../tutorial/datastructures.rst:371
+#: ../../tutorial/datastructures.rst:370
 msgid "Tuples and Sequences"
 msgstr "Кортежі та послідовності"
 
-#: ../../tutorial/datastructures.rst:373
+#: ../../tutorial/datastructures.rst:372
 msgid ""
 "We saw that lists and strings have many common properties, such as indexing "
 "and slicing operations.  They are two examples of *sequence* data types (see"
@@ -387,12 +380,12 @@ msgstr ""
 "додавати інші типи даних послідовності. Існує ще один стандартний тип даних "
 "послідовності: *кортеж*."
 
-#: ../../tutorial/datastructures.rst:379
+#: ../../tutorial/datastructures.rst:378
 msgid ""
 "A tuple consists of a number of values separated by commas, for instance::"
 msgstr "Кортеж складається з кількох значень, розділених комами, наприклад::"
 
-#: ../../tutorial/datastructures.rst:401
+#: ../../tutorial/datastructures.rst:400
 msgid ""
 "As you see, on output tuples are always enclosed in parentheses, so that "
 "nested tuples are interpreted correctly; they may be input with or without "
@@ -407,7 +400,7 @@ msgstr ""
 "частиною більшого виразу). Неможливо призначити окремі елементи кортежу, "
 "однак можна створити кортежі, які містять змінні об’єкти, наприклад списки."
 
-#: ../../tutorial/datastructures.rst:408
+#: ../../tutorial/datastructures.rst:407
 msgid ""
 "Though tuples may seem similar to lists, they are often used in different "
 "situations and for different purposes. Tuples are :term:`immutable`, and "
@@ -425,7 +418,7 @@ msgstr ""
 "<collections.namedtuple>`). Списки є :term:`mutable`, і їхні елементи, як "
 "правило, є однорідними та доступні за допомогою ітерації по списку."
 
-#: ../../tutorial/datastructures.rst:416
+#: ../../tutorial/datastructures.rst:415
 msgid ""
 "A special problem is the construction of tuples containing 0 or 1 items: the"
 " syntax has some extra quirks to accommodate these.  Empty tuples are "
@@ -439,7 +432,7 @@ msgstr ""
 "елементом створюється шляхом коми після значення (недостатньо взяти одне "
 "значення в дужки). Негарно, але ефективно. Наприклад::"
 
-#: ../../tutorial/datastructures.rst:431
+#: ../../tutorial/datastructures.rst:430
 msgid ""
 "The statement ``t = 12345, 54321, 'hello!'`` is an example of *tuple "
 "packing*: the values ``12345``, ``54321`` and ``'hello!'`` are packed "
@@ -449,7 +442,7 @@ msgstr ""
 "значення ``12345``, ``54321`` і ``'hello!''`` упаковуються разом в кортежі. "
 "Можлива і зворотна операція:"
 
-#: ../../tutorial/datastructures.rst:437
+#: ../../tutorial/datastructures.rst:436
 msgid ""
 "This is called, appropriately enough, *sequence unpacking* and works for any"
 " sequence on the right-hand side.  Sequence unpacking requires that there "
@@ -463,11 +456,11 @@ msgstr ""
 "послідовності. Зауважте, що множинне призначення насправді є лише "
 "комбінацією упаковки кортежів і розпакування послідовності."
 
-#: ../../tutorial/datastructures.rst:447
+#: ../../tutorial/datastructures.rst:446
 msgid "Sets"
 msgstr "Набори"
 
-#: ../../tutorial/datastructures.rst:449
+#: ../../tutorial/datastructures.rst:448
 msgid ""
 "Python also includes a data type for *sets*.  A set is an unordered "
 "collection with no duplicate elements.  Basic uses include membership "
@@ -481,7 +474,7 @@ msgstr ""
 "підтримують математичні операції, такі як об’єднання, перетин, різниця та "
 "симетрична різниця."
 
-#: ../../tutorial/datastructures.rst:454
+#: ../../tutorial/datastructures.rst:453
 msgid ""
 "Curly braces or the :func:`set` function can be used to create sets.  Note: "
 "to create an empty set you have to use ``set()``, not ``{}``; the latter "
@@ -493,11 +486,11 @@ msgstr ""
 " ``set()``, а не ``{}``; останній створює порожній словник, структуру даних,"
 " яку ми обговоримо в наступному розділі."
 
-#: ../../tutorial/datastructures.rst:458
+#: ../../tutorial/datastructures.rst:457
 msgid "Here is a brief demonstration::"
 msgstr "Ось коротка демонстрація:"
 
-#: ../../tutorial/datastructures.rst:483
+#: ../../tutorial/datastructures.rst:482
 msgid ""
 "Similarly to :ref:`list comprehensions <tut-listcomps>`, set comprehensions "
 "are also supported::"
@@ -505,11 +498,11 @@ msgstr ""
 "Подібно до :ref:`списків розуміння <tut-listcomps>`, також підтримуються "
 "набір розуміння::"
 
-#: ../../tutorial/datastructures.rst:494
+#: ../../tutorial/datastructures.rst:493
 msgid "Dictionaries"
 msgstr "словники"
 
-#: ../../tutorial/datastructures.rst:496
+#: ../../tutorial/datastructures.rst:495
 msgid ""
 "Another useful data type built into Python is the *dictionary* (see "
 ":ref:`typesmapping`). Dictionaries are sometimes found in other languages as"
@@ -523,7 +516,7 @@ msgid ""
 "like :meth:`~list.append` and :meth:`~list.extend`."
 msgstr ""
 
-#: ../../tutorial/datastructures.rst:507
+#: ../../tutorial/datastructures.rst:506
 msgid ""
 "It is best to think of a dictionary as a set of *key: value* pairs, with the"
 " requirement that the keys are unique (within one dictionary). A pair of "
@@ -537,7 +530,7 @@ msgstr ""
 "ключ:значення в фігурних дужках додає початкові пари ключ:значення до "
 "словника; це також спосіб написання словників на виході."
 
-#: ../../tutorial/datastructures.rst:513
+#: ../../tutorial/datastructures.rst:512
 msgid ""
 "The main operations on a dictionary are storing a value with some key and "
 "extracting the value given the key.  It is also possible to delete a "
@@ -551,7 +544,7 @@ msgstr ""
 "використовується, старе значення, пов’язане з цим ключем, забувається. "
 "Видобування значення за допомогою неіснуючого ключа є помилкою."
 
-#: ../../tutorial/datastructures.rst:519
+#: ../../tutorial/datastructures.rst:518
 msgid ""
 "Performing ``list(d)`` on a dictionary returns a list of all the keys used "
 "in the dictionary, in insertion order (if you want it sorted, just use "
@@ -563,11 +556,11 @@ msgstr ""
 "просто використовуйте ``sorted(d)``). Щоб перевірити, чи є один ключ у "
 "словнику, використовуйте ключове слово :keyword:`in`."
 
-#: ../../tutorial/datastructures.rst:524
+#: ../../tutorial/datastructures.rst:523
 msgid "Here is a small example using a dictionary::"
 msgstr "Ось невеликий приклад використання словника::"
 
-#: ../../tutorial/datastructures.rst:545
+#: ../../tutorial/datastructures.rst:544
 msgid ""
 "The :func:`dict` constructor builds dictionaries directly from sequences of "
 "key-value pairs::"
@@ -575,7 +568,7 @@ msgstr ""
 "Конструктор :func:`dict` створює словники безпосередньо з послідовностей пар"
 " ключ-значення:"
 
-#: ../../tutorial/datastructures.rst:551
+#: ../../tutorial/datastructures.rst:550
 msgid ""
 "In addition, dict comprehensions can be used to create dictionaries from "
 "arbitrary key and value expressions::"
@@ -583,7 +576,7 @@ msgstr ""
 "Крім того, розуміння dict можна використовувати для створення словників із "
 "довільних ключів і виразів значень:"
 
-#: ../../tutorial/datastructures.rst:557
+#: ../../tutorial/datastructures.rst:556
 msgid ""
 "When the keys are simple strings, it is sometimes easier to specify pairs "
 "using keyword arguments::"
@@ -591,17 +584,17 @@ msgstr ""
 "Коли ключі є простими рядками, інколи легше вказати пари за допомогою "
 "аргументів ключових слів::"
 
-#: ../../tutorial/datastructures.rst:567
+#: ../../tutorial/datastructures.rst:566
 msgid "Looping Techniques"
 msgstr "Техніка циклу"
 
-#: ../../tutorial/datastructures.rst:569
+#: ../../tutorial/datastructures.rst:568
 msgid ""
 "When looping through dictionaries, the key and corresponding value can be "
 "retrieved at the same time using the :meth:`~dict.items` method. ::"
 msgstr ""
 
-#: ../../tutorial/datastructures.rst:579
+#: ../../tutorial/datastructures.rst:578
 msgid ""
 "When looping through a sequence, the position index and corresponding value "
 "can be retrieved at the same time using the :func:`enumerate` function. ::"
@@ -609,7 +602,7 @@ msgstr ""
 "Під час циклічного перегляду послідовності індекс позиції та відповідне "
 "значення можна отримати одночасно за допомогою функції :func:`enumerate`. ::"
 
-#: ../../tutorial/datastructures.rst:589
+#: ../../tutorial/datastructures.rst:588
 msgid ""
 "To loop over two or more sequences at the same time, the entries can be "
 "paired with the :func:`zip` function. ::"
@@ -617,7 +610,7 @@ msgstr ""
 "Щоб перейти до двох або більше послідовностей одночасно, записи можна "
 "поєднати з функцією :func:`zip`. ::"
 
-#: ../../tutorial/datastructures.rst:601
+#: ../../tutorial/datastructures.rst:600
 msgid ""
 "To loop over a sequence in reverse, first specify the sequence in a forward "
 "direction and then call the :func:`reversed` function. ::"
@@ -625,7 +618,7 @@ msgstr ""
 "Щоб виконати цикл у зворотному напрямку, спочатку вкажіть послідовність у "
 "прямому напрямку, а потім викличте функцію :func:`reversed`. ::"
 
-#: ../../tutorial/datastructures.rst:613
+#: ../../tutorial/datastructures.rst:612
 msgid ""
 "To loop over a sequence in sorted order, use the :func:`sorted` function "
 "which returns a new sorted list while leaving the source unaltered. ::"
@@ -634,7 +627,7 @@ msgstr ""
 "функцію :func:`sorted`, яка повертає новий відсортований список, залишаючи "
 "джерело без змін. ::"
 
-#: ../../tutorial/datastructures.rst:627
+#: ../../tutorial/datastructures.rst:626
 msgid ""
 "Using :func:`set` on a sequence eliminates duplicate elements. The use of "
 ":func:`sorted` in combination with :func:`set` over a sequence is an "
@@ -646,7 +639,7 @@ msgstr ""
 "ідіоматичним способом проходження унікальних елементів послідовності в "
 "порядку сортування. ::"
 
-#: ../../tutorial/datastructures.rst:640
+#: ../../tutorial/datastructures.rst:639
 msgid ""
 "It is sometimes tempting to change a list while you are looping over it; "
 "however, it is often simpler and safer to create a new list instead. ::"
@@ -654,11 +647,11 @@ msgstr ""
 "Іноді виникає спокуса змінити список, поки ви переглядаєте його; однак часто"
 " простіше й безпечніше створити новий список. ::"
 
-#: ../../tutorial/datastructures.rst:657
+#: ../../tutorial/datastructures.rst:656
 msgid "More on Conditions"
 msgstr "Детальніше про умови"
 
-#: ../../tutorial/datastructures.rst:659
+#: ../../tutorial/datastructures.rst:658
 msgid ""
 "The conditions used in ``while`` and ``if`` statements can contain any "
 "operators, not just comparisons."
@@ -666,7 +659,7 @@ msgstr ""
 "Умови, які використовуються в операторах while і if, можуть містити будь-які"
 " оператори, а не лише порівняння."
 
-#: ../../tutorial/datastructures.rst:663
+#: ../../tutorial/datastructures.rst:662
 msgid ""
 "The comparison operators ``in`` and ``not in`` are membership tests that "
 "determine whether a value is in (or not in) a container.  The operators "
@@ -680,7 +673,7 @@ msgstr ""
 "оператори порівняння мають однаковий пріоритет, який нижчий, ніж у всіх "
 "числових операторів."
 
-#: ../../tutorial/datastructures.rst:669
+#: ../../tutorial/datastructures.rst:668
 msgid ""
 "Comparisons can be chained.  For example, ``a < b == c`` tests whether ``a``"
 " is less than ``b`` and moreover ``b`` equals ``c``."
@@ -688,7 +681,7 @@ msgstr ""
 "Порівняння можуть бути ланцюжками. Наприклад, ``a < b == c`` перевіряє, чи "
 "``a`` є меншим за ``b`` і, крім того, ``b`` дорівнює ``c``."
 
-#: ../../tutorial/datastructures.rst:672
+#: ../../tutorial/datastructures.rst:671
 msgid ""
 "Comparisons may be combined using the Boolean operators ``and`` and ``or``, "
 "and the outcome of a comparison (or of any other Boolean expression) may be "
@@ -704,7 +697,7 @@ msgstr ""
 "найнижчий, так що ``A and not B or C`` еквівалентно ``(A and (not B)) or C``"
 " . Як завжди, дужки можна використовувати для вираження бажаної композиції."
 
-#: ../../tutorial/datastructures.rst:679
+#: ../../tutorial/datastructures.rst:678
 msgid ""
 "The Boolean operators ``and`` and ``or`` are so-called *short-circuit* "
 "operators: their arguments are evaluated from left to right, and evaluation "
@@ -721,7 +714,7 @@ msgstr ""
 "повертається оператором короткого замикання, є останнім обчисленим "
 "аргументом."
 
-#: ../../tutorial/datastructures.rst:686
+#: ../../tutorial/datastructures.rst:685
 msgid ""
 "It is possible to assign the result of a comparison or other Boolean "
 "expression to a variable.  For example, ::"
@@ -729,7 +722,7 @@ msgstr ""
 "Змінній можна призначити результат порівняння або інший логічний вираз. "
 "Наприклад, ::"
 
-#: ../../tutorial/datastructures.rst:694
+#: ../../tutorial/datastructures.rst:693
 msgid ""
 "Note that in Python, unlike C, assignment inside expressions must be done "
 "explicitly with the :ref:`walrus operator <why-can-t-i-use-an-assignment-in-"
@@ -742,11 +735,11 @@ msgstr ""
 "які виникають у програмах на C: введення ``=`` у виразі, коли передбачалося "
 "``==``."
 
-#: ../../tutorial/datastructures.rst:704
+#: ../../tutorial/datastructures.rst:703
 msgid "Comparing Sequences and Other Types"
 msgstr "Порівняння послідовностей та інших типів"
 
-#: ../../tutorial/datastructures.rst:705
+#: ../../tutorial/datastructures.rst:704
 msgid ""
 "Sequence objects typically may be compared to other objects with the same "
 "sequence type. The comparison uses *lexicographical* ordering: first the "
@@ -774,7 +767,7 @@ msgstr ""
 "використовує номер кодової точки Unicode для впорядкування окремих символів."
 " Деякі приклади порівнянь між послідовностями одного типу:"
 
-#: ../../tutorial/datastructures.rst:725
+#: ../../tutorial/datastructures.rst:724
 msgid ""
 "Note that comparing objects of different types with ``<`` or ``>`` is legal "
 "provided that the objects have appropriate comparison methods.  For example,"
@@ -788,11 +781,11 @@ msgstr ""
 " тому 0 дорівнює 0,0 тощо. В іншому випадку, замість надання довільного "
 "порядку, інтерпретатор викличе виняток :exc:`TypeError`."
 
-#: ../../tutorial/datastructures.rst:733
+#: ../../tutorial/datastructures.rst:732
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/datastructures.rst:734
+#: ../../tutorial/datastructures.rst:733
 msgid ""
 "Other languages may return the mutated object, which allows method chaining,"
 " such as ``d->insert(\"a\")->remove(\"b\")->sort();``."

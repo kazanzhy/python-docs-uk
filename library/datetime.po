@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-26 14:13+0000\n"
+"POT-Creation-Date: 2024-02-02 15:40+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -31,9 +31,9 @@ msgstr "**Вихідний код:** :source:`Lib/datetime.py`"
 
 #: ../../library/datetime.rst:17
 msgid ""
-"The :mod:`datetime` module supplies classes for manipulating dates and "
+"The :mod:`!datetime` module supplies classes for manipulating dates and "
 "times."
-msgstr "Модуль :mod:`datetime` надає класи для роботи з датами та часом."
+msgstr ""
 
 #: ../../library/datetime.rst:19
 msgid ""
@@ -156,28 +156,21 @@ msgstr ""
 #: ../../library/datetime.rst:72
 msgid ""
 "Only one concrete :class:`tzinfo` class, the :class:`timezone` class, is "
-"supplied by the :mod:`datetime` module. The :class:`timezone` class can "
+"supplied by the :mod:`!datetime` module. The :class:`timezone` class can "
 "represent simple timezones with fixed offsets from UTC, such as UTC itself "
 "or North American EST and EDT timezones. Supporting timezones at deeper "
 "levels of detail is up to the application. The rules for time adjustment "
 "across the world are more political than rational, change frequently, and "
 "there is no standard suitable for every application aside from UTC."
 msgstr ""
-"Тільки один конкретний клас :class:`tzinfo`, клас :class:`timezone`, "
-"надається модулем :mod:`datetime`. Клас :class:`timezone` може представляти "
-"прості часові пояси з фіксованими зсувами відносно UTC, наприклад сам UTC "
-"або північноамериканські часові пояси EST і EDT. Підтримка часових поясів на"
-" глибшому рівні деталізації залежить від програми. Правила коригування часу "
-"в усьому світі є більше політичними, ніж раціональними, часто змінюються, і "
-"немає стандарту, який підходить для кожного застосування, крім UTC."
 
 #: ../../library/datetime.rst:81
 msgid "Constants"
 msgstr "Константи"
 
 #: ../../library/datetime.rst:83
-msgid "The :mod:`datetime` module exports the following constants:"
-msgstr "Модуль :mod:`datetime` експортує такі константи:"
+msgid "The :mod:`!datetime` module exports the following constants:"
+msgstr ""
 
 #: ../../library/datetime.rst:87
 msgid ""
@@ -464,9 +457,9 @@ msgstr ""
 "Зверніть увагу, що нормалізація від’ємних значень спочатку може викликати "
 "подив. Наприклад::"
 
-#: ../../library/datetime.rst:265 ../../library/datetime.rst:561
-#: ../../library/datetime.rst:1074 ../../library/datetime.rst:1693
-#: ../../library/datetime.rst:2298
+#: ../../library/datetime.rst:265 ../../library/datetime.rst:569
+#: ../../library/datetime.rst:1086 ../../library/datetime.rst:1705
+#: ../../library/datetime.rst:2310
 msgid "Class attributes:"
 msgstr "Атрибути класу:"
 
@@ -500,8 +493,8 @@ msgstr ""
 "Зауважте, що через нормалізацію ``timedelta.max`` > ``-timedelta.min``. "
 "``-timedelta.max`` не можна представити як об’єкт :class:`timedelta`."
 
-#: ../../library/datetime.rst:286 ../../library/datetime.rst:579
-#: ../../library/datetime.rst:1094 ../../library/datetime.rst:1713
+#: ../../library/datetime.rst:286 ../../library/datetime.rst:587
+#: ../../library/datetime.rst:1106 ../../library/datetime.rst:1725
 msgid "Instance attributes (read-only):"
 msgstr "Атрибути екземпляра (тільки для читання):"
 
@@ -537,18 +530,18 @@ msgstr "``мікросекунди``"
 msgid "Between 0 and 999999 inclusive"
 msgstr "Від 0 до 999999 включно"
 
-#: ../../library/datetime.rst:298 ../../library/datetime.rst:596
-#: ../../library/datetime.rst:1147
+#: ../../library/datetime.rst:298 ../../library/datetime.rst:604
+#: ../../library/datetime.rst:1159
 msgid "Supported operations:"
 msgstr "Підтримувані операції:"
 
-#: ../../library/datetime.rst:303 ../../library/datetime.rst:599
-#: ../../library/datetime.rst:1150
+#: ../../library/datetime.rst:303 ../../library/datetime.rst:607
+#: ../../library/datetime.rst:1162
 msgid "Operation"
 msgstr "Операція"
 
-#: ../../library/datetime.rst:303 ../../library/datetime.rst:599
-#: ../../library/datetime.rst:1150
+#: ../../library/datetime.rst:303 ../../library/datetime.rst:607
+#: ../../library/datetime.rst:1162
 msgid "Result"
 msgstr "Результат"
 
@@ -717,8 +710,8 @@ msgstr ""
 "Повертає рядкове представлення об’єкта :class:`timedelta` як виклик "
 "конструктора з канонічними значеннями атрибутів."
 
-#: ../../library/datetime.rst:364 ../../library/datetime.rst:613
-#: ../../library/datetime.rst:2529
+#: ../../library/datetime.rst:364 ../../library/datetime.rst:621
+#: ../../library/datetime.rst:2541
 msgid "Notes:"
 msgstr "Примітки:"
 
@@ -813,8 +806,8 @@ msgstr ""
 "У логічних контекстах об’єкт :class:`timedelta` вважається істинним тоді і "
 "тільки тоді, коли він не дорівнює ``timedelta(0)``."
 
-#: ../../library/datetime.rst:431 ../../library/datetime.rst:642
-#: ../../library/datetime.rst:1221 ../../library/datetime.rst:1823
+#: ../../library/datetime.rst:431 ../../library/datetime.rst:650
+#: ../../library/datetime.rst:1233 ../../library/datetime.rst:1835
 msgid "Instance methods:"
 msgstr "Методи екземплярів:"
 
@@ -891,13 +884,13 @@ msgstr "``1 <= місяць <= 12``"
 msgid "``1 <= day <= number of days in the given month and year``"
 msgstr "``1 <= день <= кількість днів у заданому місяці та році``"
 
-#: ../../library/datetime.rst:496 ../../library/datetime.rst:857
+#: ../../library/datetime.rst:496 ../../library/datetime.rst:865
 msgid ""
 "If an argument outside those ranges is given, :exc:`ValueError` is raised."
 msgstr ""
 "Якщо вказано аргумент поза цими діапазонами, виникає :exc:`ValueError`."
 
-#: ../../library/datetime.rst:499 ../../library/datetime.rst:862
+#: ../../library/datetime.rst:499 ../../library/datetime.rst:870
 msgid "Other constructors, all class methods:"
 msgstr "Інші конструктори, усі методи класу:"
 
@@ -965,14 +958,34 @@ msgstr ""
 #: ../../library/datetime.rst:538
 msgid ""
 "Return a :class:`date` corresponding to a *date_string* given in any valid "
-"ISO 8601 format, except ordinal dates (e.g. ``YYYY-DDD``)::"
+"ISO 8601 format, with the following exceptions:"
 msgstr ""
 
-#: ../../library/datetime.rst:550
+#: ../../library/datetime.rst:541 ../../library/datetime.rst:1026
+msgid ""
+"Reduced precision dates are not currently supported (``YYYY-MM``, ``YYYY``)."
+msgstr ""
+
+#: ../../library/datetime.rst:543 ../../library/datetime.rst:1028
+msgid ""
+"Extended date representations are not currently supported (``±YYYYYY-MM-"
+"DD``)."
+msgstr ""
+
+#: ../../library/datetime.rst:545 ../../library/datetime.rst:1030
+msgid "Ordinal dates are not currently supported (``YYYY-OOO``)."
+msgstr ""
+
+#: ../../library/datetime.rst:547 ../../library/datetime.rst:1032
+#: ../../library/datetime.rst:1461 ../../library/datetime.rst:1806
+msgid "Examples::"
+msgstr "Приклади::"
+
+#: ../../library/datetime.rst:558
 msgid "Previously, this method only supported the format ``YYYY-MM-DD``."
 msgstr ""
 
-#: ../../library/datetime.rst:555
+#: ../../library/datetime.rst:563
 msgid ""
 "Return a :class:`date` corresponding to the ISO calendar date specified by "
 "year, week and day. This is the inverse of the function "
@@ -981,62 +994,62 @@ msgstr ""
 "Повертає :class:`date`, що відповідає календарній даті ISO, визначеній "
 "роком, тижнем і днем. Це зворотна функція :meth:`date.isocalendar`."
 
-#: ../../library/datetime.rst:565
+#: ../../library/datetime.rst:573
 msgid "The earliest representable date, ``date(MINYEAR, 1, 1)``."
 msgstr "Найраніша дата, яку можна представити, ``date(MINYEAR, 1, 1)``."
 
-#: ../../library/datetime.rst:570
+#: ../../library/datetime.rst:578
 msgid "The latest representable date, ``date(MAXYEAR, 12, 31)``."
 msgstr "Остання представлена дата, ``date(MAXYEAR, 12, 31)``."
 
-#: ../../library/datetime.rst:575
+#: ../../library/datetime.rst:583
 msgid ""
 "The smallest possible difference between non-equal date objects, "
 "``timedelta(days=1)``."
 msgstr ""
 "Найменша можлива різниця між об’єктами нерівних дат, ``timedelta(days=1)``."
 
-#: ../../library/datetime.rst:583 ../../library/datetime.rst:1098
+#: ../../library/datetime.rst:591 ../../library/datetime.rst:1110
 msgid "Between :const:`MINYEAR` and :const:`MAXYEAR` inclusive."
 msgstr "Між :const:`MINYEAR` і :const:`MAXYEAR` включно."
 
-#: ../../library/datetime.rst:588 ../../library/datetime.rst:1103
+#: ../../library/datetime.rst:596 ../../library/datetime.rst:1115
 msgid "Between 1 and 12 inclusive."
 msgstr "Від 1 до 12 включно."
 
-#: ../../library/datetime.rst:593 ../../library/datetime.rst:1108
+#: ../../library/datetime.rst:601 ../../library/datetime.rst:1120
 msgid "Between 1 and the number of days in the given month of the given year."
 msgstr "Від 1 до числа днів у даному місяці даного року."
 
-#: ../../library/datetime.rst:601
+#: ../../library/datetime.rst:609
 msgid "``date2 = date1 + timedelta``"
 msgstr "``дата2 = дата1 + дельта часу``"
 
-#: ../../library/datetime.rst:601
+#: ../../library/datetime.rst:609
 msgid "*date2* will be ``timedelta.days`` days after *date1*. (1)"
 msgstr ""
 
-#: ../../library/datetime.rst:604
+#: ../../library/datetime.rst:612
 msgid "``date2 = date1 - timedelta``"
 msgstr "``дата2 = дата1 - дельта часу``"
 
-#: ../../library/datetime.rst:604
+#: ../../library/datetime.rst:612
 msgid "Computes *date2* such that ``date2 + timedelta == date1``. (2)"
 msgstr "Обчислює *date2* таким чином, що ``date2 + timedelta == date1``. (2)"
 
-#: ../../library/datetime.rst:607
+#: ../../library/datetime.rst:615
 msgid "``timedelta = date1 - date2``"
 msgstr "``timedelta = дата1 - дата2``"
 
-#: ../../library/datetime.rst:607 ../../library/datetime.rst:1156
+#: ../../library/datetime.rst:615 ../../library/datetime.rst:1168
 msgid "\\(3)"
 msgstr "\\(3)"
 
-#: ../../library/datetime.rst:609
+#: ../../library/datetime.rst:617
 msgid "``date1 < date2``"
 msgstr "``дата1 < дата2``"
 
-#: ../../library/datetime.rst:609
+#: ../../library/datetime.rst:617
 msgid ""
 "*date1* is considered less than *date2* when *date1* precedes *date2* in "
 "time. (4)"
@@ -1044,7 +1057,7 @@ msgstr ""
 "*date1* вважається меншим за *date2*, якщо *date1* передує *date2* за часом."
 " (4)"
 
-#: ../../library/datetime.rst:616
+#: ../../library/datetime.rst:624
 msgid ""
 "*date2* is moved forward in time if ``timedelta.days > 0``, or backward if "
 "``timedelta.days < 0``. Afterward ``date2 - date1 == timedelta.days``. "
@@ -1058,11 +1071,11 @@ msgstr ""
 ":exc:`OverflowError` виникає, якщо ``date2.year`` буде меншим за "
 ":const:`MINYEAR` або більшим за :const:`MAXYEAR`."
 
-#: ../../library/datetime.rst:623
+#: ../../library/datetime.rst:631
 msgid "``timedelta.seconds`` and ``timedelta.microseconds`` are ignored."
 msgstr "``timedelta.seconds`` і ``timedelta.microseconds`` ігноруються."
 
-#: ../../library/datetime.rst:626
+#: ../../library/datetime.rst:634
 msgid ""
 "This is exact, and cannot overflow. timedelta.seconds and "
 "timedelta.microseconds are 0, and date2 + timedelta == date1 after."
@@ -1070,34 +1083,25 @@ msgstr ""
 "Це точно і не може переповнюватися. timedelta.seconds і "
 "timedelta.microseconds дорівнюють 0, а date2 + timedelta == date1 після."
 
-#: ../../library/datetime.rst:630
+#: ../../library/datetime.rst:638
 msgid ""
 "In other words, ``date1 < date2`` if and only if ``date1.toordinal() < "
 "date2.toordinal()``. Date comparison raises :exc:`TypeError` if the other "
 "comparand isn't also a :class:`date` object. However, ``NotImplemented`` is "
-"returned instead if the other comparand has a :meth:`timetuple` attribute. "
-"This hook gives other kinds of date objects a chance at implementing mixed-"
-"type comparison. If not, when a :class:`date` object is compared to an "
-"object of a different type, :exc:`TypeError` is raised unless the comparison"
-" is ``==`` or ``!=``. The latter cases return :const:`False` or "
-":const:`True`, respectively."
+"returned instead if the other comparand has a :attr:`~date.timetuple` "
+"attribute. This hook gives other kinds of date objects a chance at "
+"implementing mixed-type comparison. If not, when a :class:`date` object is "
+"compared to an object of a different type, :exc:`TypeError` is raised unless"
+" the comparison is ``==`` or ``!=``. The latter cases return :const:`False` "
+"or :const:`True`, respectively."
 msgstr ""
-"Іншими словами, ``date1 < date2`` тоді і тільки тоді, коли "
-"``date1.toordinal() < date2.toordinal()``. Порівняння дат викликає "
-":exc:`TypeError`, якщо інший компаранд не є також об’єктом :class:`date`. "
-"Однак натомість повертається ``NotImplemented``, якщо інший компаранд має "
-"атрибут :meth:`timetuple`. Цей хук дає іншим видам об’єктів дати можливість "
-"реалізувати порівняння змішаного типу. Якщо ні, коли об’єкт :class:`date` "
-"порівнюється з об’єктом іншого типу, виникає :exc:`TypeError`, якщо "
-"порівняння не ``==`` або ``!=``. Останні випадки повертають :const:`False` "
-"або :const:`True` відповідно."
 
-#: ../../library/datetime.rst:640
+#: ../../library/datetime.rst:648
 msgid ""
 "In Boolean contexts, all :class:`date` objects are considered to be true."
 msgstr "У логічних контекстах усі об’єкти :class:`date` вважаються істинними."
 
-#: ../../library/datetime.rst:646
+#: ../../library/datetime.rst:654
 msgid ""
 "Return a date with the same value, except for those parameters given new "
 "values by whichever keyword arguments are specified."
@@ -1105,11 +1109,11 @@ msgstr ""
 "Повертає дату з тим самим значенням, за винятком тих параметрів, яким надано"
 " нові значення за будь-якими аргументами ключового слова."
 
-#: ../../library/datetime.rst:649 ../../library/datetime.rst:1866
+#: ../../library/datetime.rst:657 ../../library/datetime.rst:1878
 msgid "Example::"
 msgstr "Приклад::"
 
-#: ../../library/datetime.rst:659 ../../library/datetime.rst:1334
+#: ../../library/datetime.rst:667 ../../library/datetime.rst:1346
 msgid ""
 "Return a :class:`time.struct_time` such as returned by "
 ":func:`time.localtime`."
@@ -1117,17 +1121,17 @@ msgstr ""
 "Повертає :class:`time.struct_time`, наприклад, повертає "
 ":func:`time.localtime`."
 
-#: ../../library/datetime.rst:661
+#: ../../library/datetime.rst:669
 msgid "The hours, minutes and seconds are 0, and the DST flag is -1."
 msgstr ""
 "Години, хвилини та секунди дорівнюють 0, а позначка літнього часу дорівнює "
 "-1."
 
-#: ../../library/datetime.rst:663 ../../library/datetime.rst:1336
+#: ../../library/datetime.rst:671 ../../library/datetime.rst:1348
 msgid "``d.timetuple()`` is equivalent to::"
 msgstr "``d.timetuple()`` еквівалентний:"
 
-#: ../../library/datetime.rst:667
+#: ../../library/datetime.rst:675
 msgid ""
 "where ``yday = d.toordinal() - date(d.year, 1, 1).toordinal() + 1`` is the "
 "day number within the current year starting with ``1`` for January 1st."
@@ -1135,7 +1139,7 @@ msgstr ""
 "де ``yday = d.toordinal() - date(d.year, 1, 1).toordinal() + 1`` — це номер "
 "дня в поточному році, починаючи з ``1`` для 1 січня."
 
-#: ../../library/datetime.rst:673
+#: ../../library/datetime.rst:681
 msgid ""
 "Return the proleptic Gregorian ordinal of the date, where January 1 of year "
 "1 has ordinal 1. For any :class:`date` object *d*, "
@@ -1145,7 +1149,7 @@ msgstr ""
 "1 має порядковий номер 1. Для будь-якого об’єкта :class:`date` *d*, "
 "``date.fromordinal(d.toordinal()) == d``."
 
-#: ../../library/datetime.rst:680
+#: ../../library/datetime.rst:688
 msgid ""
 "Return the day of the week as an integer, where Monday is 0 and Sunday is 6."
 " For example, ``date(2002, 12, 4).weekday() == 2``, a Wednesday. See also "
@@ -1155,7 +1159,7 @@ msgstr ""
 "Наприклад, ``date(2002, 12, 4).weekday() == 2``, середа. Дивіться також "
 ":meth:`isoweekday`."
 
-#: ../../library/datetime.rst:687
+#: ../../library/datetime.rst:695
 msgid ""
 "Return the day of the week as an integer, where Monday is 1 and Sunday is 7."
 " For example, ``date(2002, 12, 4).isoweekday() == 3``, a Wednesday. See also"
@@ -1165,7 +1169,7 @@ msgstr ""
 "Наприклад, ``date(2002, 12, 4).isoweekday() == 3``, середа. Дивіться також "
 ":meth:`weekday`, :meth:`isocalendar`."
 
-#: ../../library/datetime.rst:694
+#: ../../library/datetime.rst:702
 msgid ""
 "Return a :term:`named tuple` object with three components: ``year``, "
 "``week`` and ``weekday``."
@@ -1173,14 +1177,14 @@ msgstr ""
 "Повертає об’єкт :term:`named tuple` із трьома компонентами: ``year``, "
 "``week`` і ``weekday``."
 
-#: ../../library/datetime.rst:697
+#: ../../library/datetime.rst:705
 msgid ""
 "The ISO calendar is a widely used variant of the Gregorian calendar. [#]_"
 msgstr ""
 "Календар ISO є широко використовуваним варіантом григоріанського календаря. "
 "[#]_"
 
-#: ../../library/datetime.rst:699
+#: ../../library/datetime.rst:707
 msgid ""
 "The ISO year consists of 52 or 53 full weeks, and where a week starts on a "
 "Monday and ends on a Sunday. The first week of an ISO year is the first "
@@ -1194,7 +1198,7 @@ msgstr ""
 " тижнем номер 1, і рік ISO того четверга такий же, як його григоріанський "
 "рік."
 
-#: ../../library/datetime.rst:704
+#: ../../library/datetime.rst:712
 msgid ""
 "For example, 2004 begins on a Thursday, so the first week of ISO year 2004 "
 "begins on Monday, 29 Dec 2003 and ends on Sunday, 4 Jan 2004::"
@@ -1203,29 +1207,29 @@ msgstr ""
 "починається в понеділок, 29 грудня 2003 року, і закінчується в неділю, 4 "
 "січня 2004 року:"
 
-#: ../../library/datetime.rst:713
+#: ../../library/datetime.rst:721
 msgid "Result changed from a tuple to a :term:`named tuple`."
 msgstr "Результат змінено з кортежу на :term:`named tuple`."
 
-#: ../../library/datetime.rst:718
+#: ../../library/datetime.rst:726
 msgid ""
 "Return a string representing the date in ISO 8601 format, ``YYYY-MM-DD``::"
 msgstr ""
 "Повертає рядок, що представляє дату у форматі ISO 8601, ``РРРР-ММ-ДД``::"
 
-#: ../../library/datetime.rst:726
+#: ../../library/datetime.rst:734
 msgid "For a date *d*, ``str(d)`` is equivalent to ``d.isoformat()``."
 msgstr "Для дати *d* ``str(d)`` еквівалентно ``d.isoformat()``."
 
-#: ../../library/datetime.rst:731
+#: ../../library/datetime.rst:739
 msgid "Return a string representing the date::"
 msgstr "Повертає рядок, що представляє дату::"
 
-#: ../../library/datetime.rst:737 ../../library/datetime.rst:1520
+#: ../../library/datetime.rst:745 ../../library/datetime.rst:1532
 msgid "``d.ctime()`` is equivalent to::"
 msgstr "``d.ctime()`` еквівалентний:"
 
-#: ../../library/datetime.rst:741
+#: ../../library/datetime.rst:749
 msgid ""
 "on platforms where the native C :c:func:`ctime` function (which "
 ":func:`time.ctime` invokes, but which :meth:`date.ctime` does not invoke) "
@@ -1234,7 +1238,7 @@ msgstr ""
 "на платформах, де рідна функція C :c:func:`ctime` (яку :func:`time.ctime` "
 "викликає, але яку :meth:`date.ctime` не викликає) відповідає стандарту C."
 
-#: ../../library/datetime.rst:748
+#: ../../library/datetime.rst:756
 msgid ""
 "Return a string representing the date, controlled by an explicit format "
 "string. Format codes referring to hours, minutes or seconds will see 0 "
@@ -1242,7 +1246,7 @@ msgid ""
 ":meth:`date.isoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:755
+#: ../../library/datetime.rst:763
 msgid ""
 "Same as :meth:`.date.strftime`. This makes it possible to specify a format "
 "string for a :class:`.date` object in :ref:`formatted string literals "
@@ -1250,23 +1254,23 @@ msgid ""
 "strptime-behavior` and :meth:`date.isoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:761
+#: ../../library/datetime.rst:769
 msgid "Examples of Usage: :class:`date`"
 msgstr "Приклади використання: :class:`date`"
 
-#: ../../library/datetime.rst:763
+#: ../../library/datetime.rst:771
 msgid "Example of counting days to an event::"
 msgstr "Приклад підрахунку днів до події::"
 
-#: ../../library/datetime.rst:782
+#: ../../library/datetime.rst:790
 msgid "More examples of working with :class:`date`:"
 msgstr "Ще приклади роботи з :class:`date`:"
 
-#: ../../library/datetime.rst:831
+#: ../../library/datetime.rst:839
 msgid ":class:`.datetime` Objects"
 msgstr ":class:`.datetime` Об'єкти"
 
-#: ../../library/datetime.rst:833
+#: ../../library/datetime.rst:841
 msgid ""
 "A :class:`.datetime` object is a single object containing all the "
 "information from a :class:`date` object and a :class:`.time` object."
@@ -1274,7 +1278,7 @@ msgstr ""
 "Об’єкт :class:`.datetime` — це єдиний об’єкт, який містить всю інформацію з "
 "об’єктів :class:`date` і :class:`.time`."
 
-#: ../../library/datetime.rst:836
+#: ../../library/datetime.rst:844
 msgid ""
 "Like a :class:`date` object, :class:`.datetime` assumes the current "
 "Gregorian calendar extended in both directions; like a :class:`.time` "
@@ -1286,11 +1290,11 @@ msgstr ""
 ":class:`.time`, :class:`.datetime` припускає, що кожен день становить рівно "
 "3600\\*24 секунди."
 
-#: ../../library/datetime.rst:840
+#: ../../library/datetime.rst:848
 msgid "Constructor:"
 msgstr "Конструктор:"
 
-#: ../../library/datetime.rst:844
+#: ../../library/datetime.rst:852
 msgid ""
 "The *year*, *month* and *day* arguments are required. *tzinfo* may be "
 "``None``, or an instance of a :class:`tzinfo` subclass. The remaining "
@@ -1300,68 +1304,68 @@ msgstr ""
 "``None`` або екземпляром підкласу :class:`tzinfo`. Решта аргументів мають "
 "бути цілими числами в таких діапазонах:"
 
-#: ../../library/datetime.rst:848
+#: ../../library/datetime.rst:856
 msgid "``MINYEAR <= year <= MAXYEAR``,"
 msgstr "``MINYEAR <= рік <= MAXYEAR``,"
 
-#: ../../library/datetime.rst:849
+#: ../../library/datetime.rst:857
 msgid "``1 <= month <= 12``,"
 msgstr "``1 <= місяць <= 12``,"
 
-#: ../../library/datetime.rst:850
+#: ../../library/datetime.rst:858
 msgid "``1 <= day <= number of days in the given month and year``,"
 msgstr "``1 <= день <= кількість днів у заданому місяці та році``,"
 
-#: ../../library/datetime.rst:851 ../../library/datetime.rst:1684
+#: ../../library/datetime.rst:859 ../../library/datetime.rst:1696
 msgid "``0 <= hour < 24``,"
 msgstr "``0 <= година < 24``,"
 
-#: ../../library/datetime.rst:852 ../../library/datetime.rst:1685
+#: ../../library/datetime.rst:860 ../../library/datetime.rst:1697
 msgid "``0 <= minute < 60``,"
 msgstr "``0 <= хвилина < 60``,"
 
-#: ../../library/datetime.rst:853 ../../library/datetime.rst:1686
+#: ../../library/datetime.rst:861 ../../library/datetime.rst:1698
 msgid "``0 <= second < 60``,"
 msgstr "``0 <= секунда < 60``,"
 
-#: ../../library/datetime.rst:854 ../../library/datetime.rst:1687
+#: ../../library/datetime.rst:862 ../../library/datetime.rst:1699
 msgid "``0 <= microsecond < 1000000``,"
 msgstr "``0 <= мікросекунда < 1000000``,"
 
-#: ../../library/datetime.rst:855 ../../library/datetime.rst:1688
+#: ../../library/datetime.rst:863 ../../library/datetime.rst:1700
 msgid "``fold in [0, 1]``."
 msgstr "``згорнути [0, 1]``."
 
-#: ../../library/datetime.rst:859 ../../library/datetime.rst:1255
-#: ../../library/datetime.rst:1833
+#: ../../library/datetime.rst:867 ../../library/datetime.rst:1267
+#: ../../library/datetime.rst:1845
 msgid "Added the *fold* parameter."
 msgstr ""
 
-#: ../../library/datetime.rst:866
+#: ../../library/datetime.rst:874
 msgid "Return the current local datetime, with :attr:`.tzinfo` ``None``."
 msgstr ""
 "Повертає поточну локальну дату та час за допомогою :attr:`.tzinfo` ``None``."
 
-#: ../../library/datetime.rst:868
+#: ../../library/datetime.rst:876
 msgid "Equivalent to::"
 msgstr "Дорівнює::"
 
-#: ../../library/datetime.rst:872
+#: ../../library/datetime.rst:880
 msgid "See also :meth:`now`, :meth:`fromtimestamp`."
 msgstr "Дивіться також :meth:`now`, :meth:`fromtimestamp`."
 
-#: ../../library/datetime.rst:874
+#: ../../library/datetime.rst:882
 msgid ""
 "This method is functionally equivalent to :meth:`now`, but without a ``tz`` "
 "parameter."
 msgstr ""
 "Цей метод функціонально еквівалентний :meth:`now`, але без параметра ``tz``."
 
-#: ../../library/datetime.rst:879
+#: ../../library/datetime.rst:887
 msgid "Return the current local date and time."
 msgstr "Повернути поточну місцеву дату й час."
 
-#: ../../library/datetime.rst:881
+#: ../../library/datetime.rst:889
 msgid ""
 "If optional argument *tz* is ``None`` or not specified, this is like "
 ":meth:`today`, but, if possible, supplies more precision than can be gotten "
@@ -1373,7 +1377,7 @@ msgstr ""
 "отримати, пройшовши через :func:`time.time` мітка часу (наприклад, це "
 "можливо на платформах, що забезпечують функцію C :c:func:`gettimeofday`)."
 
-#: ../../library/datetime.rst:887
+#: ../../library/datetime.rst:895
 msgid ""
 "If *tz* is not ``None``, it must be an instance of a :class:`tzinfo` "
 "subclass, and the current date and time are converted to *tz*’s time zone."
@@ -1381,16 +1385,16 @@ msgstr ""
 "Якщо *tz* не є ``None``, він має бути екземпляром підкласу :class:`tzinfo`, "
 "а поточні дата й час перетворюються на часовий пояс *tz*."
 
-#: ../../library/datetime.rst:890
+#: ../../library/datetime.rst:898
 msgid "This function is preferred over :meth:`today` and :meth:`utcnow`."
 msgstr "Цій функції надається перевага над :meth:`today` і :meth:`utcnow`."
 
-#: ../../library/datetime.rst:895
+#: ../../library/datetime.rst:903
 msgid "Return the current UTC date and time, with :attr:`.tzinfo` ``None``."
 msgstr ""
 "Повертає поточну дату й час за UTC за допомогою :attr:`.tzinfo` ``None``."
 
-#: ../../library/datetime.rst:897
+#: ../../library/datetime.rst:905
 msgid ""
 "This is like :meth:`now`, but returns the current UTC date and time, as a "
 "naive :class:`.datetime` object. An aware current UTC datetime can be "
@@ -1401,7 +1405,7 @@ msgstr ""
 "отримати, викликавши ``datetime.now(timezone.utc)``. Дивіться також "
 ":meth:`now`."
 
-#: ../../library/datetime.rst:903
+#: ../../library/datetime.rst:911
 msgid ""
 "Because naive ``datetime`` objects are treated by many ``datetime`` methods "
 "as local times, it is preferred to use aware datetimes to represent times in"
@@ -1414,11 +1418,11 @@ msgstr ""
 "об’єкт, що представляє поточний час у UTC, — це викликати "
 "``datetime.now(timezone.utc)``."
 
-#: ../../library/datetime.rst:910
+#: ../../library/datetime.rst:918
 msgid "Use :meth:`datetime.now` with :attr:`UTC` instead."
 msgstr ""
 
-#: ../../library/datetime.rst:915
+#: ../../library/datetime.rst:923
 msgid ""
 "Return the local date and time corresponding to the POSIX timestamp, such as"
 " is returned by :func:`time.time`. If optional argument *tz* is ``None`` or "
@@ -1430,7 +1434,7 @@ msgstr ""
 "``None`` або не вказано, позначка часу перетворюється на локальну дату й час"
 " платформи, а повернутий об’єкт :class:`.datetime` є простим."
 
-#: ../../library/datetime.rst:920
+#: ../../library/datetime.rst:928
 msgid ""
 "If *tz* is not ``None``, it must be an instance of a :class:`tzinfo` "
 "subclass, and the timestamp is converted to *tz*’s time zone."
@@ -1438,7 +1442,7 @@ msgstr ""
 "Якщо *tz* не є ``None``, він має бути екземпляром підкласу :class:`tzinfo`, "
 "а мітка часу перетворюється на часовий пояс *tz*."
 
-#: ../../library/datetime.rst:923
+#: ../../library/datetime.rst:931
 msgid ""
 ":meth:`fromtimestamp` may raise :exc:`OverflowError`, if the timestamp is "
 "out of the range of values supported by the platform C :c:func:`localtime` "
@@ -1460,7 +1464,7 @@ msgstr ""
 " секунду, що дає ідентичні об’єкти :class:`.datetime`. Цей метод є кращим "
 "перед :meth:`utcfromtimestamp`."
 
-#: ../../library/datetime.rst:934
+#: ../../library/datetime.rst:942
 msgid ""
 "Raise :exc:`OverflowError` instead of :exc:`ValueError` if the timestamp is "
 "out of the range of values supported by the platform C :c:func:`localtime` "
@@ -1473,14 +1477,14 @@ msgstr ""
 " замість :exc:`ValueError` у разі помилки :c:func:`localtime` або "
 ":c:func:`gmtime`."
 
-#: ../../library/datetime.rst:941
+#: ../../library/datetime.rst:949
 msgid ""
 ":meth:`fromtimestamp` may return instances with :attr:`.fold` set to 1."
 msgstr ""
 ":meth:`fromtimestamp` може повертати екземпляри з :attr:`.fold`, "
 "встановленим на 1."
 
-#: ../../library/datetime.rst:946
+#: ../../library/datetime.rst:954
 msgid ""
 "Return the UTC :class:`.datetime` corresponding to the POSIX timestamp, with"
 " :attr:`.tzinfo` ``None``.  (The resulting object is naive.)"
@@ -1488,7 +1492,7 @@ msgstr ""
 "Повертає UTC :class:`.datetime`, що відповідає мітці часу POSIX, з "
 ":attr:`.tzinfo` ``None``. (Отриманий об’єкт наївний.)"
 
-#: ../../library/datetime.rst:949
+#: ../../library/datetime.rst:957
 msgid ""
 "This may raise :exc:`OverflowError`, if the timestamp is out of the range of"
 " values supported by the platform C :c:func:`gmtime` function, and "
@@ -1500,20 +1504,20 @@ msgstr ""
 ":exc:`OSError` на :c:func:`gmtime` невдача. Зазвичай це обмежується роками з"
 " 1970 по 2038 рік."
 
-#: ../../library/datetime.rst:954
+#: ../../library/datetime.rst:962
 msgid ""
 "To get an aware :class:`.datetime` object, call :meth:`fromtimestamp`::"
 msgstr ""
 "Щоб отримати відомий об’єкт :class:`.datetime`, викличте "
 ":meth:`fromtimestamp`::"
 
-#: ../../library/datetime.rst:958
+#: ../../library/datetime.rst:966
 msgid ""
 "On the POSIX compliant platforms, it is equivalent to the following "
 "expression::"
 msgstr "На POSIX-сумісних платформах це еквівалентно такому виразу::"
 
-#: ../../library/datetime.rst:963
+#: ../../library/datetime.rst:971
 msgid ""
 "except the latter formula always supports the full years range: between "
 ":const:`MINYEAR` and :const:`MAXYEAR` inclusive."
@@ -1521,7 +1525,7 @@ msgstr ""
 "за винятком останньої формули, яка завжди підтримує повний діапазон років: "
 "від :const:`MINYEAR` до :const:`MAXYEAR` включно."
 
-#: ../../library/datetime.rst:968
+#: ../../library/datetime.rst:976
 msgid ""
 "Because naive ``datetime`` objects are treated by many ``datetime`` methods "
 "as local times, it is preferred to use aware datetimes to represent times in"
@@ -1535,7 +1539,7 @@ msgstr ""
 "об’єкт, що представляє конкретну позначку часу в UTC, — це викликати "
 "``datetime.fromtimestamp(timestamp, tz=timezone.utc)``."
 
-#: ../../library/datetime.rst:974
+#: ../../library/datetime.rst:982
 msgid ""
 "Raise :exc:`OverflowError` instead of :exc:`ValueError` if the timestamp is "
 "out of the range of values supported by the platform C :c:func:`gmtime` "
@@ -1547,11 +1551,11 @@ msgstr ""
 ":c:func:`gmtime` платформи. Викликати :exc:`OSError` замість "
 ":exc:`ValueError` у разі помилки :c:func:`gmtime`."
 
-#: ../../library/datetime.rst:982
+#: ../../library/datetime.rst:990
 msgid "Use :meth:`datetime.fromtimestamp` with :attr:`UTC` instead."
 msgstr ""
 
-#: ../../library/datetime.rst:987
+#: ../../library/datetime.rst:995
 msgid ""
 "Return the :class:`.datetime` corresponding to the proleptic Gregorian "
 "ordinal, where January 1 of year 1 has ordinal 1. :exc:`ValueError` is "
@@ -1565,7 +1569,7 @@ msgstr ""
 "datetime.max.toordinal()``. Година, хвилина, секунда та мікросекунда "
 "результату дорівнюють 0, а :attr:`.tzinfo` — ``None``."
 
-#: ../../library/datetime.rst:995
+#: ../../library/datetime.rst:1003
 msgid ""
 "Return a new :class:`.datetime` object whose date components are equal to "
 "the given :class:`date` object's, and whose time components are equal to the"
@@ -1576,50 +1580,41 @@ msgid ""
 ":attr:`.tzinfo` attributes are ignored."
 msgstr ""
 
-#: ../../library/datetime.rst:1003
+#: ../../library/datetime.rst:1011
 msgid ""
 "For any :class:`.datetime` object *d*, ``d == datetime.combine(d.date(), "
 "d.time(), d.tzinfo)``."
 msgstr ""
 
-#: ../../library/datetime.rst:1006
+#: ../../library/datetime.rst:1014
 msgid "Added the *tzinfo* argument."
 msgstr "Додано аргумент *tzinfo*."
 
-#: ../../library/datetime.rst:1012
+#: ../../library/datetime.rst:1020
 msgid ""
 "Return a :class:`.datetime` corresponding to a *date_string* in any valid "
 "ISO 8601 format, with the following exceptions:"
 msgstr ""
 
-#: ../../library/datetime.rst:1015 ../../library/datetime.rst:1787
+#: ../../library/datetime.rst:1023 ../../library/datetime.rst:1799
 msgid "Time zone offsets may have fractional seconds."
 msgstr ""
 
-#: ../../library/datetime.rst:1016
+#: ../../library/datetime.rst:1024
 msgid "The ``T`` separator may be replaced by any single unicode character."
 msgstr ""
 
-#: ../../library/datetime.rst:1017
-msgid "Ordinal dates are not currently supported."
-msgstr ""
-
-#: ../../library/datetime.rst:1018 ../../library/datetime.rst:1792
+#: ../../library/datetime.rst:1025 ../../library/datetime.rst:1804
 msgid "Fractional hours and minutes are not supported."
 msgstr ""
 
-#: ../../library/datetime.rst:1020 ../../library/datetime.rst:1449
-#: ../../library/datetime.rst:1794
-msgid "Examples::"
-msgstr "Приклади::"
-
-#: ../../library/datetime.rst:1044
+#: ../../library/datetime.rst:1056
 msgid ""
 "Previously, this method only supported formats that could be emitted by "
 ":meth:`date.isoformat()` or :meth:`datetime.isoformat()`."
 msgstr ""
 
-#: ../../library/datetime.rst:1051
+#: ../../library/datetime.rst:1063
 msgid ""
 "Return a :class:`.datetime` corresponding to the ISO calendar date specified"
 " by year, week and day. The non-date components of the datetime are "
@@ -1631,7 +1626,7 @@ msgstr ""
 "стандартними значеннями за замовчуванням. Це зворотна функція "
 ":meth:`datetime.isocalendar`."
 
-#: ../../library/datetime.rst:1060
+#: ../../library/datetime.rst:1072
 msgid ""
 "Return a :class:`.datetime` corresponding to *date_string*, parsed according"
 " to *format*."
@@ -1639,13 +1634,13 @@ msgstr ""
 "Повертає :class:`.datetime`, що відповідає *рядку_дати*, розібраному "
 "відповідно до *формату*."
 
-#: ../../library/datetime.rst:1063
+#: ../../library/datetime.rst:1075
 msgid ""
 "If *format* does not contain microseconds or timezone information, this is "
 "equivalent to::"
 msgstr ""
 
-#: ../../library/datetime.rst:1067
+#: ../../library/datetime.rst:1079
 msgid ""
 ":exc:`ValueError` is raised if the date_string and format can't be parsed by"
 " :func:`time.strptime` or if it returns a value which isn't a time tuple.  "
@@ -1653,7 +1648,7 @@ msgid ""
 ":meth:`datetime.fromisoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:1078
+#: ../../library/datetime.rst:1090
 msgid ""
 "The earliest representable :class:`.datetime`, ``datetime(MINYEAR, 1, 1, "
 "tzinfo=None)``."
@@ -1661,7 +1656,7 @@ msgstr ""
 "Найраніший репрезентований :class:`.datetime`, ``datetime(MINYEAR, 1, 1, "
 "tzinfo=None)``."
 
-#: ../../library/datetime.rst:1084
+#: ../../library/datetime.rst:1096
 msgid ""
 "The latest representable :class:`.datetime`, ``datetime(MAXYEAR, 12, 31, 23,"
 " 59, 59, 999999, tzinfo=None)``."
@@ -1669,7 +1664,7 @@ msgstr ""
 "Останній представлений :class:`.datetime`, ``datetime(MAXYEAR, 12, 31, 23, "
 "59, 59, 999999, tzinfo=None)``."
 
-#: ../../library/datetime.rst:1090
+#: ../../library/datetime.rst:1102
 msgid ""
 "The smallest possible difference between non-equal :class:`.datetime` "
 "objects, ``timedelta(microseconds=1)``."
@@ -1677,20 +1672,20 @@ msgstr ""
 "Найменша можлива різниця між нерівними об’єктами :class:`.datetime`, "
 "``timedelta(microseconds=1)``."
 
-#: ../../library/datetime.rst:1113 ../../library/datetime.rst:1717
+#: ../../library/datetime.rst:1125 ../../library/datetime.rst:1729
 msgid "In ``range(24)``."
 msgstr "У діапазоні (24)."
 
-#: ../../library/datetime.rst:1118 ../../library/datetime.rst:1123
-#: ../../library/datetime.rst:1722 ../../library/datetime.rst:1727
+#: ../../library/datetime.rst:1130 ../../library/datetime.rst:1135
+#: ../../library/datetime.rst:1734 ../../library/datetime.rst:1739
 msgid "In ``range(60)``."
 msgstr "У ``діапазоні (60)``."
 
-#: ../../library/datetime.rst:1128 ../../library/datetime.rst:1732
+#: ../../library/datetime.rst:1140 ../../library/datetime.rst:1744
 msgid "In ``range(1000000)``."
 msgstr "У ``діапазоні (1000 000)``."
 
-#: ../../library/datetime.rst:1133
+#: ../../library/datetime.rst:1145
 msgid ""
 "The object passed as the *tzinfo* argument to the :class:`.datetime` "
 "constructor, or ``None`` if none was passed."
@@ -1698,7 +1693,7 @@ msgstr ""
 "Об’єкт передається як аргумент *tzinfo* конструктору :class:`.datetime` або "
 "``None``, якщо жодного не було передано."
 
-#: ../../library/datetime.rst:1139 ../../library/datetime.rst:1743
+#: ../../library/datetime.rst:1151 ../../library/datetime.rst:1755
 msgid ""
 "In ``[0, 1]``. Used to disambiguate wall times during a repeated interval. "
 "(A repeated interval occurs when clocks are rolled back at the end of "
@@ -1712,38 +1707,38 @@ msgstr ""
 "поточної зони зменшується з політичних причин.) Значення 0 (1) представляє "
 "ранній (пізніший) із двох моментів із однакове представлення часу на стіні."
 
-#: ../../library/datetime.rst:1152
+#: ../../library/datetime.rst:1164
 msgid "``datetime2 = datetime1 + timedelta``"
 msgstr "``datetime2 = datetime1 + timedelta``"
 
-#: ../../library/datetime.rst:1152 ../../library/datetime.rst:2356
-#: ../../library/datetime.rst:2361 ../../library/datetime.rst:2373
-#: ../../library/datetime.rst:2378 ../../library/datetime.rst:2438
-#: ../../library/datetime.rst:2443 ../../library/datetime.rst:2447
+#: ../../library/datetime.rst:1164 ../../library/datetime.rst:2368
+#: ../../library/datetime.rst:2373 ../../library/datetime.rst:2385
+#: ../../library/datetime.rst:2390 ../../library/datetime.rst:2450
+#: ../../library/datetime.rst:2455 ../../library/datetime.rst:2459
 msgid "\\(1)"
 msgstr "\\(1)"
 
-#: ../../library/datetime.rst:1154
+#: ../../library/datetime.rst:1166
 msgid "``datetime2 = datetime1 - timedelta``"
 msgstr "``datetime2 = datetime1 - timedelta``"
 
-#: ../../library/datetime.rst:1154 ../../library/datetime.rst:2389
+#: ../../library/datetime.rst:1166 ../../library/datetime.rst:2401
 msgid "\\(2)"
 msgstr "\\(2)"
 
-#: ../../library/datetime.rst:1156
+#: ../../library/datetime.rst:1168
 msgid "``timedelta = datetime1 - datetime2``"
 msgstr "``timedelta = datetime1 - datetime2``"
 
-#: ../../library/datetime.rst:1158
+#: ../../library/datetime.rst:1170
 msgid "``datetime1 < datetime2``"
 msgstr "``датачас1 < датачас2``"
 
-#: ../../library/datetime.rst:1158
+#: ../../library/datetime.rst:1170
 msgid "Compares :class:`.datetime` to :class:`.datetime`. (4)"
 msgstr "Порівнює :class:`.datetime` з :class:`.datetime`. (4)"
 
-#: ../../library/datetime.rst:1163
+#: ../../library/datetime.rst:1175
 msgid ""
 "datetime2 is a duration of timedelta removed from datetime1, moving forward "
 "in time if ``timedelta.days`` > 0, or backward if ``timedelta.days`` < 0. "
@@ -1761,7 +1756,7 @@ msgstr ""
 ":const:`MINYEAR` або більшим за :const:`MAXYEAR`. Зауважте, що коригування "
 "часового поясу не виконується, навіть якщо введенням є відомий об’єкт."
 
-#: ../../library/datetime.rst:1172
+#: ../../library/datetime.rst:1184
 msgid ""
 "Computes the datetime2 such that datetime2 + timedelta == datetime1. As for "
 "addition, the result has the same :attr:`~.datetime.tzinfo` attribute as the"
@@ -1773,7 +1768,7 @@ msgstr ""
 "дата-час введення, і коригування часового поясу не виконується, навіть якщо "
 "введення відоме."
 
-#: ../../library/datetime.rst:1177
+#: ../../library/datetime.rst:1189
 msgid ""
 "Subtraction of a :class:`.datetime` from a :class:`.datetime` is defined "
 "only if both operands are naive, or if both are aware. If one is aware and "
@@ -1783,7 +1778,7 @@ msgstr ""
 " обидва операнди наївні, або якщо обидва знають. Якщо один знає, а інший "
 "наївний, виникає :exc:`TypeError`."
 
-#: ../../library/datetime.rst:1181
+#: ../../library/datetime.rst:1193
 msgid ""
 "If both are naive, or both are aware and have the same "
 ":attr:`~.datetime.tzinfo` attribute, the :attr:`~.datetime.tzinfo` "
@@ -1796,7 +1791,7 @@ msgstr ""
 " результатом є :class:`timedelta` об’єкт *t* такий, що ``datetime2 + t == "
 "datetime1``. У цьому випадку коригування часового поясу не виконується."
 
-#: ../../library/datetime.rst:1186
+#: ../../library/datetime.rst:1198
 msgid ""
 "If both are aware and have different :attr:`~.datetime.tzinfo` attributes, "
 "``a-b`` acts as if *a* and *b* were first converted to naive UTC datetimes "
@@ -1810,7 +1805,7 @@ msgstr ""
 "(b.replace(tzinfo=None) - b.utcoffset())`` за винятком того, що реалізація "
 "ніколи не переповнюється."
 
-#: ../../library/datetime.rst:1192
+#: ../../library/datetime.rst:1204
 msgid ""
 "*datetime1* is considered less than *datetime2* when *datetime1* precedes "
 "*datetime2* in time."
@@ -1818,7 +1813,7 @@ msgstr ""
 "*datetime1* вважається меншим за *datetime2*, якщо *datetime1* передує "
 "*datetime2* за часом."
 
-#: ../../library/datetime.rst:1195
+#: ../../library/datetime.rst:1207
 msgid ""
 "If one comparand is naive and the other is aware, :exc:`TypeError` is raised"
 " if an order comparison is attempted. For equality comparisons, naive "
@@ -1828,7 +1823,7 @@ msgstr ""
 "під час спроби порівняння порядку. Для порівняння рівності наївні екземпляри"
 " ніколи не дорівнюють усвідомленим екземплярам."
 
-#: ../../library/datetime.rst:1199
+#: ../../library/datetime.rst:1211
 msgid ""
 "If both comparands are aware, and have the same :attr:`~.datetime.tzinfo` "
 "attribute, the common :attr:`~.datetime.tzinfo` attribute is ignored and the"
@@ -1844,7 +1839,7 @@ msgstr ""
 "коригуються шляхом віднімання їхніх зсувів UTC (отриманих із "
 "``self.utcoffset()``)."
 
-#: ../../library/datetime.rst:1205
+#: ../../library/datetime.rst:1217
 msgid ""
 "Equality comparisons between aware and naive :class:`.datetime` instances "
 "don't raise :exc:`TypeError`."
@@ -1852,33 +1847,25 @@ msgstr ""
 "Порівняння рівності між обізнаними та наївними екземплярами "
 ":class:`.datetime` не викликає :exc:`TypeError`."
 
-#: ../../library/datetime.rst:1211
+#: ../../library/datetime.rst:1223
 msgid ""
 "In order to stop comparison from falling back to the default scheme of "
 "comparing object addresses, datetime comparison normally raises "
 ":exc:`TypeError` if the other comparand isn't also a :class:`.datetime` "
 "object. However, ``NotImplemented`` is returned instead if the other "
-"comparand has a :meth:`timetuple` attribute. This hook gives other kinds of "
-"date objects a chance at implementing mixed-type comparison. If not, when a "
-":class:`.datetime` object is compared to an object of a different type, "
-":exc:`TypeError` is raised unless the comparison is ``==`` or ``!=``. The "
-"latter cases return :const:`False` or :const:`True`, respectively."
+"comparand has a :attr:`~.datetime.timetuple` attribute. This hook gives "
+"other kinds of date objects a chance at implementing mixed-type comparison. "
+"If not, when a :class:`.datetime` object is compared to an object of a "
+"different type, :exc:`TypeError` is raised unless the comparison is ``==`` "
+"or ``!=``. The latter cases return :const:`False` or :const:`True`, "
+"respectively."
 msgstr ""
-"Щоб зупинити порівняння від повернення до типової схеми порівняння адрес "
-"об’єктів, порівняння дати й часу зазвичай викликає :exc:`TypeError`, якщо "
-"інший порівнюваний не є також об’єктом :class:`.datetime`. Однак натомість "
-"повертається ``NotImplemented``, якщо інший компаранд має атрибут "
-":meth:`timetuple`. Цей хук дає іншим видам об’єктів дати можливість "
-"реалізувати порівняння змішаного типу. Якщо ні, коли об’єкт "
-":class:`.datetime` порівнюється з об’єктом іншого типу, виникає "
-":exc:`TypeError`, якщо порівняння не ``==`` або ``!=``. Останні випадки "
-"повертають :const:`False` або :const:`True` відповідно."
 
-#: ../../library/datetime.rst:1225
+#: ../../library/datetime.rst:1237
 msgid "Return :class:`date` object with same year, month and day."
 msgstr "Повертає об’єкт :class:`date` з тим самим роком, місяцем і днем."
 
-#: ../../library/datetime.rst:1230
+#: ../../library/datetime.rst:1242
 msgid ""
 "Return :class:`.time` object with same hour, minute, second, microsecond and"
 " fold. :attr:`.tzinfo` is ``None``. See also method :meth:`timetz`."
@@ -1887,11 +1874,11 @@ msgstr ""
 "мікросекундою та згортанням. :attr:`.tzinfo` — це ``None``. Дивіться також "
 "метод :meth:`timetz`."
 
-#: ../../library/datetime.rst:1233 ../../library/datetime.rst:1242
+#: ../../library/datetime.rst:1245 ../../library/datetime.rst:1254
 msgid "The fold value is copied to the returned :class:`.time` object."
 msgstr "Значення згортання копіюється до повернутого об’єкта :class:`.time`."
 
-#: ../../library/datetime.rst:1239
+#: ../../library/datetime.rst:1251
 msgid ""
 "Return :class:`.time` object with same hour, minute, second, microsecond, "
 "fold, and tzinfo attributes. See also method :meth:`time`."
@@ -1900,7 +1887,7 @@ msgstr ""
 "секунда, мікросекунда, згортання та tzinfo. Дивіться також метод "
 ":meth:`time`."
 
-#: ../../library/datetime.rst:1250
+#: ../../library/datetime.rst:1262
 msgid ""
 "Return a datetime with the same attributes, except for those attributes "
 "given new values by whichever keyword arguments are specified. Note that "
@@ -1912,7 +1899,7 @@ msgstr ""
 "Зауважте, що ``tzinfo=None`` можна вказати для створення простої дати-часу з"
 " усвідомленої дати-часу без перетворення даних дати й часу."
 
-#: ../../library/datetime.rst:1261
+#: ../../library/datetime.rst:1273
 msgid ""
 "Return a :class:`.datetime` object with new :attr:`.tzinfo` attribute *tz*, "
 "adjusting the date and time data so the result is the same UTC time as "
@@ -1922,7 +1909,7 @@ msgstr ""
 "регулюючи дані дати й часу таким чином, щоб результат був таким самим часом "
 "UTC, як *self*, але в *tz* місцевий час."
 
-#: ../../library/datetime.rst:1265
+#: ../../library/datetime.rst:1277
 msgid ""
 "If provided, *tz* must be an instance of a :class:`tzinfo` subclass, and its"
 " :meth:`utcoffset` and :meth:`dst` methods must not return ``None``. If "
@@ -1932,7 +1919,7 @@ msgstr ""
 "методи :meth:`utcoffset` і :meth:`dst` не повинні повертати ``None``. Якщо "
 "*self* наївний, вважається, що він представляє час у часовому поясі системи."
 
-#: ../../library/datetime.rst:1269
+#: ../../library/datetime.rst:1281
 msgid ""
 "If called without arguments (or with ``tz=None``) the system local timezone "
 "is assumed for the target timezone. The ``.tzinfo`` attribute of the "
@@ -1944,7 +1931,7 @@ msgstr ""
 "перетвореного екземпляра datetime буде встановлено на екземпляр "
 ":class:`timezone` з назвою зони та зміщенням, отриманими від ОС."
 
-#: ../../library/datetime.rst:1274
+#: ../../library/datetime.rst:1286
 msgid ""
 "If ``self.tzinfo`` is *tz*, ``self.astimezone(tz)`` is equal to *self*:  no "
 "adjustment of date or time data is performed. Else the result is local time "
@@ -1958,7 +1945,7 @@ msgstr ""
 " *self*: після ``astz = dt.astimezone(tz)``, ``astz - astz.utcoffset()`` "
 "матиме ті самі дані про дату й час, що й у ``dt - dt.utcoffset()``."
 
-#: ../../library/datetime.rst:1280
+#: ../../library/datetime.rst:1292
 msgid ""
 "If you merely want to attach a time zone object *tz* to a datetime *dt* "
 "without adjustment of date and time data, use ``dt.replace(tzinfo=tz)``. If "
@@ -1971,7 +1958,7 @@ msgstr ""
 "поясу з відомого datetime *dt* без перетворення даних дати та часу, "
 "використовуйте ``dt.replace(tzinfo=None)``."
 
-#: ../../library/datetime.rst:1285
+#: ../../library/datetime.rst:1297
 msgid ""
 "Note that the default :meth:`tzinfo.fromutc` method can be overridden in a "
 ":class:`tzinfo` subclass to affect the result returned by "
@@ -1981,11 +1968,11 @@ msgstr ""
 "підкласі :class:`tzinfo`, щоб вплинути на результат, який повертає "
 ":meth:`astimezone`. Ігноруючи випадки помилок, :meth:`astimezone` діє як:"
 
-#: ../../library/datetime.rst:1297
+#: ../../library/datetime.rst:1309
 msgid "*tz* now can be omitted."
 msgstr "*tz* тепер можна опустити."
 
-#: ../../library/datetime.rst:1300
+#: ../../library/datetime.rst:1312
 msgid ""
 "The :meth:`astimezone` method can now be called on naive instances that are "
 "presumed to represent system local time."
@@ -1993,7 +1980,7 @@ msgstr ""
 "Метод :meth:`astimezone` тепер можна викликати в простих екземплярах, які, "
 "як припускається, представляють місцевий час системи."
 
-#: ../../library/datetime.rst:1307
+#: ../../library/datetime.rst:1319
 msgid ""
 "If :attr:`.tzinfo` is ``None``, returns ``None``, else returns "
 "``self.tzinfo.utcoffset(self)``, and raises an exception if the latter "
@@ -2005,13 +1992,13 @@ msgstr ""
 "не повертає ``None`` або об’єкт :class:`timedelta` з величиною менше одного "
 "дня."
 
-#: ../../library/datetime.rst:1311 ../../library/datetime.rst:1906
-#: ../../library/datetime.rst:2013 ../../library/datetime.rst:2258
-#: ../../library/datetime.rst:2270 ../../library/datetime.rst:2582
+#: ../../library/datetime.rst:1323 ../../library/datetime.rst:1918
+#: ../../library/datetime.rst:2025 ../../library/datetime.rst:2270
+#: ../../library/datetime.rst:2282 ../../library/datetime.rst:2594
 msgid "The UTC offset is not restricted to a whole number of minutes."
 msgstr "Зсув UTC не обмежений цілою кількістю хвилин."
 
-#: ../../library/datetime.rst:1317
+#: ../../library/datetime.rst:1329
 msgid ""
 "If :attr:`.tzinfo` is ``None``, returns ``None``, else returns "
 "``self.tzinfo.dst(self)``, and raises an exception if the latter doesn't "
@@ -2023,12 +2010,12 @@ msgstr ""
 "повертає ``None`` або об’єкт :class:`timedelta` з величиною менше одного "
 "дня."
 
-#: ../../library/datetime.rst:1321 ../../library/datetime.rst:1916
-#: ../../library/datetime.rst:2067
+#: ../../library/datetime.rst:1333 ../../library/datetime.rst:1928
+#: ../../library/datetime.rst:2079
 msgid "The DST offset is not restricted to a whole number of minutes."
 msgstr "Зміщення літнього часу не обмежується цілою кількістю хвилин."
 
-#: ../../library/datetime.rst:1327
+#: ../../library/datetime.rst:1339
 msgid ""
 "If :attr:`.tzinfo` is ``None``, returns ``None``, else returns "
 "``self.tzinfo.tzname(self)``, raises an exception if the latter doesn't "
@@ -2038,50 +2025,35 @@ msgstr ""
 "повертає ``self.tzinfo.tzname(self)``, викликає виняток, якщо останній не "
 "повертає ``None`` або рядковий об’єкт,"
 
-#: ../../library/datetime.rst:1342
+#: ../../library/datetime.rst:1354
 msgid ""
 "where ``yday = d.toordinal() - date(d.year, 1, 1).toordinal() + 1`` is the "
 "day number within the current year starting with ``1`` for January 1st. The "
-":attr:`tm_isdst` flag of the result is set according to the :meth:`dst` "
-"method: :attr:`.tzinfo` is ``None`` or :meth:`dst` returns ``None``, "
-":attr:`tm_isdst` is set to ``-1``; else if :meth:`dst` returns a non-zero "
-"value, :attr:`tm_isdst` is set to ``1``; else :attr:`tm_isdst` is set to "
-"``0``."
+":attr:`~time.struct_time.tm_isdst` flag of the result is set according to "
+"the :meth:`dst` method: :attr:`.tzinfo` is ``None`` or :meth:`dst` returns "
+"``None``, :attr:`!tm_isdst` is set to ``-1``; else if :meth:`dst` returns a "
+"non-zero value, :attr:`!tm_isdst` is set to ``1``; else :attr:`!tm_isdst` is"
+" set to ``0``."
 msgstr ""
-"де ``yday = d.toordinal() - date(d.year, 1, 1).toordinal() + 1`` — це номер "
-"дня в поточному році, починаючи з ``1`` для 1 січня. Прапорець "
-":attr:`tm_isdst` результату встановлюється відповідно до методу :meth:`dst` "
-":attr:`.tzinfo` має значення ``None`` або :meth:`dst` повертає ``None`` , "
-":attr:`tm_isdst` має значення ``-1``; інакше, якщо :meth:`dst` повертає "
-"ненульове значення, :attr:`tm_isdst` встановлюється на ``1``; інакше "
-":attr:`tm_isdst` встановлено на ``0``."
 
-#: ../../library/datetime.rst:1353
+#: ../../library/datetime.rst:1365
 msgid ""
 "If :class:`.datetime` instance *d* is naive, this is the same as "
-"``d.timetuple()`` except that :attr:`tm_isdst` is forced to 0 regardless of "
-"what ``d.dst()`` returns. DST is never in effect for a UTC time."
+"``d.timetuple()`` except that :attr:`~.time.struct_time.tm_isdst` is forced "
+"to 0 regardless of what ``d.dst()`` returns. DST is never in effect for a "
+"UTC time."
 msgstr ""
-"Якщо :class:`.datetime` екземпляр *d* є простим, це те саме, що "
-"``d.timetuple()``, за винятком того, що :attr:`tm_isdst` має значення 0 "
-"незалежно від того, що ``d.dst( )`` повертається. Літній час ніколи не діє "
-"протягом UTC."
 
-#: ../../library/datetime.rst:1357
+#: ../../library/datetime.rst:1369
 msgid ""
 "If *d* is aware, *d* is normalized to UTC time, by subtracting "
 "``d.utcoffset()``, and a :class:`time.struct_time` for the normalized time "
-"is returned. :attr:`tm_isdst` is forced to 0. Note that an "
+"is returned. :attr:`!tm_isdst` is forced to 0. Note that an "
 ":exc:`OverflowError` may be raised if *d*.year was ``MINYEAR`` or "
 "``MAXYEAR`` and UTC adjustment spills over a year boundary."
 msgstr ""
-"Якщо *d* відомо, *d* нормалізується до часу UTC шляхом віднімання "
-"``d.utcoffset()``, і повертається :class:`time.struct_time` для "
-"нормалізованого часу. :attr:`tm_isdst` має значення 0. Зауважте, що "
-":exc:`OverflowError` може виникнути, якщо *d*.year був ``MINYEAR`` або "
-"``MAXYEAR``, а коригування UTC виходить за межі року."
 
-#: ../../library/datetime.rst:1366
+#: ../../library/datetime.rst:1378
 msgid ""
 "Because naive ``datetime`` objects are treated by many ``datetime`` methods "
 "as local times, it is preferred to use aware datetimes to represent times in"
@@ -2091,7 +2063,7 @@ msgid ""
 "you can use :meth:`.datetime.timetuple`."
 msgstr ""
 
-#: ../../library/datetime.rst:1375
+#: ../../library/datetime.rst:1387
 msgid ""
 "Return the proleptic Gregorian ordinal of the date. The same as "
 "``self.date().toordinal()``."
@@ -2099,7 +2071,7 @@ msgstr ""
 "Повертає пролептичний григоріанський порядковий номер дати. Те саме, що "
 "``self.date().toordinal()``."
 
-#: ../../library/datetime.rst:1380
+#: ../../library/datetime.rst:1392
 msgid ""
 "Return POSIX timestamp corresponding to the :class:`.datetime` instance. The"
 " return value is a :class:`float` similar to that returned by "
@@ -2109,7 +2081,7 @@ msgstr ""
 "Значення, що повертається, є :class:`float`, подібне до того, яке повертає "
 ":func:`time.time`."
 
-#: ../../library/datetime.rst:1384
+#: ../../library/datetime.rst:1396
 msgid ""
 "Naive :class:`.datetime` instances are assumed to represent local time and "
 "this method relies on the platform C :c:func:`mktime` function to perform "
@@ -2119,14 +2091,14 @@ msgid ""
 "the future."
 msgstr ""
 
-#: ../../library/datetime.rst:1391
+#: ../../library/datetime.rst:1403
 msgid ""
 "For aware :class:`.datetime` instances, the return value is computed as::"
 msgstr ""
 "Для екземплярів aware :class:`.datetime` значення, що повертається, "
 "обчислюється як:"
 
-#: ../../library/datetime.rst:1398
+#: ../../library/datetime.rst:1410
 msgid ""
 "The :meth:`timestamp` method uses the :attr:`.fold` attribute to "
 "disambiguate the times during a repeated interval."
@@ -2134,7 +2106,7 @@ msgstr ""
 "Метод :meth:`timestamp` використовує атрибут :attr:`.fold`, щоб усунути "
 "неоднозначність часу протягом повторюваного інтервалу."
 
-#: ../../library/datetime.rst:1404
+#: ../../library/datetime.rst:1416
 msgid ""
 "There is no method to obtain the POSIX timestamp directly from a naive "
 ":class:`.datetime` instance representing UTC time. If your application uses "
@@ -2146,11 +2118,11 @@ msgstr ""
 "цю угоду, а системний часовий пояс не встановлено на UTC, ви можете отримати"
 " мітку часу POSIX, надавши ``tzinfo=timezone.utc``::"
 
-#: ../../library/datetime.rst:1412
+#: ../../library/datetime.rst:1424
 msgid "or by calculating the timestamp directly::"
 msgstr "або шляхом безпосереднього обчислення позначки часу:"
 
-#: ../../library/datetime.rst:1418
+#: ../../library/datetime.rst:1430
 msgid ""
 "Return the day of the week as an integer, where Monday is 0 and Sunday is 6."
 " The same as ``self.date().weekday()``. See also :meth:`isoweekday`."
@@ -2158,7 +2130,7 @@ msgstr ""
 "Повертає день тижня як ціле число, де понеділок дорівнює 0, а неділя – 6. Те"
 " саме, що ``self.date().weekday()``. Дивіться також :meth:`isoweekday`."
 
-#: ../../library/datetime.rst:1424
+#: ../../library/datetime.rst:1436
 msgid ""
 "Return the day of the week as an integer, where Monday is 1 and Sunday is 7."
 " The same as ``self.date().isoweekday()``. See also :meth:`weekday`, "
@@ -2168,7 +2140,7 @@ msgstr ""
 "що ``self.date().isoweekday()``. Дивіться також :meth:`weekday`, "
 ":meth:`isocalendar`."
 
-#: ../../library/datetime.rst:1431
+#: ../../library/datetime.rst:1443
 msgid ""
 "Return a :term:`named tuple` with three components: ``year``, ``week`` and "
 "``weekday``. The same as ``self.date().isocalendar()``."
@@ -2176,20 +2148,20 @@ msgstr ""
 "Повертає :term:`named tuple` із трьома компонентами: ``рік``, ``тиждень`` і "
 "``день тижня``. Те саме, що ``self.date().isocalendar()``."
 
-#: ../../library/datetime.rst:1437
+#: ../../library/datetime.rst:1449
 msgid "Return a string representing the date and time in ISO 8601 format:"
 msgstr "Повертає рядок, що представляє дату й час у форматі ISO 8601:"
 
-#: ../../library/datetime.rst:1439
+#: ../../library/datetime.rst:1451
 msgid "``YYYY-MM-DDTHH:MM:SS.ffffff``, if :attr:`microsecond` is not 0"
 msgstr ""
 "``РРРР-ММ-ДДТГГ:ММ:СС.ffffff``, якщо :attr:`microsecond` не дорівнює 0"
 
-#: ../../library/datetime.rst:1440
+#: ../../library/datetime.rst:1452
 msgid "``YYYY-MM-DDTHH:MM:SS``, if :attr:`microsecond` is 0"
 msgstr "``РРРР-ММ-ДДТГГ:ХМ:СС``, якщо :attr:`microsecond` дорівнює 0"
 
-#: ../../library/datetime.rst:1442
+#: ../../library/datetime.rst:1454
 msgid ""
 "If :meth:`utcoffset` does not return ``None``, a string is appended, giving "
 "the UTC offset:"
@@ -2197,7 +2169,7 @@ msgstr ""
 "Якщо :meth:`utcoffset` не повертає ``None``, додається рядок із зміщенням "
 "UTC:"
 
-#: ../../library/datetime.rst:1445
+#: ../../library/datetime.rst:1457
 msgid ""
 "``YYYY-MM-DDTHH:MM:SS.ffffff+HH:MM[:SS[.ffffff]]``, if :attr:`microsecond` "
 "is not 0"
@@ -2205,14 +2177,14 @@ msgstr ""
 "``РРРР-ММ-ДДТГГ:ММ:СС.ffffff+ГГ:ММ[:СС[.ffffff]]``, якщо :attr:`microsecond`"
 " не дорівнює 0"
 
-#: ../../library/datetime.rst:1447
+#: ../../library/datetime.rst:1459
 msgid ""
 "``YYYY-MM-DDTHH:MM:SS+HH:MM[:SS[.ffffff]]``,  if :attr:`microsecond` is 0"
 msgstr ""
 "``РРРР-ММ-ДДТГГ:ММ:СС+ГГ:ХМ[:СС[.ffffff]]``, якщо :attr:`microsecond` "
 "дорівнює 0"
 
-#: ../../library/datetime.rst:1457
+#: ../../library/datetime.rst:1469
 msgid ""
 "The optional argument *sep* (default ``'T'``) is a one-character separator, "
 "placed between the date and time portions of the result. For example::"
@@ -2221,7 +2193,7 @@ msgstr ""
 "роздільником, який розміщується між частинами дати та часу результату. "
 "Наприклад::"
 
-#: ../../library/datetime.rst:1471 ../../library/datetime.rst:1846
+#: ../../library/datetime.rst:1483 ../../library/datetime.rst:1858
 msgid ""
 "The optional argument *timespec* specifies the number of additional "
 "components of the time to include (the default is ``'auto'``). It can be one"
@@ -2231,7 +2203,7 @@ msgstr ""
 " часу, які потрібно включити (за замовчуванням це ``'auto'``). Це може бути "
 "одне з наступного:"
 
-#: ../../library/datetime.rst:1475 ../../library/datetime.rst:1850
+#: ../../library/datetime.rst:1487 ../../library/datetime.rst:1862
 msgid ""
 "``'auto'``: Same as ``'seconds'`` if :attr:`microsecond` is 0, same as "
 "``'microseconds'`` otherwise."
@@ -2239,17 +2211,17 @@ msgstr ""
 "``'auto'``: те саме, що ``'seconds'``, якщо :attr:`microsecond` дорівнює 0, "
 "те ж саме, що ``'microseconds'`` інакше."
 
-#: ../../library/datetime.rst:1477 ../../library/datetime.rst:1852
+#: ../../library/datetime.rst:1489 ../../library/datetime.rst:1864
 msgid "``'hours'``: Include the :attr:`hour` in the two-digit ``HH`` format."
 msgstr "``'hours'``: Додайте :attr:`hour` у двозначному форматі ``HH``."
 
-#: ../../library/datetime.rst:1478 ../../library/datetime.rst:1853
+#: ../../library/datetime.rst:1490 ../../library/datetime.rst:1865
 msgid ""
 "``'minutes'``: Include :attr:`hour` and :attr:`minute` in ``HH:MM`` format."
 msgstr ""
 "``'хвилини'``: включайте :attr:`hour` і :attr:`minute` у форматі ``ГГ:ХХ``."
 
-#: ../../library/datetime.rst:1479 ../../library/datetime.rst:1854
+#: ../../library/datetime.rst:1491 ../../library/datetime.rst:1866
 msgid ""
 "``'seconds'``: Include :attr:`hour`, :attr:`minute`, and :attr:`second` in "
 "``HH:MM:SS`` format."
@@ -2257,7 +2229,7 @@ msgstr ""
 "``'seconds'``: включайте :attr:`hour`, :attr:`minute` і :attr:`second` у "
 "форматі ``HH:MM:SS``."
 
-#: ../../library/datetime.rst:1481 ../../library/datetime.rst:1856
+#: ../../library/datetime.rst:1493 ../../library/datetime.rst:1868
 msgid ""
 "``'milliseconds'``: Include full time, but truncate fractional second part "
 "to milliseconds. ``HH:MM:SS.sss`` format."
@@ -2265,24 +2237,24 @@ msgstr ""
 "``'мілісекунди``: включити повний час, але скоротити дробову другу частину "
 "до мілісекунд. Формат ``HH:MM:SS.sss``."
 
-#: ../../library/datetime.rst:1483 ../../library/datetime.rst:1858
+#: ../../library/datetime.rst:1495 ../../library/datetime.rst:1870
 msgid "``'microseconds'``: Include full time in ``HH:MM:SS.ffffff`` format."
 msgstr "``'мікросекунди``: включіть повний час у форматі ``ГГ:ХХ:СС.ffffff``."
 
-#: ../../library/datetime.rst:1487 ../../library/datetime.rst:1862
+#: ../../library/datetime.rst:1499 ../../library/datetime.rst:1874
 msgid "Excluded time components are truncated, not rounded."
 msgstr "Виключені компоненти часу скорочуються, а не округлюються."
 
-#: ../../library/datetime.rst:1489
+#: ../../library/datetime.rst:1501
 msgid ":exc:`ValueError` will be raised on an invalid *timespec* argument::"
 msgstr ""
 ":exc:`ValueError` буде викликано через недійсний аргумент *timespec*::"
 
-#: ../../library/datetime.rst:1499 ../../library/datetime.rst:1877
+#: ../../library/datetime.rst:1511 ../../library/datetime.rst:1889
 msgid "Added the *timespec* parameter."
 msgstr ""
 
-#: ../../library/datetime.rst:1505
+#: ../../library/datetime.rst:1517
 msgid ""
 "For a :class:`.datetime` instance *d*, ``str(d)`` is equivalent to "
 "``d.isoformat(' ')``."
@@ -2290,11 +2262,11 @@ msgstr ""
 "Для екземпляра :class:`.datetime` *d*, ``str(d)`` еквівалентно "
 "``d.isoformat(' ')``."
 
-#: ../../library/datetime.rst:1511
+#: ../../library/datetime.rst:1523
 msgid "Return a string representing the date and time::"
 msgstr "Повертає рядок, що представляє дату й час::"
 
-#: ../../library/datetime.rst:1517
+#: ../../library/datetime.rst:1529
 msgid ""
 "The output string will *not* include time zone information, regardless of "
 "whether the input is aware or naive."
@@ -2302,7 +2274,7 @@ msgstr ""
 "Рядок виводу *не* включатиме інформацію про часовий пояс, незалежно від "
 "того, чи є введення відомим чи простим."
 
-#: ../../library/datetime.rst:1524
+#: ../../library/datetime.rst:1536
 msgid ""
 "on platforms where the native C :c:func:`ctime` function (which "
 ":func:`time.ctime` invokes, but which :meth:`datetime.ctime` does not "
@@ -2312,14 +2284,14 @@ msgstr ""
 "викликає, але яку :meth:`datetime.ctime` не викликає) відповідає стандарту "
 "C."
 
-#: ../../library/datetime.rst:1531
+#: ../../library/datetime.rst:1543
 msgid ""
 "Return a string representing the date and time, controlled by an explicit "
 "format string. See also :ref:`strftime-strptime-behavior` and "
 ":meth:`datetime.isoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:1538
+#: ../../library/datetime.rst:1550
 msgid ""
 "Same as :meth:`.datetime.strftime`. This makes it possible to specify a "
 "format string for a :class:`.datetime` object in :ref:`formatted string "
@@ -2327,15 +2299,15 @@ msgid ""
 ":ref:`strftime-strptime-behavior` and :meth:`datetime.isoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:1545
+#: ../../library/datetime.rst:1557
 msgid "Examples of Usage: :class:`.datetime`"
 msgstr "Приклади використання: :class:`.datetime`"
 
-#: ../../library/datetime.rst:1547
-msgid "Examples of working with :class:`~datetime.datetime` objects:"
-msgstr "Приклади роботи з об'єктами :class:`~datetime.datetime`:"
+#: ../../library/datetime.rst:1559
+msgid "Examples of working with :class:`.datetime` objects:"
+msgstr ""
 
-#: ../../library/datetime.rst:1600
+#: ../../library/datetime.rst:1612
 msgid ""
 "The example below defines a :class:`tzinfo` subclass capturing time zone "
 "information for Kabul, Afghanistan, which used +4 UTC until 1945 and then "
@@ -2345,23 +2317,21 @@ msgstr ""
 "інформацію про часовий пояс для Кабула, Афганістан, який використовував +4 "
 "UTC до 1945 року, а потім +4:30 UTC після цього::"
 
-#: ../../library/datetime.rst:1647
+#: ../../library/datetime.rst:1659
 msgid "Usage of ``KabulTz`` from above::"
 msgstr "Використання ``KabulTz`` зверху::"
 
-#: ../../library/datetime.rst:1673
+#: ../../library/datetime.rst:1685
 msgid ":class:`.time` Objects"
 msgstr ":class:`.time` Об'єкти"
 
-#: ../../library/datetime.rst:1675
+#: ../../library/datetime.rst:1687
 msgid ""
-"A :class:`time` object represents a (local) time of day, independent of any "
-"particular day, and subject to adjustment via a :class:`tzinfo` object."
+"A :class:`.time` object represents a (local) time of day, independent of any"
+" particular day, and subject to adjustment via a :class:`tzinfo` object."
 msgstr ""
-"Об’єкт :class:`time` представляє (локальний) час доби, незалежний від будь-"
-"якого конкретного дня, і підлягає налаштуванню через об’єкт :class:`tzinfo`."
 
-#: ../../library/datetime.rst:1680
+#: ../../library/datetime.rst:1692
 msgid ""
 "All arguments are optional. *tzinfo* may be ``None``, or an instance of a "
 ":class:`tzinfo` subclass. The remaining arguments must be integers in the "
@@ -2371,7 +2341,7 @@ msgstr ""
 "підкласу :class:`tzinfo`. Решта аргументів мають бути цілими числами в таких"
 " діапазонах:"
 
-#: ../../library/datetime.rst:1690
+#: ../../library/datetime.rst:1702
 msgid ""
 "If an argument outside those ranges is given, :exc:`ValueError` is raised. "
 "All default to ``0`` except *tzinfo*, which defaults to :const:`None`."
@@ -2380,15 +2350,15 @@ msgstr ""
 "за замовчуванням мають значення ``0``, крім *tzinfo*, для якого за "
 "замовчуванням :const:`None`."
 
-#: ../../library/datetime.rst:1698
+#: ../../library/datetime.rst:1710
 msgid "The earliest representable :class:`.time`, ``time(0, 0, 0, 0)``."
 msgstr "Найперший представлений :class:`.time`, ``time(0, 0, 0, 0)``."
 
-#: ../../library/datetime.rst:1703
+#: ../../library/datetime.rst:1715
 msgid "The latest representable :class:`.time`, ``time(23, 59, 59, 999999)``."
 msgstr "Останній представлений :class:`.time`, ``time(23, 59, 59, 999999)``."
 
-#: ../../library/datetime.rst:1708
+#: ../../library/datetime.rst:1720
 msgid ""
 "The smallest possible difference between non-equal :class:`.time` objects, "
 "``timedelta(microseconds=1)``, although note that arithmetic on "
@@ -2398,7 +2368,7 @@ msgstr ""
 "``timedelta(microseconds=1)``, хоча зауважте, що арифметика в об’єктах "
 ":class:`.time` не підтримується."
 
-#: ../../library/datetime.rst:1737
+#: ../../library/datetime.rst:1749
 msgid ""
 "The object passed as the tzinfo argument to the :class:`.time` constructor, "
 "or ``None`` if none was passed."
@@ -2406,7 +2376,7 @@ msgstr ""
 "Об’єкт, переданий як аргумент tzinfo конструктору :class:`.time`, або "
 "``None``, якщо жодного не було передано."
 
-#: ../../library/datetime.rst:1751
+#: ../../library/datetime.rst:1763
 msgid ""
 ":class:`.time` objects support comparison of :class:`.time` to "
 ":class:`.time`, where *a* is considered less than *b* when *a* precedes *b* "
@@ -2420,46 +2390,34 @@ msgstr ""
 "викликається під час спроби порівняння порядку. Для порівняння рівності "
 "наївні екземпляри ніколи не дорівнюють усвідомленим екземплярам."
 
-#: ../../library/datetime.rst:1757
+#: ../../library/datetime.rst:1769
 msgid ""
-"If both comparands are aware, and have the same :attr:`~time.tzinfo` "
-"attribute, the common :attr:`~time.tzinfo` attribute is ignored and the base"
-" times are compared. If both comparands are aware and have different "
-":attr:`~time.tzinfo` attributes, the comparands are first adjusted by "
-"subtracting their UTC offsets (obtained from ``self.utcoffset()``). In order"
-" to stop mixed-type comparisons from falling back to the default comparison "
-"by object address, when a :class:`.time` object is compared to an object of "
-"a different type, :exc:`TypeError` is raised unless the comparison is ``==``"
-" or ``!=``. The latter cases return :const:`False` or :const:`True`, "
+"If both comparands are aware, and have the same :attr:`~.time.tzinfo` "
+"attribute, the common :attr:`!tzinfo` attribute is ignored and the base "
+"times are compared. If both comparands are aware and have different "
+":attr:`!tzinfo` attributes, the comparands are first adjusted by subtracting"
+" their UTC offsets (obtained from ``self.utcoffset()``). In order to stop "
+"mixed-type comparisons from falling back to the default comparison by object"
+" address, when a :class:`.time` object is compared to an object of a "
+"different type, :exc:`TypeError` is raised unless the comparison is ``==`` "
+"or ``!=``. The latter cases return :const:`False` or :const:`True`, "
 "respectively."
 msgstr ""
-"Якщо обидва компаранди знають і мають однаковий атрибут "
-":attr:`~time.tzinfo`, загальний атрибут :attr:`~time.tzinfo` ігнорується, а "
-"базовий час порівнюється. Якщо обидва компаранди знають і мають різні "
-"атрибути :attr:`~time.tzinfo`, компаранди спочатку коригуються шляхом "
-"віднімання їхніх зсувів UTC (отриманих із ``self.utcoffset()``). Щоб "
-"зупинити порівняння змішаного типу від повернення до стандартного порівняння"
-" за адресою об’єкта, коли об’єкт :class:`.time` порівнюється з об’єктом "
-"іншого типу, виникає :exc:`TypeError`, якщо порівняння не це ``==`` або "
-"``!=``. Останні випадки повертають :const:`False` або :const:`True` "
-"відповідно."
 
-#: ../../library/datetime.rst:1767
+#: ../../library/datetime.rst:1779
 msgid ""
-"Equality comparisons between aware and naive :class:`~datetime.time` "
-"instances don't raise :exc:`TypeError`."
+"Equality comparisons between aware and naive :class:`.time` instances don't "
+"raise :exc:`TypeError`."
 msgstr ""
-"Порівняння рівності між усвідомленими та наївними екземплярами "
-":class:`~datetime.time` не викликає :exc:`TypeError`."
 
-#: ../../library/datetime.rst:1771
+#: ../../library/datetime.rst:1783
 msgid ""
 "In Boolean contexts, a :class:`.time` object is always considered to be "
 "true."
 msgstr ""
 "У логічних контекстах об’єкт :class:`.time` завжди вважається істинним."
 
-#: ../../library/datetime.rst:1773
+#: ../../library/datetime.rst:1785
 msgid ""
 "Before Python 3.5, a :class:`.time` object was considered to be false if it "
 "represented midnight in UTC. This behavior was considered obscure and error-"
@@ -2471,35 +2429,35 @@ msgstr ""
 "помилок, і її було видалено в Python 3.5. Дивіться :issue:`13936` для "
 "отримання повної інформації."
 
-#: ../../library/datetime.rst:1780
+#: ../../library/datetime.rst:1792
 msgid "Other constructor:"
 msgstr "Інший конструктор:"
 
-#: ../../library/datetime.rst:1784
+#: ../../library/datetime.rst:1796
 msgid ""
 "Return a :class:`.time` corresponding to a *time_string* in any valid ISO "
 "8601 format, with the following exceptions:"
 msgstr ""
 
-#: ../../library/datetime.rst:1788
+#: ../../library/datetime.rst:1800
 msgid ""
 "The leading ``T``, normally required in cases where there may be ambiguity "
 "between a date and a time, is not required."
 msgstr ""
 
-#: ../../library/datetime.rst:1790
+#: ../../library/datetime.rst:1802
 msgid ""
 "Fractional seconds may have any number of digits (anything beyond 6 will be "
 "truncated)."
 msgstr ""
 
-#: ../../library/datetime.rst:1818
+#: ../../library/datetime.rst:1830
 msgid ""
 "Previously, this method only supported formats that could be emitted by "
 ":meth:`time.isoformat()`."
 msgstr ""
 
-#: ../../library/datetime.rst:1828
+#: ../../library/datetime.rst:1840
 msgid ""
 "Return a :class:`.time` with the same value, except for those attributes "
 "given new values by whichever keyword arguments are specified. Note that "
@@ -2511,19 +2469,19 @@ msgstr ""
 "Зауважте, що ``tzinfo=None`` можна вказати для створення простого "
 ":class:`.time` із відомого :class:`.time` без перетворення даних часу."
 
-#: ../../library/datetime.rst:1839
+#: ../../library/datetime.rst:1851
 msgid "Return a string representing the time in ISO 8601 format, one of:"
 msgstr "Повертає рядок, що представляє час у форматі ISO 8601, один із:"
 
-#: ../../library/datetime.rst:1841
+#: ../../library/datetime.rst:1853
 msgid "``HH:MM:SS.ffffff``, if :attr:`microsecond` is not 0"
 msgstr "``HH:MM:SS.ffffff``, якщо :attr:`microsecond` не дорівнює 0"
 
-#: ../../library/datetime.rst:1842
+#: ../../library/datetime.rst:1854
 msgid "``HH:MM:SS``, if :attr:`microsecond` is 0"
 msgstr "``ГГ:ХХ:СС``, якщо :attr:`microsecond` дорівнює 0"
 
-#: ../../library/datetime.rst:1843
+#: ../../library/datetime.rst:1855
 msgid ""
 "``HH:MM:SS.ffffff+HH:MM[:SS[.ffffff]]``, if :meth:`utcoffset` does not "
 "return ``None``"
@@ -2531,7 +2489,7 @@ msgstr ""
 "``HH:MM:SS.ffffff+HH:MM[:SS[.ffffff]]``, якщо :meth:`utcoffset` не повертає "
 "``None``"
 
-#: ../../library/datetime.rst:1844
+#: ../../library/datetime.rst:1856
 msgid ""
 "``HH:MM:SS+HH:MM[:SS[.ffffff]]``, if :attr:`microsecond` is 0 and "
 ":meth:`utcoffset` does not return ``None``"
@@ -2539,22 +2497,22 @@ msgstr ""
 "``ГГ:ХМ:СС+ГГ:ХМ[:СС[.ffffff]]``, якщо :attr:`microsecond` дорівнює 0 і "
 ":meth:`utcoffset` не повертає ``None``"
 
-#: ../../library/datetime.rst:1864
+#: ../../library/datetime.rst:1876
 msgid ":exc:`ValueError` will be raised on an invalid *timespec* argument."
 msgstr ":exc:`ValueError` буде викликано через недійсний аргумент *timespec*."
 
-#: ../../library/datetime.rst:1883
+#: ../../library/datetime.rst:1895
 msgid "For a time *t*, ``str(t)`` is equivalent to ``t.isoformat()``."
 msgstr "Протягом часу *t* ``str(t)`` еквівалентно ``t.isoformat()``."
 
-#: ../../library/datetime.rst:1888
+#: ../../library/datetime.rst:1900
 msgid ""
 "Return a string representing the time, controlled by an explicit format "
 "string.  See also :ref:`strftime-strptime-behavior` and "
 ":meth:`time.isoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:1894
+#: ../../library/datetime.rst:1906
 msgid ""
 "Same as :meth:`.time.strftime`. This makes it possible to specify a format "
 "string for a :class:`.time` object in :ref:`formatted string literals "
@@ -2562,7 +2520,7 @@ msgid ""
 "strptime-behavior` and :meth:`time.isoformat`."
 msgstr ""
 
-#: ../../library/datetime.rst:1902
+#: ../../library/datetime.rst:1914
 msgid ""
 "If :attr:`.tzinfo` is ``None``, returns ``None``, else returns "
 "``self.tzinfo.utcoffset(None)``, and raises an exception if the latter "
@@ -2574,7 +2532,7 @@ msgstr ""
 "не повертає ``None`` або об’єкт :class:`timedelta` з величиною менше одного "
 "дня."
 
-#: ../../library/datetime.rst:1912
+#: ../../library/datetime.rst:1924
 msgid ""
 "If :attr:`.tzinfo` is ``None``, returns ``None``, else returns "
 "``self.tzinfo.dst(None)``, and raises an exception if the latter doesn't "
@@ -2586,7 +2544,7 @@ msgstr ""
 "повертає ``None`` або об’єкт :class:`timedelta` з величиною менше одного "
 "дня."
 
-#: ../../library/datetime.rst:1921
+#: ../../library/datetime.rst:1933
 msgid ""
 "If :attr:`.tzinfo` is ``None``, returns ``None``, else returns "
 "``self.tzinfo.tzname(None)``, or raises an exception if the latter doesn't "
@@ -2596,19 +2554,19 @@ msgstr ""
 "повертає ``self.tzinfo.tzname(None)`` або викликає виняток, якщо останній не"
 " повертає ``None`` або рядковий об’єкт."
 
-#: ../../library/datetime.rst:1926
+#: ../../library/datetime.rst:1938
 msgid "Examples of Usage: :class:`.time`"
 msgstr "Приклади використання: :class:`.time`"
 
-#: ../../library/datetime.rst:1928
+#: ../../library/datetime.rst:1940
 msgid "Examples of working with a :class:`.time` object::"
 msgstr "Приклади роботи з об'єктом :class:`.time`::"
 
-#: ../../library/datetime.rst:1959
+#: ../../library/datetime.rst:1971
 msgid ":class:`tzinfo` Objects"
 msgstr ":class:`tzinfo` Об'єкти"
 
-#: ../../library/datetime.rst:1963
+#: ../../library/datetime.rst:1975
 msgid ""
 "This is an abstract base class, meaning that this class should not be "
 "instantiated directly.  Define a subclass of :class:`tzinfo` to capture "
@@ -2618,7 +2576,7 @@ msgstr ""
 " безпосередньо. Визначте підклас :class:`tzinfo` для отримання інформації "
 "про певний часовий пояс."
 
-#: ../../library/datetime.rst:1967
+#: ../../library/datetime.rst:1979
 msgid ""
 "An instance of (a concrete subclass of) :class:`tzinfo` can be passed to the"
 " constructors for :class:`.datetime` and :class:`.time` objects. The latter "
@@ -2634,23 +2592,17 @@ msgstr ""
 "часового поясу та зміщення літнього часу, усе відносно об’єкта дати чи часу "
 "передано їм."
 
-#: ../../library/datetime.rst:1973
+#: ../../library/datetime.rst:1985
 msgid ""
 "You need to derive a concrete subclass, and (at least) supply "
 "implementations of the standard :class:`tzinfo` methods needed by the "
-":class:`.datetime` methods you use. The :mod:`datetime` module provides "
+":class:`.datetime` methods you use. The :mod:`!datetime` module provides "
 ":class:`timezone`, a simple concrete subclass of :class:`tzinfo` which can "
 "represent timezones with fixed offset from UTC such as UTC itself or North "
 "American EST and EDT."
 msgstr ""
-"Вам потрібно вивести конкретний підклас і (принаймні) забезпечити реалізації"
-" стандартних методів :class:`tzinfo`, необхідних для методів "
-":class:`.datetime`, які ви використовуєте. Модуль :mod:`datetime` надає "
-":class:`timezone`, простий конкретний підклас :class:`tzinfo`, який може "
-"представляти часові пояси з фіксованим зсувом відносно UTC, як-от сам UTC "
-"або північноамериканський EST і EDT."
 
-#: ../../library/datetime.rst:1980
+#: ../../library/datetime.rst:1992
 msgid ""
 "Special requirement for pickling:  A :class:`tzinfo` subclass must have an "
 ":meth:`~object.__init__` method that can be called with no arguments, "
@@ -2658,17 +2610,14 @@ msgid ""
 "technical requirement that may be relaxed in the future."
 msgstr ""
 
-#: ../../library/datetime.rst:1986
+#: ../../library/datetime.rst:1998
 msgid ""
 "A concrete subclass of :class:`tzinfo` may need to implement the following "
 "methods. Exactly which methods are needed depends on the uses made of aware "
-":mod:`datetime` objects. If in doubt, simply implement all of them."
+":mod:`!datetime` objects. If in doubt, simply implement all of them."
 msgstr ""
-"Конкретний підклас :class:`tzinfo` може потребувати реалізації наступних "
-"методів. Які саме методи потрібні, залежить від використання відомих "
-"об’єктів :mod:`datetime`. Якщо сумніваєтеся, просто застосуйте їх усі."
 
-#: ../../library/datetime.rst:1993
+#: ../../library/datetime.rst:2005
 msgid ""
 "Return offset of local time from UTC, as a :class:`timedelta` object that is"
 " positive east of UTC. If local time is west of UTC, this should be "
@@ -2678,7 +2627,7 @@ msgstr ""
 " є позитивним на схід від UTC. Якщо місцевий час на захід від UTC, це "
 "значення має бути від’ємним."
 
-#: ../../library/datetime.rst:1996
+#: ../../library/datetime.rst:2008
 msgid ""
 "This represents the *total* offset from UTC; for example, if a "
 ":class:`tzinfo` object represents both time zone and DST adjustments, "
@@ -2696,7 +2645,7 @@ msgstr ""
 "бути меншою за один день ). Більшість реалізацій :meth:`utcoffset`, "
 "ймовірно, виглядатимуть як одне з цих двох:"
 
-#: ../../library/datetime.rst:2007
+#: ../../library/datetime.rst:2019
 msgid ""
 "If :meth:`utcoffset` does not return ``None``, :meth:`dst` should not return"
 " ``None`` either."
@@ -2704,14 +2653,14 @@ msgstr ""
 "Якщо :meth:`utcoffset` не повертає ``None``, :meth:`dst` також не має "
 "повертати ``None``."
 
-#: ../../library/datetime.rst:2010
+#: ../../library/datetime.rst:2022
 msgid ""
 "The default implementation of :meth:`utcoffset` raises "
 ":exc:`NotImplementedError`."
 msgstr ""
 "Стандартна реалізація :meth:`utcoffset` викликає :exc:`NotImplementedError`."
 
-#: ../../library/datetime.rst:2019
+#: ../../library/datetime.rst:2031
 msgid ""
 "Return the daylight saving time (DST) adjustment, as a :class:`timedelta` "
 "object or ``None`` if DST information isn't known."
@@ -2719,7 +2668,7 @@ msgstr ""
 "Повертає коригування літнього часу (DST) як об’єкт :class:`timedelta` або "
 "``None``, якщо інформація про літній час невідома."
 
-#: ../../library/datetime.rst:2023
+#: ../../library/datetime.rst:2035
 msgid ""
 "Return ``timedelta(0)`` if DST is not in effect. If DST is in effect, return"
 " the offset as a :class:`timedelta` object (see :meth:`utcoffset` for "
@@ -2727,22 +2676,13 @@ msgid ""
 " UTC offset returned by :meth:`utcoffset`, so there's no need to consult "
 ":meth:`dst` unless you're interested in obtaining DST info separately. For "
 "example, :meth:`datetime.timetuple` calls its :attr:`~.datetime.tzinfo` "
-"attribute's :meth:`dst` method to determine how the :attr:`tm_isdst` flag "
-"should be set, and :meth:`tzinfo.fromutc` calls :meth:`dst` to account for "
-"DST changes when crossing time zones."
+"attribute's :meth:`dst` method to determine how the "
+":attr:`~time.struct_time.tm_isdst` flag should be set, and "
+":meth:`tzinfo.fromutc` calls :meth:`dst` to account for DST changes when "
+"crossing time zones."
 msgstr ""
-"Повертає ``timedelta(0)``, якщо літній час не діє. Якщо діє літній час, "
-"поверніть зсув як об’єкт :class:`timedelta` (докладніше див. у "
-":meth:`utcoffset`). Зверніть увагу, що зсув літнього часу, якщо він "
-"застосовний, уже додано до зсуву UTC, який повертає :meth:`utcoffset`, тому "
-"немає потреби звертатися до :meth:`dst`, якщо ви не зацікавлені в отриманні "
-"інформації про літній час окремо. Наприклад, :meth:`datetime.timetuple` "
-"викликає метод :meth:`dst` свого атрибута :attr:`~.datetime.tzinfo`, щоб "
-"визначити, як слід встановити прапор :attr:`tm_isdst`, і "
-":meth:`tzinfo.fromutc` викликає :meth:`dst` для врахування змін літнього "
-"часу під час перетину часових поясів."
 
-#: ../../library/datetime.rst:2033
+#: ../../library/datetime.rst:2045
 msgid ""
 "An instance *tz* of a :class:`tzinfo` subclass that models both standard and"
 " daylight times must be consistent in this sense:"
@@ -2750,11 +2690,11 @@ msgstr ""
 "Екземпляр *tz* підкласу :class:`tzinfo`, який моделює як стандартний, так і "
 "денний час, має бути послідовним у цьому сенсі:"
 
-#: ../../library/datetime.rst:2036
+#: ../../library/datetime.rst:2048
 msgid "``tz.utcoffset(dt) - tz.dst(dt)``"
 msgstr "``tz.utcoffset(dt) - tz.dst(dt)``"
 
-#: ../../library/datetime.rst:2038
+#: ../../library/datetime.rst:2050
 msgid ""
 "must return the same result for every :class:`.datetime` *dt* with "
 "``dt.tzinfo == tz``  For sane :class:`tzinfo` subclasses, this expression "
@@ -2764,19 +2704,10 @@ msgid ""
 "it's the programmer's responsibility to ensure it. If a :class:`tzinfo` "
 "subclass cannot guarantee this, it may be able to override the default "
 "implementation of :meth:`tzinfo.fromutc` to work correctly with "
-":meth:`astimezone` regardless."
+":meth:`~.datetime.astimezone` regardless."
 msgstr ""
-"повинен повертати той самий результат для кожного :class:`.datetime` *dt* з "
-"``dt.tzinfo == tz`` Для розумних підкласів :class:`tzinfo` цей вираз дає "
-"\"стандартний зсув\" часового поясу, який має залежати не від дати чи часу, "
-"а лише від географічного розташування. Реалізація "
-":meth:`datetime.astimezone` покладається на це, але не може виявити "
-"порушення; це відповідальність програміста забезпечити це. Якщо підклас "
-":class:`tzinfo` не може гарантувати це, він може замінити реалізацію за "
-"замовчуванням :meth:`tzinfo.fromutc` для правильної роботи з "
-":meth:`astimezone` незалежно від цього."
 
-#: ../../library/datetime.rst:2047
+#: ../../library/datetime.rst:2059
 msgid ""
 "Most implementations of :meth:`dst` will probably look like one of these "
 "two::"
@@ -2784,46 +2715,37 @@ msgstr ""
 "Більшість реалізацій :meth:`dst`, ймовірно, виглядатимуть як одна з цих "
 "двох:"
 
-#: ../../library/datetime.rst:2053
+#: ../../library/datetime.rst:2065
 msgid "or::"
 msgstr "або::"
 
-#: ../../library/datetime.rst:2065
+#: ../../library/datetime.rst:2077
 msgid ""
 "The default implementation of :meth:`dst` raises :exc:`NotImplementedError`."
 msgstr ""
 "Стандартна реалізація :meth:`dst` викликає :exc:`NotImplementedError`."
 
-#: ../../library/datetime.rst:2073
+#: ../../library/datetime.rst:2085
 msgid ""
 "Return the time zone name corresponding to the :class:`.datetime` object "
 "*dt*, as a string. Nothing about string names is defined by the "
-":mod:`datetime` module, and there's no requirement that it mean anything in "
-"particular. For example, \"GMT\", \"UTC\", \"-500\", \"-5:00\", \"EDT\", "
+":mod:`!datetime` module, and there's no requirement that it mean anything in"
+" particular. For example, \"GMT\", \"UTC\", \"-500\", \"-5:00\", \"EDT\", "
 "\"US/Eastern\", \"America/New York\" are all valid replies. Return ``None`` "
 "if a string name isn't known. Note that this is a method rather than a fixed"
 " string primarily because some :class:`tzinfo` subclasses will wish to "
 "return different names depending on the specific value of *dt* passed, "
 "especially if the :class:`tzinfo` class is accounting for daylight time."
 msgstr ""
-"Повертає назву часового поясу, що відповідає об’єкту :class:`.datetime` "
-"*dt*, у вигляді рядка. Модуль :mod:`datetime` нічого не визначає щодо назв "
-"рядків, і немає жодних вимог, щоб вони означали щось конкретне. Наприклад, "
-"\"GMT\", \"UTC\", \"-500\", \"-5:00\", \"EDT\", \"US/Eastern\", "
-"\"America/New York\" — усі дійсні відповіді. Повертає ``None``, якщо назва "
-"рядка невідома. Зауважте, що це метод, а не фіксований рядок, перш за все "
-"тому, що деякі підкласи :class:`tzinfo` бажають повертати різні імена "
-"залежно від конкретного переданого значення *dt*, особливо якщо клас "
-":class:`tzinfo` є обліковим для світлового часу."
 
-#: ../../library/datetime.rst:2083
+#: ../../library/datetime.rst:2095
 msgid ""
 "The default implementation of :meth:`tzname` raises "
 ":exc:`NotImplementedError`."
 msgstr ""
 "Стандартна реалізація :meth:`tzname` викликає :exc:`NotImplementedError`."
 
-#: ../../library/datetime.rst:2086
+#: ../../library/datetime.rst:2098
 msgid ""
 "These methods are called by a :class:`.datetime` or :class:`.time` object, "
 "in response to their methods of the same names. A :class:`.datetime` object "
@@ -2838,7 +2760,7 @@ msgstr ""
 "чином, методи підкласу :class:`tzinfo` повинні бути готові прийняти аргумент"
 " *dt* ``None`` або клас :class:`.datetime`."
 
-#: ../../library/datetime.rst:2092
+#: ../../library/datetime.rst:2104
 msgid ""
 "When ``None`` is passed, it's up to the class designer to decide the best "
 "response. For example, returning ``None`` is appropriate if the class wishes"
@@ -2853,7 +2775,7 @@ msgstr ""
 "кориснішим для ``utcoffset(None)`` повертати стандартне зміщення UTC, "
 "оскільки немає іншої угоди для виявлення стандартного зсуву."
 
-#: ../../library/datetime.rst:2098
+#: ../../library/datetime.rst:2110
 msgid ""
 "When a :class:`.datetime` object is passed in response to a "
 ":class:`.datetime` method, ``dt.tzinfo`` is the same object as *self*. "
@@ -2869,14 +2791,14 @@ msgstr ""
 "інтерпретують *dt* як місцевий час, і не потрібно турбуватися про об’єкти в "
 "інших часових поясах."
 
-#: ../../library/datetime.rst:2104
+#: ../../library/datetime.rst:2116
 msgid ""
 "There is one more :class:`tzinfo` method that a subclass may wish to "
 "override:"
 msgstr ""
 "Є ще один метод :class:`tzinfo`, який підклас може захотіти перевизначити:"
 
-#: ../../library/datetime.rst:2109
+#: ../../library/datetime.rst:2121
 msgid ""
 "This is called from the default :class:`datetime.astimezone()` "
 "implementation. When called from that, ``dt.tzinfo`` is *self*, and *dt*'s "
@@ -2890,7 +2812,7 @@ msgstr ""
 "коригування даних дати й часу, повертаючи еквівалентну дату й час у "
 "місцевому часі *self*."
 
-#: ../../library/datetime.rst:2115
+#: ../../library/datetime.rst:2127
 msgid ""
 "Most :class:`tzinfo` subclasses should be able to inherit the default "
 ":meth:`fromutc` implementation without problems. It's strong enough to "
@@ -2900,23 +2822,12 @@ msgid ""
 "implementation may not handle correctly in all cases is one where the "
 "standard offset (from UTC) depends on the specific date and time passed, "
 "which can happen for political reasons. The default implementations of "
-":meth:`astimezone` and :meth:`fromutc` may not produce the result you want "
-"if the result is one of the hours straddling the moment the standard offset "
-"changes."
+":meth:`~.datetime.astimezone` and :meth:`fromutc` may not produce the result"
+" you want if the result is one of the hours straddling the moment the "
+"standard offset changes."
 msgstr ""
-"Більшість підкласів :class:`tzinfo` повинні мати можливість без проблем "
-"успадковувати реалізацію :meth:`fromutc` за умовчанням. Він достатньо "
-"потужний, щоб обробляти часові пояси з фіксованим зміщенням, а також часові "
-"пояси, що враховують як стандартний, так і денний час, причому останній, "
-"навіть якщо час переходу на літній час відрізняється в різні роки. Прикладом"
-" часового поясу, який стандартна реалізація :meth:`fromutc` може не "
-"обробляти належним чином у всіх випадках, є той, де стандартне зміщення (від"
-" UTC) залежить від конкретної дати та часу, що минули, що може статися з "
-"політичних причин. Реалізації за замовчуванням :meth:`astimezone` і "
-":meth:`fromutc` можуть не дати бажаного результату, якщо результатом є одна "
-"з годин, що перетинає момент зміни стандартного зсуву."
 
-#: ../../library/datetime.rst:2126
+#: ../../library/datetime.rst:2138
 msgid ""
 "Skipping code for error cases, the default :meth:`fromutc` implementation "
 "acts like::"
@@ -2924,7 +2835,7 @@ msgstr ""
 "Пропускаючи код для випадків помилки, реалізація за замовчуванням "
 ":meth:`fromutc` діє як:"
 
-#: ../../library/datetime.rst:2144
+#: ../../library/datetime.rst:2156
 msgid ""
 "In the following :download:`tzinfo_examples.py "
 "<../includes/tzinfo_examples.py>` file there are some examples of "
@@ -2933,7 +2844,7 @@ msgstr ""
 "У наступному файлі :download:`tzinfo_examples.py "
 "<../includes/tzinfo_examples.py>` є кілька прикладів класів :class:`tzinfo`:"
 
-#: ../../library/datetime.rst:2150
+#: ../../library/datetime.rst:2162
 msgid ""
 "Note that there are unavoidable subtleties twice per year in a "
 ":class:`tzinfo` subclass accounting for both standard and daylight time, at "
@@ -2948,7 +2859,7 @@ msgstr ""
 " хвилину після 1:59 (EST) у другу неділю березня та закінчується через "
 "хвилину після 1:59 (EST) у першу неділю листопада:"
 
-#: ../../library/datetime.rst:2164
+#: ../../library/datetime.rst:2176
 msgid ""
 "When DST starts (the \"start\" line), the local wall clock leaps from 1:59 "
 "to 3:00. A wall time of the form 2:MM doesn't really make sense on that day,"
@@ -2962,72 +2873,49 @@ msgstr ""
 " == 2`` у день початку літнього часу. Наприклад, під час весняного переходу "
 "вперед 2016 року ми отримуємо:"
 
-#: ../../library/datetime.rst:2183
+#: ../../library/datetime.rst:2195
 msgid ""
 "When DST ends (the \"end\" line), there's a potentially worse problem: "
 "there's an hour that can't be spelled unambiguously in local wall time: the "
 "last hour of daylight time. In Eastern, that's times of the form 5:MM UTC on"
 " the day daylight time ends. The local wall clock leaps from 1:59 (daylight "
 "time) back to 1:00 (standard time) again. Local times of the form 1:MM are "
-"ambiguous. :meth:`astimezone` mimics the local clock's behavior by mapping "
-"two adjacent UTC hours into the same local hour then. In the Eastern "
-"example, UTC times of the form 5:MM and 6:MM both map to 1:MM when converted"
-" to Eastern, but earlier times have the :attr:`~datetime.fold` attribute set"
-" to 0 and the later times have it set to 1. For example, at the Fall back "
-"transition of 2016, we get::"
+"ambiguous. :meth:`~.datetime.astimezone` mimics the local clock's behavior "
+"by mapping two adjacent UTC hours into the same local hour then. In the "
+"Eastern example, UTC times of the form 5:MM and 6:MM both map to 1:MM when "
+"converted to Eastern, but earlier times have the :attr:`~.datetime.fold` "
+"attribute set to 0 and the later times have it set to 1. For example, at the"
+" Fall back transition of 2016, we get::"
 msgstr ""
-"Коли літній час закінчується (рядок \"кінець\"), виникає потенційно гірша "
-"проблема: є година, яку неможливо однозначно написати за місцевим настінним "
-"часом: остання година денного часу. На Сході це час у формі 5:MM UTC на "
-"кінець дня. Місцевий настінний годинник знову повертається з 1:59 (за денним"
-" часом) до 1:00 (за стандартним часом). Місцевий час у формі 1:MM "
-"неоднозначний. :meth:`astimezone` імітує поведінку місцевого годинника, "
-"відображаючи дві суміжні години UTC в ту саму місцеву годину. У східному "
-"прикладі час UTC у формі 5:MM і 6:MM відображається на 1:MM, коли "
-"перетворюється на східний час, але попередній час має атрибут "
-":attr:`~datetime.fold`, встановлений на 0, а пізніший час встановіть його на"
-" 1. Наприклад, під час осіннього переходу 2016 року ми отримуємо:"
 
-#: ../../library/datetime.rst:2205
+#: ../../library/datetime.rst:2217
 msgid ""
 "Note that the :class:`.datetime` instances that differ only by the value of "
-"the :attr:`~datetime.fold` attribute are considered equal in comparisons."
+"the :attr:`~.datetime.fold` attribute are considered equal in comparisons."
 msgstr ""
-"Зауважте, що екземпляри :class:`.datetime`, які відрізняються лише значенням"
-" атрибута :attr:`~datetime.fold`, вважаються рівними в порівнянні."
 
-#: ../../library/datetime.rst:2208
+#: ../../library/datetime.rst:2220
 msgid ""
 "Applications that can't bear wall-time ambiguities should explicitly check "
-"the value of the :attr:`~datetime.fold` attribute or avoid using hybrid "
+"the value of the :attr:`~.datetime.fold` attribute or avoid using hybrid "
 ":class:`tzinfo` subclasses; there are no ambiguities when using "
 ":class:`timezone`, or any other fixed-offset :class:`tzinfo` subclass (such "
 "as a class representing only EST (fixed offset -5 hours), or only EDT (fixed"
 " offset -4 hours))."
 msgstr ""
-"Програми, які не можуть витримувати неоднозначність настінного часу, повинні"
-" явно перевіряти значення атрибута :attr:`~datetime.fold` або уникати "
-"використання гібридних підкласів :class:`tzinfo`; при використанні "
-":class:`timezone` або будь-якого іншого підкласу :class:`tzinfo` із "
-"фіксованим зсувом немає жодних двозначностей (наприклад, клас, що "
-"представляє лише EST (фіксований зсув -5 годин) або лише EDT (фіксований "
-"зсув -4) години))."
 
-#: ../../library/datetime.rst:2222
+#: ../../library/datetime.rst:2234
 msgid ":mod:`zoneinfo`"
 msgstr ":mod:`zoneinfo`"
 
-#: ../../library/datetime.rst:2217
+#: ../../library/datetime.rst:2229
 msgid ""
-"The :mod:`datetime` module has a basic :class:`timezone` class (for handling"
-" arbitrary fixed offsets from UTC) and its :attr:`timezone.utc` attribute (a"
-" UTC timezone instance)."
+"The :mod:`!datetime` module has a basic :class:`timezone` class (for "
+"handling arbitrary fixed offsets from UTC) and its :attr:`timezone.utc` "
+"attribute (a UTC timezone instance)."
 msgstr ""
-"Модуль :mod:`datetime` має базовий клас :class:`timezone` (для обробки "
-"довільних фіксованих зміщень від UTC) і його атрибут :attr:`timezone.utc` "
-"(екземпляр часового поясу UTC)."
 
-#: ../../library/datetime.rst:2221
+#: ../../library/datetime.rst:2233
 msgid ""
 "``zoneinfo`` brings the *IANA timezone database* (also known as the Olson "
 "database) to Python, and its usage is recommended."
@@ -3035,11 +2923,11 @@ msgstr ""
 "``zoneinfo`` переносить *базу даних часових поясів IANA* (також відому як "
 "база даних Olson) до Python, і її використання рекомендовано."
 
-#: ../../library/datetime.rst:2228
+#: ../../library/datetime.rst:2240
 msgid "`IANA timezone database <https://www.iana.org/time-zones>`_"
 msgstr "`База даних часових поясів IANA <https://www.iana.org/time-zones>`_"
 
-#: ../../library/datetime.rst:2225
+#: ../../library/datetime.rst:2237
 msgid ""
 "The Time Zone Database (often called tz, tzdata or zoneinfo) contains code "
 "and data that represent the history of local time for many representative "
@@ -3053,11 +2941,11 @@ msgstr ""
 "відобразити зміни, внесені політичними органами в межі часових поясів, "
 "зміщення UTC і правила переходу на літній час."
 
-#: ../../library/datetime.rst:2235
+#: ../../library/datetime.rst:2247
 msgid ":class:`timezone` Objects"
 msgstr ":class:`timezone` Об'єкти"
 
-#: ../../library/datetime.rst:2237
+#: ../../library/datetime.rst:2249
 msgid ""
 "The :class:`timezone` class is a subclass of :class:`tzinfo`, each instance "
 "of which represents a timezone defined by a fixed offset from UTC."
@@ -3065,7 +2953,7 @@ msgstr ""
 "Клас :class:`timezone` є підкласом :class:`tzinfo`, кожен екземпляр якого "
 "представляє часовий пояс, визначений фіксованим зміщенням від UTC."
 
-#: ../../library/datetime.rst:2241
+#: ../../library/datetime.rst:2253
 msgid ""
 "Objects of this class cannot be used to represent timezone information in "
 "the locations where different offsets are used in different days of the year"
@@ -3075,7 +2963,7 @@ msgstr ""
 "про часові пояси в місцях, де використовуються різні зсуви в різні дні року "
 "або де історичні зміни були внесені до цивільного часу."
 
-#: ../../library/datetime.rst:2248
+#: ../../library/datetime.rst:2260
 msgid ""
 "The *offset* argument must be specified as a :class:`timedelta` object "
 "representing the difference between the local time and UTC. It must be "
@@ -3087,7 +2975,7 @@ msgstr ""
 "``-timedelta(hours=24)`` і ``timedelta(hours=24)``, інакше :exc:`ValueError`"
 " викликається."
 
-#: ../../library/datetime.rst:2253
+#: ../../library/datetime.rst:2265
 msgid ""
 "The *name* argument is optional. If specified it must be a string that will "
 "be used as the value returned by the :meth:`datetime.tzname` method."
@@ -3096,7 +2984,7 @@ msgstr ""
 "використовуватиметься як значення, яке повертає метод "
 ":meth:`datetime.tzname`."
 
-#: ../../library/datetime.rst:2264 ../../library/datetime.rst:2275
+#: ../../library/datetime.rst:2276 ../../library/datetime.rst:2287
 msgid ""
 "Return the fixed value specified when the :class:`timezone` instance is "
 "constructed."
@@ -3104,7 +2992,7 @@ msgstr ""
 "Повертає фіксоване значення, указане під час створення екземпляра "
 ":class:`timezone`."
 
-#: ../../library/datetime.rst:2267
+#: ../../library/datetime.rst:2279
 msgid ""
 "The *dt* argument is ignored. The return value is a :class:`timedelta` "
 "instance equal to the difference between the local time and UTC."
@@ -3112,7 +3000,7 @@ msgstr ""
 "Аргумент *dt* ігнорується. Повернене значення є екземпляром "
 ":class:`timedelta`, що дорівнює різниці між місцевим часом і UTC."
 
-#: ../../library/datetime.rst:2278
+#: ../../library/datetime.rst:2290
 msgid ""
 "If *name* is not provided in the constructor, the name returned by "
 "``tzname(dt)`` is generated from the value of the ``offset`` as follows. If "
@@ -3126,17 +3014,17 @@ msgstr ""
 "де ± є знаком ``offset`` , HH і MM – це дві цифри ``offset.hours`` і "
 "``offset.minutes`` відповідно."
 
-#: ../../library/datetime.rst:2284
+#: ../../library/datetime.rst:2296
 msgid ""
 "Name generated from ``offset=timedelta(0)`` is now plain ``'UTC'``, not "
 "``'UTC+00:00'``."
 msgstr ""
 
-#: ../../library/datetime.rst:2291
+#: ../../library/datetime.rst:2303
 msgid "Always returns ``None``."
 msgstr "Завжди повертає ``None``."
 
-#: ../../library/datetime.rst:2295
+#: ../../library/datetime.rst:2307
 msgid ""
 "Return ``dt + offset``. The *dt* argument must be an aware "
 ":class:`.datetime` instance, with ``tzinfo`` set to ``self``."
@@ -3144,15 +3032,15 @@ msgstr ""
 "Повернути ``dt + offset``. Аргумент *dt* має бути відомим екземпляром "
 ":class:`.datetime` із значенням ``tzinfo`` значення ``self``."
 
-#: ../../library/datetime.rst:2302
+#: ../../library/datetime.rst:2314
 msgid "The UTC timezone, ``timezone(timedelta(0))``."
 msgstr "Часовий пояс UTC, ``timezone(timedelta(0))``."
 
-#: ../../library/datetime.rst:2311
-msgid ":meth:`strftime` and :meth:`strptime` Behavior"
-msgstr "Поведінка :meth:`strftime` і :meth:`strptime`"
+#: ../../library/datetime.rst:2323
+msgid ":meth:`~.datetime.strftime` and :meth:`~.datetime.strptime` Behavior"
+msgstr ""
 
-#: ../../library/datetime.rst:2313
+#: ../../library/datetime.rst:2325
 msgid ""
 ":class:`date`, :class:`.datetime`, and :class:`.time` objects all support a "
 "``strftime(format)`` method, to create a string representing the time under "
@@ -3162,7 +3050,7 @@ msgstr ""
 " ``strftime(format)`` для створення рядка, що представляє час під контролем "
 "явного рядок форматування."
 
-#: ../../library/datetime.rst:2317
+#: ../../library/datetime.rst:2329
 msgid ""
 "Conversely, the :meth:`datetime.strptime` class method creates a "
 ":class:`.datetime` object from a string representing a date and time and a "
@@ -3172,82 +3060,81 @@ msgstr ""
 ":class:`.datetime` із рядка, що представляє дату й час, і відповідного рядка"
 " формату."
 
-#: ../../library/datetime.rst:2321
+#: ../../library/datetime.rst:2333
 msgid ""
-"The table below provides a high-level comparison of :meth:`strftime` versus "
-":meth:`strptime`:"
+"The table below provides a high-level comparison of "
+":meth:`~.datetime.strftime` versus :meth:`~.datetime.strptime`:"
 msgstr ""
-"У наведеній нижче таблиці представлено високорівневе порівняння "
-":meth:`strftime` проти :meth:`strptime`:"
 
-#: ../../library/datetime.rst:2325
+#: ../../library/datetime.rst:2337
 msgid "``strftime``"
 msgstr "``strftime``"
 
-#: ../../library/datetime.rst:2325
+#: ../../library/datetime.rst:2337
 msgid "``strptime``"
 msgstr "``strptime``"
 
-#: ../../library/datetime.rst:2327
+#: ../../library/datetime.rst:2339
 msgid "Usage"
 msgstr "Використання"
 
-#: ../../library/datetime.rst:2327
+#: ../../library/datetime.rst:2339
 msgid "Convert object to a string according to a given format"
 msgstr "Перетворити об’єкт на рядок відповідно до заданого формату"
 
-#: ../../library/datetime.rst:2327
+#: ../../library/datetime.rst:2339
 msgid ""
 "Parse a string into a :class:`.datetime` object given a corresponding format"
 msgstr "Розібрати рядок у об’єкт :class:`.datetime` із відповідним форматом"
 
-#: ../../library/datetime.rst:2329
+#: ../../library/datetime.rst:2341
 msgid "Type of method"
 msgstr "Тип методу"
 
-#: ../../library/datetime.rst:2329
+#: ../../library/datetime.rst:2341
 msgid "Instance method"
 msgstr "Метод екземпляра"
 
-#: ../../library/datetime.rst:2329
+#: ../../library/datetime.rst:2341
 msgid "Class method"
 msgstr "Метод класу"
 
-#: ../../library/datetime.rst:2331
+#: ../../library/datetime.rst:2343
 msgid "Method of"
 msgstr "Метод"
 
-#: ../../library/datetime.rst:2331
+#: ../../library/datetime.rst:2343
 msgid ":class:`date`; :class:`.datetime`; :class:`.time`"
 msgstr ":class:`date`; :class:`.datetime`; :class:`.time`"
 
-#: ../../library/datetime.rst:2331
+#: ../../library/datetime.rst:2343
 msgid ":class:`.datetime`"
 msgstr ":class:`.datetime`"
 
-#: ../../library/datetime.rst:2333
+#: ../../library/datetime.rst:2345
 msgid "Signature"
 msgstr "Підпис"
 
-#: ../../library/datetime.rst:2333
+#: ../../library/datetime.rst:2345
 msgid "``strftime(format)``"
 msgstr "``strftime(format)``"
 
-#: ../../library/datetime.rst:2333
+#: ../../library/datetime.rst:2345
 msgid "``strptime(date_string, format)``"
 msgstr "``strptime(date_string, format)``"
 
-#: ../../library/datetime.rst:2340
-msgid ":meth:`strftime` and :meth:`strptime` Format Codes"
-msgstr "Коди форматів :meth:`strftime` і :meth:`strptime`"
+#: ../../library/datetime.rst:2352
+msgid ""
+":meth:`~.datetime.strftime` and :meth:`~.datetime.strptime` Format Codes"
+msgstr ""
 
-#: ../../library/datetime.rst:2342
+#: ../../library/datetime.rst:2354
 msgid ""
 "These methods accept format codes that can be used to parse and format "
 "dates::"
 msgstr ""
 
-#: ../../library/datetime.rst:2350
+#: ../../library/datetime.rst:2362
 msgid ""
 "The following is a list of all the format codes that the 1989 C standard "
 "requires, and these work on all platforms with a standard C implementation."
@@ -3255,27 +3142,27 @@ msgstr ""
 "Нижче наведено список усіх кодів форматів, яких вимагає стандарт C 1989 "
 "року, і вони працюють на всіх платформах зі стандартною реалізацією C."
 
-#: ../../library/datetime.rst:2354 ../../library/datetime.rst:2457
+#: ../../library/datetime.rst:2366 ../../library/datetime.rst:2469
 msgid "Directive"
 msgstr "Директива"
 
-#: ../../library/datetime.rst:2354 ../../library/datetime.rst:2457
+#: ../../library/datetime.rst:2366 ../../library/datetime.rst:2469
 msgid "Meaning"
 msgstr "Значення"
 
-#: ../../library/datetime.rst:2354 ../../library/datetime.rst:2457
+#: ../../library/datetime.rst:2366 ../../library/datetime.rst:2469
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/datetime.rst:2354 ../../library/datetime.rst:2457
+#: ../../library/datetime.rst:2366 ../../library/datetime.rst:2469
 msgid "Notes"
 msgstr "Примітки"
 
-#: ../../library/datetime.rst:2356
+#: ../../library/datetime.rst:2368
 msgid "``%a``"
 msgstr "``%a``"
 
-#: ../../library/datetime.rst:2356
+#: ../../library/datetime.rst:2368
 msgid "Weekday as locale's abbreviated name."
 msgstr "День тижня як скорочена назва локалі."
 
@@ -3287,11 +3174,11 @@ msgstr "Нд, Пн, ..., Сб (en_US);"
 msgid "So, Mo, ..., Sa (de_DE)"
 msgstr "Отже, Пн, ..., Сб (de_DE)"
 
-#: ../../library/datetime.rst:2361
+#: ../../library/datetime.rst:2373
 msgid "``%A``"
 msgstr "``%A``"
 
-#: ../../library/datetime.rst:2361
+#: ../../library/datetime.rst:2373
 msgid "Weekday as locale's full name."
 msgstr "День тижня як повна назва локалі."
 
@@ -3303,42 +3190,42 @@ msgstr "неділя, понеділок, ..., субота (en_US);"
 msgid "Sonntag, Montag, ..., Samstag (de_DE)"
 msgstr "Sonntag, Montag, ..., Samstag (de_DE)"
 
-#: ../../library/datetime.rst:2366
+#: ../../library/datetime.rst:2378
 msgid "``%w``"
 msgstr "``%w``"
 
-#: ../../library/datetime.rst:2366
+#: ../../library/datetime.rst:2378
 msgid "Weekday as a decimal number, where 0 is Sunday and 6 is Saturday."
 msgstr "День тижня як десяткове число, де 0 – неділя, а 6 – субота."
 
-#: ../../library/datetime.rst:2366
+#: ../../library/datetime.rst:2378
 msgid "0, 1, ..., 6"
 msgstr "0, 1, ..., 6"
 
-#: ../../library/datetime.rst:2370
+#: ../../library/datetime.rst:2382
 msgid "``%d``"
 msgstr "``%d``"
 
-#: ../../library/datetime.rst:2370
+#: ../../library/datetime.rst:2382
 msgid "Day of the month as a zero-padded decimal number."
 msgstr "День місяця як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2370
+#: ../../library/datetime.rst:2382
 msgid "01, 02, ..., 31"
 msgstr "01, 02, ..., 31"
 
-#: ../../library/datetime.rst:2370 ../../library/datetime.rst:2383
-#: ../../library/datetime.rst:2386 ../../library/datetime.rst:2392
-#: ../../library/datetime.rst:2395 ../../library/datetime.rst:2401
-#: ../../library/datetime.rst:2419
+#: ../../library/datetime.rst:2382 ../../library/datetime.rst:2395
+#: ../../library/datetime.rst:2398 ../../library/datetime.rst:2404
+#: ../../library/datetime.rst:2407 ../../library/datetime.rst:2413
+#: ../../library/datetime.rst:2431
 msgid "\\(9)"
 msgstr "\\(9)"
 
-#: ../../library/datetime.rst:2373
+#: ../../library/datetime.rst:2385
 msgid "``%b``"
 msgstr "``%b``"
 
-#: ../../library/datetime.rst:2373
+#: ../../library/datetime.rst:2385
 msgid "Month as locale's abbreviated name."
 msgstr "Місяць як скорочена назва локалі."
 
@@ -3350,11 +3237,11 @@ msgstr "січ, лютий, ..., грудень (en_US);"
 msgid "Jan, Feb, ..., Dez (de_DE)"
 msgstr "січ, лютий, ..., дек (de_DE)"
 
-#: ../../library/datetime.rst:2378
+#: ../../library/datetime.rst:2390
 msgid "``%B``"
 msgstr "``%B``"
 
-#: ../../library/datetime.rst:2378
+#: ../../library/datetime.rst:2390
 msgid "Month as locale's full name."
 msgstr "Місяць як повна назва локалі."
 
@@ -3366,67 +3253,67 @@ msgstr "січень, лютий, ..., грудень (en_US);"
 msgid "Januar, Februar, ..., Dezember (de_DE)"
 msgstr "січень, лютий, ..., грудень (de_DE)"
 
-#: ../../library/datetime.rst:2383
+#: ../../library/datetime.rst:2395
 msgid "``%m``"
 msgstr "``%m``"
 
-#: ../../library/datetime.rst:2383
+#: ../../library/datetime.rst:2395
 msgid "Month as a zero-padded decimal number."
 msgstr "Місяць як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2383 ../../library/datetime.rst:2395
+#: ../../library/datetime.rst:2395 ../../library/datetime.rst:2407
 msgid "01, 02, ..., 12"
 msgstr "01, 02, ..., 12"
 
-#: ../../library/datetime.rst:2386
+#: ../../library/datetime.rst:2398
 msgid "``%y``"
 msgstr "``%y``"
 
-#: ../../library/datetime.rst:2386
+#: ../../library/datetime.rst:2398
 msgid "Year without century as a zero-padded decimal number."
 msgstr "Рік без століття як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2386
+#: ../../library/datetime.rst:2398
 msgid "00, 01, ..., 99"
 msgstr "00, 01, ..., 99"
 
-#: ../../library/datetime.rst:2389
+#: ../../library/datetime.rst:2401
 msgid "``%Y``"
 msgstr "``%Y``"
 
-#: ../../library/datetime.rst:2389
+#: ../../library/datetime.rst:2401
 msgid "Year with century as a decimal number."
 msgstr "Рік із століттям як десяткове число."
 
-#: ../../library/datetime.rst:2389 ../../library/datetime.rst:2459
+#: ../../library/datetime.rst:2401 ../../library/datetime.rst:2471
 msgid "0001, 0002, ..., 2013, 2014, ..., 9998, 9999"
 msgstr "0001, 0002, ..., 2013, 2014, ..., 9998, 9999"
 
-#: ../../library/datetime.rst:2392
+#: ../../library/datetime.rst:2404
 msgid "``%H``"
 msgstr "``%H``"
 
-#: ../../library/datetime.rst:2392
+#: ../../library/datetime.rst:2404
 msgid "Hour (24-hour clock) as a zero-padded decimal number."
 msgstr "Година (24-годинний формат) як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2392
+#: ../../library/datetime.rst:2404
 msgid "00, 01, ..., 23"
 msgstr "00, 01, ..., 23"
 
-#: ../../library/datetime.rst:2395
+#: ../../library/datetime.rst:2407
 msgid "``%I``"
 msgstr "``%I``"
 
-#: ../../library/datetime.rst:2395
+#: ../../library/datetime.rst:2407
 msgid "Hour (12-hour clock) as a zero-padded decimal number."
 msgstr "Година (12-годинний годинник) як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2398
+#: ../../library/datetime.rst:2410
 msgid "``%p``"
 msgstr "``%p``"
 
-#: ../../library/datetime.rst:2398
+#: ../../library/datetime.rst:2410
 msgid "Locale's equivalent of either AM or PM."
 msgstr "Локальний еквівалент AM або PM."
 
@@ -3438,55 +3325,55 @@ msgstr "AM, PM (en_US);"
 msgid "am, pm (de_DE)"
 msgstr "am, pm (de_DE)"
 
-#: ../../library/datetime.rst:2398
+#: ../../library/datetime.rst:2410
 msgid "\\(1), \\(3)"
 msgstr "\\(1), \\(3)"
 
-#: ../../library/datetime.rst:2401
+#: ../../library/datetime.rst:2413
 msgid "``%M``"
 msgstr "``%M``"
 
-#: ../../library/datetime.rst:2401
+#: ../../library/datetime.rst:2413
 msgid "Minute as a zero-padded decimal number."
 msgstr "Хвилина як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2401 ../../library/datetime.rst:2404
+#: ../../library/datetime.rst:2413 ../../library/datetime.rst:2416
 msgid "00, 01, ..., 59"
 msgstr "00, 01, ..., 59"
 
-#: ../../library/datetime.rst:2404
+#: ../../library/datetime.rst:2416
 msgid "``%S``"
 msgstr "``%S``"
 
-#: ../../library/datetime.rst:2404
+#: ../../library/datetime.rst:2416
 msgid "Second as a zero-padded decimal number."
 msgstr "Секунда як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2404
+#: ../../library/datetime.rst:2416
 msgid "\\(4), \\(9)"
 msgstr "\\(4), \\(9)"
 
-#: ../../library/datetime.rst:2407
+#: ../../library/datetime.rst:2419
 msgid "``%f``"
 msgstr "``%f``"
 
-#: ../../library/datetime.rst:2407
+#: ../../library/datetime.rst:2419
 msgid "Microsecond as a decimal number, zero-padded to 6 digits."
 msgstr "Мікросекунда як десяткове число, доповнене нулями до 6 цифр."
 
-#: ../../library/datetime.rst:2407
+#: ../../library/datetime.rst:2419
 msgid "000000, 000001, ..., 999999"
 msgstr "000000, 000001, ..., 999999"
 
-#: ../../library/datetime.rst:2407
+#: ../../library/datetime.rst:2419
 msgid "\\(5)"
 msgstr "\\(5)"
 
-#: ../../library/datetime.rst:2411 ../../library/datetime.rst:2580
+#: ../../library/datetime.rst:2423 ../../library/datetime.rst:2592
 msgid "``%z``"
 msgstr "``%z``"
 
-#: ../../library/datetime.rst:2411
+#: ../../library/datetime.rst:2423
 msgid ""
 "UTC offset in the form ``±HHMM[SS[.ffffff]]`` (empty string if the object is"
 " naive)."
@@ -3494,44 +3381,44 @@ msgstr ""
 "Зміщення UTC у формі ``±HHMM[SS[.ffffff]]`` (порожній рядок, якщо об’єкт "
 "наївний)."
 
-#: ../../library/datetime.rst:2411
+#: ../../library/datetime.rst:2423
 msgid "(empty), +0000, -0400, +1030, +063415, -030712.345216"
 msgstr "(порожній), +0000, -0400, +1030, +063415, -030712.345216"
 
-#: ../../library/datetime.rst:2411 ../../library/datetime.rst:2416
-#: ../../library/datetime.rst:2473
+#: ../../library/datetime.rst:2423 ../../library/datetime.rst:2428
+#: ../../library/datetime.rst:2485
 msgid "\\(6)"
 msgstr "\\(6)"
 
-#: ../../library/datetime.rst:2416 ../../library/datetime.rst:2608
+#: ../../library/datetime.rst:2428 ../../library/datetime.rst:2620
 msgid "``%Z``"
 msgstr "``%Z``"
 
-#: ../../library/datetime.rst:2416
+#: ../../library/datetime.rst:2428
 msgid "Time zone name (empty string if the object is naive)."
 msgstr "Назва часового поясу (пустий рядок, якщо об’єкт наївний)."
 
-#: ../../library/datetime.rst:2416
+#: ../../library/datetime.rst:2428
 msgid "(empty), UTC, GMT"
 msgstr "(пусто), UTC, GMT"
 
-#: ../../library/datetime.rst:2419
+#: ../../library/datetime.rst:2431
 msgid "``%j``"
 msgstr "``%j``"
 
-#: ../../library/datetime.rst:2419
+#: ../../library/datetime.rst:2431
 msgid "Day of the year as a zero-padded decimal number."
 msgstr "День року як десяткове число з доповненням нуля."
 
-#: ../../library/datetime.rst:2419
+#: ../../library/datetime.rst:2431
 msgid "001, 002, ..., 366"
 msgstr "001, 002, ..., 366"
 
-#: ../../library/datetime.rst:2422
+#: ../../library/datetime.rst:2434
 msgid "``%U``"
 msgstr "``%U``"
 
-#: ../../library/datetime.rst:2422
+#: ../../library/datetime.rst:2434
 msgid ""
 "Week number of the year (Sunday as the first day of the week) as a zero-"
 "padded decimal number. All days in a new year preceding the first Sunday are"
@@ -3541,19 +3428,19 @@ msgstr ""
 "доповненням нуля. Усі дні в новому році, що передують першій неділі, "
 "вважаються нульовим тижнем."
 
-#: ../../library/datetime.rst:2422 ../../library/datetime.rst:2430
+#: ../../library/datetime.rst:2434 ../../library/datetime.rst:2442
 msgid "00, 01, ..., 53"
 msgstr "00, 01, ..., 53"
 
-#: ../../library/datetime.rst:2422 ../../library/datetime.rst:2430
+#: ../../library/datetime.rst:2434 ../../library/datetime.rst:2442
 msgid "\\(7), \\(9)"
 msgstr "\\(7), \\(9)"
 
-#: ../../library/datetime.rst:2430
+#: ../../library/datetime.rst:2442
 msgid "``%W``"
 msgstr "``%W``"
 
-#: ../../library/datetime.rst:2430
+#: ../../library/datetime.rst:2442
 msgid ""
 "Week number of the year (Monday as the first day of the week) as a zero-"
 "padded decimal number. All days in a new year preceding the first Monday are"
@@ -3563,11 +3450,11 @@ msgstr ""
 "доповненням нуля. Усі дні в новому році, що передують першому понеділку, "
 "вважаються нульовим тижнем."
 
-#: ../../library/datetime.rst:2438
+#: ../../library/datetime.rst:2450
 msgid "``%c``"
 msgstr "``%c``"
 
-#: ../../library/datetime.rst:2438
+#: ../../library/datetime.rst:2450
 msgid "Locale's appropriate date and time representation."
 msgstr "Відповідне представлення дати та часу в локалі."
 
@@ -3579,11 +3466,11 @@ msgstr "Tue Aug 16 21:30:00 1988 (en_US);"
 msgid "Di 16 Aug 21:30:00 1988 (de_DE)"
 msgstr "16 серпня 21:30:00 1988 (de_DE)"
 
-#: ../../library/datetime.rst:2443
+#: ../../library/datetime.rst:2455
 msgid "``%x``"
 msgstr "``%x``"
 
-#: ../../library/datetime.rst:2443
+#: ../../library/datetime.rst:2455
 msgid "Locale's appropriate date representation."
 msgstr "Відповідне представлення дати в локалі."
 
@@ -3599,11 +3486,11 @@ msgstr "16.08.1988 (en_US);"
 msgid "16.08.1988 (de_DE)"
 msgstr "16.08.1988 (de_DE)"
 
-#: ../../library/datetime.rst:2447
+#: ../../library/datetime.rst:2459
 msgid "``%X``"
 msgstr "``%X``"
 
-#: ../../library/datetime.rst:2447
+#: ../../library/datetime.rst:2459
 msgid "Locale's appropriate time representation."
 msgstr "Відповідне представлення часу локалі."
 
@@ -3615,19 +3502,19 @@ msgstr "21:30:00 (en_US);"
 msgid "21:30:00 (de_DE)"
 msgstr "21:30:00 (de_DE)"
 
-#: ../../library/datetime.rst:2450
+#: ../../library/datetime.rst:2462
 msgid "``%%``"
 msgstr "``%%``"
 
-#: ../../library/datetime.rst:2450
+#: ../../library/datetime.rst:2462
 msgid "A literal ``'%'`` character."
 msgstr "Буквальний символ ``'%''``."
 
-#: ../../library/datetime.rst:2450
+#: ../../library/datetime.rst:2462
 msgid "%"
 msgstr "%"
 
-#: ../../library/datetime.rst:2453
+#: ../../library/datetime.rst:2465
 msgid ""
 "Several additional directives not required by the C89 standard are included "
 "for convenience. These parameters all correspond to ISO 8601 date values."
@@ -3635,11 +3522,11 @@ msgstr ""
 "Для зручності включено кілька додаткових директив, які не вимагаються "
 "стандартом C89. Усі ці параметри відповідають значенням дати ISO 8601."
 
-#: ../../library/datetime.rst:2459
+#: ../../library/datetime.rst:2471
 msgid "``%G``"
 msgstr "``%G``"
 
-#: ../../library/datetime.rst:2459
+#: ../../library/datetime.rst:2471
 msgid ""
 "ISO 8601 year with century representing the year that contains the greater "
 "part of the ISO week (``%V``)."
@@ -3647,27 +3534,27 @@ msgstr ""
 "Рік ISO 8601 із століттям, що представляє рік, який містить більшу частину "
 "тижня ISO (``%V``)."
 
-#: ../../library/datetime.rst:2459
+#: ../../library/datetime.rst:2471
 msgid "\\(8)"
 msgstr "\\(8)"
 
-#: ../../library/datetime.rst:2464
+#: ../../library/datetime.rst:2476
 msgid "``%u``"
 msgstr "``%u``"
 
-#: ../../library/datetime.rst:2464
+#: ../../library/datetime.rst:2476
 msgid "ISO 8601 weekday as a decimal number where 1 is Monday."
 msgstr "День тижня ISO 8601 як десяткове число, де 1 означає понеділок."
 
-#: ../../library/datetime.rst:2464
+#: ../../library/datetime.rst:2476
 msgid "1, 2, ..., 7"
 msgstr "1, 2, ..., 7"
 
-#: ../../library/datetime.rst:2467
+#: ../../library/datetime.rst:2479
 msgid "``%V``"
 msgstr "``%V``"
 
-#: ../../library/datetime.rst:2467
+#: ../../library/datetime.rst:2479
 msgid ""
 "ISO 8601 week as a decimal number with Monday as the first day of the week. "
 "Week 01 is the week containing Jan 4."
@@ -3675,94 +3562,78 @@ msgstr ""
 "ISO 8601 тиждень як десяткове число з понеділком як першим днем тижня. "
 "Тиждень 01 – це тиждень, що містить 4 січня."
 
-#: ../../library/datetime.rst:2467
+#: ../../library/datetime.rst:2479
 msgid "01, 02, ..., 53"
 msgstr "01, 02, ..., 53"
 
-#: ../../library/datetime.rst:2467
+#: ../../library/datetime.rst:2479
 msgid "\\(8), \\(9)"
 msgstr "\\(8), \\(9)"
 
-#: ../../library/datetime.rst:2473 ../../library/datetime.rst:2594
+#: ../../library/datetime.rst:2485 ../../library/datetime.rst:2606
 msgid "``%:z``"
 msgstr ""
 
-#: ../../library/datetime.rst:2473
+#: ../../library/datetime.rst:2485
 msgid ""
 "UTC offset in the form ``±HH:MM[:SS[.ffffff]]`` (empty string if the object "
 "is naive)."
 msgstr ""
 
-#: ../../library/datetime.rst:2473
+#: ../../library/datetime.rst:2485
 msgid "(empty), +00:00, -04:00, +10:30, +06:34:15, -03:07:12.345216"
 msgstr ""
 
-#: ../../library/datetime.rst:2479
+#: ../../library/datetime.rst:2491
 msgid ""
 "These may not be available on all platforms when used with the "
-":meth:`strftime` method. The ISO 8601 year and ISO 8601 week directives are "
-"not interchangeable with the year and week number directives above. Calling "
-":meth:`strptime` with incomplete or ambiguous ISO 8601 directives will raise"
-" a :exc:`ValueError`."
+":meth:`~.datetime.strftime` method. The ISO 8601 year and ISO 8601 week "
+"directives are not interchangeable with the year and week number directives "
+"above. Calling :meth:`~.datetime.strptime` with incomplete or ambiguous ISO "
+"8601 directives will raise a :exc:`ValueError`."
 msgstr ""
-"Вони можуть бути недоступні на всіх платформах, якщо використовуються з "
-"методом :meth:`strftime`. Директиви ISO 8601 рік і ISO 8601 тиждень не є "
-"взаємозамінними з директивами року і номера тижня вище. Виклик "
-":meth:`strptime` із неповними або неоднозначними директивами ISO 8601 "
-"викличе :exc:`ValueError`."
 
-#: ../../library/datetime.rst:2484
+#: ../../library/datetime.rst:2496
 msgid ""
 "The full set of format codes supported varies across platforms, because "
-"Python calls the platform C library's :func:`strftime` function, and "
+"Python calls the platform C library's :c:func:`strftime` function, and "
 "platform variations are common. To see the full set of format codes "
 "supported on your platform, consult the :manpage:`strftime(3)` "
 "documentation. There are also differences between platforms in handling of "
 "unsupported format specifiers."
 msgstr ""
-"Повний набір підтримуваних кодів формату залежить від платформи, оскільки "
-"Python викликає функцію :func:`strftime` бібліотеки платформи C, і варіації "
-"платформ є звичайними. Щоб переглянути повний набір кодів форматів, які "
-"підтримуються вашою платформою, зверніться до документації "
-":manpage:`strftime(3)`. Існують також відмінності між платформами в обробці "
-"непідтримуваних специфікаторів формату."
 
-#: ../../library/datetime.rst:2490
+#: ../../library/datetime.rst:2502
 msgid "``%G``, ``%u`` and ``%V`` were added."
 msgstr "Додано ``%G``, ``%u`` і ``%V``."
 
-#: ../../library/datetime.rst:2493
+#: ../../library/datetime.rst:2505
 msgid "``%:z`` was added."
 msgstr ""
 
-#: ../../library/datetime.rst:2497
+#: ../../library/datetime.rst:2509
 msgid "Technical Detail"
 msgstr "Технічні деталі"
 
-#: ../../library/datetime.rst:2499
+#: ../../library/datetime.rst:2511
 msgid ""
 "Broadly speaking, ``d.strftime(fmt)`` acts like the :mod:`time` module's "
 "``time.strftime(fmt, d.timetuple())`` although not all objects support a "
-":meth:`timetuple` method."
+":meth:`~date.timetuple` method."
 msgstr ""
-"Загалом, ``d.strftime(fmt)`` діє як ``time.strftime(fmt, d.timetuple())`` "
-"модуля :mod:`time`, хоча не всі об’єкти підтримують :meth:`timetuple` метод."
 
-#: ../../library/datetime.rst:2503
+#: ../../library/datetime.rst:2515
 msgid ""
-"For the :meth:`datetime.strptime` class method, the default value is "
+"For the :meth:`.datetime.strptime` class method, the default value is "
 "``1900-01-01T00:00:00.000``: any components not specified in the format "
 "string will be pulled from the default value. [#]_"
 msgstr ""
-"Для методу класу :meth:`datetime.strptime` значенням за замовчуванням є "
-"``1900-01-01T00:00:00.000``: будь-які компоненти, не вказані в рядку "
-"формату, буде отримано зі значення за замовчуванням. [#]_"
 
-#: ../../library/datetime.rst:2507
+#: ../../library/datetime.rst:2519
 msgid "Using ``datetime.strptime(date_string, format)`` is equivalent to::"
 msgstr "Використання ``datetime.strptime(date_string, format)`` еквівалентно:"
 
-#: ../../library/datetime.rst:2511
+#: ../../library/datetime.rst:2523
 msgid ""
 "except when the format includes sub-second components or timezone offset "
 "information, which are supported in ``datetime.strptime`` but are discarded "
@@ -3772,19 +3643,15 @@ msgstr ""
 "інформацію про зміщення часового поясу, які підтримуються в "
 "``datetime.strptime``, але відкидаються ``time.strptime``."
 
-#: ../../library/datetime.rst:2515
+#: ../../library/datetime.rst:2527
 msgid ""
 "For :class:`.time` objects, the format codes for year, month, and day should"
-" not be used, as :class:`time` objects have no such values. If they're used "
-"anyway, ``1900`` is substituted for the year, and ``1`` for the month and "
+" not be used, as :class:`!time` objects have no such values. If they're used"
+" anyway, ``1900`` is substituted for the year, and ``1`` for the month and "
 "day."
 msgstr ""
-"Для об’єктів :class:`.time` не слід використовувати коди формату для року, "
-"місяця та дня, оскільки об’єкти :class:`time` не мають таких значень. Якщо "
-"вони все одно використовуються, 1900 замінюється на рік, а 1 — на місяць і "
-"день."
 
-#: ../../library/datetime.rst:2519
+#: ../../library/datetime.rst:2531
 msgid ""
 "For :class:`date` objects, the format codes for hours, minutes, seconds, and"
 " microseconds should not be used, as :class:`date` objects have no such "
@@ -3795,7 +3662,7 @@ msgstr ""
 "значень. Якщо вони все одно використовуються, замість них буде замінено "
 "``0``."
 
-#: ../../library/datetime.rst:2523
+#: ../../library/datetime.rst:2535
 msgid ""
 "For the same reason, handling of format strings containing Unicode code "
 "points that can't be represented in the charset of the current locale is "
@@ -3809,7 +3676,7 @@ msgstr ""
 "недоторканими у виводі, тоді як на інших ``strftime`` може викликати "
 ":exc:`UnicodeError` або замість цього повертати порожній рядок."
 
-#: ../../library/datetime.rst:2532
+#: ../../library/datetime.rst:2544
 msgid ""
 "Because the format depends on the current locale, care should be taken when "
 "making assumptions about the output value. Field orderings will vary (for "
@@ -3817,69 +3684,58 @@ msgid ""
 "contain non-ASCII characters."
 msgstr ""
 
-#: ../../library/datetime.rst:2538
-msgid ""
-"The :meth:`strptime` method can parse years in the full [1, 9999] range, but"
-" years < 1000 must be zero-filled to 4-digit width."
-msgstr ""
-"Метод :meth:`strptime` може аналізувати роки в повному діапазоні [1, 9999], "
-"але роки < 1000 повинні бути заповнені нулями до 4-значної ширини."
-
-#: ../../library/datetime.rst:2541
-msgid ""
-"In previous versions, :meth:`strftime` method was restricted to years >= "
-"1900."
-msgstr ""
-"У попередніх версіях метод :meth:`strftime` був обмежений роками >= 1900."
-
-#: ../../library/datetime.rst:2545
-msgid ""
-"In version 3.2, :meth:`strftime` method was restricted to years >= 1000."
-msgstr "У версії 3.2 метод :meth:`strftime` був обмежений роками >= 1000."
-
 #: ../../library/datetime.rst:2550
 msgid ""
-"When used with the :meth:`strptime` method, the ``%p`` directive only "
-"affects the output hour field if the ``%I`` directive is used to parse the "
-"hour."
+"The :meth:`~.datetime.strptime` method can parse years in the full [1, 9999]"
+" range, but years < 1000 must be zero-filled to 4-digit width."
 msgstr ""
-"У разі використання з методом :meth:`strptime` директива ``%p`` впливає на "
-"поле вихідних годин, лише якщо директива ``%I`` використовується для аналізу"
-" години."
 
-#: ../../library/datetime.rst:2554
+#: ../../library/datetime.rst:2553
 msgid ""
-"Unlike the :mod:`time` module, the :mod:`datetime` module does not support "
+"In previous versions, :meth:`~.datetime.strftime` method was restricted to "
+"years >= 1900."
+msgstr ""
+
+#: ../../library/datetime.rst:2557
+msgid ""
+"In version 3.2, :meth:`~.datetime.strftime` method was restricted to years "
+">= 1000."
+msgstr ""
+
+#: ../../library/datetime.rst:2562
+msgid ""
+"When used with the :meth:`~.datetime.strptime` method, the ``%p`` directive "
+"only affects the output hour field if the ``%I`` directive is used to parse "
+"the hour."
+msgstr ""
+
+#: ../../library/datetime.rst:2566
+msgid ""
+"Unlike the :mod:`time` module, the :mod:`!datetime` module does not support "
 "leap seconds."
 msgstr ""
-"На відміну від модуля :mod:`time`, модуль :mod:`datetime` не підтримує "
-"високосні секунди."
 
-#: ../../library/datetime.rst:2558
+#: ../../library/datetime.rst:2570
 msgid ""
-"When used with the :meth:`strptime` method, the ``%f`` directive accepts "
-"from one to six digits and zero pads on the right. ``%f`` is an extension to"
-" the set of format characters in the C standard (but implemented separately "
-"in datetime objects, and therefore always available)."
+"When used with the :meth:`~.datetime.strptime` method, the ``%f`` directive "
+"accepts from one to six digits and zero pads on the right. ``%f`` is an "
+"extension to the set of format characters in the C standard (but implemented"
+" separately in datetime objects, and therefore always available)."
 msgstr ""
-"При використанні з методом :meth:`strptime` директива ``%f`` приймає від "
-"однієї до шести цифр і нульові поля праворуч. ``%f`` — це розширення набору "
-"форматних символів у стандарті C (але реалізоване окремо в об’єктах "
-"datetime, і тому завжди доступне)."
 
-#: ../../library/datetime.rst:2565
+#: ../../library/datetime.rst:2577
 msgid ""
 "For a naive object, the ``%z``, ``%:z`` and ``%Z`` format codes are replaced"
 " by empty strings."
 msgstr ""
 
-#: ../../library/datetime.rst:2568
+#: ../../library/datetime.rst:2580
 msgid "For an aware object:"
 msgstr "Для обізнаного об’єкта:"
 
-#: ../../library/datetime.rst:2571
+#: ../../library/datetime.rst:2583
 msgid ""
-":meth:`utcoffset` is transformed into a string of the form "
+":meth:`~.datetime.utcoffset` is transformed into a string of the form "
 "``±HHMM[SS[.ffffff]]``, where ``HH`` is a 2-digit string giving the number "
 "of UTC offset hours, ``MM`` is a 2-digit string giving the number of UTC "
 "offset minutes, ``SS`` is a 2-digit string giving the number of UTC offset "
@@ -3887,60 +3743,45 @@ msgid ""
 "microseconds. The ``ffffff`` part is omitted when the offset is a whole "
 "number of seconds and both the ``ffffff`` and the ``SS`` part is omitted "
 "when the offset is a whole number of minutes. For example, if "
-":meth:`utcoffset` returns ``timedelta(hours=-3, minutes=-30)``, ``%z`` is "
-"replaced with the string ``'-0330'``."
+":meth:`~.datetime.utcoffset` returns ``timedelta(hours=-3, minutes=-30)``, "
+"``%z`` is replaced with the string ``'-0330'``."
 msgstr ""
-":meth:`utcoffset` перетворюється на рядок у формі ``±HHMM[SS[.ffffff]]``, де"
-" ``HH`` — двозначний рядок, що вказує кількість годин зміщення UTC, ``MM`` —"
-" це 2-значний рядок, що вказує кількість хвилин зміщення UTC, ``SS`` — це "
-"2-значний рядок, що вказує кількість секунд зміщення UTC, і ``ffffff`` — це "
-"6-значний рядок, що дає число мікросекунд зсуву UTC. Частина ``ffffff`` "
-"опускається, якщо зміщення становить ціле число секунд, і частини ``ffffff``"
-" і ``SS`` опускаються, коли зсув становить ціле число хвилин. Наприклад, "
-"якщо :meth:`utcoffset` повертає ``timedelta(hours=-3, minutes=-30)``, ``%z``"
-" замінюється на рядок ``'-0330'``."
 
-#: ../../library/datetime.rst:2585
+#: ../../library/datetime.rst:2597
 msgid ""
-"When the ``%z`` directive is provided to the  :meth:`strptime` method, the "
-"UTC offsets can have a colon as a separator between hours, minutes and "
-"seconds. For example, ``'+01:00:00'`` will be parsed as an offset of one "
-"hour. In addition, providing ``'Z'`` is identical to ``'+00:00'``."
+"When the ``%z`` directive is provided to the  :meth:`~.datetime.strptime` "
+"method, the UTC offsets can have a colon as a separator between hours, "
+"minutes and seconds. For example, ``'+01:00:00'`` will be parsed as an "
+"offset of one hour. In addition, providing ``'Z'`` is identical to "
+"``'+00:00'``."
 msgstr ""
-"Коли директива ``%z`` надається методу :meth:`strptime`, зміщення UTC можуть"
-" мати двокрапку як роздільник між годинами, хвилинами та секундами. "
-"Наприклад, \"+01:00:00\" буде проаналізовано як зсув на одну годину. Крім "
-"того, надання ``'Z'`` ідентично ``'+00:00'``."
 
-#: ../../library/datetime.rst:2593
+#: ../../library/datetime.rst:2605
 msgid ""
 "Behaves exactly as ``%z``, but has a colon separator added between hours, "
 "minutes and seconds."
 msgstr ""
 
-#: ../../library/datetime.rst:2597
+#: ../../library/datetime.rst:2609
 msgid ""
-"In :meth:`strftime`, ``%Z`` is replaced by an empty string if :meth:`tzname`"
-" returns ``None``; otherwise ``%Z`` is replaced by the returned value, which"
-" must be a string."
+"In :meth:`~.datetime.strftime`, ``%Z`` is replaced by an empty string if "
+":meth:`~.datetime.tzname` returns ``None``; otherwise ``%Z`` is replaced by "
+"the returned value, which must be a string."
 msgstr ""
-"У :meth:`strftime` ``%Z`` замінюється порожнім рядком, якщо :meth:`tzname` "
-"повертає ``None``; інакше ``%Z`` замінюється на повернуте значення, яке має "
-"бути рядком."
 
-#: ../../library/datetime.rst:2601
-msgid ":meth:`strptime` only accepts certain values for ``%Z``:"
-msgstr ":meth:`strptime` приймає лише певні значення для ``%Z``:"
+#: ../../library/datetime.rst:2613
+msgid ":meth:`~.datetime.strptime` only accepts certain values for ``%Z``:"
+msgstr ""
 
-#: ../../library/datetime.rst:2603
+#: ../../library/datetime.rst:2615
 msgid "any value in ``time.tzname`` for your machine's locale"
 msgstr "будь-яке значення в ``time.tzname`` для локалі вашої машини"
 
-#: ../../library/datetime.rst:2604
+#: ../../library/datetime.rst:2616
 msgid "the hard-coded values ``UTC`` and ``GMT``"
 msgstr "жорстко закодовані значення ``UTC`` і ``GMT``"
 
-#: ../../library/datetime.rst:2606
+#: ../../library/datetime.rst:2618
 msgid ""
 "So someone living in Japan may have ``JST``, ``UTC``, and ``GMT`` as valid "
 "values, but probably not ``EST``. It will raise ``ValueError`` for invalid "
@@ -3950,53 +3791,45 @@ msgstr ""
 "``GMT``, але, ймовірно, не ``EST``. Це викличе ``ValueError`` для недійсних "
 "значень."
 
-#: ../../library/datetime.rst:2610
+#: ../../library/datetime.rst:2622
 msgid ""
-"When the ``%z`` directive is provided to the :meth:`strptime` method, an "
-"aware :class:`.datetime` object will be produced. The ``tzinfo`` of the "
-"result will be set to a :class:`timezone` instance."
+"When the ``%z`` directive is provided to the :meth:`~.datetime.strptime` "
+"method, an aware :class:`.datetime` object will be produced. The ``tzinfo`` "
+"of the result will be set to a :class:`timezone` instance."
 msgstr ""
-"Коли директива ``%z`` надається методу :meth:`strptime`, буде створено "
-"відомий об’єкт :class:`.datetime`. ``tzinfo`` результату буде встановлено на"
-" екземпляр :class:`timezone`."
 
-#: ../../library/datetime.rst:2616
+#: ../../library/datetime.rst:2628
 msgid ""
-"When used with the :meth:`strptime` method, ``%U`` and ``%W`` are only used "
-"in calculations when the day of the week and the calendar year (``%Y``) are "
-"specified."
+"When used with the :meth:`~.datetime.strptime` method, ``%U`` and ``%W`` are"
+" only used in calculations when the day of the week and the calendar year "
+"(``%Y``) are specified."
 msgstr ""
-"При використанні з методом :meth:`strptime`, ``%U`` і ``%W`` "
-"використовуються в обчисленнях лише тоді, коли вказано день тижня та "
-"календарний рік (``%Y``). ."
 
-#: ../../library/datetime.rst:2621
+#: ../../library/datetime.rst:2633
 msgid ""
 "Similar to ``%U`` and ``%W``, ``%V`` is only used in calculations when the "
 "day of the week and the ISO year (``%G``) are specified in a "
-":meth:`strptime` format string. Also note that ``%G`` and ``%Y`` are not "
-"interchangeable."
+":meth:`~.datetime.strptime` format string. Also note that ``%G`` and ``%Y`` "
+"are not interchangeable."
 msgstr ""
-"Подібно до ``%U`` і ``%W``, ``%V`` використовується в обчисленнях лише тоді,"
-" коли день тижня та рік ISO (``%G``) указано в :meth:`strptime` форматний "
-"рядок. Також зауважте, що ``%G`` і ``%Y`` не є взаємозамінними."
 
-#: ../../library/datetime.rst:2627
+#: ../../library/datetime.rst:2639
 msgid ""
-"When used with the :meth:`strptime` method, the leading zero is optional for"
-"  formats ``%d``, ``%m``, ``%H``, ``%I``, ``%M``, ``%S``, ``%j``, ``%U``, "
-"``%W``, and ``%V``. Format ``%y`` does require a leading zero."
+"When used with the :meth:`~.datetime.strptime` method, the leading zero is "
+"optional for  formats ``%d``, ``%m``, ``%H``, ``%I``, ``%M``, ``%S``, "
+"``%j``, ``%U``, ``%W``, and ``%V``. Format ``%y`` does require a leading "
+"zero."
 msgstr ""
 
-#: ../../library/datetime.rst:2632
+#: ../../library/datetime.rst:2644
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/datetime.rst:2633
+#: ../../library/datetime.rst:2645
 msgid "If, that is, we ignore the effects of Relativity"
 msgstr "Якщо, тобто, ми ігноруємо ефекти відносності"
 
-#: ../../library/datetime.rst:2635
+#: ../../library/datetime.rst:2647
 msgid ""
 "This matches the definition of the \"proleptic Gregorian\" calendar in "
 "Dershowitz and Reingold's book *Calendrical Calculations*, where it's the "
@@ -4010,14 +3843,14 @@ msgstr ""
 "між пролептичними григоріанськими ординалами та багатьма іншими календарними"
 " системами."
 
-#: ../../library/datetime.rst:2641
+#: ../../library/datetime.rst:2653
 msgid ""
 "See R. H. van Gent's `guide to the mathematics of the ISO 8601 calendar "
 "<https://web.archive.org/web/20220531051136/https://webspace.science.uu.nl/~gent0113/calendar/isocalendar.htm>`_"
 " for a good explanation."
 msgstr ""
 
-#: ../../library/datetime.rst:2645
+#: ../../library/datetime.rst:2657
 msgid ""
 "Passing ``datetime.strptime('Feb 29', '%b %d')`` will fail since ``1900`` is"
 " not a leap year."
@@ -4025,10 +3858,10 @@ msgstr ""
 "Передача ``datetime.strptime('Feb 29', '%b %d')`` буде невдалою, оскільки "
 "``1900`` не є високосним роком."
 
-#: ../../library/datetime.rst:2305
+#: ../../library/datetime.rst:2317
 msgid "% (percent)"
 msgstr ""
 
-#: ../../library/datetime.rst:2305
+#: ../../library/datetime.rst:2317
 msgid "datetime format"
 msgstr ""
