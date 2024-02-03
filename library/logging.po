@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-26 14:13+0000\n"
+"POT-Creation-Date: 2024-02-02 15:40+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -908,23 +908,14 @@ msgstr ""
 msgid ""
 "This method should be called from handlers when an exception is encountered "
 "during an :meth:`emit` call. If the module-level attribute "
-"``raiseExceptions`` is ``False``, exceptions get silently ignored. This is "
-"what is mostly wanted for a logging system - most users will not care about "
-"errors in the logging system, they are more interested in application "
+":data:`raiseExceptions` is ``False``, exceptions get silently ignored. This "
+"is what is mostly wanted for a logging system - most users will not care "
+"about errors in the logging system, they are more interested in application "
 "errors. You could, however, replace this with a custom handler if you wish. "
 "The specified record is the one which was being processed when the exception"
-" occurred. (The default value of ``raiseExceptions`` is ``True``, as that is"
-" more useful during development)."
+" occurred. (The default value of :data:`raiseExceptions` is ``True``, as "
+"that is more useful during development)."
 msgstr ""
-"Цей метод слід викликати з обробників, коли під час виклику :meth:`emit` "
-"виникає виняткова ситуація. Якщо атрибут на рівні модуля ``raiseExceptions``"
-" має значення ``False``, винятки мовчки ігноруються. Це те, що здебільшого "
-"потрібно для системи журналювання - більшість користувачів не будуть дбати "
-"про помилки в системі журналювання, їх більше цікавлять помилки програми. "
-"Однак ви можете замінити це спеціальним обробником, якщо хочете. Указаний "
-"запис є записом, який оброблявся, коли сталася виняток. (Значенням за "
-"замовчуванням ``raiseExceptions`` є ``True``, оскільки це більш корисно під "
-"час розробки)."
 
 #: ../../library/logging.rst:545
 msgid ""
@@ -2685,11 +2676,27 @@ msgstr ""
 "вам потрібна попередня поведінка, для lastResort можна встановити значення "
 "None."
 
-#: ../../library/logging.rst:1481
+#: ../../library/logging.rst:1482
+msgid "Used to see if exceptions during handling should be propagated."
+msgstr ""
+
+#: ../../library/logging.rst:1484
+msgid "Default: ``True``."
+msgstr ""
+
+#: ../../library/logging.rst:1486
+msgid ""
+"If :data:`raiseExceptions` is ``False``, exceptions get silently ignored. "
+"This is what is mostly wanted for a logging system - most users will not "
+"care about errors in the logging system, they are more interested in "
+"application errors."
+msgstr ""
+
+#: ../../library/logging.rst:1493
 msgid "Integration with the warnings module"
 msgstr "Інтеграція з модулем попереджень"
 
-#: ../../library/logging.rst:1483
+#: ../../library/logging.rst:1495
 msgid ""
 "The :func:`captureWarnings` function can be used to integrate :mod:`logging`"
 " with the :mod:`warnings` module."
@@ -2697,14 +2704,14 @@ msgstr ""
 "Функцію :func:`captureWarnings` можна використовувати для інтеграції "
 ":mod:`logging` з модулем :mod:`warnings`."
 
-#: ../../library/logging.rst:1488
+#: ../../library/logging.rst:1500
 msgid ""
 "This function is used to turn the capture of warnings by logging on and off."
 msgstr ""
 "Ця функція використовується для ввімкнення та вимкнення захоплення "
 "попереджень під час входу."
 
-#: ../../library/logging.rst:1491
+#: ../../library/logging.rst:1503
 msgid ""
 "If *capture* is ``True``, warnings issued by the :mod:`warnings` module will"
 " be redirected to the logging system. Specifically, a warning will be "
@@ -2718,7 +2725,7 @@ msgstr ""
 ":func:`warnings.formatwarning`, а результуючий рядок буде зареєстровано в "
 "журналі під назвою ``'py.warnings`` з серйозністю :const:`WARNING`."
 
-#: ../../library/logging.rst:1496
+#: ../../library/logging.rst:1508
 msgid ""
 "If *capture* is ``False``, the redirection of warnings to the logging system"
 " will stop, and warnings will be redirected to their original destinations "
@@ -2729,27 +2736,27 @@ msgstr ""
 "початкових місць призначення (тобто тих, які діяли до виклику "
 "``captureWarnings(True)``)."
 
-#: ../../library/logging.rst:1504
+#: ../../library/logging.rst:1516
 msgid "Module :mod:`logging.config`"
 msgstr "Модуль :mod:`logging.config`"
 
-#: ../../library/logging.rst:1504
+#: ../../library/logging.rst:1516
 msgid "Configuration API for the logging module."
 msgstr "API конфігурації для модуля журналювання."
 
-#: ../../library/logging.rst:1507
+#: ../../library/logging.rst:1519
 msgid "Module :mod:`logging.handlers`"
 msgstr "Модуль :mod:`logging.handlers`"
 
-#: ../../library/logging.rst:1507
+#: ../../library/logging.rst:1519
 msgid "Useful handlers included with the logging module."
 msgstr "Корисні обробники, включені в модуль журналювання."
 
-#: ../../library/logging.rst:1511
+#: ../../library/logging.rst:1523
 msgid ":pep:`282` - A Logging System"
 msgstr ":pep:`282` - Система реєстрації"
 
-#: ../../library/logging.rst:1510
+#: ../../library/logging.rst:1522
 msgid ""
 "The proposal which described this feature for inclusion in the Python "
 "standard library."
@@ -2757,7 +2764,7 @@ msgstr ""
 "Пропозиція, яка описує цю функцію для включення в стандартну бібліотеку "
 "Python."
 
-#: ../../library/logging.rst:1516
+#: ../../library/logging.rst:1528
 msgid ""
 "`Original Python logging package <https://old.red-"
 "dove.com/python_logging.html>`_"
@@ -2765,7 +2772,7 @@ msgstr ""
 "`Оригінальний пакет журналювання Python <https://old.red-"
 "dove.com/python_logging.html>`_"
 
-#: ../../library/logging.rst:1514
+#: ../../library/logging.rst:1526
 msgid ""
 "This is the original source for the :mod:`logging` package.  The version of "
 "the package available from this site is suitable for use with Python 1.5.2, "

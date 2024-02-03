@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-19 14:14+0000\n"
+"POT-Creation-Date: 2024-02-02 15:40+0000\n"
 "PO-Revision-Date: 2021-06-28 00:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -47,7 +47,15 @@ msgstr ""
 "читати/записувати, інакше він може бути або лише для читання, або для "
 "читання/запису на розсуд експортера."
 
-#: ../../c-api/memoryview.rst:25
+#: ../../c-api/memoryview.rst:26
+msgid "Flag to request a readonly buffer."
+msgstr ""
+
+#: ../../c-api/memoryview.rst:31
+msgid "Flag to request a writable buffer."
+msgstr ""
+
+#: ../../c-api/memoryview.rst:36
 msgid ""
 "Create a memoryview object using *mem* as the underlying buffer. *flags* can"
 " be one of :c:macro:`PyBUF_READ` or :c:macro:`PyBUF_WRITE`."
@@ -55,7 +63,7 @@ msgstr ""
 "Створіть об’єкт memoryview, використовуючи *mem* як базовий буфер. *flags* "
 "може бути одним із :c:macro:`PyBUF_READ` або :c:macro:`PyBUF_WRITE`."
 
-#: ../../c-api/memoryview.rst:32
+#: ../../c-api/memoryview.rst:43
 msgid ""
 "Create a memoryview object wrapping the given buffer structure *view*. For "
 "simple byte buffers, :c:func:`PyMemoryView_FromMemory` is the preferred "
@@ -65,7 +73,7 @@ msgstr ""
 "простих байтових буферів перевагою є функція "
 ":c:func:`PyMemoryView_FromMemory`."
 
-#: ../../c-api/memoryview.rst:38
+#: ../../c-api/memoryview.rst:49
 msgid ""
 "Create a memoryview object to a :term:`contiguous` chunk of memory (in "
 "either 'C' or 'F'ortran *order*) from an object that defines the buffer "
@@ -79,7 +87,12 @@ msgstr ""
 "іншому випадку буде зроблено копію, і memoryview вкаже на новий об’єкт "
 "bytes."
 
-#: ../../c-api/memoryview.rst:47
+#: ../../c-api/memoryview.rst:55
+msgid ""
+"*buffertype* can be one of :c:macro:`PyBUF_READ` or :c:macro:`PyBUF_WRITE`."
+msgstr ""
+
+#: ../../c-api/memoryview.rst:60
 msgid ""
 "Return true if the object *obj* is a memoryview object.  It is not currently"
 " allowed to create subclasses of :class:`memoryview`.  This function always "
@@ -88,7 +101,7 @@ msgstr ""
 "Повертає true, якщо об’єкт *obj* є об’єктом memoryview. Наразі не можна "
 "створювати підкласи :class:`memoryview`. Ця функція завжди успішна."
 
-#: ../../c-api/memoryview.rst:54
+#: ../../c-api/memoryview.rst:67
 msgid ""
 "Return a pointer to the memoryview's private copy of the exporter's buffer. "
 "*mview* **must** be a memoryview instance; this macro doesn't check its "
@@ -98,7 +111,7 @@ msgstr ""
 "*mview* **має** бути екземпляром memoryview; цей макрос не перевіряє свій "
 "тип, ви повинні зробити це самостійно, інакше ви ризикуєте збої."
 
-#: ../../c-api/memoryview.rst:60
+#: ../../c-api/memoryview.rst:73
 msgid ""
 "Return either a pointer to the exporting object that the memoryview is based"
 " on or ``NULL`` if the memoryview has been created by one of the functions "
