@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-26 14:13+0000\n"
+"POT-Creation-Date: 2024-02-09 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -757,15 +757,10 @@ msgstr "рядок документації"
 msgid ""
 "A string literal which appears as the first expression in a class, function "
 "or module.  While ignored when the suite is executed, it is recognized by "
-"the compiler and put into the :attr:`__doc__` attribute of the enclosing "
+"the compiler and put into the :attr:`!__doc__` attribute of the enclosing "
 "class, function or module.  Since it is available via introspection, it is "
 "the canonical place for documentation of the object."
 msgstr ""
-"Рядковий літерал, який з’являється як перший вираз у класі, функції чи "
-"модулі. Хоча ігнорується, коли набір виконується, він розпізнається "
-"компілятором і поміщається в атрибут :attr:`__doc__` класу, функції або "
-"модуля, що містить. Оскільки він доступний через самоаналіз, це канонічне "
-"місце для документування об’єкта."
 
 #: ../../glossary.rst:357
 msgid "duck-typing"
@@ -1726,7 +1721,7 @@ msgstr ""
 msgid "More information can be found in :ref:`metaclasses`."
 msgstr "Більше інформації можна знайти в :ref:`metaclasses`."
 
-#: ../../glossary.rst:761 ../../glossary.rst:793 ../../glossary.rst:1128
+#: ../../glossary.rst:761 ../../glossary.rst:793 ../../glossary.rst:1130
 msgid "method"
 msgstr "метод"
 
@@ -2366,17 +2361,18 @@ msgstr ""
 msgid ""
 "The :class:`collections.abc.Sequence` abstract base class defines a much "
 "richer interface that goes beyond just :meth:`~object.__getitem__` and "
-":meth:`~object.__len__`, adding :meth:`count`, :meth:`index`, "
+":meth:`~object.__len__`, adding :meth:`!count`, :meth:`!index`, "
 ":meth:`~object.__contains__`, and :meth:`~object.__reversed__`. Types that "
 "implement this expanded interface can be registered explicitly using "
-":func:`~abc.ABCMeta.register`."
+":func:`~abc.ABCMeta.register`. For more documentation on sequence methods "
+"generally, see :ref:`Common Sequence Operations <typesseq-common>`."
 msgstr ""
 
-#: ../../glossary.rst:1110
+#: ../../glossary.rst:1112
 msgid "set comprehension"
 msgstr "встановити розуміння"
 
-#: ../../glossary.rst:1112
+#: ../../glossary.rst:1114
 msgid ""
 "A compact way to process all or part of the elements in an iterable and "
 "return a set with the results. ``results = {c for c in 'abracadabra' if c "
@@ -2388,11 +2384,11 @@ msgstr ""
 " not in 'abc'}`` генерує набір рядків ``{'r', 'd'}``. Дивіться "
 ":ref:`comprehensions`."
 
-#: ../../glossary.rst:1116
+#: ../../glossary.rst:1118
 msgid "single dispatch"
 msgstr "єдина відправка"
 
-#: ../../glossary.rst:1118
+#: ../../glossary.rst:1120
 msgid ""
 "A form of :term:`generic function` dispatch where the implementation is "
 "chosen based on the type of a single argument."
@@ -2400,11 +2396,11 @@ msgstr ""
 "Форма відправки :term:`generic function`, де реалізація вибирається на "
 "основі типу одного аргументу."
 
-#: ../../glossary.rst:1120
+#: ../../glossary.rst:1122
 msgid "slice"
 msgstr "шматочок"
 
-#: ../../glossary.rst:1122
+#: ../../glossary.rst:1124
 msgid ""
 "An object usually containing a portion of a :term:`sequence`.  A slice is "
 "created using the subscript notation, ``[]`` with colons between numbers "
@@ -2416,11 +2412,11 @@ msgstr ""
 "вказано кілька, наприклад, ``variable_name[1:3:5]``. Нотація в дужках "
 "(підрядковому) використовує внутрішньо об’єкти :class:`slice`."
 
-#: ../../glossary.rst:1126
+#: ../../glossary.rst:1128
 msgid "special method"
 msgstr "спеціальний метод"
 
-#: ../../glossary.rst:1130
+#: ../../glossary.rst:1132
 msgid ""
 "A method that is called implicitly by Python to execute a certain operation "
 "on a type, such as addition.  Such methods have names starting and ending "
@@ -2432,11 +2428,11 @@ msgstr ""
 "закінчуються подвійним підкресленням. Спеціальні методи описані в "
 ":ref:`specialnames`."
 
-#: ../../glossary.rst:1134
+#: ../../glossary.rst:1136
 msgid "statement"
 msgstr "заява"
 
-#: ../../glossary.rst:1136
+#: ../../glossary.rst:1138
 msgid ""
 "A statement is part of a suite (a \"block\" of code).  A statement is either"
 " an :term:`expression` or one of several constructs with a keyword, such as "
@@ -2446,22 +2442,22 @@ msgstr ""
 ":term:`expression`, або однією з кількох конструкцій із ключовим словом, "
 "таким як :keyword:`if`, :keyword:`while` або :keyword:`for`."
 
-#: ../../glossary.rst:1139
+#: ../../glossary.rst:1141
 msgid "static type checker"
 msgstr ""
 
-#: ../../glossary.rst:1141
+#: ../../glossary.rst:1143
 msgid ""
 "An external tool that reads Python code and analyzes it, looking for issues "
 "such as incorrect types. See also :term:`type hints <type hint>` and the "
 ":mod:`typing` module."
 msgstr ""
 
-#: ../../glossary.rst:1144
+#: ../../glossary.rst:1146
 msgid "strong reference"
 msgstr "сильна посилання"
 
-#: ../../glossary.rst:1146
+#: ../../glossary.rst:1148
 msgid ""
 "In Python's C API, a strong reference is a reference to an object which is "
 "owned by the code holding the reference.  The strong reference is taken by "
@@ -2469,7 +2465,7 @@ msgid ""
 ":c:func:`Py_DECREF` when the reference is deleted."
 msgstr ""
 
-#: ../../glossary.rst:1152
+#: ../../glossary.rst:1154
 msgid ""
 "The :c:func:`Py_NewRef` function can be used to create a strong reference to"
 " an object. Usually, the :c:func:`Py_DECREF` function must be called on the "
@@ -2481,15 +2477,15 @@ msgstr ""
 " для сильного посилання перед виходом із області сильного посилання, щоб "
 "уникнути витоку одного посилання."
 
-#: ../../glossary.rst:1157
+#: ../../glossary.rst:1159
 msgid "See also :term:`borrowed reference`."
 msgstr "Дивіться також :term:`borrowed reference`."
 
-#: ../../glossary.rst:1158
+#: ../../glossary.rst:1160
 msgid "text encoding"
 msgstr "кодування тексту"
 
-#: ../../glossary.rst:1160
+#: ../../glossary.rst:1162
 msgid ""
 "A string in Python is a sequence of Unicode code points (in range "
 "``U+0000``--``U+10FFFF``). To store or transfer a string, it needs to be "
@@ -2499,7 +2495,7 @@ msgstr ""
 "``U+0000``--``U+10FFFF``). Щоб зберегти або передати рядок, його потрібно "
 "серіалізувати як послідовність байтів."
 
-#: ../../glossary.rst:1164
+#: ../../glossary.rst:1166
 msgid ""
 "Serializing a string into a sequence of bytes is known as \"encoding\", and "
 "recreating the string from the sequence of bytes is known as \"decoding\"."
@@ -2507,7 +2503,7 @@ msgstr ""
 "Серіалізація рядка в послідовність байтів відома як \"кодування\", а "
 "відтворення рядка з послідовності байтів відоме як \"декодування\"."
 
-#: ../../glossary.rst:1167
+#: ../../glossary.rst:1169
 msgid ""
 "There are a variety of different text serialization :ref:`codecs <standard-"
 "encodings>`, which are collectively referred to as \"text encodings\"."
@@ -2515,11 +2511,11 @@ msgstr ""
 "Існує безліч різних :ref:`кодеків <standard-encodings>` серіалізації тексту,"
 " які спільно називаються \"текстовими кодуваннями\"."
 
-#: ../../glossary.rst:1170
+#: ../../glossary.rst:1172
 msgid "text file"
 msgstr "текстовий файл"
 
-#: ../../glossary.rst:1172
+#: ../../glossary.rst:1174
 msgid ""
 "A :term:`file object` able to read and write :class:`str` objects. Often, a "
 "text file actually accesses a byte-oriented datastream and handles the "
@@ -2534,7 +2530,7 @@ msgstr ""
 "або ``'w'``), :data:`sys.stdin`, :data:`sys.stdout`, а також екземпляри: "
 ":class:`io.StringIO`."
 
-#: ../../glossary.rst:1179
+#: ../../glossary.rst:1181
 msgid ""
 "See also :term:`binary file` for a file object able to read and write "
 ":term:`bytes-like objects <bytes-like object>`."
@@ -2542,11 +2538,11 @@ msgstr ""
 "Дивіться також :term:`binary file` щодо файлового об’єкта, здатного читати "
 "та записувати :term:`байтоподібні об’єкти <bytes-like object>`."
 
-#: ../../glossary.rst:1181
+#: ../../glossary.rst:1183
 msgid "triple-quoted string"
 msgstr "рядок із потрійними лапками"
 
-#: ../../glossary.rst:1183
+#: ../../glossary.rst:1185
 msgid ""
 "A string which is bound by three instances of either a quotation mark (\") "
 "or an apostrophe (').  While they don't provide any functionality not "
@@ -2563,11 +2559,11 @@ msgstr ""
 "без використання символу продовження, що робить їх особливо корисними під "
 "час написання рядків документів."
 
-#: ../../glossary.rst:1190
+#: ../../glossary.rst:1192
 msgid "type"
 msgstr "тип"
 
-#: ../../glossary.rst:1192
+#: ../../glossary.rst:1194
 msgid ""
 "The type of a Python object determines what kind of object it is; every "
 "object has a type.  An object's type is accessible as its "
@@ -2578,15 +2574,15 @@ msgstr ""
 "доступний як його атрибут :attr:`~instance.__class__` або може бути "
 "отриманий за допомогою ``type(obj)``."
 
-#: ../../glossary.rst:1196
+#: ../../glossary.rst:1198
 msgid "type alias"
 msgstr "псевдонім типу"
 
-#: ../../glossary.rst:1198
+#: ../../glossary.rst:1200
 msgid "A synonym for a type, created by assigning the type to an identifier."
 msgstr "Синонім типу, створений шляхом присвоєння типу ідентифікатору."
 
-#: ../../glossary.rst:1200
+#: ../../glossary.rst:1202
 msgid ""
 "Type aliases are useful for simplifying :term:`type hints <type hint>`. For "
 "example::"
@@ -2594,19 +2590,19 @@ msgstr ""
 "Псевдоніми типів корисні для спрощення :term:`підказок типу <type hint>`. "
 "Наприклад::"
 
-#: ../../glossary.rst:1207
+#: ../../glossary.rst:1209
 msgid "could be made more readable like this::"
 msgstr "можна зробити більш читабельним таким чином::"
 
-#: ../../glossary.rst:1214 ../../glossary.rst:1228
+#: ../../glossary.rst:1216 ../../glossary.rst:1230
 msgid "See :mod:`typing` and :pep:`484`, which describe this functionality."
 msgstr "Перегляньте :mod:`typing` і :pep:`484`, які описують цю функцію."
 
-#: ../../glossary.rst:1215
+#: ../../glossary.rst:1217
 msgid "type hint"
 msgstr "підказка типу"
 
-#: ../../glossary.rst:1217
+#: ../../glossary.rst:1219
 msgid ""
 "An :term:`annotation` that specifies the expected type for a variable, a "
 "class attribute, or a function parameter or return value."
@@ -2614,14 +2610,14 @@ msgstr ""
 ":term:`annotation`, яка визначає очікуваний тип для змінної, атрибута класу "
 "або параметра функції чи значення, що повертається."
 
-#: ../../glossary.rst:1220
+#: ../../glossary.rst:1222
 msgid ""
 "Type hints are optional and are not enforced by Python but they are useful "
 "to :term:`static type checkers <static type checker>`. They can also aid "
 "IDEs with code completion and refactoring."
 msgstr ""
 
-#: ../../glossary.rst:1224
+#: ../../glossary.rst:1226
 msgid ""
 "Type hints of global variables, class attributes, and functions, but not "
 "local variables, can be accessed using :func:`typing.get_type_hints`."
@@ -2630,11 +2626,11 @@ msgstr ""
 "не локальних змінних, можна отримати за допомогою "
 ":func:`typing.get_type_hints`."
 
-#: ../../glossary.rst:1229
+#: ../../glossary.rst:1231
 msgid "universal newlines"
 msgstr "універсальні символи нового рядка"
 
-#: ../../glossary.rst:1231
+#: ../../glossary.rst:1233
 msgid ""
 "A manner of interpreting text streams in which all of the following are "
 "recognized as ending a line: the Unix end-of-line convention ``'\\n'``, the "
@@ -2648,21 +2644,21 @@ msgstr ""
 "і :pep:`3116`, а також :func:`bytes.splitlines` для додаткового "
 "використання."
 
-#: ../../glossary.rst:1236
+#: ../../glossary.rst:1238
 msgid "variable annotation"
 msgstr "анотація змінної"
 
-#: ../../glossary.rst:1238
+#: ../../glossary.rst:1240
 msgid "An :term:`annotation` of a variable or a class attribute."
 msgstr ":term:`annotation` змінної або атрибута класу."
 
-#: ../../glossary.rst:1240
+#: ../../glossary.rst:1242
 msgid ""
 "When annotating a variable or a class attribute, assignment is optional::"
 msgstr ""
 "При анотуванні змінної або атрибута класу призначення є необов’язковим:"
 
-#: ../../glossary.rst:1245
+#: ../../glossary.rst:1247
 msgid ""
 "Variable annotations are usually used for :term:`type hints <type hint>`: "
 "for example this variable is expected to take :class:`int` values::"
@@ -2671,11 +2667,11 @@ msgstr ""
 "hint>`: наприклад, очікується, що ця змінна прийматиме значення "
 ":class:`int`::"
 
-#: ../../glossary.rst:1251
+#: ../../glossary.rst:1253
 msgid "Variable annotation syntax is explained in section :ref:`annassign`."
 msgstr "Синтаксис анотації змінної пояснюється в розділі :ref:`annassign`."
 
-#: ../../glossary.rst:1253
+#: ../../glossary.rst:1255
 msgid ""
 "See :term:`function annotation`, :pep:`484` and :pep:`526`, which describe "
 "this functionality. Also see :ref:`annotations-howto` for best practices on "
@@ -2685,11 +2681,11 @@ msgstr ""
 "описують цю функціональність. Також перегляньте :ref:`annotations-howto`, "
 "щоб дізнатися про найкращі практики роботи з анотаціями."
 
-#: ../../glossary.rst:1257
+#: ../../glossary.rst:1259
 msgid "virtual environment"
 msgstr "віртуальне середовище"
 
-#: ../../glossary.rst:1259
+#: ../../glossary.rst:1261
 msgid ""
 "A cooperatively isolated runtime environment that allows Python users and "
 "applications to install and upgrade Python distribution packages without "
@@ -2700,15 +2696,15 @@ msgstr ""
 "програмам Python встановлювати та оновлювати дистрибутивні пакети Python, не"
 " втручаючись у поведінку інших програм Python, що працюють у тій же системі."
 
-#: ../../glossary.rst:1264
+#: ../../glossary.rst:1266
 msgid "See also :mod:`venv`."
 msgstr "Дивіться також :mod:`venv`."
 
-#: ../../glossary.rst:1265
+#: ../../glossary.rst:1267
 msgid "virtual machine"
 msgstr "віртуальна машина"
 
-#: ../../glossary.rst:1267
+#: ../../glossary.rst:1269
 msgid ""
 "A computer defined entirely in software.  Python's virtual machine executes "
 "the :term:`bytecode` emitted by the bytecode compiler."
@@ -2716,11 +2712,11 @@ msgstr ""
 "Комп’ютер, повністю визначений програмним забезпеченням. Віртуальна машина "
 "Python виконує :term:`bytecode`, виданий компілятором байт-коду."
 
-#: ../../glossary.rst:1269
+#: ../../glossary.rst:1271
 msgid "Zen of Python"
 msgstr "Дзен Python"
 
-#: ../../glossary.rst:1271
+#: ../../glossary.rst:1273
 msgid ""
 "Listing of Python design principles and philosophies that are helpful in "
 "understanding and using the language.  The listing can be found by typing "
@@ -2742,6 +2738,6 @@ msgstr ""
 msgid "magic"
 msgstr ""
 
-#: ../../glossary.rst:1128
+#: ../../glossary.rst:1130
 msgid "special"
 msgstr ""
