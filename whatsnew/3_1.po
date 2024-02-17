@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-02 15:40+0000\n"
+"POT-Creation-Date: 2024-02-16 14:13+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -98,11 +98,24 @@ msgstr ""
 "PEP, автори Армін Роначер і Раймонд Геттінгер. Реалізацію написав Раймонд "
 "Хеттінгер."
 
-#: ../../whatsnew/3.1.rst:85
+#: ../../whatsnew/3.1.rst:83
+msgid ""
+"Since an ordered dictionary remembers its insertion order, it can be used in"
+" conjuction with sorting to make a sorted dictionary::"
+msgstr ""
+
+#: ../../whatsnew/3.1.rst:101
+msgid ""
+"The new sorted dictionaries maintain their sort order when entries are "
+"deleted.  But when new keys are added, the keys are appended to the end and "
+"the sort is not maintained."
+msgstr ""
+
+#: ../../whatsnew/3.1.rst:107
 msgid "PEP 378: Format Specifier for Thousands Separator"
 msgstr "PEP 378: Специфікатор формату для розділювача тисяч"
 
-#: ../../whatsnew/3.1.rst:87
+#: ../../whatsnew/3.1.rst:109
 msgid ""
 "The built-in :func:`format` function and the :meth:`str.format` method use a"
 " mini-language that now includes a simple, non-locale aware way to format a "
@@ -115,7 +128,7 @@ msgstr ""
 "гуманізувати вихідні дані програми, покращуючи її професійний вигляд і "
 "читабельність:"
 
-#: ../../whatsnew/3.1.rst:101
+#: ../../whatsnew/3.1.rst:123
 msgid ""
 "The supported types are :class:`int`, :class:`float`, :class:`complex` and "
 ":class:`decimal.Decimal`."
@@ -123,7 +136,7 @@ msgstr ""
 "Підтримувані типи: :class:`int`, :class:`float`, :class:`complex` і "
 ":class:`decimal.Decimal`."
 
-#: ../../whatsnew/3.1.rst:104
+#: ../../whatsnew/3.1.rst:126
 msgid ""
 "Discussions are underway about how to specify alternative separators like "
 "dots, spaces, apostrophes, or underscores.  Locale-aware applications should"
@@ -135,11 +148,11 @@ msgstr ""
 "локалі повинні використовувати існуючий специфікатор формату *n*, який уже "
 "підтримує певну підтримку роздільників тисяч."
 
-#: ../../whatsnew/3.1.rst:112
+#: ../../whatsnew/3.1.rst:134
 msgid ":pep:`378` - Format Specifier for Thousands Separator"
 msgstr ":pep:`378` - Специфікатор формату для розділювача тисяч"
 
-#: ../../whatsnew/3.1.rst:112
+#: ../../whatsnew/3.1.rst:134
 msgid ""
 "PEP written by Raymond Hettinger and implemented by Eric Smith and Mark "
 "Dickinson."
@@ -147,15 +160,15 @@ msgstr ""
 "PEP, написаний Реймондом Геттінгером і реалізований Еріком Смітом і Марком "
 "Дікінсоном."
 
-#: ../../whatsnew/3.1.rst:117
+#: ../../whatsnew/3.1.rst:139
 msgid "Other Language Changes"
 msgstr "Інші зміни мови"
 
-#: ../../whatsnew/3.1.rst:119
+#: ../../whatsnew/3.1.rst:141
 msgid "Some smaller changes made to the core Python language are:"
 msgstr "Деякі менші зміни, внесені до основної мови Python:"
 
-#: ../../whatsnew/3.1.rst:121
+#: ../../whatsnew/3.1.rst:143
 msgid ""
 "Directories and zip archives containing a :file:`__main__.py` file can now "
 "be executed directly by passing their name to the interpreter. The "
@@ -169,7 +182,7 @@ msgstr ""
 "початковий патч від Енді Чу; переглянуте патч від Філіпа Дж. Ебі та Ніка "
 "Коглана; :issue:`1739468`.)"
 
-#: ../../whatsnew/3.1.rst:127
+#: ../../whatsnew/3.1.rst:149
 msgid ""
 "The :func:`int` type gained a ``bit_length`` method that returns the number "
 "of bits necessary to represent its argument in binary::"
@@ -177,7 +190,7 @@ msgstr ""
 "Тип :func:`int` отримав метод ``bit_length``, який повертає кількість бітів,"
 " необхідних для представлення свого аргументу в двійковому вигляді::"
 
-#: ../../whatsnew/3.1.rst:141
+#: ../../whatsnew/3.1.rst:163
 msgid ""
 "(Contributed by Fredrik Johansson, Victor Stinner, Raymond Hettinger, and "
 "Mark Dickinson; :issue:`3439`.)"
@@ -185,24 +198,24 @@ msgstr ""
 "(Надано Фредріком Йоханссоном, Віктором Стіннером, Реймондом Геттінгером і "
 "Марком Дікінсоном; :issue:`3439`.)"
 
-#: ../../whatsnew/3.1.rst:144
+#: ../../whatsnew/3.1.rst:166
 msgid ""
 "The fields in :func:`format` strings can now be automatically numbered::"
 msgstr ""
 "Поля в рядках :func:`format` тепер можуть бути автоматично пронумеровані::"
 
-#: ../../whatsnew/3.1.rst:150
+#: ../../whatsnew/3.1.rst:172
 msgid ""
 "Formerly, the string would have required numbered fields such as: ``'Sir {0}"
 " of {1}'``."
 msgstr ""
 "Раніше рядок вимагав пронумерованих полів, таких як: ``'Sir {0} of {1}''``."
 
-#: ../../whatsnew/3.1.rst:153
+#: ../../whatsnew/3.1.rst:175
 msgid "(Contributed by Eric Smith; :issue:`5237`.)"
 msgstr "(Надав Ерік Сміт; :issue:`5237`.)"
 
-#: ../../whatsnew/3.1.rst:155
+#: ../../whatsnew/3.1.rst:177
 msgid ""
 "The :func:`string.maketrans` function is deprecated and is replaced by new "
 "static methods, :meth:`bytes.maketrans` and :meth:`bytearray.maketrans`. "
@@ -218,11 +231,11 @@ msgstr ""
 " має власні методи **maketrans** і **translate** із проміжними таблицями "
 "перекладу відповідного типу."
 
-#: ../../whatsnew/3.1.rst:162
+#: ../../whatsnew/3.1.rst:184
 msgid "(Contributed by Georg Brandl; :issue:`5675`.)"
 msgstr "(Надав Георг Брандл; :issue:`5675`.)"
 
-#: ../../whatsnew/3.1.rst:164
+#: ../../whatsnew/3.1.rst:186
 msgid ""
 "The syntax of the :keyword:`with` statement now allows multiple context "
 "managers in a single statement::"
@@ -230,15 +243,13 @@ msgstr ""
 "Синтаксис оператора :keyword:`with` тепер дозволяє використовувати декілька "
 "менеджерів контексту в одному операторі:"
 
-#: ../../whatsnew/3.1.rst:172
+#: ../../whatsnew/3.1.rst:194
 msgid ""
-"With the new syntax, the :func:`contextlib.nested` function is no longer "
+"With the new syntax, the :func:`!contextlib.nested` function is no longer "
 "needed and is now deprecated."
 msgstr ""
-"З новим синтаксисом функція :func:`contextlib.nested` більше не потрібна, і "
-"тепер вона застаріла."
 
-#: ../../whatsnew/3.1.rst:175
+#: ../../whatsnew/3.1.rst:197
 msgid ""
 "(Contributed by Georg Brandl and Mattias Brändström; `appspot issue 53094 "
 "<https://codereview.appspot.com/53094>`_.)"
@@ -246,7 +257,7 @@ msgstr ""
 "(Надано Георгом Брандлом і Маттіасом Брендстремом; `appspot issue 53094 "
 "<https://codereview.appspot.com/53094>`_.)"
 
-#: ../../whatsnew/3.1.rst:178
+#: ../../whatsnew/3.1.rst:200
 msgid ""
 "``round(x, n)`` now returns an integer if *x* is an integer. Previously it "
 "returned a float::"
@@ -254,11 +265,11 @@ msgstr ""
 "``round(x, n)`` тепер повертає ціле число, якщо *x* є цілим числом. Раніше "
 "він повертав float::"
 
-#: ../../whatsnew/3.1.rst:184
+#: ../../whatsnew/3.1.rst:206
 msgid "(Contributed by Mark Dickinson; :issue:`4707`.)"
 msgstr "(Надав Марк Дікінсон; :issue:`4707`.)"
 
-#: ../../whatsnew/3.1.rst:186
+#: ../../whatsnew/3.1.rst:208
 msgid ""
 "Python now uses David Gay's algorithm for finding the shortest floating "
 "point representation that doesn't change its value.  This should help "
@@ -268,7 +279,7 @@ msgstr ""
 "представлення з плаваючою комою, яке не змінює свого значення. Це має "
 "допомогти пом’якшити плутанину навколо двійкових чисел з плаваючою комою."
 
-#: ../../whatsnew/3.1.rst:191
+#: ../../whatsnew/3.1.rst:213
 msgid ""
 "The significance is easily seen with a number like ``1.1`` which does not "
 "have an exact equivalent in binary floating point.  Since there is no exact "
@@ -287,7 +298,7 @@ msgstr ""
 "найближче значення використовувалося і досі використовується в наступних "
 "обчисленнях з плаваючою комою."
 
-#: ../../whatsnew/3.1.rst:199
+#: ../../whatsnew/3.1.rst:221
 msgid ""
 "What is new is how the number gets displayed.  Formerly, Python used a "
 "simple approach.  The value of ``repr(1.1)`` was computed as ``format(1.1, "
@@ -307,7 +318,7 @@ msgstr ""
 "обмеження двійкового представлення з плаваючою комою є проблемою самого "
 "Python)."
 
-#: ../../whatsnew/3.1.rst:208
+#: ../../whatsnew/3.1.rst:230
 msgid ""
 "The new algorithm for ``repr(1.1)`` is smarter and returns ``'1.1'``. "
 "Effectively, it searches all equivalent string representations (ones that "
@@ -319,7 +330,7 @@ msgstr ""
 "самим базовим значенням з плаваючою точкою) і повертає найкоротше "
 "представлення."
 
-#: ../../whatsnew/3.1.rst:213
+#: ../../whatsnew/3.1.rst:235
 msgid ""
 "The new algorithm tends to emit cleaner representations when possible, but "
 "it does not change the underlying values.  So, it is still the case that "
@@ -329,7 +340,7 @@ msgstr ""
 "можливо, але він не змінює основні значення. Таким чином, це все ще так, що "
 "``1.1 + 2.2 != 3.3``, навіть якщо представлення можуть припускати інше."
 
-#: ../../whatsnew/3.1.rst:217
+#: ../../whatsnew/3.1.rst:239
 msgid ""
 "The new algorithm depends on certain features in the underlying floating "
 "point implementation.  If the required features are not found, the old "
@@ -341,15 +352,15 @@ msgstr ""
 "використовуватися старий алгоритм. Крім того, протоколи піклування тексту "
 "забезпечують міжплатформну переносимість за допомогою старого алгоритму."
 
-#: ../../whatsnew/3.1.rst:222
+#: ../../whatsnew/3.1.rst:244
 msgid "(Contributed by Eric Smith and Mark Dickinson; :issue:`1580`)"
 msgstr "(Надано Еріком Смітом і Марком Дікінсоном; :issue:`1580`)"
 
-#: ../../whatsnew/3.1.rst:225
+#: ../../whatsnew/3.1.rst:247
 msgid "New, Improved, and Deprecated Modules"
 msgstr "Нові, покращені та застарілі модулі"
 
-#: ../../whatsnew/3.1.rst:227
+#: ../../whatsnew/3.1.rst:249
 msgid ""
 "Added a :class:`collections.Counter` class to support convenient counting of"
 " unique items in a sequence or iterable::"
@@ -357,11 +368,11 @@ msgstr ""
 "Додано клас :class:`collections.Counter` для підтримки зручного підрахунку "
 "унікальних елементів у послідовності або ітерації::"
 
-#: ../../whatsnew/3.1.rst:233
+#: ../../whatsnew/3.1.rst:255
 msgid "(Contributed by Raymond Hettinger; :issue:`1696199`.)"
 msgstr "(Надав Реймонд Геттінгер; :issue:`1696199`.)"
 
-#: ../../whatsnew/3.1.rst:235
+#: ../../whatsnew/3.1.rst:257
 msgid ""
 "Added a new module, :mod:`tkinter.ttk` for access to the Tk themed widget "
 "set. The basic idea of ttk is to separate, to the extent possible, the code "
@@ -372,11 +383,11 @@ msgstr ""
 "можливо, код, що реалізує поведінку віджета, від коду, що реалізує його "
 "зовнішній вигляд."
 
-#: ../../whatsnew/3.1.rst:239
+#: ../../whatsnew/3.1.rst:261
 msgid "(Contributed by Guilherme Polo; :issue:`2983`.)"
 msgstr "(Надав Гільєрме Поло; :issue:`2983`.)"
 
-#: ../../whatsnew/3.1.rst:241
+#: ../../whatsnew/3.1.rst:263
 msgid ""
 "The :class:`gzip.GzipFile` and :class:`bz2.BZ2File` classes now support the "
 "context management protocol::"
@@ -384,11 +395,11 @@ msgstr ""
 "Класи :class:`gzip.GzipFile` і :class:`bz2.BZ2File` тепер підтримують "
 "протокол керування контекстом:"
 
-#: ../../whatsnew/3.1.rst:248
+#: ../../whatsnew/3.1.rst:270
 msgid "(Contributed by Antoine Pitrou.)"
 msgstr "(Надав Антуан Пітру.)"
 
-#: ../../whatsnew/3.1.rst:250
+#: ../../whatsnew/3.1.rst:272
 msgid ""
 "The :mod:`decimal` module now supports methods for creating a decimal object"
 " from a binary :class:`float`.  The conversion is exact but can sometimes be"
@@ -398,7 +409,7 @@ msgstr ""
 "об’єкта з двійкового :class:`float`. Перетворення точне, але іноді може бути"
 " несподіваним:"
 
-#: ../../whatsnew/3.1.rst:257
+#: ../../whatsnew/3.1.rst:279
 msgid ""
 "The long decimal result shows the actual binary fraction being stored for "
 "*1.1*.  The fraction has many digits because *1.1* cannot be exactly "
@@ -408,11 +419,11 @@ msgstr ""
 "зберігається для *1,1*. Дріб має багато цифр, оскільки *1.1* не може бути "
 "точно представлений у двійковому вигляді."
 
-#: ../../whatsnew/3.1.rst:261
+#: ../../whatsnew/3.1.rst:283
 msgid "(Contributed by Raymond Hettinger and Mark Dickinson.)"
 msgstr "(Надано Реймондом Геттінгером і Марком Дікінсоном.)"
 
-#: ../../whatsnew/3.1.rst:263
+#: ../../whatsnew/3.1.rst:285
 msgid ""
 "The :mod:`itertools` module grew two new functions.  The "
 ":func:`itertools.combinations_with_replacement` function is one of four for "
@@ -430,11 +441,11 @@ msgstr ""
 "і може приймати будь-який тип послідовності підрахунку, включаючи "
 ":class:`fractions.Fraction` і :class:`decimal.Decimal`::"
 
-#: ../../whatsnew/3.1.rst:282
+#: ../../whatsnew/3.1.rst:304
 msgid "(Contributed by Raymond Hettinger.)"
 msgstr "(Надав Реймонд Геттінгер.)"
 
-#: ../../whatsnew/3.1.rst:284
+#: ../../whatsnew/3.1.rst:306
 msgid ""
 ":func:`collections.namedtuple` now supports a keyword argument *rename* "
 "which lets invalid fieldnames be automatically converted to positional names"
@@ -448,11 +459,11 @@ msgstr ""
 "створюються зовнішнім джерелом, наприклад як заголовок CSV, список полів SQL"
 " або введення користувача::"
 
-#: ../../whatsnew/3.1.rst:301
+#: ../../whatsnew/3.1.rst:323
 msgid "(Contributed by Raymond Hettinger; :issue:`1818`.)"
 msgstr "(Надав Раймонд Геттінгер; :issue:`1818`.)"
 
-#: ../../whatsnew/3.1.rst:303
+#: ../../whatsnew/3.1.rst:325
 msgid ""
 "The :func:`re.sub`, :func:`re.subn` and :func:`re.split` functions now "
 "accept a flags parameter."
@@ -460,11 +471,11 @@ msgstr ""
 "Функції :func:`re.sub`, :func:`re.subn` і :func:`re.split` тепер приймають "
 "параметр flags."
 
-#: ../../whatsnew/3.1.rst:306
+#: ../../whatsnew/3.1.rst:328
 msgid "(Contributed by Gregory Smith.)"
 msgstr "(Надав Грегорі Сміт.)"
 
-#: ../../whatsnew/3.1.rst:308
+#: ../../whatsnew/3.1.rst:330
 msgid ""
 "The :mod:`logging` module now implements a simple "
 ":class:`logging.NullHandler` class for applications that are not using "
@@ -478,11 +489,11 @@ msgstr ""
 "нульового обробника придушить фальшиві попередження, такі як \"Не вдалося "
 "знайти обробників для logger foo\"::"
 
-#: ../../whatsnew/3.1.rst:316
+#: ../../whatsnew/3.1.rst:338
 msgid "(Contributed by Vinay Sajip; :issue:`4384`)."
 msgstr "(Надав Віней Саджип; :issue:`4384`)."
 
-#: ../../whatsnew/3.1.rst:318
+#: ../../whatsnew/3.1.rst:340
 msgid ""
 "The :mod:`runpy` module which supports the ``-m`` command line switch now "
 "supports the execution of packages by looking for and executing a "
@@ -492,11 +503,11 @@ msgstr ""
 " підтримує виконання пакетів шляхом пошуку та виконання субмодуля "
 "``__main__``, коли надається ім’я пакета."
 
-#: ../../whatsnew/3.1.rst:322
+#: ../../whatsnew/3.1.rst:344
 msgid "(Contributed by Andi Vajda; :issue:`4195`.)"
 msgstr "(Надав Анді Вайда; :issue:`4195`.)"
 
-#: ../../whatsnew/3.1.rst:324
+#: ../../whatsnew/3.1.rst:346
 msgid ""
 "The :mod:`pdb` module can now access and display source code loaded via "
 ":mod:`zipimport` (or any other conformant :pep:`302` loader)."
@@ -505,15 +516,15 @@ msgstr ""
 "завантажений через :mod:`zipimport` (або будь-який інший відповідний "
 "завантажувач :pep:`302`)."
 
-#: ../../whatsnew/3.1.rst:327
+#: ../../whatsnew/3.1.rst:349
 msgid "(Contributed by Alexander Belopolsky; :issue:`4201`.)"
 msgstr "(Надав Олександр Бєлопольський; :issue:`4201`.)"
 
-#: ../../whatsnew/3.1.rst:329
+#: ../../whatsnew/3.1.rst:351
 msgid ":class:`functools.partial` objects can now be pickled."
 msgstr ":class:`functools.partial` об’єкти тепер можна маринувати."
 
-#: ../../whatsnew/3.1.rst:331
+#: ../../whatsnew/3.1.rst:353
 msgid ""
 "(Suggested by Antoine Pitrou and Jesse Noller.  Implemented by Jack "
 "Diederich; :issue:`5228`.)"
@@ -521,7 +532,7 @@ msgstr ""
 "(Запропоновано Антуаном Пітру та Джессі Ноллером. Реалізовано Джеком "
 "Дідеріхом; :issue:`5228`.)"
 
-#: ../../whatsnew/3.1.rst:334
+#: ../../whatsnew/3.1.rst:356
 msgid ""
 "Add :mod:`pydoc` help topics for symbols so that ``help('@')`` works as "
 "expected in the interactive environment."
@@ -529,11 +540,11 @@ msgstr ""
 "Додайте теми довідки :mod:`pydoc` для символів, щоб ``help('@')`` працював "
 "належним чином в інтерактивному середовищі."
 
-#: ../../whatsnew/3.1.rst:337
+#: ../../whatsnew/3.1.rst:359
 msgid "(Contributed by David Laban; :issue:`4739`.)"
 msgstr "(Надав Девід Лабан; :issue:`4739`.)"
 
-#: ../../whatsnew/3.1.rst:339
+#: ../../whatsnew/3.1.rst:361
 msgid ""
 "The :mod:`unittest` module now supports skipping individual tests or classes"
 " of tests. And it supports marking a test as an expected failure, a test "
@@ -544,7 +555,7 @@ msgstr ""
 "тестів. І він підтримує позначення тесту як очікуваної невдачі, тесту, який,"
 " як відомо, зламаний, але не повинен вважатися невдалим у TestResult::"
 
-#: ../../whatsnew/3.1.rst:354
+#: ../../whatsnew/3.1.rst:376
 msgid ""
 "Also, tests for exceptions have been builtout to work with context managers "
 "using the :keyword:`with` statement::"
@@ -552,7 +563,7 @@ msgstr ""
 "Крім того, для роботи з менеджерами контексту за допомогою оператора "
 ":keyword:`with`::"
 
-#: ../../whatsnew/3.1.rst:361
+#: ../../whatsnew/3.1.rst:383
 msgid ""
 "In addition, several new assertion methods were added including "
 ":func:`assertSetEqual`, :func:`assertDictEqual`, "
@@ -567,11 +578,11 @@ msgstr ""
 ":func:`assertTupleEqual`, :func:`assertSequenceEqual`, "
 ":func:`assertRaisesRegexp`, :func:`assertIsNone` і :func:`assertIsNotNone`."
 
-#: ../../whatsnew/3.1.rst:368
+#: ../../whatsnew/3.1.rst:390
 msgid "(Contributed by Benjamin Peterson and Antoine Pitrou.)"
 msgstr "(Надано Бенджаміном Петерсоном і Антуаном Пітру.)"
 
-#: ../../whatsnew/3.1.rst:370
+#: ../../whatsnew/3.1.rst:392
 msgid ""
 "The :mod:`io` module has three new constants for the :meth:`seek` method "
 ":data:`SEEK_SET`, :data:`SEEK_CUR`, and :data:`SEEK_END`."
@@ -579,23 +590,23 @@ msgstr ""
 "Модуль :mod:`io` має три нові константи для методу :meth:`seek` "
 ":data:`SEEK_SET`, :data:`SEEK_CUR` і :data:`SEEK_END`."
 
-#: ../../whatsnew/3.1.rst:373
+#: ../../whatsnew/3.1.rst:395
 msgid "The :data:`sys.version_info` tuple is now a named tuple::"
 msgstr ""
 
-#: ../../whatsnew/3.1.rst:378
+#: ../../whatsnew/3.1.rst:400
 msgid "(Contributed by Ross Light; :issue:`4285`.)"
 msgstr "(Надав Росс Лайт; :issue:`4285`.)"
 
-#: ../../whatsnew/3.1.rst:380
+#: ../../whatsnew/3.1.rst:402
 msgid "The :mod:`nntplib` and :mod:`imaplib` modules now support IPv6."
 msgstr "Модулі :mod:`nntplib` і :mod:`imaplib` тепер підтримують IPv6."
 
-#: ../../whatsnew/3.1.rst:382
+#: ../../whatsnew/3.1.rst:404
 msgid "(Contributed by Derek Morr; :issue:`1655` and :issue:`1664`.)"
 msgstr "(Надав Дерек Морр; :issue:`1655` і :issue:`1664`.)"
 
-#: ../../whatsnew/3.1.rst:384
+#: ../../whatsnew/3.1.rst:406
 msgid ""
 "The :mod:`pickle` module has been adapted for better interoperability with "
 "Python 2.x when used with protocol 2 or lower.  The reorganization of the "
@@ -617,7 +628,7 @@ msgstr ""
 "вивантаження. Це перевідображення ввімкнено за замовчуванням, але його можна"
 " вимкнути за допомогою опції *fix_imports*::"
 
-#: ../../whatsnew/3.1.rst:400
+#: ../../whatsnew/3.1.rst:422
 msgid ""
 "An unfortunate but unavoidable side-effect of this change is that protocol 2"
 " pickles produced by Python 3.1 won't be readable with Python 3.0. The "
@@ -631,12 +642,12 @@ msgstr ""
 "переміщення даних між реалізаціями Python 3.x, оскільки він не намагається "
 "зберегти сумісність із Python 2.x."
 
-#: ../../whatsnew/3.1.rst:406
+#: ../../whatsnew/3.1.rst:428
 msgid ""
 "(Contributed by Alexandre Vassalotti and Antoine Pitrou, :issue:`6137`.)"
 msgstr "(Надано Александром Вассалотті та Антуаном Пітру, :issue:`6137`.)"
 
-#: ../../whatsnew/3.1.rst:408
+#: ../../whatsnew/3.1.rst:430
 msgid ""
 "A new module, :mod:`importlib` was added.  It provides a complete, portable,"
 " pure Python reference implementation of the :keyword:`import` statement and"
@@ -649,19 +660,19 @@ msgstr ""
 "відповідника, функції :func:`__import__`. Це значний крок вперед у "
 "документуванні та визначенні дій, які відбуваються під час імпорту."
 
-#: ../../whatsnew/3.1.rst:414
+#: ../../whatsnew/3.1.rst:436
 msgid "(Contributed by Brett Cannon.)"
 msgstr "(Надав Бретт Кеннон.)"
 
-#: ../../whatsnew/3.1.rst:417
+#: ../../whatsnew/3.1.rst:439
 msgid "Optimizations"
 msgstr "Оптимізації"
 
-#: ../../whatsnew/3.1.rst:419
+#: ../../whatsnew/3.1.rst:441
 msgid "Major performance enhancements have been added:"
 msgstr "Додано основні покращення продуктивності:"
 
-#: ../../whatsnew/3.1.rst:421
+#: ../../whatsnew/3.1.rst:443
 msgid ""
 "The new I/O library (as defined in :pep:`3116`) was mostly written in Python"
 " and quickly proved to be a problematic bottleneck in Python 3.0. In Python "
@@ -676,11 +687,11 @@ msgstr ""
 "завдання. Чиста версія Python все ще доступна для експериментальних цілей "
 "через модуль ``_pyio``."
 
-#: ../../whatsnew/3.1.rst:428
+#: ../../whatsnew/3.1.rst:450
 msgid "(Contributed by Amaury Forgeot d'Arc and Antoine Pitrou.)"
 msgstr "(Надано Аморі Форже д'Арк і Антуаном Пітру.)"
 
-#: ../../whatsnew/3.1.rst:430
+#: ../../whatsnew/3.1.rst:452
 msgid ""
 "Added a heuristic so that tuples and dicts containing only untrackable "
 "objects are not tracked by the garbage collector. This can reduce the size "
@@ -692,11 +703,11 @@ msgstr ""
 " і, отже, накладні витрати на збирання сміття в програмах, що працюють "
 "довго, залежно від конкретного використання типів даних."
 
-#: ../../whatsnew/3.1.rst:435
+#: ../../whatsnew/3.1.rst:457
 msgid "(Contributed by Antoine Pitrou, :issue:`4688`.)"
 msgstr "(Надав Антуан Пітру, :issue:`4688`.)"
 
-#: ../../whatsnew/3.1.rst:437
+#: ../../whatsnew/3.1.rst:459
 msgid ""
 "Enabling a configure option named ``--with-computed-gotos`` on compilers "
 "that support it (notably: gcc, SunPro, icc), the bytecode evaluation loop is"
@@ -708,23 +719,23 @@ msgstr ""
 "байт-коду компілюється з новим механізмом відправки, який забезпечує "
 "прискорення до 20% , залежно від системи, компілятора та тесту."
 
-#: ../../whatsnew/3.1.rst:443
+#: ../../whatsnew/3.1.rst:465
 msgid ""
 "(Contributed by Antoine Pitrou along with a number of other participants, "
 ":issue:`4753`)."
 msgstr "(Надано Антуаном Пітру та низкою інших учасників, :issue:`4753`)."
 
-#: ../../whatsnew/3.1.rst:446
+#: ../../whatsnew/3.1.rst:468
 msgid ""
 "The decoding of UTF-8, UTF-16 and LATIN-1 is now two to four times faster."
 msgstr "Декодування UTF-8, UTF-16 і LATIN-1 тепер у два-чотири рази швидше."
 
-#: ../../whatsnew/3.1.rst:449
+#: ../../whatsnew/3.1.rst:471
 msgid ""
 "(Contributed by Antoine Pitrou and Amaury Forgeot d'Arc, :issue:`4868`.)"
 msgstr "(Надано Антуаном Пітру та Аморі Форже д'Арк, :issue:`4868`.)"
 
-#: ../../whatsnew/3.1.rst:451
+#: ../../whatsnew/3.1.rst:473
 msgid ""
 "The :mod:`json` module now has a C extension to substantially improve its "
 "performance.  In addition, the API was modified so that json works only with"
@@ -733,7 +744,7 @@ msgid ""
 " in terms of Unicode."
 msgstr ""
 
-#: ../../whatsnew/3.1.rst:457
+#: ../../whatsnew/3.1.rst:479
 msgid ""
 "(Contributed by Bob Ippolito and converted to Py3.1 by Antoine Pitrou and "
 "Benjamin Peterson; :issue:`4136`.)"
@@ -741,7 +752,7 @@ msgstr ""
 "(Надано Бобом Іполіто та перетворено на Py3.1 Антуаном Пітру та Бенджаміном "
 "Петерсоном; :issue:`4136`.)"
 
-#: ../../whatsnew/3.1.rst:460
+#: ../../whatsnew/3.1.rst:482
 msgid ""
 "Unpickling now interns the attribute names of pickled objects.  This saves "
 "memory and allows pickles to be smaller."
@@ -749,15 +760,15 @@ msgstr ""
 "Unpickling тепер інтернує назви атрибутів маринованих об’єктів. Це економить"
 " пам’ять і дозволяє зробити солоні огірки меншими."
 
-#: ../../whatsnew/3.1.rst:463
+#: ../../whatsnew/3.1.rst:485
 msgid "(Contributed by Jake McGuire and Antoine Pitrou; :issue:`5084`.)"
 msgstr "(Надано Джейком Макгуайром і Антуаном Пітру; :issue:`5084`.)"
 
-#: ../../whatsnew/3.1.rst:466
+#: ../../whatsnew/3.1.rst:488
 msgid "IDLE"
 msgstr "ПРОСТОЮЧИЙ"
 
-#: ../../whatsnew/3.1.rst:468
+#: ../../whatsnew/3.1.rst:490
 msgid ""
 "IDLE's format menu now provides an option to strip trailing whitespace from "
 "a source file."
@@ -765,19 +776,19 @@ msgstr ""
 "Меню форматування IDLE тепер надає можливість видаляти кінцеві пробіли з "
 "вихідного файлу."
 
-#: ../../whatsnew/3.1.rst:471
+#: ../../whatsnew/3.1.rst:493
 msgid "(Contributed by Roger D. Serwy; :issue:`5150`.)"
 msgstr "(Надав Роджер Д. Серві; :issue:`5150`.)"
 
-#: ../../whatsnew/3.1.rst:474
+#: ../../whatsnew/3.1.rst:496
 msgid "Build and C API Changes"
 msgstr "Зміни збірки та C API"
 
-#: ../../whatsnew/3.1.rst:476
+#: ../../whatsnew/3.1.rst:498
 msgid "Changes to Python's build process and to the C API include:"
 msgstr "Зміни в процесі збирання Python і в API C включають:"
 
-#: ../../whatsnew/3.1.rst:478
+#: ../../whatsnew/3.1.rst:500
 msgid ""
 "Integers are now stored internally either in base ``2**15`` or in base "
 "``2**30``, the base being determined at build time.  Previously, they were "
@@ -798,7 +809,7 @@ msgstr ""
 "конфігурації ``--enable-big-digits``, який можна використовувати для заміни "
 "цього значення за замовчуванням."
 
-#: ../../whatsnew/3.1.rst:487
+#: ../../whatsnew/3.1.rst:509
 msgid ""
 "Apart from the performance improvements this change should be invisible to "
 "end users, with one exception: for testing and debugging purposes there's a "
@@ -807,11 +818,11 @@ msgid ""
 "type used to store each digit::"
 msgstr ""
 
-#: ../../whatsnew/3.1.rst:497
+#: ../../whatsnew/3.1.rst:519
 msgid "(Contributed by Mark Dickinson; :issue:`4258`.)"
 msgstr "(Надав Марк Дікінсон; :issue:`4258`.)"
 
-#: ../../whatsnew/3.1.rst:499
+#: ../../whatsnew/3.1.rst:521
 msgid ""
 "The :c:func:`PyLong_AsUnsignedLongLong()` function now handles a negative "
 "*pylong* by raising :exc:`OverflowError` instead of :exc:`TypeError`."
@@ -819,31 +830,31 @@ msgstr ""
 "Функція :c:func:`PyLong_AsUnsignedLongLong()` тепер обробляє негативний "
 "*pylong*, викликаючи :exc:`OverflowError` замість :exc:`TypeError`."
 
-#: ../../whatsnew/3.1.rst:502
+#: ../../whatsnew/3.1.rst:524
 msgid "(Contributed by Mark Dickinson and Lisandro Dalcrin; :issue:`5175`.)"
 msgstr "(Надано Марком Дікінсоном і Лісандро Далкріном; :issue:`5175`.)"
 
-#: ../../whatsnew/3.1.rst:504
+#: ../../whatsnew/3.1.rst:526
 msgid ""
 "Deprecated :c:func:`!PyNumber_Int`.  Use :c:func:`PyNumber_Long` instead."
 msgstr ""
 
-#: ../../whatsnew/3.1.rst:506
+#: ../../whatsnew/3.1.rst:528
 msgid "(Contributed by Mark Dickinson; :issue:`4910`.)"
 msgstr "(Надав Марк Дікінсон; :issue:`4910`.)"
 
-#: ../../whatsnew/3.1.rst:508
+#: ../../whatsnew/3.1.rst:530
 msgid ""
 "Added a new :c:func:`PyOS_string_to_double` function to replace the "
 "deprecated functions :c:func:`!PyOS_ascii_strtod` and "
 ":c:func:`!PyOS_ascii_atof`."
 msgstr ""
 
-#: ../../whatsnew/3.1.rst:511
+#: ../../whatsnew/3.1.rst:533
 msgid "(Contributed by Mark Dickinson; :issue:`5914`.)"
 msgstr "(Надав Марк Дікінсон; :issue:`5914`.)"
 
-#: ../../whatsnew/3.1.rst:513
+#: ../../whatsnew/3.1.rst:535
 msgid ""
 "Added :c:type:`PyCapsule` as a replacement for the :c:type:`!PyCObject` API."
 " The principal difference is that the new type has a well defined interface "
@@ -852,15 +863,15 @@ msgid ""
 "deprecated."
 msgstr ""
 
-#: ../../whatsnew/3.1.rst:519
+#: ../../whatsnew/3.1.rst:541
 msgid "(Contributed by Larry Hastings; :issue:`5630`.)"
 msgstr "(Надав Ларрі Гастінгс; :issue:`5630`.)"
 
-#: ../../whatsnew/3.1.rst:522
+#: ../../whatsnew/3.1.rst:544
 msgid "Porting to Python 3.1"
 msgstr "Перенесення на Python 3.1"
 
-#: ../../whatsnew/3.1.rst:524
+#: ../../whatsnew/3.1.rst:546
 msgid ""
 "This section lists previously described changes and other bugfixes that may "
 "require changes to your code:"
@@ -868,7 +879,7 @@ msgstr ""
 "У цьому розділі перераховані раніше описані зміни та інші виправлення "
 "помилок, які можуть потребувати змін у вашому коді:"
 
-#: ../../whatsnew/3.1.rst:527
+#: ../../whatsnew/3.1.rst:549
 msgid ""
 "The new floating point string representations can break existing doctests. "
 "For example::"
@@ -876,7 +887,7 @@ msgstr ""
 "Нові представлення рядків із плаваючою комою можуть порушити існуючі тести "
 "документів. Наприклад::"
 
-#: ../../whatsnew/3.1.rst:550
+#: ../../whatsnew/3.1.rst:572
 msgid ""
 "The automatic name remapping in the pickle module for protocol 2 or lower "
 "can make Python 3.1 pickles unreadable in Python 3.0.  One solution is to "
