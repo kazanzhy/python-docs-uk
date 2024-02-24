@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 14:13+0000\n"
+"POT-Creation-Date: 2024-02-23 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:53+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../howto/sorting.rst:4
-msgid "Sorting HOW TO"
-msgstr "Сортування ЯК"
+msgid "Sorting Techniques"
+msgstr ""
 
 #: ../../howto/sorting.rst:0
 msgid "Author"
@@ -33,15 +33,7 @@ msgstr "Автор"
 msgid "Andrew Dalke and Raymond Hettinger"
 msgstr "Andrew Dalke та Raymond Hettinger"
 
-#: ../../howto/sorting.rst:0
-msgid "Release"
-msgstr "Реліз"
-
-#: ../../howto/sorting.rst:7
-msgid "0.1"
-msgstr "0,1"
-
-#: ../../howto/sorting.rst:10
+#: ../../howto/sorting.rst:9
 msgid ""
 "Python lists have a built-in :meth:`list.sort` method that modifies the list"
 " in-place.  There is also a :func:`sorted` built-in function that builds a "
@@ -51,7 +43,7 @@ msgstr ""
 "на місці. Існує також вбудована функція :func:`sorted`, яка створює новий "
 "відсортований список із ітерованого."
 
-#: ../../howto/sorting.rst:14
+#: ../../howto/sorting.rst:13
 msgid ""
 "In this document, we explore the various techniques for sorting data using "
 "Python."
@@ -59,11 +51,11 @@ msgstr ""
 "У цьому документі ми досліджуємо різні техніки сортування даних за допомогою"
 " Python."
 
-#: ../../howto/sorting.rst:18
+#: ../../howto/sorting.rst:17
 msgid "Sorting Basics"
 msgstr "Основи сортування"
 
-#: ../../howto/sorting.rst:20
+#: ../../howto/sorting.rst:19
 msgid ""
 "A simple ascending sort is very easy: just call the :func:`sorted` function."
 " It returns a new sorted list:"
@@ -71,7 +63,7 @@ msgstr ""
 "Просте сортування за зростанням дуже просте: просто викличте функцію "
 ":func:`sorted`. Він повертає новий відсортований список:"
 
-#: ../../howto/sorting.rst:28
+#: ../../howto/sorting.rst:27
 msgid ""
 "You can also use the :meth:`list.sort` method. It modifies the list in-place"
 " (and returns ``None`` to avoid confusion). Usually it's less convenient "
@@ -83,7 +75,7 @@ msgstr ""
 "зручно, ніж :func:`sorted`, але якщо вам не потрібен оригінальний список, це"
 " трохи ефективніше."
 
-#: ../../howto/sorting.rst:40
+#: ../../howto/sorting.rst:39
 msgid ""
 "Another difference is that the :meth:`list.sort` method is only defined for "
 "lists. In contrast, the :func:`sorted` function accepts any iterable."
@@ -92,11 +84,11 @@ msgstr ""
 "лише для списків. На відміну від цього, функція :func:`sorted` приймає будь-"
 "яку ітерацію."
 
-#: ../../howto/sorting.rst:49
+#: ../../howto/sorting.rst:48
 msgid "Key Functions"
 msgstr "Ключові функції"
 
-#: ../../howto/sorting.rst:51
+#: ../../howto/sorting.rst:50
 msgid ""
 "Both :meth:`list.sort` and :func:`sorted` have a *key* parameter to specify "
 "a function (or other callable) to be called on each list element prior to "
@@ -106,11 +98,11 @@ msgstr ""
 "функції (або іншого виклику), яка буде викликана для кожного елемента списку"
 " перед проведенням порівнянь."
 
-#: ../../howto/sorting.rst:55
+#: ../../howto/sorting.rst:54
 msgid "For example, here's a case-insensitive string comparison:"
 msgstr "Наприклад, ось порівняння рядків без урахування регістру:"
 
-#: ../../howto/sorting.rst:62
+#: ../../howto/sorting.rst:61
 msgid ""
 "The value of the *key* parameter should be a function (or other callable) "
 "that takes a single argument and returns a key to use for sorting purposes. "
@@ -122,7 +114,7 @@ msgstr ""
 "сортування. Ця техніка є швидкою, оскільки ключова функція викликається "
 "рівно один раз для кожного вхідного запису."
 
-#: ../../howto/sorting.rst:67
+#: ../../howto/sorting.rst:66
 msgid ""
 "A common pattern is to sort complex objects using some of the object's "
 "indices as keys. For example:"
@@ -130,35 +122,38 @@ msgstr ""
 "Загальним шаблоном є сортування складних об’єктів за допомогою деяких "
 "індексів об’єктів як ключів. Наприклад:"
 
-#: ../../howto/sorting.rst:80
+#: ../../howto/sorting.rst:79
 msgid ""
 "The same technique works for objects with named attributes. For example:"
 msgstr ""
 "Така ж техніка працює для об’єктів з іменованими атрибутами. Наприклад:"
 
-#: ../../howto/sorting.rst:101
-msgid "Operator Module Functions"
-msgstr "Функції модуля оператора"
-
-#: ../../howto/sorting.rst:103
+#: ../../howto/sorting.rst:99
 msgid ""
-"The key-function patterns shown above are very common, so Python provides "
-"convenience functions to make accessor functions easier and faster. The "
-":mod:`operator` module has :func:`~operator.itemgetter`, "
+"Objects with named attributes can be made by a regular class as shown above,"
+" or they can be instances of :class:`~dataclasses.dataclass` or a "
+":term:`named tuple`."
+msgstr ""
+
+#: ../../howto/sorting.rst:104
+msgid "Operator Module Functions and Partial Function Evaluation"
+msgstr ""
+
+#: ../../howto/sorting.rst:106
+msgid ""
+"The :term:`key function` patterns shown above are very common, so Python "
+"provides convenience functions to make accessor functions easier and faster."
+" The :mod:`operator` module has :func:`~operator.itemgetter`, "
 ":func:`~operator.attrgetter`, and a :func:`~operator.methodcaller` function."
 msgstr ""
-"Наведені вище шаблони клавіш-функцій дуже поширені, тому Python надає зручні"
-" функції, щоб зробити функції доступу простішими та швидшими. Модуль "
-":mod:`operator` має :func:`~operator.itemgetter`, "
-":func:`~operator.attrgetter` і функцію :func:`~operator.methodcaller`."
 
-#: ../../howto/sorting.rst:108
+#: ../../howto/sorting.rst:111
 msgid "Using those functions, the above examples become simpler and faster:"
 msgstr ""
 "Використовуючи ці функції, наведені вище приклади стають простішими та "
 "швидшими:"
 
-#: ../../howto/sorting.rst:120
+#: ../../howto/sorting.rst:123
 msgid ""
 "The operator module functions allow multiple levels of sorting. For example,"
 " to sort by *grade* then by *age*:"
@@ -166,11 +161,19 @@ msgstr ""
 "Функції модуля оператора дозволяють сортувати кілька рівнів. Наприклад, щоб "
 "відсортувати за *класом*, а потім за *віком*:"
 
-#: ../../howto/sorting.rst:132
+#: ../../howto/sorting.rst:134
+msgid ""
+"The :mod:`functools` module provides another helpful tool for making key-"
+"functions.  The :func:`~functools.partial` function can reduce the `arity "
+"<https://en.wikipedia.org/wiki/Arity>`_ of a multi-argument function making "
+"it suitable for use as a key-function."
+msgstr ""
+
+#: ../../howto/sorting.rst:153
 msgid "Ascending and Descending"
 msgstr "Висхідний і спадний"
 
-#: ../../howto/sorting.rst:134
+#: ../../howto/sorting.rst:155
 msgid ""
 "Both :meth:`list.sort` and :func:`sorted` accept a *reverse* parameter with "
 "a boolean value. This is used to flag descending sorts. For example, to get "
@@ -181,11 +184,11 @@ msgstr ""
 "спаданням. Наприклад, щоб отримати дані про студентів у зворотному порядку "
 "*віку*:"
 
-#: ../../howto/sorting.rst:147
+#: ../../howto/sorting.rst:168
 msgid "Sort Stability and Complex Sorts"
 msgstr "Стійкість сортування та складні сорти"
 
-#: ../../howto/sorting.rst:149
+#: ../../howto/sorting.rst:170
 msgid ""
 "Sorts are guaranteed to be `stable "
 "<https://en.wikipedia.org/wiki/Sorting_algorithm#Stability>`_\\. That means "
@@ -197,7 +200,7 @@ msgstr ""
 " що коли кілька записів мають однаковий ключ, їхній початковий порядок "
 "зберігається."
 
-#: ../../howto/sorting.rst:159
+#: ../../howto/sorting.rst:180
 msgid ""
 "Notice how the two records for *blue* retain their original order so that "
 "``('blue', 1)`` is guaranteed to precede ``('blue', 2)``."
@@ -205,7 +208,7 @@ msgstr ""
 "Зверніть увагу, як два записи для *blue* зберігають свій початковий порядок,"
 " тому ``('blue', 1)`` гарантовано передує ``('blue', 2)``."
 
-#: ../../howto/sorting.rst:162
+#: ../../howto/sorting.rst:183
 msgid ""
 "This wonderful property lets you build complex sorts in a series of sorting "
 "steps. For example, to sort the student data by descending *grade* and then "
@@ -216,7 +219,7 @@ msgstr ""
 "зменшенням *оцінки*, а потім за зростанням *віку*, спочатку виконайте "
 "сортування за *віком*, а потім знову за допомогою *оцінки*:"
 
-#: ../../howto/sorting.rst:172
+#: ../../howto/sorting.rst:193
 msgid ""
 "This can be abstracted out into a wrapper function that can take a list and "
 "tuples of field and order to sort them on multiple passes."
@@ -224,7 +227,7 @@ msgstr ""
 "Це можна абстрагувати у функцію-обгортку, яка може брати список і кортежі "
 "полів і впорядковувати їх, щоб сортувати їх за кілька проходів."
 
-#: ../../howto/sorting.rst:185
+#: ../../howto/sorting.rst:206
 msgid ""
 "The `Timsort <https://en.wikipedia.org/wiki/Timsort>`_ algorithm used in "
 "Python does multiple sorts efficiently because it can take advantage of any "
@@ -235,15 +238,15 @@ msgstr ""
 "оскільки він може використовувати будь-яке впорядкування, яке вже є в наборі"
 " даних."
 
-#: ../../howto/sorting.rst:190
+#: ../../howto/sorting.rst:211
 msgid "Decorate-Sort-Undecorate"
 msgstr ""
 
-#: ../../howto/sorting.rst:192
+#: ../../howto/sorting.rst:213
 msgid "This idiom is called Decorate-Sort-Undecorate after its three steps:"
 msgstr "Ця ідіома називається Decorate-Sort-Undecorate після трьох кроків:"
 
-#: ../../howto/sorting.rst:194
+#: ../../howto/sorting.rst:215
 msgid ""
 "First, the initial list is decorated with new values that control the sort "
 "order."
@@ -251,11 +254,11 @@ msgstr ""
 "По-перше, початковий список прикрашається новими значеннями, які контролюють"
 " порядок сортування."
 
-#: ../../howto/sorting.rst:196
+#: ../../howto/sorting.rst:217
 msgid "Second, the decorated list is sorted."
 msgstr "По-друге, оформлений список сортується."
 
-#: ../../howto/sorting.rst:198
+#: ../../howto/sorting.rst:219
 msgid ""
 "Finally, the decorations are removed, creating a list that contains only the"
 " initial values in the new order."
@@ -263,14 +266,14 @@ msgstr ""
 "Нарешті, декорації видаляються, створюючи список, який містить лише "
 "початкові значення в новому порядку."
 
-#: ../../howto/sorting.rst:201
+#: ../../howto/sorting.rst:222
 msgid ""
 "For example, to sort the student data by *grade* using the DSU approach:"
 msgstr ""
 "Наприклад, щоб відсортувати дані студента за *класом* за допомогою підходу "
 "DSU:"
 
-#: ../../howto/sorting.rst:208
+#: ../../howto/sorting.rst:231
 msgid ""
 "This idiom works because tuples are compared lexicographically; the first "
 "items are compared; if they are the same then the second items are compared,"
@@ -280,7 +283,7 @@ msgstr ""
 " перші предмети; якщо вони однакові, то порівнюються другі елементи і так "
 "далі."
 
-#: ../../howto/sorting.rst:212
+#: ../../howto/sorting.rst:235
 msgid ""
 "It is not strictly necessary in all cases to include the index *i* in the "
 "decorated list, but including it gives two benefits:"
@@ -288,7 +291,7 @@ msgstr ""
 "Не обов’язково в усіх випадках включати індекс *i* в оформлений список, але "
 "це дає дві переваги:"
 
-#: ../../howto/sorting.rst:215
+#: ../../howto/sorting.rst:238
 msgid ""
 "The sort is stable -- if two items have the same key, their order will be "
 "preserved in the sorted list."
@@ -296,7 +299,7 @@ msgstr ""
 "Сортування є стабільним — якщо два елементи мають однаковий ключ, їхній "
 "порядок буде збережено у відсортованому списку."
 
-#: ../../howto/sorting.rst:218
+#: ../../howto/sorting.rst:241
 msgid ""
 "The original items do not have to be comparable because the ordering of the "
 "decorated tuples will be determined by at most the first two items. So for "
@@ -308,7 +311,7 @@ msgstr ""
 "Так, наприклад, вихідний список може містити комплексні числа, які неможливо"
 " відсортувати безпосередньо."
 
-#: ../../howto/sorting.rst:223
+#: ../../howto/sorting.rst:246
 msgid ""
 "Another name for this idiom is `Schwartzian transform "
 "<https://en.wikipedia.org/wiki/Schwartzian_transform>`_\\, after Randal L. "
@@ -318,7 +321,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Schwartzian_transform>`_\\, на честь Рендала "
 "Л. Шварца, який популяризував її серед програмістів на Perl."
 
-#: ../../howto/sorting.rst:227
+#: ../../howto/sorting.rst:250
 msgid ""
 "Now that Python sorting provides key-functions, this technique is not often "
 "needed."
@@ -326,17 +329,17 @@ msgstr ""
 "Тепер, коли сортування Python надає ключові функції, ця техніка не часто "
 "потрібна."
 
-#: ../../howto/sorting.rst:230
+#: ../../howto/sorting.rst:253
 msgid "Comparison Functions"
 msgstr ""
 
-#: ../../howto/sorting.rst:232
+#: ../../howto/sorting.rst:255
 msgid ""
 "Unlike key functions that return an absolute value for sorting, a comparison"
 " function computes the relative ordering for two inputs."
 msgstr ""
 
-#: ../../howto/sorting.rst:235
+#: ../../howto/sorting.rst:258
 msgid ""
 "For example, a `balance scale "
 "<https://upload.wikimedia.org/wikipedia/commons/1/17/Balance_à_tabac_1850.JPG>`_"
@@ -346,7 +349,7 @@ msgid ""
 "value for greater-than."
 msgstr ""
 
-#: ../../howto/sorting.rst:242
+#: ../../howto/sorting.rst:265
 msgid ""
 "It is common to encounter comparison functions when translating algorithms "
 "from other languages.  Also, some libraries provide comparison functions as "
@@ -354,18 +357,18 @@ msgid ""
 "function."
 msgstr ""
 
-#: ../../howto/sorting.rst:246
+#: ../../howto/sorting.rst:269
 msgid ""
 "To accommodate those situations, Python provides "
 ":class:`functools.cmp_to_key` to wrap the comparison function to make it "
 "usable as a key function::"
 msgstr ""
 
-#: ../../howto/sorting.rst:253
+#: ../../howto/sorting.rst:276
 msgid "Odds and Ends"
 msgstr "Обривки"
 
-#: ../../howto/sorting.rst:255
+#: ../../howto/sorting.rst:278
 msgid ""
 "For locale aware sorting, use :func:`locale.strxfrm` for a key function or "
 ":func:`locale.strcoll` for a comparison function.  This is necessary because"
@@ -373,7 +376,7 @@ msgid ""
 "underlying alphabet is the same."
 msgstr ""
 
-#: ../../howto/sorting.rst:260
+#: ../../howto/sorting.rst:283
 msgid ""
 "The *reverse* parameter still maintains sort stability (so that records with"
 " equal keys retain the original order). Interestingly, that effect can be "
@@ -385,20 +388,24 @@ msgstr ""
 "моделювати без параметра, використовуючи двічі вбудовану функцію "
 ":func:`reversed`:"
 
-#: ../../howto/sorting.rst:274
+#: ../../howto/sorting.rst:297
 msgid ""
 "The sort routines use ``<`` when making comparisons between two objects. So,"
 " it is easy to add a standard sort order to a class by defining an "
 ":meth:`~object.__lt__` method:"
 msgstr ""
 
-#: ../../howto/sorting.rst:284
+#: ../../howto/sorting.rst:307
 msgid ""
 "However, note that ``<`` can fall back to using :meth:`~object.__gt__` if "
-":meth:`~object.__lt__` is not implemented (see :func:`object.__lt__`)."
+":meth:`~object.__lt__` is not implemented (see :func:`object.__lt__` for "
+"details on the mechanics).  To avoid surprises, :pep:`8` recommends that all"
+" six comparison methods be implemented. The "
+":func:`~functools.total_ordering` decorator is provided to make that task "
+"easier."
 msgstr ""
 
-#: ../../howto/sorting.rst:287
+#: ../../howto/sorting.rst:314
 msgid ""
 "Key functions need not depend directly on the objects being sorted. A key "
 "function can also access external resources. For instance, if the student "
@@ -409,3 +416,37 @@ msgstr ""
 "сортуються. Ключова функція також може отримувати доступ до зовнішніх "
 "ресурсів. Наприклад, якщо оцінки студентів зберігаються в словнику, їх можна"
 " використовувати для сортування окремого списку імен студентів:"
+
+#: ../../howto/sorting.rst:327
+msgid "Partial Sorts"
+msgstr ""
+
+#: ../../howto/sorting.rst:329
+msgid ""
+"Some applications require only some of the data to be ordered.  The standard"
+" library provides several tools that do less work than a full sort:"
+msgstr ""
+
+#: ../../howto/sorting.rst:332
+msgid ""
+":func:`min` and :func:`max` return the smallest and largest values, "
+"respectively.  These functions make a single pass over the input data and "
+"require almost no auxiliary memory."
+msgstr ""
+
+#: ../../howto/sorting.rst:336
+msgid ""
+":func:`heapq.nsmallest` and :func:`heapq.nlargest` return the *n* smallest "
+"and largest values, respectively.  These functions make a single pass over "
+"the data keeping only *n* elements in memory at a time.  For values of *n* "
+"that are small relative to the number of inputs, these functions make far "
+"fewer comparisons than a full sort."
+msgstr ""
+
+#: ../../howto/sorting.rst:342
+msgid ""
+":func:`heapq.heappush` and :func:`heapq.heappop` create and maintain a "
+"partially sorted arrangement of data that keeps the smallest element at "
+"position ``0``.  These functions are suitable for implementing priority "
+"queues which are commonly used for task scheduling."
+msgstr ""
