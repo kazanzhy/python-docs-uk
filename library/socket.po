@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-09 14:13+0000\n"
+"POT-Creation-Date: 2024-02-23 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -137,7 +137,7 @@ msgstr ""
 "кодування UTF-8."
 
 #: ../../library/socket.rst:66 ../../library/socket.rst:1148
-#: ../../library/socket.rst:1190 ../../library/socket.rst:1949
+#: ../../library/socket.rst:1190 ../../library/socket.rst:1950
 msgid "Writable :term:`bytes-like object` is now accepted."
 msgstr "Записуваний :term:`bytes-like object` тепер приймається."
 
@@ -378,7 +378,7 @@ msgid "*feat* and *mask* are unsigned 32bit integers."
 msgstr "*feat* і *mask* — це 32-розрядні цілі числа без знаку."
 
 #: ../../library/socket.rst:171 ../../library/socket.rst:589
-#: ../../library/socket.rst:1871
+#: ../../library/socket.rst:1872
 msgid ":ref:`Availability <availability>`: Linux >= 2.6.38."
 msgstr ":ref:`Доступність <availability>`: Linux >= 2.6.38."
 
@@ -1021,7 +1021,7 @@ msgid "Constants for Windows Hyper-V sockets for host/guest communications."
 msgstr ""
 
 #: ../../library/socket.rst:679 ../../library/socket.rst:886
-#: ../../library/socket.rst:1977
+#: ../../library/socket.rst:1978
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ":ref:`Наявність <availability>`: Windows."
 
@@ -1468,7 +1468,7 @@ msgstr ""
 #: ../../library/socket.rst:1400 ../../library/socket.rst:1447
 #: ../../library/socket.rst:1461 ../../library/socket.rst:1481
 #: ../../library/socket.rst:1528 ../../library/socket.rst:1573
-#: ../../library/socket.rst:1955 ../../library/socket.rst:1965
+#: ../../library/socket.rst:1956 ../../library/socket.rst:1966
 msgid ":ref:`Availability <availability>`: not WASI."
 msgstr ""
 
@@ -1785,8 +1785,8 @@ msgstr ""
 msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
 msgstr ""
 
-#: ../../library/socket.rst:1213 ../../library/socket.rst:1703
-#: ../../library/socket.rst:1747 ../../library/socket.rst:1855
+#: ../../library/socket.rst:1213 ../../library/socket.rst:1704
+#: ../../library/socket.rst:1748 ../../library/socket.rst:1856
 msgid "Most Unix platforms."
 msgstr ""
 
@@ -1862,8 +1862,8 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``socket.sethostname`` з аргументом "
 "``name``."
 
-#: ../../library/socket.rst:1263 ../../library/socket.rst:1701
-#: ../../library/socket.rst:1745
+#: ../../library/socket.rst:1263 ../../library/socket.rst:1702
+#: ../../library/socket.rst:1746
 msgid ":ref:`Availability <availability>`: Unix."
 msgstr ":ref:`Наявність <availability>`: Unix."
 
@@ -2002,10 +2002,10 @@ msgstr ""
 msgid "The socket is now non-inheritable."
 msgstr "Тепер сокет не успадковується."
 
-#: ../../library/socket.rst:1387 ../../library/socket.rst:1616
-#: ../../library/socket.rst:1630 ../../library/socket.rst:1707
-#: ../../library/socket.rst:1780 ../../library/socket.rst:1799
-#: ../../library/socket.rst:1816 ../../library/socket.rst:1861
+#: ../../library/socket.rst:1387 ../../library/socket.rst:1617
+#: ../../library/socket.rst:1631 ../../library/socket.rst:1708
+#: ../../library/socket.rst:1781 ../../library/socket.rst:1800
+#: ../../library/socket.rst:1817 ../../library/socket.rst:1862
 msgid ""
 "If the system call is interrupted and the signal handler does not raise an "
 "exception, the method now retries the system call instead of raising an "
@@ -2334,17 +2334,13 @@ msgstr ""
 msgid ""
 "Receive data from the socket.  The return value is a bytes object "
 "representing the data received.  The maximum amount of data to be received "
-"at once is specified by *bufsize*.  See the Unix manual page "
+"at once is specified by *bufsize*. A returned empty bytes object indicates "
+"that the client has disconnected. See the Unix manual page "
 ":manpage:`recv(2)` for the meaning of the optional argument *flags*; it "
 "defaults to zero."
 msgstr ""
-"Отримувати дані з розетки. Повернене значення — це об’єкт байтів, що "
-"представляє отримані дані. Максимальний обсяг даних, які потрібно отримати "
-"одночасно, визначається *bufsize*. Перегляньте сторінку посібника Unix "
-":manpage:`recv(2)` для визначення значення необов’язкового аргументу "
-"*flags*; за замовчуванням він дорівнює нулю."
 
-#: ../../library/socket.rst:1613
+#: ../../library/socket.rst:1614
 msgid ""
 "For best match with hardware and network realities, the value of  *bufsize* "
 "should be a relatively small power of 2, for example, 4096."
@@ -2352,7 +2348,7 @@ msgstr ""
 "Для найкращої відповідності апаратному забезпеченню та мережевим реаліям "
 "значення *bufsize* має бути відносно малим ступенем 2, наприклад, 4096."
 
-#: ../../library/socket.rst:1624
+#: ../../library/socket.rst:1625
 msgid ""
 "Receive data from the socket.  The return value is a pair ``(bytes, "
 "address)`` where *bytes* is a bytes object representing the data received "
@@ -2368,7 +2364,7 @@ msgstr ""
 "*flags*; за замовчуванням він дорівнює нулю. (Формат *адреси* залежить від "
 "групи адрес --- див. вище.)"
 
-#: ../../library/socket.rst:1635
+#: ../../library/socket.rst:1636
 msgid ""
 "For multicast IPv6 address, first item of *address* does not contain "
 "``%scope_id`` part anymore. In order to get full IPv6 address use "
@@ -2378,7 +2374,7 @@ msgstr ""
 "частини ``%scope_id``. Щоб отримати повну адресу IPv6, використовуйте "
 ":func:`getnameinfo`."
 
-#: ../../library/socket.rst:1642
+#: ../../library/socket.rst:1643
 msgid ""
 "Receive normal data (up to *bufsize* bytes) and ancillary data from the "
 "socket.  The *ancbufsize* argument sets the size in bytes of the internal "
@@ -2398,7 +2394,7 @@ msgstr ""
 "буфер, можуть бути скорочені або відкинуті. Аргумент *flags* за умовчанням "
 "дорівнює 0 і має те саме значення, що й для :meth:`recv`."
 
-#: ../../library/socket.rst:1652
+#: ../../library/socket.rst:1653
 msgid ""
 "The return value is a 4-tuple: ``(data, ancdata, msg_flags, address)``.  The"
 " *data* item is a :class:`bytes` object holding the non-ancillary data "
@@ -2424,7 +2420,7 @@ msgstr ""
 "сокет-одержувач не підключений, *адреса* є адресою сокета-відправника, якщо "
 "він доступний; інакше його значення не вказано."
 
-#: ../../library/socket.rst:1666
+#: ../../library/socket.rst:1667
 msgid ""
 "On some systems, :meth:`sendmsg` and :meth:`recvmsg` can be used to pass "
 "file descriptors between processes over an :const:`AF_UNIX` socket.  When "
@@ -2437,7 +2433,7 @@ msgid ""
 "file descriptors received via this mechanism."
 msgstr ""
 
-#: ../../library/socket.rst:1677
+#: ../../library/socket.rst:1678
 msgid ""
 "Some systems do not indicate the truncated length of ancillary data items "
 "which have been only partially received.  If an item appears to extend "
@@ -2452,7 +2448,7 @@ msgstr ""
 "знаходиться всередині буфера, за умови, що вона не була скорочена до початку"
 " своїх пов’язаних даних."
 
-#: ../../library/socket.rst:1684
+#: ../../library/socket.rst:1685
 msgid ""
 "On systems which support the :const:`SCM_RIGHTS` mechanism, the following "
 "function will receive up to *maxfds* file descriptors, returning the message"
@@ -2466,7 +2462,7 @@ msgstr ""
 "отримання непов’язаних керуючих повідомлень). Дивіться також "
 ":meth:`sendmsg`. ::"
 
-#: ../../library/socket.rst:1715
+#: ../../library/socket.rst:1716
 msgid ""
 "Receive normal data and ancillary data from the socket, behaving as "
 ":meth:`recvmsg` would, but scatter the non-ancillary data into a series of "
@@ -2489,7 +2485,7 @@ msgstr ""
 "Аргументи *ancbufsize* і *flags* мають те саме значення, що й для "
 ":meth:`recvmsg`."
 
-#: ../../library/socket.rst:1726
+#: ../../library/socket.rst:1727
 msgid ""
 "The return value is a 4-tuple: ``(nbytes, ancdata, msg_flags, address)``, "
 "where *nbytes* is the total number of bytes of non-ancillary data written "
@@ -2501,11 +2497,11 @@ msgstr ""
 "буфери, а *ancdata*, *msg_flags* і *адреса* такі самі, як і для "
 ":meth:`recvmsg`."
 
-#: ../../library/socket.rst:1731
+#: ../../library/socket.rst:1732
 msgid "Example::"
 msgstr "Приклад::"
 
-#: ../../library/socket.rst:1754
+#: ../../library/socket.rst:1755
 msgid ""
 "Receive data from the socket, writing it into *buffer* instead of creating a"
 " new bytestring.  The return value is a pair ``(nbytes, address)`` where "
@@ -2521,7 +2517,7 @@ msgstr ""
 "для визначення значення необов’язкового аргументу *flags*; за замовчуванням "
 "він дорівнює нулю. (Формат *адреси* залежить від групи адрес --- див. вище.)"
 
-#: ../../library/socket.rst:1764
+#: ../../library/socket.rst:1765
 msgid ""
 "Receive up to *nbytes* bytes from the socket, storing the data into a buffer"
 " rather than creating a new bytestring.  If *nbytes* is not specified (or "
@@ -2536,7 +2532,7 @@ msgstr ""
 "значення необов’язкового аргументу *flags*; за замовчуванням він дорівнює "
 "нулю."
 
-#: ../../library/socket.rst:1773
+#: ../../library/socket.rst:1774
 msgid ""
 "Send data to the socket.  The socket must be connected to a remote socket.  "
 "The optional *flags* argument has the same meaning as for :meth:`recv` "
@@ -2554,7 +2550,7 @@ msgstr ""
 "даних. Для отримання додаткової інформації з цієї теми зверніться до "
 ":ref:`socket-howto`."
 
-#: ../../library/socket.rst:1788
+#: ../../library/socket.rst:1789
 msgid ""
 "Send data to the socket.  The socket must be connected to a remote socket.  "
 "The optional *flags* argument has the same meaning as for :meth:`recv` "
@@ -2571,13 +2567,13 @@ msgstr ""
 "виняток, і немає способу визначити, скільки даних було успішно надіслано, "
 "якщо такі були."
 
-#: ../../library/socket.rst:1795
+#: ../../library/socket.rst:1796
 msgid ""
 "The socket timeout is no longer reset each time data is sent successfully. "
 "The socket timeout is now the maximum total duration to send all data."
 msgstr ""
 
-#: ../../library/socket.rst:1808
+#: ../../library/socket.rst:1809
 msgid ""
 "Send data to the socket.  The socket should not be connected to a remote "
 "socket, since the destination socket is specified by *address*.  The "
@@ -2591,7 +2587,7 @@ msgstr ""
 " надісланих байтів. (Формат *адреси* залежить від групи адрес --- див. "
 "вище.)"
 
-#: ../../library/socket.rst:1825
+#: ../../library/socket.rst:1826
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``socket.sendto`` with arguments "
 "``self``, ``address``."
@@ -2599,7 +2595,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``socket.sendto`` з аргументами "
 "``self``, ``address``."
 
-#: ../../library/socket.rst:1824
+#: ../../library/socket.rst:1825
 msgid ""
 "Send normal and ancillary data to the socket, gathering the non-ancillary "
 "data from a series of buffers and concatenating it into a single message.  "
@@ -2635,7 +2631,7 @@ msgstr ""
 " це встановлює адресу призначення для повідомлення. Повернене значення — це "
 "кількість байтів надісланих непоміжних даних."
 
-#: ../../library/socket.rst:1844
+#: ../../library/socket.rst:1845
 msgid ""
 "The following function sends the list of file descriptors *fds* over an "
 ":const:`AF_UNIX` socket, on systems which support the :const:`SCM_RIGHTS` "
@@ -2645,11 +2641,11 @@ msgstr ""
 ":const:`AF_UNIX` у системах, які підтримують механізм :const:`SCM_RIGHTS`. "
 "Дивіться також :meth:`recvmsg`. ::"
 
-#: ../../library/socket.rst:1853
+#: ../../library/socket.rst:1854
 msgid ":ref:`Availability <availability>`: Unix, not WASI."
 msgstr ""
 
-#: ../../library/socket.rst:1868
+#: ../../library/socket.rst:1869
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``socket.sendmsg`` with arguments"
 " ``self``, ``address``."
@@ -2657,7 +2653,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``socket.sendmsg`` з аргументами "
 "``self``, ``address``."
 
-#: ../../library/socket.rst:1868
+#: ../../library/socket.rst:1869
 msgid ""
 "Specialized version of :meth:`~socket.sendmsg` for :const:`AF_ALG` socket. "
 "Set mode, IV, AEAD associated data length and flags for :const:`AF_ALG` "
@@ -2667,7 +2663,7 @@ msgstr ""
 "Установіть довжину пов’язаних даних режиму, IV, AEAD і прапорці для сокета "
 ":const:`AF_ALG`."
 
-#: ../../library/socket.rst:1877
+#: ../../library/socket.rst:1878
 msgid ""
 "Send a file until EOF is reached by using high-performance "
 ":mod:`os.sendfile` and return the total number of bytes which were sent. "
@@ -2693,7 +2689,7 @@ msgstr ""
 "визначення кількості надісланих байтів. Сокет має бути типу "
 ":const:`SOCK_STREAM`. Неблокуючі сокети не підтримуються."
 
-#: ../../library/socket.rst:1893
+#: ../../library/socket.rst:1894
 msgid ""
 "Set the :ref:`inheritable flag <fd_inheritance>` of the socket's file "
 "descriptor or socket's handle."
@@ -2701,7 +2697,7 @@ msgstr ""
 "Установіть :ref:`inheritable flag <fd_inheritance>` дескриптора файлу сокета"
 " або дескриптора сокета."
 
-#: ../../library/socket.rst:1901
+#: ../../library/socket.rst:1902
 msgid ""
 "Set blocking or non-blocking mode of the socket: if *flag* is false, the "
 "socket is set to non-blocking, else to blocking mode."
@@ -2709,20 +2705,20 @@ msgstr ""
 "Встановіть блокуючий або неблокуючий режим сокета: якщо *flag* має значення "
 "false, сокет встановлено в неблокуючий режим, інакше в режим блокування."
 
-#: ../../library/socket.rst:1904
+#: ../../library/socket.rst:1905
 msgid ""
 "This method is a shorthand for certain :meth:`~socket.settimeout` calls:"
 msgstr "Цей метод є скороченням певних викликів :meth:`~socket.settimeout`:"
 
-#: ../../library/socket.rst:1906
+#: ../../library/socket.rst:1907
 msgid "``sock.setblocking(True)`` is equivalent to ``sock.settimeout(None)``"
 msgstr "``sock.setblocking(True)`` еквівалентно ``sock.settimeout(None)``"
 
-#: ../../library/socket.rst:1908
+#: ../../library/socket.rst:1909
 msgid "``sock.setblocking(False)`` is equivalent to ``sock.settimeout(0.0)``"
 msgstr "``sock.setblocking(False)`` еквівалентний ``sock.settimeout(0.0)``"
 
-#: ../../library/socket.rst:1910
+#: ../../library/socket.rst:1911
 msgid ""
 "The method no longer applies :const:`SOCK_NONBLOCK` flag on "
 ":attr:`socket.type`."
@@ -2730,7 +2726,7 @@ msgstr ""
 "Метод більше не застосовує прапор :const:`SOCK_NONBLOCK` до "
 ":attr:`socket.type`."
 
-#: ../../library/socket.rst:1917
+#: ../../library/socket.rst:1918
 msgid ""
 "Set a timeout on blocking socket operations.  The *value* argument can be a "
 "nonnegative floating point number expressing seconds, or ``None``. If a non-"
@@ -2746,7 +2742,7 @@ msgstr ""
 "завершення операції. Якщо вказано нуль, сокет переходить у неблокуючий "
 "режим. Якщо задано ``None``, сокет переходить у режим блокування."
 
-#: ../../library/socket.rst:1924
+#: ../../library/socket.rst:1925
 msgid ""
 "For further information, please consult the :ref:`notes on socket timeouts "
 "<socket-timeouts>`."
@@ -2754,14 +2750,14 @@ msgstr ""
 "Щоб отримати додаткову інформацію, зверніться до :ref:`приміток щодо тайм-"
 "аутів сокетів <socket-timeouts>`."
 
-#: ../../library/socket.rst:1926
+#: ../../library/socket.rst:1927
 msgid ""
 "The method no longer toggles :const:`SOCK_NONBLOCK` flag on "
 ":attr:`socket.type`."
 msgstr ""
 "Метод більше не вмикає прапор :const:`SOCK_NONBLOCK` на :attr:`socket.type`."
 
-#: ../../library/socket.rst:1939
+#: ../../library/socket.rst:1940
 msgid ""
 "Set the value of the given socket option (see the Unix manual page "
 ":manpage:`setsockopt(2)`).  The needed symbolic constants are defined in "
@@ -2774,11 +2770,11 @@ msgid ""
 ":c:func:`setsockopt` C function with ``optval=NULL`` and ``optlen=optlen``."
 msgstr ""
 
-#: ../../library/socket.rst:1952
+#: ../../library/socket.rst:1953
 msgid "setsockopt(level, optname, None, optlen: int) form added."
 msgstr "Додано форму setsockopt(level, optname, None, optlen: int)."
 
-#: ../../library/socket.rst:1960
+#: ../../library/socket.rst:1961
 msgid ""
 "Shut down one or both halves of the connection.  If *how* is "
 ":const:`SHUT_RD`, further receives are disallowed.  If *how* is "
@@ -2790,7 +2786,7 @@ msgstr ""
 "надсилання заборонені. Якщо *how* :const:`SHUT_RDWR`, подальше надсилання та"
 " отримання заборонено."
 
-#: ../../library/socket.rst:1970
+#: ../../library/socket.rst:1971
 msgid ""
 "Duplicate a socket and prepare it for sharing with a target process.  The "
 "target process must be provided with *process_id*.  The resulting bytes "
@@ -2807,7 +2803,7 @@ msgstr ""
 ":func:`fromshare`. Після виклику цього методу можна безпечно закрити сокет, "
 "оскільки операційна система вже скопіювала його для цільового процесу."
 
-#: ../../library/socket.rst:1982
+#: ../../library/socket.rst:1983
 msgid ""
 "Note that there are no methods :meth:`read` or :meth:`write`; use "
 ":meth:`~socket.recv` and :meth:`~socket.send` without *flags* argument "
@@ -2817,7 +2813,7 @@ msgstr ""
 "цього використовуйте :meth:`~socket.recv` і :meth:`~socket.send` без "
 "аргументу *flags*."
 
-#: ../../library/socket.rst:1985
+#: ../../library/socket.rst:1986
 msgid ""
 "Socket objects also have these (read-only) attributes that correspond to the"
 " values given to the :class:`~socket.socket` constructor."
@@ -2825,23 +2821,23 @@ msgstr ""
 "Об’єкти Socket також мають ці атрибути (лише для читання), які відповідають "
 "значенням, наданим конструктору :class:`~socket.socket`."
 
-#: ../../library/socket.rst:1991
+#: ../../library/socket.rst:1992
 msgid "The socket family."
 msgstr "Сімейство розеток."
 
-#: ../../library/socket.rst:1996
+#: ../../library/socket.rst:1997
 msgid "The socket type."
 msgstr "Тип розетки."
 
-#: ../../library/socket.rst:2001
+#: ../../library/socket.rst:2002
 msgid "The socket protocol."
 msgstr "Протокол сокета."
 
-#: ../../library/socket.rst:2008
+#: ../../library/socket.rst:2009
 msgid "Notes on socket timeouts"
 msgstr "Примітки щодо тайм-аутів сокетів"
 
-#: ../../library/socket.rst:2010
+#: ../../library/socket.rst:2011
 msgid ""
 "A socket object can be in one of three modes: blocking, non-blocking, or "
 "timeout.  Sockets are by default always created in blocking mode, but this "
@@ -2851,7 +2847,7 @@ msgstr ""
 "або час очікування. За умовчанням сокети завжди створюються в режимі "
 "блокування, але це можна змінити, викликавши :func:`setdefaulttimeout`."
 
-#: ../../library/socket.rst:2014
+#: ../../library/socket.rst:2015
 msgid ""
 "In *blocking mode*, operations block until complete or the system returns an"
 " error (such as connection timed out)."
@@ -2860,7 +2856,7 @@ msgstr ""
 "поверне повідомлення про помилку (наприклад, час очікування підключення "
 "закінчився)."
 
-#: ../../library/socket.rst:2017
+#: ../../library/socket.rst:2018
 msgid ""
 "In *non-blocking mode*, operations fail (with an error that is unfortunately"
 " system-dependent) if they cannot be completed immediately: functions from "
@@ -2868,7 +2864,7 @@ msgid ""
 "available for reading or writing."
 msgstr ""
 
-#: ../../library/socket.rst:2022
+#: ../../library/socket.rst:2023
 msgid ""
 "In *timeout mode*, operations fail if they cannot be completed within the "
 "timeout specified for the socket (they raise a :exc:`timeout` exception) or "
@@ -2878,7 +2874,7 @@ msgstr ""
 "завершити протягом тайм-ауту, указаного для сокета (вони викликають виняток "
 ":exc:`timeout`) або якщо система повертає помилку."
 
-#: ../../library/socket.rst:2027
+#: ../../library/socket.rst:2028
 msgid ""
 "At the operating system level, sockets in *timeout mode* are internally set "
 "in non-blocking mode.  Also, the blocking and timeout modes are shared "
@@ -2893,11 +2889,11 @@ msgstr ""
 "мати видимі наслідки, якщо, напр. ви вирішили використовувати "
 ":meth:`~socket.fileno()` сокета."
 
-#: ../../library/socket.rst:2034
+#: ../../library/socket.rst:2035
 msgid "Timeouts and the ``connect`` method"
 msgstr "Час очікування та метод ``connect``"
 
-#: ../../library/socket.rst:2036
+#: ../../library/socket.rst:2037
 msgid ""
 "The :meth:`~socket.connect` operation is also subject to the timeout "
 "setting, and in general it is recommended to call :meth:`~socket.settimeout`"
@@ -2913,11 +2909,11 @@ msgstr ""
 "повертати власну помилку очікування підключення незалежно від будь-якого "
 "параметра часу очікування сокета Python."
 
-#: ../../library/socket.rst:2044
+#: ../../library/socket.rst:2045
 msgid "Timeouts and the ``accept`` method"
 msgstr "Час очікування та метод ``accept``"
 
-#: ../../library/socket.rst:2046
+#: ../../library/socket.rst:2047
 msgid ""
 "If :func:`getdefaulttimeout` is not :const:`None`, sockets returned by the "
 ":meth:`~socket.accept` method inherit that timeout.  Otherwise, the "
@@ -2927,7 +2923,7 @@ msgstr ""
 ":meth:`~socket.accept`, успадковують цей час очікування. В іншому випадку "
 "поведінка залежить від налаштувань прослуховувального сокета:"
 
-#: ../../library/socket.rst:2050
+#: ../../library/socket.rst:2051
 msgid ""
 "if the listening socket is in *blocking mode* or in *timeout mode*, the "
 "socket returned by :meth:`~socket.accept` is in *blocking mode*;"
@@ -2936,7 +2932,7 @@ msgstr ""
 " очікування*, сокет, який повертає :meth:`~socket.accept`, знаходиться в "
 "*режимі блокування*;"
 
-#: ../../library/socket.rst:2053
+#: ../../library/socket.rst:2054
 msgid ""
 "if the listening socket is in *non-blocking mode*, whether the socket "
 "returned by :meth:`~socket.accept` is in blocking or non-blocking mode is "
@@ -2948,11 +2944,11 @@ msgstr ""
 "залежить від операційної системи. Якщо ви хочете забезпечити кросплатформну "
 "поведінку, радимо вручну змінити це налаштування."
 
-#: ../../library/socket.rst:2062
+#: ../../library/socket.rst:2063
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/socket.rst:2064
+#: ../../library/socket.rst:2065
 msgid ""
 "Here are four minimal example programs using the TCP/IP protocol: a server "
 "that echoes all data that it receives back (servicing only one client), and "
@@ -2965,11 +2961,11 @@ msgid ""
 "listening on but on the new socket returned by :meth:`~socket.accept`."
 msgstr ""
 
-#: ../../library/socket.rst:2074
+#: ../../library/socket.rst:2075
 msgid "The first two examples support IPv4 only. ::"
 msgstr "Перші два приклади підтримують лише IPv4. ::"
 
-#: ../../library/socket.rst:2105
+#: ../../library/socket.rst:2106
 msgid ""
 "The next two examples are identical to the above two, but support both IPv4 "
 "and IPv6. The server side will listen to the first address family available "
@@ -2979,7 +2975,7 @@ msgid ""
 "resolution, and sends traffic to the first one connected successfully. ::"
 msgstr ""
 
-#: ../../library/socket.rst:2177
+#: ../../library/socket.rst:2178
 msgid ""
 "The next example shows how to write a very simple network sniffer with raw "
 "sockets on Windows. The example requires administrator privileges to modify "
@@ -2989,7 +2985,7 @@ msgstr ""
 " необробленими сокетами у Windows. У прикладі потрібні права адміністратора,"
 " щоб змінити інтерфейс:"
 
-#: ../../library/socket.rst:2202
+#: ../../library/socket.rst:2203
 msgid ""
 "The next example shows how to use the socket interface to communicate to a "
 "CAN network using the raw socket protocol. To use CAN with the broadcast "
@@ -3000,18 +2996,18 @@ msgstr ""
 "замість цього використовувати CAN із протоколом диспетчера трансляції, "
 "відкрийте сокет за допомогою:"
 
-#: ../../library/socket.rst:2208
+#: ../../library/socket.rst:2209
 msgid ""
 "After binding (:const:`CAN_RAW`) or connecting (:const:`CAN_BCM`) the "
 "socket, you can use the :meth:`socket.send` and :meth:`socket.recv` "
 "operations (and their counterparts) on the socket object as usual."
 msgstr ""
 
-#: ../../library/socket.rst:2212
+#: ../../library/socket.rst:2213
 msgid "This last example might require special privileges::"
 msgstr "Цей останній приклад може вимагати спеціальних привілеїв:"
 
-#: ../../library/socket.rst:2252
+#: ../../library/socket.rst:2253
 msgid ""
 "Running an example several times with too small delay between executions, "
 "could lead to this error::"
@@ -3019,7 +3015,7 @@ msgstr ""
 "Запуск прикладу кілька разів із занадто малою затримкою між виконаннями може"
 " призвести до цієї помилки::"
 
-#: ../../library/socket.rst:2257
+#: ../../library/socket.rst:2258
 msgid ""
 "This is because the previous execution has left the socket in a "
 "``TIME_WAIT`` state, and can't be immediately reused."
@@ -3027,13 +3023,13 @@ msgstr ""
 "Це пов’язано з тим, що попереднє виконання залишило сокет у стані "
 "``TIME_WAIT`` і не може бути негайно повторно використано."
 
-#: ../../library/socket.rst:2260
+#: ../../library/socket.rst:2261
 msgid ""
 "There is a :mod:`socket` flag to set, in order to prevent this, "
 ":const:`socket.SO_REUSEADDR`::"
 msgstr ""
 
-#: ../../library/socket.rst:2267
+#: ../../library/socket.rst:2268
 msgid ""
 "the :data:`SO_REUSEADDR` flag tells the kernel to reuse a local socket in "
 "``TIME_WAIT`` state, without waiting for its natural timeout to expire."
@@ -3042,13 +3038,13 @@ msgstr ""
 "локальний сокет у стані ``TIME_WAIT``, не чекаючи закінчення його природного"
 " часу очікування."
 
-#: ../../library/socket.rst:2273
+#: ../../library/socket.rst:2274
 msgid ""
 "For an introduction to socket programming (in C), see the following papers:"
 msgstr ""
 "Для ознайомлення з програмуванням сокетів (на C) перегляньте такі документи:"
 
-#: ../../library/socket.rst:2275
+#: ../../library/socket.rst:2276
 msgid ""
 "*An Introductory 4.3BSD Interprocess Communication Tutorial*, by Stuart "
 "Sechrest"
@@ -3056,7 +3052,7 @@ msgstr ""
 "*Вступний навчальний посібник із взаємодії між процесами 4.3BSD*, Стюарт "
 "Сехрест"
 
-#: ../../library/socket.rst:2277
+#: ../../library/socket.rst:2278
 msgid ""
 "*An Advanced 4.3BSD Interprocess Communication Tutorial*, by Samuel J.  "
 "Leffler et al,"
@@ -3064,7 +3060,7 @@ msgstr ""
 "*Навчальний посібник із розширеного міжпроцесного зв’язку 4.3BSD*, Семюел "
 "Дж. Леффлер та інші,"
 
-#: ../../library/socket.rst:2280
+#: ../../library/socket.rst:2281
 msgid ""
 "both in the UNIX Programmer's Manual, Supplementary Documents 1 (sections "
 "PS1:7 and PS1:8).  The platform-specific reference material for the various "
@@ -3098,10 +3094,10 @@ msgstr ""
 msgid "buffering"
 msgstr ""
 
-#: ../../library/socket.rst:1937
+#: ../../library/socket.rst:1938
 msgid "module"
 msgstr "модуль"
 
-#: ../../library/socket.rst:1937
+#: ../../library/socket.rst:1938
 msgid "struct"
 msgstr "структура"
