@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2022
+# Dmytro Kazanzhy, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 14:13+0000\n"
+"POT-Creation-Date: 2024-03-01 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -69,11 +69,80 @@ msgstr "Додано підтримку красивого друку :class:`ty
 msgid "Added support for pretty-printing :class:`dataclasses.dataclass`."
 msgstr "Додано підтримку красивого друку :class:`dataclasses.dataclass`."
 
-#: ../../library/pprint.rst:34
-msgid "The :mod:`pprint` module defines one class:"
-msgstr "Модуль :mod:`pprint` визначає один клас:"
+#: ../../library/pprint.rst:37
+msgid "Functions"
+msgstr "Функції"
 
-#: ../../library/pprint.rst:44
+#: ../../library/pprint.rst:41
+msgid ""
+"Prints the formatted representation of *object* followed by a newline. If "
+"*sort_dicts* is false (the default), dictionaries will be displayed with "
+"their keys in insertion order, otherwise the dict keys will be sorted. "
+"*args* and *kwargs* will be passed to :func:`~pprint.pprint` as formatting "
+"parameters."
+msgstr ""
+
+#: ../../library/pprint.rst:53
+msgid ""
+"Prints the formatted representation of *object* on *stream*, followed by a "
+"newline.  If *stream* is ``None``, :data:`sys.stdout` is used. This may be "
+"used in the interactive interpreter instead of the :func:`print` function "
+"for inspecting values (you can even reassign ``print = pprint.pprint`` for "
+"use within a scope)."
+msgstr ""
+
+#: ../../library/pprint.rst:59
+msgid ""
+"The configuration parameters *stream*, *indent*, *width*, *depth*, "
+"*compact*, *sort_dicts* and *underscore_numbers* are passed to the "
+":class:`PrettyPrinter` constructor and their meanings are as described in "
+"its documentation above."
+msgstr ""
+
+#: ../../library/pprint.rst:78
+msgid ""
+"Return the formatted representation of *object* as a string.  *indent*, "
+"*width*, *depth*, *compact*, *sort_dicts* and *underscore_numbers* are "
+"passed to the :class:`PrettyPrinter` constructor as formatting parameters "
+"and their meanings are as described in its documentation above."
+msgstr ""
+
+#: ../../library/pprint.rst:88
+msgid ""
+"Determine if the formatted representation of *object* is \"readable\", or "
+"can be used to reconstruct the value using :func:`eval`.  This always "
+"returns ``False`` for recursive objects."
+msgstr ""
+"Визначте, чи є форматоване представлення *об’єкта* \"читабельним\" або його "
+"можна використати для реконструкції значення за допомогою :func:`eval`. Це "
+"завжди повертає ``False`` для рекурсивних об’єктів."
+
+#: ../../library/pprint.rst:98
+msgid ""
+"Determine if *object* requires a recursive representation.  This function is"
+" subject to the same limitations as noted in :func:`saferepr` below and may "
+"raise an :exc:`RecursionError` if it fails to detect a recursive object."
+msgstr ""
+
+#: ../../library/pprint.rst:105
+msgid ""
+"Return a string representation of *object*, protected against recursion in "
+"some common data structures, namely instances of :class:`dict`, "
+":class:`list` and :class:`tuple` or subclasses whose ``__repr__`` has not "
+"been overridden.  If the representation of object exposes a recursive entry,"
+" the recursive reference will be represented as ``<Recursion on typename "
+"with id=number>``.  The representation is not otherwise formatted."
+msgstr ""
+
+#: ../../library/pprint.rst:118
+msgid "PrettyPrinter Objects"
+msgstr "Об’єкти PrettyPrinter"
+
+#: ../../library/pprint.rst:120
+msgid "This module defines one class:"
+msgstr ""
+
+#: ../../library/pprint.rst:130
 msgid ""
 "Construct a :class:`PrettyPrinter` instance.  This constructor understands "
 "several keyword parameters."
@@ -81,15 +150,15 @@ msgstr ""
 "Створіть екземпляр :class:`PrettyPrinter`. Цей конструктор розуміє кілька "
 "параметрів ключових слів."
 
-#: ../../library/pprint.rst:47
+#: ../../library/pprint.rst:133
 msgid ""
-"*stream* (default ``sys.stdout``) is a :term:`file-like object` to which the"
-" output will be written by calling its :meth:`!write` method. If both "
-"*stream* and ``sys.stdout`` are ``None``, then :meth:`~PrettyPrinter.pprint`"
-" silently returns."
+"*stream* (default :data:`!sys.stdout`) is a :term:`file-like object` to "
+"which the output will be written by calling its :meth:`!write` method. If "
+"both *stream* and :data:`!sys.stdout` are ``None``, then "
+":meth:`~PrettyPrinter.pprint` silently returns."
 msgstr ""
 
-#: ../../library/pprint.rst:52
+#: ../../library/pprint.rst:138
 msgid ""
 "Other values configure the manner in which nesting of complex data "
 "structures is displayed."
@@ -97,7 +166,7 @@ msgstr ""
 "Інші значення налаштовують спосіб відображення вкладеності складних структур"
 " даних."
 
-#: ../../library/pprint.rst:55
+#: ../../library/pprint.rst:141
 msgid ""
 "*indent* (default 1) specifies the amount of indentation added for each "
 "nesting level."
@@ -105,7 +174,7 @@ msgstr ""
 "*indent* (за замовчуванням 1) визначає величину відступу, доданого для "
 "кожного рівня вкладеності."
 
-#: ../../library/pprint.rst:58
+#: ../../library/pprint.rst:144
 msgid ""
 "*depth* controls the number of nesting levels which may be printed; if the "
 "data structure being printed is too deep, the next contained level is "
@@ -117,7 +186,7 @@ msgstr ""
 " замінюється на ``...``. За замовчуванням немає обмежень щодо глибини "
 "об’єктів, що форматуються."
 
-#: ../../library/pprint.rst:63
+#: ../../library/pprint.rst:149
 msgid ""
 "*width* (default 80) specifies the desired maximum number of characters per "
 "line in the output. If a structure cannot be formatted within the width "
@@ -127,7 +196,7 @@ msgstr ""
 " у рядку виводу. Якщо структуру неможливо відформатувати в межах обмеження "
 "ширини, буде зроблено все можливе."
 
-#: ../../library/pprint.rst:67
+#: ../../library/pprint.rst:153
 msgid ""
 "*compact* impacts the way that long sequences (lists, tuples, sets, etc) are"
 " formatted. If *compact* is false (the default) then each item of a sequence"
@@ -140,7 +209,7 @@ msgstr ""
 "окремому рядку. Якщо *compact* має значення true, у кожному рядку виводу "
 "буде відформатовано стільки елементів, скільки поміститься в межах *width*."
 
-#: ../../library/pprint.rst:73
+#: ../../library/pprint.rst:159
 msgid ""
 "If *sort_dicts* is true (the default), dictionaries will be formatted with "
 "their keys sorted, otherwise they will display in insertion order."
@@ -149,7 +218,7 @@ msgstr ""
 "відформатовані з відсортованими ключами, інакше вони відображатимуться в "
 "порядку вставки."
 
-#: ../../library/pprint.rst:76
+#: ../../library/pprint.rst:162
 msgid ""
 "If *underscore_numbers* is true, integers will be formatted with the ``_`` "
 "character for a thousands separator, otherwise underscores are not displayed"
@@ -159,101 +228,27 @@ msgstr ""
 "відформатовані із символом ``_`` для роздільника тисяч, інакше підкреслення "
 "не відображатимуться (за замовчуванням)."
 
-#: ../../library/pprint.rst:80
+#: ../../library/pprint.rst:166
 msgid "Added the *compact* parameter."
 msgstr "Додано параметр *compact*."
 
-#: ../../library/pprint.rst:83
+#: ../../library/pprint.rst:169
 msgid "Added the *sort_dicts* parameter."
 msgstr "Додано параметр *sort_dicts*."
 
-#: ../../library/pprint.rst:86
+#: ../../library/pprint.rst:172
 msgid "Added the *underscore_numbers* parameter."
 msgstr "Додано параметр *underscore_numbers*."
 
-#: ../../library/pprint.rst:89
-msgid "No longer attempts to write to ``sys.stdout`` if it is ``None``."
+#: ../../library/pprint.rst:175
+msgid "No longer attempts to write to :data:`!sys.stdout` if it is ``None``."
 msgstr ""
 
-#: ../../library/pprint.rst:118
-msgid ""
-"Return the formatted representation of *object* as a string.  *indent*, "
-"*width*, *depth*, *compact*, *sort_dicts* and *underscore_numbers* are "
-"passed to the :class:`PrettyPrinter` constructor as formatting parameters "
-"and their meanings are as described in its documentation above."
-msgstr ""
-
-#: ../../library/pprint.rst:126
-msgid ""
-"Prints the formatted representation of *object* followed by a newline. If "
-"*sort_dicts* is false (the default), dictionaries will be displayed with "
-"their keys in insertion order, otherwise the dict keys will be sorted. "
-"*args* and *kwargs* will be passed to :func:`pprint` as formatting "
-"parameters."
-msgstr ""
-"Друкує форматоване представлення *об’єкта*, після якого йде новий рядок. "
-"Якщо *sort_dicts* має значення false (за замовчуванням), словники "
-"відображатимуться з їхніми ключами в порядку вставки, інакше ключі dict "
-"будуть відсортовані. *args* і *kwargs* будуть передані до :func:`pprint` як "
-"параметри форматування."
-
-#: ../../library/pprint.rst:138
-msgid ""
-"Prints the formatted representation of *object* on *stream*, followed by a "
-"newline.  If *stream* is ``None``, ``sys.stdout`` is used. This may be used "
-"in the interactive interpreter instead of the :func:`print` function for "
-"inspecting values (you can even reassign ``print = pprint.pprint`` for use "
-"within a scope)."
-msgstr ""
-
-#: ../../library/pprint.rst:144
-msgid ""
-"The configuration parameters *stream*, *indent*, *width*, *depth*, "
-"*compact*, *sort_dicts* and *underscore_numbers* are passed to the "
-":class:`PrettyPrinter` constructor and their meanings are as described in "
-"its documentation above."
-msgstr ""
-
-#: ../../library/pprint.rst:164
-msgid ""
-"Determine if the formatted representation of *object* is \"readable\", or "
-"can be used to reconstruct the value using :func:`eval`.  This always "
-"returns ``False`` for recursive objects."
-msgstr ""
-"Визначте, чи є форматоване представлення *об’єкта* \"читабельним\" або його "
-"можна використати для реконструкції значення за допомогою :func:`eval`. Це "
-"завжди повертає ``False`` для рекурсивних об’єктів."
-
-#: ../../library/pprint.rst:174
-msgid ""
-"Determine if *object* requires a recursive representation.  This function is"
-" subject to the same limitations as noted in :func:`saferepr` below and may "
-"raise an :exc:`RecursionError` if it fails to detect a recursive object."
-msgstr ""
-
-#: ../../library/pprint.rst:179
-msgid "One more support function is also defined:"
-msgstr "Також визначено ще одну функцію підтримки:"
-
-#: ../../library/pprint.rst:183
-msgid ""
-"Return a string representation of *object*, protected against recursion in "
-"some common data structures, namely instances of :class:`dict`, "
-":class:`list` and :class:`tuple` or subclasses whose ``__repr__`` has not "
-"been overridden.  If the representation of object exposes a recursive entry,"
-" the recursive reference will be represented as ``<Recursion on typename "
-"with id=number>``.  The representation is not otherwise formatted."
-msgstr ""
-
-#: ../../library/pprint.rst:197
-msgid "PrettyPrinter Objects"
-msgstr "Об’єкти PrettyPrinter"
-
-#: ../../library/pprint.rst:199
+#: ../../library/pprint.rst:202
 msgid ":class:`PrettyPrinter` instances have the following methods:"
 msgstr "Екземпляри :class:`PrettyPrinter` мають такі методи:"
 
-#: ../../library/pprint.rst:204
+#: ../../library/pprint.rst:207
 msgid ""
 "Return the formatted representation of *object*.  This takes into account "
 "the options passed to the :class:`PrettyPrinter` constructor."
@@ -261,7 +256,7 @@ msgstr ""
 "Повертає форматоване представлення *об’єкта*. Це враховує параметри, "
 "передані конструктору :class:`PrettyPrinter`."
 
-#: ../../library/pprint.rst:210
+#: ../../library/pprint.rst:213
 msgid ""
 "Print the formatted representation of *object* on the configured stream, "
 "followed by a newline."
@@ -269,7 +264,7 @@ msgstr ""
 "Надрукуйте форматоване представлення *об’єкта* у налаштованому потоці, а "
 "потім новий рядок."
 
-#: ../../library/pprint.rst:213
+#: ../../library/pprint.rst:216
 msgid ""
 "The following methods provide the implementations for the corresponding "
 "functions of the same names.  Using these methods on an instance is slightly"
@@ -280,7 +275,7 @@ msgstr ""
 " Використання цих методів для екземпляра є трохи ефективнішим, оскільки не "
 "потрібно створювати нові об’єкти :class:`PrettyPrinter`."
 
-#: ../../library/pprint.rst:223
+#: ../../library/pprint.rst:226
 msgid ""
 "Determine if the formatted representation of the object is \"readable,\" or "
 "can be used to reconstruct the value using :func:`eval`.  Note that this "
@@ -294,11 +289,11 @@ msgstr ""
 "встановлено параметр *depth* :class:`PrettyPrinter` і об’єкт глибше ніж "
 "дозволено, повертається ``False``."
 
-#: ../../library/pprint.rst:232
+#: ../../library/pprint.rst:235
 msgid "Determine if the object requires a recursive representation."
 msgstr "Визначте, чи вимагає об’єкт рекурсивне представлення."
 
-#: ../../library/pprint.rst:234
+#: ../../library/pprint.rst:237
 msgid ""
 "This method is provided as a hook to allow subclasses to modify the way "
 "objects are converted to strings.  The default implementation uses the "
@@ -308,7 +303,7 @@ msgstr ""
 "перетворення об’єктів на рядки. Стандартна реалізація використовує внутрішні"
 " елементи реалізації :func:`saferepr`."
 
-#: ../../library/pprint.rst:241
+#: ../../library/pprint.rst:244
 msgid ""
 "Returns three values: the formatted version of *object* as a string, a flag "
 "indicating whether the result is readable, and a flag indicating whether "
@@ -340,25 +335,22 @@ msgstr ""
 "рекурсивним викликам має передаватися значення, менше значення поточного "
 "виклику."
 
-#: ../../library/pprint.rst:259
+#: ../../library/pprint.rst:262
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/pprint.rst:261
+#: ../../library/pprint.rst:264
 msgid ""
-"To demonstrate several uses of the :func:`pprint` function and its "
+"To demonstrate several uses of the :func:`~pprint.pprint` function and its "
 "parameters, let's fetch information about a project from `PyPI "
 "<https://pypi.org>`_::"
 msgstr ""
-"Щоб продемонструвати кілька способів використання функції :func:`pprint` та "
-"її параметрів, давайте отримаємо інформацію про проект із `PyPI "
-"<https://pypi.org>`_::"
 
-#: ../../library/pprint.rst:270
-msgid "In its basic form, :func:`pprint` shows the whole object::"
-msgstr "У своїй базовій формі :func:`pprint` показує весь об’єкт::"
+#: ../../library/pprint.rst:273
+msgid "In its basic form, :func:`~pprint.pprint` shows the whole object::"
+msgstr ""
 
-#: ../../library/pprint.rst:326
+#: ../../library/pprint.rst:329
 msgid ""
 "The result can be limited to a certain *depth* (ellipsis is used for deeper "
 "contents)::"
@@ -366,7 +358,7 @@ msgstr ""
 "Результат можна обмежити певною *глибиною* (крапка використовується для "
 "глибшого вмісту):"
 
-#: ../../library/pprint.rst:372
+#: ../../library/pprint.rst:375
 msgid ""
 "Additionally, maximum character *width* can be suggested. If a long object "
 "cannot be split, the specified width will be exceeded::"
@@ -374,18 +366,18 @@ msgstr ""
 "Крім того, можна запропонувати максимальну *ширину* символу. Якщо довгий "
 "об’єкт не можна розділити, указана ширина буде перевищена:"
 
-#: ../../library/pprint.rst:39
-msgid "..."
-msgstr ""
-
-#: ../../library/pprint.rst:39
-msgid "placeholder"
-msgstr ""
-
-#: ../../library/pprint.rst:162 ../../library/pprint.rst:221
+#: ../../library/pprint.rst:86 ../../library/pprint.rst:224
 msgid "built-in function"
 msgstr ""
 
-#: ../../library/pprint.rst:162 ../../library/pprint.rst:221
+#: ../../library/pprint.rst:86 ../../library/pprint.rst:224
 msgid "eval"
+msgstr ""
+
+#: ../../library/pprint.rst:125
+msgid "..."
+msgstr ""
+
+#: ../../library/pprint.rst:125
+msgid "placeholder"
 msgstr ""
