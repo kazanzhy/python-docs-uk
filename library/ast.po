@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-16 14:13+0000\n"
+"POT-Creation-Date: 2024-03-01 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1352,26 +1352,23 @@ msgstr ""
 
 #: ../../library/ast.rst:2181
 msgid ""
-"Also, setting ``feature_version`` to a tuple ``(major, minor)`` will attempt"
-" to parse using that Python version's grammar. Currently ``major`` must "
-"equal to ``3``.  For example, setting ``feature_version=(3, 4)`` will allow "
-"the use of ``async`` and ``await`` as variable names.  The lowest supported "
-"version is ``(3, 4)``; the highest is ``sys.version_info[0:2]``."
+"Setting ``feature_version`` to a tuple ``(major, minor)`` will result in a "
+"\"best-effort\" attempt to parse using that Python version's grammar. For "
+"example, setting ``feature_version=(3, 9)`` will attempt to disallow parsing"
+" of :keyword:`match` statements. Currently ``major`` must equal to ``3``. "
+"The lowest supported version is ``(3, 4)`` (and this may increase in future "
+"Python versions); the highest is ``sys.version_info[0:2]``. \"Best-effort\" "
+"attempt means there is no guarantee that the parse (or success of the parse)"
+" is the same as when run on the Python version corresponding to "
+"``feature_version``."
 msgstr ""
-"Крім того, встановлення ``feature_version`` на кортеж ``(major, minor)`` "
-"спробує проаналізувати за допомогою граматики цієї версії Python. Наразі "
-"``major`` має дорівнювати ``3``. Наприклад, встановлення "
-"``feature_version=(3, 4)`` дозволить використовувати ``async`` і ``await`` "
-"як імена змінних. Найменша підтримувана версія – ``(3, 4)``; найвищий — "
-"``sys.version_info[0:2]``."
-
-#: ../../library/ast.rst:2188
-msgid ""
-"If source contains a null character ('\\0'), :exc:`ValueError` is raised."
-msgstr ""
-"Якщо джерело містить нульовий символ ('\\0'), виникає :exc:`ValueError`."
 
 #: ../../library/ast.rst:2191
+msgid ""
+"If source contains a null character (``\\0``), :exc:`ValueError` is raised."
+msgstr ""
+
+#: ../../library/ast.rst:2194
 msgid ""
 "Note that successfully parsing source code into an AST object doesn't "
 "guarantee that the source code provided is valid Python code that can be "
@@ -1387,7 +1384,7 @@ msgstr ""
 "return, але його не можна скомпілювати окремо (він має бути всередині "
 "функціонального вузла)."
 
-#: ../../library/ast.rst:2198
+#: ../../library/ast.rst:2201
 msgid ""
 "In particular, :func:`ast.parse` won't do any scoping checks, which the "
 "compilation step does."
@@ -1395,7 +1392,7 @@ msgstr ""
 "Зокрема, :func:`ast.parse` не виконуватиме жодних перевірок обсягу, що "
 "робить крок компіляції."
 
-#: ../../library/ast.rst:2202
+#: ../../library/ast.rst:2205
 msgid ""
 "It is possible to crash the Python interpreter with a sufficiently "
 "large/complex string due to stack depth limitations in Python's AST "
@@ -1404,11 +1401,11 @@ msgstr ""
 "Можливий збій інтерпретатора Python із досить великим/складним рядком через "
 "обмеження глибини стеку в компіляторі AST Python."
 
-#: ../../library/ast.rst:2206
+#: ../../library/ast.rst:2209
 msgid "Added ``type_comments``, ``mode='func_type'`` and ``feature_version``."
 msgstr "Додано ``type_comments``, ``mode='func_type'`` і ``feature_version``."
 
-#: ../../library/ast.rst:2212
+#: ../../library/ast.rst:2215
 msgid ""
 "Unparse an :class:`ast.AST` object and generate a string with code that "
 "would produce an equivalent :class:`ast.AST` object if parsed back with "
@@ -1418,7 +1415,7 @@ msgstr ""
 " еквівалентний об’єкт :class:`ast.AST`, якщо його проаналізувати назад за "
 "допомогою :func:`ast.parse`."
 
-#: ../../library/ast.rst:2217
+#: ../../library/ast.rst:2220
 msgid ""
 "The produced code string will not necessarily be equal to the original code "
 "that generated the :class:`ast.AST` object (without any compiler "
@@ -1428,14 +1425,14 @@ msgstr ""
 "згенерував об’єкт :class:`ast.AST` (без будь-яких оптимізацій компілятора, "
 "таких як константні кортежі/заморожені набори)."
 
-#: ../../library/ast.rst:2222
+#: ../../library/ast.rst:2225
 msgid ""
 "Trying to unparse a highly complex expression would result with "
 ":exc:`RecursionError`."
 msgstr ""
 "Спроба розібрати дуже складний вираз призведе до :exc:`RecursionError`."
 
-#: ../../library/ast.rst:2230
+#: ../../library/ast.rst:2233
 msgid ""
 "Evaluate an expression node or a string containing only a Python literal or "
 "container display.  The string or node provided may only consist of the "
@@ -1443,7 +1440,7 @@ msgid ""
 " dicts, sets, booleans, ``None`` and ``Ellipsis``."
 msgstr ""
 
-#: ../../library/ast.rst:2235
+#: ../../library/ast.rst:2238
 msgid ""
 "This can be used for evaluating strings containing Python values without the"
 " need to parse the values oneself.  It is not capable of evaluating "
@@ -1451,7 +1448,7 @@ msgid ""
 "indexing."
 msgstr ""
 
-#: ../../library/ast.rst:2240
+#: ../../library/ast.rst:2243
 msgid ""
 "This function had been documented as \"safe\" in the past without defining "
 "what that meant. That was misleading. This is specifically designed not to "
@@ -1463,13 +1460,13 @@ msgid ""
 "untrusted data is thus not recommended."
 msgstr ""
 
-#: ../../library/ast.rst:2250
+#: ../../library/ast.rst:2253
 msgid ""
 "It is possible to crash the Python interpreter due to stack depth "
 "limitations in Python's AST compiler."
 msgstr ""
 
-#: ../../library/ast.rst:2253
+#: ../../library/ast.rst:2256
 msgid ""
 "It can raise :exc:`ValueError`, :exc:`TypeError`, :exc:`SyntaxError`, "
 ":exc:`MemoryError` and :exc:`RecursionError` depending on the malformed "
@@ -1479,20 +1476,20 @@ msgstr ""
 ":exc:`MemoryError` і :exc:`RecursionError` залежно від неправильного "
 "введення."
 
-#: ../../library/ast.rst:2257
+#: ../../library/ast.rst:2260
 msgid "Now allows bytes and set literals."
 msgstr "Тепер дозволяє байти та встановлені літерали."
 
-#: ../../library/ast.rst:2260
+#: ../../library/ast.rst:2263
 msgid "Now supports creating empty sets with ``'set()'``."
 msgstr ""
 "Тепер підтримується створення порожніх наборів за допомогою ``'set()'``."
 
-#: ../../library/ast.rst:2263
+#: ../../library/ast.rst:2266
 msgid "For string inputs, leading spaces and tabs are now stripped."
 msgstr "Для вводу рядків початкові пробіли та табуляції тепер видалені."
 
-#: ../../library/ast.rst:2269
+#: ../../library/ast.rst:2272
 msgid ""
 "Return the docstring of the given *node* (which must be a "
 ":class:`FunctionDef`, :class:`AsyncFunctionDef`, :class:`ClassDef`, or "
@@ -1505,11 +1502,11 @@ msgstr ""
 "Якщо *clean* має значення true, очистіть відступ у рядку документа за "
 "допомогою :func:`inspect.cleandoc`."
 
-#: ../../library/ast.rst:2275
+#: ../../library/ast.rst:2278
 msgid ":class:`AsyncFunctionDef` is now supported."
 msgstr ":class:`AsyncFunctionDef` тепер підтримується."
 
-#: ../../library/ast.rst:2281
+#: ../../library/ast.rst:2284
 msgid ""
 "Get source code segment of the *source* that generated *node*. If some "
 "location information (:attr:`~ast.AST.lineno`, :attr:`~ast.AST.end_lineno`, "
@@ -1517,7 +1514,7 @@ msgid ""
 " return ``None``."
 msgstr ""
 
-#: ../../library/ast.rst:2285
+#: ../../library/ast.rst:2288
 msgid ""
 "If *padded* is ``True``, the first line of a multi-line statement will be "
 "padded with spaces to match its original position."
@@ -1525,7 +1522,7 @@ msgstr ""
 "Якщо *paded* має значення ``True``, перший рядок багаторядкового оператора "
 "буде доповнено пробілами відповідно до його вихідної позиції."
 
-#: ../../library/ast.rst:2293
+#: ../../library/ast.rst:2296
 msgid ""
 "When you compile a node tree with :func:`compile`, the compiler expects "
 ":attr:`~ast.AST.lineno` and :attr:`~ast.AST.col_offset` attributes for every"
@@ -1535,7 +1532,7 @@ msgid ""
 " starting at *node*."
 msgstr ""
 
-#: ../../library/ast.rst:2302
+#: ../../library/ast.rst:2305
 msgid ""
 "Increment the line number and end line number of each node in the tree "
 "starting at *node* by *n*. This is useful to \"move code\" to a different "
@@ -1545,14 +1542,14 @@ msgstr ""
 "починаючи з *вузла*, на *n*. Це корисно для \"переміщення коду\" в інше "
 "місце у файлі."
 
-#: ../../library/ast.rst:2309
+#: ../../library/ast.rst:2312
 msgid ""
 "Copy source location (:attr:`~ast.AST.lineno`, :attr:`~ast.AST.col_offset`, "
 ":attr:`~ast.AST.end_lineno`, and :attr:`~ast.AST.end_col_offset`) from "
 "*old_node* to *new_node* if possible, and return *new_node*."
 msgstr ""
 
-#: ../../library/ast.rst:2316
+#: ../../library/ast.rst:2319
 msgid ""
 "Yield a tuple of ``(fieldname, value)`` for each field in ``node._fields`` "
 "that is present on *node*."
@@ -1560,7 +1557,7 @@ msgstr ""
 "Отримайте кортеж ``(fieldname, value)`` для кожного поля ``node._fields``, "
 "який присутній на *node*."
 
-#: ../../library/ast.rst:2322
+#: ../../library/ast.rst:2325
 msgid ""
 "Yield all direct child nodes of *node*, that is, all fields that are nodes "
 "and all items of fields that are lists of nodes."
@@ -1568,7 +1565,7 @@ msgstr ""
 "Видає всі прямі дочірні вузли *node*, тобто всі поля, які є вузлами, і всі "
 "елементи полів, які є списками вузлів."
 
-#: ../../library/ast.rst:2328
+#: ../../library/ast.rst:2331
 msgid ""
 "Recursively yield all descendant nodes in the tree starting at *node* "
 "(including *node* itself), in no specified order.  This is useful if you "
@@ -1578,7 +1575,7 @@ msgstr ""
 "(включаючи сам *node*), у невизначеному порядку. Це корисно, якщо ви хочете "
 "лише змінити вузли на місці й не дбаєте про контекст."
 
-#: ../../library/ast.rst:2335
+#: ../../library/ast.rst:2338
 msgid ""
 "A node visitor base class that walks the abstract syntax tree and calls a "
 "visitor function for every node found.  This function may return a value "
@@ -1588,14 +1585,14 @@ msgstr ""
 " та викликає функцію відвідувача для кожного знайденого вузла. Ця функція "
 "може повертати значення, яке пересилається методом :meth:`visit`."
 
-#: ../../library/ast.rst:2339
+#: ../../library/ast.rst:2342
 msgid ""
 "This class is meant to be subclassed, with the subclass adding visitor "
 "methods."
 msgstr ""
 "Цей клас призначений для створення підкласу, який додає методи відвідувачів."
 
-#: ../../library/ast.rst:2344
+#: ../../library/ast.rst:2347
 msgid ""
 "Visit a node.  The default implementation calls the method called "
 ":samp:`self.visit_{classname}` where *classname* is the name of the node "
@@ -1605,11 +1602,11 @@ msgstr ""
 ":samp:`self.visit_{classname}`, де *classname* є назвою класу вузла, або "
 ":meth:`generic_visit`, якщо цей метод не існує."
 
-#: ../../library/ast.rst:2350
+#: ../../library/ast.rst:2353
 msgid "This visitor calls :meth:`visit` on all children of the node."
 msgstr "Цей відвідувач викликає :meth:`visit` для всіх дітей вузла."
 
-#: ../../library/ast.rst:2352
+#: ../../library/ast.rst:2355
 msgid ""
 "Note that child nodes of nodes that have a custom visitor method won't be "
 "visited unless the visitor calls :meth:`generic_visit` or visits them "
@@ -1619,11 +1616,11 @@ msgstr ""
 "не будуть відвідані, якщо відвідувач не викличе :meth:`generic_visit` або "
 "відвідає їх сам."
 
-#: ../../library/ast.rst:2358
+#: ../../library/ast.rst:2361
 msgid "Handles all constant nodes."
 msgstr ""
 
-#: ../../library/ast.rst:2360
+#: ../../library/ast.rst:2363
 msgid ""
 "Don't use the :class:`NodeVisitor` if you want to apply changes to nodes "
 "during traversal.  For this a special visitor exists "
@@ -1633,7 +1630,7 @@ msgstr ""
 "вузлів під час обходу. Для цього існує спеціальний відвідувач "
 "(:class:`NodeTransformer`), який дозволяє вносити зміни."
 
-#: ../../library/ast.rst:2366
+#: ../../library/ast.rst:2369
 msgid ""
 "Methods :meth:`!visit_Num`, :meth:`!visit_Str`, :meth:`!visit_Bytes`, "
 ":meth:`!visit_NameConstant` and :meth:`!visit_Ellipsis` are deprecated now "
@@ -1641,7 +1638,7 @@ msgid ""
 ":meth:`visit_Constant` method to handle all constant nodes."
 msgstr ""
 
-#: ../../library/ast.rst:2374
+#: ../../library/ast.rst:2377
 msgid ""
 "A :class:`NodeVisitor` subclass that walks the abstract syntax tree and "
 "allows modification of nodes."
@@ -1649,7 +1646,7 @@ msgstr ""
 "Підклас :class:`NodeVisitor`, який проходить абстрактне синтаксичне дерево "
 "та дозволяє модифікувати вузли."
 
-#: ../../library/ast.rst:2377
+#: ../../library/ast.rst:2380
 msgid ""
 "The :class:`NodeTransformer` will walk the AST and use the return value of "
 "the visitor methods to replace or remove the old node.  If the return value "
@@ -1664,7 +1661,7 @@ msgstr ""
 "повертається. Поверненим значенням може бути вихідний вузол, і в цьому "
 "випадку заміна не відбувається."
 
-#: ../../library/ast.rst:2383
+#: ../../library/ast.rst:2386
 msgid ""
 "Here is an example transformer that rewrites all occurrences of name lookups"
 " (``foo``) to ``data['foo']``::"
@@ -1672,14 +1669,14 @@ msgstr ""
 "Ось приклад трансформатора, який переписує всі випадки пошуку імен (``foo``)"
 " на ``data['foo']``::"
 
-#: ../../library/ast.rst:2395
+#: ../../library/ast.rst:2398
 msgid ""
 "Keep in mind that if the node you're operating on has child nodes you must "
 "either transform the child nodes yourself or call the "
 ":meth:`~ast.NodeVisitor.generic_visit` method for the node first."
 msgstr ""
 
-#: ../../library/ast.rst:2399
+#: ../../library/ast.rst:2402
 msgid ""
 "For nodes that were part of a collection of statements (that applies to all "
 "statement nodes), the visitor may also return a list of nodes rather than "
@@ -1689,7 +1686,7 @@ msgstr ""
 "операторів), відвідувач також може повернути список вузлів, а не лише один "
 "вузол."
 
-#: ../../library/ast.rst:2403
+#: ../../library/ast.rst:2406
 msgid ""
 "If :class:`NodeTransformer` introduces new nodes (that weren't part of "
 "original tree) without giving them location information (such as "
@@ -1697,11 +1694,11 @@ msgid ""
 "with the new sub-tree to recalculate the location information::"
 msgstr ""
 
-#: ../../library/ast.rst:2411
+#: ../../library/ast.rst:2414
 msgid "Usually you use the transformer like this::"
 msgstr "Зазвичай ви використовуєте трансформатор таким чином:"
 
-#: ../../library/ast.rst:2418
+#: ../../library/ast.rst:2421
 msgid ""
 "Return a formatted dump of the tree in *node*.  This is mainly useful for "
 "debugging purposes.  If *annotate_fields* is true (by default), the returned"
@@ -1719,7 +1716,7 @@ msgstr ""
 "як номери рядків і зміщення стовпців, не скидаються за замовчуванням. Якщо "
 "це потрібно, *include_attributes* можна встановити на true."
 
-#: ../../library/ast.rst:2426
+#: ../../library/ast.rst:2429
 msgid ""
 "If *indent* is a non-negative integer or string, then the tree will be "
 "pretty-printed with that indent level.  An indent level of 0, negative, or "
@@ -1735,15 +1732,15 @@ msgstr ""
 "стільки відступів на рівень. Якщо *indent* є рядком (наприклад, "
 "``\"\\t\"``), цей рядок використовується для відступу кожного рівня."
 
-#: ../../library/ast.rst:2433
+#: ../../library/ast.rst:2436
 msgid "Added the *indent* option."
 msgstr "Додано параметр *відступ*."
 
-#: ../../library/ast.rst:2440
+#: ../../library/ast.rst:2443
 msgid "Compiler Flags"
 msgstr "Прапори компілятора"
 
-#: ../../library/ast.rst:2442
+#: ../../library/ast.rst:2445
 msgid ""
 "The following flags may be passed to :func:`compile` in order to change "
 "effects on the compilation of a program:"
@@ -1751,7 +1748,7 @@ msgstr ""
 "Наступні прапорці можуть бути передані :func:`compile`, щоб змінити вплив на"
 " компіляцію програми:"
 
-#: ../../library/ast.rst:2447
+#: ../../library/ast.rst:2450
 msgid ""
 "Enables support for top-level ``await``, ``async for``, ``async with`` and "
 "async comprehensions."
@@ -1759,7 +1756,7 @@ msgstr ""
 "Вмикає підтримку ``await`` верхнього рівня, ``async for``, ``async with`` та"
 " асинхронне розуміння."
 
-#: ../../library/ast.rst:2454
+#: ../../library/ast.rst:2457
 msgid ""
 "Generates and returns an abstract syntax tree instead of returning a "
 "compiled code object."
@@ -1767,7 +1764,7 @@ msgstr ""
 "Створює та повертає абстрактне синтаксичне дерево замість повернення "
 "скомпільованого об’єкта коду."
 
-#: ../../library/ast.rst:2459
+#: ../../library/ast.rst:2462
 msgid ""
 "Enables support for :pep:`484` and :pep:`526` style type comments (``# type:"
 " <type>``, ``# type: ignore <stuff>``)."
@@ -1775,11 +1772,11 @@ msgstr ""
 "Вмикає підтримку коментарів типу :pep:`484` і :pep:`526` (``# type: "
 "<type>``, ``# type: ignore <stuff>``)."
 
-#: ../../library/ast.rst:2468
+#: ../../library/ast.rst:2471
 msgid "Command-Line Usage"
 msgstr "Використання командного рядка"
 
-#: ../../library/ast.rst:2472
+#: ../../library/ast.rst:2475
 msgid ""
 "The :mod:`ast` module can be executed as a script from the command line. It "
 "is as simple as:"
@@ -1787,15 +1784,15 @@ msgstr ""
 "Модуль :mod:`ast` можна запустити як скрипт із командного рядка. Це так "
 "просто:"
 
-#: ../../library/ast.rst:2479
+#: ../../library/ast.rst:2482
 msgid "The following options are accepted:"
 msgstr "Приймаються такі варіанти:"
 
-#: ../../library/ast.rst:2485
+#: ../../library/ast.rst:2488
 msgid "Show the help message and exit."
 msgstr "Показати довідкове повідомлення та вийти."
 
-#: ../../library/ast.rst:2490
+#: ../../library/ast.rst:2493
 msgid ""
 "Specify what kind of code must be compiled, like the *mode* argument in "
 ":func:`parse`."
@@ -1803,19 +1800,19 @@ msgstr ""
 "Укажіть тип коду, який потрібно скомпілювати, наприклад аргумент *mode* у "
 ":func:`parse`."
 
-#: ../../library/ast.rst:2495
+#: ../../library/ast.rst:2498
 msgid "Don't parse type comments."
 msgstr "Не аналізуйте коментарі типу."
 
-#: ../../library/ast.rst:2499
+#: ../../library/ast.rst:2502
 msgid "Include attributes such as line numbers and column offsets."
 msgstr "Додайте такі атрибути, як номери рядків і зміщення стовпців."
 
-#: ../../library/ast.rst:2504
+#: ../../library/ast.rst:2507
 msgid "Indentation of nodes in AST (number of spaces)."
 msgstr "Відступ вузлів в AST (кількість пробілів)."
 
-#: ../../library/ast.rst:2506
+#: ../../library/ast.rst:2509
 msgid ""
 "If :file:`infile` is specified its contents are parsed to AST and dumped to "
 "stdout.  Otherwise, the content is read from stdin."
@@ -1823,7 +1820,7 @@ msgstr ""
 "Якщо вказано :file:`infile`, його вміст аналізується в AST і скидається в "
 "stdout. В іншому випадку вміст читається зі стандартного вводу."
 
-#: ../../library/ast.rst:2512
+#: ../../library/ast.rst:2515
 msgid ""
 "`Green Tree Snakes <https://greentreesnakes.readthedocs.io/>`_, an external "
 "documentation resource, has good details on working with Python ASTs."
@@ -1831,7 +1828,7 @@ msgstr ""
 "`Green Tree Snakes <https://greentreesnakes.readthedocs.io/>`_, зовнішній "
 "ресурс документації, містить хороші відомості про роботу з Python AST."
 
-#: ../../library/ast.rst:2515
+#: ../../library/ast.rst:2518
 msgid ""
 "`ASTTokens <https://asttokens.readthedocs.io/en/latest/user-guide.html>`_ "
 "annotates Python ASTs with the positions of tokens and text in the source "
@@ -1843,14 +1840,14 @@ msgstr ""
 "який їх створив. Це корисно для інструментів, які здійснюють перетворення "
 "вихідного коду."
 
-#: ../../library/ast.rst:2520
+#: ../../library/ast.rst:2523
 msgid ""
 "`leoAst.py <https://leoeditor.com/appendices.html#leoast-py>`_ unifies the "
 "token-based and parse-tree-based views of python programs by inserting two-"
 "way links between tokens and ast nodes."
 msgstr ""
 
-#: ../../library/ast.rst:2524
+#: ../../library/ast.rst:2527
 msgid ""
 "`LibCST <https://libcst.readthedocs.io/>`_ parses code as a Concrete Syntax "
 "Tree that looks like an ast tree and keeps all formatting details. It's "
@@ -1862,7 +1859,7 @@ msgstr ""
 "форматування. Це корисно для створення додатків і лінтерів для "
 "автоматизованого рефакторинга (codemod)."
 
-#: ../../library/ast.rst:2529
+#: ../../library/ast.rst:2532
 msgid ""
 "`Parso <https://parso.readthedocs.io>`_ is a Python parser that supports "
 "error recovery and round-trip parsing for different Python versions (in "
