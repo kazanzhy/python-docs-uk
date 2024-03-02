@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-23 14:13+0000\n"
+"POT-Creation-Date: 2024-03-01 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -615,7 +615,7 @@ msgstr ""
 "сертифікат є надійним для всіх цілей."
 
 #: ../../library/ssl.rst:426 ../../library/ssl.rst:1542
-#: ../../library/ssl.rst:1837
+#: ../../library/ssl.rst:1840
 msgid "Example::"
 msgstr "Приклад::"
 
@@ -672,7 +672,7 @@ msgstr ""
 "У режимі сервера від клієнта не запитується сертифікат, тому клієнт не "
 "надсилає жодного сертифіката для автентифікації клієнта."
 
-#: ../../library/ssl.rst:470 ../../library/ssl.rst:2245
+#: ../../library/ssl.rst:470 ../../library/ssl.rst:2248
 msgid "See the discussion of :ref:`ssl-security` below."
 msgstr "Дивіться обговорення :ref:`ssl-security` нижче."
 
@@ -2628,22 +2628,28 @@ msgstr "*сеанс*, див. :attr:`~SSLSocket.session`."
 
 #: ../../library/ssl.rst:1768
 msgid ""
+"To wrap an :class:`SSLSocket` in another :class:`SSLSocket`, use "
+":meth:`SSLContext.wrap_bio`."
+msgstr ""
+
+#: ../../library/ssl.rst:1771
+msgid ""
 "Always allow a server_hostname to be passed, even if OpenSSL does not have "
 "SNI."
 msgstr ""
 "Завжди дозволяйте передачу server_hostname, навіть якщо OpenSSL не має SNI."
 
-#: ../../library/ssl.rst:1772 ../../library/ssl.rst:1798
+#: ../../library/ssl.rst:1775 ../../library/ssl.rst:1801
 msgid "*session* argument was added."
 msgstr "Додано аргумент *сеанс*."
 
-#: ../../library/ssl.rst:1775
+#: ../../library/ssl.rst:1778
 msgid ""
 "The method returns an instance of :attr:`SSLContext.sslsocket_class` instead"
 " of hard-coded :class:`SSLSocket`."
 msgstr ""
 
-#: ../../library/ssl.rst:1781
+#: ../../library/ssl.rst:1784
 msgid ""
 "The return type of :meth:`SSLContext.wrap_socket`, defaults to "
 ":class:`SSLSocket`. The attribute can be overridden on instance of class in "
@@ -2653,7 +2659,7 @@ msgstr ""
 ":class:`SSLSocket`. Атрибут можна перевизначити в екземплярі класу, щоб "
 "повернути настроюваний підклас :class:`SSLSocket`."
 
-#: ../../library/ssl.rst:1790
+#: ../../library/ssl.rst:1793
 msgid ""
 "Wrap the BIO objects *incoming* and *outgoing* and return an instance of "
 ":attr:`SSLContext.sslobject_class` (default :class:`SSLObject`). The SSL "
@@ -2665,7 +2671,7 @@ msgstr ""
 "Підпрограми SSL читатимуть вхідні дані з вхідного BIO та записуватимуть дані"
 " у вихідний BIO."
 
-#: ../../library/ssl.rst:1795
+#: ../../library/ssl.rst:1798
 msgid ""
 "The *server_side*, *server_hostname* and *session* parameters have the same "
 "meaning as in :meth:`SSLContext.wrap_socket`."
@@ -2673,13 +2679,13 @@ msgstr ""
 "Параметри *server_side*, *server_hostname* і *session* мають те саме "
 "значення, що й у :meth:`SSLContext.wrap_socket`."
 
-#: ../../library/ssl.rst:1801
+#: ../../library/ssl.rst:1804
 msgid ""
 "The method returns an instance of :attr:`SSLContext.sslobject_class` instead"
 " of hard-coded :class:`SSLObject`."
 msgstr ""
 
-#: ../../library/ssl.rst:1807
+#: ../../library/ssl.rst:1810
 msgid ""
 "The return type of :meth:`SSLContext.wrap_bio`, defaults to "
 ":class:`SSLObject`. The attribute can be overridden on instance of class in "
@@ -2689,7 +2695,7 @@ msgstr ""
 ":class:`SSLObject`. Атрибут можна перевизначити в екземплярі класу, щоб "
 "повернути настроюваний підклас :class:`SSLObject`."
 
-#: ../../library/ssl.rst:1815
+#: ../../library/ssl.rst:1818
 msgid ""
 "Get statistics about the SSL sessions created or managed by this context. A "
 "dictionary is returned which maps the names of each `piece of information "
@@ -2698,7 +2704,7 @@ msgid ""
 "misses in the session cache since the context was created::"
 msgstr ""
 
-#: ../../library/ssl.rst:1826
+#: ../../library/ssl.rst:1829
 msgid ""
 "Whether to match the peer cert's hostname in :meth:`SSLSocket.do_handshake`."
 " The context's :attr:`~SSLContext.verify_mode` must be set to "
@@ -2722,7 +2728,7 @@ msgstr ""
 " перевірку імені хоста за умовчанням. Для інших протоколів перевірка імені "
 "хоста повинна бути включена явно."
 
-#: ../../library/ssl.rst:1854
+#: ../../library/ssl.rst:1857
 msgid ""
 ":attr:`~SSLContext.verify_mode` is now automatically changed to "
 ":data:`CERT_REQUIRED`  when hostname checking is enabled and "
@@ -2734,7 +2740,7 @@ msgstr ""
 ":attr:`~SSSLContext.verify_mode` має значення :data:`CERT_NONE`. Раніше ця "
 "сама операція не виконувалася з помилкою :exc:`ValueError`."
 
-#: ../../library/ssl.rst:1861
+#: ../../library/ssl.rst:1864
 msgid ""
 "Write TLS keys to a keylog file, whenever key material is generated or "
 "received. The keylog file is designed for debugging purposes only. The file "
@@ -2749,7 +2755,7 @@ msgstr ""
 "режимі лише додавання. Записи синхронізуються між потоками, але не між "
 "процесами."
 
-#: ../../library/ssl.rst:1871
+#: ../../library/ssl.rst:1874
 msgid ""
 "A :class:`TLSVersion` enum member representing the highest supported TLS "
 "version. The value defaults to :attr:`TLSVersion.MAXIMUM_SUPPORTED`. The "
@@ -2762,7 +2768,7 @@ msgstr ""
 ":attr:`PROTOCOL_TLS`, :attr:`PROTOCOL_TLS_CLIENT` і "
 ":attr:`PROTOCOL_TLS_SERVER`."
 
-#: ../../library/ssl.rst:1876
+#: ../../library/ssl.rst:1879
 msgid ""
 "The attributes :attr:`~SSLContext.maximum_version`, "
 ":attr:`~SSLContext.minimum_version` and :attr:`SSLContext.options` all "
@@ -2780,7 +2786,7 @@ msgstr ""
 "значенням :attr:`TLSVersion.TLSv1_2` не зможе встановити TLS 1.2 "
 "підключення."
 
-#: ../../library/ssl.rst:1889
+#: ../../library/ssl.rst:1892
 msgid ""
 "Like :attr:`SSLContext.maximum_version` except it is the lowest supported "
 "version or :attr:`TLSVersion.MINIMUM_SUPPORTED`."
@@ -2788,7 +2794,7 @@ msgstr ""
 "Як :attr:`SSLContext.maximum_version`, за винятком того, що це найнижча "
 "підтримувана версія або :attr:`TLSVersion.MINIMUM_SUPPORTED`."
 
-#: ../../library/ssl.rst:1896
+#: ../../library/ssl.rst:1899
 msgid ""
 "Control the number of TLS 1.3 session tickets of a "
 ":attr:`PROTOCOL_TLS_SERVER` context. The setting has no impact on TLS 1.0 to"
@@ -2798,7 +2804,7 @@ msgstr ""
 ":attr:`PROTOCOL_TLS_SERVER`. Параметр не впливає на підключення TLS 1.0 до "
 "1.2."
 
-#: ../../library/ssl.rst:1904
+#: ../../library/ssl.rst:1907
 msgid ""
 "An integer representing the set of SSL options enabled on this context. The "
 "default value is :data:`OP_ALL`, but you can specify other options such as "
@@ -2808,11 +2814,11 @@ msgstr ""
 "контексті. Стандартним значенням є :data:`OP_ALL`, але ви можете вказати "
 "інші параметри, наприклад :data:`OP_NO_SSLv2`, об’єднавши їх разом."
 
-#: ../../library/ssl.rst:1908
+#: ../../library/ssl.rst:1911
 msgid ":attr:`SSLContext.options` returns :class:`Options` flags:"
 msgstr ":attr:`SSLContext.options` повертає прапорці :class:`Options`:"
 
-#: ../../library/ssl.rst:1916
+#: ../../library/ssl.rst:1919
 msgid ""
 "All ``OP_NO_SSL*`` and ``OP_NO_TLS*`` options have been deprecated since "
 "Python 3.7. Use :attr:`SSLContext.minimum_version` and "
@@ -2822,7 +2828,7 @@ msgstr ""
 "3.7. Замість цього використовуйте :attr:`SSLContext.minimum_version` і "
 ":attr:`SSLContext.maximum_version`."
 
-#: ../../library/ssl.rst:1922
+#: ../../library/ssl.rst:1925
 msgid ""
 "Enable TLS 1.3 post-handshake client authentication. Post-handshake auth is "
 "disabled by default and a server can only request a TLS client certificate "
@@ -2835,7 +2841,7 @@ msgstr ""
 "ввімкнено, сервер може запитувати сертифікат клієнта TLS у будь-який час "
 "після рукостискання."
 
-#: ../../library/ssl.rst:1927
+#: ../../library/ssl.rst:1930
 msgid ""
 "When enabled on client-side sockets, the client signals the server that it "
 "supports post-handshake authentication."
@@ -2843,7 +2849,7 @@ msgstr ""
 "Якщо ввімкнено на сокетах на стороні клієнта, клієнт сигналізує серверу, що "
 "він підтримує автентифікацію після рукостискання."
 
-#: ../../library/ssl.rst:1930
+#: ../../library/ssl.rst:1933
 msgid ""
 "When enabled on server-side sockets, :attr:`SSLContext.verify_mode` must be "
 "set to :data:`CERT_OPTIONAL` or :data:`CERT_REQUIRED`, too. The actual "
@@ -2857,7 +2863,7 @@ msgstr ""
 ":meth:`SSLSocket.verify_client_post_handshake` і не буде виконано деякий "
 "ввід-вивід."
 
-#: ../../library/ssl.rst:1940
+#: ../../library/ssl.rst:1943
 msgid ""
 "The protocol version chosen when constructing the context.  This attribute "
 "is read-only."
@@ -2865,7 +2871,7 @@ msgstr ""
 "Версія протоколу, обрана під час побудови контексту. Цей атрибут доступний "
 "лише для читання."
 
-#: ../../library/ssl.rst:1945
+#: ../../library/ssl.rst:1948
 msgid ""
 "Whether :attr:`~SSLContext.check_hostname` falls back to verify the cert's "
 "subject common name in the absence of a subject alternative name extension "
@@ -2875,13 +2881,13 @@ msgstr ""
 "назви суб’єкта сертифіката за відсутності альтернативного розширення імені "
 "суб’єкта (за умовчанням: істина)."
 
-#: ../../library/ssl.rst:1953
+#: ../../library/ssl.rst:1956
 msgid ""
 "The flag had no effect with OpenSSL before version 1.1.1l. Python 3.8.9, "
 "3.9.3, and 3.10 include workarounds for previous versions."
 msgstr ""
 
-#: ../../library/ssl.rst:1958
+#: ../../library/ssl.rst:1961
 msgid ""
 "An integer representing the `security level "
 "<https://www.openssl.org/docs/manmaster/man3/SSL_CTX_get_security_level.html>`_"
@@ -2891,7 +2897,7 @@ msgstr ""
 "<https://www.openssl.org/docs/manmaster/man3/SSL_CTX_get_security_level.html>`_"
 " для контексту. Цей атрибут доступний лише для читання."
 
-#: ../../library/ssl.rst:1966
+#: ../../library/ssl.rst:1969
 msgid ""
 "The flags for certificate verification operations. You can set flags like "
 ":data:`VERIFY_CRL_CHECK_LEAF` by ORing them together. By default OpenSSL "
@@ -2902,12 +2908,12 @@ msgstr ""
 "замовчуванням OpenSSL не вимагає і не перевіряє списки відкликаних "
 "сертифікатів (CRL)."
 
-#: ../../library/ssl.rst:1972
+#: ../../library/ssl.rst:1975
 msgid ":attr:`SSLContext.verify_flags` returns :class:`VerifyFlags` flags:"
 msgstr ""
 ":attr:`SSLContext.verify_flags` повертає :class:`VerifyFlags` прапорці:"
 
-#: ../../library/ssl.rst:1980
+#: ../../library/ssl.rst:1983
 msgid ""
 "Whether to try to verify other peers' certificates and how to behave if "
 "verification fails.  This attribute must be one of :data:`CERT_NONE`, "
@@ -2917,15 +2923,15 @@ msgstr ""
 "перевірка не вдається. Цей атрибут має бути одним із :data:`CERT_NONE`, "
 ":data:`CERT_OPTIONAL` або :data:`CERT_REQUIRED`."
 
-#: ../../library/ssl.rst:1984
+#: ../../library/ssl.rst:1987
 msgid ":attr:`SSLContext.verify_mode` returns :class:`VerifyMode` enum:"
 msgstr ":attr:`SSLContext.verify_mode` повертає :class:`VerifyMode` enum:"
 
-#: ../../library/ssl.rst:1997
+#: ../../library/ssl.rst:2000
 msgid "Certificates"
 msgstr "Сертифікати"
 
-#: ../../library/ssl.rst:1999
+#: ../../library/ssl.rst:2002
 msgid ""
 "Certificates in general are part of a public-key / private-key system.  In "
 "this system, each *principal*, (which may be a machine, or a person, or an "
@@ -2944,7 +2950,7 @@ msgstr ""
 "за допомогою однієї з частин, ви можете розшифрувати його за допомогою іншої"
 " частини та **тільки** за допомогою іншої частини."
 
-#: ../../library/ssl.rst:2007
+#: ../../library/ssl.rst:2010
 msgid ""
 "A certificate contains information about two principals.  It contains the "
 "name of a *subject*, and the subject's public key.  It also contains a "
@@ -2967,7 +2973,7 @@ msgstr ""
 "Сертифікат також містить інформацію про термін його дії. Це виражається "
 "двома полями, які називаються \"notBefore\" і \"notAfter\"."
 
-#: ../../library/ssl.rst:2017
+#: ../../library/ssl.rst:2020
 msgid ""
 "In the Python use of certificates, a client or server can use a certificate "
 "to prove who they are.  The other side of a network connection can also be "
@@ -2989,7 +2995,7 @@ msgstr ""
 " механікою. Але програмі зазвичай потрібно надати набори сертифікатів, щоб "
 "дозволити цей процес."
 
-#: ../../library/ssl.rst:2027
+#: ../../library/ssl.rst:2030
 msgid ""
 "Python uses files to contain certificates.  They should be formatted as "
 "\"PEM\" (see :rfc:`1422`), which is a base-64 encoded form wrapped with a "
@@ -2999,11 +3005,11 @@ msgstr ""
 "відформатовані як \"PEM\" (див. :rfc:`1422`), який є формою, закодованою на "
 "базі 64, оберненою рядком верхнього та нижнього колонтитулів::"
 
-#: ../../library/ssl.rst:2036
+#: ../../library/ssl.rst:2039
 msgid "Certificate chains"
 msgstr "Ланцюжки сертифікатів"
 
-#: ../../library/ssl.rst:2038
+#: ../../library/ssl.rst:2041
 msgid ""
 "The Python files which contain certificates can contain a sequence of "
 "certificates, sometimes called a *certificate chain*.  This chain should "
@@ -3031,11 +3037,11 @@ msgstr ""
 "сертифікат сервера, до кореневого сертифіката агентства, яке видало "
 "сертифікат центру сертифікації:"
 
-#: ../../library/ssl.rst:2062
+#: ../../library/ssl.rst:2065
 msgid "CA certificates"
 msgstr "сертифікати ЦС"
 
-#: ../../library/ssl.rst:2064
+#: ../../library/ssl.rst:2067
 msgid ""
 "If you are going to require validation of the other side of the connection's"
 " certificate, you need to provide a \"CA certs\" file, filled with the "
@@ -3055,11 +3061,11 @@ msgstr ""
 ":meth:`SSLContext.load_default_certs`, це робиться автоматично за допомогою "
 ":func:`.create_default_context`."
 
-#: ../../library/ssl.rst:2073
+#: ../../library/ssl.rst:2076
 msgid "Combined key and certificate"
 msgstr "Комбінований ключ і сертифікат"
 
-#: ../../library/ssl.rst:2075
+#: ../../library/ssl.rst:2078
 msgid ""
 "Often the private key is stored in the same file as the certificate; in this"
 " case, only the ``certfile`` parameter to :meth:`SSLContext.load_cert_chain`"
@@ -3067,11 +3073,11 @@ msgid ""
 "should come before the first certificate in the certificate chain::"
 msgstr ""
 
-#: ../../library/ssl.rst:2089
+#: ../../library/ssl.rst:2092
 msgid "Self-signed certificates"
 msgstr "Самопідписані сертифікати"
 
-#: ../../library/ssl.rst:2091
+#: ../../library/ssl.rst:2094
 msgid ""
 "If you are going to create a server that provides SSL-encrypted connection "
 "services, you will need to acquire a certificate for that service.  There "
@@ -3087,7 +3093,7 @@ msgstr ""
 "самопідписаного сертифіката. Найпростіший спосіб зробити це за допомогою "
 "пакета OpenSSL, використовуючи щось на зразок наступного:"
 
-#: ../../library/ssl.rst:2120
+#: ../../library/ssl.rst:2123
 msgid ""
 "The disadvantage of a self-signed certificate is that it is its own root "
 "certificate, and no one else will have it in their cache of known (and "
@@ -3097,15 +3103,15 @@ msgstr ""
 "сертифікат, і ніхто інший не матиме його в кеш-пам’яті відомих (і надійних) "
 "кореневих сертифікатів."
 
-#: ../../library/ssl.rst:2126
+#: ../../library/ssl.rst:2129
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/ssl.rst:2129
+#: ../../library/ssl.rst:2132
 msgid "Testing for SSL support"
 msgstr "Тестування підтримки SSL"
 
-#: ../../library/ssl.rst:2131
+#: ../../library/ssl.rst:2134
 msgid ""
 "To test for the presence of SSL support in a Python installation, user code "
 "should use the following idiom::"
@@ -3113,11 +3119,11 @@ msgstr ""
 "Щоб перевірити наявність підтримки SSL у встановленому Python, код "
 "користувача має використовувати таку ідіому:"
 
-#: ../../library/ssl.rst:2142
+#: ../../library/ssl.rst:2145
 msgid "Client-side operation"
 msgstr "Робота на стороні клієнта"
 
-#: ../../library/ssl.rst:2144
+#: ../../library/ssl.rst:2147
 msgid ""
 "This example creates a SSL context with the recommended security settings "
 "for client sockets, including automatic certificate verification::"
@@ -3126,7 +3132,7 @@ msgstr ""
 "безпеки для клієнтських сокетів, включаючи автоматичну перевірку "
 "сертифіката:"
 
-#: ../../library/ssl.rst:2149
+#: ../../library/ssl.rst:2152
 msgid ""
 "If you prefer to tune security settings yourself, you might create a context"
 " from scratch (but beware that you might not get the settings right)::"
@@ -3135,7 +3141,7 @@ msgstr ""
 " контекст з нуля (але пам’ятайте, що ви можете неправильно встановити "
 "параметри):"
 
-#: ../../library/ssl.rst:2156
+#: ../../library/ssl.rst:2159
 msgid ""
 "(this snippet assumes your operating system places a bundle of all CA "
 "certificates in ``/etc/ssl/certs/ca-bundle.crt``; if not, you'll get an "
@@ -3145,7 +3151,7 @@ msgstr ""
 "сертифікатів ЦС у ``/etc/ssl/certs/ca-bundle.crt``; якщо ні, ви отримаєте "
 "повідомлення про помилку, і вам доведеться змінити розташування)"
 
-#: ../../library/ssl.rst:2160
+#: ../../library/ssl.rst:2163
 msgid ""
 "The :data:`PROTOCOL_TLS_CLIENT` protocol configures the context for cert "
 "validation and hostname verification. :attr:`~SSLContext.verify_mode` is set"
@@ -3158,7 +3164,7 @@ msgstr ""
 "встановлено на ``True``. Усі інші протоколи створюють контексти SSL із "
 "незахищеними значеннями за умовчанням."
 
-#: ../../library/ssl.rst:2165
+#: ../../library/ssl.rst:2168
 msgid ""
 "When you use the context to connect to a server, :const:`CERT_REQUIRED` and "
 ":attr:`~SSLContext.check_hostname` validate the server certificate: it "
@@ -3172,11 +3178,11 @@ msgstr ""
 "із сертифікатів ЦС, перевіряє підпис на коректність і перевіряє інші "
 "властивості, такі як дійсність та ідентичність імені хоста::"
 
-#: ../../library/ssl.rst:2175
+#: ../../library/ssl.rst:2178
 msgid "You may then fetch the certificate::"
 msgstr "Потім ви можете отримати сертифікат:"
 
-#: ../../library/ssl.rst:2179
+#: ../../library/ssl.rst:2182
 msgid ""
 "Visual inspection shows that the certificate does identify the desired "
 "service (that is, the HTTPS host ``www.python.org``)::"
@@ -3184,7 +3190,7 @@ msgstr ""
 "Візуальна перевірка показує, що сертифікат ідентифікує потрібну службу "
 "(тобто хост HTTPS ``www.python.org``):"
 
-#: ../../library/ssl.rst:2222
+#: ../../library/ssl.rst:2225
 msgid ""
 "Now the SSL channel is established and the certificate verified, you can "
 "proceed to talk with the server::"
@@ -3192,11 +3198,11 @@ msgstr ""
 "Тепер SSL-канал встановлено та сертифікат перевірено, ви можете продовжити "
 "спілкування з сервером:"
 
-#: ../../library/ssl.rst:2249
+#: ../../library/ssl.rst:2252
 msgid "Server-side operation"
 msgstr "Робота на стороні сервера"
 
-#: ../../library/ssl.rst:2251
+#: ../../library/ssl.rst:2254
 msgid ""
 "For server operation, typically you'll need to have a server certificate, "
 "and private key, each in a file.  You'll first create a context holding the "
@@ -3210,7 +3216,7 @@ msgstr ""
 "відкриєте сокет, прив’яжете його до порту, викличете на ньому :meth:`listen`"
 " і почнете чекати підключення клієнтів::"
 
-#: ../../library/ssl.rst:2266
+#: ../../library/ssl.rst:2269
 msgid ""
 "When a client connects, you'll call :meth:`accept` on the socket to get the "
 "new socket from the other end, and use the context's "
@@ -3222,7 +3228,7 @@ msgstr ""
 ":meth:`SSLContext.wrap_socket`, щоб створити серверний сокет SSL для "
 "зв'язок::"
 
-#: ../../library/ssl.rst:2279
+#: ../../library/ssl.rst:2282
 msgid ""
 "Then you'll read data from the ``connstream`` and do something with it till "
 "you are finished with the client (or the client is finished with you)::"
@@ -3230,7 +3236,7 @@ msgstr ""
 "Потім ви будете читати дані з ``connstream`` і щось робити з ними, поки не "
 "закінчите роботу з клієнтом (або клієнт не закінчить роботу з вами):"
 
-#: ../../library/ssl.rst:2293
+#: ../../library/ssl.rst:2296
 msgid ""
 "And go back to listening for new client connections (of course, a real "
 "server would probably handle each client connection in a separate thread, or"
@@ -3242,11 +3248,11 @@ msgstr ""
 " потоці або переведе сокети в :ref:`неблокуючий режим <ssl-nonblocking>` і "
 "використає цикл подій)."
 
-#: ../../library/ssl.rst:2301
+#: ../../library/ssl.rst:2304
 msgid "Notes on non-blocking sockets"
 msgstr "Примітки щодо неблокуючих розеток"
 
-#: ../../library/ssl.rst:2303
+#: ../../library/ssl.rst:2306
 msgid ""
 "SSL sockets behave slightly different than regular sockets in non-blocking "
 "mode. When working with non-blocking sockets, there are thus several things "
@@ -3255,7 +3261,7 @@ msgstr ""
 "SSL-сокети поводяться дещо інакше, ніж звичайні сокети в неблокуючому "
 "режимі. Працюючи з неблокуючими сокетами, ви повинні знати про кілька речей:"
 
-#: ../../library/ssl.rst:2307
+#: ../../library/ssl.rst:2310
 msgid ""
 "Most :class:`SSLSocket` methods will raise either :exc:`SSLWantWriteError` "
 "or :exc:`SSLWantReadError` instead of :exc:`BlockingIOError` if an I/O "
@@ -3275,7 +3281,7 @@ msgstr ""
 "*читання* з базового сокета, а спроби *читання* з сокета SSL можуть вимагати"
 " попереднього *запису* в базовий сокет."
 
-#: ../../library/ssl.rst:2319
+#: ../../library/ssl.rst:2322
 msgid ""
 "In earlier Python versions, the :meth:`!SSLSocket.send` method returned zero"
 " instead of raising :exc:`SSLWantWriteError` or :exc:`SSLWantReadError`."
@@ -3284,7 +3290,7 @@ msgstr ""
 "замість того, щоб викликати :exc:`SSLWantWriteError` або "
 ":exc:`SSLWantReadError`."
 
-#: ../../library/ssl.rst:2323
+#: ../../library/ssl.rst:2326
 msgid ""
 "Calling :func:`~select.select` tells you that the OS-level socket can be "
 "read from (or written to), but it does not imply that there is sufficient "
@@ -3300,7 +3306,7 @@ msgstr ""
 " :meth:`SSLSocket.send` і повторити спробу після іншого виклику "
 ":func:`~select.select`."
 
-#: ../../library/ssl.rst:2330
+#: ../../library/ssl.rst:2333
 msgid ""
 "Conversely, since the SSL layer has its own framing, a SSL socket may still "
 "have data available for reading without :func:`~select.select` being aware "
@@ -3314,7 +3320,7 @@ msgstr ""
 "вичерпати будь-які потенційно доступні дані, а потім лише заблокувати виклик"
 " :func:`~select.select`, якщо все ще необхідно."
 
-#: ../../library/ssl.rst:2336
+#: ../../library/ssl.rst:2339
 msgid ""
 "(of course, similar provisions apply when using other primitives such as "
 ":func:`~select.poll`, or those in the :mod:`selectors` module)"
@@ -3322,7 +3328,7 @@ msgstr ""
 "(звичайно, подібні положення застосовуються при використанні інших "
 "примітивів, таких як :func:`~select.poll` або в модулі :mod:`selectors`)"
 
-#: ../../library/ssl.rst:2339
+#: ../../library/ssl.rst:2342
 msgid ""
 "The SSL handshake itself will be non-blocking: the "
 ":meth:`SSLSocket.do_handshake` method has to be retried until it returns "
@@ -3334,7 +3340,7 @@ msgstr ""
 "успішно. Ось короткий опис використання :func:`~select.select` для "
 "очікування готовності сокета::"
 
-#: ../../library/ssl.rst:2355
+#: ../../library/ssl.rst:2358
 msgid ""
 "The :mod:`asyncio` module supports :ref:`non-blocking SSL sockets <ssl-"
 "nonblocking>` and provides a higher level API. It polls for events using the"
@@ -3348,11 +3354,11 @@ msgstr ""
 ":exc:`SSLWantReadError` і :exc:`BlockingIOError`. Він також запускає "
 "рукостискання SSL асинхронно."
 
-#: ../../library/ssl.rst:2364
+#: ../../library/ssl.rst:2367
 msgid "Memory BIO Support"
 msgstr "Підтримка BIO пам'яті"
 
-#: ../../library/ssl.rst:2368
+#: ../../library/ssl.rst:2371
 msgid ""
 "Ever since the SSL module was introduced in Python 2.6, the "
 ":class:`SSLSocket` class has provided two related but distinct areas of "
@@ -3362,15 +3368,15 @@ msgstr ""
 ":class:`SSLSocket` забезпечив дві пов’язані, але різні області "
 "функціональності:"
 
-#: ../../library/ssl.rst:2371
+#: ../../library/ssl.rst:2374
 msgid "SSL protocol handling"
 msgstr "Обробка протоколу SSL"
 
-#: ../../library/ssl.rst:2372
+#: ../../library/ssl.rst:2375
 msgid "Network IO"
 msgstr "Мережа IO"
 
-#: ../../library/ssl.rst:2374
+#: ../../library/ssl.rst:2377
 msgid ""
 "The network IO API is identical to that provided by :class:`socket.socket`, "
 "from which :class:`SSLSocket` also inherits. This allows an SSL socket to be"
@@ -3382,7 +3388,7 @@ msgstr ""
 "сокет SSL як додаткову заміну звичайного сокета, що дозволяє дуже легко "
 "додати підтримку SSL до існуючої програми."
 
-#: ../../library/ssl.rst:2379
+#: ../../library/ssl.rst:2382
 msgid ""
 "Combining SSL protocol handling and network IO usually works well, but there"
 " are some cases where it doesn't. An example is async IO frameworks that "
@@ -3403,7 +3409,7 @@ msgstr ""
 "надається зменшений варіант :class:`SSLSocket` під назвою "
 ":class:`SSLObject`."
 
-#: ../../library/ssl.rst:2390
+#: ../../library/ssl.rst:2393
 msgid ""
 "A reduced-scope variant of :class:`SSLSocket` representing an SSL protocol "
 "instance that does not contain any network IO methods. This class is "
@@ -3415,7 +3421,7 @@ msgstr ""
 "зазвичай використовується авторами фреймворків, які хочуть реалізувати "
 "асинхронний IO для SSL через буфери пам’яті."
 
-#: ../../library/ssl.rst:2395
+#: ../../library/ssl.rst:2398
 msgid ""
 "This class implements an interface on top of a low-level SSL object as "
 "implemented by OpenSSL. This object captures the state of an SSL connection "
@@ -3427,7 +3433,7 @@ msgstr ""
 "IO. IO потрібно виконувати через окремі об’єкти \"BIO\", які є рівнем "
 "абстракції IO OpenSSL."
 
-#: ../../library/ssl.rst:2400
+#: ../../library/ssl.rst:2403
 msgid ""
 "This class has no public constructor.  An :class:`SSLObject` instance must "
 "be created using the :meth:`~SSLContext.wrap_bio` method. This method will "
@@ -3442,94 +3448,94 @@ msgstr ""
 " BIO використовується для передачі даних від Python до примірника протоколу "
 "SSL, тоді як *вихідний* BIO використовується для передачі даних навпаки."
 
-#: ../../library/ssl.rst:2407
+#: ../../library/ssl.rst:2410
 msgid "The following methods are available:"
 msgstr "Доступні такі методи:"
 
-#: ../../library/ssl.rst:2409
+#: ../../library/ssl.rst:2412
 msgid ":attr:`~SSLSocket.context`"
 msgstr ":attr:`~SSLSocket.context`"
 
-#: ../../library/ssl.rst:2410
+#: ../../library/ssl.rst:2413
 msgid ":attr:`~SSLSocket.server_side`"
 msgstr ":attr:`~SSLSocket.сторона_сервера`"
 
-#: ../../library/ssl.rst:2411
+#: ../../library/ssl.rst:2414
 msgid ":attr:`~SSLSocket.server_hostname`"
 msgstr ":attr:`~SSLSocket.сервер_hostname`"
 
-#: ../../library/ssl.rst:2412
+#: ../../library/ssl.rst:2415
 msgid ":attr:`~SSLSocket.session`"
 msgstr ":attr:`~SSLSocket.session`"
 
-#: ../../library/ssl.rst:2413
+#: ../../library/ssl.rst:2416
 msgid ":attr:`~SSLSocket.session_reused`"
 msgstr ":attr:`~SSLSocket.session_reused`"
 
-#: ../../library/ssl.rst:2414
+#: ../../library/ssl.rst:2417
 msgid ":meth:`~SSLSocket.read`"
 msgstr ":meth:`~SSLSocket.read`"
 
-#: ../../library/ssl.rst:2415
+#: ../../library/ssl.rst:2418
 msgid ":meth:`~SSLSocket.write`"
 msgstr ":meth:`~SSLSocket.write`"
 
-#: ../../library/ssl.rst:2416
+#: ../../library/ssl.rst:2419
 msgid ":meth:`~SSLSocket.getpeercert`"
 msgstr ":meth:`~SSLSocket.getpeercert`"
 
-#: ../../library/ssl.rst:2417
+#: ../../library/ssl.rst:2420
 msgid ":meth:`~SSLSocket.selected_alpn_protocol`"
 msgstr ":meth:`~SSLSocket.selected_alpn_protocol`"
 
-#: ../../library/ssl.rst:2418
+#: ../../library/ssl.rst:2421
 msgid ":meth:`~SSLSocket.selected_npn_protocol`"
 msgstr ":meth:`~SSLSocket.selected_npn_protocol`"
 
-#: ../../library/ssl.rst:2419
+#: ../../library/ssl.rst:2422
 msgid ":meth:`~SSLSocket.cipher`"
 msgstr ":meth:`~SSLSocket.cipher`"
 
-#: ../../library/ssl.rst:2420
+#: ../../library/ssl.rst:2423
 msgid ":meth:`~SSLSocket.shared_ciphers`"
 msgstr ":meth:`~SSLSocket.shared_ciphers`"
 
-#: ../../library/ssl.rst:2421
+#: ../../library/ssl.rst:2424
 msgid ":meth:`~SSLSocket.compression`"
 msgstr ":meth:`~SSLSocket.compression`"
 
-#: ../../library/ssl.rst:2422
+#: ../../library/ssl.rst:2425
 msgid ":meth:`~SSLSocket.pending`"
 msgstr ":meth:`~SSLSocket.очікує`"
 
-#: ../../library/ssl.rst:2423
+#: ../../library/ssl.rst:2426
 msgid ":meth:`~SSLSocket.do_handshake`"
 msgstr ":meth:`~SSLSocket.do_handshake`"
 
-#: ../../library/ssl.rst:2424
+#: ../../library/ssl.rst:2427
 msgid ":meth:`~SSLSocket.verify_client_post_handshake`"
 msgstr ":meth:`~SSLSocket.verify_client_post_handshake`"
 
-#: ../../library/ssl.rst:2425
+#: ../../library/ssl.rst:2428
 msgid ":meth:`~SSLSocket.unwrap`"
 msgstr ":meth:`~SSLSocket.unwrap`"
 
-#: ../../library/ssl.rst:2426
+#: ../../library/ssl.rst:2429
 msgid ":meth:`~SSLSocket.get_channel_binding`"
 msgstr ":meth:`~SSLSocket.get_channel_binding`"
 
-#: ../../library/ssl.rst:2427
+#: ../../library/ssl.rst:2430
 msgid ":meth:`~SSLSocket.version`"
 msgstr ":meth:`~SSLSocket.version`"
 
-#: ../../library/ssl.rst:2429
+#: ../../library/ssl.rst:2432
 msgid ""
 "When compared to :class:`SSLSocket`, this object lacks the following "
 "features:"
 msgstr ""
 "У порівнянні з :class:`SSLSocket` цьому об’єкту бракує наступних функцій:"
 
-#: ../../library/ssl.rst:2432
+#: ../../library/ssl.rst:2435
 msgid ""
 "Any form of network IO; ``recv()`` and ``send()`` read and write only to the"
 " underlying :class:`MemoryBIO` buffers."
@@ -3537,7 +3543,7 @@ msgstr ""
 "Будь-яка форма мережевого вводу-виводу; ``recv()`` і ``send()`` читають і "
 "записують лише в базові буфери :class:`MemoryBIO`."
 
-#: ../../library/ssl.rst:2435
+#: ../../library/ssl.rst:2438
 msgid ""
 "There is no *do_handshake_on_connect* machinery. You must always manually "
 "call :meth:`~SSLSocket.do_handshake` to start the handshake."
@@ -3545,7 +3551,7 @@ msgstr ""
 "Не існує механізму *do_handshake_on_connect*. Ви завжди повинні вручну "
 "викликати :meth:`~SSLSocket.do_handshake`, щоб почати рукостискання."
 
-#: ../../library/ssl.rst:2438
+#: ../../library/ssl.rst:2441
 msgid ""
 "There is no handling of *suppress_ragged_eofs*. All end-of-file conditions "
 "that are in violation of the protocol are reported via the "
@@ -3554,7 +3560,7 @@ msgstr ""
 "Немає обробки *suppress_ragged_eofs*. Усі умови кінця файлу, які порушують "
 "протокол, повідомляються через виняток :exc:`SSLEOFError`."
 
-#: ../../library/ssl.rst:2442
+#: ../../library/ssl.rst:2445
 msgid ""
 "The method :meth:`~SSLSocket.unwrap` call does not return anything, unlike "
 "for an SSL socket where it returns the underlying socket."
@@ -3562,7 +3568,7 @@ msgstr ""
 "Виклик методу :meth:`~SSLSocket.unwrap` нічого не повертає, на відміну від "
 "сокета SSL, де він повертає основний сокет."
 
-#: ../../library/ssl.rst:2445
+#: ../../library/ssl.rst:2448
 msgid ""
 "The *server_name_callback* callback passed to "
 ":meth:`SSLContext.set_servername_callback` will get an :class:`SSLObject` "
@@ -3572,11 +3578,11 @@ msgstr ""
 ":meth:`SSLContext.set_servername_callback`, отримає екземпляр "
 ":class:`SSLObject` замість екземпляра :class:`SSLSocket` як перший параметр."
 
-#: ../../library/ssl.rst:2449
+#: ../../library/ssl.rst:2452
 msgid "Some notes related to the use of :class:`SSLObject`:"
 msgstr "Деякі зауваження щодо використання :class:`SSLObject`:"
 
-#: ../../library/ssl.rst:2451
+#: ../../library/ssl.rst:2454
 msgid ""
 "All IO on an :class:`SSLObject` is :ref:`non-blocking <ssl-nonblocking>`. "
 "This means that for example :meth:`~SSLSocket.read` will raise an "
@@ -3588,14 +3594,14 @@ msgstr ""
 ":exc:`SSLWantReadError`, якщо йому потрібно більше даних, ніж доступно у "
 "вхідному BIO."
 
-#: ../../library/ssl.rst:2456
+#: ../../library/ssl.rst:2459
 msgid ""
 ":class:`SSLObject` instances must be created with "
 ":meth:`~SSLContext.wrap_bio`. In earlier versions, it was possible to create"
 " instances directly. This was never documented or officially supported."
 msgstr ""
 
-#: ../../library/ssl.rst:2462
+#: ../../library/ssl.rst:2465
 msgid ""
 "An SSLObject communicates with the outside world using memory buffers. The "
 "class :class:`MemoryBIO` provides a memory buffer that can be used for this "
@@ -3605,7 +3611,7 @@ msgstr ""
 " :class:`MemoryBIO` забезпечує буфер пам’яті, який можна використовувати для"
 " цієї мети. Він обертає об’єкт BIO пам’яті OpenSSL (Basic IO):"
 
-#: ../../library/ssl.rst:2468
+#: ../../library/ssl.rst:2471
 msgid ""
 "A memory buffer that can be used to pass data between Python and an SSL "
 "protocol instance."
@@ -3613,11 +3619,11 @@ msgstr ""
 "Буфер пам’яті, який можна використовувати для передачі даних між Python та "
 "екземпляром протоколу SSL."
 
-#: ../../library/ssl.rst:2473
+#: ../../library/ssl.rst:2476
 msgid "Return the number of bytes currently in the memory buffer."
 msgstr "Повертає кількість байтів у буфері пам'яті."
 
-#: ../../library/ssl.rst:2477
+#: ../../library/ssl.rst:2480
 msgid ""
 "A boolean indicating whether the memory BIO is current at the end-of-file "
 "position."
@@ -3625,7 +3631,7 @@ msgstr ""
 "Логічне значення, яке вказує, чи є BIO пам’яті поточним у позиції кінця "
 "файлу."
 
-#: ../../library/ssl.rst:2482
+#: ../../library/ssl.rst:2485
 msgid ""
 "Read up to *n* bytes from the memory buffer. If *n* is not specified or "
 "negative, all bytes are returned."
@@ -3633,7 +3639,7 @@ msgstr ""
 "Прочитати до *n* байт із буфера пам’яті. Якщо *n* не вказано або має "
 "негативне значення, повертаються всі байти."
 
-#: ../../library/ssl.rst:2487
+#: ../../library/ssl.rst:2490
 msgid ""
 "Write the bytes from *buf* to the memory BIO. The *buf* argument must be an "
 "object supporting the buffer protocol."
@@ -3641,7 +3647,7 @@ msgstr ""
 "Запишіть байти з *buf* в пам'ять BIO. Аргумент *buf* має бути об’єктом, що "
 "підтримує протокол буфера."
 
-#: ../../library/ssl.rst:2490
+#: ../../library/ssl.rst:2493
 msgid ""
 "The return value is the number of bytes written, which is always equal to "
 "the length of *buf*."
@@ -3649,7 +3655,7 @@ msgstr ""
 "Поверненим значенням є кількість записаних байтів, яка завжди дорівнює "
 "довжині *buf*."
 
-#: ../../library/ssl.rst:2495
+#: ../../library/ssl.rst:2498
 msgid ""
 "Write an EOF marker to the memory BIO. After this method has been called, it"
 " is illegal to call :meth:`~MemoryBIO.write`. The attribute :attr:`eof` will"
@@ -3659,23 +3665,23 @@ msgstr ""
 ":meth:`~MemoryBIO.write` заборонено. Атрибут :attr:`eof` стане істинним "
 "після того, як усі дані, які зараз знаходяться в буфері, будуть прочитані."
 
-#: ../../library/ssl.rst:2501
+#: ../../library/ssl.rst:2504
 msgid "SSL session"
 msgstr "Сеанс SSL"
 
-#: ../../library/ssl.rst:2507
+#: ../../library/ssl.rst:2510
 msgid "Session object used by :attr:`~SSLSocket.session`."
 msgstr "Об’єкт сеансу, який використовує :attr:`~SSLSocket.session`."
 
-#: ../../library/ssl.rst:2519
+#: ../../library/ssl.rst:2522
 msgid "Security considerations"
 msgstr "Міркування безпеки"
 
-#: ../../library/ssl.rst:2522
+#: ../../library/ssl.rst:2525
 msgid "Best defaults"
 msgstr "Найкращі параметри за замовчуванням"
 
-#: ../../library/ssl.rst:2524
+#: ../../library/ssl.rst:2527
 msgid ""
 "For **client use**, if you don't have any special requirements for your "
 "security policy, it is highly recommended that you use the "
@@ -3691,7 +3697,7 @@ msgstr ""
 "імені хоста, а також спробує вибрати достатньо безпечний протокол і "
 "налаштування шифру."
 
-#: ../../library/ssl.rst:2531
+#: ../../library/ssl.rst:2534
 msgid ""
 "For example, here is how you would use the :class:`smtplib.SMTP` class to "
 "create a trusted, secure connection to a SMTP server::"
@@ -3699,7 +3705,7 @@ msgstr ""
 "Наприклад, ось як можна використовувати клас :class:`smtplib.SMTP` для "
 "створення надійного безпечного з’єднання з сервером SMTP:"
 
-#: ../../library/ssl.rst:2540
+#: ../../library/ssl.rst:2543
 msgid ""
 "If a client certificate is needed for the connection, it can be added with "
 ":meth:`SSLContext.load_cert_chain`."
@@ -3707,7 +3713,7 @@ msgstr ""
 "Якщо для підключення потрібен сертифікат клієнта, його можна додати за "
 "допомогою :meth:`SSSLContext.load_cert_chain`."
 
-#: ../../library/ssl.rst:2543
+#: ../../library/ssl.rst:2546
 msgid ""
 "By contrast, if you create the SSL context by calling the "
 ":class:`SSLContext` constructor yourself, it will not have certificate "
@@ -3719,15 +3725,15 @@ msgstr ""
 "перевірку сертифіката, ні перевірку імені хоста. Якщо ви це зробите, будь "
 "ласка, прочитайте параграфи нижче, щоб досягти хорошого рівня безпеки."
 
-#: ../../library/ssl.rst:2549
+#: ../../library/ssl.rst:2552
 msgid "Manual settings"
 msgstr "Ручні налаштування"
 
-#: ../../library/ssl.rst:2552
+#: ../../library/ssl.rst:2555
 msgid "Verifying certificates"
 msgstr "Перевірка сертифікатів"
 
-#: ../../library/ssl.rst:2554
+#: ../../library/ssl.rst:2557
 msgid ""
 "When calling the :class:`SSLContext` constructor directly, "
 ":const:`CERT_NONE` is the default.  Since it does not authenticate the other"
@@ -3742,7 +3748,7 @@ msgid ""
 ":attr:`SSLContext.check_hostname` is enabled."
 msgstr ""
 
-#: ../../library/ssl.rst:2566
+#: ../../library/ssl.rst:2569
 msgid ""
 "Hostname matchings is now performed by OpenSSL. Python no longer uses "
 ":func:`match_hostname`."
@@ -3750,7 +3756,7 @@ msgstr ""
 "Зіставлення імен хостів тепер виконує OpenSSL. Python більше не використовує"
 " :func:`match_hostname`."
 
-#: ../../library/ssl.rst:2570
+#: ../../library/ssl.rst:2573
 msgid ""
 "In server mode, if you want to authenticate your clients using the SSL layer"
 " (rather than using a higher-level authentication mechanism), you'll also "
@@ -3762,11 +3768,11 @@ msgstr ""
 " також доведеться вказати :const:`CERT_REQUIRED` і так само перевірити "
 "сертифікат клієнта."
 
-#: ../../library/ssl.rst:2576
+#: ../../library/ssl.rst:2579
 msgid "Protocol versions"
 msgstr "Версії протоколу"
 
-#: ../../library/ssl.rst:2578
+#: ../../library/ssl.rst:2581
 msgid ""
 "SSL versions 2 and 3 are considered insecure and are therefore dangerous to "
 "use.  If you want maximum compatibility between clients and servers, it is "
@@ -3780,7 +3786,7 @@ msgstr ""
 ":const:`PROTOCOL_TLS_SERVER` як версію протоколу. SSLv2 і SSLv3 вимкнено за "
 "замовчуванням."
 
-#: ../../library/ssl.rst:2591
+#: ../../library/ssl.rst:2594
 msgid ""
 "The SSL context created above will only allow TLSv1.3 and later (if "
 "supported by your system) connections to a server. "
@@ -3788,11 +3794,11 @@ msgid ""
 "checks by default. You have to load certificates into the context."
 msgstr ""
 
-#: ../../library/ssl.rst:2598
+#: ../../library/ssl.rst:2601
 msgid "Cipher selection"
 msgstr "Вибір шифру"
 
-#: ../../library/ssl.rst:2600
+#: ../../library/ssl.rst:2603
 msgid ""
 "If you have advanced security requirements, fine-tuning of the ciphers "
 "enabled when negotiating a SSL session is possible through the "
@@ -3806,11 +3812,11 @@ msgid ""
 "on your system."
 msgstr ""
 
-#: ../../library/ssl.rst:2611
+#: ../../library/ssl.rst:2614
 msgid "Multi-processing"
 msgstr "Багатопроцесорність"
 
-#: ../../library/ssl.rst:2613
+#: ../../library/ssl.rst:2616
 msgid ""
 "If using this module as part of a multi-processed application (using, for "
 "example the :mod:`multiprocessing` or :mod:`concurrent.futures` modules), be"
@@ -3821,11 +3827,11 @@ msgid ""
 "sufficient."
 msgstr ""
 
-#: ../../library/ssl.rst:2625
+#: ../../library/ssl.rst:2628
 msgid "TLS 1.3"
 msgstr "TLS 1.3"
 
-#: ../../library/ssl.rst:2629
+#: ../../library/ssl.rst:2632
 msgid ""
 "The TLS 1.3 protocol behaves slightly differently than previous version of "
 "TLS/SSL. Some new TLS 1.3 features are not yet available."
@@ -3833,7 +3839,7 @@ msgstr ""
 "Протокол TLS 1.3 працює дещо інакше, ніж попередня версія TLS/SSL. Деякі "
 "нові функції TLS 1.3 ще недоступні."
 
-#: ../../library/ssl.rst:2632
+#: ../../library/ssl.rst:2635
 msgid ""
 "TLS 1.3 uses a disjunct set of cipher suites. All AES-GCM and ChaCha20 "
 "cipher suites are enabled by default.  The method "
@@ -3845,7 +3851,7 @@ msgstr ""
 ":meth:`SSLContext.set_ciphers` ще не може ввімкнути чи вимкнути будь-які "
 "шифри TLS 1.3, але :meth:`SSLContext.get_ciphers` повертає їх."
 
-#: ../../library/ssl.rst:2636
+#: ../../library/ssl.rst:2639
 msgid ""
 "Session tickets are no longer sent as part of the initial handshake and are "
 "handled differently.  :attr:`SSLSocket.session` and :class:`SSLSession` are "
@@ -3855,7 +3861,7 @@ msgstr ""
 "та обробляються інакше. :attr:`SSLSocket.session` і :class:`SSLSession` "
 "несумісні з TLS 1.3."
 
-#: ../../library/ssl.rst:2639
+#: ../../library/ssl.rst:2642
 msgid ""
 "Client-side certificates are also no longer verified during the initial "
 "handshake.  A server can request a certificate at any time.  Clients process"
@@ -3867,7 +3873,7 @@ msgstr ""
 "обробляють запити на сертифікати, коли вони надсилають або отримують дані "
 "програми з сервера."
 
-#: ../../library/ssl.rst:2643
+#: ../../library/ssl.rst:2646
 msgid ""
 "TLS 1.3 features like early data, deferred TLS client cert request, "
 "signature algorithm configuration, and rekeying are not supported yet."
@@ -3876,15 +3882,15 @@ msgstr ""
 " TLS, конфігурація алгоритму підпису та повторне введення ключів, ще не "
 "підтримуються."
 
-#: ../../library/ssl.rst:2650
+#: ../../library/ssl.rst:2653
 msgid "Class :class:`socket.socket`"
 msgstr "Клас :class:`socket.socket`"
 
-#: ../../library/ssl.rst:2650
+#: ../../library/ssl.rst:2653
 msgid "Documentation of underlying :mod:`socket` class"
 msgstr "Документація основного класу :mod:`socket`"
 
-#: ../../library/ssl.rst:2653
+#: ../../library/ssl.rst:2656
 msgid ""
 "`SSL/TLS Strong Encryption: An Introduction "
 "<https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html>`_"
@@ -3892,11 +3898,11 @@ msgstr ""
 "`Надійне шифрування SSL/TLS: Вступ "
 "<https://httpd.apache.org/docs/trunk/en/ssl/ssl_intro.html>`_"
 
-#: ../../library/ssl.rst:2653
+#: ../../library/ssl.rst:2656
 msgid "Intro from the Apache HTTP Server documentation"
 msgstr "Введення з документації Apache HTTP Server"
 
-#: ../../library/ssl.rst:2656
+#: ../../library/ssl.rst:2659
 msgid ""
 ":rfc:`RFC 1422: Privacy Enhancement for Internet Electronic Mail: Part II: "
 "Certificate-Based Key Management <1422>`"
@@ -3904,19 +3910,19 @@ msgstr ""
 ":rfc:`RFC 1422: Покращення конфіденційності електронної пошти в Інтернеті: "
 "Частина II: Керування ключами на основі сертифікатів <1422>`"
 
-#: ../../library/ssl.rst:2656
+#: ../../library/ssl.rst:2659
 msgid "Steve Kent"
 msgstr "Стів Кент"
 
-#: ../../library/ssl.rst:2659
+#: ../../library/ssl.rst:2662
 msgid ":rfc:`RFC 4086: Randomness Requirements for Security <4086>`"
 msgstr ":rfc:`RFC 4086: Вимоги до випадковості для безпеки <4086>`"
 
-#: ../../library/ssl.rst:2659
+#: ../../library/ssl.rst:2662
 msgid "Donald E., Jeffrey I. Schiller"
 msgstr "Дональд Е., Джеффрі І. Шиллер"
 
-#: ../../library/ssl.rst:2662
+#: ../../library/ssl.rst:2665
 msgid ""
 ":rfc:`RFC 5280: Internet X.509 Public Key Infrastructure Certificate and "
 "Certificate Revocation List (CRL) Profile <5280>`"
@@ -3924,11 +3930,11 @@ msgstr ""
 ":rfc:`RFC 5280: Сертифікат інфраструктури відкритих ключів Інтернету X.509 і"
 " профіль відкликаних сертифікатів (CRL) <5280>`"
 
-#: ../../library/ssl.rst:2662
+#: ../../library/ssl.rst:2665
 msgid "D. Cooper"
 msgstr "Д. Купер"
 
-#: ../../library/ssl.rst:2665
+#: ../../library/ssl.rst:2668
 msgid ""
 ":rfc:`RFC 5246: The Transport Layer Security (TLS) Protocol Version 1.2 "
 "<5246>`"
@@ -3936,19 +3942,19 @@ msgstr ""
 ":rfc:`RFC 5246: Протокол безпеки транспортного рівня (TLS) версії 1.2 "
 "<5246>`"
 
-#: ../../library/ssl.rst:2665
+#: ../../library/ssl.rst:2668
 msgid "T. Dierks et. al."
 msgstr "Т. Діркс та ін. al."
 
-#: ../../library/ssl.rst:2668
+#: ../../library/ssl.rst:2671
 msgid ":rfc:`RFC 6066: Transport Layer Security (TLS) Extensions <6066>`"
 msgstr ":rfc:`RFC 6066: Розширення безпеки транспортного рівня (TLS) <6066>`"
 
-#: ../../library/ssl.rst:2668
+#: ../../library/ssl.rst:2671
 msgid "D. Eastlake"
 msgstr "Д. Істлейк"
 
-#: ../../library/ssl.rst:2671
+#: ../../library/ssl.rst:2674
 msgid ""
 "`IANA TLS: Transport Layer Security (TLS) Parameters "
 "<https://www.iana.org/assignments/tls-parameters/tls-parameters.xml>`_"
@@ -3956,11 +3962,11 @@ msgstr ""
 "`IANA TLS: Параметри безпеки транспортного рівня (TLS) "
 "<https://www.iana.org/assignments/tls-parameters/tls-parameters.xml>`_"
 
-#: ../../library/ssl.rst:2671
+#: ../../library/ssl.rst:2674
 msgid "IANA"
 msgstr "IANA"
 
-#: ../../library/ssl.rst:2674
+#: ../../library/ssl.rst:2677
 msgid ""
 ":rfc:`RFC 7525: Recommendations for Secure Use of Transport Layer Security "
 "(TLS) and Datagram Transport Layer Security (DTLS) <7525>`"
@@ -3969,11 +3975,11 @@ msgstr ""
 "транспортного рівня (TLS) і захисту транспортного рівня датаграм (DTLS) "
 "<7525>`"
 
-#: ../../library/ssl.rst:2674
+#: ../../library/ssl.rst:2677
 msgid "IETF"
 msgstr "IETF"
 
-#: ../../library/ssl.rst:2676
+#: ../../library/ssl.rst:2679
 msgid ""
 "`Mozilla's Server Side TLS recommendations "
 "<https://wiki.mozilla.org/Security/Server_Side_TLS>`_"
@@ -3981,7 +3987,7 @@ msgstr ""
 "`Рекомендації TLS на стороні сервера Mozilla "
 "<https://wiki.mozilla.org/Security/Server_Side_TLS>`_"
 
-#: ../../library/ssl.rst:2677
+#: ../../library/ssl.rst:2680
 msgid "Mozilla"
 msgstr "Mozilla"
 
@@ -4009,10 +4015,10 @@ msgstr ""
 msgid "Secure Sockets Layer"
 msgstr ""
 
-#: ../../library/ssl.rst:1990
+#: ../../library/ssl.rst:1993
 msgid "certificates"
 msgstr "сертифікати"
 
-#: ../../library/ssl.rst:1992
+#: ../../library/ssl.rst:1995
 msgid "X509 certificate"
 msgstr ""
