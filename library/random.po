@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-25 01:09+0000\n"
+"POT-Creation-Date: 2024-03-01 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Taras Kuzyo <kuzyo.taras@gmail.com>, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -529,12 +529,10 @@ msgstr ""
 #: ../../library/random.rst:303
 msgid ""
 "The end-point value ``b`` may or may not be included in the range depending "
-"on floating-point rounding in the equation ``a + (b-a) * random()``."
+"on floating-point rounding in the expression ``a + (b-a) * random()``."
 msgstr ""
-"Кінцеве значення ``b`` може або не може бути включено в діапазон залежно від"
-" округлення числа з плаваючою комою в рівнянні ``a + (b-a) * random()``."
 
-#: ../../library/random.rst:309
+#: ../../library/random.rst:310
 msgid ""
 "Return a random floating point number *N* such that ``low <= N <= high`` and"
 " with the specified *mode* between those bounds.  The *low* and *high* "
@@ -546,7 +544,7 @@ msgstr ""
 "за умовчанням дорівнюють нулю та одиниці. Аргумент *mode* за замовчуванням "
 "дорівнює середній точці між межами, що дає симетричний розподіл."
 
-#: ../../library/random.rst:317
+#: ../../library/random.rst:318
 msgid ""
 "Beta distribution.  Conditions on the parameters are ``alpha > 0`` and "
 "``beta > 0``. Returned values range between 0 and 1."
@@ -554,7 +552,7 @@ msgstr ""
 "Бета-розповсюдження. Умови параметрів: ``альфа > 0`` і ``бета > 0``. "
 "Діапазон повернених значень від 0 до 1."
 
-#: ../../library/random.rst:323
+#: ../../library/random.rst:324
 msgid ""
 "Exponential distribution.  *lambd* is 1.0 divided by the desired mean.  It "
 "should be nonzero.  (The parameter would be called \"lambda\", but that is a"
@@ -568,11 +566,11 @@ msgstr ""
 "варіюються від 0 до нескінченності, якщо *lambd* додатне, і від "
 "нескінченності до 0, якщо *lambd* є від’ємним."
 
-#: ../../library/random.rst:329
+#: ../../library/random.rst:330
 msgid "Added the default value for ``lambd``."
 msgstr ""
 
-#: ../../library/random.rst:335
+#: ../../library/random.rst:336
 msgid ""
 "Gamma distribution.  (*Not* the gamma function!)  The shape and scale "
 "parameters, *alpha* and *beta*, must have positive values. (Calling "
@@ -580,18 +578,18 @@ msgid ""
 "scale)."
 msgstr ""
 
-#: ../../library/random.rst:340
+#: ../../library/random.rst:341
 msgid "The probability distribution function is::"
 msgstr "Функція розподілу ймовірностей:"
 
-#: ../../library/random.rst:349
+#: ../../library/random.rst:350
 msgid ""
 "Normal distribution, also called the Gaussian distribution. *mu* is the "
 "mean, and *sigma* is the standard deviation.  This is slightly faster than "
 "the :func:`normalvariate` function defined below."
 msgstr ""
 
-#: ../../library/random.rst:354
+#: ../../library/random.rst:355
 msgid ""
 "Multithreading note:  When two threads call this function simultaneously, it"
 " is possible that they will receive the same return value.  This can be "
@@ -606,11 +604,11 @@ msgstr ""
 "Натомість використовуйте повільнішу, але потокобезпечну функцію "
 ":func:`normalvariate`."
 
-#: ../../library/random.rst:361 ../../library/random.rst:377
+#: ../../library/random.rst:362 ../../library/random.rst:378
 msgid "*mu* and *sigma* now have default arguments."
 msgstr ""
 
-#: ../../library/random.rst:367
+#: ../../library/random.rst:368
 msgid ""
 "Log normal distribution.  If you take the natural logarithm of this "
 "distribution, you'll get a normal distribution with mean *mu* and standard "
@@ -621,14 +619,14 @@ msgstr ""
 "ви отримаєте нормальний розподіл із середнім *mu* і стандартним відхиленням "
 "*sigma*. *mu* може мати будь-яке значення, а *sigma* має бути більше нуля."
 
-#: ../../library/random.rst:375
+#: ../../library/random.rst:376
 msgid ""
 "Normal distribution.  *mu* is the mean, and *sigma* is the standard "
 "deviation."
 msgstr ""
 "Нормальний розподіл. *mu* — середнє, а *sigma* — стандартне відхилення."
 
-#: ../../library/random.rst:383
+#: ../../library/random.rst:384
 msgid ""
 "*mu* is the mean angle, expressed in radians between 0 and 2\\*\\ *pi*, and "
 "*kappa* is the concentration parameter, which must be greater than or equal "
@@ -640,22 +638,22 @@ msgstr ""
 "*kappa* дорівнює нулю, цей розподіл зменшується до рівномірного випадкового "
 "кута в діапазоні від 0 до 2\\*\\ *pi*."
 
-#: ../../library/random.rst:391
+#: ../../library/random.rst:392
 msgid "Pareto distribution.  *alpha* is the shape parameter."
 msgstr "Розподіл Парето. *альфа* — це параметр форми."
 
-#: ../../library/random.rst:396
+#: ../../library/random.rst:397
 msgid ""
 "Weibull distribution.  *alpha* is the scale parameter and *beta* is the "
 "shape parameter."
 msgstr ""
 "Розподіл Вейбулла. *альфа* — параметр масштабу, а *бета* — параметр форми."
 
-#: ../../library/random.rst:401
+#: ../../library/random.rst:402
 msgid "Alternative Generator"
 msgstr "Альтернативний генератор"
 
-#: ../../library/random.rst:405
+#: ../../library/random.rst:406
 msgid ""
 "Class that implements the default pseudo-random number generator used by the"
 " :mod:`random` module."
@@ -663,56 +661,56 @@ msgstr ""
 "Клас, який реалізує генератор псевдовипадкових чисел за замовчуванням, який "
 "використовується модулем :mod:`random`."
 
-#: ../../library/random.rst:408
+#: ../../library/random.rst:409
 msgid ""
 "Formerly the *seed* could be any hashable object.  Now it is limited to: "
 "``None``, :class:`int`, :class:`float`, :class:`str`, :class:`bytes`, or "
 ":class:`bytearray`."
 msgstr ""
 
-#: ../../library/random.rst:413
+#: ../../library/random.rst:414
 msgid ""
 "Subclasses of :class:`!Random` should override the following methods if they"
 " wish to make use of a different basic generator:"
 msgstr ""
 
-#: ../../library/random.rst:418
+#: ../../library/random.rst:419
 msgid ""
 "Override this method in subclasses to customise the :meth:`~random.seed` "
 "behaviour of :class:`!Random` instances."
 msgstr ""
 
-#: ../../library/random.rst:423
+#: ../../library/random.rst:424
 msgid ""
 "Override this method in subclasses to customise the :meth:`~random.getstate`"
 " behaviour of :class:`!Random` instances."
 msgstr ""
 
-#: ../../library/random.rst:428
+#: ../../library/random.rst:429
 msgid ""
 "Override this method in subclasses to customise the :meth:`~random.setstate`"
 " behaviour of :class:`!Random` instances."
 msgstr ""
 
-#: ../../library/random.rst:433
+#: ../../library/random.rst:434
 msgid ""
 "Override this method in subclasses to customise the :meth:`~random.random` "
 "behaviour of :class:`!Random` instances."
 msgstr ""
 
-#: ../../library/random.rst:436
+#: ../../library/random.rst:437
 msgid ""
 "Optionally, a custom generator subclass can also supply the following "
 "method:"
 msgstr ""
 
-#: ../../library/random.rst:440
+#: ../../library/random.rst:441
 msgid ""
 "Override this method in subclasses to customise the "
 ":meth:`~random.getrandbits` behaviour of :class:`!Random` instances."
 msgstr ""
 
-#: ../../library/random.rst:446
+#: ../../library/random.rst:447
 msgid ""
 "Class that uses the :func:`os.urandom` function for generating random "
 "numbers from sources provided by the operating system. Not available on all "
@@ -728,11 +726,11 @@ msgstr ""
 "Методи :meth:`getstate` і :meth:`setstate` під час виклику викликають "
 ":exc:`NotImplementedError`."
 
-#: ../../library/random.rst:455
+#: ../../library/random.rst:456
 msgid "Notes on Reproducibility"
 msgstr "Примітки щодо відтворюваності"
 
-#: ../../library/random.rst:457
+#: ../../library/random.rst:458
 msgid ""
 "Sometimes it is useful to be able to reproduce the sequences given by a "
 "pseudo-random number generator.  By reusing a seed value, the same sequence "
@@ -740,7 +738,7 @@ msgid ""
 "running."
 msgstr ""
 
-#: ../../library/random.rst:461
+#: ../../library/random.rst:462
 msgid ""
 "Most of the random module's algorithms and seeding functions are subject to "
 "change across Python versions, but two aspects are guaranteed not to change:"
@@ -749,7 +747,7 @@ msgstr ""
 "змінюватися в різних версіях Python, але два аспекти гарантовано не "
 "зміняться:"
 
-#: ../../library/random.rst:464
+#: ../../library/random.rst:465
 msgid ""
 "If a new seeding method is added, then a backward compatible seeder will be "
 "offered."
@@ -757,7 +755,7 @@ msgstr ""
 "Якщо додано новий метод посіву, буде запропоновано зворотно сумісний "
 "сівалка."
 
-#: ../../library/random.rst:467
+#: ../../library/random.rst:468
 msgid ""
 "The generator's :meth:`~Random.random` method will continue to produce the "
 "same sequence when the compatible seeder is given the same seed."
@@ -766,19 +764,19 @@ msgstr ""
 "послідовність, коли сумісному розсівачу буде надано те саме початкове "
 "значення."
 
-#: ../../library/random.rst:473
+#: ../../library/random.rst:474
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/random.rst:475
+#: ../../library/random.rst:476
 msgid "Basic examples::"
 msgstr "Основні приклади::"
 
-#: ../../library/random.rst:503
+#: ../../library/random.rst:504
 msgid "Simulations::"
 msgstr "Симуляції::"
 
-#: ../../library/random.rst:528
+#: ../../library/random.rst:529
 msgid ""
 "Example of `statistical bootstrapping "
 "<https://en.wikipedia.org/wiki/Bootstrapping_(statistics)>`_ using "
@@ -790,7 +788,7 @@ msgstr ""
 " повторної вибірки із заміною для оцінки довірчого інтервалу для середнього "
 "значення вибірки:"
 
-#: ../../library/random.rst:541
+#: ../../library/random.rst:542
 msgid ""
 "Example of a `resampling permutation test "
 "<https://en.wikipedia.org/wiki/Resampling_(statistics)#Permutation_tests>`_ "
@@ -804,12 +802,12 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/P-value>`_ спостережуваної різниці між "
 "ефектами препарату та плацебо::"
 
-#: ../../library/random.rst:568
+#: ../../library/random.rst:569
 msgid ""
 "Simulation of arrival times and service deliveries for a multiserver queue::"
 msgstr "Симуляція часу прибуття та надання послуг для багатосерверної черги::"
 
-#: ../../library/random.rst:597
+#: ../../library/random.rst:598
 msgid ""
 "`Statistics for Hackers <https://www.youtube.com/watch?v=Iq9DzN6mvYA>`_ a "
 "video tutorial by `Jake Vanderplas "
@@ -823,7 +821,7 @@ msgstr ""
 "з використанням лише кількох фундаментальних концепцій, включаючи "
 "моделювання, вибірку, перетасування та перехресну перевірку."
 
-#: ../../library/random.rst:603
+#: ../../library/random.rst:604
 msgid ""
 "`Economics Simulation "
 "<https://nbviewer.org/url/norvig.com/ipython/Economics.ipynb>`_ a simulation"
@@ -833,7 +831,7 @@ msgid ""
 "randrange)."
 msgstr ""
 
-#: ../../library/random.rst:610
+#: ../../library/random.rst:611
 msgid ""
 "`A Concrete Introduction to Probability (using Python) "
 "<https://nbviewer.org/url/norvig.com/ipython/Probability.ipynb>`_ a tutorial"
@@ -842,17 +840,17 @@ msgid ""
 "analysis using Python."
 msgstr ""
 
-#: ../../library/random.rst:618
+#: ../../library/random.rst:619
 msgid "Recipes"
 msgstr "рецепти"
 
-#: ../../library/random.rst:620
+#: ../../library/random.rst:621
 msgid ""
 "These recipes show how to efficiently make random selections from the "
 "combinatoric iterators in the :mod:`itertools` module:"
 msgstr ""
 
-#: ../../library/random.rst:652
+#: ../../library/random.rst:653
 msgid ""
 "The default :func:`.random` returns multiples of 2⁻⁵³ in the range *0.0 ≤ x "
 "< 1.0*.  All such numbers are evenly spaced and are exactly representable as"
@@ -866,7 +864,7 @@ msgstr ""
 "значень у цьому інтервалі не є можливим вибором. Наприклад, "
 "``0,05954861408025609`` не є цілим числом, кратним 2⁻⁵³."
 
-#: ../../library/random.rst:658
+#: ../../library/random.rst:659
 msgid ""
 "The following recipe takes a different approach.  All floats in the interval"
 " are possible selections.  The mantissa comes from a uniform distribution of"
@@ -880,7 +878,7 @@ msgstr ""
 "геометричного розподілу, де показники степеня, менші за *-53*, зустрічаються"
 " вдвічі рідше, ніж наступний більший показник степеня."
 
-#: ../../library/random.rst:680
+#: ../../library/random.rst:681
 msgid ""
 "All :ref:`real valued distributions <real-valued-distributions>` in the "
 "class will use the new method::"
@@ -888,7 +886,7 @@ msgstr ""
 "Усі :ref:`дійсні розподіли <real-valued-distributions>` у класі "
 "використовуватимуть новий метод::"
 
-#: ../../library/random.rst:689
+#: ../../library/random.rst:690
 msgid ""
 "The recipe is conceptually equivalent to an algorithm that chooses from all "
 "the multiples of 2⁻¹⁰⁷⁴ in the range *0.0 ≤ x < 1.0*.  All such numbers are "
@@ -903,7 +901,7 @@ msgstr ""
 "позитивним ненормалізованим числом із плаваючою точкою та дорівнює "
 "``math.ulp(0.0)``.)"
 
-#: ../../library/random.rst:698
+#: ../../library/random.rst:699
 msgid ""
 "`Generating Pseudo-random Floating-Point Values "
 "<https://allendowney.com/research/rand/downey07randfloat.pdf>`_ a paper by "
