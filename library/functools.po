@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-01 14:13+0000\n"
+"POT-Creation-Date: 2024-03-08 21:29+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -787,18 +787,13 @@ msgstr ""
 "*updated*."
 
 #: ../../library/functools.rst:668
-msgid "Automatic addition of the ``__wrapped__`` attribute."
-msgstr "Автоматичне додавання атрибута ``__wrapped__``."
+msgid ""
+"The ``__wrapped__`` attribute is now automatically added. The "
+"``__annotations__`` attribute is now copied by default. Missing attributes "
+"no longer trigger an :exc:`AttributeError`."
+msgstr ""
 
-#: ../../library/functools.rst:671
-msgid "Copying of the ``__annotations__`` attribute by default."
-msgstr "Копіювання атрибута ``__annotations__`` за замовчуванням."
-
-#: ../../library/functools.rst:674
-msgid "Missing attributes no longer trigger an :exc:`AttributeError`."
-msgstr "Відсутні атрибути більше не викликають :exc:`AttributeError`."
-
-#: ../../library/functools.rst:677
+#: ../../library/functools.rst:673
 msgid ""
 "The ``__wrapped__`` attribute now always refers to the wrapped function, "
 "even if that function defined a ``__wrapped__`` attribute. (see "
@@ -808,7 +803,7 @@ msgstr ""
 "навіть якщо ця функція визначила атрибут ``__wrapped__``. (див. "
 ":issue:`17482`)"
 
-#: ../../library/functools.rst:685
+#: ../../library/functools.rst:681
 msgid ""
 "This is a convenience function for invoking :func:`update_wrapper` as a "
 "function decorator when defining a wrapper function.  It is equivalent to "
@@ -820,7 +815,7 @@ msgstr ""
 "``partial(update_wrapper, wrapped=wrapped, assigned=призначено, "
 "updated=updated)``. Наприклад::"
 
-#: ../../library/functools.rst:711
+#: ../../library/functools.rst:707
 msgid ""
 "Without the use of this decorator factory, the name of the example function "
 "would have been ``'wrapper'``, and the docstring of the original "
@@ -830,11 +825,11 @@ msgstr ""
 "``'wrapper``, а рядок документації оригінального :func:`example` було б "
 "втрачено."
 
-#: ../../library/functools.rst:719
+#: ../../library/functools.rst:715
 msgid ":class:`partial` Objects"
 msgstr ":class:`partial` Об'єкти"
 
-#: ../../library/functools.rst:721
+#: ../../library/functools.rst:717
 msgid ""
 ":class:`partial` objects are callable objects created by :func:`partial`. "
 "They have three read-only attributes:"
@@ -842,7 +837,7 @@ msgstr ""
 ":class:`partial` об’єкти – це викликані об’єкти, створені :func:`partial`. "
 "Вони мають три атрибути лише для читання:"
 
-#: ../../library/functools.rst:727
+#: ../../library/functools.rst:723
 msgid ""
 "A callable object or function.  Calls to the :class:`partial` object will be"
 " forwarded to :attr:`func` with new arguments and keywords."
@@ -850,7 +845,7 @@ msgstr ""
 "Викликаний об’єкт або функція. Виклики об’єкта :class:`partial` будуть "
 "перенаправлені до :attr:`func` з новими аргументами та ключовими словами."
 
-#: ../../library/functools.rst:733
+#: ../../library/functools.rst:729
 msgid ""
 "The leftmost positional arguments that will be prepended to the positional "
 "arguments provided to a :class:`partial` object call."
@@ -858,7 +853,7 @@ msgstr ""
 "Крайні ліві позиційні аргументи, які будуть додані до позиційних аргументів,"
 " наданих до виклику об’єкта :class:`partial`."
 
-#: ../../library/functools.rst:739
+#: ../../library/functools.rst:735
 msgid ""
 "The keyword arguments that will be supplied when the :class:`partial` object"
 " is called."
@@ -866,7 +861,7 @@ msgstr ""
 "Ключові аргументи, які будуть надані під час виклику об’єкта "
 ":class:`partial`."
 
-#: ../../library/functools.rst:742
+#: ../../library/functools.rst:738
 msgid ""
 ":class:`partial` objects are like :class:`function` objects in that they are"
 " callable, weak referenceable, and can have attributes.  There are some "
