@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-25 01:09+0000\n"
+"POT-Creation-Date: 2024-03-08 21:29+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -465,6 +465,32 @@ msgstr ""
 "індексувати та нарізати:"
 
 #: ../../tutorial/introduction.rst:408
+msgid "Lists also support operations like concatenation::"
+msgstr "Списки також підтримують такі операції, як конкатенація::"
+
+#: ../../tutorial/introduction.rst:413
+msgid ""
+"Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
+"type, i.e. it is possible to change their content::"
+msgstr ""
+"На відміну від рядків, які є :term:`immutable`, списки мають тип "
+":term:`mutable`, тобто їх вміст можна змінювати:"
+
+#: ../../tutorial/introduction.rst:423
+msgid ""
+"You can also add new items at the end of the list, by using the "
+":meth:`!list.append` *method* (we will see more about methods later)::"
+msgstr ""
+
+#: ../../tutorial/introduction.rst:431
+msgid ""
+"Simple assignment in Python never copies data. When you assign a list to a "
+"variable, the variable refers to the *existing list*. Any changes you make "
+"to the list through one variable will be seen through all other variables "
+"that refer to it.::"
+msgstr ""
+
+#: ../../tutorial/introduction.rst:444
 msgid ""
 "All slice operations return a new list containing the requested elements.  "
 "This means that the following slice returns a :ref:`shallow copy "
@@ -474,25 +500,7 @@ msgstr ""
 "означає, що наступний фрагмент повертає :ref:`неглибоку копію "
 "<shallow_vs_deep_copy>` списку::"
 
-#: ../../tutorial/introduction.rst:415
-msgid "Lists also support operations like concatenation::"
-msgstr "Списки також підтримують такі операції, як конкатенація::"
-
-#: ../../tutorial/introduction.rst:420
-msgid ""
-"Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
-"type, i.e. it is possible to change their content::"
-msgstr ""
-"На відміну від рядків, які є :term:`immutable`, списки мають тип "
-":term:`mutable`, тобто їх вміст можна змінювати:"
-
-#: ../../tutorial/introduction.rst:430
-msgid ""
-"You can also add new items at the end of the list, by using the "
-":meth:`!list.append` *method* (we will see more about methods later)::"
-msgstr ""
-
-#: ../../tutorial/introduction.rst:438
+#: ../../tutorial/introduction.rst:455
 msgid ""
 "Assignment to slices is also possible, and this can even change the size of "
 "the list or clear it entirely::"
@@ -500,11 +508,11 @@ msgstr ""
 "Також можливе призначення фрагментам, і це навіть може змінити розмір списку"
 " або повністю його очистити::"
 
-#: ../../tutorial/introduction.rst:457
+#: ../../tutorial/introduction.rst:474
 msgid "The built-in function :func:`len` also applies to lists::"
 msgstr "Вбудована функція :func:`len` також застосовується до списків::"
 
-#: ../../tutorial/introduction.rst:463
+#: ../../tutorial/introduction.rst:480
 msgid ""
 "It is possible to nest lists (create lists containing other lists), for "
 "example::"
@@ -512,11 +520,11 @@ msgstr ""
 "Можна вкладати списки (створювати списки, що містять інші списки), "
 "наприклад:"
 
-#: ../../tutorial/introduction.rst:479
+#: ../../tutorial/introduction.rst:496
 msgid "First Steps Towards Programming"
 msgstr "Перші кроки до програмування"
 
-#: ../../tutorial/introduction.rst:481
+#: ../../tutorial/introduction.rst:498
 msgid ""
 "Of course, we can use Python for more complicated tasks than adding two and "
 "two together.  For instance, we can write an initial sub-sequence of the "
@@ -524,11 +532,11 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:501
+#: ../../tutorial/introduction.rst:518
 msgid "This example introduces several new features."
 msgstr "Цей приклад представляє кілька нових функцій."
 
-#: ../../tutorial/introduction.rst:503
+#: ../../tutorial/introduction.rst:520
 msgid ""
 "The first line contains a *multiple assignment*: the variables ``a`` and "
 "``b`` simultaneously get the new values 0 and 1.  On the last line this is "
@@ -541,7 +549,7 @@ msgstr ""
 " демонструючи, що вирази праворуч усі сторони оцінюються перш ніж виконати "
 "будь-яке завдання. Вирази правої частини обчислюються зліва направо."
 
-#: ../../tutorial/introduction.rst:509
+#: ../../tutorial/introduction.rst:526
 msgid ""
 "The :keyword:`while` loop executes as long as the condition (here: ``a < "
 "10``) remains true.  In Python, like in C, any non-zero integer value is "
@@ -561,7 +569,7 @@ msgstr ""
 "(більше), ``==`` (дорівнює), ``<=`` (less than or equal to), ``> =`` (більше"
 " або дорівнює to) і ``!=`` (не дорівнює)."
 
-#: ../../tutorial/introduction.rst:518
+#: ../../tutorial/introduction.rst:535
 msgid ""
 "The *body* of the loop is *indented*: indentation is Python's way of "
 "grouping statements.  At the interactive prompt, you have to type a tab or "
@@ -582,7 +590,7 @@ msgstr ""
 "рядок). Зауважте, що кожен рядок у базовому блоці має мати однаковий "
 "відступ."
 
-#: ../../tutorial/introduction.rst:527
+#: ../../tutorial/introduction.rst:544
 msgid ""
 "The :func:`print` function writes the value of the argument(s) it is given. "
 "It differs from just writing the expression you want to write (as we did "
@@ -598,7 +606,7 @@ msgstr ""
 " а між елементами вставляється пробіл, щоб ви могли гарно форматувати речі, "
 "наприклад:"
 
-#: ../../tutorial/introduction.rst:538
+#: ../../tutorial/introduction.rst:555
 msgid ""
 "The keyword argument *end* can be used to avoid the newline after the "
 "output, or end the output with a different string::"
@@ -606,11 +614,11 @@ msgstr ""
 "Аргумент ключового слова *end* можна використовувати, щоб уникнути нового "
 "рядка після виводу або завершити вивід іншим рядком::"
 
-#: ../../tutorial/introduction.rst:550
+#: ../../tutorial/introduction.rst:567
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/introduction.rst:551
+#: ../../tutorial/introduction.rst:568
 msgid ""
 "Since ``**`` has higher precedence than ``-``, ``-3**2`` will be interpreted"
 " as ``-(3**2)`` and thus result in ``-9``.  To avoid this and get ``9``, you"
@@ -620,7 +628,7 @@ msgstr ""
 "інтерпретовано як ``-(3**2)`` і, таким чином, призведе до ``-9``. Щоб "
 "уникнути цього та отримати ``9``, ви можете використовувати ``(-3)**2``."
 
-#: ../../tutorial/introduction.rst:555
+#: ../../tutorial/introduction.rst:572
 msgid ""
 "Unlike other languages, special characters such as ``\\n`` have the same "
 "meaning with both single (``'...'``) and double (``\"...\"``) quotes. The "
