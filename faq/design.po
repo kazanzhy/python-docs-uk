@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-01 14:13+0000\n"
+"POT-Creation-Date: 2024-03-15 14:13+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Vadim Kashirny, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -477,15 +477,14 @@ msgstr "Чому в Python немає оператора switch або case?"
 
 #: ../../faq/design.rst:262
 msgid ""
-"You can do this easily enough with a sequence of ``if... elif... elif... "
-"else``. For literal values, or constants within a namespace, you can also "
-"use a ``match ... case`` statement."
+"In general, structured switch statements execute one block of code when an "
+"expression has a particular value or set of values. Since Python 3.10 one "
+"can easily match literal values, or constants within a namespace, with a "
+"``match ... case`` statement. An older alternative is a sequence of ``if... "
+"elif... elif... else``."
 msgstr ""
-"Ви можете зробити це досить легко за допомогою послідовності ``if... elif..."
-" elif... else``. Для літеральних значень або констант у просторі імен ви "
-"також можете використовувати оператор ``match ... case``."
 
-#: ../../faq/design.rst:266
+#: ../../faq/design.rst:268
 msgid ""
 "For cases where you need to choose from a very large number of "
 "possibilities, you can create a dictionary mapping case values to functions "
@@ -495,7 +494,7 @@ msgstr ""
 "ви можете створити словник, який зіставлятиме значення регістру з функціями "
 "для виклику. Наприклад::"
 
-#: ../../faq/design.rst:277
+#: ../../faq/design.rst:279
 msgid ""
 "For calling methods on objects, you can simplify yet further by using the "
 ":func:`getattr` built-in to retrieve methods with a particular name::"
@@ -503,7 +502,7 @@ msgstr ""
 "Для виклику методів об’єктів ви можете ще більше спростити, використовуючи "
 "вбудований :func:`getattr` для отримання методів із певним іменем::"
 
-#: ../../faq/design.rst:289
+#: ../../faq/design.rst:291
 msgid ""
 "It's suggested that you use a prefix for the method names, such as "
 "``visit_`` in this example.  Without such a prefix, if values are coming "
@@ -517,13 +516,19 @@ msgstr ""
 
 #: ../../faq/design.rst:295
 msgid ""
+"Imitating switch with fallthrough, as with C's switch-case-default, is "
+"possible, much harder, and less needed."
+msgstr ""
+
+#: ../../faq/design.rst:300
+msgid ""
 "Can't you emulate threads in the interpreter instead of relying on an OS-"
 "specific thread implementation?"
 msgstr ""
 "Чи не можна емулювати потоки в інтерпретаторі замість того, щоб покладатися "
 "на реалізацію потоку, специфічного для ОС?"
 
-#: ../../faq/design.rst:297
+#: ../../faq/design.rst:302
 msgid ""
 "Answer 1: Unfortunately, the interpreter pushes at least one C stack frame "
 "for each Python stack frame.  Also, extensions can call back into Python at "
@@ -535,7 +540,7 @@ msgstr ""
 "Python у майже випадкові моменти. Таким чином, повна реалізація потоків "
 "вимагає підтримки потоків для C."
 
-#: ../../faq/design.rst:302
+#: ../../faq/design.rst:307
 msgid ""
 "Answer 2: Fortunately, there is `Stackless Python "
 "<https://github.com/stackless-dev/stackless/wiki>`_, which has a completely "
@@ -545,11 +550,11 @@ msgstr ""
 "dev/stackless/wiki>`_, який має повністю перероблений цикл інтерпретатора, "
 "який уникає стека C."
 
-#: ../../faq/design.rst:307
+#: ../../faq/design.rst:312
 msgid "Why can't lambda expressions contain statements?"
 msgstr "Чому лямбда-вирази не можуть містити оператори?"
 
-#: ../../faq/design.rst:309
+#: ../../faq/design.rst:314
 msgid ""
 "Python lambda expressions cannot contain statements because Python's "
 "syntactic framework can't handle statements nested inside expressions.  "
@@ -563,7 +568,7 @@ msgstr ""
 "мовах, де вони додають функціональність, лямбда-вирази Python є лише "
 "скороченою нотацією, якщо вам ліньки визначати функцію."
 
-#: ../../faq/design.rst:315
+#: ../../faq/design.rst:320
 msgid ""
 "Functions are already first class objects in Python, and can be declared in "
 "a local scope.  Therefore the only advantage of using a lambda instead of a "
@@ -573,11 +578,11 @@ msgid ""
 "is assigned!"
 msgstr ""
 
-#: ../../faq/design.rst:323
+#: ../../faq/design.rst:328
 msgid "Can Python be compiled to machine code, C or some other language?"
 msgstr "Чи можна Python скомпілювати до машинного коду, мови C чи іншої?"
 
-#: ../../faq/design.rst:325
+#: ../../faq/design.rst:330
 msgid ""
 "`Cython <https://cython.org/>`_ compiles a modified version of Python with "
 "optional annotations into C extensions.  `Nuitka <https://www.nuitka.net/>`_"
@@ -585,11 +590,11 @@ msgid ""
 " full Python language."
 msgstr ""
 
-#: ../../faq/design.rst:332
+#: ../../faq/design.rst:337
 msgid "How does Python manage memory?"
 msgstr "Як Python керує пам'яттю?"
 
-#: ../../faq/design.rst:334
+#: ../../faq/design.rst:339
 msgid ""
 "The details of Python memory management depend on the implementation.  The "
 "standard implementation of Python, :term:`CPython`, uses reference counting "
@@ -607,7 +612,7 @@ msgstr ""
 " для збирання сміття, отримання статистики налагодження та налаштування "
 "параметрів збирача."
 
-#: ../../faq/design.rst:342
+#: ../../faq/design.rst:347
 msgid ""
 "Other implementations (such as `Jython <https://www.jython.org>`_ or `PyPy "
 "<https://www.pypy.org>`_), however, can rely on a different mechanism such "
@@ -616,7 +621,7 @@ msgid ""
 "reference counting implementation."
 msgstr ""
 
-#: ../../faq/design.rst:348
+#: ../../faq/design.rst:353
 msgid ""
 "In some Python implementations, the following code (which is fine in "
 "CPython) will probably run out of file descriptors::"
@@ -624,7 +629,7 @@ msgstr ""
 "У деяких реалізаціях Python наступний код (який добре процює у CPython), "
 "ймовірно, не матиме файлових дескрипторів::"
 
-#: ../../faq/design.rst:355
+#: ../../faq/design.rst:360
 msgid ""
 "Indeed, using CPython's reference counting and destructor scheme, each new "
 "assignment to ``f`` closes the previous file.  With a traditional GC, "
@@ -632,7 +637,7 @@ msgid ""
 "and possibly long intervals."
 msgstr ""
 
-#: ../../faq/design.rst:360
+#: ../../faq/design.rst:365
 msgid ""
 "If you want to write code that will work with any Python implementation, you"
 " should explicitly close the file or use the :keyword:`with` statement; this"
@@ -642,11 +647,11 @@ msgstr ""
 "Python, вам слід явно закрити файл або використати оператор :keyword:`with`;"
 " це працюватиме незалежно від схеми керування пам'яттю:"
 
-#: ../../faq/design.rst:370
+#: ../../faq/design.rst:375
 msgid "Why doesn't CPython use a more traditional garbage collection scheme?"
 msgstr "Чому CPython не використовує більш традиційну схему збирання сміття?"
 
-#: ../../faq/design.rst:372
+#: ../../faq/design.rst:377
 msgid ""
 "For one thing, this is not a C standard feature and hence it's not portable."
 " (Yes, we know about the Boehm GC library.  It has bits of assembler code "
@@ -660,7 +665,7 @@ msgstr ""
 "прозора, але  всеж таки не зовсім прозора; для Python потрібні патчи щоб  "
 "працювати з нею.)"
 
-#: ../../faq/design.rst:378
+#: ../../faq/design.rst:383
 msgid ""
 "Traditional GC also becomes a problem when Python is embedded into other "
 "applications.  While in a standalone Python it's fine to replace the "
@@ -671,11 +676,11 @@ msgid ""
 "``free()`` properly."
 msgstr ""
 
-#: ../../faq/design.rst:387
+#: ../../faq/design.rst:392
 msgid "Why isn't all memory freed when CPython exits?"
 msgstr "Чому не вся пам'ять звільняється, коли CPython завершує роботу?"
 
-#: ../../faq/design.rst:389
+#: ../../faq/design.rst:394
 msgid ""
 "Objects referenced from the global namespaces of Python modules are not "
 "always deallocated when Python exits.  This may happen if there are circular"
@@ -691,7 +696,7 @@ msgstr ""
 "скаржитися на це). Однак Python агресивно очищає пам’ять під час виходу та "
 "намагається знищити кожен окремий об’єкт."
 
-#: ../../faq/design.rst:396
+#: ../../faq/design.rst:401
 msgid ""
 "If you want to force Python to delete certain things on deallocation use the"
 " :mod:`atexit` module to run a function that will force those deletions."
@@ -700,11 +705,11 @@ msgstr ""
 "скористайтеся модулем :mod:`atexit`, щоб запустити функцію, яка примусово "
 "прискорить ці видалення."
 
-#: ../../faq/design.rst:401
+#: ../../faq/design.rst:406
 msgid "Why are there separate tuple and list data types?"
 msgstr "Чому існують окремі типи даних кортежу та списку?"
 
-#: ../../faq/design.rst:403
+#: ../../faq/design.rst:408
 msgid ""
 "Lists and tuples, while similar in many respects, are generally used in "
 "fundamentally different ways.  Tuples can be thought of as being similar to "
@@ -714,7 +719,7 @@ msgid ""
 "two or three numbers."
 msgstr ""
 
-#: ../../faq/design.rst:410
+#: ../../faq/design.rst:415
 msgid ""
 "Lists, on the other hand, are more like arrays in other languages.  They "
 "tend to hold a varying number of objects all of which have the same type and"
@@ -724,7 +729,7 @@ msgid ""
 "not break if you added another file or two to the directory."
 msgstr ""
 
-#: ../../faq/design.rst:418
+#: ../../faq/design.rst:423
 msgid ""
 "Tuples are immutable, meaning that once a tuple has been created, you can't "
 "replace any of its elements with a new value.  Lists are mutable, meaning "
@@ -738,11 +743,11 @@ msgstr ""
 "використовувати як ключі словника, а отже, лише кортежі можна "
 "використовувати як ключі, а списки не можна."
 
-#: ../../faq/design.rst:425
+#: ../../faq/design.rst:430
 msgid "How are lists implemented in CPython?"
 msgstr "Як списки реалізовані в CPython?"
 
-#: ../../faq/design.rst:427
+#: ../../faq/design.rst:432
 msgid ""
 "CPython's lists are really variable-length arrays, not Lisp-style linked "
 "lists. The implementation uses a contiguous array of references to other "
@@ -754,7 +759,7 @@ msgstr ""
 "посилань на інші об’єкти та зберігає вказівник на цей масив і довжину масиву"
 " в структурі заголовка списку."
 
-#: ../../faq/design.rst:431
+#: ../../faq/design.rst:436
 msgid ""
 "This makes indexing a list ``a[i]`` an operation whose cost is independent "
 "of the size of the list or the value of the index."
@@ -762,7 +767,7 @@ msgstr ""
 "Це робить індексацію списку ``a[i]`` операцією, вартість якої не залежить "
 "від розміру списку або значення індексу."
 
-#: ../../faq/design.rst:434
+#: ../../faq/design.rst:439
 msgid ""
 "When items are appended or inserted, the array of references is resized.  "
 "Some cleverness is applied to improve the performance of appending items "
@@ -774,11 +779,11 @@ msgstr ""
 "додавання елементів; коли масив потрібно збільшити, виділяється додатковий "
 "простір, тому наступні кілька разів не вимагають фактичної зміни розміру."
 
-#: ../../faq/design.rst:441
+#: ../../faq/design.rst:446
 msgid "How are dictionaries implemented in CPython?"
 msgstr "Як реалізовані словники в CPython?"
 
-#: ../../faq/design.rst:443
+#: ../../faq/design.rst:448
 msgid ""
 "CPython's dictionaries are implemented as resizable hash tables.  Compared "
 "to B-trees, this gives better performance for lookup (the most common "
@@ -789,7 +794,7 @@ msgstr ""
 " B-деревами, це дає кращу продуктивність для пошуку (найпоширеніша операція "
 "на сьогоднішній день) у більшості випадків, а реалізація є простішою."
 
-#: ../../faq/design.rst:447
+#: ../../faq/design.rst:452
 msgid ""
 "Dictionaries work by computing a hash code for each key stored in the "
 "dictionary using the :func:`hash` built-in function.  The hash code varies "
@@ -802,11 +807,11 @@ msgid ""
 "Big-O notation -- to retrieve a key."
 msgstr ""
 
-#: ../../faq/design.rst:458
+#: ../../faq/design.rst:463
 msgid "Why must dictionary keys be immutable?"
 msgstr "Чому ключі словника повинні бути незмінними?"
 
-#: ../../faq/design.rst:460
+#: ../../faq/design.rst:465
 msgid ""
 "The hash table implementation of dictionaries uses a hash value calculated "
 "from the key value to find the key.  If the key were a mutable object, its "
@@ -828,7 +833,7 @@ msgstr ""
 "старе значення, його також не буде знайдено, оскільки значення об’єкта, "
 "знайденого в цьому хеш-біні, буде іншим."
 
-#: ../../faq/design.rst:469
+#: ../../faq/design.rst:474
 msgid ""
 "If you want a dictionary indexed with a list, simply convert the list to a "
 "tuple first; the function ``tuple(L)`` creates a tuple with the same entries"
@@ -840,11 +845,11 @@ msgstr ""
 "самими записами, що і список ``L``. Кортежі є незмінними, тому їх можна "
 "використовувати як ключі словника."
 
-#: ../../faq/design.rst:473
+#: ../../faq/design.rst:478
 msgid "Some unacceptable solutions that have been proposed:"
 msgstr "Деякі неприйнятні рішення, які були запропоновані:"
 
-#: ../../faq/design.rst:475
+#: ../../faq/design.rst:480
 msgid ""
 "Hash lists by their address (object ID).  This doesn't work because if you "
 "construct a new list with the same value it won't be found; e.g.::"
@@ -853,7 +858,7 @@ msgstr ""
 "ви створите новий список із тим самим значенням, його не буде знайдено; "
 "наприклад::"
 
-#: ../../faq/design.rst:481
+#: ../../faq/design.rst:486
 msgid ""
 "would raise a :exc:`KeyError` exception because the id of the ``[1, 2]`` "
 "used in the second line differs from that in the first line.  In other "
@@ -865,7 +870,7 @@ msgstr ""
 " рядку. Іншими словами, ключі словника слід порівнювати за допомогою ``==``,"
 " а не за допомогою :keyword:`is`."
 
-#: ../../faq/design.rst:485
+#: ../../faq/design.rst:490
 msgid ""
 "Make a copy when using a list as a key.  This doesn't work because the list,"
 " being a mutable object, could contain a reference to itself, and then the "
@@ -875,7 +880,7 @@ msgstr ""
 "список, будучи змінним об’єктом, може містити посилання на себе, і тоді код "
 "копіювання запускатиметься в нескінченний цикл."
 
-#: ../../faq/design.rst:489
+#: ../../faq/design.rst:494
 msgid ""
 "Allow lists as keys but tell the user not to modify them.  This would allow "
 "a class of hard-to-track bugs in programs when you forgot or modified a list"
@@ -888,7 +893,7 @@ msgstr ""
 "інваріант словників: кожне значення в ``d.keys()`` можна використовувати як "
 "ключ словника."
 
-#: ../../faq/design.rst:494
+#: ../../faq/design.rst:499
 msgid ""
 "Mark lists as read-only once they are used as a dictionary key.  The problem"
 " is that it's not just the top-level object that could change its value; you"
@@ -904,7 +909,7 @@ msgstr ""
 "позначити всі доступні звідти об’єкти як доступні лише для читання – і знову"
 " ж таки самопосилання на об’єкти могло б спричинити нескінченний цикл."
 
-#: ../../faq/design.rst:500
+#: ../../faq/design.rst:505
 msgid ""
 "There is a trick to get around this if you need to, but use it at your own "
 "risk: You can wrap a mutable structure inside a class instance which has "
@@ -914,7 +919,7 @@ msgid ""
 "the object is in the dictionary (or other structure). ::"
 msgstr ""
 
-#: ../../faq/design.rst:525
+#: ../../faq/design.rst:530
 msgid ""
 "Note that the hash computation is complicated by the possibility that some "
 "members of the list may be unhashable and also by the possibility of "
@@ -924,7 +929,7 @@ msgstr ""
 "члени списку можуть бути нехешованими, а також можливістю арифметичного "
 "переповнення."
 
-#: ../../faq/design.rst:529
+#: ../../faq/design.rst:534
 msgid ""
 "Furthermore it must always be the case that if ``o1 == o2`` (ie "
 "``o1.__eq__(o2) is True``) then ``hash(o1) == hash(o2)`` (ie, "
@@ -938,7 +943,7 @@ msgstr ""
 "ви не впораєтеся з цими обмеженнями, словники та інші хеш-структури "
 "працюватимуть неправильно."
 
-#: ../../faq/design.rst:534
+#: ../../faq/design.rst:539
 msgid ""
 "In the case of :class:`!ListWrapper`, whenever the wrapper object is in a "
 "dictionary the wrapped list must not change to avoid anomalies.  Don't do "
@@ -946,11 +951,11 @@ msgid ""
 "consequences of not meeting them correctly.  Consider yourself warned."
 msgstr ""
 
-#: ../../faq/design.rst:541
+#: ../../faq/design.rst:546
 msgid "Why doesn't list.sort() return the sorted list?"
 msgstr "Чому list.sort() не повертає відсортований список?"
 
-#: ../../faq/design.rst:543
+#: ../../faq/design.rst:548
 msgid ""
 "In situations where performance matters, making a copy of the list just to "
 "sort it would be wasteful. Therefore, :meth:`list.sort` sorts the list in "
@@ -966,7 +971,7 @@ msgstr ""
 " потрібна відсортована копія, але також потрібно зберегти невідсортовану "
 "версію."
 
-#: ../../faq/design.rst:549
+#: ../../faq/design.rst:554
 msgid ""
 "If you want to return a new list, use the built-in :func:`sorted` function "
 "instead.  This function creates a new list from a provided iterable, sorts "
@@ -978,11 +983,11 @@ msgstr ""
 "сортує його та повертає. Наприклад, ось як виконати ітерацію по ключах "
 "словника у відсортованому порядку:"
 
-#: ../../faq/design.rst:559
+#: ../../faq/design.rst:564
 msgid "How do you specify and enforce an interface spec in Python?"
 msgstr "Як визначити та застосувати специфікацію інтерфейсу в Python?"
 
-#: ../../faq/design.rst:561
+#: ../../faq/design.rst:566
 msgid ""
 "An interface specification for a module as provided by languages such as C++"
 " and Java describes the prototypes for the methods and functions of the "
@@ -994,7 +999,7 @@ msgstr ""
 "примусове виконання специфікацій інтерфейсу під час компіляції допомагає "
 "створювати великі програми."
 
-#: ../../faq/design.rst:566
+#: ../../faq/design.rst:571
 msgid ""
 "Python 2.6 adds an :mod:`abc` module that lets you define Abstract Base "
 "Classes (ABCs).  You can then use :func:`isinstance` and :func:`issubclass` "
@@ -1011,7 +1016,7 @@ msgstr ""
 ":class:`~collections.abc.Container` і :class:`~collections. "
 "abc.MutableMapping`."
 
-#: ../../faq/design.rst:573
+#: ../../faq/design.rst:578
 msgid ""
 "For Python, many of the advantages of interface specifications can be "
 "obtained by an appropriate test discipline for components."
@@ -1019,7 +1024,7 @@ msgstr ""
 "Для Python багато переваг специфікацій інтерфейсу можна отримати за "
 "допомогою відповідного порядку тестування компонентів."
 
-#: ../../faq/design.rst:576
+#: ../../faq/design.rst:581
 msgid ""
 "A good test suite for a module can both provide a regression test and serve "
 "as a module interface specification and a set of examples.  Many Python "
@@ -1040,7 +1045,7 @@ msgstr ""
 "використовувати для створення вичерпних наборів тестів, які перевіряють "
 "кожен рядок коду в модулі."
 
-#: ../../faq/design.rst:584
+#: ../../faq/design.rst:589
 msgid ""
 "An appropriate testing discipline can help build large complex applications "
 "in Python as well as having interface specifications would.  In fact, it can"
@@ -1052,7 +1057,7 @@ msgid ""
 "test suite."
 msgstr ""
 
-#: ../../faq/design.rst:592
+#: ../../faq/design.rst:597
 msgid ""
 "Writing test suites is very helpful, and you might want to design your code "
 "to make it easily tested. One increasingly popular technique, test-driven "
@@ -1067,11 +1072,11 @@ msgstr ""
 " код. Звичайно, Python дозволяє вам бути неохайними і взагалі не писати "
 "тести."
 
-#: ../../faq/design.rst:600
+#: ../../faq/design.rst:605
 msgid "Why is there no goto?"
 msgstr "Чому немає goto?"
 
-#: ../../faq/design.rst:602
+#: ../../faq/design.rst:607
 msgid ""
 "In the 1970s people realized that unrestricted goto could lead to messy "
 "\"spaghetti\" code that was hard to understand and revise. In a high-level "
@@ -1082,7 +1087,7 @@ msgid ""
 ":keyword:`break`)."
 msgstr ""
 
-#: ../../faq/design.rst:609
+#: ../../faq/design.rst:614
 msgid ""
 "One can also use exceptions to provide a \"structured goto\" that works even"
 " across function calls.  Many feel that exceptions can conveniently emulate "
@@ -1090,19 +1095,19 @@ msgid ""
 "other languages.  For example::"
 msgstr ""
 
-#: ../../faq/design.rst:625
+#: ../../faq/design.rst:630
 msgid ""
 "This doesn't allow you to jump into the middle of a loop, but that's usually"
 " considered an abuse of ``goto`` anyway.  Use sparingly."
 msgstr ""
 
-#: ../../faq/design.rst:630
+#: ../../faq/design.rst:635
 msgid "Why can't raw strings (r-strings) end with a backslash?"
 msgstr ""
 "Чому необроблені рядки (r-рядки) не можуть закінчуватися зворотною косою "
 "рискою?"
 
-#: ../../faq/design.rst:632
+#: ../../faq/design.rst:637
 msgid ""
 "More precisely, they can't end with an odd number of backslashes: the "
 "unpaired backslash at the end escapes the closing quote character, leaving "
@@ -1112,7 +1117,7 @@ msgstr ""
 "рисок: непарна зворотна коса риска в кінці виходить із символу закриваючої "
 "лапки, залишаючи незакінчений рядок."
 
-#: ../../faq/design.rst:636
+#: ../../faq/design.rst:641
 msgid ""
 "Raw strings were designed to ease creating input for processors (chiefly "
 "regular expression engines) that want to do their own backslash escape "
@@ -1129,7 +1134,7 @@ msgstr ""
 "символ лапки рядка, екрануючи його зворотною косою рискою. Ці правила добре "
 "працюють, коли r-рядки використовуються за призначенням."
 
-#: ../../faq/design.rst:643
+#: ../../faq/design.rst:648
 msgid ""
 "If you're trying to build Windows pathnames, note that all Windows system "
 "calls accept forward slashes too::"
@@ -1137,29 +1142,29 @@ msgstr ""
 "Якщо ви намагаєтеся створити імена шляхів Windows, зверніть увагу, що всі "
 "системні виклики Windows також приймають косу риску::"
 
-#: ../../faq/design.rst:648
+#: ../../faq/design.rst:653
 msgid ""
 "If you're trying to build a pathname for a DOS command, try e.g. one of ::"
 msgstr ""
 "Якщо ви намагаєтеся створити шлях для команди DOS, спробуйте, наприклад. "
 "один з ::"
 
-#: ../../faq/design.rst:656
+#: ../../faq/design.rst:661
 msgid "Why doesn't Python have a \"with\" statement for attribute assignments?"
 msgstr "Чому в Python немає оператора \"with\" для призначення атрибутів?"
 
-#: ../../faq/design.rst:658
+#: ../../faq/design.rst:663
 msgid ""
 "Python has a :keyword:`with` statement that wraps the execution of a block, "
 "calling code on the entrance and exit from the block.  Some languages have a"
 " construct that looks like this::"
 msgstr ""
 
-#: ../../faq/design.rst:666
+#: ../../faq/design.rst:671
 msgid "In Python, such a construct would be ambiguous."
 msgstr "У Python така конструкція була б неоднозначною."
 
-#: ../../faq/design.rst:668
+#: ../../faq/design.rst:673
 msgid ""
 "Other languages, such as Object Pascal, Delphi, and C++, use static types, "
 "so it's possible to know, in an unambiguous way, what member is being "
@@ -1171,7 +1176,7 @@ msgstr ""
 "момент статичної типізації -- компілятор *завжди* знає область кожної "
 "змінної під час компіляції."
 
-#: ../../faq/design.rst:673
+#: ../../faq/design.rst:678
 msgid ""
 "Python uses dynamic types. It is impossible to know in advance which "
 "attribute will be referenced at runtime. Member attributes may be added or "
@@ -1185,11 +1190,11 @@ msgstr ""
 "дізнатися, на який атрибут посилається: локальний, глобальний чи атрибут-"
 "член?"
 
-#: ../../faq/design.rst:679
+#: ../../faq/design.rst:684
 msgid "For instance, take the following incomplete snippet::"
 msgstr "Наприклад, візьмемо наступний неповний фрагмент:"
 
-#: ../../faq/design.rst:685
+#: ../../faq/design.rst:690
 msgid ""
 "The snippet assumes that ``a`` must have a member attribute called ``x``. "
 "However, there is nothing in Python that tells the interpreter this. What "
@@ -1198,18 +1203,18 @@ msgid ""
 "you see, the dynamic nature of Python makes such choices much harder."
 msgstr ""
 
-#: ../../faq/design.rst:691
+#: ../../faq/design.rst:696
 msgid ""
 "The primary benefit of :keyword:`with` and similar language features "
 "(reduction of code volume) can, however, easily be achieved in Python by "
 "assignment.  Instead of::"
 msgstr ""
 
-#: ../../faq/design.rst:698
+#: ../../faq/design.rst:703
 msgid "write this::"
 msgstr "напиши це::"
 
-#: ../../faq/design.rst:705
+#: ../../faq/design.rst:710
 msgid ""
 "This also has the side-effect of increasing execution speed because name "
 "bindings are resolved at run-time in Python, and the second version only "
@@ -1219,18 +1224,18 @@ msgstr ""
 "прив’язки імен вирішуються під час виконання в Python, а другій версії "
 "потрібно виконати розв’язання лише один раз."
 
-#: ../../faq/design.rst:709
+#: ../../faq/design.rst:714
 msgid ""
 "Similar proposals that would introduce syntax to further reduce code volume,"
 " such as using a 'leading dot', have been rejected in favour of explicitness"
 " (see https://mail.python.org/pipermail/python-ideas/2016-May/040070.html)."
 msgstr ""
 
-#: ../../faq/design.rst:715
+#: ../../faq/design.rst:720
 msgid "Why don't generators support the with statement?"
 msgstr "Чому генератори не підтримують оператор with?"
 
-#: ../../faq/design.rst:717
+#: ../../faq/design.rst:722
 msgid ""
 "For technical reasons, a generator used directly as a context manager would "
 "not work correctly.  When, as is most common, a generator is used as an "
@@ -1239,11 +1244,11 @@ msgid ""
 ":keyword:`with` statement."
 msgstr ""
 
-#: ../../faq/design.rst:725
+#: ../../faq/design.rst:730
 msgid "Why are colons required for the if/while/def/class statements?"
 msgstr "Чому в операторах if/while/def/class потрібні двокрапки?"
 
-#: ../../faq/design.rst:727
+#: ../../faq/design.rst:732
 msgid ""
 "The colon is required primarily to enhance readability (one of the results "
 "of the experimental ABC language).  Consider this::"
@@ -1251,11 +1256,11 @@ msgstr ""
 "Двокрапка потрібна насамперед для покращення читабельності (один із "
 "результатів експериментальної мови ABC). Розглянемо це::"
 
-#: ../../faq/design.rst:733
+#: ../../faq/design.rst:738
 msgid "versus ::"
 msgstr "проти ::"
 
-#: ../../faq/design.rst:738
+#: ../../faq/design.rst:743
 msgid ""
 "Notice how the second one is slightly easier to read.  Notice further how a "
 "colon sets off the example in this FAQ answer; it's a standard usage in "
@@ -1265,7 +1270,7 @@ msgstr ""
 "двокрапка виділяє приклад у цій відповіді на поширені запитання; це "
 "стандартне використання в англійській мові."
 
-#: ../../faq/design.rst:741
+#: ../../faq/design.rst:746
 msgid ""
 "Another minor reason is that the colon makes it easier for editors with "
 "syntax highlighting; they can look for colons to decide when indentation "
@@ -1277,22 +1282,22 @@ msgstr ""
 "вирішити, коли потрібно збільшити відступ, замість того, щоб виконувати "
 "більш детальний розбір тексту програми."
 
-#: ../../faq/design.rst:747
+#: ../../faq/design.rst:752
 msgid "Why does Python allow commas at the end of lists and tuples?"
 msgstr "Чому Python допускає коми в кінці списків і кортежів?"
 
-#: ../../faq/design.rst:749
+#: ../../faq/design.rst:754
 msgid ""
 "Python lets you add a trailing comma at the end of lists, tuples, and "
 "dictionaries::"
 msgstr ""
 "Python дозволяє додавати кінцеву кому в кінці списків, кортежів і словників:"
 
-#: ../../faq/design.rst:760
+#: ../../faq/design.rst:765
 msgid "There are several reasons to allow this."
 msgstr "Є кілька причин дозволити це."
 
-#: ../../faq/design.rst:762
+#: ../../faq/design.rst:767
 msgid ""
 "When you have a literal value for a list, tuple, or dictionary spread across"
 " multiple lines, it's easier to add more elements because you don't have to "
@@ -1304,7 +1309,7 @@ msgstr ""
 " потрібно пам’ятати про додавання коми в попередній рядок. Рядки також можна"
 " змінити, не створюючи синтаксичних помилок."
 
-#: ../../faq/design.rst:767
+#: ../../faq/design.rst:772
 msgid ""
 "Accidentally omitting the comma can lead to errors that are hard to "
 "diagnose. For example::"
@@ -1312,7 +1317,7 @@ msgstr ""
 "Випадковий пропуск коми може призвести до помилок, які важко діагностувати. "
 "Наприклад::"
 
-#: ../../faq/design.rst:777
+#: ../../faq/design.rst:782
 msgid ""
 "This list looks like it has four elements, but it actually contains three: "
 "\"fee\", \"fiefoo\" and \"fum\".  Always adding the comma avoids this source"
@@ -1322,7 +1327,7 @@ msgstr ""
 "насправді він містить три: \"fee\", \"fiefoo\" і \"fum\". Постійне додавання"
 " коми дозволяє уникнути цього джерела помилки."
 
-#: ../../faq/design.rst:780
+#: ../../faq/design.rst:785
 msgid ""
 "Allowing the trailing comma may also make programmatic code generation "
 "easier."
