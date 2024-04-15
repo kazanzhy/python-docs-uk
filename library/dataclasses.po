@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-29 14:13+0000\n"
+"POT-Creation-Date: 2024-04-14 22:56+0000\n"
 "PO-Revision-Date: 2021-06-28 01:03+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -32,9 +32,9 @@ msgstr "**Вихідний код:** :source:`Lib/dataclasses.py`"
 #: ../../library/dataclasses.rst:14
 msgid ""
 "This module provides a decorator and functions for automatically adding "
-"generated :term:`special method`\\s such as :meth:`~object.__init__` and "
-":meth:`~object.__repr__` to user-defined classes.  It was originally "
-"described in :pep:`557`."
+"generated :term:`special methods <special method>` such as "
+":meth:`~object.__init__` and :meth:`~object.__repr__` to user-defined "
+"classes.  It was originally described in :pep:`557`."
 msgstr ""
 
 #: ../../library/dataclasses.rst:19
@@ -52,10 +52,8 @@ msgstr ""
 #: ../../library/dataclasses.rst:41
 msgid ""
 "Note that this method is automatically added to the class: it is not "
-"directly specified in the ``InventoryItem`` definition shown above."
+"directly specified in the :class:`!InventoryItem` definition shown above."
 msgstr ""
-"Зауважте, що цей метод автоматично додається до класу: він не вказано "
-"безпосередньо у визначенні ``InventoryItem``, показаному вище."
 
 #: ../../library/dataclasses.rst:47
 msgid "Module contents"
@@ -105,7 +103,7 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:89
 msgid ""
-"``init``: If true (the default), a :meth:`~object.__init__` method will be "
+"*init*: If true (the default), a :meth:`~object.__init__` method will be "
 "generated."
 msgstr ""
 
@@ -116,7 +114,7 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:95
 msgid ""
-"``repr``: If true (the default), a :meth:`~object.__repr__` method will be "
+"*repr*: If true (the default), a :meth:`~object.__repr__` method will be "
 "generated.  The generated repr string will have the class name and the name "
 "and repr of each field, in the order they are defined in the class.  Fields "
 "that are marked as being excluded from the repr are not included.  For "
@@ -131,7 +129,7 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:105
 msgid ""
-"``eq``: If true (the default), an :meth:`~object.__eq__` method will be "
+"*eq*: If true (the default), an :meth:`~object.__eq__` method will be "
 "generated.  This method compares the class as if it were a tuple of its "
 "fields, in order.  Both instances in the comparison must be of the identical"
 " type."
@@ -144,12 +142,12 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:113
 msgid ""
-"``order``: If true (the default is ``False``), :meth:`~object.__lt__`, "
+"*order*: If true (the default is ``False``), :meth:`~object.__lt__`, "
 ":meth:`~object.__le__`, :meth:`~object.__gt__`, and :meth:`~object.__ge__` "
 "methods will be generated.  These compare the class as if it were a tuple of"
 " its fields, in order.  Both instances in the comparison must be of the "
-"identical type.  If ``order`` is true and ``eq`` is false, a "
-":exc:`ValueError` is raised."
+"identical type.  If *order* is true and *eq* is false, a :exc:`ValueError` "
+"is raised."
 msgstr ""
 
 #: ../../library/dataclasses.rst:120
@@ -160,8 +158,8 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:124
 msgid ""
-"``unsafe_hash``: If ``False`` (the default), a :meth:`~object.__hash__` "
-"method is generated according to how ``eq`` and ``frozen`` are set."
+"*unsafe_hash*: If ``False`` (the default), a :meth:`~object.__hash__` method"
+" is generated according to how *eq* and *frozen* are set."
 msgstr ""
 
 #: ../../library/dataclasses.rst:127
@@ -171,7 +169,7 @@ msgid ""
 ":meth:`!__hash__` implies that instances of the class are immutable. "
 "Mutability is a complicated property that depends on the programmer's "
 "intent, the existence and behavior of :meth:`!__eq__`, and the values of the"
-" ``eq`` and ``frozen`` flags in the ``@dataclass`` decorator."
+" *eq* and *frozen* flags in the ``@dataclass`` decorator."
 msgstr ""
 
 #: ../../library/dataclasses.rst:134
@@ -203,18 +201,18 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:152
 msgid ""
-"If ``eq`` and ``frozen`` are both true, by default ``@dataclass`` will "
-"generate a :meth:`!__hash__` method for you.  If ``eq`` is true and "
-"``frozen`` is false, :meth:`!__hash__` will be set to ``None``, marking it "
-"unhashable (which it is, since it is mutable).  If ``eq`` is false, "
-":meth:`!__hash__` will be left untouched meaning the :meth:`!__hash__` "
-"method of the superclass will be used (if the superclass is :class:`object`,"
-" this means it will fall back to id-based hashing)."
+"If *eq* and *frozen* are both true, by default ``@dataclass`` will generate "
+"a :meth:`!__hash__` method for you.  If *eq* is true and *frozen* is false, "
+":meth:`!__hash__` will be set to ``None``, marking it unhashable (which it "
+"is, since it is mutable).  If *eq* is false, :meth:`!__hash__` will be left "
+"untouched meaning the :meth:`!__hash__` method of the superclass will be "
+"used (if the superclass is :class:`object`, this means it will fall back to "
+"id-based hashing)."
 msgstr ""
 
 #: ../../library/dataclasses.rst:160
 msgid ""
-"``frozen``: If true (the default is ``False``), assigning to fields will "
+"*frozen*: If true (the default is ``False``), assigning to fields will "
 "generate an exception.  This emulates read-only frozen instances.  If "
 ":meth:`~object.__setattr__` or :meth:`~object.__delattr__` is defined in the"
 " class, then :exc:`TypeError` is raised.  See the discussion below."
@@ -222,17 +220,18 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:165
 msgid ""
-"``match_args``: If true (the default is ``True``), the ``__match_args__`` "
-"tuple will be created from the list of parameters to the generated "
-":meth:`~object.__init__` method (even if :meth:`!__init__` is not generated,"
-" see above).  If false, or if ``__match_args__`` is already defined in the "
-"class, then ``__match_args__`` will not be generated."
+"*match_args*: If true (the default is ``True``), the "
+":attr:`~object.__match_args__` tuple will be created from the list of "
+"parameters to the generated :meth:`~object.__init__` method (even if "
+":meth:`!__init__` is not generated, see above).  If false, or if "
+":attr:`!__match_args__` is already defined in the class, then "
+":attr:`!__match_args__` will not be generated."
 msgstr ""
 
 #: ../../library/dataclasses.rst:174
 msgid ""
-"``kw_only``: If true (the default value is ``False``), then all fields will "
-"be marked as keyword-only.  If a field is marked as keyword-only, then the "
+"*kw_only*: If true (the default value is ``False``), then all fields will be"
+" marked as keyword-only.  If a field is marked as keyword-only, then the "
 "only effect is that the :meth:`~object.__init__` parameter generated from a "
 "keyword-only field must be specified with a keyword when :meth:`!__init__` "
 "is called.  There is no effect on any other aspect of dataclasses.  See the "
@@ -242,7 +241,7 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:185
 msgid ""
-"``slots``: If true (the default is ``False``), :attr:`~object.__slots__` "
+"*slots*: If true (the default is ``False``), :attr:`~object.__slots__` "
 "attribute will be generated and new class will be returned instead of the "
 "original one. If :attr:`!__slots__` is already defined in the class, then "
 ":exc:`TypeError` is raised."
@@ -250,17 +249,17 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:192
 msgid ""
-"If a field name is already included in the ``__slots__`` of a base class, it"
-" will not be included in the generated ``__slots__`` to prevent "
-":ref:`overriding them <datamodel-note-slots>`. Therefore, do not use "
-"``__slots__`` to retrieve the field names of a dataclass. Use :func:`fields`"
-" instead. To be able to determine inherited slots, base class ``__slots__`` "
-"may be any iterable, but *not* an iterator."
+"If a field name is already included in the :attr:`!__slots__` of a base "
+"class, it will not be included in the generated :attr:`!__slots__` to "
+"prevent :ref:`overriding them <datamodel-note-slots>`. Therefore, do not use"
+" :attr:`!__slots__` to retrieve the field names of a dataclass. Use "
+":func:`fields` instead. To be able to determine inherited slots, base class "
+":attr:`!__slots__` may be any iterable, but *not* an iterator."
 msgstr ""
 
 #: ../../library/dataclasses.rst:202
 msgid ""
-"``weakref_slot``: If true (the default is ``False``), add a slot named "
+"*weakref_slot*: If true (the default is ``False``), add a slot named "
 "\"__weakref__\", which is required to make an instance weakref-able.  It is "
 "an error to specify ``weakref_slot=True`` without also specifying "
 "``slots=True``."
@@ -276,8 +275,8 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:217
 msgid ""
-"In this example, both ``a`` and ``b`` will be included in the added "
-":meth:`~object.__init__` method, which will be defined as::"
+"In this example, both :attr:`!a` and :attr:`!b` will be included in the "
+"added :meth:`~object.__init__` method, which will be defined as::"
 msgstr ""
 
 #: ../../library/dataclasses.rst:222
@@ -318,45 +317,39 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:248
 msgid ""
-"``default``: If provided, this will be the default value for this field.  "
-"This is needed because the :func:`!field` call itself replaces the normal "
+"*default*: If provided, this will be the default value for this field.  This"
+" is needed because the :func:`!field` call itself replaces the normal "
 "position of the default value."
 msgstr ""
 
 #: ../../library/dataclasses.rst:252
 msgid ""
-"``default_factory``: If provided, it must be a zero-argument callable that "
+"*default_factory*: If provided, it must be a zero-argument callable that "
 "will be called when a default value is needed for this field.  Among other "
 "purposes, this can be used to specify fields with mutable default values, as"
-" discussed below.  It is an error to specify both ``default`` and "
-"``default_factory``."
+" discussed below.  It is an error to specify both *default* and "
+"*default_factory*."
 msgstr ""
-"``default_factory``: якщо вказано, це має бути функція виклику з нульовим "
-"аргументом, яка буде викликана, коли для цього поля потрібне значення за "
-"замовчуванням. Серед інших цілей це можна використовувати для визначення "
-"полів зі змінними значеннями за замовчуванням, як обговорюється нижче. "
-"Помилково вказувати як ``default``, так і ``default_factory``."
 
 #: ../../library/dataclasses.rst:258
 msgid ""
-"``init``: If true (the default), this field is included as a parameter to "
-"the generated :meth:`~object.__init__` method."
+"*init*: If true (the default), this field is included as a parameter to the "
+"generated :meth:`~object.__init__` method."
 msgstr ""
 
 #: ../../library/dataclasses.rst:261
 msgid ""
-"``repr``: If true (the default), this field is included in the string "
-"returned by the generated :meth:`~object.__repr__` method."
+"*repr*: If true (the default), this field is included in the string returned"
+" by the generated :meth:`~object.__repr__` method."
 msgstr ""
 
 #: ../../library/dataclasses.rst:264
 msgid ""
-"``hash``: This can be a bool or ``None``.  If true, this field is included "
-"in the generated :meth:`~object.__hash__` method.  If ``None`` (the "
-"default), use the value of ``compare``: this would normally be the expected "
-"behavior.  A field should be considered in the hash if it's used for "
-"comparisons.  Setting this value to anything other than ``None`` is "
-"discouraged."
+"*hash*: This can be a bool or ``None``.  If true, this field is included in "
+"the generated :meth:`~object.__hash__` method.  If ``None`` (the default), "
+"use the value of *compare*: this would normally be the expected behavior.  A"
+" field should be considered in the hash if it's used for comparisons.  "
+"Setting this value to anything other than ``None`` is discouraged."
 msgstr ""
 
 #: ../../library/dataclasses.rst:271
@@ -375,31 +368,25 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:277
 msgid ""
-"``compare``: If true (the default), this field is included in the generated "
+"*compare*: If true (the default), this field is included in the generated "
 "equality and comparison methods (:meth:`~object.__eq__`, "
 ":meth:`~object.__gt__`, et al.)."
 msgstr ""
 
 #: ../../library/dataclasses.rst:281
 msgid ""
-"``metadata``: This can be a mapping or None. None is treated as an empty "
-"dict.  This value is wrapped in :func:`~types.MappingProxyType` to make it "
-"read-only, and exposed on the :class:`Field` object. It is not used at all "
-"by Data Classes, and is provided as a third-party extension mechanism. "
-"Multiple third-parties can each have their own key, to use as a namespace in"
-" the metadata."
+"*metadata*: This can be a mapping or None. None is treated as an empty dict."
+"  This value is wrapped in :func:`~types.MappingProxyType` to make it read-"
+"only, and exposed on the :class:`Field` object. It is not used at all by "
+"Data Classes, and is provided as a third-party extension mechanism. Multiple"
+" third-parties can each have their own key, to use as a namespace in the "
+"metadata."
 msgstr ""
-"``метадані``: це може бути відображення або немає. None не розглядається як "
-"порожній dict. Це значення загорнуте в :func:`~types.MappingProxyType`, щоб "
-"зробити його доступним лише для читання, і відображатиметься в об’єкті "
-":class:`Field`. Він взагалі не використовується класами даних і надається як"
-" сторонній механізм розширення. Кілька сторонніх розробників можуть мати "
-"власний ключ, який можна використовувати як простір імен у метаданих."
 
 #: ../../library/dataclasses.rst:289
 msgid ""
-"``kw_only``: If true, this field will be marked as keyword-only. This is "
-"used when the generated :meth:`~object.__init__` method's parameters are "
+"*kw_only*: If true, this field will be marked as keyword-only. This is used "
+"when the generated :meth:`~object.__init__` method's parameters are "
 "computed."
 msgstr ""
 
@@ -407,7 +394,7 @@ msgstr ""
 msgid ""
 "If the default value of a field is specified by a call to :func:`!field`, "
 "then the class attribute for this field will be replaced by the specified "
-"``default`` value.  If no ``default`` is provided, then the class attribute "
+"*default* value.  If *default* is not provided, then the class attribute "
 "will be deleted.  The intent is that after the :func:`@dataclass "
 "<dataclass>` decorator runs, the class attributes will all contain the "
 "default values for the fields, just as if the default value itself were "
@@ -416,11 +403,10 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:311
 msgid ""
-"The class attribute ``C.z`` will be ``10``, the class attribute ``C.t`` will"
-" be ``20``, and the class attributes ``C.x`` and ``C.y`` will not be set."
+"The class attribute :attr:`!C.z` will be ``10``, the class attribute "
+":attr:`!C.t` will be ``20``, and the class attributes :attr:`!C.x` and "
+":attr:`!C.y` will not be set."
 msgstr ""
-"Атрибут класу ``C.z`` буде ``10``, атрибут класу ``C.t`` буде ``20``, а "
-"атрибути класу ``C.x`` і ``C.y`` не будуть встановити."
 
 #: ../../library/dataclasses.rst:317
 msgid ""
@@ -431,22 +417,20 @@ msgid ""
 msgstr ""
 
 #: ../../library/dataclasses.rst:322
-msgid "``name``: The name of the field."
-msgstr "``name``: назва поля."
+msgid ":attr:`!name`: The name of the field."
+msgstr ""
 
 #: ../../library/dataclasses.rst:323
-msgid "``type``: The type of the field."
-msgstr "``type``: тип поля."
+msgid ":attr:`!type`: The type of the field."
+msgstr ""
 
 #: ../../library/dataclasses.rst:324
 msgid ""
-"``default``, ``default_factory``, ``init``, ``repr``, ``hash``, ``compare``,"
-" ``metadata``, and ``kw_only`` have the identical meaning and values as they"
-" do in the :func:`field` function."
+":attr:`!default`, :attr:`!default_factory`, :attr:`!init`, :attr:`!repr`, "
+":attr:`!hash`, :attr:`!compare`, :attr:`!metadata`, and :attr:`!kw_only` "
+"have the identical meaning and values as they do in the :func:`field` "
+"function."
 msgstr ""
-"``default``, ``default_factory``, ``init``, ``repr``, ``hash``, ``compare``,"
-" ``metadata`` і ``kw_only`` мають ідентичне значення та значення, як і у "
-"функції :func:`field`."
 
 #: ../../library/dataclasses.rst:328
 msgid ""
@@ -470,15 +454,11 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:340
 msgid ""
-"Converts the dataclass ``obj`` to a dict (by using the factory function "
-"``dict_factory``).  Each dataclass is converted to a dict of its fields, as "
+"Converts the dataclass *obj* to a dict (by using the factory function "
+"*dict_factory*).  Each dataclass is converted to a dict of its fields, as "
 "``name: value`` pairs.  dataclasses, dicts, lists, and tuples are recursed "
 "into.  Other objects are copied with :func:`copy.deepcopy`."
 msgstr ""
-"Перетворює клас даних ``obj`` на dict (за допомогою фабричної функції "
-"``dict_factory``). Кожен клас даних перетворюється на диктофон своїх полів у"
-" вигляді пар \"ім’я: значення\". класи даних, диктофони, списки та кортежі "
-"рекурсують. Інші об’єкти копіюються за допомогою :func:`copy.deepcopy`."
 
 #: ../../library/dataclasses.rst:346
 msgid "Example of using :func:`!asdict` on nested dataclasses::"
@@ -490,21 +470,17 @@ msgstr "Щоб створити дрібну копію, можна викори
 
 #: ../../library/dataclasses.rst:367
 msgid ""
-":func:`!asdict` raises :exc:`TypeError` if ``obj`` is not a dataclass "
+":func:`!asdict` raises :exc:`TypeError` if *obj* is not a dataclass "
 "instance."
 msgstr ""
 
 #: ../../library/dataclasses.rst:372
 msgid ""
-"Converts the dataclass ``obj`` to a tuple (by using the factory function "
-"``tuple_factory``).  Each dataclass is converted to a tuple of its field "
+"Converts the dataclass *obj* to a tuple (by using the factory function "
+"*tuple_factory*).  Each dataclass is converted to a tuple of its field "
 "values.  dataclasses, dicts, lists, and tuples are recursed into. Other "
 "objects are copied with :func:`copy.deepcopy`."
 msgstr ""
-"Перетворює клас даних ``obj`` на кортеж (за допомогою фабричної функції "
-"``tuple_factory``). Кожен клас даних перетворюється на кортеж значень свого "
-"поля. класи даних, диктофони, списки та кортежі рекурсують. Інші об’єкти "
-"копіюються за допомогою :func:`copy.deepcopy`."
 
 #: ../../library/dataclasses.rst:378
 msgid "Continuing from the previous example::"
@@ -512,35 +488,35 @@ msgstr "Продовжуючи попередній приклад:"
 
 #: ../../library/dataclasses.rst:387
 msgid ""
-":func:`!astuple` raises :exc:`TypeError` if ``obj`` is not a dataclass "
+":func:`!astuple` raises :exc:`TypeError` if *obj* is not a dataclass "
 "instance."
 msgstr ""
 
 #: ../../library/dataclasses.rst:392
 msgid ""
-"Creates a new dataclass with name ``cls_name``, fields as defined in "
-"``fields``, base classes as given in ``bases``, and initialized with a "
-"namespace as given in ``namespace``.  ``fields`` is an iterable whose "
-"elements are each either ``name``, ``(name, type)``, or ``(name, type, "
-"Field)``.  If just ``name`` is supplied, ``typing.Any`` is used for "
-"``type``.  The values of ``init``, ``repr``, ``eq``, ``order``, "
-"``unsafe_hash``, ``frozen``, ``match_args``, ``kw_only``, ``slots``, and "
-"``weakref_slot`` have the same meaning as they do in :func:`@dataclass "
-"<dataclass>`."
+"Creates a new dataclass with name *cls_name*, fields as defined in *fields*,"
+" base classes as given in *bases*, and initialized with a namespace as given"
+" in *namespace*.  *fields* is an iterable whose elements are each either "
+"``name``, ``(name, type)``, or ``(name, type, Field)``.  If just ``name`` is"
+" supplied, :data:`typing.Any` is used for ``type``.  The values of *init*, "
+"*repr*, *eq*, *order*, *unsafe_hash*, *frozen*, *match_args*, *kw_only*, "
+"*slots*, and *weakref_slot* have the same meaning as they do in "
+":func:`@dataclass <dataclass>`."
 msgstr ""
 
 #: ../../library/dataclasses.rst:402
 msgid ""
-"If ``module`` is defined, the ``__module__`` attribute of the dataclass is "
-"set to that value. By default, it is set to the module name of the caller."
+"If *module* is defined, the :attr:`!__module__` attribute of the dataclass "
+"is set to that value. By default, it is set to the module name of the "
+"caller."
 msgstr ""
 
 #: ../../library/dataclasses.rst:406
 msgid ""
 "This function is not strictly required, because any Python mechanism for "
-"creating a new class with ``__annotations__`` can then apply the "
-"``@dataclass`` function to convert that class to a dataclass.  This function"
-" is provided as a convenience.  For example::"
+"creating a new class with :attr:`!__annotations__` can then apply the "
+":func:`@dataclass <dataclass>` function to convert that class to a "
+"dataclass.  This function is provided as a convenience.  For example::"
 msgstr ""
 
 #: ../../library/dataclasses.rst:418
@@ -549,15 +525,11 @@ msgstr "Еквівалентно::"
 
 #: ../../library/dataclasses.rst:431
 msgid ""
-"Creates a new object of the same type as ``obj``, replacing fields with "
-"values from ``changes``.  If ``obj`` is not a Data Class, raises "
-":exc:`TypeError`.  If values in ``changes`` do not specify fields, raises "
+"Creates a new object of the same type as *obj*, replacing fields with values"
+" from *changes*.  If *obj* is not a Data Class, raises :exc:`TypeError`.  If"
+" keys in *changes* are not field names of the given dataclass, raises "
 ":exc:`TypeError`."
 msgstr ""
-"Створює новий об’єкт того самого типу, що й ``obj``, замінюючи поля "
-"значеннями ``changes``. Якщо ``obj`` не є класом даних, викликає "
-":exc:`TypeError`. Якщо значення в ``changes`` не вказують на поля, викликає "
-":exc:`TypeError`."
 
 #: ../../library/dataclasses.rst:436
 msgid ""
@@ -575,12 +547,9 @@ msgstr ""
 
 #: ../../library/dataclasses.rst:444
 msgid ""
-"It is an error for ``changes`` to contain any fields that are defined as "
+"It is an error for *changes* to contain any fields that are defined as "
 "having ``init=False``.  A :exc:`ValueError` will be raised in this case."
 msgstr ""
-"Це помилка, якщо ``changes`` містить будь-які поля, які визначені як такі, "
-"що мають ``init=False``. У цьому випадку буде викликано помилку "
-":exc:`ValueError`."
 
 #: ../../library/dataclasses.rst:448
 msgid ""
@@ -589,8 +558,8 @@ msgid ""
 "are initialized in :meth:`__post_init__`, if they're initialized at all.  It"
 " is expected that ``init=False`` fields will be rarely and judiciously used."
 "  If they are used, it might be wise to have alternate class constructors, "
-"or perhaps a custom ``replace()`` (or similarly named) method which handles "
-"instance copying."
+"or perhaps a custom :func:`!replace` (or similarly named) method which "
+"handles instance copying."
 msgstr ""
 
 #: ../../library/dataclasses.rst:459
@@ -656,8 +625,8 @@ msgstr "Обробка після ініціалізації"
 #: ../../library/dataclasses.rst:513
 msgid ""
 "When defined on the class, it will be called by the generated "
-":meth:`~object.__init__`, normally as ``self.__post_init__()``. However, if "
-"any ``InitVar`` fields are defined, they will also be passed to "
+":meth:`~object.__init__`, normally as :meth:`!self.__post_init__`. However, "
+"if any ``InitVar`` fields are defined, they will also be passed to "
 ":meth:`!__post_init__` in the order they were defined in the class.  If no "
 ":meth:`!__init__` method is generated, then :meth:`!__post_init__` will not "
 "automatically be called."
@@ -693,26 +662,26 @@ msgid ""
 "handles ``init=False`` fields."
 msgstr ""
 
-#: ../../library/dataclasses.rst:558
+#: ../../library/dataclasses.rst:560
 msgid "Class variables"
 msgstr "Змінні класу"
 
-#: ../../library/dataclasses.rst:560
+#: ../../library/dataclasses.rst:562
 msgid ""
 "One of the few places where :func:`@dataclass <dataclass>` actually inspects"
 " the type of a field is to determine if a field is a class variable as "
 "defined in :pep:`526`.  It does this by checking if the type of the field is"
-" ``typing.ClassVar``.  If a field is a ``ClassVar``, it is excluded from "
-"consideration as a field and is ignored by the dataclass mechanisms.  Such "
+" :data:`typing.ClassVar`.  If a field is a ``ClassVar``, it is excluded from"
+" consideration as a field and is ignored by the dataclass mechanisms.  Such "
 "``ClassVar`` pseudo-fields are not returned by the module-level "
 ":func:`fields` function."
 msgstr ""
 
-#: ../../library/dataclasses.rst:569
+#: ../../library/dataclasses.rst:573
 msgid "Init-only variables"
 msgstr "Змінні лише для ініціалізації"
 
-#: ../../library/dataclasses.rst:571
+#: ../../library/dataclasses.rst:575
 msgid ""
 "Another place where :func:`@dataclass <dataclass>` inspects a type "
 "annotation is to determine if a field is an init-only variable.  It does "
@@ -725,7 +694,7 @@ msgid ""
 "by dataclasses."
 msgstr ""
 
-#: ../../library/dataclasses.rst:581
+#: ../../library/dataclasses.rst:585
 msgid ""
 "For example, suppose a field will be initialized from a database, if a value"
 " is not provided when creating the class::"
@@ -733,19 +702,17 @@ msgstr ""
 "Наприклад, припустимо, що поле буде ініціалізовано з бази даних, якщо під "
 "час створення класу не вказано значення::"
 
-#: ../../library/dataclasses.rst:596
-msgid ""
-"In this case, :func:`fields` will return :class:`Field` objects for ``i`` "
-"and ``j``, but not for ``database``."
-msgstr ""
-"У цьому випадку :func:`fields` повертатиме об’єкти :class:`Field` для ``i`` "
-"та ``j``, але не для ``database``."
-
 #: ../../library/dataclasses.rst:600
+msgid ""
+"In this case, :func:`fields` will return :class:`Field` objects for "
+":attr:`!i` and :attr:`!j`, but not for :attr:`!database`."
+msgstr ""
+
+#: ../../library/dataclasses.rst:606
 msgid "Frozen instances"
 msgstr "Заморожені екземпляри"
 
-#: ../../library/dataclasses.rst:602
+#: ../../library/dataclasses.rst:608
 msgid ""
 "It is not possible to create truly immutable Python objects.  However, by "
 "passing ``frozen=True`` to the :func:`@dataclass <dataclass>` decorator you "
@@ -754,18 +721,18 @@ msgid ""
 "class.  These methods will raise a :exc:`FrozenInstanceError` when invoked."
 msgstr ""
 
-#: ../../library/dataclasses.rst:608
+#: ../../library/dataclasses.rst:614
 msgid ""
 "There is a tiny performance penalty when using ``frozen=True``: "
 ":meth:`~object.__init__` cannot use simple assignment to initialize fields, "
 "and must use :meth:`!__setattr__`."
 msgstr ""
 
-#: ../../library/dataclasses.rst:613
+#: ../../library/dataclasses.rst:621
 msgid "Inheritance"
 msgstr "Спадщина"
 
-#: ../../library/dataclasses.rst:615
+#: ../../library/dataclasses.rst:623
 msgid ""
 "When the dataclass is being created by the :func:`@dataclass <dataclass>` "
 "decorator, it looks through all of the class's base classes in reverse MRO "
@@ -777,24 +744,24 @@ msgid ""
 "order, derived classes override base classes.  An example::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:635
-msgid ""
-"The final list of fields is, in order, ``x``, ``y``, ``z``.  The final type "
-"of ``x`` is ``int``, as specified in class ``C``."
-msgstr ""
-"Остаточний список полів у такому порядку: ``x``, ``y``, ``z``. Остаточним "
-"типом ``x`` є ``int``, як зазначено в класі ``C``."
-
-#: ../../library/dataclasses.rst:638
-msgid ""
-"The generated :meth:`~object.__init__` method for ``C`` will look like::"
-msgstr ""
-
 #: ../../library/dataclasses.rst:643
+msgid ""
+"The final list of fields is, in order, :attr:`!x`, :attr:`!y`, :attr:`!z`.  "
+"The final type of :attr:`!x` is :class:`int`, as specified in class "
+":class:`!C`."
+msgstr ""
+
+#: ../../library/dataclasses.rst:646
+msgid ""
+"The generated :meth:`~object.__init__` method for :class:`!C` will look "
+"like::"
+msgstr ""
+
+#: ../../library/dataclasses.rst:651
 msgid "Re-ordering of keyword-only parameters in :meth:`!__init__`"
 msgstr ""
 
-#: ../../library/dataclasses.rst:645
+#: ../../library/dataclasses.rst:653
 msgid ""
 "After the parameters needed for :meth:`~object.__init__` are computed, any "
 "keyword-only parameters are moved to come after all regular (non-keyword-"
@@ -802,19 +769,19 @@ msgid ""
 "implemented in Python: they must come after non-keyword-only parameters."
 msgstr ""
 
-#: ../../library/dataclasses.rst:651
+#: ../../library/dataclasses.rst:659
 msgid ""
-"In this example, ``Base.y``, ``Base.w``, and ``D.t`` are keyword-only "
-"fields, and ``Base.x`` and ``D.z`` are regular fields::"
-msgstr ""
-"У цьому прикладі ``Base.y``, ``Base.w`` і ``D.t`` є полями лише для ключових"
-" слів, а ``Base.x`` і ``D.z`` є звичайними полями: :"
-
-#: ../../library/dataclasses.rst:666
-msgid "The generated :meth:`!__init__` method for ``D`` will look like::"
+"In this example, :attr:`!Base.y`, :attr:`!Base.w`, and :attr:`!D.t` are "
+"keyword-only fields, and :attr:`!Base.x` and :attr:`!D.z` are regular "
+"fields::"
 msgstr ""
 
-#: ../../library/dataclasses.rst:670
+#: ../../library/dataclasses.rst:674
+msgid ""
+"The generated :meth:`!__init__` method for :class:`!D` will look like::"
+msgstr ""
+
+#: ../../library/dataclasses.rst:678
 msgid ""
 "Note that the parameters have been re-ordered from how they appear in the "
 "list of fields: parameters derived from regular fields are followed by "
@@ -824,40 +791,37 @@ msgstr ""
 "відображаються в списку полів: за параметрами, отриманими зі звичайних "
 "полів, слідують параметри, отримані з полів лише з ключовими словами."
 
-#: ../../library/dataclasses.rst:674
+#: ../../library/dataclasses.rst:682
 msgid ""
 "The relative ordering of keyword-only parameters is maintained in the re-"
 "ordered :meth:`!__init__` parameter list."
 msgstr ""
 
-#: ../../library/dataclasses.rst:679
+#: ../../library/dataclasses.rst:687
 msgid "Default factory functions"
 msgstr "Стандартні заводські функції"
 
-#: ../../library/dataclasses.rst:681
+#: ../../library/dataclasses.rst:689
 msgid ""
-"If a :func:`field` specifies a ``default_factory``, it is called with zero "
+"If a :func:`field` specifies a *default_factory*, it is called with zero "
 "arguments when a default value for the field is needed.  For example, to "
 "create a new instance of a list, use::"
 msgstr ""
-"Якщо :func:`field` визначає ``default_factory``, воно викликається з "
-"нульовими аргументами, коли потрібне значення за замовчуванням для поля. "
-"Наприклад, щоб створити новий екземпляр списку, використовуйте::"
 
-#: ../../library/dataclasses.rst:687
+#: ../../library/dataclasses.rst:695
 msgid ""
 "If a field is excluded from :meth:`~object.__init__` (using ``init=False``) "
-"and the field also specifies ``default_factory``, then the default factory "
+"and the field also specifies *default_factory*, then the default factory "
 "function will always be called from the generated :meth:`!__init__` "
 "function.  This happens because there is no other way to give the field an "
 "initial value."
 msgstr ""
 
-#: ../../library/dataclasses.rst:694
+#: ../../library/dataclasses.rst:702
 msgid "Mutable default values"
 msgstr "Змінні значення за замовчуванням"
 
-#: ../../library/dataclasses.rst:696
+#: ../../library/dataclasses.rst:704
 msgid ""
 "Python stores default member variable values in class attributes. Consider "
 "this example, not using dataclasses::"
@@ -865,36 +829,35 @@ msgstr ""
 "Python зберігає значення змінних членів за замовчуванням в атрибутах класу. "
 "Розглянемо цей приклад, не використовуючи класи даних::"
 
-#: ../../library/dataclasses.rst:711
+#: ../../library/dataclasses.rst:719
 msgid ""
-"Note that the two instances of class ``C`` share the same class variable "
-"``x``, as expected."
+"Note that the two instances of class :class:`!C` share the same class "
+"variable :attr:`!x`, as expected."
 msgstr ""
-"Зауважте, що два екземпляри класу ``C`` спільно використовують ту саму "
-"змінну класу ``x``, як і очікувалося."
 
-#: ../../library/dataclasses.rst:714
+#: ../../library/dataclasses.rst:722
 msgid "Using dataclasses, *if* this code was valid::"
 msgstr "Використання класів даних, *якщо* цей код дійсний::"
 
-#: ../../library/dataclasses.rst:722
+#: ../../library/dataclasses.rst:730
 msgid "it would generate code similar to::"
 msgstr "це створить код, подібний до::"
 
-#: ../../library/dataclasses.rst:733
+#: ../../library/dataclasses.rst:741
 msgid ""
-"This has the same issue as the original example using class ``C``. That is, "
-"two instances of class ``D`` that do not specify a value for ``x`` when "
-"creating a class instance will share the same copy of ``x``.  Because "
-"dataclasses just use normal Python class creation they also share this "
-"behavior.  There is no general way for Data Classes to detect this "
-"condition.  Instead, the :func:`@dataclass <dataclass>` decorator will raise"
-" a :exc:`ValueError` if it detects an unhashable default parameter.  The "
-"assumption is that if a value is unhashable, it is mutable.  This is a "
-"partial solution, but it does protect against many common errors."
+"This has the same issue as the original example using class :class:`!C`. "
+"That is, two instances of class :class:`!D` that do not specify a value for "
+":attr:`!x` when creating a class instance will share the same copy of "
+":attr:`!x`.  Because dataclasses just use normal Python class creation they "
+"also share this behavior.  There is no general way for Data Classes to "
+"detect this condition.  Instead, the :func:`@dataclass <dataclass>` "
+"decorator will raise a :exc:`ValueError` if it detects an unhashable default"
+" parameter.  The assumption is that if a value is unhashable, it is mutable."
+"  This is a partial solution, but it does protect against many common "
+"errors."
 msgstr ""
 
-#: ../../library/dataclasses.rst:744
+#: ../../library/dataclasses.rst:752
 msgid ""
 "Using default factory functions is a way to create new instances of mutable "
 "types as default values for fields::"
@@ -902,38 +865,38 @@ msgstr ""
 "Використання заводських функцій за замовчуванням — це спосіб створення нових"
 " екземплярів змінних типів як значень за замовчуванням для полів::"
 
-#: ../../library/dataclasses.rst:753
+#: ../../library/dataclasses.rst:761
 msgid ""
-"Instead of looking for and disallowing objects of type ``list``, ``dict``, "
-"or ``set``, unhashable objects are now not allowed as default values.  "
-"Unhashability is used to approximate mutability."
+"Instead of looking for and disallowing objects of type :class:`list`, "
+":class:`dict`, or :class:`set`, unhashable objects are now not allowed as "
+"default values.  Unhashability is used to approximate mutability."
 msgstr ""
 
-#: ../../library/dataclasses.rst:760
+#: ../../library/dataclasses.rst:768
 msgid "Descriptor-typed fields"
 msgstr ""
 
-#: ../../library/dataclasses.rst:762
+#: ../../library/dataclasses.rst:770
 msgid ""
 "Fields that are assigned :ref:`descriptor objects <descriptors>` as their "
 "default value have the following special behaviors:"
 msgstr ""
 
-#: ../../library/dataclasses.rst:765
+#: ../../library/dataclasses.rst:773
 msgid ""
 "The value for the field passed to the dataclass's :meth:`~object.__init__` "
 "method is passed to the descriptor's :meth:`~object.__set__` method rather "
 "than overwriting the descriptor object."
 msgstr ""
 
-#: ../../library/dataclasses.rst:769
+#: ../../library/dataclasses.rst:777
 msgid ""
 "Similarly, when getting or setting the field, the descriptor's "
 ":meth:`~object.__get__` or :meth:`!__set__` method is called rather than "
 "returning or overwriting the descriptor object."
 msgstr ""
 
-#: ../../library/dataclasses.rst:773
+#: ../../library/dataclasses.rst:781
 msgid ""
 "To determine whether a field contains a default value, :func:`@dataclass "
 "<dataclass>` will call the descriptor's :meth:`!__get__` method using its "
@@ -943,7 +906,7 @@ msgid ""
 "in this situation, no default value will be provided for the field."
 msgstr ""
 
-#: ../../library/dataclasses.rst:808
+#: ../../library/dataclasses.rst:816
 msgid ""
 "Note that if a field is annotated with a descriptor type, but is not "
 "assigned a descriptor object as its default value, the field will act like a"
