@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 14:14+0000\n"
+"POT-Creation-Date: 2024-05-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:10+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -119,7 +119,7 @@ msgstr ""
 msgid "Terminology"
 msgstr "Термінологія"
 
-#: ../../library/optparse.rst:104
+#: ../../library/optparse.rst:95
 msgid "argument"
 msgstr "аргумент"
 
@@ -146,7 +146,7 @@ msgstr ""
 "тому ви повинні читати \"аргумент\" як \"елемент ``sys.argv[1:]`` або деяких"
 " інший список надається замість ``sys.argv[1:]``\"."
 
-#: ../../library/optparse.rst:134
+#: ../../library/optparse.rst:106
 msgid "option"
 msgstr "варіант"
 
@@ -221,7 +221,7 @@ msgstr ""
 "середовища, а останній має сенс, лише якщо ви націлені виключно на Windows "
 "або певні застарілі платформи (наприклад, VMS, MS-DOS)."
 
-#: ../../library/optparse.rst:160
+#: ../../library/optparse.rst:136
 msgid "option argument"
 msgstr "аргумент опції"
 
@@ -258,7 +258,7 @@ msgstr ""
 "інтерпретуємо ``-ab``? Через цю неоднозначність :mod:`optparse` не підтримує"
 " цю функцію."
 
-#: ../../library/optparse.rst:165
+#: ../../library/optparse.rst:162
 msgid "positional argument"
 msgstr "позиційний аргумент"
 
@@ -272,7 +272,7 @@ msgstr ""
 "після аналізу параметрів і їхніх аргументів і видалення зі списку "
 "аргументів."
 
-#: ../../library/optparse.rst:171
+#: ../../library/optparse.rst:167
 msgid "required option"
 msgstr "необхідна опція"
 
@@ -710,7 +710,7 @@ msgstr "Інші дії"
 msgid "Some other actions supported by :mod:`optparse` are:"
 msgstr "Деякі інші дії, які підтримує :mod:`optparse`:"
 
-#: ../../library/optparse.rst:407 ../../library/optparse.rst:929
+#: ../../library/optparse.rst:406 ../../library/optparse.rst:928
 msgid "``\"store_const\"``"
 msgstr "``\"store_const\"``"
 
@@ -718,7 +718,7 @@ msgstr "``\"store_const\"``"
 msgid "store a constant value, pre-set via :attr:`Option.const`"
 msgstr ""
 
-#: ../../library/optparse.rst:410 ../../library/optparse.rst:938
+#: ../../library/optparse.rst:409 ../../library/optparse.rst:937
 msgid "``\"append\"``"
 msgstr "``\"додати\"``"
 
@@ -726,7 +726,7 @@ msgstr "``\"додати\"``"
 msgid "append this option's argument to a list"
 msgstr "додати аргумент цього параметра до списку"
 
-#: ../../library/optparse.rst:413 ../../library/optparse.rst:944
+#: ../../library/optparse.rst:412 ../../library/optparse.rst:943
 msgid "``\"count\"``"
 msgstr "``\"рахувати\"``"
 
@@ -734,7 +734,7 @@ msgstr "``\"рахувати\"``"
 msgid "increment a counter by one"
 msgstr "збільшити лічильник на одиницю"
 
-#: ../../library/optparse.rst:416 ../../library/optparse.rst:947
+#: ../../library/optparse.rst:415 ../../library/optparse.rst:946
 msgid "``\"callback\"``"
 msgstr "``\"зворотний виклик\"``"
 
@@ -1223,7 +1223,7 @@ msgstr ""
 "аргументи ключового слова, тобто не покладайтеся на порядок, у якому "
 "оголошено аргументи."
 
-#: ../../library/optparse.rst:815
+#: ../../library/optparse.rst:810
 msgid "``usage`` (default: ``\"%prog [options]\"``)"
 msgstr "``використання`` (за замовчуванням: ``\"%prog [параметри]\"``)"
 
@@ -1236,7 +1236,7 @@ msgid ""
 "value :const:`optparse.SUPPRESS_USAGE`."
 msgstr ""
 
-#: ../../library/optparse.rst:822
+#: ../../library/optparse.rst:817
 msgid "``option_list`` (default: ``[]``)"
 msgstr "``option_list`` (за замовчуванням: ``[]``)"
 
@@ -1254,7 +1254,7 @@ msgstr ""
 "версією або опціями довідки. Застаріле; замість цього використовуйте "
 ":meth:`add_option` після створення аналізатора."
 
-#: ../../library/optparse.rst:825
+#: ../../library/optparse.rst:824
 msgid "``option_class`` (default: optparse.Option)"
 msgstr "``option_class`` (за замовчуванням: optparse.Option)"
 
@@ -1264,7 +1264,7 @@ msgstr ""
 "Клас для використання під час додавання параметрів до аналізатора в "
 ":meth:`add_option`."
 
-#: ../../library/optparse.rst:831
+#: ../../library/optparse.rst:827
 msgid "``version`` (default: ``None``)"
 msgstr "``version`` (за замовчуванням: ``None``)"
 
@@ -1280,7 +1280,7 @@ msgstr ""
 "додає опцію версії з єдиним рядком опції ``--version``. Підрядок ``%prog`` "
 "розгортається так само, як і ``usage``."
 
-#: ../../library/optparse.rst:836
+#: ../../library/optparse.rst:833
 msgid "``conflict_handler`` (default: ``\"error\"``)"
 msgstr "``conflict_handler`` (за замовчуванням: ``\"помилка\"``)"
 
@@ -1293,7 +1293,7 @@ msgstr ""
 "додаються до аналізатора; див. розділ :ref:`optparse-conflicts-between-"
 "options`."
 
-#: ../../library/optparse.rst:842
+#: ../../library/optparse.rst:838
 msgid "``description`` (default: ``None``)"
 msgstr "``опис`` (за замовчуванням: ``None``)"
 
@@ -1309,7 +1309,7 @@ msgstr ""
 "його, коли користувач запитує допомогу (після ``використання``, але перед "
 "списком параметрів)."
 
-#: ../../library/optparse.rst:847
+#: ../../library/optparse.rst:844
 msgid "``formatter`` (default: a new :class:`IndentedHelpFormatter`)"
 msgstr ""
 "``formatter`` (за замовчуванням: новий :class:`IndentedHelpFormatter`)"
@@ -1324,7 +1324,7 @@ msgstr ""
 "тексту довідки. :mod:`optparse` надає два конкретних класи для цієї мети: "
 "IndentedHelpFormatter і TitledHelpFormatter."
 
-#: ../../library/optparse.rst:851
+#: ../../library/optparse.rst:849
 msgid "``add_help_option`` (default: ``True``)"
 msgstr "``add_help_option`` (за замовчуванням: ``True``)"
 
@@ -1336,7 +1336,7 @@ msgstr ""
 "Якщо істина, :mod:`optparse` додасть параметр довідки (із рядками параметрів"
 " ``-h`` і ``--help``) до аналізатора."
 
-#: ../../library/optparse.rst:855
+#: ../../library/optparse.rst:853
 msgid "``prog``"
 msgstr "``програма``"
 
@@ -1464,7 +1464,7 @@ msgstr ""
 "параметр у командному рядку. Стандартні дії параметрів, жорстко закодовані в"
 " :mod:`optparse`:"
 
-#: ../../library/optparse.rst:926
+#: ../../library/optparse.rst:925
 msgid "``\"store\"``"
 msgstr "``\"магазин\"``"
 
@@ -1472,7 +1472,7 @@ msgstr "``\"магазин\"``"
 msgid "store this option's argument (default)"
 msgstr "зберегти аргумент цього параметра (за замовчуванням)"
 
-#: ../../library/optparse.rst:932
+#: ../../library/optparse.rst:931
 msgid "``\"store_true\"``"
 msgstr "``\"store_true\"``"
 
@@ -1480,7 +1480,7 @@ msgstr "``\"store_true\"``"
 msgid "store ``True``"
 msgstr "зберігати ``Правда``"
 
-#: ../../library/optparse.rst:935
+#: ../../library/optparse.rst:934
 msgid "``\"store_false\"``"
 msgstr "``\"store_false\"``"
 
@@ -1488,7 +1488,7 @@ msgstr "``\"store_false\"``"
 msgid "store ``False``"
 msgstr "зберігати ``False``"
 
-#: ../../library/optparse.rst:941
+#: ../../library/optparse.rst:940
 msgid "``\"append_const\"``"
 msgstr "``\"append_const\"``"
 
@@ -1496,7 +1496,7 @@ msgstr "``\"append_const\"``"
 msgid "append a constant value to a list, pre-set via :attr:`Option.const`"
 msgstr ""
 
-#: ../../library/optparse.rst:950 ../../library/optparse.rst:1244
+#: ../../library/optparse.rst:949 ../../library/optparse.rst:1244
 msgid "``\"help\"``"
 msgstr "``\"допомога\"``"
 
@@ -2121,8 +2121,8 @@ msgstr ""
 msgid "The input parameters are"
 msgstr ""
 
-#: ../../library/optparse.rst:1351 ../../library/optparse.rst:1364
-#: ../../library/optparse.rst:1684
+#: ../../library/optparse.rst:1350 ../../library/optparse.rst:1364
+#: ../../library/optparse.rst:1682
 msgid "``args``"
 msgstr "``args``"
 
@@ -2130,7 +2130,7 @@ msgstr "``args``"
 msgid "the list of arguments to process (default: ``sys.argv[1:]``)"
 msgstr "список аргументів для обробки (за замовчуванням: ``sys.argv[1:]``)"
 
-#: ../../library/optparse.rst:1356
+#: ../../library/optparse.rst:1353
 msgid "``values``"
 msgstr "``значення``"
 
@@ -2145,7 +2145,7 @@ msgstr ""
 msgid "and the return value is a pair ``(options, args)`` where"
 msgstr ""
 
-#: ../../library/optparse.rst:1362
+#: ../../library/optparse.rst:1360
 msgid "``options``"
 msgstr "``параметри``"
 
@@ -2301,7 +2301,7 @@ msgstr "або окремим дзвінком::"
 msgid "The available conflict handlers are:"
 msgstr "Доступні засоби обробки конфліктів:"
 
-#: ../../library/optparse.rst:1459
+#: ../../library/optparse.rst:1457
 msgid "``\"error\"`` (default)"
 msgstr "``\"помилка\"`` (за замовчуванням)"
 
@@ -2313,7 +2313,7 @@ msgstr ""
 "припустити, що конфлікти параметрів є помилкою програмування, і викликати "
 ":exc:`OptionConflictError`"
 
-#: ../../library/optparse.rst:1463
+#: ../../library/optparse.rst:1461
 msgid "``\"resolve\"``"
 msgstr "``\"розв'язати\"``"
 
@@ -2523,7 +2523,7 @@ msgstr ""
 "Є кілька інших атрибутів опції, які ви можете надати, коли визначаєте опцію "
 "зворотного виклику:"
 
-#: ../../library/optparse.rst:1616
+#: ../../library/optparse.rst:1612
 msgid ":attr:`~Option.type`"
 msgstr ":attr:`~Option.type`"
 
@@ -2539,7 +2539,7 @@ msgstr ""
 " :attr:`~Option.type` . Замість того, щоб десь зберігати перетворені "
 "значення, :mod:`optparse` передає їх вашій функції зворотного виклику."
 
-#: ../../library/optparse.rst:1622
+#: ../../library/optparse.rst:1618
 msgid ":attr:`~Option.nargs`"
 msgstr ":attr:`~Option.nargs`"
 
@@ -2555,7 +2555,7 @@ msgstr ""
 "конвертованим у :attr:`~Option.type`. Потім він передає кортеж перетворених "
 "значень у ваш зворотній виклик."
 
-#: ../../library/optparse.rst:1625
+#: ../../library/optparse.rst:1624
 msgid ":attr:`~Option.callback_args`"
 msgstr ":attr:`~Option.callback_args`"
 
@@ -2564,7 +2564,7 @@ msgid "a tuple of extra positional arguments to pass to the callback"
 msgstr ""
 "кортеж додаткових позиційних аргументів для передачі зворотному виклику"
 
-#: ../../library/optparse.rst:1629
+#: ../../library/optparse.rst:1627
 msgid ":attr:`~Option.callback_kwargs`"
 msgstr ":attr:`~Option.callback_kwargs`"
 
@@ -2581,7 +2581,7 @@ msgstr "Як називаються зворотні виклики"
 msgid "All callbacks are called as follows::"
 msgstr "Усі зворотні виклики викликаються наступним чином:"
 
-#: ../../library/optparse.rst:1643
+#: ../../library/optparse.rst:1642
 msgid "``option``"
 msgstr "``опція``"
 
@@ -2589,7 +2589,7 @@ msgstr "``опція``"
 msgid "is the Option instance that's calling the callback"
 msgstr "це екземпляр Option, який викликає зворотний виклик"
 
-#: ../../library/optparse.rst:1650
+#: ../../library/optparse.rst:1645
 msgid "``opt_str``"
 msgstr "``opt_str``"
 
@@ -2607,7 +2607,7 @@ msgstr ""
 "користувач розміщує ``--foo`` у командному рядку як скорочення для ``-- "
 "foobar``, тоді ``opt_str`` буде ``\"--foobar\"``.)"
 
-#: ../../library/optparse.rst:1657
+#: ../../library/optparse.rst:1652
 msgid "``value``"
 msgstr "``значення``"
 
@@ -2627,7 +2627,7 @@ msgstr ""
 "буде ``None``. Якщо :attr:`~Option.nargs` > 1, ``value`` буде кортежем "
 "значень відповідного типу."
 
-#: ../../library/optparse.rst:1680
+#: ../../library/optparse.rst:1659
 msgid "``parser``"
 msgstr "``парсер``"
 
@@ -2640,7 +2640,7 @@ msgstr ""
 "оскільки ви можете отримати доступ до деяких інших цікавих даних через його "
 "атрибути екземпляра:"
 
-#: ../../library/optparse.rst:1667
+#: ../../library/optparse.rst:1663
 msgid "``parser.largs``"
 msgstr "``parser.largs``"
 
@@ -2653,7 +2653,7 @@ msgid ""
 ":meth:`~OptionParser.parse_args`.)"
 msgstr ""
 
-#: ../../library/optparse.rst:1673
+#: ../../library/optparse.rst:1669
 msgid "``parser.rargs``"
 msgstr "``parser.rargs``"
 
@@ -2668,7 +2668,7 @@ msgstr ""
 "ними аргументи. Не соромтеся змінити ``parser.rargs``, напр. споживаючи "
 "більше аргументів."
 
-#: ../../library/optparse.rst:1680
+#: ../../library/optparse.rst:1675
 msgid "``parser.values``"
 msgstr "``parser.values``"
 
@@ -2695,7 +2695,7 @@ msgstr ""
 "це кортеж довільних позиційних аргументів, що надаються через атрибут опції "
 ":attr:`~Option.callback_args`."
 
-#: ../../library/optparse.rst:1689
+#: ../../library/optparse.rst:1686
 msgid "``kwargs``"
 msgstr "``кварги``"
 
@@ -3044,7 +3044,7 @@ msgstr ""
 "Додавати нові дії трохи складніше, тому що ви повинні розуміти, що "
 ":mod:`optparse` має кілька класифікацій для дій:"
 
-#: ../../library/optparse.rst:1962
+#: ../../library/optparse.rst:1959
 msgid "\"store\" actions"
 msgstr "дії \"магазину\"."
 
@@ -3058,7 +3058,7 @@ msgstr ""
 " поточного екземпляра OptionValues; ці параметри вимагають надання атрибута "
 ":attr:`~Option.dest` конструктору Option."
 
-#: ../../library/optparse.rst:1968
+#: ../../library/optparse.rst:1964
 msgid "\"typed\" actions"
 msgstr "\"набрані\" дії"
 

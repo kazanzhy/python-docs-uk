@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-12 14:14+0000\n"
+"POT-Creation-Date: 2024-05-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -148,7 +148,7 @@ msgstr ""
 ":c:type:`Py_ssize_t`, якщо визначено макрос :c:macro:`PY_SSIZE_T_CLEAN`, або"
 " int в іншому випадку."
 
-#: ../../c-api/arg.rst:98
+#: ../../c-api/arg.rst:80
 msgid "``s`` (:class:`str`) [const char \\*]"
 msgstr "``s`` (:class:`str`) [const char \\*]"
 
@@ -189,7 +189,7 @@ msgstr ""
 "Раніше помилка :exc:`TypeError` виникала, коли в рядку Python зустрічалися "
 "вбудовані нульові кодові точки."
 
-#: ../../c-api/arg.rst:104
+#: ../../c-api/arg.rst:100
 msgid "``s*`` (:class:`str` or :term:`bytes-like object`) [Py_buffer]"
 msgstr "``s*`` (:class:`str` або :term:`bytes-like object`) [Py_buffer]"
 
@@ -205,7 +205,7 @@ msgstr ""
 "результуючий рядок C може містити вбудовані байти NUL. Об’єкти Unicode "
 "перетворюються на рядки C за допомогою кодування ``'utf-8``."
 
-#: ../../c-api/arg.rst:111
+#: ../../c-api/arg.rst:106
 msgid ""
 "``s#`` (:class:`str`, read-only :term:`bytes-like object`) [const char \\*, "
 ":c:type:`Py_ssize_t`]"
@@ -222,7 +222,7 @@ msgid ""
 "``'utf-8'`` encoding."
 msgstr ""
 
-#: ../../c-api/arg.rst:115 ../../c-api/arg.rst:547
+#: ../../c-api/arg.rst:113 ../../c-api/arg.rst:546
 msgid "``z`` (:class:`str` or ``None``) [const char \\*]"
 msgstr "``z`` (:class:`str` або ``None``) [const char \\*]"
 
@@ -234,7 +234,7 @@ msgstr ""
 "Подібно до ``s``, але об’єкт Python також може мати значення ``None``, у "
 "цьому випадку вказівник C встановлено на ``NULL``."
 
-#: ../../c-api/arg.rst:119
+#: ../../c-api/arg.rst:117
 msgid ""
 "``z*`` (:class:`str`, :term:`bytes-like object` or ``None``) [Py_buffer]"
 msgstr ""
@@ -248,7 +248,7 @@ msgstr ""
 "Подібно до ``s*``, але об’єкт Python також може бути ``None``, у цьому "
 "випадку ``buf`` член структури :c:type:`Py_buffer` має значення ``NULL`` ."
 
-#: ../../c-api/arg.rst:123
+#: ../../c-api/arg.rst:121
 msgid ""
 "``z#`` (:class:`str`, read-only :term:`bytes-like object` or ``None``) "
 "[const char \\*, :c:type:`Py_ssize_t`]"
@@ -264,7 +264,7 @@ msgstr ""
 "Подібно до ``s#``, але об’єкт Python також може мати значення ``None``, у "
 "цьому випадку вказівник на C встановлюється як ``NULL``."
 
-#: ../../c-api/arg.rst:134
+#: ../../c-api/arg.rst:125
 msgid "``y`` (read-only :term:`bytes-like object`) [const char \\*]"
 msgstr "``y`` (тільки для читання :term:`bytes-like object`) [const char \\*]"
 
@@ -284,7 +284,7 @@ msgstr ""
 "Раніше помилка :exc:`TypeError` виникала, коли в буфері байтів зустрічалися "
 "вбудовані нульові байти."
 
-#: ../../c-api/arg.rst:139
+#: ../../c-api/arg.rst:136
 msgid "``y*`` (:term:`bytes-like object`) [Py_buffer]"
 msgstr "``y*`` (:term:`bytes-like object`) [Py_buffer]"
 
@@ -296,7 +296,7 @@ msgstr ""
 "Цей варіант ``s*`` не приймає об’єкти Unicode, лише байтоподібні об’єкти. "
 "**Це рекомендований спосіб приймати двійкові дані.**"
 
-#: ../../c-api/arg.rst:143
+#: ../../c-api/arg.rst:141
 msgid ""
 "``y#`` (read-only :term:`bytes-like object`) [const char \\*, "
 ":c:type:`Py_ssize_t`]"
@@ -311,7 +311,7 @@ msgid ""
 msgstr ""
 "Цей варіант ``s#`` не приймає об’єкти Unicode, лише байтоподібні об’єкти."
 
-#: ../../c-api/arg.rst:148
+#: ../../c-api/arg.rst:145
 msgid "``S`` (:class:`bytes`) [PyBytesObject \\*]"
 msgstr "``S`` (:class:`bytes`) [PyBytesObject \\*]"
 
@@ -322,7 +322,7 @@ msgid ""
 "bytes object.  The C variable may also be declared as :c:expr:`PyObject*`."
 msgstr ""
 
-#: ../../c-api/arg.rst:153
+#: ../../c-api/arg.rst:150
 msgid "``Y`` (:class:`bytearray`) [PyByteArrayObject \\*]"
 msgstr "``Y`` (:class:`bytearray`) [PyByteArrayObject \\*]"
 
@@ -334,7 +334,7 @@ msgid ""
 ":c:expr:`PyObject*`."
 msgstr ""
 
-#: ../../c-api/arg.rst:158
+#: ../../c-api/arg.rst:155
 msgid "``U`` (:class:`str`) [PyObject \\*]"
 msgstr "``U`` (:class:`str`) [PyObject \\*]"
 
@@ -345,7 +345,7 @@ msgid ""
 "  The C variable may also be declared as :c:expr:`PyObject*`."
 msgstr ""
 
-#: ../../c-api/arg.rst:164
+#: ../../c-api/arg.rst:160
 msgid "``w*`` (read-write :term:`bytes-like object`) [Py_buffer]"
 msgstr "``w*`` (читання-запис :term:`bytes-like object`) [Py_buffer]"
 
@@ -361,7 +361,7 @@ msgstr ""
 "може містити вбудовані нульові байти. Виклик має викликати "
 ":c:func:`PyBuffer_Release`, коли це буде зроблено з буфером."
 
-#: ../../c-api/arg.rst:181
+#: ../../c-api/arg.rst:166
 msgid "``es`` (:class:`str`) [const char \\*encoding, char \\*\\*buffer]"
 msgstr "``es`` (:class:`str`) [const char \\*кодування, char \\*\\*buffer]"
 
@@ -396,7 +396,7 @@ msgstr ""
 "виділене сховище. Виклик відповідає за виклик :c:func:`PyMem_Free`, щоб "
 "звільнити виділений буфер після використання."
 
-#: ../../c-api/arg.rst:186
+#: ../../c-api/arg.rst:183
 msgid ""
 "``et`` (:class:`str`, :class:`bytes` or :class:`bytearray`) [const char "
 "\\*encoding, char \\*\\*buffer]"
@@ -414,7 +414,7 @@ msgstr ""
 "без їх перекодування. Натомість реалізація припускає, що об’єкт рядка байтів"
 " використовує кодування, передане як параметр."
 
-#: ../../c-api/arg.rst:217
+#: ../../c-api/arg.rst:188
 msgid ""
 "``es#`` (:class:`str`) [const char \\*encoding, char \\*\\*buffer, "
 ":c:type:`Py_ssize_t` \\*buffer_length]"
@@ -485,7 +485,7 @@ msgstr ""
 "В обох випадках *\\*buffer_length* встановлюється на довжину закодованих "
 "даних без кінцевого байта NUL."
 
-#: ../../c-api/arg.rst:222
+#: ../../c-api/arg.rst:219
 msgid ""
 "``et#`` (:class:`str`, :class:`bytes` or :class:`bytearray`) [const char "
 "\\*encoding, char \\*\\*buffer, :c:type:`Py_ssize_t` \\*buffer_length]"
@@ -513,7 +513,7 @@ msgstr ""
 msgid "Numbers"
 msgstr "Числа"
 
-#: ../../c-api/arg.rst:234
+#: ../../c-api/arg.rst:232
 msgid "``b`` (:class:`int`) [unsigned char]"
 msgstr "``b`` (:class:`int`) [беззнаковий символ]"
 
@@ -525,7 +525,7 @@ msgstr ""
 "Перетворює невід’ємне ціле число Python на unsigned tiny int, що "
 "зберігається в C :c:expr:`unsigned char`."
 
-#: ../../c-api/arg.rst:238 ../../c-api/arg.rst:581
+#: ../../c-api/arg.rst:236 ../../c-api/arg.rst:580
 msgid "``B`` (:class:`int`) [unsigned char]"
 msgstr "``B`` (:class:`int`) [беззнаковий символ]"
 
@@ -537,7 +537,7 @@ msgstr ""
 "Перетворює ціле число Python на tiny int без перевірки переповнення, що "
 "зберігається в C :c:expr:`unsigned char`."
 
-#: ../../c-api/arg.rst:241 ../../c-api/arg.rst:575
+#: ../../c-api/arg.rst:240 ../../c-api/arg.rst:574
 msgid "``h`` (:class:`int`) [short int]"
 msgstr "``h`` (:class:`int`) [короткий int]"
 
@@ -545,7 +545,7 @@ msgstr "``h`` (:class:`int`) [короткий int]"
 msgid "Convert a Python integer to a C :c:expr:`short int`."
 msgstr "Перетворює ціле число Python на C :c:expr:`short int`."
 
-#: ../../c-api/arg.rst:245 ../../c-api/arg.rst:584
+#: ../../c-api/arg.rst:243 ../../c-api/arg.rst:583
 msgid "``H`` (:class:`int`) [unsigned short int]"
 msgstr "``H`` (:class:`int`) [unsigned short int]"
 
@@ -557,7 +557,7 @@ msgstr ""
 "Перетворює ціле число Python на C :c:expr:`unsigned short int` без перевірки"
 " переповнення."
 
-#: ../../c-api/arg.rst:248 ../../c-api/arg.rst:569
+#: ../../c-api/arg.rst:247 ../../c-api/arg.rst:568
 msgid "``i`` (:class:`int`) [int]"
 msgstr "``i`` (:class:`int`) [int]"
 
@@ -565,7 +565,7 @@ msgstr "``i`` (:class:`int`) [int]"
 msgid "Convert a Python integer to a plain C :c:expr:`int`."
 msgstr ""
 
-#: ../../c-api/arg.rst:252 ../../c-api/arg.rst:587
+#: ../../c-api/arg.rst:250 ../../c-api/arg.rst:586
 msgid "``I`` (:class:`int`) [unsigned int]"
 msgstr "``I`` (:class:`int`) [unsigned int]"
 
@@ -575,7 +575,7 @@ msgid ""
 "checking."
 msgstr ""
 
-#: ../../c-api/arg.rst:255 ../../c-api/arg.rst:578
+#: ../../c-api/arg.rst:254 ../../c-api/arg.rst:577
 msgid "``l`` (:class:`int`) [long int]"
 msgstr "``l`` (:class:`int`) [довге ціле]"
 
@@ -583,7 +583,7 @@ msgstr "``l`` (:class:`int`) [довге ціле]"
 msgid "Convert a Python integer to a C :c:expr:`long int`."
 msgstr ""
 
-#: ../../c-api/arg.rst:259 ../../c-api/arg.rst:590
+#: ../../c-api/arg.rst:257 ../../c-api/arg.rst:589
 msgid "``k`` (:class:`int`) [unsigned long]"
 msgstr "``k`` (:class:`int`) [беззнаковий довгий]"
 
@@ -593,7 +593,7 @@ msgid ""
 "checking."
 msgstr ""
 
-#: ../../c-api/arg.rst:262 ../../c-api/arg.rst:593
+#: ../../c-api/arg.rst:261 ../../c-api/arg.rst:592
 msgid "``L`` (:class:`int`) [long long]"
 msgstr "``L`` (:class:`int`) [довгий довгий]"
 
@@ -601,7 +601,7 @@ msgstr "``L`` (:class:`int`) [довгий довгий]"
 msgid "Convert a Python integer to a C :c:expr:`long long`."
 msgstr ""
 
-#: ../../c-api/arg.rst:266 ../../c-api/arg.rst:596
+#: ../../c-api/arg.rst:264 ../../c-api/arg.rst:595
 msgid "``K`` (:class:`int`) [unsigned long long]"
 msgstr "``K`` (:class:`int`) [беззнаковий довгий довгий]"
 
@@ -611,7 +611,7 @@ msgid ""
 "overflow checking."
 msgstr ""
 
-#: ../../c-api/arg.rst:269 ../../c-api/arg.rst:599
+#: ../../c-api/arg.rst:268 ../../c-api/arg.rst:598
 msgid "``n`` (:class:`int`) [:c:type:`Py_ssize_t`]"
 msgstr "``n`` (:class:`int`) [:c:type:`Py_ssize_t`]"
 
@@ -619,7 +619,7 @@ msgstr "``n`` (:class:`int`) [:c:type:`Py_ssize_t`]"
 msgid "Convert a Python integer to a C :c:type:`Py_ssize_t`."
 msgstr "Перетворіть ціле число Python на C :c:type:`Py_ssize_t`."
 
-#: ../../c-api/arg.rst:276
+#: ../../c-api/arg.rst:271
 msgid "``c`` (:class:`bytes` or :class:`bytearray` of length 1) [char]"
 msgstr "``c`` (:class:`bytes` або :class:`bytearray` довжиною 1) [char]"
 
@@ -633,7 +633,7 @@ msgstr ""
 msgid "Allow :class:`bytearray` objects."
 msgstr "Дозволити об’єкти :class:`bytearray`."
 
-#: ../../c-api/arg.rst:280 ../../c-api/arg.rst:607
+#: ../../c-api/arg.rst:278 ../../c-api/arg.rst:605
 msgid "``C`` (:class:`str` of length 1) [int]"
 msgstr "``C`` (:class:`str` довжини 1) [int]"
 
@@ -643,7 +643,7 @@ msgid ""
 "1, to a C :c:expr:`int`."
 msgstr ""
 
-#: ../../c-api/arg.rst:283 ../../c-api/arg.rst:613
+#: ../../c-api/arg.rst:282 ../../c-api/arg.rst:612
 msgid "``f`` (:class:`float`) [float]"
 msgstr "``f`` (:class:`float`) [float]"
 
@@ -651,7 +651,7 @@ msgstr "``f`` (:class:`float`) [float]"
 msgid "Convert a Python floating point number to a C :c:expr:`float`."
 msgstr ""
 
-#: ../../c-api/arg.rst:286 ../../c-api/arg.rst:610
+#: ../../c-api/arg.rst:285 ../../c-api/arg.rst:609
 msgid "``d`` (:class:`float`) [double]"
 msgstr "``d`` (:class:`float`) [double]"
 
@@ -659,7 +659,7 @@ msgstr "``d`` (:class:`float`) [double]"
 msgid "Convert a Python floating point number to a C :c:expr:`double`."
 msgstr ""
 
-#: ../../c-api/arg.rst:289
+#: ../../c-api/arg.rst:288
 msgid "``D`` (:class:`complex`) [Py_complex]"
 msgstr "``D`` (:class:`complex`) [Py_complex]"
 
@@ -672,7 +672,7 @@ msgstr ""
 msgid "Other objects"
 msgstr "Інші об'єкти"
 
-#: ../../c-api/arg.rst:299 ../../c-api/arg.rst:626
+#: ../../c-api/arg.rst:294 ../../c-api/arg.rst:618
 msgid "``O`` (object) [PyObject \\*]"
 msgstr "``O`` (об'єкт) [PyObject \\*]"
 
@@ -684,7 +684,7 @@ msgid ""
 "count is not increased). The pointer stored is not ``NULL``."
 msgstr ""
 
-#: ../../c-api/arg.rst:306
+#: ../../c-api/arg.rst:301
 msgid "``O!`` (object) [*typeobject*, PyObject \\*]"
 msgstr "``O!`` (об'єкт) [*typeobject*, PyObject \\*]"
 
@@ -697,7 +697,7 @@ msgid ""
 "required type, :exc:`TypeError` is raised."
 msgstr ""
 
-#: ../../c-api/arg.rst:331 ../../c-api/arg.rst:640
+#: ../../c-api/arg.rst:310 ../../c-api/arg.rst:636
 msgid "``O&`` (object) [*converter*, *anything*]"
 msgstr "``O&`` (об'єкт) [*конвертер*, *що завгодно*]"
 
@@ -737,7 +737,7 @@ msgstr ""
 msgid "``Py_CLEANUP_SUPPORTED`` was added."
 msgstr "Додано ``Py_CLEANUP_SUPPORTED``."
 
-#: ../../c-api/arg.rst:340
+#: ../../c-api/arg.rst:333
 msgid "``p`` (:class:`bool`) [int]"
 msgstr "``p`` (:class:`bool`) [int]"
 
@@ -756,7 +756,7 @@ msgstr ""
 ":ref:`truth` для отримання додаткової інформації про те, як Python перевіряє"
 " значення на істинність."
 
-#: ../../c-api/arg.rst:345 ../../c-api/arg.rst:643
+#: ../../c-api/arg.rst:342 ../../c-api/arg.rst:642
 msgid "``(items)`` (:class:`tuple`) [*matching-items*]"
 msgstr "``(items)`` (:class:`tuple`) [*matching-items*]"
 
@@ -788,7 +788,7 @@ msgstr ""
 "Кілька інших символів мають значення в рядку формату. Вони можуть не "
 "знаходитися всередині вкладених дужок. Вони є:"
 
-#: ../../c-api/arg.rst:361
+#: ../../c-api/arg.rst:356
 msgid "``|``"
 msgstr "``|``"
 
@@ -805,7 +805,7 @@ msgstr ""
 "значенням за замовчуванням --- коли необов’язковий аргумент не вказано, "
 ":c:func:`PyArg_ParseTuple` не торкається вмісту відповідних змінних C."
 
-#: ../../c-api/arg.rst:370
+#: ../../c-api/arg.rst:363
 msgid "``$``"
 msgstr "``$``"
 
@@ -821,7 +821,7 @@ msgstr ""
 " для ключових слів також мають бути необов’язковими, тому ``|`` завжди "
 "потрібно вказувати перед ``$`` у рядку формату."
 
-#: ../../c-api/arg.rst:375
+#: ../../c-api/arg.rst:372
 msgid "``:``"
 msgstr "``:``"
 
@@ -835,7 +835,7 @@ msgstr ""
 "використовується як ім’я функції в повідомленнях про помилки (\"пов’язане "
 "значення\" винятку, яке викликає :c:func:`PyArg_ParseTuple`)."
 
-#: ../../c-api/arg.rst:380
+#: ../../c-api/arg.rst:377
 msgid "``;``"
 msgstr "``;``"
 
@@ -1061,7 +1061,7 @@ msgstr ""
 "форматування (але не в одиницях форматування, таких як ``s#``). Це можна "
 "використати, щоб зробити рядки довгого формату трохи більш читабельними."
 
-#: ../../c-api/arg.rst:531
+#: ../../c-api/arg.rst:529
 msgid "``s`` (:class:`str` or ``None``) [const char \\*]"
 msgstr "``s`` (:class:`str` або ``None``) [const char \\*]"
 
@@ -1074,7 +1074,7 @@ msgstr ""
 " допомогою кодування ``'utf-8'``. Якщо вказівник на рядок C має значення "
 "``NULL``, використовується ``None``."
 
-#: ../../c-api/arg.rst:536
+#: ../../c-api/arg.rst:533
 msgid "``s#`` (:class:`str` or ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
 "``s#`` (:class:`str` або ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
@@ -1089,7 +1089,7 @@ msgstr ""
 "допомогою кодування ``'utf-8'``. Якщо покажчик рядка C має значення "
 "``NULL``, довжина ігнорується і повертається ``None``."
 
-#: ../../c-api/arg.rst:540
+#: ../../c-api/arg.rst:538
 msgid "``y`` (:class:`bytes`) [const char \\*]"
 msgstr "``y`` (:class:`bytes`) [const char \\*]"
 
@@ -1101,7 +1101,7 @@ msgstr ""
 "Це перетворює рядок C на об’єкт Python :class:`bytes`. Якщо вказівник на "
 "рядок C має значення ``NULL``, повертається ``None``."
 
-#: ../../c-api/arg.rst:544
+#: ../../c-api/arg.rst:542
 msgid "``y#`` (:class:`bytes`) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr "``y#`` (:class:`bytes`) [const char \\*, :c:type:`Py_ssize_t`]"
 
@@ -1117,7 +1117,7 @@ msgstr ""
 msgid "Same as ``s``."
 msgstr "Те саме, що ``s``."
 
-#: ../../c-api/arg.rst:550
+#: ../../c-api/arg.rst:549
 msgid "``z#`` (:class:`str` or ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
 "``z#`` (:class:`str` або ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
@@ -1126,7 +1126,7 @@ msgstr ""
 msgid "Same as ``s#``."
 msgstr "Те саме, що ``s#``."
 
-#: ../../c-api/arg.rst:555
+#: ../../c-api/arg.rst:552
 msgid "``u`` (:class:`str`) [const wchar_t \\*]"
 msgstr "``u`` (:class:`str`) [const wchar_t \\*]"
 
@@ -1140,7 +1140,7 @@ msgstr ""
 "закінченням нульовим символом на об’єкт Python Unicode. Якщо покажчик буфера"
 " Unicode має значення ``NULL``, повертається ``None``."
 
-#: ../../c-api/arg.rst:560
+#: ../../c-api/arg.rst:557
 msgid "``u#`` (:class:`str`) [const wchar_t \\*, :c:type:`Py_ssize_t`]"
 msgstr "``u#`` (:class:`str`) [const wchar_t \\*, :c:type:`Py_ssize_t`]"
 
@@ -1154,11 +1154,11 @@ msgstr ""
 "Python Unicode. Якщо покажчик буфера Unicode має значення ``NULL``, довжина "
 "ігнорується і повертається ``None``."
 
-#: ../../c-api/arg.rst:563
+#: ../../c-api/arg.rst:562
 msgid "``U`` (:class:`str` or ``None``) [const char \\*]"
 msgstr "``U`` (:class:`str` або ``None``) [const char \\*]"
 
-#: ../../c-api/arg.rst:566
+#: ../../c-api/arg.rst:565
 msgid "``U#`` (:class:`str` or ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
 msgstr ""
 "``U#`` (:class:`str` або ``None``) [const char \\*, :c:type:`Py_ssize_t`]"
@@ -1167,7 +1167,7 @@ msgstr ""
 msgid "Convert a plain C :c:expr:`int` to a Python integer object."
 msgstr ""
 
-#: ../../c-api/arg.rst:572
+#: ../../c-api/arg.rst:571
 msgid "``b`` (:class:`int`) [char]"
 msgstr "``b`` (:class:`int`) [символ]"
 
@@ -1211,7 +1211,7 @@ msgstr ""
 msgid "Convert a C :c:type:`Py_ssize_t` to a Python integer."
 msgstr "Перетворіть C :c:type:`Py_ssize_t` на ціле число Python."
 
-#: ../../c-api/arg.rst:603
+#: ../../c-api/arg.rst:601
 msgid "``c`` (:class:`bytes` of length 1) [char]"
 msgstr "``c`` (:class:`bytes` довжиною 1) [символ]"
 
@@ -1235,7 +1235,7 @@ msgstr ""
 msgid "Convert a C :c:expr:`float` to a Python floating point number."
 msgstr ""
 
-#: ../../c-api/arg.rst:616
+#: ../../c-api/arg.rst:615
 msgid "``D`` (:class:`complex`) [Py_complex \\*]"
 msgstr "``D`` (:class:`complex`) [Py_complex \\*]"
 
@@ -1254,7 +1254,7 @@ msgid ""
 "If no exception has been raised yet, :exc:`SystemError` is set."
 msgstr ""
 
-#: ../../c-api/arg.rst:629
+#: ../../c-api/arg.rst:628
 msgid "``S`` (object) [PyObject \\*]"
 msgstr "``S`` (об'єкт) [PyObject \\*]"
 
@@ -1262,7 +1262,7 @@ msgstr "``S`` (об'єкт) [PyObject \\*]"
 msgid "Same as ``O``."
 msgstr "Те саме, що \"О\"."
 
-#: ../../c-api/arg.rst:634
+#: ../../c-api/arg.rst:631
 msgid "``N`` (object) [PyObject \\*]"
 msgstr "``N`` (об'єкт) [PyObject \\*]"
 
@@ -1289,7 +1289,7 @@ msgstr ""
 "Перетворіть послідовність значень C на кортеж Python із такою ж кількістю "
 "елементів."
 
-#: ../../c-api/arg.rst:646
+#: ../../c-api/arg.rst:645
 msgid "``[items]`` (:class:`list`) [*matching-items*]"
 msgstr "``[items]`` (:class:`list`) [*matching-items*]"
 
@@ -1301,7 +1301,7 @@ msgstr ""
 "Перетворіть послідовність значень C на список Python з такою ж кількістю "
 "елементів."
 
-#: ../../c-api/arg.rst:651
+#: ../../c-api/arg.rst:648
 msgid "``{items}`` (:class:`dict`) [*matching-items*]"
 msgstr "``{items}`` (:class:`dict`) [*відповідні-елементи*]"
 
