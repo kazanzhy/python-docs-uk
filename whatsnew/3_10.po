@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-04 01:27+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -348,12 +348,10 @@ msgstr "AttributeErrors"
 
 #: ../../whatsnew/3.10.rst:355
 msgid ""
-"When printing :exc:`AttributeError`, :c:func:`PyErr_Display` will offer "
+"When printing :exc:`AttributeError`, :c:func:`!PyErr_Display` will offer "
 "suggestions of similar attribute names in the object that the exception was "
 "raised from:"
 msgstr ""
-"Під час друку :exc:`AttributeError`, :c:func:`PyErr_Display` запропонує "
-"подібні назви атрибутів в об’єкті, з якого було викликано виключення:"
 
 #: ../../whatsnew/3.10.rst:366 ../../whatsnew/3.10.rst:388
 msgid "(Contributed by Pablo Galindo in :issue:`38530`.)"
@@ -361,14 +359,10 @@ msgstr "(Надав Пабло Галіндо в :issue:`38530`.)"
 
 #: ../../whatsnew/3.10.rst:369
 msgid ""
-"Notice this won't work if :c:func:`PyErr_Display` is not called to display "
+"Notice this won't work if :c:func:`!PyErr_Display` is not called to display "
 "the error which can happen if some other custom error display function is "
 "used. This is a common scenario in some REPLs like IPython."
 msgstr ""
-"Зауважте, що це не працюватиме, якщо :c:func:`PyErr_Display` не викликається"
-" для відображення помилки, що може статися, якщо використовується якась інша"
-" функція відображення помилок. Це поширений сценарій у деяких REPL, таких як"
-" IPython."
 
 #: ../../whatsnew/3.10.rst:374
 msgid "NameErrors"
@@ -377,22 +371,16 @@ msgstr "NameErrors"
 #: ../../whatsnew/3.10.rst:376
 msgid ""
 "When printing :exc:`NameError` raised by the interpreter, "
-":c:func:`PyErr_Display` will offer suggestions of similar variable names in "
-"the function that the exception was raised from:"
+":c:func:`!PyErr_Display` will offer suggestions of similar variable names in"
+" the function that the exception was raised from:"
 msgstr ""
-"Під час друку :exc:`NameError`, викликаного інтерпретатором, "
-":c:func:`PyErr_Display` запропонує пропозиції подібних імен змінних у "
-"функції, з якої було викликано виняток:"
 
 #: ../../whatsnew/3.10.rst:391
 msgid ""
-"Notice this won't work if :c:func:`PyErr_Display` is not called to display "
+"Notice this won't work if :c:func:`!PyErr_Display` is not called to display "
 "the error, which can happen if some other custom error display function is "
 "used. This is a common scenario in some REPLs like IPython."
 msgstr ""
-"Зауважте, що це не спрацює, якщо :c:func:`PyErr_Display` не викликається для"
-" відображення помилки, що може статися, якщо використовується інша функція "
-"відображення помилок. Це поширений сценарій у деяких REPL, таких як IPython."
 
 #: ../../whatsnew/3.10.rst:397
 msgid "PEP 626: Precise line numbers for debugging and other tools"
@@ -811,16 +799,11 @@ msgstr "Додатковий параметр ``EncodingWarning`` і ``encoding=
 
 #: ../../whatsnew/3.10.rst:693
 msgid ""
-"The default encoding of :class:`TextIOWrapper` and :func:`open` is platform "
-"and locale dependent. Since UTF-8 is used on most Unix platforms, omitting "
-"``encoding`` option when opening UTF-8 files (e.g. JSON, YAML, TOML, "
-"Markdown) is a very common bug. For example::"
+"The default encoding of :class:`~io.TextIOWrapper` and :func:`open` is "
+"platform and locale dependent. Since UTF-8 is used on most Unix platforms, "
+"omitting ``encoding`` option when opening UTF-8 files (e.g. JSON, YAML, "
+"TOML, Markdown) is a very common bug. For example::"
 msgstr ""
-"Стандартне кодування :class:`TextIOWrapper` і :func:`open` залежить від "
-"платформи та локалі. Оскільки UTF-8 використовується на більшості платформ "
-"Unix, пропуск параметра ``encoding`` під час відкриття файлів UTF-8 "
-"(наприклад, JSON, YAML, TOML, Markdown) є дуже поширеною помилкою. "
-"Наприклад::"
 
 #: ../../whatsnew/3.10.rst:702
 msgid ""
@@ -986,11 +969,9 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:788
 msgid ""
-"Now the :mod:`typing` module has a special value :data:`TypeAlias` which "
-"lets you declare type aliases more explicitly::"
+"Now the :mod:`typing` module has a special value :data:`~typing.TypeAlias` "
+"which lets you declare type aliases more explicitly::"
 msgstr ""
-"Тепер модуль :mod:`typing` має спеціальне значення :data:`TypeAlias`, яке "
-"дозволяє декларувати псевдоніми типів більш явно:"
 
 #: ../../whatsnew/3.10.rst:794
 msgid "See :pep:`613` for more details."
@@ -1006,15 +987,11 @@ msgstr "PEP 647: Охоронці типу, визначені користув�
 
 #: ../../whatsnew/3.10.rst:801
 msgid ""
-":data:`TypeGuard` has been added to the :mod:`typing` module to annotate "
-"type guard functions and improve information provided to static type "
-"checkers during type narrowing.  For more information, please see "
-":data:`TypeGuard`\\ 's documentation, and :pep:`647`."
+":data:`~typing.TypeGuard` has been added to the :mod:`typing` module to "
+"annotate type guard functions and improve information provided to static "
+"type checkers during type narrowing.  For more information, please see "
+":data:`~typing.TypeGuard`\\ 's documentation, and :pep:`647`."
 msgstr ""
-":data:`TypeGuard` додано до модуля :mod:`typing`, щоб анотувати функції "
-"захисту типів і покращити інформацію, що надається до засобів перевірки "
-"статичних типів під час звуження типу. Щоб дізнатися більше, перегляньте "
-"документацію :data:`TypeGuard`\\ і :pep:`647`."
 
 #: ../../whatsnew/3.10.rst:806
 msgid ""
@@ -1387,11 +1364,9 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:975
 msgid ""
-"Add :class:`AsyncContextDecorator`, for supporting usage of async context "
-"managers as decorators."
+"Add :class:`~contextlib.AsyncContextDecorator`, for supporting usage of "
+"async context managers as decorators."
 msgstr ""
-"Додайте :class:`AsyncContextDecorator` для підтримки використання менеджерів"
-" асинхронного контексту як декораторів."
 
 #: ../../whatsnew/3.10.rst:979
 msgid "curses"
@@ -1564,10 +1539,11 @@ msgstr "enum"
 
 #: ../../whatsnew/3.10.rst:1092
 msgid ""
-":class:`Enum` :func:`__repr__` now returns ``enum_name.member_name`` and "
-":func:`__str__` now returns ``member_name``.  Stdlib enums available as "
-"module constants have a :func:`repr` of ``module_name.member_name``. "
-"(Contributed by Ethan Furman in :issue:`40066`.)"
+":class:`~enum.Enum` :func:`~object.__repr__` now returns "
+"``enum_name.member_name`` and :func:`~object.__str__` now returns "
+"``member_name``.  Stdlib enums available as module constants have a "
+":func:`repr` of ``module_name.member_name``. (Contributed by Ethan Furman in"
+" :issue:`40066`.)"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:1097
@@ -1591,13 +1567,10 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:1107
 msgid ""
-":func:`fileinput.hook_compressed` now returns :class:`TextIOWrapper` object "
-"when *mode* is \"r\" and file is compressed, like uncompressed files. "
-"(Contributed by Inada Naoki in :issue:`5758`.)"
+":func:`fileinput.hook_compressed` now returns :class:`~io.TextIOWrapper` "
+"object when *mode* is \"r\" and file is compressed, like uncompressed files."
+" (Contributed by Inada Naoki in :issue:`5758`.)"
 msgstr ""
-":func:`fileinput.hook_compressed` тепер повертає об’єкт "
-":class:`TextIOWrapper`, коли *mode* має значення \"r\" і файл стиснутий, як "
-"і нестиснені файли. (Надано Інадою Наокі в :issue:`5758`.)"
 
 #: ../../whatsnew/3.10.rst:1112
 msgid "faulthandler"
@@ -1794,23 +1767,16 @@ msgstr ""
 msgid ""
 ":ref:`importlib.metadata entry points <entry-points>` now provide a nicer "
 "experience for selecting entry points by group and name through a new "
-":class:`importlib.metadata.EntryPoints` class. See the Compatibility Note in"
-" the docs for more info on the deprecation and usage."
+":ref:`importlib.metadata.EntryPoints <entry-points>` class. See the "
+"Compatibility Note in the docs for more info on the deprecation and usage."
 msgstr ""
-":ref:`точки входу importlib.metadata <entry-points>` тепер забезпечують "
-"кращий досвід для вибору точок входу за групою та назвою за допомогою нового"
-" класу :class:`importlib.metadata.EntryPoints`. Див. Примітку щодо "
-"сумісності в документах, щоб дізнатися більше про застаріле та використання."
 
 #: ../../whatsnew/3.10.rst:1208
 msgid ""
-"Added :func:`importlib.metadata.packages_distributions` for resolving top-"
-"level Python modules and packages to their "
-":class:`importlib.metadata.Distribution`."
+"Added :ref:`importlib.metadata.packages_distributions() <package-"
+"distributions>` for resolving top-level Python modules and packages to their"
+" :ref:`importlib.metadata.Distribution <distributions>`."
 msgstr ""
-"Додано :func:`importlib.metadata.packages_distributions` для вирішення "
-"модулів і пакетів Python верхнього рівня в їх "
-":class:`importlib.metadata.Distribution`."
 
 #: ../../whatsnew/3.10.rst:1213
 msgid "inspect"
@@ -1828,26 +1794,12 @@ msgid ""
 "information on best practices for working with annotations, please see "
 ":ref:`annotations-howto`. Relatedly, :func:`inspect.signature`, "
 ":func:`inspect.Signature.from_callable`, and "
-":func:`inspect.Signature.from_function` now call "
+":func:`!inspect.Signature.from_function` now call "
 ":func:`inspect.get_annotations` to retrieve annotations. This means "
 ":func:`inspect.signature` and :func:`inspect.Signature.from_callable` can "
 "also now un-stringize stringized annotations. (Contributed by Larry Hastings"
 " in :issue:`43817`.)"
 msgstr ""
-"Додайте :func:`inspect.get_annotations`, який безпечно обчислює анотації, "
-"визначені для об’єкта. Він усуває особливості доступу до анотацій для різних"
-" типів об’єктів і робить дуже мало припущень щодо об’єкта, який він "
-"досліджує. :func:`inspect.get_annotations` також може правильно видаляти "
-"рядкові анотації. :func:`inspect.get_annotations` тепер вважається найкращою"
-" практикою для доступу до dict анотацій, визначених у будь-якому об’єкті "
-"Python; для отримання додаткової інформації про найкращі методи роботи з "
-"анотаціями, будь ласка, перегляньте :ref:`annotations-howto`. Відповідно, "
-":func:`inspect.signature`, :func:`inspect.Signature.from_callable` і "
-":func:`inspect.Signature.from_function` тепер викликають "
-":func:`inspect.get_annotations` для отримання анотацій. Це означає, що "
-":func:`inspect.signature` і :func:`inspect.Signature.from_callable` тепер "
-"також можуть скасовувати рядкові анотації. (Надано Ларрі Гастінгсом у "
-":issue:`43817`.)"
 
 #: ../../whatsnew/3.10.rst:1234
 msgid "itertools"
@@ -2332,9 +2284,9 @@ msgstr ""
 msgid ""
 "Subclasses of ``typing.Protocol`` which only have data variables declared "
 "will now raise a ``TypeError`` when checked with ``isinstance`` unless they "
-"are decorated with :func:`runtime_checkable`.  Previously, these checks "
-"passed silently.  Users should decorate their subclasses with the "
-":func:`runtime_checkable` decorator if they want runtime protocols. "
+"are decorated with :func:`~typing.runtime_checkable`.  Previously, these "
+"checks passed silently.  Users should decorate their subclasses with the "
+":func:`!runtime_checkable` decorator if they want runtime protocols. "
 "(Contributed by Yurii Karabas in :issue:`38908`.)"
 msgstr ""
 
@@ -2552,11 +2504,11 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:1598
 msgid ""
-":class:`BZ2File` performance is improved by removing internal ``RLock``. "
-"This makes :class:`BZ2File` thread unsafe in the face of multiple "
-"simultaneous readers or writers, just like its equivalent classes in "
-":mod:`gzip` and :mod:`lzma` have always been.  (Contributed by Inada Naoki "
-"in :issue:`43785`.)"
+":class:`~bz2.BZ2File` performance is improved by removing internal "
+"``RLock``. This makes :class:`!BZ2File` thread unsafe in the face of "
+"multiple simultaneous readers or writers, just like its equivalent classes "
+"in :mod:`gzip` and :mod:`lzma` have always been.  (Contributed by Inada "
+"Naoki in :issue:`43785`.)"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:1606 ../../whatsnew/3.10.rst:2212
@@ -2581,7 +2533,7 @@ msgid ""
 "Starting in this release, there will be a concerted effort to begin cleaning"
 " up old import semantics that were kept for Python 2.7 compatibility. "
 "Specifically, :meth:`!find_loader`/:meth:`!find_module` (superseded by "
-":meth:`~importlib.abc.Finder.find_spec`), "
+":meth:`~importlib.abc.MetaPathFinder.find_spec`), "
 ":meth:`~importlib.abc.Loader.load_module` (superseded by "
 ":meth:`~importlib.abc.Loader.exec_module`), :meth:`!module_repr` (which the "
 "import system takes care of for you), the ``__package__`` attribute "
@@ -2628,13 +2580,10 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:1650
 msgid ""
-":meth:`zimport.zipimporter.load_module` has been deprecated in preference "
+":meth:`!zimport.zipimporter.load_module` has been deprecated in preference "
 "for :meth:`~zipimport.zipimporter.exec_module`. (Contributed by Brett Cannon"
 " in :issue:`26131`.)"
 msgstr ""
-":meth:`zimport.zipimporter.load_module` не підтримується як перевага для "
-":meth:`~zipimport.zipimporter.exec_module`. (Надав Бретт Кеннон у "
-":issue:`26131`.)"
 
 #: ../../whatsnew/3.10.rst:1654
 msgid ""
@@ -2821,40 +2770,32 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:1762
 msgid ""
-":data:`~ssl.OP_NO_SSLv2`, :data:`~ssl.OP_NO_SSLv3`, "
-":data:`~ssl.OP_NO_TLSv1`, :data:`~ssl.OP_NO_TLSv1_1`, "
-":data:`~ssl.OP_NO_TLSv1_2`, and :data:`~ssl.OP_NO_TLSv1_3` are replaced by "
-":attr:`sslSSLContext.minimum_version` and "
-":attr:`sslSSLContext.maximum_version`."
+":data:`!OP_NO_SSLv2`, :data:`!OP_NO_SSLv3`, :data:`!OP_NO_TLSv1`, "
+":data:`!OP_NO_TLSv1_1`, :data:`!OP_NO_TLSv1_2`, and :data:`!OP_NO_TLSv1_3` "
+"are replaced by :attr:`~ssl.SSLContext.minimum_version` and "
+":attr:`~ssl.SSLContext.maximum_version`."
 msgstr ""
-":data:`~ssl.OP_NO_SSLv2`, :data:`~ssl.OP_NO_SSLv3`, "
-":data:`~ssl.OP_NO_TLSv1`, :data:`~ssl.OP_NO_TLSv1_1`, "
-":data:`~ssl.OP_NO_TLSv1_2`, і :data:`~ssl.OP_NO_TLSv1_3` замінюються на "
-":attr:`sslSSLContext.minimum_version` і "
-":attr:`sslSSLContext.maximum_version`."
 
 #: ../../whatsnew/3.10.rst:1768
 msgid ""
-":data:`~ssl.PROTOCOL_SSLv2`, :data:`~ssl.PROTOCOL_SSLv3`, "
-":data:`~ssl.PROTOCOL_SSLv23`, :data:`~ssl.PROTOCOL_TLSv1`, "
-":data:`~ssl.PROTOCOL_TLSv1_1`, :data:`~ssl.PROTOCOL_TLSv1_2`, and "
-":const:`~ssl.PROTOCOL_TLS` are deprecated in favor of "
-":const:`~ssl.PROTOCOL_TLS_CLIENT` and :const:`~ssl.PROTOCOL_TLS_SERVER`"
+":data:`!PROTOCOL_SSLv2`, :data:`!PROTOCOL_SSLv3`, :data:`!PROTOCOL_SSLv23`, "
+":data:`!PROTOCOL_TLSv1`, :data:`!PROTOCOL_TLSv1_1`, "
+":data:`!PROTOCOL_TLSv1_2`, and :const:`!PROTOCOL_TLS` are deprecated in "
+"favor of :const:`~ssl.PROTOCOL_TLS_CLIENT` and "
+":const:`~ssl.PROTOCOL_TLS_SERVER`"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:1774
-msgid ""
-":func:`~ssl.wrap_socket` is replaced by :meth:`ssl.SSLContext.wrap_socket`"
+msgid ":func:`!wrap_socket` is replaced by :meth:`ssl.SSLContext.wrap_socket`"
 msgstr ""
-":func:`~ssl.wrap_socket` замінюється на :meth:`ssl.SSLContext.wrap_socket`"
 
 #: ../../whatsnew/3.10.rst:1776
-msgid ":func:`~ssl.match_hostname`"
-msgstr ":func:`~ssl.match_hostname`"
+msgid ":func:`!match_hostname`"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1778
-msgid ":func:`~ssl.RAND_pseudo_bytes`, :func:`~ssl.RAND_egd`"
-msgstr ":func:`~ssl.RAND_pseudo_bytes`, :func:`~ssl.RAND_egd`"
+msgid ":func:`!RAND_pseudo_bytes`, :func:`!RAND_egd`"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1780
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-04 01:27+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -117,29 +117,20 @@ msgstr "збір сміття не блокується на відроджен�
 
 #: ../../whatsnew/3.9.rst:84
 msgid ""
-"a number of Python modules (:mod:`_abc`, :mod:`audioop`, :mod:`_bz2`, "
-":mod:`_codecs`, :mod:`_contextvars`, :mod:`_crypt`, :mod:`_functools`, "
-":mod:`_json`, :mod:`_locale`, :mod:`math`, :mod:`operator`, :mod:`resource`,"
-" :mod:`time`, :mod:`_weakref`) now use multiphase initialization as defined "
-"by PEP 489;"
+"a number of Python modules (:mod:`!_abc`, :mod:`audioop`, :mod:`!_bz2`, "
+":mod:`!_codecs`, :mod:`!_contextvars`, :mod:`!_crypt`, :mod:`!_functools`, "
+":mod:`!_json`, :mod:`!_locale`, :mod:`math`, :mod:`operator`, "
+":mod:`resource`, :mod:`time`, :mod:`!_weakref`) now use multiphase "
+"initialization as defined by PEP 489;"
 msgstr ""
-"декілька модулів Python (:mod:`_abc`, :mod:`audioop`, :mod:`_bz2`, "
-":mod:`_codecs`, :mod:`_contextvars`, :mod:`_crypt`, :mod:`_functools`, "
-":mod:`_json`, :mod:`_locale`, :mod:`math`, :mod:`operator`, :mod:`resource`,"
-" :mod:`time`, :mod:`_weakref`) тепер використовує багатофазову "
-"ініціалізацію, як визначено PEP 489;"
 
 #: ../../whatsnew/3.9.rst:89
 msgid ""
 "a number of standard library modules (:mod:`audioop`, :mod:`ast`, "
-":mod:`grp`, :mod:`_hashlib`, :mod:`pwd`, :mod:`_posixsubprocess`, "
+":mod:`grp`, :mod:`!_hashlib`, :mod:`pwd`, :mod:`!_posixsubprocess`, "
 ":mod:`random`, :mod:`select`, :mod:`struct`, :mod:`termios`, :mod:`zlib`) "
 "are now using the stable ABI defined by PEP 384."
 msgstr ""
-"кілька стандартних бібліотечних модулів (:mod:`audioop`, :mod:`ast`, "
-":mod:`grp`, :mod:`_hashlib`, :mod:`pwd`, :mod:`_posixsubprocess`,  "
-":mod:`random`, :mod:`select`, :mod:`struct`, :mod:`termios`, :mod:`zlib`) "
-"тепер використовують стабільний ABI, визначений PEP 384."
 
 #: ../../whatsnew/3.9.rst:94
 msgid "New library modules:"
@@ -359,17 +350,11 @@ msgstr ""
 #: ../../whatsnew/3.9.rst:205
 msgid ""
 "In Python 3.10, the old parser will be deleted and so will all functionality"
-" that depends on it (primarily the :mod:`parser` module, which has long been"
-" deprecated).  In Python 3.9 *only*, you can switch back to the LL(1) parser"
-" using a command line switch (``-X oldparser``) or an environment variable "
-"(``PYTHONOLDPARSER=1``)."
+" that depends on it (primarily the :mod:`!parser` module, which has long "
+"been deprecated).  In Python 3.9 *only*, you can switch back to the LL(1) "
+"parser using a command line switch (``-X oldparser``) or an environment "
+"variable (``PYTHONOLDPARSER=1``)."
 msgstr ""
-"У Python 3.10 старий синтаксичний аналізатор буде видалено, а також усі "
-"функціональні можливості, які від нього залежать (передусім модуль "
-":mod:`parser`, який уже давно застарів). Лише в Python 3.9 ви можете "
-"повернутися до синтаксичного аналізатора LL(1) за допомогою параметра "
-"командного рядка (``-X oldparser``) або змінної середовища "
-"(``PYTHONOLDPARSER=1``)."
 
 #: ../../whatsnew/3.9.rst:211
 msgid ""
@@ -675,13 +660,10 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:369
 msgid ""
-":mod:`asyncio` now raises :exc:`TyperError` when calling incompatible "
-"methods with an :class:`ssl.SSLSocket` socket. (Contributed by Ido Michael "
-"in :issue:`37404`.)"
-msgstr ""
-":mod:`asyncio` тепер викликає :exc:`TyperError` під час виклику несумісних "
-"методів із сокетом :class:`ssl.SSLSocket`. (Надав Ідо Майкл у "
+":mod:`asyncio` now raises :exc:`TypeError` when calling incompatible methods"
+" with an :class:`ssl.SSLSocket` socket. (Contributed by Ido Michael in "
 ":issue:`37404`.)"
+msgstr ""
 
 #: ../../whatsnew/3.9.rst:374
 msgid "compileall"
@@ -1133,7 +1115,7 @@ msgstr "ос"
 #: ../../whatsnew/3.9.rst:592
 msgid ""
 "Added :const:`~os.CLD_KILLED` and :const:`~os.CLD_STOPPED` for "
-":attr:`si_code`. (Contributed by Donghee Na in :issue:`38493`.)"
+":attr:`!si_code`. (Contributed by Donghee Na in :issue:`38493`.)"
 msgstr ""
 
 #: ../../whatsnew/3.9.rst:595
@@ -1571,15 +1553,11 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:864
 msgid ""
-"The :mod:`parser` and :mod:`symbol` modules are deprecated and will be "
+"The :mod:`!parser` and :mod:`!symbol` modules are deprecated and will be "
 "removed in future versions of Python. For the majority of use cases, users "
 "can leverage the Abstract Syntax Tree (AST) generation and compilation "
 "stage, using the :mod:`ast` module."
 msgstr ""
-"Модулі :mod:`parser` і :mod:`symbol` застаріли та будуть видалені в "
-"майбутніх версіях Python. Для більшості випадків використання користувачі "
-"можуть використовувати етап генерації та компіляції абстрактного "
-"синтаксичного дерева (AST) за допомогою модуля :mod:`ast`."
 
 #: ../../whatsnew/3.9.rst:869
 msgid ""
@@ -1630,13 +1608,10 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:892
 msgid ""
-"Deprecated the ``split()`` method of :class:`_tkinter.TkappType` in favour "
+"Deprecated the ``split()`` method of :class:`!_tkinter.TkappType` in favour "
 "of the ``splitlist()`` method which has more consistent and predicable "
 "behavior. (Contributed by Serhiy Storchaka in :issue:`38371`.)"
 msgstr ""
-"Застарів метод ``split()`` :class:`_tkinter.TkappType` на користь методу "
-"``splitlist()``, який має більш узгоджену та передбачувану поведінку. (Надав"
-" Сергій Сторчака в :issue:`38371`.)"
 
 #: ../../whatsnew/3.9.rst:897
 msgid ""
@@ -1650,19 +1625,17 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:901
 msgid ""
-"binhex4 and hexbin4 standards are now deprecated. The :mod:`binhex` module "
+"binhex4 and hexbin4 standards are now deprecated. The :mod:`!binhex` module "
 "and the following :mod:`binascii` functions are now deprecated:"
 msgstr ""
-"Стандарти binhex4 і hexbin4 тепер застаріли. Модуль :mod:`binhex` і такі "
-"функції :mod:`binascii` тепер застаріли:"
 
 #: ../../whatsnew/3.9.rst:904
-msgid ":func:`~binascii.b2a_hqx`, :func:`~binascii.a2b_hqx`"
-msgstr ":func:`~binascii.b2a_hqx`, :func:`~binascii.a2b_hqx`"
+msgid ":func:`!b2a_hqx`, :func:`!a2b_hqx`"
+msgstr ""
 
 #: ../../whatsnew/3.9.rst:905
-msgid ":func:`~binascii.rlecode_hqx`, :func:`~binascii.rledecode_hqx`"
-msgstr ":func:`~binascii.rlecode_hqx`, :func:`~binascii.rledecode_hqx`"
+msgid ":func:`!rlecode_hqx`, :func:`!rledecode_hqx`"
+msgstr ""
 
 #: ../../whatsnew/3.9.rst:907
 msgid "(Contributed by Victor Stinner in :issue:`39353`.)"
@@ -1750,8 +1723,9 @@ msgstr "Видалено"
 
 #: ../../whatsnew/3.9.rst:953
 msgid ""
-"The erroneous version at :data:`unittest.mock.__version__` has been removed."
-msgstr "Помилкову версію в :data:`unittest.mock.__version__` було видалено."
+"The erroneous version at :data:`!unittest.mock.__version__` has been "
+"removed."
+msgstr ""
 
 #: ../../whatsnew/3.9.rst:955
 msgid ""
@@ -1831,8 +1805,8 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:990
 msgid ""
-"The :meth:`~threading.Thread.isAlive()` method of :class:`threading.Thread` "
-"has been removed. It was deprecated since Python 3.8. Use "
+"The :meth:`!isAlive()` method of :class:`threading.Thread` has been removed."
+" It was deprecated since Python 3.8. Use "
 ":meth:`~threading.Thread.is_alive()` instead. (Contributed by Donghee Na in "
 ":issue:`37804`.)"
 msgstr ""
@@ -1943,16 +1917,12 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:1038
 msgid ""
-"The :func:`sys.getcounts` function, the ``-X showalloccount`` command line "
+"The :func:`!sys.getcounts` function, the ``-X showalloccount`` command line "
 "option and the ``show_alloc_count`` field of the C structure "
 ":c:type:`PyConfig` have been removed. They required a special Python build "
 "by defining ``COUNT_ALLOCS`` macro. (Contributed by Victor Stinner in "
 ":issue:`39489`.)"
 msgstr ""
-"Функцію :func:`sys.getcounts`, параметр командного рядка ``-X "
-"showalloccount`` і поле ``show_alloc_count`` структури C :c:type:`PyConfig` "
-"видалено. Їм потрібна була спеціальна збірка Python із визначенням макросу "
-"``COUNT_ALLOCS``. (Надав Віктор Стіннер у :issue:`39489`.)"
 
 #: ../../whatsnew/3.9.rst:1044
 msgid ""
@@ -1967,25 +1937,18 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:1049
 msgid ""
-"The :meth:`symtable.SymbolTable.has_exec` method has been removed. It was "
+"The :meth:`!symtable.SymbolTable.has_exec` method has been removed. It was "
 "deprecated since 2006, and only returning ``False`` when it's called. "
 "(Contributed by Batuhan Taskaya in :issue:`40208`)"
 msgstr ""
-"Метод :meth:`symtable.SymbolTable.has_exec` видалено. Він застарів з 2006 "
-"року, і повертає лише ``False`` під час виклику. (Надано Batuhan Taskaya в "
-":issue:`40208`)"
 
 #: ../../whatsnew/3.9.rst:1053
 msgid ""
-"The :meth:`asyncio.Task.current_task` and :meth:`asyncio.Task.all_tasks` "
+"The :meth:`!asyncio.Task.current_task` and :meth:`!asyncio.Task.all_tasks` "
 "have been removed. They were deprecated since Python 3.7 and you can use "
 ":func:`asyncio.current_task` and :func:`asyncio.all_tasks` instead. "
 "(Contributed by Rémi Lapeyre in :issue:`40967`)"
 msgstr ""
-":meth:`asyncio.Task.current_task` і :meth:`asyncio.Task.all_task` було "
-"видалено. Вони застаріли з Python 3.7, і замість них можна використовувати "
-":func:`asyncio.current_task` і :func:`asyncio.all_tasks`. (Надав Ремі Лапейр"
-" у :issue:`40967`)"
 
 #: ../../whatsnew/3.9.rst:1058
 msgid ""
@@ -2303,13 +2266,10 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:1233
 msgid ""
-"On non-Windows platforms, the :c:func:`setenv` and :c:func:`unsetenv` "
+"On non-Windows platforms, the :c:func:`!setenv` and :c:func:`!unsetenv` "
 "functions are now required to build Python. (Contributed by Victor Stinner "
 "in :issue:`39395`.)"
 msgstr ""
-"На платформах, відмінних від Windows, для створення Python тепер потрібні "
-"функції :c:func:`setenv` і :c:func:`unsetenv`. (Надав Віктор Стіннер у "
-":issue:`39395`.)"
 
 #: ../../whatsnew/3.9.rst:1237
 msgid ""
@@ -2478,13 +2438,10 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:1322
 msgid ""
-"Added :c:func:`_PyObject_FunctionStr` to get a user-friendly string "
+"Added :c:func:`!_PyObject_FunctionStr` to get a user-friendly string "
 "representation of a function-like object. (Patch by Jeroen Demeyer in "
 ":issue:`37645`.)"
 msgstr ""
-"Додано :c:func:`_PyObject_FunctionStr`, щоб отримати зручне рядкове "
-"представлення об’єкта, подібного до функції. (Патч від Jeroen Demeyer у "
-":issue:`37645`.)"
 
 #: ../../whatsnew/3.9.rst:1326
 msgid ""
@@ -2563,13 +2520,10 @@ msgstr ""
 
 #: ../../whatsnew/3.9.rst:1364
 msgid ""
-"The :c:type:`PyGC_Head` structure is now opaque. It is only defined in the "
+"The :c:type:`!PyGC_Head` structure is now opaque. It is only defined in the "
 "internal C API (``pycore_gc.h``). (Contributed by Victor Stinner in "
 ":issue:`40241`.)"
 msgstr ""
-"Структура :c:type:`PyGC_Head` тепер непрозора. Він визначений лише у "
-"внутрішньому API C (``pycore_gc.h``). (Надав Віктор Стіннер у "
-":issue:`40241`.)"
 
 #: ../../whatsnew/3.9.rst:1368
 msgid ""
@@ -2610,21 +2564,18 @@ msgstr ":c:func:`PyObject_IS_GC` макрос перетворено на фун
 
 #: ../../whatsnew/3.9.rst:1387
 msgid ""
-"The :c:func:`PyObject_NEW` macro becomes an alias to the "
-":c:macro:`PyObject_New` macro, and the :c:func:`PyObject_NEW_VAR` macro "
+"The :c:func:`!PyObject_NEW` macro becomes an alias to the "
+":c:macro:`PyObject_New` macro, and the :c:func:`!PyObject_NEW_VAR` macro "
 "becomes an alias to the :c:macro:`PyObject_NewVar` macro. They no longer "
 "access directly the :c:member:`PyTypeObject.tp_basicsize` member."
 msgstr ""
 
 #: ../../whatsnew/3.9.rst:1392
 msgid ""
-":c:func:`PyObject_GET_WEAKREFS_LISTPTR` macro was converted to a function: "
+":c:func:`!PyObject_GET_WEAKREFS_LISTPTR` macro was converted to a function: "
 "the macro accessed directly the :c:member:`PyTypeObject.tp_weaklistoffset` "
 "member."
 msgstr ""
-"Макрос :c:func:`PyObject_GET_WEAKREFS_LISTPTR` було перетворено на функцію: "
-"макрос мав прямий доступ до елемента "
-":c:member:`PyTypeObject.tp_weaklistoffset`."
 
 #: ../../whatsnew/3.9.rst:1396
 msgid ""
