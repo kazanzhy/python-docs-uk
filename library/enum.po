@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:05+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -445,7 +445,7 @@ msgid "The value given to the ``Enum`` member::"
 msgstr ""
 
 #: ../../library/enum.rst:272 ../../library/enum.rst:292
-msgid "Value of the member, can be set in :meth:`~object.__new__`."
+msgid "Value of the member, can be set in :meth:`~Enum.__new__`."
 msgstr ""
 
 #: ../../library/enum.rst:274
@@ -569,12 +569,8 @@ msgstr ""
 
 #: ../../library/enum.rst:400
 msgid ""
-"..note:: When writing a custom ``__new__``, do not use ``super().__new__`` "
-"--"
-msgstr ""
-
-#: ../../library/enum.rst:401
-msgid "call the appropriate ``__new__`` instead."
+"When writing a custom ``__new__``, do not use ``super().__new__`` -- call "
+"the appropriate ``__new__`` instead."
 msgstr ""
 
 #: ../../library/enum.rst:405
@@ -850,7 +846,7 @@ msgstr ""
 
 #: ../../library/enum.rst:820
 msgid ""
-":meth:`~object.__new__`, if specified, must create and return the enum "
+":meth:`~Enum.__new__`, if specified, must create and return the enum "
 "members; it is also a very good idea to set the member's :attr:`!_value_` "
 "appropriately.  Once all the members are created it is no longer used."
 msgstr ""
