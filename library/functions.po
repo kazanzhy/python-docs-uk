@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-26 14:13+0000\n"
+"POT-Creation-Date: 2024-05-03 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -2913,14 +2913,12 @@ msgstr ""
 #: ../../library/functions.rst:1725
 msgid ""
 "A static method can be called either on the class (such as ``C.f()``) or on "
-"an instance (such as ``C().f()``). Moreover, they can be called as regular "
-"functions (such as ``f()``)."
+"an instance (such as ``C().f()``). Moreover, the static method "
+":term:`descriptor` is also callable, so it can be used in the class "
+"definition (such as ``f()``)."
 msgstr ""
-"Статичний метод можна викликати або в класі (наприклад, ``C.f()``), або в "
-"екземплярі (такому як ``C().f()``). Крім того, їх можна викликати як "
-"звичайні функції (наприклад, ``f()``)."
 
-#: ../../library/functions.rst:1729
+#: ../../library/functions.rst:1730
 msgid ""
 "Static methods in Python are similar to those found in Java or C++. Also, "
 "see :func:`classmethod` for a variant that is useful for creating alternate "
@@ -2930,7 +2928,7 @@ msgstr ""
 ":func:`classmethod` варіант, який корисний для створення альтернативних "
 "конструкторів класів."
 
-#: ../../library/functions.rst:1733
+#: ../../library/functions.rst:1734
 msgid ""
 "Like all decorators, it is also possible to call ``staticmethod`` as a "
 "regular function and do something with its result.  This is needed in some "
@@ -2944,12 +2942,12 @@ msgstr ""
 "автоматичного перетворення в метод екземпляра. Для цих випадків "
 "використовуйте цю ідіому::"
 
-#: ../../library/functions.rst:1745
+#: ../../library/functions.rst:1746
 msgid "For more information on static methods, see :ref:`types`."
 msgstr ""
 "Для отримання додаткової інформації про статичні методи див. :ref:`types`."
 
-#: ../../library/functions.rst:1747
+#: ../../library/functions.rst:1748
 msgid ""
 "Static methods now inherit the method attributes (``__module__``, "
 "``__name__``, ``__qualname__``, ``__doc__`` and ``__annotations__``), have a"
@@ -2959,13 +2957,13 @@ msgstr ""
 "``__name__``, ``__qualname__``, ``__doc__`` і ``__annotations__``), мають "
 "новий атрибут ``__wrapped__`` і тепер викликаються як звичайні функції."
 
-#: ../../library/functions.rst:1762
+#: ../../library/functions.rst:1763
 msgid ""
 "Return a :class:`str` version of *object*.  See :func:`str` for details."
 msgstr ""
 "Повертає :class:`str` версію *object*. Дивіться :func:`str` для деталей."
 
-#: ../../library/functions.rst:1764
+#: ../../library/functions.rst:1765
 msgid ""
 "``str`` is the built-in string :term:`class`.  For general information about"
 " strings, see :ref:`textseq`."
@@ -2973,7 +2971,7 @@ msgstr ""
 "``str`` — це вбудований рядок :term:`class`. Щоб отримати загальну "
 "інформацію про рядки, перегляньте :ref:`textseq`."
 
-#: ../../library/functions.rst:1770
+#: ../../library/functions.rst:1771
 msgid ""
 "Sums *start* and the items of an *iterable* from left to right and returns "
 "the total.  The *iterable*'s items are normally numbers, and the start value"
@@ -2983,7 +2981,7 @@ msgstr ""
 "Елементи *iterable* зазвичай є числами, а початкове значення не може бути "
 "рядком."
 
-#: ../../library/functions.rst:1774
+#: ../../library/functions.rst:1775
 msgid ""
 "For some use cases, there are good alternatives to :func:`sum`. The "
 "preferred, fast way to concatenate a sequence of strings is by calling "
@@ -2997,17 +2995,17 @@ msgstr ""
 "точністю, перегляньте :func:`math.fsum`\\. Щоб об’єднати ряд ітерацій, "
 "розгляньте можливість використання :func:`itertools.chain`."
 
-#: ../../library/functions.rst:1780
+#: ../../library/functions.rst:1781
 msgid "The *start* parameter can be specified as a keyword argument."
 msgstr "Параметр *start* можна вказати як аргумент ключового слова."
 
-#: ../../library/functions.rst:1783
+#: ../../library/functions.rst:1784
 msgid ""
 "Summation of floats switched to an algorithm that gives higher accuracy on "
 "most builds."
 msgstr ""
 
-#: ../../library/functions.rst:1790
+#: ../../library/functions.rst:1791
 msgid ""
 "Return a proxy object that delegates method calls to a parent or sibling "
 "class of *type*.  This is useful for accessing inherited methods that have "
@@ -3017,20 +3015,20 @@ msgstr ""
 "рідному класу *типу*. Це корисно для доступу до успадкованих методів, які "
 "були перевизначені в класі."
 
-#: ../../library/functions.rst:1794
+#: ../../library/functions.rst:1795
 msgid ""
 "The *object_or_type* determines the :term:`method resolution order` to be "
 "searched.  The search starts from the class right after the *type*."
 msgstr ""
 
-#: ../../library/functions.rst:1798
+#: ../../library/functions.rst:1799
 msgid ""
 "For example, if :attr:`~class.__mro__` of *object_or_type* is ``D -> B -> C "
 "-> A -> object`` and the value of *type* is ``B``, then :func:`super` "
 "searches ``C -> A -> object``."
 msgstr ""
 
-#: ../../library/functions.rst:1802
+#: ../../library/functions.rst:1803
 msgid ""
 "The :attr:`~class.__mro__` attribute of the *object_or_type* lists the "
 "method resolution search order used by both :func:`getattr` and "
@@ -3038,7 +3036,7 @@ msgid ""
 "inheritance hierarchy is updated."
 msgstr ""
 
-#: ../../library/functions.rst:1807
+#: ../../library/functions.rst:1808
 msgid ""
 "If the second argument is omitted, the super object returned is unbound.  If"
 " the second argument is an object, ``isinstance(obj, type)`` must be true.  "
@@ -3050,7 +3048,7 @@ msgstr ""
 "Якщо другий аргумент є типом, ``issubclass(type2, type)`` має бути істинним "
 "(це корисно для методів класу)."
 
-#: ../../library/functions.rst:1812
+#: ../../library/functions.rst:1813
 msgid ""
 "There are two typical use cases for *super*.  In a class hierarchy with "
 "single inheritance, *super* can be used to refer to parent classes without "
@@ -3063,7 +3061,7 @@ msgstr ""
 "обслуговування. Це використання дуже схоже на використання *super* в інших "
 "мовах програмування."
 
-#: ../../library/functions.rst:1817
+#: ../../library/functions.rst:1818
 msgid ""
 "The second use case is to support cooperative multiple inheritance in a "
 "dynamic execution environment.  This use case is unique to Python and is not"
@@ -3086,11 +3084,11 @@ msgstr ""
 "оскільки цей порядок може включати однотипні класи, які невідомі до "
 "виконання )."
 
-#: ../../library/functions.rst:1827
+#: ../../library/functions.rst:1828
 msgid "For both use cases, a typical superclass call looks like this::"
 msgstr "Для обох випадків типовий виклик суперкласу виглядає так:"
 
-#: ../../library/functions.rst:1834
+#: ../../library/functions.rst:1835
 msgid ""
 "In addition to method lookups, :func:`super` also works for attribute "
 "lookups.  One possible use case for this is calling :term:`descriptors "
@@ -3100,7 +3098,7 @@ msgstr ""
 " із можливих варіантів використання цього є виклик :term:`дескрипторів "
 "<descriptor>` у батьківському або рідному класі."
 
-#: ../../library/functions.rst:1838
+#: ../../library/functions.rst:1839
 msgid ""
 "Note that :func:`super` is implemented as part of the binding process for "
 "explicit dotted attribute lookups such as ``super().__getitem__(name)``. It "
@@ -3110,7 +3108,7 @@ msgid ""
 "using statements or operators such as ``super()[name]``."
 msgstr ""
 
-#: ../../library/functions.rst:1846
+#: ../../library/functions.rst:1847
 msgid ""
 "Also note that, aside from the zero argument form, :func:`super` is not "
 "limited to use inside methods.  The two argument form specifies the "
@@ -3126,7 +3124,7 @@ msgstr ""
 "заповнює необхідні деталі для правильного отримання визначеного класу, а "
 "також для доступу до поточного екземпляра для звичайних методів."
 
-#: ../../library/functions.rst:1853
+#: ../../library/functions.rst:1854
 msgid ""
 "For practical suggestions on how to design cooperative classes using "
 ":func:`super`, see `guide to using super() "
@@ -3136,7 +3134,7 @@ msgstr ""
 "допомогою :func:`super`, перегляньте `посібник із використання super() "
 "<https://rhettinger.wordpress.com/2011/05/26/super-considered-super/>`_."
 
-#: ../../library/functions.rst:1863
+#: ../../library/functions.rst:1864
 msgid ""
 "Rather than being a function, :class:`tuple` is actually an immutable "
 "sequence type, as documented in :ref:`typesseq-tuple` and :ref:`typesseq`."
@@ -3144,7 +3142,7 @@ msgstr ""
 "Замість того, щоб бути функцією, :class:`tuple` насправді є незмінним типом "
 "послідовності, як описано в :ref:`typesseq-tuple` і :ref:`typesseq`."
 
-#: ../../library/functions.rst:1872
+#: ../../library/functions.rst:1873
 msgid ""
 "With one argument, return the type of an *object*.  The return value is a "
 "type object and generally the same object as returned by "
@@ -3154,7 +3152,7 @@ msgstr ""
 "об’єктом типу та, як правило, таким самим об’єктом, який повертає "
 ":attr:`object.__class__ <instance.__class__>`."
 
-#: ../../library/functions.rst:1876
+#: ../../library/functions.rst:1877
 msgid ""
 "The :func:`isinstance` built-in function is recommended for testing the type"
 " of an object, because it takes subclasses into account."
@@ -3162,7 +3160,7 @@ msgstr ""
 "Для перевірки типу об’єкта рекомендується використовувати вбудовану функцію "
 ":func:`isinstance`, оскільки вона враховує підкласи."
 
-#: ../../library/functions.rst:1880
+#: ../../library/functions.rst:1881
 msgid ""
 "With three arguments, return a new type object.  This is essentially a "
 "dynamic form of the :keyword:`class` statement. The *name* string is the "
@@ -3183,11 +3181,11 @@ msgstr ""
 "перед тим, як стати атрибутом :attr:`~object.__dict__`. Наступні два "
 "оператори створюють ідентичні об’єкти :class:`type`:"
 
-#: ../../library/functions.rst:1895
+#: ../../library/functions.rst:1896
 msgid "See also :ref:`bltin-type-objects`."
 msgstr "Дивіться також :ref:`bltin-type-objects`."
 
-#: ../../library/functions.rst:1897
+#: ../../library/functions.rst:1898
 msgid ""
 "Keyword arguments provided to the three argument form are passed to the "
 "appropriate metaclass machinery (usually :meth:`~object.__init_subclass__`) "
@@ -3198,11 +3196,11 @@ msgstr ""
 "відповідний механізм метакласу (зазвичай :meth:`~object.__init_subclass__`) "
 "так само, як ключові слова у визначенні класу (крім *metaclass*)."
 
-#: ../../library/functions.rst:1902
+#: ../../library/functions.rst:1903
 msgid "See also :ref:`class-customization`."
 msgstr "Дивіться також :ref:`class-customization`."
 
-#: ../../library/functions.rst:1904
+#: ../../library/functions.rst:1905
 msgid ""
 "Subclasses of :class:`type` which don't override ``type.__new__`` may no "
 "longer use the one-argument form to get the type of an object."
@@ -3210,7 +3208,7 @@ msgstr ""
 "Підкласи :class:`type`, які не перевизначають ``type.__new__``, більше не "
 "можуть використовувати форму з одним аргументом для отримання типу об’єкта."
 
-#: ../../library/functions.rst:1911
+#: ../../library/functions.rst:1912
 msgid ""
 "Return the :attr:`~object.__dict__` attribute for a module, class, instance,"
 " or any other object with a :attr:`~object.__dict__` attribute."
@@ -3218,7 +3216,7 @@ msgstr ""
 "Повертає атрибут :attr:`~object.__dict__` для модуля, класу, екземпляра або "
 "будь-якого іншого об’єкта з атрибутом :attr:`~object.__dict__`."
 
-#: ../../library/functions.rst:1914
+#: ../../library/functions.rst:1915
 msgid ""
 "Objects such as modules and instances have an updateable "
 ":attr:`~object.__dict__` attribute; however, other objects may have write "
@@ -3231,7 +3229,7 @@ msgstr ""
 "своїх атрибутів :attr:`~object.__dict__` (наприклад, класи використовують "
 ":class:`types.MappingProxyType`, щоб запобігти прямим оновленням словника)."
 
-#: ../../library/functions.rst:1919
+#: ../../library/functions.rst:1920
 msgid ""
 "Without an argument, :func:`vars` acts like :func:`locals`.  Note, the "
 "locals dictionary is only useful for reads since updates to the locals "
@@ -3241,7 +3239,7 @@ msgstr ""
 "місцевих користувачів корисний лише для читання, оскільки оновлення словника"
 " локальних користувачів ігноруються."
 
-#: ../../library/functions.rst:1923
+#: ../../library/functions.rst:1924
 msgid ""
 "A :exc:`TypeError` exception is raised if an object is specified but it "
 "doesn't have a :attr:`~object.__dict__` attribute (for example, if its class"
@@ -3251,7 +3249,7 @@ msgstr ""
 "атрибута :attr:`~object.__dict__` (наприклад, якщо його клас визначає "
 ":attr:`~object.__slots__` атрибут)."
 
-#: ../../library/functions.rst:1929
+#: ../../library/functions.rst:1930
 msgid ""
 "Iterate over several iterables in parallel, producing tuples with an item "
 "from each one."
@@ -3259,11 +3257,11 @@ msgstr ""
 "Виконайте ітерацію кількох ітерацій паралельно, створюючи кортежі з "
 "елементом з кожного."
 
-#: ../../library/functions.rst:1932
+#: ../../library/functions.rst:1933
 msgid "Example::"
 msgstr "Приклад::"
 
-#: ../../library/functions.rst:1941
+#: ../../library/functions.rst:1942
 msgid ""
 "More formally: :func:`zip` returns an iterator of tuples, where the *i*-th "
 "tuple contains the *i*-th element from each of the argument iterables."
@@ -3271,7 +3269,7 @@ msgstr ""
 "Більш формально: :func:`zip` повертає ітератор кортежів, де *i*-й кортеж "
 "містить *i*-й елемент з кожного з ітерованих аргументів."
 
-#: ../../library/functions.rst:1944
+#: ../../library/functions.rst:1945
 msgid ""
 "Another way to think of :func:`zip` is that it turns rows into columns, and "
 "columns into rows.  This is similar to `transposing a matrix "
@@ -3281,7 +3279,7 @@ msgstr ""
 "рядки на стовпці, а стовпці — на рядки. Це схоже на `транспонування матриці "
 "<https://en.wikipedia.org/wiki/Transpose>`_."
 
-#: ../../library/functions.rst:1948
+#: ../../library/functions.rst:1949
 msgid ""
 ":func:`zip` is lazy: The elements won't be processed until the iterable is "
 "iterated on, e.g. by a :keyword:`!for` loop or by wrapping in a "
@@ -3291,7 +3289,7 @@ msgstr ""
 "ітерацію, напр. за допомогою циклу :keyword:`!for` або загортання в "
 ":class:`list`."
 
-#: ../../library/functions.rst:1952
+#: ../../library/functions.rst:1953
 msgid ""
 "One thing to consider is that the iterables passed to :func:`zip` could have"
 " different lengths; sometimes by design, and sometimes because of a bug in "
@@ -3302,7 +3300,7 @@ msgstr ""
 "різну довжину; іноді задумом, а іноді через помилку в коді, який підготував "
 "ці ітерації. Python пропонує три різні підходи до вирішення цієї проблеми:"
 
-#: ../../library/functions.rst:1957
+#: ../../library/functions.rst:1958
 msgid ""
 "By default, :func:`zip` stops when the shortest iterable is exhausted. It "
 "will ignore the remaining items in the longer iterables, cutting off the "
@@ -3312,7 +3310,7 @@ msgstr ""
 "ітерація. Він ігноруватиме решта елементів у довших ітераціях, відрізаючи "
 "результат до довжини найкоротшої ітерації::"
 
-#: ../../library/functions.rst:1964
+#: ../../library/functions.rst:1965
 msgid ""
 ":func:`zip` is often used in cases where the iterables are assumed to be of "
 "equal length.  In such cases, it's recommended to use the ``strict=True`` "
@@ -3323,13 +3321,13 @@ msgstr ""
 "використовувати параметр ``strict=True``. Його вихід такий самий, як і "
 "звичайний :func:`zip`::"
 
-#: ../../library/functions.rst:1971
+#: ../../library/functions.rst:1972
 msgid ""
 "Unlike the default behavior, it raises a :exc:`ValueError` if one iterable "
 "is exhausted before the others:"
 msgstr ""
 
-#: ../../library/functions.rst:1989
+#: ../../library/functions.rst:1990
 msgid ""
 "Without the ``strict=True`` argument, any bug that results in iterables of "
 "different lengths will be silenced, possibly manifesting as a hard-to-find "
@@ -3339,7 +3337,7 @@ msgstr ""
 "різної довжини, буде замовчена, можливо, проявляючись як помилка, яку важко "
 "знайти в іншій частині програми."
 
-#: ../../library/functions.rst:1993
+#: ../../library/functions.rst:1994
 msgid ""
 "Shorter iterables can be padded with a constant value to make all the "
 "iterables have the same length.  This is done by "
@@ -3348,7 +3346,7 @@ msgstr ""
 "Коротші ітератори можна доповнити постійним значенням, щоб усі ітератори "
 "мали однакову довжину. Це робить :func:`itertools.zip_longest`."
 
-#: ../../library/functions.rst:1997
+#: ../../library/functions.rst:1998
 msgid ""
 "Edge cases: With a single iterable argument, :func:`zip` returns an iterator"
 " of 1-tuples.  With no arguments, it returns an empty iterator."
@@ -3356,11 +3354,11 @@ msgstr ""
 "Граничні випадки: з одним ітерованим аргументом :func:`zip` повертає "
 "ітератор 1-кортежів. Без аргументів він повертає порожній ітератор."
 
-#: ../../library/functions.rst:2000
+#: ../../library/functions.rst:2001
 msgid "Tips and tricks:"
 msgstr "Поради та підказки:"
 
-#: ../../library/functions.rst:2002
+#: ../../library/functions.rst:2003
 msgid ""
 "The left-to-right evaluation order of the iterables is guaranteed. This "
 "makes possible an idiom for clustering a data series into n-length groups "
@@ -3374,7 +3372,7 @@ msgstr ""
 "разів, щоб кожен вихідний кортеж мав результат ``n`` викликів ітератора. Це "
 "призводить до поділу вхідних даних на фрагменти довжиною n."
 
-#: ../../library/functions.rst:2008
+#: ../../library/functions.rst:2009
 msgid ""
 ":func:`zip` in conjunction with the ``*`` operator can be used to unzip a "
 "list::"
@@ -3382,11 +3380,11 @@ msgstr ""
 ":func:`zip` у поєднанні з оператором ``*`` можна використовувати для "
 "розпакування списку::"
 
-#: ../../library/functions.rst:2019
+#: ../../library/functions.rst:2020
 msgid "Added the ``strict`` argument."
 msgstr "Додано аргумент ``строгий``."
 
-#: ../../library/functions.rst:2031
+#: ../../library/functions.rst:2032
 msgid ""
 "This is an advanced function that is not needed in everyday Python "
 "programming, unlike :func:`importlib.import_module`."
@@ -3394,7 +3392,7 @@ msgstr ""
 "Це розширена функція, яка не потрібна в повсякденному програмуванні на "
 "Python, на відміну від :func:`importlib.import_module`."
 
-#: ../../library/functions.rst:2034
+#: ../../library/functions.rst:2035
 msgid ""
 "This function is invoked by the :keyword:`import` statement.  It can be "
 "replaced (by importing the :mod:`builtins` module and assigning to "
@@ -3414,7 +3412,7 @@ msgstr ""
 "замовчуванням. Пряме використання :func:`__import__` також не рекомендується"
 " на користь :func:`importlib.import_module`."
 
-#: ../../library/functions.rst:2043
+#: ../../library/functions.rst:2044
 msgid ""
 "The function imports the module *name*, potentially using the given "
 "*globals* and *locals* to determine how to interpret the name in a package "
@@ -3430,7 +3428,7 @@ msgstr ""
 "аргумент *locals* і використовує його *globals* лише для визначення "
 "контексту пакета оператора :keyword:`import`."
 
-#: ../../library/functions.rst:2050
+#: ../../library/functions.rst:2051
 msgid ""
 "*level* specifies whether to use absolute or relative imports. ``0`` (the "
 "default) means only perform absolute imports.  Positive values for *level* "
@@ -3444,7 +3442,7 @@ msgstr ""
 " відносно каталогу модуля, який викликає :func:`__import__` (див. :pep:`328`"
 " для деталей)."
 
-#: ../../library/functions.rst:2056
+#: ../../library/functions.rst:2057
 msgid ""
 "When the *name* variable is of the form ``package.module``, normally, the "
 "top-level package (the name up till the first dot) is returned, *not* the "
@@ -3456,7 +3454,7 @@ msgstr ""
 "Однак, якщо вказано непорожній аргумент *fromlist*, повертається модуль, "
 "названий *name*."
 
-#: ../../library/functions.rst:2061
+#: ../../library/functions.rst:2062
 msgid ""
 "For example, the statement ``import spam`` results in bytecode resembling "
 "the following code::"
@@ -3464,11 +3462,11 @@ msgstr ""
 "Наприклад, оператор ``import spam`` призводить до байт-коду, схожого на "
 "такий код:"
 
-#: ../../library/functions.rst:2066
+#: ../../library/functions.rst:2067
 msgid "The statement ``import spam.ham`` results in this call::"
 msgstr "Інструкція ``import spam.ham`` призводить до цього виклику::"
 
-#: ../../library/functions.rst:2070
+#: ../../library/functions.rst:2071
 msgid ""
 "Note how :func:`__import__` returns the toplevel module here because this is"
 " the object that is bound to a name by the :keyword:`import` statement."
@@ -3476,7 +3474,7 @@ msgstr ""
 "Зверніть увагу, як :func:`__import__` повертає тут модуль верхнього рівня, "
 "оскільки це об’єкт, який прив’язаний до імені оператором :keyword:`import`."
 
-#: ../../library/functions.rst:2073
+#: ../../library/functions.rst:2074
 msgid ""
 "On the other hand, the statement ``from spam.ham import eggs, sausage as "
 "saus`` results in ::"
@@ -3484,7 +3482,7 @@ msgstr ""
 "З іншого боку, заява ``from spam.ham import eggs, sausage as saus`` "
 "призводить до:"
 
-#: ../../library/functions.rst:2080
+#: ../../library/functions.rst:2081
 msgid ""
 "Here, the ``spam.ham`` module is returned from :func:`__import__`.  From "
 "this object, the names to import are retrieved and assigned to their "
@@ -3493,7 +3491,7 @@ msgstr ""
 "Тут модуль ``spam.ham`` повертається з :func:`__import__`. З цього об’єкта "
 "витягуються імена для імпорту та призначаються їх відповідні імена."
 
-#: ../../library/functions.rst:2084
+#: ../../library/functions.rst:2085
 msgid ""
 "If you simply want to import a module (potentially within a package) by "
 "name, use :func:`importlib.import_module`."
@@ -3501,7 +3499,7 @@ msgstr ""
 "Якщо ви просто хочете імпортувати модуль (можливо, у пакеті) за назвою, "
 "використовуйте :func:`importlib.import_module`."
 
-#: ../../library/functions.rst:2087
+#: ../../library/functions.rst:2088
 msgid ""
 "Negative values for *level* are no longer supported (which also changes the "
 "default value to 0)."
@@ -3509,7 +3507,7 @@ msgstr ""
 "Від’ємні значення для *рівня* більше не підтримуються (що також змінює "
 "значення за замовчуванням на 0)."
 
-#: ../../library/functions.rst:2091
+#: ../../library/functions.rst:2092
 msgid ""
 "When the command line options :option:`-E` or :option:`-I` are being used, "
 "the environment variable :envvar:`PYTHONCASEOK` is now ignored."
@@ -3517,11 +3515,11 @@ msgstr ""
 "Коли використовуються параметри командного рядка :option:`-E` або "
 ":option:`-I`, змінна середовища :envvar:`PYTHONCASEOK` ігнорується."
 
-#: ../../library/functions.rst:2096
+#: ../../library/functions.rst:2097
 msgid "Footnotes"
 msgstr "Примітки"
 
-#: ../../library/functions.rst:2097
+#: ../../library/functions.rst:2098
 msgid ""
 "Note that the parser only accepts the Unix-style end of line convention. If "
 "you are reading the code from a file, make sure to use newline conversion "
@@ -3536,7 +3534,7 @@ msgstr ""
 msgid "Boolean"
 msgstr ""
 
-#: ../../library/functions.rst:153 ../../library/functions.rst:1870
+#: ../../library/functions.rst:153 ../../library/functions.rst:1871
 msgid "type"
 msgstr "тип"
 
@@ -3560,7 +3558,7 @@ msgstr ""
 msgid "__format__"
 msgstr ""
 
-#: ../../library/functions.rst:717 ../../library/functions.rst:1754
+#: ../../library/functions.rst:717 ../../library/functions.rst:1755
 msgid "string"
 msgstr "рядок"
 
@@ -3612,7 +3610,7 @@ msgstr ""
 msgid "text mode"
 msgstr ""
 
-#: ../../library/functions.rst:1347 ../../library/functions.rst:2025
+#: ../../library/functions.rst:1347 ../../library/functions.rst:2026
 msgid "module"
 msgstr "модуль"
 
@@ -3620,22 +3618,22 @@ msgstr "модуль"
 msgid "sys"
 msgstr "система"
 
-#: ../../library/functions.rst:1754
+#: ../../library/functions.rst:1755
 msgid "str() (built-in function)"
 msgstr ""
 
-#: ../../library/functions.rst:1870
+#: ../../library/functions.rst:1871
 msgid "object"
 msgstr "об'єкт"
 
-#: ../../library/functions.rst:2025
+#: ../../library/functions.rst:2026
 msgid "statement"
 msgstr "заява"
 
-#: ../../library/functions.rst:2025
+#: ../../library/functions.rst:2026
 msgid "import"
 msgstr ""
 
-#: ../../library/functions.rst:2025
+#: ../../library/functions.rst:2026
 msgid "builtins"
 msgstr "вбудовані елементи"
