@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -521,7 +521,7 @@ msgstr ""
 msgid "Can't we get rid of the Global Interpreter Lock?"
 msgstr "Чи не можемо ми позбутися глобального блокування інтерпретатора?"
 
-#: ../../faq/library.rst:410
+#: ../../faq/library.rst:408
 msgid ""
 "The :term:`global interpreter lock` (GIL) is often seen as a hindrance to "
 "Python's deployment on high-end multiprocessor server machines, because a "
@@ -533,44 +533,46 @@ msgstr ""
 "багатопотокова програма Python фактично використовує лише один ЦП, через те,"
 " що (майже) весь код Python може виконуватися лише під час утримання GIL."
 
-#: ../../faq/library.rst:415
+#: ../../faq/library.rst:413
 msgid ""
-"Back in the days of Python 1.5, Greg Stein actually implemented a "
+"With the approval of :pep:`703` work is now underway to remove the GIL from "
+"the CPython implementation of Python.  Initially it will be implemented as "
+"an optional compiler flag when building the interpreter, and so separate "
+"builds will be available with and without the GIL.  Long-term, the hope is "
+"to settle on a single build, once the performance implications of removing "
+"the GIL are fully understood.  Python 3.13 is likely to be the first release"
+" containing this work, although it may not be completely functional in this "
+"release."
+msgstr ""
+
+#: ../../faq/library.rst:422
+msgid ""
+"The current work to remove the GIL is based on a `fork of Python 3.9 with "
+"the GIL removed <https://github.com/colesbury/nogil>`_ by Sam Gross. Prior "
+"to that, in the days of Python 1.5, Greg Stein actually implemented a "
 "comprehensive patch set (the \"free threading\" patches) that removed the "
-"GIL and replaced it with fine-grained locking.  Adam Olsen recently did a "
-"similar experiment in his `python-safethread "
+"GIL and replaced it with fine-grained locking.  Adam Olsen did a similar "
+"experiment in his `python-safethread "
 "<https://code.google.com/archive/p/python-safethread>`_ project.  "
-"Unfortunately, both experiments exhibited a sharp drop in single-thread "
-"performance (at least 30% slower), due to the amount of fine-grained locking"
-" necessary to compensate for the removal of the GIL."
+"Unfortunately, both of these earlier experiments exhibited a sharp drop in "
+"single-thread performance (at least 30% slower), due to the amount of fine-"
+"grained locking necessary to compensate for the removal of the GIL.  The "
+"Python 3.9 fork is the first attempt at removing the GIL with an acceptable "
+"performance impact."
 msgstr ""
-"Ще за часів Python 1.5 Грег Стайн фактично реалізував повний набір патчів "
-"(патчів \"безкоштовних потоків\"), які видалили GIL і замінили його дрібним "
-"блокуванням. Адам Олсен нещодавно провів подібний експеримент у своєму "
-"проекті `python-safethread <https://code.google.com/archive/p/python-"
-"safethread>`_. На жаль, обидва експерименти продемонстрували різке зниження "
-"продуктивності одного потоку (принаймні на 30% повільніше) через кількість "
-"дрібнозернистого блокування, необхідного для компенсації видалення GIL."
 
-#: ../../faq/library.rst:423
+#: ../../faq/library.rst:437
 msgid ""
-"This doesn't mean that you can't make good use of Python on multi-CPU "
-"machines! You just have to be creative with dividing the work up between "
-"multiple *processes* rather than multiple *threads*.  The "
-":class:`~concurrent.futures.ProcessPoolExecutor` class in the new "
-":mod:`concurrent.futures` module provides an easy way of doing so; the "
-":mod:`multiprocessing` module provides a lower-level API in case you want "
-"more control over dispatching of tasks."
+"The presence of the GIL in current Python releases doesn't mean that you "
+"can't make good use of Python on multi-CPU machines! You just have to be "
+"creative with dividing the work up between multiple *processes* rather than "
+"multiple *threads*.  The :class:`~concurrent.futures.ProcessPoolExecutor` "
+"class in the new :mod:`concurrent.futures` module provides an easy way of "
+"doing so; the :mod:`multiprocessing` module provides a lower-level API in "
+"case you want more control over dispatching of tasks."
 msgstr ""
-"Це не означає, що ви не можете ефективно використовувати Python на "
-"багатопроцесорних машинах! Вам просто потрібно бути творчим, розподіляючи "
-"роботу між кількома *процесами*, а не кількома *потоками*. Клас "
-":class:`~concurrent.futures.ProcessPoolExecutor` у новому модулі "
-":mod:`concurrent.futures` забезпечує простий спосіб зробити це; Модуль "
-":mod:`multiprocessing` надає API нижчого рівня, якщо вам потрібен більший "
-"контроль над диспетчеризацією завдань."
 
-#: ../../faq/library.rst:431
+#: ../../faq/library.rst:446
 msgid ""
 "Judicious use of C extensions will also help; if you use a C extension to "
 "perform a time-consuming task, the extension can release the GIL while the "
@@ -584,56 +586,26 @@ msgstr ""
 "виконати певну роботу. Деякі стандартні бібліотечні модулі, такі як "
 ":mod:`zlib` і :mod:`hashlib`, вже це роблять."
 
-#: ../../faq/library.rst:437
+#: ../../faq/library.rst:452
 msgid ""
-"It has been suggested that the GIL should be a per-interpreter-state lock "
-"rather than truly global; interpreters then wouldn't be able to share "
-"objects. Unfortunately, this isn't likely to happen either.  It would be a "
-"tremendous amount of work, because many object implementations currently "
-"have global state. For example, small integers and short strings are cached;"
-" these caches would have to be moved to the interpreter state.  Other object"
-" types have their own free list; these free lists would have to be moved to "
-"the interpreter state. And so on."
+"An alternative approach to reducing the impact of the GIL is to make the GIL"
+" a per-interpreter-state lock rather than truly global. This was :ref:`first"
+" implemented in Python 3.12 <whatsnew312-pep684>` and is available in the C "
+"API. A Python interface to it is expected in Python 3.13. The main "
+"limitation to it at the moment is likely to be 3rd party extension modules, "
+"since these must be written with multiple interpreters in mind in order to "
+"be usable, so many older extension modules will not be usable."
 msgstr ""
-"Було запропоновано, щоб GIL був блокуванням стану для кожного "
-"інтерпретатора, а не справді глобальним; інтерпретатори тоді не зможуть "
-"ділитися об’єктами. На жаль, це теж навряд чи станеться. Це було б "
-"величезним обсягом роботи, оскільки багато реалізацій об’єктів зараз мають "
-"глобальний стан. Наприклад, малі цілі числа та короткі рядки кешуються; ці "
-"кеші потрібно було б перемістити в стан інтерпретатора. Інші типи об'єктів "
-"мають власний вільний список; ці вільні списки потрібно було б перемістити в"
-" стан інтерпретатора. І так далі."
 
-#: ../../faq/library.rst:446
-msgid ""
-"And I doubt that it can even be done in finite time, because the same "
-"problem exists for 3rd party extensions.  It is likely that 3rd party "
-"extensions are being written at a faster rate than you can convert them to "
-"store all their global state in the interpreter state."
-msgstr ""
-"І я сумніваюся, що це навіть можна зробити за скінченний час, тому що та "
-"сама проблема існує для сторонніх розширень. Цілком ймовірно, що розширення "
-"сторонніх розробників пишуться швидше, ніж ви можете перетворити їх, щоб "
-"зберігати весь їхній глобальний стан у стані інтерпретатора."
-
-#: ../../faq/library.rst:451
-msgid ""
-"And finally, once you have multiple interpreters not sharing any state, what"
-" have you gained over running each interpreter in a separate process?"
-msgstr ""
-"І, нарешті, коли у вас є кілька інтерпретаторів, які не мають спільного "
-"стану, що ви отримуєте від запуску кожного інтерпретатора в окремому "
-"процесі?"
-
-#: ../../faq/library.rst:456
+#: ../../faq/library.rst:462
 msgid "Input and Output"
 msgstr "Вхід і вихід"
 
-#: ../../faq/library.rst:459
+#: ../../faq/library.rst:465
 msgid "How do I delete a file? (And other file questions...)"
 msgstr "Як видалити файл? (І інші запитання щодо файлів...)"
 
-#: ../../faq/library.rst:461
+#: ../../faq/library.rst:467
 msgid ""
 "Use ``os.remove(filename)`` or ``os.unlink(filename)``; for documentation, "
 "see the :mod:`os` module.  The two functions are identical; "
@@ -645,7 +617,7 @@ msgstr ""
 ":func:`~os.unlink` — це просто назва системного виклику Unix для цієї "
 "функції."
 
-#: ../../faq/library.rst:465
+#: ../../faq/library.rst:471
 msgid ""
 "To remove a directory, use :func:`os.rmdir`; use :func:`os.mkdir` to create "
 "one. ``os.makedirs(path)`` will create any intermediate directories in "
@@ -659,12 +631,12 @@ msgstr ""
 "видалить проміжні каталоги, якщо вони порожні; якщо ви хочете видалити ціле "
 "дерево каталогів і його вміст, використовуйте :func:`shutil.rmtree`."
 
-#: ../../faq/library.rst:471
+#: ../../faq/library.rst:477
 msgid "To rename a file, use ``os.rename(old_path, new_path)``."
 msgstr ""
 "Щоб перейменувати файл, використовуйте ``os.rename(old_path, new_path)``."
 
-#: ../../faq/library.rst:473
+#: ../../faq/library.rst:479
 msgid ""
 "To truncate a file, open it using ``f = open(filename, \"rb+\")``, and use "
 "``f.truncate(offset)``; offset defaults to the current seek position.  "
@@ -677,7 +649,7 @@ msgstr ""
 "файлів, відкритих за допомогою :func:`os.open`, де *fd* є дескриптором файлу"
 " (мале ціле число)."
 
-#: ../../faq/library.rst:478
+#: ../../faq/library.rst:484
 msgid ""
 "The :mod:`shutil` module also contains a number of functions to work on "
 "files including :func:`~shutil.copyfile`, :func:`~shutil.copytree`, and "
@@ -687,11 +659,11 @@ msgstr ""
 "включаючи :func:`~shutil.copyfile`, :func:`~shutil.copytree` і "
 ":func:`~shutil.rmtree`."
 
-#: ../../faq/library.rst:484
+#: ../../faq/library.rst:490
 msgid "How do I copy a file?"
 msgstr "Як скопіювати файл?"
 
-#: ../../faq/library.rst:486
+#: ../../faq/library.rst:492
 msgid ""
 "The :mod:`shutil` module contains a :func:`~shutil.copyfile` function. Note "
 "that on Windows NTFS volumes, it does not copy `alternate data streams "
@@ -709,11 +681,11 @@ msgstr ""
 "копіює дозволи на файли та метадані, хоча використання натомість "
 ":func:`shutil.copy2` збереже більшість (хоча не всі) з них."
 
-#: ../../faq/library.rst:497
+#: ../../faq/library.rst:503
 msgid "How do I read (or write) binary data?"
 msgstr "Як читати (або записувати) двійкові дані?"
 
-#: ../../faq/library.rst:499
+#: ../../faq/library.rst:505
 msgid ""
 "To read or write complex binary data formats, it's best to use the "
 ":mod:`struct` module.  It allows you to take a string containing binary data"
@@ -724,7 +696,7 @@ msgstr ""
 "містить двійкові дані (зазвичай числа), і перетворити його на об’єкти "
 "Python; і навпаки."
 
-#: ../../faq/library.rst:503
+#: ../../faq/library.rst:509
 msgid ""
 "For example, the following code reads two 2-byte integers and one 4-byte "
 "integer in big-endian format from a file::"
@@ -732,7 +704,7 @@ msgstr ""
 "Наприклад, наступний код читає два 2-байтових цілих числа та одне 4-байтове "
 "ціле число у форматі big-endian з файлу::"
 
-#: ../../faq/library.rst:512
+#: ../../faq/library.rst:518
 msgid ""
 "The '>' in the format string forces big-endian data; the letter 'h' reads "
 "one \"short integer\" (2 bytes), and 'l' reads one \"long integer\" (4 "
@@ -742,7 +714,7 @@ msgstr ""
 " читає одне \"коротке ціле число\" (2 байти), а 'l' читає одне \"довге ціле "
 "число\" (4 байти) з рядка."
 
-#: ../../faq/library.rst:516
+#: ../../faq/library.rst:522
 msgid ""
 "For data that is more regular (e.g. a homogeneous list of ints or floats), "
 "you can also use the :mod:`array` module."
@@ -750,7 +722,7 @@ msgstr ""
 "Для даних, які є більш регулярними (наприклад, однорідний список int або "
 "float), ви також можете використовувати модуль :mod:`array`."
 
-#: ../../faq/library.rst:521
+#: ../../faq/library.rst:527
 msgid ""
 "To read and write binary data, it is mandatory to open the file in binary "
 "mode (here, passing ``\"rb\"`` to :func:`open`).  If you use ``\"r\"`` "
@@ -763,13 +735,13 @@ msgstr ""
 "текстовому режимі, а ``f.read()`` повертатиме об’єкти :class:`str`, а не "
 ":class:`bytes` об'єктів."
 
-#: ../../faq/library.rst:529
+#: ../../faq/library.rst:535
 msgid "I can't seem to use os.read() on a pipe created with os.popen(); why?"
 msgstr ""
 "Здається, я не можу використовувати os.read() у каналі, створеному за "
 "допомогою os.popen(); чому?"
 
-#: ../../faq/library.rst:531
+#: ../../faq/library.rst:537
 msgid ""
 ":func:`os.read` is a low-level function which takes a file descriptor, a "
 "small integer representing the opened file.  :func:`os.popen` creates a "
@@ -784,31 +756,31 @@ msgstr ""
 "створеного за допомогою :func:`os.popen`, вам потрібно використовувати "
 "``p.read(n)``."
 
-#: ../../faq/library.rst:617
+#: ../../faq/library.rst:623
 msgid "How do I access the serial (RS232) port?"
 msgstr "Як отримати доступ до послідовного (RS232) порту?"
 
-#: ../../faq/library.rst:619
+#: ../../faq/library.rst:625
 msgid "For Win32, OSX, Linux, BSD, Jython, IronPython:"
 msgstr "Для Win32, OSX, Linux, BSD, Jython, IronPython:"
 
-#: ../../faq/library.rst:621
+#: ../../faq/library.rst:627
 msgid ":pypi:`pyserial`"
 msgstr ""
 
-#: ../../faq/library.rst:623
+#: ../../faq/library.rst:629
 msgid "For Unix, see a Usenet post by Mitch Chapman:"
 msgstr "Щодо Unix, перегляньте публікацію Usenet від Мітча Чепмена:"
 
-#: ../../faq/library.rst:625
+#: ../../faq/library.rst:631
 msgid "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
 msgstr "https://groups.google.com/groups?selm=34A04430.CF9@ohioee.com"
 
-#: ../../faq/library.rst:629
+#: ../../faq/library.rst:635
 msgid "Why doesn't closing sys.stdout (stdin, stderr) really close it?"
 msgstr "Чому закриття sys.stdout (stdin, stderr) насправді не закриває його?"
 
-#: ../../faq/library.rst:631
+#: ../../faq/library.rst:637
 msgid ""
 "Python :term:`file objects <file object>` are a high-level layer of "
 "abstraction on low-level C file descriptors."
@@ -816,7 +788,7 @@ msgstr ""
 "Python :term:`файлові об’єкти <file object>` є високорівневим рівнем "
 "абстракції на низькорівневих файлових дескрипторах C."
 
-#: ../../faq/library.rst:634
+#: ../../faq/library.rst:640
 msgid ""
 "For most file objects you create in Python via the built-in :func:`open` "
 "function, ``f.close()`` marks the Python file object as being closed from "
@@ -830,7 +802,7 @@ msgstr ""
 " дескриптор файлу C. Це також відбувається автоматично в деструкторі ``f``, "
 "коли ``f`` стає сміттям."
 
-#: ../../faq/library.rst:640
+#: ../../faq/library.rst:646
 msgid ""
 "But stdin, stdout and stderr are treated specially by Python, because of the"
 " special status also given to them by C.  Running ``sys.stdout.close()`` "
@@ -842,7 +814,7 @@ msgstr ""
 "об’єкт на рівні Python як закритий, але *не* закривати пов’язаний дескриптор"
 " файлу C."
 
-#: ../../faq/library.rst:645
+#: ../../faq/library.rst:651
 msgid ""
 "To close the underlying C file descriptor for one of these three, you should"
 " first be sure that's what you really want to do (e.g., you may confuse "
@@ -853,19 +825,19 @@ msgstr ""
 "можете сплутати модулі розширення, які намагаються виконати введення-"
 "виведення). Якщо так, використовуйте :func:`os.close`::"
 
-#: ../../faq/library.rst:653
+#: ../../faq/library.rst:659
 msgid "Or you can use the numeric constants 0, 1 and 2, respectively."
 msgstr "Або ви можете використовувати числові константи 0, 1 і 2 відповідно."
 
-#: ../../faq/library.rst:657
+#: ../../faq/library.rst:663
 msgid "Network/Internet Programming"
 msgstr "Програмування мережі/Інтернету"
 
-#: ../../faq/library.rst:660
+#: ../../faq/library.rst:666
 msgid "What WWW tools are there for Python?"
 msgstr "Які інструменти WWW існують для Python?"
 
-#: ../../faq/library.rst:662
+#: ../../faq/library.rst:668
 msgid ""
 "See the chapters titled :ref:`internet` and :ref:`netdata` in the Library "
 "Reference Manual.  Python has many modules that will help you build server-"
@@ -875,7 +847,7 @@ msgstr ""
 "посібнику з бібліотеки. Python має багато модулів, які допоможуть вам "
 "створювати серверні та клієнтські веб-системи."
 
-#: ../../faq/library.rst:668
+#: ../../faq/library.rst:674
 msgid ""
 "A summary of available frameworks is maintained by Paul Boddie at "
 "https://wiki.python.org/moin/WebProgramming\\ ."
@@ -883,49 +855,11 @@ msgstr ""
 "Резюме доступних фреймворків підтримує Пол Бодді на "
 "https://wiki.python.org/moin/WebProgramming\\ ."
 
-#: ../../faq/library.rst:671
-msgid ""
-"Cameron Laird maintains a useful set of pages about Python web technologies "
-"at "
-"https://web.archive.org/web/20210224183619/http://phaseit.net/claird/comp.lang.python/web_python."
-msgstr ""
-
-#: ../../faq/library.rst:676
-msgid "How can I mimic CGI form submission (METHOD=POST)?"
-msgstr "Як я можу імітувати надсилання форми CGI (METHOD=POST)?"
-
-#: ../../faq/library.rst:678
-msgid ""
-"I would like to retrieve web pages that are the result of POSTing a form. Is"
-" there existing code that would let me do this easily?"
-msgstr ""
-"Я хотів би отримати веб-сторінки, які є результатом розміщення форми POST. "
-"Чи є існуючий код, який дозволив би мені легко це зробити?"
-
-#: ../../faq/library.rst:681
-msgid "Yes. Here's a simple example that uses :mod:`urllib.request`::"
-msgstr "Так. Ось простий приклад використання :mod:`urllib.request`::"
-
-#: ../../faq/library.rst:696
-msgid ""
-"Note that in general for percent-encoded POST operations, query strings must"
-" be quoted using :func:`urllib.parse.urlencode`.  For example, to send "
-"``name=Guy Steele, Jr.``::"
-msgstr ""
-"Зверніть увагу, що загалом для операцій POST із відсотковим кодуванням рядки"
-" запиту мають бути взяті в лапки за допомогою "
-":func:`urllib.parse.urlencode`. Наприклад, щоб надіслати ``name=Guy Steele, "
-"Jr.``::"
-
-#: ../../faq/library.rst:704
-msgid ":ref:`urllib-howto` for extensive examples."
-msgstr ":ref:`urllib-howto` для докладних прикладів."
-
-#: ../../faq/library.rst:708
+#: ../../faq/library.rst:679
 msgid "What module should I use to help with generating HTML?"
 msgstr "Який модуль мені слід використовувати для створення HTML?"
 
-#: ../../faq/library.rst:712
+#: ../../faq/library.rst:683
 msgid ""
 "You can find a collection of useful links on the `Web Programming wiki page "
 "<https://wiki.python.org/moin/WebProgramming>`_."
@@ -933,15 +867,15 @@ msgstr ""
 "Ви можете знайти колекцію корисних посилань на `Вікі-сторінці веб-"
 "програмування <https://wiki.python.org/moin/WebProgramming>`_."
 
-#: ../../faq/library.rst:717
+#: ../../faq/library.rst:688
 msgid "How do I send mail from a Python script?"
 msgstr "Як надіслати пошту за допомогою сценарію Python?"
 
-#: ../../faq/library.rst:719
+#: ../../faq/library.rst:690
 msgid "Use the standard library module :mod:`smtplib`."
 msgstr "Використовуйте стандартний бібліотечний модуль :mod:`smtplib`."
 
-#: ../../faq/library.rst:721
+#: ../../faq/library.rst:692
 msgid ""
 "Here's a very simple interactive mail sender that uses it.  This method will"
 " work on any host that supports an SMTP listener. ::"
@@ -950,7 +884,7 @@ msgstr ""
 " метод працюватиме на будь-якому хості, який підтримує прослуховувач SMTP. "
 "::"
 
-#: ../../faq/library.rst:741
+#: ../../faq/library.rst:712
 msgid ""
 "A Unix-only alternative uses sendmail.  The location of the sendmail program"
 " varies between systems; sometimes it is ``/usr/lib/sendmail``, sometimes "
@@ -962,11 +896,11 @@ msgstr ""
 "``/usr/sbin/sendmail``. Довідкова сторінка sendmail допоможе вам. Ось "
 "приклад коду::"
 
-#: ../../faq/library.rst:761
+#: ../../faq/library.rst:732
 msgid "How do I avoid blocking in the connect() method of a socket?"
 msgstr "Як уникнути блокування в методі connect() сокета?"
 
-#: ../../faq/library.rst:763
+#: ../../faq/library.rst:734
 msgid ""
 "The :mod:`select` module is commonly used to help with asynchronous I/O on "
 "sockets."
@@ -974,7 +908,7 @@ msgstr ""
 "Модуль :mod:`select` зазвичай використовується для допомоги з асинхронним "
 "введенням/виведенням на сокетах."
 
-#: ../../faq/library.rst:766
+#: ../../faq/library.rst:737
 msgid ""
 "To prevent the TCP connect from blocking, you can set the socket to non-"
 "blocking mode.  Then when you do the :meth:`~socket.socket.connect`, you "
@@ -985,7 +919,7 @@ msgid ""
 " your system."
 msgstr ""
 
-#: ../../faq/library.rst:774
+#: ../../faq/library.rst:745
 msgid ""
 "You can use the :meth:`~socket.socket.connect_ex` method to avoid creating "
 "an exception. It will just return the errno value. To poll, you can call "
@@ -994,7 +928,7 @@ msgid ""
 ":meth:`select.select` to check if it's writable."
 msgstr ""
 
-#: ../../faq/library.rst:782
+#: ../../faq/library.rst:753
 msgid ""
 "The :mod:`asyncio` module provides a general purpose single-threaded and "
 "concurrent asynchronous library, which can be used for writing non-blocking "
@@ -1002,19 +936,19 @@ msgid ""
 " popular and feature-rich alternative."
 msgstr ""
 
-#: ../../faq/library.rst:790
+#: ../../faq/library.rst:761
 msgid "Databases"
 msgstr "Бази даних"
 
-#: ../../faq/library.rst:793
+#: ../../faq/library.rst:764
 msgid "Are there any interfaces to database packages in Python?"
 msgstr "Чи існують інтерфейси для пакетів баз даних у Python?"
 
-#: ../../faq/library.rst:795
+#: ../../faq/library.rst:766
 msgid "Yes."
 msgstr "Так."
 
-#: ../../faq/library.rst:797
+#: ../../faq/library.rst:768
 msgid ""
 "Interfaces to disk-based hashes such as :mod:`DBM <dbm.ndbm>` and :mod:`GDBM"
 " <dbm.gnu>` are also included with standard Python.  There is also the "
@@ -1025,7 +959,7 @@ msgstr ""
 "<dbm.gnu>`, також включені в стандартний Python. Існує також модуль "
 ":mod:`sqlite3`, який забезпечує полегшену дискову реляційну базу даних."
 
-#: ../../faq/library.rst:802
+#: ../../faq/library.rst:773
 msgid ""
 "Support for most relational databases is available.  See the "
 "`DatabaseProgramming wiki page "
@@ -1036,11 +970,11 @@ msgstr ""
 "<https://wiki.python.org/moin/DatabaseProgramming>`_ для отримання "
 "додаткової інформації."
 
-#: ../../faq/library.rst:808
+#: ../../faq/library.rst:779
 msgid "How do you implement persistent objects in Python?"
 msgstr "Як реалізувати постійні об’єкти в Python?"
 
-#: ../../faq/library.rst:810
+#: ../../faq/library.rst:781
 msgid ""
 "The :mod:`pickle` library module solves this in a very general way (though "
 "you still can't store things like open files, sockets or windows), and the "
@@ -1052,15 +986,15 @@ msgstr ""
 " а модуль бібліотеки :mod:`shelve` використовує pickle і (g) dbm для "
 "створення постійних відображень, що містять довільні об’єкти Python."
 
-#: ../../faq/library.rst:817
+#: ../../faq/library.rst:788
 msgid "Mathematics and Numerics"
 msgstr "Математика та цифри"
 
-#: ../../faq/library.rst:820
+#: ../../faq/library.rst:791
 msgid "How do I generate random numbers in Python?"
 msgstr "Як генерувати випадкові числа в Python?"
 
-#: ../../faq/library.rst:822
+#: ../../faq/library.rst:793
 msgid ""
 "The standard module :mod:`random` implements a random number generator.  "
 "Usage is simple::"
@@ -1068,47 +1002,47 @@ msgstr ""
 "Стандартний модуль :mod:`random` реалізує генератор випадкових чисел. "
 "Використання просте::"
 
-#: ../../faq/library.rst:828
+#: ../../faq/library.rst:799
 msgid "This returns a random floating point number in the range [0, 1)."
 msgstr "Це повертає випадкове число з плаваючою комою в діапазоні [0, 1)."
 
-#: ../../faq/library.rst:830
+#: ../../faq/library.rst:801
 msgid ""
 "There are also many other specialized generators in this module, such as:"
 msgstr ""
 "У цьому модулі також є багато інших спеціалізованих генераторів, таких як:"
 
-#: ../../faq/library.rst:832
+#: ../../faq/library.rst:803
 msgid "``randrange(a, b)`` chooses an integer in the range [a, b)."
 msgstr "``randrange(a, b)`` вибирає ціле число в діапазоні [a, b)."
 
-#: ../../faq/library.rst:833
+#: ../../faq/library.rst:804
 msgid "``uniform(a, b)`` chooses a floating point number in the range [a, b)."
 msgstr "``uniform(a, b)`` вибирає число з плаваючою комою в діапазоні [a, b)."
 
-#: ../../faq/library.rst:834
+#: ../../faq/library.rst:805
 msgid ""
 "``normalvariate(mean, sdev)`` samples the normal (Gaussian) distribution."
 msgstr ""
 "``normalvariate(mean, sdev)`` вибірка нормального (гауссового) розподілу."
 
-#: ../../faq/library.rst:836
+#: ../../faq/library.rst:807
 msgid "Some higher-level functions operate on sequences directly, such as:"
 msgstr ""
 "Деякі функції вищого рівня працюють безпосередньо з послідовностями, "
 "наприклад:"
 
-#: ../../faq/library.rst:838
+#: ../../faq/library.rst:809
 msgid "``choice(S)`` chooses a random element from a given sequence."
 msgstr "``choice(S)`` вибирає випадковий елемент із заданої послідовності."
 
-#: ../../faq/library.rst:839
+#: ../../faq/library.rst:810
 msgid "``shuffle(L)`` shuffles a list in-place, i.e. permutes it randomly."
 msgstr ""
 "``shuffle(L)`` перемішує список на місці, тобто переставляє його випадковим "
 "чином."
 
-#: ../../faq/library.rst:841
+#: ../../faq/library.rst:812
 msgid ""
 "There's also a ``Random`` class you can instantiate to create independent "
 "multiple random number generators."

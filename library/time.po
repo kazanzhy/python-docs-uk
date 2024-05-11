@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:15+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/time.rst:2
-msgid ":mod:`time` --- Time access and conversions"
-msgstr ":mod:`time` --- Час доступу та перетворення"
+msgid ":mod:`!time` --- Time access and conversions"
+msgstr ""
 
 #: ../../library/time.rst:9
 msgid ""
@@ -290,9 +290,9 @@ msgstr ""
 
 #: ../../library/time.rst:161 ../../library/time.rst:174
 #: ../../library/time.rst:183 ../../library/time.rst:196
-#: ../../library/time.rst:205 ../../library/time.rst:716
-#: ../../library/time.rst:833 ../../library/time.rst:852
-#: ../../library/time.rst:880 ../../library/time.rst:915
+#: ../../library/time.rst:205 ../../library/time.rst:745
+#: ../../library/time.rst:862 ../../library/time.rst:890
+#: ../../library/time.rst:918 ../../library/time.rst:962
 msgid ":ref:`Availability <availability>`: Unix."
 msgstr ":ref:`Наявність <availability>`: Unix."
 
@@ -487,7 +487,33 @@ msgstr ""
 " на годинник. Точка відліку повернутого значення не визначена, тому дійсна "
 "лише різниця між результатами двох викликів."
 
-#: ../../library/time.rst:290
+#: ../../library/time.rst:290 ../../library/time.rst:687
+msgid "Clock:"
+msgstr ""
+
+#: ../../library/time.rst:292
+msgid ""
+"On Windows, call ``QueryPerformanceCounter()`` and "
+"``QueryPerformanceFrequency()``."
+msgstr ""
+
+#: ../../library/time.rst:294
+msgid "On macOS, call ``mach_absolute_time()`` and ``mach_timebase_info()``."
+msgstr ""
+
+#: ../../library/time.rst:295
+msgid "On HP-UX, call ``gethrtime()``."
+msgstr ""
+
+#: ../../library/time.rst:296
+msgid "Call ``clock_gettime(CLOCK_HIGHRES)`` if available."
+msgstr ""
+
+#: ../../library/time.rst:297
+msgid "Otherwise, call ``clock_gettime(CLOCK_MONOTONIC)``."
+msgstr ""
+
+#: ../../library/time.rst:299
 msgid ""
 "Use :func:`monotonic_ns` to avoid the precision loss caused by the "
 ":class:`float` type."
@@ -495,19 +521,19 @@ msgstr ""
 "Використовуйте :func:`monotonic_ns`, щоб уникнути втрати точності, "
 "викликаної типом :class:`float`."
 
-#: ../../library/time.rst:295
+#: ../../library/time.rst:304
 msgid "The function is now always available and always system-wide."
 msgstr "Функція тепер доступна завжди і завжди для всієї системи."
 
-#: ../../library/time.rst:298
+#: ../../library/time.rst:307
 msgid "On macOS, the function is now system-wide."
 msgstr "У macOS ця функція тепер доступна для всієї системи."
 
-#: ../../library/time.rst:304
+#: ../../library/time.rst:313
 msgid "Similar to :func:`monotonic`, but return time as nanoseconds."
 msgstr "Подібно до :func:`monotonic`, але повертає час у наносекундах."
 
-#: ../../library/time.rst:313
+#: ../../library/time.rst:322
 msgid ""
 "Return the value (in fractional seconds) of a performance counter, i.e. a "
 "clock with the highest available resolution to measure a short duration.  It"
@@ -521,7 +547,13 @@ msgstr ""
 "Точка відліку повернутого значення не визначена, тому дійсна лише різниця "
 "між результатами двох викликів."
 
-#: ../../library/time.rst:319
+#: ../../library/time.rst:330
+msgid ""
+"On CPython, use the same clock than :func:`time.monotonic()` and is a "
+"monotonic clock, i.e. a clock that cannot go backwards."
+msgstr ""
+
+#: ../../library/time.rst:333
 msgid ""
 "Use :func:`perf_counter_ns` to avoid the precision loss caused by the "
 ":class:`float` type."
@@ -529,15 +561,19 @@ msgstr ""
 "Використовуйте :func:`perf_counter_ns`, щоб уникнути втрати точності, "
 "викликаної типом :class:`float`."
 
-#: ../../library/time.rst:324
+#: ../../library/time.rst:338
 msgid "On Windows, the function is now system-wide."
 msgstr "У Windows ця функція тепер доступна для всієї системи."
 
-#: ../../library/time.rst:329
+#: ../../library/time.rst:341
+msgid "Use the same clock than :func:`time.monotonic()`."
+msgstr ""
+
+#: ../../library/time.rst:347
 msgid "Similar to :func:`perf_counter`, but return time as nanoseconds."
 msgstr "Подібно до :func:`perf_counter`, але повертає час у наносекундах."
 
-#: ../../library/time.rst:341
+#: ../../library/time.rst:359
 msgid ""
 "Return the value (in fractional seconds) of the sum of the system and user "
 "CPU time of the current process.  It does not include time elapsed during "
@@ -550,7 +586,7 @@ msgstr ""
 "визначенням це стосується всього процесу. Точка відліку повернутого значення"
 " не визначена, тому дійсна лише різниця між результатами двох викликів."
 
-#: ../../library/time.rst:347
+#: ../../library/time.rst:365
 msgid ""
 "Use :func:`process_time_ns` to avoid the precision loss caused by the "
 ":class:`float` type."
@@ -558,30 +594,30 @@ msgstr ""
 "Використовуйте :func:`process_time_ns`, щоб уникнути втрати точності, "
 "викликаної типом :class:`float`."
 
-#: ../../library/time.rst:354
+#: ../../library/time.rst:372
 msgid "Similar to :func:`process_time` but return time as nanoseconds."
 msgstr "Подібно до :func:`process_time`, але повертає час у наносекундах."
 
-#: ../../library/time.rst:360
+#: ../../library/time.rst:378
 msgid ""
 "Suspend execution of the calling thread for the given number of seconds. The"
 " argument may be a floating point number to indicate a more precise sleep "
 "time."
 msgstr ""
 
-#: ../../library/time.rst:364
+#: ../../library/time.rst:382
 msgid ""
 "If the sleep is interrupted by a signal and no exception is raised by the "
 "signal handler, the sleep is restarted with a recomputed timeout."
 msgstr ""
 
-#: ../../library/time.rst:367
+#: ../../library/time.rst:385
 msgid ""
 "The suspension time may be longer than requested by an arbitrary amount, "
 "because of the scheduling of other activity in the system."
 msgstr ""
 
-#: ../../library/time.rst:370
+#: ../../library/time.rst:388
 msgid ""
 "On Windows, if *secs* is zero, the thread relinquishes the remainder of its "
 "time slice to any other thread that is ready to run. If there are no other "
@@ -592,23 +628,29 @@ msgid ""
 "of 100 nanoseconds. If *secs* is zero, ``Sleep(0)`` is used."
 msgstr ""
 
-#: ../../library/time.rst:378
+#: ../../library/time.rst:396
 msgid "Unix implementation:"
 msgstr ""
 
-#: ../../library/time.rst:380
+#: ../../library/time.rst:398
 msgid "Use ``clock_nanosleep()`` if available (resolution: 1 nanosecond);"
 msgstr ""
 
-#: ../../library/time.rst:381
+#: ../../library/time.rst:399
 msgid "Or use ``nanosleep()`` if available (resolution: 1 nanosecond);"
 msgstr ""
 
-#: ../../library/time.rst:382
+#: ../../library/time.rst:400
 msgid "Or use ``select()`` (resolution: 1 microsecond)."
 msgstr ""
 
-#: ../../library/time.rst:384
+#: ../../library/time.rst:402
+msgid ""
+"Raises an :ref:`auditing event <auditing>` ``time.sleep`` with argument "
+"``secs``."
+msgstr ""
+
+#: ../../library/time.rst:404
 msgid ""
 "The function now sleeps at least *secs* even if the sleep is interrupted by "
 "a signal, except if the signal handler raises an exception (see :pep:`475` "
@@ -618,13 +660,17 @@ msgstr ""
 "переривається сигналом, за винятком випадків, коли обробник сигналу викликає"
 " виняток (перегляньте :pep:`475` для обґрунтування)."
 
-#: ../../library/time.rst:389
+#: ../../library/time.rst:409
 msgid ""
 "On Unix, the ``clock_nanosleep()`` and ``nanosleep()`` functions are now "
 "used if available. On Windows, a waitable timer is now used."
 msgstr ""
 
-#: ../../library/time.rst:398
+#: ../../library/time.rst:413
+msgid "Raises an auditing event."
+msgstr ""
+
+#: ../../library/time.rst:421
 msgid ""
 "Convert a tuple or :class:`struct_time` representing a time as returned by "
 ":func:`gmtime` or :func:`localtime` to a string as specified by the *format*"
@@ -638,7 +684,7 @@ msgstr ""
 " повертає :func:`localtime`. *format* має бути рядком. :exc:`ValueError` "
 "виникає, якщо будь-яке поле в *t* виходить за межі дозволеного діапазону."
 
-#: ../../library/time.rst:404
+#: ../../library/time.rst:427
 msgid ""
 "0 is a legal argument for any position in the time tuple; if it is normally "
 "illegal the value is forced to a correct one."
@@ -646,7 +692,7 @@ msgstr ""
 "0 є допустимим аргументом для будь-якої позиції в часовому кортежі; якщо "
 "зазвичай це нелегально, значення примусово має бути правильним."
 
-#: ../../library/time.rst:407
+#: ../../library/time.rst:430
 msgid ""
 "The following directives can be embedded in the *format* string. They are "
 "shown without the optional field width and precision specification, and are "
@@ -656,151 +702,151 @@ msgstr ""
 "відображаються без додаткової специфікації ширини поля та точності та "
 "замінюються вказаними символами в результаті :func:`strftime`:"
 
-#: ../../library/time.rst:412
+#: ../../library/time.rst:435
 msgid "Directive"
 msgstr "Директива"
 
-#: ../../library/time.rst:412
+#: ../../library/time.rst:435
 msgid "Meaning"
 msgstr "Значення"
 
-#: ../../library/time.rst:412
+#: ../../library/time.rst:435
 msgid "Notes"
 msgstr "Примітки"
 
-#: ../../library/time.rst:414
+#: ../../library/time.rst:437
 msgid "``%a``"
 msgstr "``%a``"
 
-#: ../../library/time.rst:414
+#: ../../library/time.rst:437
 msgid "Locale's abbreviated weekday name."
 msgstr "Скорочена назва дня тижня в локалі."
 
-#: ../../library/time.rst:417
+#: ../../library/time.rst:440
 msgid "``%A``"
 msgstr "``%A``"
 
-#: ../../library/time.rst:417
+#: ../../library/time.rst:440
 msgid "Locale's full weekday name."
 msgstr "Повна назва робочого дня локалі."
 
-#: ../../library/time.rst:419
+#: ../../library/time.rst:442
 msgid "``%b``"
 msgstr "``%b``"
 
-#: ../../library/time.rst:419
+#: ../../library/time.rst:442
 msgid "Locale's abbreviated month name."
 msgstr "Скорочена назва місяця в локалі."
 
-#: ../../library/time.rst:422
+#: ../../library/time.rst:445
 msgid "``%B``"
 msgstr "``%B``"
 
-#: ../../library/time.rst:422
+#: ../../library/time.rst:445
 msgid "Locale's full month name."
 msgstr "Повна назва місяця."
 
-#: ../../library/time.rst:424
+#: ../../library/time.rst:447
 msgid "``%c``"
 msgstr "``%c``"
 
-#: ../../library/time.rst:424
+#: ../../library/time.rst:447
 msgid "Locale's appropriate date and time representation."
 msgstr "Відповідне представлення дати та часу локалі."
 
-#: ../../library/time.rst:427
+#: ../../library/time.rst:450
 msgid "``%d``"
 msgstr "``%d``"
 
-#: ../../library/time.rst:427
+#: ../../library/time.rst:450
 msgid "Day of the month as a decimal number [01,31]."
 msgstr "День місяця у вигляді десяткового числа [01,31]."
 
-#: ../../library/time.rst:430
+#: ../../library/time.rst:453
 msgid "``%f``"
 msgstr "``%f``"
 
-#: ../../library/time.rst:430
+#: ../../library/time.rst:453
 msgid "Microseconds as a decimal number"
 msgstr ""
 
-#: ../../library/time.rst:431
+#: ../../library/time.rst:454
 msgid "[000000,999999]."
 msgstr ""
 
-#: ../../library/time.rst:430
+#: ../../library/time.rst:453
 msgid "\\(1)"
 msgstr "\\(1)"
 
-#: ../../library/time.rst:434
+#: ../../library/time.rst:457
 msgid "``%H``"
 msgstr "``%H``"
 
-#: ../../library/time.rst:434
+#: ../../library/time.rst:457
 msgid "Hour (24-hour clock) as a decimal number [00,23]."
 msgstr "Година (24-годинний формат) як десяткове число [00,23]."
 
-#: ../../library/time.rst:437
+#: ../../library/time.rst:460
 msgid "``%I``"
 msgstr "``%I``"
 
-#: ../../library/time.rst:437
+#: ../../library/time.rst:460
 msgid "Hour (12-hour clock) as a decimal number [01,12]."
 msgstr "Година (12-годинний годинник) як десяткове число [01,12]."
 
-#: ../../library/time.rst:440
+#: ../../library/time.rst:463
 msgid "``%j``"
 msgstr "``%j``"
 
-#: ../../library/time.rst:440
+#: ../../library/time.rst:463
 msgid "Day of the year as a decimal number [001,366]."
 msgstr "День року як десяткове число [001,366]."
 
-#: ../../library/time.rst:443
+#: ../../library/time.rst:466
 msgid "``%m``"
 msgstr "``%m``"
 
-#: ../../library/time.rst:443
+#: ../../library/time.rst:466
 msgid "Month as a decimal number [01,12]."
 msgstr "Місяць як десяткове число [01,12]."
 
-#: ../../library/time.rst:446
+#: ../../library/time.rst:469
 msgid "``%M``"
 msgstr "``%M``"
 
-#: ../../library/time.rst:446
+#: ../../library/time.rst:469
 msgid "Minute as a decimal number [00,59]."
 msgstr "Хвилина як десяткове число [00,59]."
 
-#: ../../library/time.rst:449
+#: ../../library/time.rst:472
 msgid "``%p``"
 msgstr "``%p``"
 
-#: ../../library/time.rst:449
+#: ../../library/time.rst:472
 msgid "Locale's equivalent of either AM or PM."
 msgstr "Локальний еквівалент AM або PM."
 
-#: ../../library/time.rst:449
+#: ../../library/time.rst:472
 msgid "\\(2)"
 msgstr "\\(2)"
 
-#: ../../library/time.rst:452
+#: ../../library/time.rst:475
 msgid "``%S``"
 msgstr "``%S``"
 
-#: ../../library/time.rst:452
+#: ../../library/time.rst:475
 msgid "Second as a decimal number [00,61]."
 msgstr "Секунда як десяткове число [00,61]."
 
-#: ../../library/time.rst:452
+#: ../../library/time.rst:475
 msgid "\\(3)"
 msgstr "\\(3)"
 
-#: ../../library/time.rst:455
+#: ../../library/time.rst:478
 msgid "``%U``"
 msgstr "``%U``"
 
-#: ../../library/time.rst:455
+#: ../../library/time.rst:478
 msgid ""
 "Week number of the year (Sunday as the first day of the week) as a decimal "
 "number [00,53]. All days in a new year preceding the first Sunday are "
@@ -810,23 +856,23 @@ msgstr ""
 "[00,53]. Усі дні в новому році, що передують першій неділі, вважаються "
 "нульовим тижнем."
 
-#: ../../library/time.rst:455 ../../library/time.rst:466
+#: ../../library/time.rst:478 ../../library/time.rst:489
 msgid "\\(4)"
 msgstr "\\(4)"
 
-#: ../../library/time.rst:463
+#: ../../library/time.rst:486
 msgid "``%w``"
 msgstr "``%w``"
 
-#: ../../library/time.rst:463
+#: ../../library/time.rst:486
 msgid "Weekday as a decimal number [0(Sunday),6]."
 msgstr "День тижня як десяткове число [0(неділя),6]."
 
-#: ../../library/time.rst:466
+#: ../../library/time.rst:489
 msgid "``%W``"
 msgstr "``%W``"
 
-#: ../../library/time.rst:466
+#: ../../library/time.rst:489
 msgid ""
 "Week number of the year (Monday as the first day of the week) as a decimal "
 "number [00,53]. All days in a new year preceding the first Monday are "
@@ -836,43 +882,43 @@ msgstr ""
 "числа [00,53]. Усі дні в новому році, що передують першому понеділку, "
 "вважаються нульовим тижнем."
 
-#: ../../library/time.rst:474
+#: ../../library/time.rst:497
 msgid "``%x``"
 msgstr "``%x``"
 
-#: ../../library/time.rst:474
+#: ../../library/time.rst:497
 msgid "Locale's appropriate date representation."
 msgstr "Відповідне представлення дати в локалі."
 
-#: ../../library/time.rst:477
+#: ../../library/time.rst:500
 msgid "``%X``"
 msgstr "``%X``"
 
-#: ../../library/time.rst:477
+#: ../../library/time.rst:500
 msgid "Locale's appropriate time representation."
 msgstr "Відповідне представлення часу локалі."
 
-#: ../../library/time.rst:480
+#: ../../library/time.rst:503
 msgid "``%y``"
 msgstr "``%y``"
 
-#: ../../library/time.rst:480
+#: ../../library/time.rst:503
 msgid "Year without century as a decimal number [00,99]."
 msgstr "Рік без століття як десяткове число [00,99]."
 
-#: ../../library/time.rst:483
+#: ../../library/time.rst:506
 msgid "``%Y``"
 msgstr "``%Y``"
 
-#: ../../library/time.rst:483
+#: ../../library/time.rst:506
 msgid "Year with century as a decimal number."
 msgstr "Рік із століттям як десяткове число."
 
-#: ../../library/time.rst:486
+#: ../../library/time.rst:509
 msgid "``%z``"
 msgstr "``%z``"
 
-#: ../../library/time.rst:486
+#: ../../library/time.rst:509
 msgid ""
 "Time zone offset indicating a positive or negative time difference from "
 "UTC/GMT of the form +HHMM or -HHMM, where H represents decimal hour digits "
@@ -882,30 +928,30 @@ msgstr ""
 "від UTC/GMT у формі +ГГММ або -ГГММ, де H означає десяткові цифри години, а "
 "M – десяткові цифри хвилин [-23:59, +23:59]. [1]_"
 
-#: ../../library/time.rst:492
+#: ../../library/time.rst:515
 msgid "``%Z``"
 msgstr "``%Z``"
 
-#: ../../library/time.rst:492
+#: ../../library/time.rst:515
 msgid ""
 "Time zone name (no characters if no time zone exists). Deprecated. [1]_"
 msgstr ""
 "Назва часового поясу (без символів, якщо часовий пояс не існує). Застаріле. "
 "[1]_"
 
-#: ../../library/time.rst:495
+#: ../../library/time.rst:518
 msgid "``%%``"
 msgstr "``%%``"
 
-#: ../../library/time.rst:495
+#: ../../library/time.rst:518
 msgid "A literal ``'%'`` character."
 msgstr "Буквальний символ ``'%''``."
 
-#: ../../library/time.rst:498
+#: ../../library/time.rst:521
 msgid "Notes:"
 msgstr "Примітки:"
 
-#: ../../library/time.rst:501
+#: ../../library/time.rst:524
 msgid ""
 "The ``%f`` format directive only applies to :func:`strptime`, not to "
 ":func:`strftime`. However, see also :meth:`datetime.datetime.strptime` and "
@@ -913,7 +959,7 @@ msgid ""
 ":ref:`applies to microseconds <format-codes>`."
 msgstr ""
 
-#: ../../library/time.rst:507
+#: ../../library/time.rst:530
 msgid ""
 "When used with the :func:`strptime` function, the ``%p`` directive only "
 "affects the output hour field if the ``%I`` directive is used to parse the "
@@ -923,7 +969,7 @@ msgstr ""
 "поле вихідних годин, лише якщо директива ``%I`` використовується для аналізу"
 " години."
 
-#: ../../library/time.rst:513
+#: ../../library/time.rst:536
 msgid ""
 "The range really is ``0`` to ``61``; value ``60`` is valid in timestamps "
 "representing `leap seconds`_ and value ``61`` is supported for historical "
@@ -933,7 +979,7 @@ msgstr ""
 "у мітках часу, що представляють високосні секунди (`leap seconds`_), а "
 "значення ``61`` підтримується з історичних причин."
 
-#: ../../library/time.rst:518
+#: ../../library/time.rst:541
 msgid ""
 "When used with the :func:`strptime` function, ``%U`` and ``%W`` are only "
 "used in calculations when the day of the week and the year are specified."
@@ -941,7 +987,7 @@ msgstr ""
 "При використанні з функцією :func:`strptime`, ``%U`` і ``%W`` "
 "використовуються в обчисленнях лише тоді, коли вказано день тижня та рік."
 
-#: ../../library/time.rst:521
+#: ../../library/time.rst:544
 msgid ""
 "Here is an example, a format for dates compatible with that specified  in "
 "the :rfc:`2822` Internet email standard.  [1]_ ::"
@@ -949,7 +995,7 @@ msgstr ""
 "Ось приклад формату дат, сумісного з указаним у стандарті електронної пошти "
 "Інтернету :rfc:`2822`. [1]_ ::"
 
-#: ../../library/time.rst:528
+#: ../../library/time.rst:551
 msgid ""
 "Additional directives may be supported on certain platforms, but only the "
 "ones listed here have a meaning standardized by ANSI C.  To see the full set"
@@ -961,7 +1007,7 @@ msgstr ""
 "набір кодів формату, які підтримуються на вашій платформі, зверніться до "
 "документації :manpage:`strftime(3)`."
 
-#: ../../library/time.rst:533
+#: ../../library/time.rst:556
 msgid ""
 "On some platforms, an optional field width and precision specification can "
 "immediately follow the initial ``'%'`` of a directive in the following "
@@ -973,7 +1019,7 @@ msgstr ""
 "порядку; це також не портативно. Ширина поля зазвичай дорівнює 2, за "
 "винятком ``%j``, де вона дорівнює 3."
 
-#: ../../library/time.rst:544
+#: ../../library/time.rst:567
 msgid ""
 "Parse a string representing a time according to a format.  The return value "
 "is a :class:`struct_time` as returned by :func:`gmtime` or "
@@ -983,7 +1029,7 @@ msgstr ""
 "значенням є :class:`struct_time`, яке повертає :func:`gmtime` або "
 ":func:`localtime`."
 
-#: ../../library/time.rst:548
+#: ../../library/time.rst:571
 msgid ""
 "The *format* parameter uses the same directives as those used by "
 ":func:`strftime`; it defaults to ``\"%a %b %d %H:%M:%S %Y\"`` which matches "
@@ -1002,11 +1048,11 @@ msgstr ""
 "отримати, це ``(1900, 1, 1, 0, 0, 0, 0, 1, -1)``. І *string*, і *format* "
 "мають бути рядками."
 
-#: ../../library/time.rst:556
+#: ../../library/time.rst:579
 msgid "For example:"
 msgstr "Наприклад:"
 
-#: ../../library/time.rst:563
+#: ../../library/time.rst:586
 msgid ""
 "Support for the ``%Z`` directive is based on the values contained in "
 "``tzname`` and whether ``daylight`` is true.  Because of this, it is "
@@ -1018,7 +1064,7 @@ msgstr ""
 "платформи, за винятком розпізнавання UTC і GMT, які завжди відомі (і "
 "вважаються не літніми часовими поясами)."
 
-#: ../../library/time.rst:568
+#: ../../library/time.rst:591
 msgid ""
 "Only the directives specified in the documentation are supported.  Because "
 "``strftime()`` is implemented per platform it can sometimes offer more "
@@ -1032,7 +1078,7 @@ msgstr ""
 "якої платформи і тому не обов’язково підтримує всі доступні директиви, які "
 "не задокументовані як підтримувані."
 
-#: ../../library/time.rst:577
+#: ../../library/time.rst:600
 msgid ""
 "The type of the time value sequence returned by :func:`gmtime`, "
 ":func:`localtime`, and :func:`strptime`.  It is an object with a "
@@ -1044,103 +1090,103 @@ msgstr ""
 "tuple`: доступ до значень можна отримати за індексом та назвою атрибута. "
 "Присутні такі значення:"
 
-#: ../../library/time.rst:584
+#: ../../library/time.rst:607
 msgid "Index"
 msgstr "Індекс"
 
-#: ../../library/time.rst:585
+#: ../../library/time.rst:608
 msgid "Attribute"
 msgstr "Атрибут"
 
-#: ../../library/time.rst:586
+#: ../../library/time.rst:609
 msgid "Values"
 msgstr "Цінності"
 
-#: ../../library/time.rst:588
+#: ../../library/time.rst:611
 msgid "0"
 msgstr "0"
 
-#: ../../library/time.rst:590
+#: ../../library/time.rst:613
 msgid "(for example, 1993)"
 msgstr "(наприклад, 1993 р.)"
 
-#: ../../library/time.rst:592
+#: ../../library/time.rst:615
 msgid "1"
 msgstr "1"
 
-#: ../../library/time.rst:594
+#: ../../library/time.rst:617
 msgid "range [1, 12]"
 msgstr "діапазон [1, 12]"
 
-#: ../../library/time.rst:596
+#: ../../library/time.rst:619
 msgid "2"
 msgstr "2"
 
-#: ../../library/time.rst:598
+#: ../../library/time.rst:621
 msgid "range [1, 31]"
 msgstr "діапазон [1, 31]"
 
-#: ../../library/time.rst:600
+#: ../../library/time.rst:623
 msgid "3"
 msgstr "3"
 
-#: ../../library/time.rst:602
+#: ../../library/time.rst:625
 msgid "range [0, 23]"
 msgstr "діапазон [0, 23]"
 
-#: ../../library/time.rst:604
+#: ../../library/time.rst:627
 msgid "4"
 msgstr "4"
 
-#: ../../library/time.rst:606
+#: ../../library/time.rst:629
 msgid "range [0, 59]"
 msgstr "діапазон [0, 59]"
 
-#: ../../library/time.rst:608
+#: ../../library/time.rst:631
 msgid "5"
 msgstr "5"
 
-#: ../../library/time.rst:610
+#: ../../library/time.rst:633
 msgid "range [0, 61]; see :ref:`Note (2) <leap-second>` in :func:`strftime`"
 msgstr ""
 
-#: ../../library/time.rst:612
+#: ../../library/time.rst:635
 msgid "6"
 msgstr "6"
 
-#: ../../library/time.rst:614
+#: ../../library/time.rst:637
 msgid "range [0, 6]; Monday is 0"
 msgstr ""
 
-#: ../../library/time.rst:616
+#: ../../library/time.rst:639
 msgid "7"
 msgstr "7"
 
-#: ../../library/time.rst:618
+#: ../../library/time.rst:641
 msgid "range [1, 366]"
 msgstr "діапазон [1, 366]"
 
-#: ../../library/time.rst:620
+#: ../../library/time.rst:643
 msgid "8"
 msgstr "8"
 
-#: ../../library/time.rst:622
+#: ../../library/time.rst:645
 msgid "0, 1 or -1; see below"
 msgstr "0, 1 або -1; Дивіться нижче"
 
-#: ../../library/time.rst:624 ../../library/time.rst:628
+#: ../../library/time.rst:647 ../../library/time.rst:651
 msgid "N/A"
 msgstr "N/A"
 
-#: ../../library/time.rst:626
+#: ../../library/time.rst:649
 msgid "abbreviation of timezone name"
 msgstr "абревіатура назви часового поясу"
 
-#: ../../library/time.rst:630
+#: ../../library/time.rst:653
 msgid "offset east of UTC in seconds"
 msgstr "зміщення на схід від UTC у секундах"
 
-#: ../../library/time.rst:632
+#: ../../library/time.rst:655
 msgid ""
 "Note that unlike the C structure, the month value is a range of [1, 12], not"
 " [0, 11]."
@@ -1148,7 +1194,7 @@ msgstr ""
 "Зверніть увагу, що на відміну від структури C, значення місяця є діапазоном "
 "[1, 12], а не [0, 11]."
 
-#: ../../library/time.rst:635
+#: ../../library/time.rst:658
 msgid ""
 "In calls to :func:`mktime`, :attr:`tm_isdst` may be set to 1 when daylight "
 "savings time is in effect, and 0 when it is not.  A value of -1 indicates "
@@ -1159,7 +1205,7 @@ msgstr ""
 "літній час діє, і на 0, коли він не діє. Значення -1 вказує на те, що це "
 "невідомо, і зазвичай призводить до заповнення правильного стану."
 
-#: ../../library/time.rst:639
+#: ../../library/time.rst:662
 msgid ""
 "When a tuple with an incorrect length is passed to a function expecting a "
 ":class:`struct_time`, or having elements of the wrong type, a "
@@ -1169,7 +1215,7 @@ msgstr ""
 ":class:`struct_time`, або містить елементи неправильного типу, виникає "
 ":exc:`TypeError`."
 
-#: ../../library/time.rst:645
+#: ../../library/time.rst:668
 msgid ""
 "Return the time in seconds since the epoch_ as a floating point number. The "
 "handling of `leap seconds`_ is platform dependent. On Windows and most Unix "
@@ -1178,7 +1224,7 @@ msgid ""
 "<https://en.wikipedia.org/wiki/Unix_time>`_."
 msgstr ""
 
-#: ../../library/time.rst:651
+#: ../../library/time.rst:674
 msgid ""
 "Note that even though the time is always returned as a floating point "
 "number, not all systems provide time with a better precision than 1 second. "
@@ -1192,7 +1238,7 @@ msgstr ""
 " може повернути нижче значення, ніж попередній виклик, якщо системний "
 "годинник було встановлено назад між двома викликами."
 
-#: ../../library/time.rst:657
+#: ../../library/time.rst:680
 msgid ""
 "The number returned by :func:`.time` may be converted into a more common "
 "time format (i.e. year, month, day, hour, etc...) in UTC by passing it to "
@@ -1207,7 +1253,19 @@ msgstr ""
 ":func:`localtime`. В обох випадках повертається об’єкт :class:`struct_time`,"
 " з якого можна отримати доступ до компонентів календарної дати як атрибутів."
 
-#: ../../library/time.rst:664
+#: ../../library/time.rst:689
+msgid "On Windows, call ``GetSystemTimeAsFileTime()``."
+msgstr ""
+
+#: ../../library/time.rst:690
+msgid "Call ``clock_gettime(CLOCK_REALTIME)`` if available."
+msgstr ""
+
+#: ../../library/time.rst:691
+msgid "Otherwise, call ``gettimeofday()``."
+msgstr ""
+
+#: ../../library/time.rst:693
 msgid ""
 "Use :func:`time_ns` to avoid the precision loss caused by the :class:`float`"
 " type."
@@ -1215,7 +1273,7 @@ msgstr ""
 "Використовуйте :func:`time_ns`, щоб уникнути втрати точності, викликаної "
 "типом :class:`float`."
 
-#: ../../library/time.rst:670
+#: ../../library/time.rst:699
 msgid ""
 "Similar to :func:`~time.time` but returns time as an integer number of "
 "nanoseconds since the epoch_."
@@ -1223,7 +1281,7 @@ msgstr ""
 "Подібно до :func:`~time.time`, але повертає час як ціле число наносекунд з "
 "епохи_."
 
-#: ../../library/time.rst:683
+#: ../../library/time.rst:712
 msgid ""
 "Return the value (in fractional seconds) of the sum of the system and user "
 "CPU time of the current thread.  It does not include time elapsed during "
@@ -1237,7 +1295,7 @@ msgstr ""
 "визначена, тому дійсна лише різниця між результатами двох викликів в одному "
 "потоці."
 
-#: ../../library/time.rst:689
+#: ../../library/time.rst:718
 msgid ""
 "Use :func:`thread_time_ns` to avoid the precision loss caused by the "
 ":class:`float` type."
@@ -1245,19 +1303,19 @@ msgstr ""
 "Використовуйте :func:`thread_time_ns`, щоб уникнути втрати точності, "
 "викликаної типом :class:`float`."
 
-#: ../../library/time.rst:692
+#: ../../library/time.rst:721
 msgid ":ref:`Availability <availability>`: Linux, Unix, Windows."
 msgstr ""
 
-#: ../../library/time.rst:694
+#: ../../library/time.rst:723
 msgid "Unix systems supporting ``CLOCK_THREAD_CPUTIME_ID``."
 msgstr ""
 
-#: ../../library/time.rst:701
+#: ../../library/time.rst:730
 msgid "Similar to :func:`thread_time` but return time as nanoseconds."
 msgstr "Подібно до :func:`thread_time`, але повертає час у наносекундах."
 
-#: ../../library/time.rst:708
+#: ../../library/time.rst:737
 msgid ""
 "Reset the time conversion rules used by the library routines. The "
 "environment variable :envvar:`TZ` specifies how this is done. It will also "
@@ -1275,7 +1333,7 @@ msgstr ""
 "не має правил переходу на літній час, або до відмінного від нуля, якщо існує"
 " час, минулий, теперішній або майбутній, коли застосовується літній час)."
 
-#: ../../library/time.rst:720
+#: ../../library/time.rst:749
 msgid ""
 "Although in many cases, changing the :envvar:`TZ` environment variable may "
 "affect the output of functions like :func:`localtime` without calling "
@@ -1285,11 +1343,11 @@ msgstr ""
 " на вихід таких функцій, як :func:`localtime` без виклику :func:`tzset`, не "
 "слід покладатися на таку поведінку."
 
-#: ../../library/time.rst:724
+#: ../../library/time.rst:753
 msgid "The :envvar:`TZ` environment variable should contain no whitespace."
 msgstr "Змінна середовища :envvar:`TZ` не повинна містити пробілів."
 
-#: ../../library/time.rst:726
+#: ../../library/time.rst:755
 msgid ""
 "The standard format of the :envvar:`TZ` environment variable is (whitespace "
 "added for clarity)::"
@@ -1297,15 +1355,15 @@ msgstr ""
 "Стандартний формат змінної середовища :envvar:`TZ` такий (для ясності додано"
 " пробіли):"
 
-#: ../../library/time.rst:731
+#: ../../library/time.rst:760
 msgid "Where the components are:"
 msgstr "Де компоненти:"
 
-#: ../../library/time.rst:733
+#: ../../library/time.rst:762
 msgid "``std`` and ``dst``"
 msgstr "``std`` і ``dst``"
 
-#: ../../library/time.rst:734
+#: ../../library/time.rst:763
 msgid ""
 "Three or more alphanumerics giving the timezone abbreviations. These will be"
 " propagated into time.tzname"
@@ -1313,11 +1371,11 @@ msgstr ""
 "Три або більше алфавітно-цифрових абревіатур часового поясу. Вони будуть "
 "поширені у time.tzname"
 
-#: ../../library/time.rst:737
+#: ../../library/time.rst:766
 msgid "``offset``"
 msgstr "``зсув``"
 
-#: ../../library/time.rst:738
+#: ../../library/time.rst:767
 msgid ""
 "The offset has the form: ``± hh[:mm[:ss]]``. This indicates the value added "
 "the local time to arrive at UTC.  If preceded by a '-', the timezone is east"
@@ -1330,11 +1388,11 @@ msgstr ""
 "після літнього часу немає зміщення, вважається, що літній час на одну годину"
 " випереджає стандартний час."
 
-#: ../../library/time.rst:743
+#: ../../library/time.rst:772
 msgid "``start[/time], end[/time]``"
 msgstr "``початок[/час], кінець[/час]``"
 
-#: ../../library/time.rst:744
+#: ../../library/time.rst:773
 msgid ""
 "Indicates when to change to and back from DST. The format of the start and "
 "end dates are one of the following:"
@@ -1342,11 +1400,11 @@ msgstr ""
 "Вказує, коли переходити на літній час і повертатися з нього. Початкова та "
 "кінцева дати мають один із наведених нижче форматів."
 
-#: ../../library/time.rst:747
+#: ../../library/time.rst:776
 msgid ":samp:`J{n}`"
 msgstr ":samp:`J{n}`"
 
-#: ../../library/time.rst:748
+#: ../../library/time.rst:777
 msgid ""
 "The Julian day *n* (1 <= *n* <= 365). Leap days are not counted, so in all "
 "years February 28 is day 59 and March 1 is day 60."
@@ -1354,11 +1412,11 @@ msgstr ""
 "Юліанський день *n* (1 <= *n* <= 365). Високосні дні не враховуються, тому в"
 " усіх роках 28 лютого — це 59 день, а 1 березня — 60 день."
 
-#: ../../library/time.rst:751
+#: ../../library/time.rst:780
 msgid ":samp:`{n}`"
 msgstr ":samp:`{n}`"
 
-#: ../../library/time.rst:752
+#: ../../library/time.rst:781
 msgid ""
 "The zero-based Julian day (0 <= *n* <= 365). Leap days are counted, and it "
 "is possible to refer to February 29."
@@ -1366,11 +1424,11 @@ msgstr ""
 "Юліанський день від нуля (0 <= *n* <= 365). Високосні дні враховуються, і "
 "можна відноситися до 29 лютого."
 
-#: ../../library/time.rst:755
+#: ../../library/time.rst:784
 msgid ":samp:`M{m}.{n}.{d}`"
 msgstr ":samp:`M{m}.{n}.{d}`"
 
-#: ../../library/time.rst:756
+#: ../../library/time.rst:785
 msgid ""
 "The *d*'th day (0 <= *d* <= 6) of week *n* of month *m* of the year (1 <= "
 "*n* <= 5, 1 <= *m* <= 12, where week 5 means \"the last *d* day in month "
@@ -1382,7 +1440,7 @@ msgstr ""
 "відбуватися як на четвертому, так і на п’ятому тижні). Тиждень 1 – це перший"
 " тиждень, на якому настає *d*-й день. Нульовий день - неділя."
 
-#: ../../library/time.rst:762
+#: ../../library/time.rst:791
 msgid ""
 "``time`` has the same format as ``offset`` except that no leading sign ('-' "
 "or '+') is allowed. The default, if time is not given, is 02:00:00."
@@ -1391,7 +1449,7 @@ msgstr ""
 "допускається початок знака ('-' або '+'). За умовчанням, якщо час не "
 "вказано, це 02:00:00."
 
-#: ../../library/time.rst:776
+#: ../../library/time.rst:805
 msgid ""
 "On many Unix systems (including \\*BSD, Linux, Solaris, and Darwin), it is "
 "more convenient to use the system's zoneinfo (:manpage:`tzfile(5)`)  "
@@ -1409,11 +1467,11 @@ msgstr ""
 " знаходиться в :file:`/usr/share/zoneinfo` . Наприклад, \"США/Схід\", "
 "\"Австралія/Мельбурн\", \"Єгипет\" або \"Європа/Амстердам\". ::"
 
-#: ../../library/time.rst:797
+#: ../../library/time.rst:826
 msgid "Clock ID Constants"
 msgstr "Константи ID годинника"
 
-#: ../../library/time.rst:799
+#: ../../library/time.rst:828
 msgid ""
 "These constants are used as parameters for :func:`clock_getres` and "
 ":func:`clock_gettime`."
@@ -1421,7 +1479,7 @@ msgstr ""
 "Ці константи використовуються як параметри для :func:`clock_getres` і "
 ":func:`clock_gettime`."
 
-#: ../../library/time.rst:804
+#: ../../library/time.rst:833
 msgid ""
 "Identical to :data:`CLOCK_MONOTONIC`, except it also includes any time that "
 "the system is suspended."
@@ -1429,7 +1487,7 @@ msgstr ""
 "Ідентичний :data:`CLOCK_MONOTONIC`, за винятком того, що він також включає "
 "будь-який час призупинення системи."
 
-#: ../../library/time.rst:807
+#: ../../library/time.rst:836
 msgid ""
 "This allows applications to get a suspend-aware monotonic  clock  without "
 "having to deal with the complications of :data:`CLOCK_REALTIME`, which may "
@@ -1441,11 +1499,11 @@ msgstr ""
 ":data:`CLOCK_REALTIME`, які можуть мати розриви, якщо час змінюється за "
 "допомогою ``settimeofday()`` або подібного."
 
-#: ../../library/time.rst:812
+#: ../../library/time.rst:841
 msgid ":ref:`Availability <availability>`: Linux >= 2.6.39."
 msgstr ""
 
-#: ../../library/time.rst:819
+#: ../../library/time.rst:848
 msgid ""
 "The Solaris OS has a ``CLOCK_HIGHRES`` timer that attempts to use an optimal"
 " hardware source, and may give close to nanosecond resolution. "
@@ -1456,11 +1514,11 @@ msgstr ""
 "наносекунд. ``CLOCK_HIGHRES`` - це нерегульований годинник з високою "
 "роздільною здатністю."
 
-#: ../../library/time.rst:823
+#: ../../library/time.rst:852
 msgid ":ref:`Availability <availability>`: Solaris."
 msgstr ":ref:`Наявність <availability>`: Solaris."
 
-#: ../../library/time.rst:830
+#: ../../library/time.rst:859
 msgid ""
 "Clock that cannot be set and represents monotonic time since some "
 "unspecified starting point."
@@ -1468,7 +1526,7 @@ msgstr ""
 "Годинник, який не можна налаштувати та відображає монотонний час із деякої "
 "невизначеної початкової точки."
 
-#: ../../library/time.rst:840
+#: ../../library/time.rst:869
 msgid ""
 "Similar to :data:`CLOCK_MONOTONIC`, but provides access to a raw hardware-"
 "based time that is not subject to NTP adjustments."
@@ -1476,19 +1534,30 @@ msgstr ""
 "Подібно до :data:`CLOCK_MONOTONIC`, але надає доступ до необробленого "
 "апаратного часу, який не підлягає коригуванням NTP."
 
-#: ../../library/time.rst:843
+#: ../../library/time.rst:872
 msgid ":ref:`Availability <availability>`: Linux >= 2.6.28, macOS >= 10.12."
 msgstr ""
 
-#: ../../library/time.rst:850 ../../library/time.rst:859
+#: ../../library/time.rst:878
+msgid ""
+"Similar to :data:`CLOCK_MONOTONIC_RAW`, but reads a value cached by the "
+"system at context switch and hence has less accuracy."
+msgstr ""
+
+#: ../../library/time.rst:881 ../../library/time.rst:940
+#: ../../library/time.rst:949
+msgid ":ref:`Availability <availability>`: macOS >= 10.12."
+msgstr ""
+
+#: ../../library/time.rst:888 ../../library/time.rst:897
 msgid "High-resolution per-process timer from the CPU."
 msgstr "Таймер високої роздільної здатності для кожного процесу від ЦП."
 
-#: ../../library/time.rst:861
+#: ../../library/time.rst:899
 msgid ":ref:`Availability <availability>`: FreeBSD, NetBSD >= 7, OpenBSD."
 msgstr ""
 
-#: ../../library/time.rst:867
+#: ../../library/time.rst:905
 msgid ""
 "`International Atomic Time <https://www.nist.gov/pml/time-and-frequency-"
 "division/nist-time-frequently-asked-questions-faq#tai>`_"
@@ -1496,7 +1565,7 @@ msgstr ""
 "`Міжнародний атомний час <https://www.nist.gov/pml/time-and-frequency-"
 "division/nist-time-frequently-asked-questions-faq#tai>`_"
 
-#: ../../library/time.rst:869
+#: ../../library/time.rst:907
 msgid ""
 "The system must have a current leap second table in order for this to give "
 "the correct answer.  PTP or NTP software can maintain a leap second table."
@@ -1505,15 +1574,15 @@ msgstr ""
 "правильну відповідь. Програмне забезпечення PTP або NTP може підтримувати "
 "таблицю високосної секунди."
 
-#: ../../library/time.rst:872
+#: ../../library/time.rst:910
 msgid ":ref:`Availability <availability>`: Linux."
 msgstr ":ref:`Наявність <availability>`: Linux."
 
-#: ../../library/time.rst:878
+#: ../../library/time.rst:916
 msgid "Thread-specific CPU-time clock."
 msgstr "Годинник процесорного часу, що залежить від потоку."
 
-#: ../../library/time.rst:887
+#: ../../library/time.rst:925
 msgid ""
 "Time whose absolute value is the time the system has been running and not "
 "suspended, providing accurate uptime measurement, both absolute and "
@@ -1523,11 +1592,11 @@ msgstr ""
 "забезпечує точне вимірювання часу безвідмовної роботи, як абсолютного, так і"
 " інтервального."
 
-#: ../../library/time.rst:891
+#: ../../library/time.rst:929
 msgid ":ref:`Availability <availability>`: FreeBSD, OpenBSD >= 5.5."
 msgstr ""
 
-#: ../../library/time.rst:898
+#: ../../library/time.rst:936
 msgid ""
 "Clock that increments monotonically, tracking the time since an arbitrary "
 "point, unaffected by frequency or time adjustments and not incremented while"
@@ -1537,11 +1606,13 @@ msgstr ""
 "залежить від коригування частоти чи часу та не збільшується, коли система "
 "сплячої системи."
 
-#: ../../library/time.rst:902
-msgid ":ref:`Availability <availability>`: macOS >= 10.12."
+#: ../../library/time.rst:946
+msgid ""
+"Like :data:`CLOCK_UPTIME_RAW`, but the value is cached by the system at "
+"context switches and therefore has less accuracy."
 msgstr ""
 
-#: ../../library/time.rst:906
+#: ../../library/time.rst:953
 msgid ""
 "The following constant is the only parameter that can be sent to "
 ":func:`clock_settime`."
@@ -1549,7 +1620,7 @@ msgstr ""
 "Наступна константа є єдиним параметром, який можна надіслати до "
 ":func:`clock_settime`."
 
-#: ../../library/time.rst:912
+#: ../../library/time.rst:959
 msgid ""
 "System-wide real-time clock.  Setting this clock requires appropriate "
 "privileges."
@@ -1557,11 +1628,11 @@ msgstr ""
 "Загальносистемний годинник реального часу. Щоб налаштувати цей годинник, "
 "потрібні відповідні привілеї."
 
-#: ../../library/time.rst:923
+#: ../../library/time.rst:970
 msgid "Timezone Constants"
 msgstr "Константи часового поясу"
 
-#: ../../library/time.rst:927
+#: ../../library/time.rst:974
 msgid ""
 "The offset of the local DST timezone, in seconds west of UTC, if one is "
 "defined. This is negative if the local DST timezone is east of UTC (as in "
@@ -1574,13 +1645,13 @@ msgstr ""
 "Великобританію). Використовуйте це, лише якщо ``денне світло`` не дорівнює "
 "нулю. Див. примітку нижче."
 
-#: ../../library/time.rst:933
+#: ../../library/time.rst:980
 msgid "Nonzero if a DST timezone is defined.  See note below."
 msgstr ""
 "Ненульове значення, якщо визначено часовий пояс літнього часу. Див. примітку"
 " нижче."
 
-#: ../../library/time.rst:937
+#: ../../library/time.rst:984
 msgid ""
 "The offset of the local (non-DST) timezone, in seconds west of UTC (negative"
 " in most of Western Europe, positive in the US, zero in the UK).  See note "
@@ -1590,7 +1661,7 @@ msgstr ""
 "(негативний у більшості країн Західної Європи, додатний у США, нуль у "
 "Великобританії). Див. примітку нижче."
 
-#: ../../library/time.rst:942
+#: ../../library/time.rst:989
 msgid ""
 "A tuple of two strings: the first is the name of the local non-DST timezone,"
 " the second is the name of the local DST timezone.  If no DST timezone is "
@@ -1601,7 +1672,7 @@ msgstr ""
 "часовий пояс літнього часу не визначено, другий рядок не слід "
 "використовувати. Див. примітку нижче."
 
-#: ../../library/time.rst:948
+#: ../../library/time.rst:995
 msgid ""
 "For the above Timezone constants (:data:`altzone`, :data:`daylight`, "
 ":data:`timezone`, and :data:`tzname`), the value is determined by the "
@@ -1611,19 +1682,19 @@ msgid ""
 "results from :func:`localtime` to obtain timezone information."
 msgstr ""
 
-#: ../../library/time.rst:957
+#: ../../library/time.rst:1004
 msgid "Module :mod:`datetime`"
 msgstr "Модуль :mod:`datetime`"
 
-#: ../../library/time.rst:958
+#: ../../library/time.rst:1005
 msgid "More object-oriented interface to dates and times."
 msgstr "Більш об’єктно-орієнтований інтерфейс для дат і часу."
 
-#: ../../library/time.rst:960
+#: ../../library/time.rst:1007
 msgid "Module :mod:`locale`"
 msgstr "Модуль :mod:`locale`"
 
-#: ../../library/time.rst:961
+#: ../../library/time.rst:1008
 msgid ""
 "Internationalization services.  The locale setting affects the "
 "interpretation of many format specifiers in :func:`strftime` and "
@@ -1632,11 +1703,11 @@ msgstr ""
 "Послуги інтернаціоналізації. Параметр локалі впливає на інтерпретацію "
 "багатьох специфікаторів формату в :func:`strftime` і :func:`strptime`."
 
-#: ../../library/time.rst:964
+#: ../../library/time.rst:1011
 msgid "Module :mod:`calendar`"
 msgstr "Модуль :mod:`calendar`"
 
-#: ../../library/time.rst:965
+#: ../../library/time.rst:1012
 msgid ""
 "General calendar-related functions.   :func:`~calendar.timegm` is the "
 "inverse of :func:`gmtime` from this module."
@@ -1644,11 +1715,11 @@ msgstr ""
 "Загальні функції, пов’язані з календарем. :func:`~calendar.timegm` є "
 "зворотним до :func:`gmtime` з цього модуля."
 
-#: ../../library/time.rst:969
+#: ../../library/time.rst:1016
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/time.rst:970
+#: ../../library/time.rst:1017
 msgid ""
 "The use of ``%Z`` is now deprecated, but the ``%z`` escape that expands to "
 "the preferred hour/minute offset is not supported by all ANSI C libraries. "
@@ -1694,23 +1765,23 @@ msgstr ""
 msgid "Daylight Saving Time"
 msgstr ""
 
-#: ../../library/time.rst:310 ../../library/time.rst:336
-#: ../../library/time.rst:678
+#: ../../library/time.rst:319 ../../library/time.rst:354
+#: ../../library/time.rst:707
 msgid "benchmarking"
 msgstr ""
 
-#: ../../library/time.rst:336 ../../library/time.rst:678
+#: ../../library/time.rst:354 ../../library/time.rst:707
 msgid "CPU time"
 msgstr ""
 
-#: ../../library/time.rst:336 ../../library/time.rst:678
+#: ../../library/time.rst:354 ../../library/time.rst:707
 msgid "processor time"
 msgstr ""
 
-#: ../../library/time.rst:393 ../../library/time.rst:539
+#: ../../library/time.rst:416 ../../library/time.rst:562
 msgid "% (percent)"
 msgstr ""
 
-#: ../../library/time.rst:393 ../../library/time.rst:539
+#: ../../library/time.rst:416 ../../library/time.rst:562
 msgid "datetime format"
 msgstr ""

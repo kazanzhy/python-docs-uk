@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -171,14 +171,8 @@ msgid ""
 "see how much work will be necessary to port code to 3.0.  The value of this "
 "switch is available to Python code as the boolean variable "
 ":data:`sys.py3kwarning`, and to C extension code as "
-":c:data:`Py_Py3kWarningFlag`."
+":c:data:`!Py_Py3kWarningFlag`."
 msgstr ""
-"Новий параметр командного рядка :option:`!-3` дозволяє попереджати про "
-"функції, які буде видалено в Python 3.0. Ви можете запустити код за "
-"допомогою цього перемикача, щоб побачити, скільки роботи знадобиться для "
-"перенесення коду на 3.0. Значення цього параметра доступне для коду Python "
-"як логічна змінна :data:`sys.py3kwarning`, а для коду розширення C як "
-":c:data:`Py_Py3kWarningFlag`."
 
 #: ../../whatsnew/2.6.rst:126
 msgid ""
@@ -2640,21 +2634,17 @@ msgstr ""
 
 #: ../../whatsnew/2.6.rst:1803
 msgid ""
-"The :mod:`cgi` module will now read variables from the query string of an "
+"The :mod:`!cgi` module will now read variables from the query string of an "
 "HTTP POST request.  This makes it possible to use form actions with URLs "
 "that include query strings such as \"/cgi-bin/add.py?category=1\".  "
 "(Contributed by Alexandre Fiori and Nubis; :issue:`1817`.)"
 msgstr ""
-"Модуль :mod:`cgi` тепер читатиме змінні з рядка запиту запиту HTTP POST. Це "
-"дає змогу використовувати дії форми з URL-адресами, які містять рядки "
-"запиту, такі як \"/cgi-bin/add.py?category=1\". (Надано Александром Фіорі та"
-" Nubis; :issue:`1817`.)"
 
 #: ../../whatsnew/2.6.rst:1809
 msgid ""
 "The :func:`parse_qs` and :func:`parse_qsl` functions have been relocated "
-"from the :mod:`cgi` module to the :mod:`urlparse <urllib.parse>` module. The"
-" versions still available in the :mod:`!cgi` module will trigger "
+"from the :mod:`!cgi` module to the :mod:`urlparse <urllib.parse>` module. "
+"The versions still available in the :mod:`!cgi` module will trigger "
 ":exc:`PendingDeprecationWarning` messages in 2.6 (:issue:`600362`)."
 msgstr ""
 
@@ -3761,13 +3751,10 @@ msgstr "(Усі зміни внесено Ларсом Густебелем)."
 
 #: ../../whatsnew/2.6.rst:2462
 msgid ""
-"An optional ``timeout`` parameter was added to the :class:`telnetlib.Telnet`"
-" class constructor, specifying a timeout measured in seconds.  (Added by "
-"Facundo Batista.)"
+"An optional ``timeout`` parameter was added to the "
+":class:`!telnetlib.Telnet` class constructor, specifying a timeout measured "
+"in seconds.  (Added by Facundo Batista.)"
 msgstr ""
-"До конструктора класу :class:`telnetlib.Telnet` було додано необов’язковий "
-"параметр ``timeout``, який визначає час очікування в секундах. (Додав "
-"Факундо Батіста.)"
 
 #: ../../whatsnew/2.6.rst:2466
 msgid ""
@@ -4796,10 +4783,10 @@ msgstr ""
 
 #: ../../whatsnew/2.6.rst:3159
 msgid ""
-"The :mod:`msilib` module's :class:`!Record` object gained "
-":meth:`~msilib.Record.GetInteger` and :meth:`~msilib.Record.GetString` "
-"methods that return field values as an integer or a string. (Contributed by "
-"Floris Bruynooghe; :issue:`2125`.)"
+"The :mod:`!msilib` module's :class:`!Record` object gained "
+":meth:`!GetInteger` and :meth:`!GetString` methods that return field values "
+"as an integer or a string. (Contributed by Floris Bruynooghe; "
+":issue:`2125`.)"
 msgstr ""
 
 #: ../../whatsnew/2.6.rst:3167

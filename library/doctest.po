@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/doctest.rst:2
-msgid ":mod:`doctest` --- Test interactive Python examples"
-msgstr ":mod:`doctest` --- Перевірте інтерактивні приклади Python"
+msgid ":mod:`!doctest` --- Test interactive Python examples"
+msgstr ""
 
 #: ../../library/doctest.rst:12
 msgid "**Source code:** :source:`Lib/doctest.py`"
@@ -1243,7 +1243,7 @@ msgstr ""
 "прикладі. Це дозволяє посмертно виправляти помилки. Типовою поведінкою є "
 "продовження виконання прикладів."
 
-#: ../../library/doctest.rst:930 ../../library/doctest.rst:1071
+#: ../../library/doctest.rst:930 ../../library/doctest.rst:1072
 msgid ""
 "Optional argument *parser* specifies a :class:`DocTestParser` (or subclass) "
 "that should be used to extract tests from the files.  It defaults to a "
@@ -1254,7 +1254,7 @@ msgstr ""
 "замовчуванням використовується звичайний аналізатор (тобто "
 "``DocTestParser()``)."
 
-#: ../../library/doctest.rst:934 ../../library/doctest.rst:1075
+#: ../../library/doctest.rst:934 ../../library/doctest.rst:1076
 msgid ""
 "Optional argument *encoding* specifies an encoding that should be used to "
 "convert the file to unicode."
@@ -1419,25 +1419,22 @@ msgid ""
 "framework and runs the interactive examples in each file.  If an example in "
 "any file fails, then the synthesized unit test fails, and a "
 ":exc:`failureException` exception is raised showing the name of the file "
-"containing the test and a (sometimes approximate) line number."
+"containing the test and a (sometimes approximate) line number.  If all the "
+"examples in a file are skipped, then the synthesized unit test is also "
+"marked as skipped."
 msgstr ""
-"Повернений :class:`unittest.TestSuite` повинен запускатися фреймворком "
-"unittest і запускати інтерактивні приклади в кожному файлі. Якщо приклад у "
-"будь-якому файлі завершується невдачею, синтезований модульний тест "
-"завершується невдало, і виникає виняткова ситуація :exc:`failureException`, "
-"яка показує назву файлу, що містить тест, і (іноді приблизний) номер рядка."
 
-#: ../../library/doctest.rst:1026
+#: ../../library/doctest.rst:1027
 msgid "Pass one or more paths (as strings) to text files to be examined."
 msgstr ""
 "Передайте один або кілька шляхів (у вигляді рядків) до текстових файлів, які"
 " потрібно перевірити."
 
-#: ../../library/doctest.rst:1028
+#: ../../library/doctest.rst:1029
 msgid "Options may be provided as keyword arguments:"
 msgstr "Параметри можуть бути надані як аргументи ключових слів:"
 
-#: ../../library/doctest.rst:1030
+#: ../../library/doctest.rst:1031
 msgid ""
 "Optional argument *module_relative* specifies how the filenames in *paths* "
 "should be interpreted:"
@@ -1445,7 +1442,7 @@ msgstr ""
 "Необов’язковий аргумент *module_relative* визначає, як слід інтерпретувати "
 "назви файлів у *paths*:"
 
-#: ../../library/doctest.rst:1033
+#: ../../library/doctest.rst:1034
 msgid ""
 "If *module_relative* is ``True`` (the default), then each filename in "
 "*paths* specifies an OS-independent module-relative path.  By default, this "
@@ -1463,7 +1460,7 @@ msgstr ""
 "символи ``/`` для розділення сегментів шляху та не може бути абсолютним "
 "шляхом (тобто воно не може починатися з ``/``)."
 
-#: ../../library/doctest.rst:1041
+#: ../../library/doctest.rst:1042
 msgid ""
 "If *module_relative* is ``False``, then each filename in *paths* specifies "
 "an OS-specific path.  The path may be absolute or relative; relative paths "
@@ -1473,7 +1470,7 @@ msgstr ""
 "*paths* вказує шлях до ОС. Шлях може бути абсолютним або відносним; відносні"
 " шляхи вирішуються відносно поточного робочого каталогу."
 
-#: ../../library/doctest.rst:1045
+#: ../../library/doctest.rst:1046
 msgid ""
 "Optional argument *package* is a Python package or the name of a Python "
 "package whose directory should be used as the base directory for module-"
@@ -1489,7 +1486,7 @@ msgstr ""
 "відносяться до модуля. Це помилка вказувати *package*, якщо "
 "*module_relative* має значення ``False``."
 
-#: ../../library/doctest.rst:1052
+#: ../../library/doctest.rst:1053
 msgid ""
 "Optional argument *setUp* specifies a set-up function for the test suite. "
 "This is called before running the tests in each file.  The *setUp* function "
@@ -1501,7 +1498,7 @@ msgstr ""
 "буде передано об’єкт :class:`DocTest`. Функція setUp може отримати доступ до"
 " глобальних параметрів тесту як атрибута *globs* пройденого тесту."
 
-#: ../../library/doctest.rst:1057
+#: ../../library/doctest.rst:1058
 msgid ""
 "Optional argument *tearDown* specifies a tear-down function for the test "
 "suite.  This is called after running the tests in each file.  The *tearDown*"
@@ -1514,7 +1511,7 @@ msgstr ""
 "отримати доступ до глобальних параметрів тесту як атрибута *globs* "
 "пройденого тесту."
 
-#: ../../library/doctest.rst:1062 ../../library/doctest.rst:1096
+#: ../../library/doctest.rst:1063 ../../library/doctest.rst:1098
 msgid ""
 "Optional argument *globs* is a dictionary containing the initial global "
 "variables for the tests.  A new copy of this dictionary is created for each "
@@ -1524,7 +1521,7 @@ msgstr ""
 "змінні для тестів. Для кожного тесту створюється нова копія цього словника. "
 "За замовчуванням *globs* — це новий порожній словник."
 
-#: ../../library/doctest.rst:1066
+#: ../../library/doctest.rst:1067
 msgid ""
 "Optional argument *optionflags* specifies the default doctest options for "
 "the tests, created by or-ing together individual option flags.  See section "
@@ -1537,7 +1534,7 @@ msgstr ""
 ":func:`set_unittest_reportflags` нижче, щоб дізнатися про кращий спосіб "
 "налаштування параметрів звітування."
 
-#: ../../library/doctest.rst:1078
+#: ../../library/doctest.rst:1079
 msgid ""
 "The global ``__file__`` is added to the globals provided to doctests loaded "
 "from a text file using :func:`DocFileSuite`."
@@ -1545,25 +1542,21 @@ msgstr ""
 "Глобальний ``__file__`` додається до глобалів, наданих до doctests, "
 "завантажених із текстового файлу за допомогою :func:`DocFileSuite`."
 
-#: ../../library/doctest.rst:1084
+#: ../../library/doctest.rst:1085
 msgid "Convert doctest tests for a module to a :class:`unittest.TestSuite`."
 msgstr "Перетворіть тести doctest для модуля на :class:`unittest.TestSuite`."
 
-#: ../../library/doctest.rst:1086
+#: ../../library/doctest.rst:1087
 msgid ""
 "The returned :class:`unittest.TestSuite` is to be run by the unittest "
 "framework and runs each doctest in the module.  If any of the doctests fail,"
 " then the synthesized unit test fails, and a :exc:`failureException` "
 "exception is raised showing the name of the file containing the test and a "
-"(sometimes approximate) line number."
+"(sometimes approximate) line number.  If all the examples in a docstring are"
+" skipped, then the synthesized unit test is also marked as skipped."
 msgstr ""
-"Повернений :class:`unittest.TestSuite` має запускатися фреймворком unittest "
-"і запускає кожен doctest у модулі. Якщо будь-який із тестів документів не "
-"вдається, синтезований модульний тест завершується невдало, і виникає "
-"виняткова ситуація :exc:`failureException`, яка показує назву файлу, що "
-"містить тест, і (іноді приблизний) номер рядка."
 
-#: ../../library/doctest.rst:1092
+#: ../../library/doctest.rst:1094
 msgid ""
 "Optional argument *module* provides the module to be tested.  It can be a "
 "module object or a (possibly dotted) module name.  If not specified, the "
@@ -1573,7 +1566,7 @@ msgstr ""
 "об’єкт модуля або ім’я модуля (можливо з крапками). Якщо не вказано, "
 "використовується модуль, який викликає цю функцію."
 
-#: ../../library/doctest.rst:1100
+#: ../../library/doctest.rst:1102
 msgid ""
 "Optional argument *extraglobs* specifies an extra set of global variables, "
 "which is merged into *globs*.  By default, no extra globals are used."
@@ -1582,7 +1575,7 @@ msgstr ""
 "змінних, який об’єднується в *globs*. За замовчуванням додаткові глобальні "
 "значення не використовуються."
 
-#: ../../library/doctest.rst:1103
+#: ../../library/doctest.rst:1105
 msgid ""
 "Optional argument *test_finder* is the :class:`DocTestFinder` object (or a "
 "drop-in replacement) that is used to extract doctests from the module."
@@ -1591,7 +1584,7 @@ msgstr ""
 "(або замінник), який використовується для вилучення тестів документів із "
 "модуля."
 
-#: ../../library/doctest.rst:1106
+#: ../../library/doctest.rst:1108
 msgid ""
 "Optional arguments *setUp*, *tearDown*, and *optionflags* are the same as "
 "for function :func:`DocFileSuite` above."
@@ -1599,11 +1592,11 @@ msgstr ""
 "Необов’язкові аргументи *setUp*, *tearDown* і *optionflags* такі самі, як і "
 "для функції :func:`DocFileSuite` вище."
 
-#: ../../library/doctest.rst:1109
+#: ../../library/doctest.rst:1111
 msgid "This function uses the same search technique as :func:`testmod`."
 msgstr "Ця функція використовує ту саму техніку пошуку, що й :func:`testmod`."
 
-#: ../../library/doctest.rst:1111
+#: ../../library/doctest.rst:1113
 msgid ""
 ":func:`DocTestSuite` returns an empty :class:`unittest.TestSuite` if "
 "*module* contains no docstrings instead of raising :exc:`ValueError`."
@@ -1612,7 +1605,7 @@ msgstr ""
 "*module* не містить рядків документів, замість того, щоб викликати "
 ":exc:`ValueError`."
 
-#: ../../library/doctest.rst:1117
+#: ../../library/doctest.rst:1119
 msgid ""
 "When doctests which have been converted to unit tests by "
 ":func:`DocFileSuite` or :func:`DocTestSuite` fail, this exception is raised "
@@ -1620,7 +1613,7 @@ msgid ""
 "approximate) line number."
 msgstr ""
 
-#: ../../library/doctest.rst:1121
+#: ../../library/doctest.rst:1123
 msgid ""
 "Under the covers, :func:`DocTestSuite` creates a :class:`unittest.TestSuite`"
 " out of :class:`!doctest.DocTestCase` instances, and :class:`!DocTestCase` "
@@ -1629,14 +1622,14 @@ msgid ""
 "questions about the exact details of :mod:`unittest` integration."
 msgstr ""
 
-#: ../../library/doctest.rst:1127
+#: ../../library/doctest.rst:1129
 msgid ""
 "Similarly, :func:`DocFileSuite` creates a :class:`unittest.TestSuite` out of"
 " :class:`!doctest.DocFileCase` instances, and :class:`!DocFileCase` is a "
 "subclass of :class:`!DocTestCase`."
 msgstr ""
 
-#: ../../library/doctest.rst:1131
+#: ../../library/doctest.rst:1133
 msgid ""
 "So both ways of creating a :class:`unittest.TestSuite` run instances of "
 ":class:`!DocTestCase`.  This is important for a subtle reason: when you run "
@@ -1649,7 +1642,7 @@ msgid ""
 "pass options through :mod:`unittest` to :mod:`doctest` test runners."
 msgstr ""
 
-#: ../../library/doctest.rst:1141
+#: ../../library/doctest.rst:1143
 msgid ""
 "For this reason, :mod:`doctest` also supports a notion of :mod:`doctest` "
 "reporting flags specific to :mod:`unittest` support, via this function:"
@@ -1657,11 +1650,11 @@ msgstr ""
 "З цієї причини :mod:`doctest` також підтримує поняття прапорів звітності "
 ":mod:`doctest`, специфічних для підтримки :mod:`unittest`, через цю функцію:"
 
-#: ../../library/doctest.rst:1147
+#: ../../library/doctest.rst:1149
 msgid "Set the :mod:`doctest` reporting flags to use."
 msgstr "Встановіть прапорці звітів :mod:`doctest` для використання."
 
-#: ../../library/doctest.rst:1149
+#: ../../library/doctest.rst:1151
 msgid ""
 "Argument *flags* takes the :ref:`bitwise OR <bitwise>` of option flags.  See"
 " section :ref:`doctest-options`.  Only \"reporting flags\" can be used."
@@ -1670,7 +1663,7 @@ msgstr ""
 "Дивіться розділ :ref:`doctest-options`. Можна використовувати лише \"прапори"
 " звітності\"."
 
-#: ../../library/doctest.rst:1152
+#: ../../library/doctest.rst:1154
 msgid ""
 "This is a module-global setting, and affects all future doctests run by "
 "module :mod:`unittest`:  the :meth:`!runTest` method of "
@@ -1685,7 +1678,7 @@ msgid ""
 "are ignored."
 msgstr ""
 
-#: ../../library/doctest.rst:1163
+#: ../../library/doctest.rst:1165
 msgid ""
 "The value of the :mod:`unittest` reporting flags in effect before the "
 "function was called is returned by the function."
@@ -1693,11 +1686,11 @@ msgstr ""
 "Функція повертає значення прапорів звітів :mod:`unittest`, які діяли до "
 "виклику функції."
 
-#: ../../library/doctest.rst:1170
+#: ../../library/doctest.rst:1172
 msgid "Advanced API"
 msgstr "Розширений API"
 
-#: ../../library/doctest.rst:1172
+#: ../../library/doctest.rst:1174
 msgid ""
 "The basic API is a simple wrapper that's intended to make doctest easy to "
 "use. It is fairly flexible, and should meet most users' needs; however, if "
@@ -1710,7 +1703,7 @@ msgstr ""
 "тестуванням або ви бажаєте розширити можливості doctest, тоді вам слід "
 "скористатися розширеним API."
 
-#: ../../library/doctest.rst:1177
+#: ../../library/doctest.rst:1179
 msgid ""
 "The advanced API revolves around two container classes, which are used to "
 "store the interactive examples extracted from doctest cases:"
@@ -1719,7 +1712,7 @@ msgstr ""
 "використовуються для зберігання інтерактивних прикладів, отриманих із "
 "випадків doctest:"
 
-#: ../../library/doctest.rst:1180
+#: ../../library/doctest.rst:1182
 msgid ""
 ":class:`Example`: A single Python :term:`statement`, paired with its "
 "expected output."
@@ -1727,7 +1720,7 @@ msgstr ""
 ":class:`Example`: один :term:`statement` Python у поєднанні з очікуваним "
 "результатом."
 
-#: ../../library/doctest.rst:1183
+#: ../../library/doctest.rst:1185
 msgid ""
 ":class:`DocTest`: A collection of :class:`Example`\\ s, typically extracted "
 "from a single docstring or text file."
@@ -1735,7 +1728,7 @@ msgstr ""
 ":class:`DocTest`: колекція :class:`Example`\\, зазвичай витягнутих з одного "
 "рядка документа або текстового файлу."
 
-#: ../../library/doctest.rst:1186
+#: ../../library/doctest.rst:1188
 msgid ""
 "Additional processing classes are defined to find, parse, and run, and check"
 " doctest examples:"
@@ -1743,7 +1736,7 @@ msgstr ""
 "Додаткові класи обробки визначені для пошуку, аналізу та запуску та "
 "перевірки прикладів doctest:"
 
-#: ../../library/doctest.rst:1189
+#: ../../library/doctest.rst:1191
 msgid ""
 ":class:`DocTestFinder`: Finds all docstrings in a given module, and uses a "
 ":class:`DocTestParser` to create a :class:`DocTest` from every docstring "
@@ -1753,7 +1746,7 @@ msgstr ""
 "використовує :class:`DocTestParser` для створення :class:`DocTest` з кожного"
 " рядка документів, який містить інтерактивні приклади."
 
-#: ../../library/doctest.rst:1193
+#: ../../library/doctest.rst:1195
 msgid ""
 ":class:`DocTestParser`: Creates a :class:`DocTest` object from a string "
 "(such as an object's docstring)."
@@ -1761,7 +1754,7 @@ msgstr ""
 ":class:`DocTestParser`: створює об’єкт :class:`DocTest` із рядка (наприклад,"
 " рядка документації об’єкта)."
 
-#: ../../library/doctest.rst:1196
+#: ../../library/doctest.rst:1198
 msgid ""
 ":class:`DocTestRunner`: Executes the examples in a :class:`DocTest`, and "
 "uses an :class:`OutputChecker` to verify their output."
@@ -1769,7 +1762,7 @@ msgstr ""
 ":class:`DocTestRunner`: Виконує приклади в :class:`DocTest` і використовує "
 ":class:`OutputChecker` для перевірки їх результату."
 
-#: ../../library/doctest.rst:1199
+#: ../../library/doctest.rst:1201
 msgid ""
 ":class:`OutputChecker`: Compares the actual output from a doctest example "
 "with the expected output, and decides whether they match."
@@ -1777,17 +1770,17 @@ msgstr ""
 ":class:`OutputChecker`: порівнює фактичні результати прикладу doctest з "
 "очікуваними результатами та вирішує, чи вони збігаються."
 
-#: ../../library/doctest.rst:1202
+#: ../../library/doctest.rst:1204
 msgid ""
 "The relationships among these processing classes are summarized in the "
 "following diagram::"
 msgstr "Відносини між цими класами обробки підсумовано на наступній діаграмі:"
 
-#: ../../library/doctest.rst:1218
+#: ../../library/doctest.rst:1220
 msgid "DocTest Objects"
 msgstr "Об’єкти DocTest"
 
-#: ../../library/doctest.rst:1223
+#: ../../library/doctest.rst:1225
 msgid ""
 "A collection of doctest examples that should be run in a single namespace.  "
 "The constructor arguments are used to initialize the attributes of the same "
@@ -1797,7 +1790,7 @@ msgstr ""
 "Аргументи конструктора використовуються для ініціалізації однойменних "
 "атрибутів."
 
-#: ../../library/doctest.rst:1227
+#: ../../library/doctest.rst:1229
 msgid ""
 ":class:`DocTest` defines the following attributes.  They are initialized by "
 "the constructor, and should not be modified directly."
@@ -1805,7 +1798,7 @@ msgstr ""
 ":class:`DocTest` визначає такі атрибути. Вони ініціалізуються конструктором "
 "і не повинні змінюватися безпосередньо."
 
-#: ../../library/doctest.rst:1233
+#: ../../library/doctest.rst:1235
 msgid ""
 "A list of :class:`Example` objects encoding the individual interactive "
 "Python examples that should be run by this test."
@@ -1813,7 +1806,7 @@ msgstr ""
 "Список об’єктів :class:`Example`, що кодують окремі інтерактивні приклади "
 "Python, які мають виконуватися цим тестом."
 
-#: ../../library/doctest.rst:1239
+#: ../../library/doctest.rst:1241
 msgid ""
 "The namespace (aka globals) that the examples should be run in. This is a "
 "dictionary mapping names to values.  Any changes to the namespace made by "
@@ -1825,7 +1818,7 @@ msgstr ""
 "внесені прикладами (такі як зв’язування нових змінних), будуть відображені в"
 " :attr:`globs` після виконання тесту."
 
-#: ../../library/doctest.rst:1247
+#: ../../library/doctest.rst:1249
 msgid ""
 "A string name identifying the :class:`DocTest`.  Typically, this is the name"
 " of the object or file that the test was extracted from."
@@ -1833,7 +1826,7 @@ msgstr ""
 "Ім’я рядка, що ідентифікує :class:`DocTest`. Як правило, це ім'я об'єкта або"
 " файлу, з якого було отримано тест."
 
-#: ../../library/doctest.rst:1253
+#: ../../library/doctest.rst:1255
 msgid ""
 "The name of the file that this :class:`DocTest` was extracted from; or "
 "``None`` if the filename is unknown, or if the :class:`DocTest` was not "
@@ -1842,7 +1835,7 @@ msgstr ""
 "Ім'я файлу, з якого було видобуто цей :class:`DocTest`; або ``None``, якщо "
 "назва файлу невідома, або якщо :class:`DocTest` не було видобуто з файлу."
 
-#: ../../library/doctest.rst:1260
+#: ../../library/doctest.rst:1262
 msgid ""
 "The line number within :attr:`filename` where this :class:`DocTest` begins, "
 "or ``None`` if the line number is unavailable.  This line number is zero-"
@@ -1852,7 +1845,7 @@ msgstr ""
 "``None``, якщо номер рядка недоступний. Цей номер рядка відраховується від "
 "нуля відносно початку файлу."
 
-#: ../../library/doctest.rst:1267
+#: ../../library/doctest.rst:1269
 msgid ""
 "The string that the test was extracted from, or ``None`` if the string is "
 "unavailable, or if the test was not extracted from a string."
@@ -1860,11 +1853,11 @@ msgstr ""
 "Рядок, з якого було отримано тест, або ``None``, якщо рядок недоступний, або"
 " якщо тест не було вилучено з рядка."
 
-#: ../../library/doctest.rst:1274
+#: ../../library/doctest.rst:1276
 msgid "Example Objects"
 msgstr "Приклад об'єктів"
 
-#: ../../library/doctest.rst:1279
+#: ../../library/doctest.rst:1281
 msgid ""
 "A single interactive example, consisting of a Python statement and its "
 "expected output.  The constructor arguments are used to initialize the "
@@ -1874,7 +1867,7 @@ msgstr ""
 "очікуваного результату. Аргументи конструктора використовуються для "
 "ініціалізації однойменних атрибутів."
 
-#: ../../library/doctest.rst:1284
+#: ../../library/doctest.rst:1286
 msgid ""
 ":class:`Example` defines the following attributes.  They are initialized by "
 "the constructor, and should not be modified directly."
@@ -1882,7 +1875,7 @@ msgstr ""
 ":class:`Example` визначає такі атрибути. Вони ініціалізуються конструктором "
 "і не повинні змінюватися безпосередньо."
 
-#: ../../library/doctest.rst:1290
+#: ../../library/doctest.rst:1292
 msgid ""
 "A string containing the example's source code.  This source code consists of"
 " a single Python statement, and always ends with a newline; the constructor "
@@ -1892,7 +1885,7 @@ msgstr ""
 "одного оператора Python і завжди закінчується символом нового рядка; "
 "конструктор додає новий рядок, коли це необхідно."
 
-#: ../../library/doctest.rst:1297
+#: ../../library/doctest.rst:1299
 msgid ""
 "The expected output from running the example's source code (either from "
 "stdout, or a traceback in case of exception).  :attr:`want` ends with a "
@@ -1904,7 +1897,7 @@ msgstr ""
 "символом нового рядка, якщо тільки вихід не очікується, у такому випадку це "
 "порожній рядок. За потреби конструктор додає новий рядок."
 
-#: ../../library/doctest.rst:1305
+#: ../../library/doctest.rst:1307
 msgid ""
 "The exception message generated by the example, if the example is expected "
 "to generate an exception; or ``None`` if it is not expected to generate an "
@@ -1919,7 +1912,7 @@ msgstr ""
 "закінчується символом нового рядка, якщо він не ``None``. За потреби "
 "конструктор додає новий рядок."
 
-#: ../../library/doctest.rst:1314
+#: ../../library/doctest.rst:1316
 msgid ""
 "The line number within the string containing this example where the example "
 "begins.  This line number is zero-based with respect to the beginning of the"
@@ -1928,7 +1921,7 @@ msgstr ""
 "Номер рядка в рядку, що містить цей приклад, де починається приклад. Цей "
 "номер рядка відраховується від нуля відносно початку рядка, що містить."
 
-#: ../../library/doctest.rst:1321
+#: ../../library/doctest.rst:1323
 msgid ""
 "The example's indentation in the containing string, i.e., the number of "
 "space characters that precede the example's first prompt."
@@ -1936,7 +1929,7 @@ msgstr ""
 "Відступ прикладу в рядку, що містить, тобто кількість пробілів, які "
 "передують першому запиту прикладу."
 
-#: ../../library/doctest.rst:1327
+#: ../../library/doctest.rst:1329
 msgid ""
 "A dictionary mapping from option flags to ``True`` or ``False``, which is "
 "used to override default options for this example.  Any option flags not "
@@ -1945,11 +1938,11 @@ msgid ""
 "default, no options are set."
 msgstr ""
 
-#: ../../library/doctest.rst:1337
+#: ../../library/doctest.rst:1339
 msgid "DocTestFinder objects"
 msgstr "Об’єкти DocTestFinder"
 
-#: ../../library/doctest.rst:1342
+#: ../../library/doctest.rst:1344
 msgid ""
 "A processing class used to extract the :class:`DocTest`\\ s that are "
 "relevant to a given object, from its docstring and the docstrings of its "
@@ -1962,7 +1955,7 @@ msgstr ""
 "отримати з модулів, класів, функцій, методів, статичних методів, методів "
 "класів і властивостей."
 
-#: ../../library/doctest.rst:1347
+#: ../../library/doctest.rst:1349
 msgid ""
 "The optional argument *verbose* can be used to display the objects searched "
 "by the finder.  It defaults to ``False`` (no output)."
@@ -1970,7 +1963,7 @@ msgstr ""
 "Необов'язковий аргумент *verbose* можна використовувати для відображення "
 "об'єктів, які шукав шукач. За замовчуванням значення False (без виведення)."
 
-#: ../../library/doctest.rst:1350
+#: ../../library/doctest.rst:1352
 msgid ""
 "The optional argument *parser* specifies the :class:`DocTestParser` object "
 "(or a drop-in replacement) that is used to extract doctests from docstrings."
@@ -1979,7 +1972,7 @@ msgstr ""
 " замінник), який використовується для вилучення тестів документів із рядків "
 "документів."
 
-#: ../../library/doctest.rst:1353
+#: ../../library/doctest.rst:1355
 msgid ""
 "If the optional argument *recurse* is false, then :meth:`DocTestFinder.find`"
 " will only examine the given object, and not any contained objects."
@@ -1988,7 +1981,7 @@ msgstr ""
 ":meth:`DocTestFinder.find` перевірятиме лише даний об’єкт, а не будь-які "
 "об’єкти, що містяться."
 
-#: ../../library/doctest.rst:1356
+#: ../../library/doctest.rst:1358
 msgid ""
 "If the optional argument *exclude_empty* is false, then "
 ":meth:`DocTestFinder.find` will include tests for objects with empty "
@@ -1998,11 +1991,11 @@ msgstr ""
 ":meth:`DocTestFinder.find` включатиме тести для об’єктів із порожніми "
 "рядками документів."
 
-#: ../../library/doctest.rst:1360
+#: ../../library/doctest.rst:1362
 msgid ":class:`DocTestFinder` defines the following method:"
 msgstr ":class:`DocTestFinder` визначає такий метод:"
 
-#: ../../library/doctest.rst:1365
+#: ../../library/doctest.rst:1367
 msgid ""
 "Return a list of the :class:`DocTest`\\ s that are defined by *obj*'s "
 "docstring, or by any of its contained objects' docstrings."
@@ -2010,7 +2003,7 @@ msgstr ""
 "Повертає список :class:`DocTest`\\, які визначені рядком документації *obj* "
 "або будь-якими рядками документів, що містяться в ньому."
 
-#: ../../library/doctest.rst:1368
+#: ../../library/doctest.rst:1370
 msgid ""
 "The optional argument *name* specifies the object's name; this name will be "
 "used to construct names for the returned :class:`DocTest`\\ s.  If *name* is"
@@ -2020,7 +2013,7 @@ msgstr ""
 "використано для створення імен для повернутих :class:`DocTest`\\ s. Якщо "
 "*name* не вказано, тоді використовується ``obj.__name__``."
 
-#: ../../library/doctest.rst:1372
+#: ../../library/doctest.rst:1374
 msgid ""
 "The optional parameter *module* is the module that contains the given "
 "object. If the module is not specified or is ``None``, then the test finder "
@@ -2032,11 +2025,11 @@ msgstr ""
 "спробує автоматично визначити правильний модуль. Використовується модуль "
 "об'єкта:"
 
-#: ../../library/doctest.rst:1376
+#: ../../library/doctest.rst:1378
 msgid "As a default namespace, if *globs* is not specified."
 msgstr "Як простір імен за замовчуванням, якщо *globs* не вказано."
 
-#: ../../library/doctest.rst:1378
+#: ../../library/doctest.rst:1380
 msgid ""
 "To prevent the DocTestFinder from extracting DocTests from objects that are "
 "imported from other modules.  (Contained objects with modules other than "
@@ -2046,15 +2039,15 @@ msgstr ""
 "модулів. (Об’єкти, що містяться з модулями, відмінними від *module*, "
 "ігноруються.)"
 
-#: ../../library/doctest.rst:1382
+#: ../../library/doctest.rst:1384
 msgid "To find the name of the file containing the object."
 msgstr "Щоб знайти ім'я файлу, що містить об'єкт."
 
-#: ../../library/doctest.rst:1384
+#: ../../library/doctest.rst:1386
 msgid "To help find the line number of the object within its file."
 msgstr "Щоб допомогти знайти номер рядка об’єкта в його файлі."
 
-#: ../../library/doctest.rst:1386
+#: ../../library/doctest.rst:1388
 msgid ""
 "If *module* is ``False``, no attempt to find the module will be made.  This "
 "is obscure, of use mostly in testing doctest itself: if *module* is "
@@ -2069,7 +2062,7 @@ msgstr ""
 "(неіснуючого) модуль, тому всі об’єкти, що містяться, будуть (рекурсивно) "
 "шукатися для тестів документів."
 
-#: ../../library/doctest.rst:1392
+#: ../../library/doctest.rst:1394
 msgid ""
 "The globals for each :class:`DocTest` is formed by combining *globs* and "
 "*extraglobs* (bindings in *extraglobs* override bindings in *globs*).  A new"
@@ -2085,11 +2078,11 @@ msgstr ""
 "використовується *__dict__* модуля, якщо вказано, або ``{}`` інакше. Якщо "
 "*extraglobs* не вказано, то за замовчуванням буде ``{}``."
 
-#: ../../library/doctest.rst:1403
+#: ../../library/doctest.rst:1405
 msgid "DocTestParser objects"
 msgstr "Об’єкти DocTestParser"
 
-#: ../../library/doctest.rst:1408
+#: ../../library/doctest.rst:1410
 msgid ""
 "A processing class used to extract interactive examples from a string, and "
 "use them to create a :class:`DocTest` object."
@@ -2097,11 +2090,11 @@ msgstr ""
 "Клас обробки, який використовується для отримання інтерактивних прикладів із"
 " рядка та використання їх для створення об’єкта :class:`DocTest`."
 
-#: ../../library/doctest.rst:1412
+#: ../../library/doctest.rst:1414
 msgid ":class:`DocTestParser` defines the following methods:"
 msgstr ":class:`DocTestParser` визначає такі методи:"
 
-#: ../../library/doctest.rst:1417
+#: ../../library/doctest.rst:1419
 msgid ""
 "Extract all doctest examples from the given string, and collect them into a "
 ":class:`DocTest` object."
@@ -2109,7 +2102,7 @@ msgstr ""
 "Витягніть усі приклади doctest із заданого рядка та зберіть їх у об’єкт "
 ":class:`DocTest`."
 
-#: ../../library/doctest.rst:1420
+#: ../../library/doctest.rst:1422
 msgid ""
 "*globs*, *name*, *filename*, and *lineno* are attributes for the new "
 ":class:`DocTest` object.  See the documentation for :class:`DocTest` for "
@@ -2119,7 +2112,7 @@ msgstr ""
 ":class:`DocTest`. Перегляньте документацію для :class:`DocTest` для "
 "отримання додаткової інформації."
 
-#: ../../library/doctest.rst:1427
+#: ../../library/doctest.rst:1429
 msgid ""
 "Extract all doctest examples from the given string, and return them as a "
 "list of :class:`Example` objects.  Line numbers are 0-based.  The optional "
@@ -2131,7 +2124,7 @@ msgstr ""
 "аргумент *ім’я* – це ім’я, що ідентифікує цей рядок і використовується лише "
 "для повідомлень про помилки."
 
-#: ../../library/doctest.rst:1434
+#: ../../library/doctest.rst:1436
 msgid ""
 "Divide the given string into examples and intervening text, and return them "
 "as a list of alternating :class:`Example`\\ s and strings. Line numbers for "
@@ -2145,10 +2138,26 @@ msgstr ""
 "помилки."
 
 #: ../../library/doctest.rst:1443
+msgid "TestResults objects"
+msgstr ""
+
+#: ../../library/doctest.rst:1450
+msgid "Number of failed tests."
+msgstr ""
+
+#: ../../library/doctest.rst:1454
+msgid "Number of attempted tests."
+msgstr ""
+
+#: ../../library/doctest.rst:1458
+msgid "Number of skipped tests."
+msgstr ""
+
+#: ../../library/doctest.rst:1466
 msgid "DocTestRunner objects"
 msgstr "Об’єкти DocTestRunner"
 
-#: ../../library/doctest.rst:1448
+#: ../../library/doctest.rst:1471
 msgid ""
 "A processing class used to execute and verify the interactive examples in a "
 ":class:`DocTest`."
@@ -2156,7 +2165,7 @@ msgstr ""
 "Клас обробки, який використовується для виконання та перевірки інтерактивних"
 " прикладів у :class:`DocTest`."
 
-#: ../../library/doctest.rst:1451
+#: ../../library/doctest.rst:1474
 msgid ""
 "The comparison between expected outputs and actual outputs is done by an "
 ":class:`OutputChecker`.  This comparison may be customized with a number of "
@@ -2172,7 +2181,7 @@ msgstr ""
 "також можна налаштувати, передавши підклас :class:`OutputChecker` до "
 "конструктора."
 
-#: ../../library/doctest.rst:1457
+#: ../../library/doctest.rst:1480
 msgid ""
 "The test runner's display output can be controlled in two ways. First, an "
 "output function can be passed to :meth:`run`; this function will be called "
@@ -2183,7 +2192,7 @@ msgid ""
 ":meth:`report_unexpected_exception`, and :meth:`report_failure`."
 msgstr ""
 
-#: ../../library/doctest.rst:1465
+#: ../../library/doctest.rst:1488
 msgid ""
 "The optional keyword argument *checker* specifies the :class:`OutputChecker`"
 " object (or drop-in replacement) that should be used to compare the expected"
@@ -2194,7 +2203,7 @@ msgstr ""
 " порівняння очікуваних результатів із фактичними результатами прикладів "
 "doctest."
 
-#: ../../library/doctest.rst:1469
+#: ../../library/doctest.rst:1492
 msgid ""
 "The optional keyword argument *verbose* controls the "
 ":class:`DocTestRunner`'s verbosity.  If *verbose* is ``True``, then "
@@ -2210,7 +2219,7 @@ msgstr ""
 " вказано або ``None``, тоді використовується докладний вивід, якщо "
 "використовується параметр командного рядка ``-v``."
 
-#: ../../library/doctest.rst:1475
+#: ../../library/doctest.rst:1498
 msgid ""
 "The optional keyword argument *optionflags* can be used to control how the "
 "test runner compares expected output to actual output, and how it displays "
@@ -2221,11 +2230,19 @@ msgstr ""
 "результат із фактичним результатом і як він відображає помилки. Для "
 "отримання додаткової інформації див. розділ :ref:`doctest-options`."
 
-#: ../../library/doctest.rst:1480
+#: ../../library/doctest.rst:1502
+msgid ""
+"The test runner accumulates statistics. The aggregated number of attempted, "
+"failed and skipped examples is also available via the :attr:`tries`, "
+":attr:`failures` and :attr:`skips` attributes. The :meth:`run` and "
+":meth:`summarize` methods return a :class:`TestResults` instance."
+msgstr ""
+
+#: ../../library/doctest.rst:1507
 msgid ":class:`DocTestRunner` defines the following methods:"
 msgstr ""
 
-#: ../../library/doctest.rst:1485
+#: ../../library/doctest.rst:1512
 msgid ""
 "Report that the test runner is about to process the given example. This "
 "method is provided to allow subclasses of :class:`DocTestRunner` to "
@@ -2235,7 +2252,7 @@ msgstr ""
 "надається, щоб дозволити підкласам :class:`DocTestRunner` налаштовувати свій"
 " вихід; його не слід називати безпосередньо."
 
-#: ../../library/doctest.rst:1489
+#: ../../library/doctest.rst:1516
 msgid ""
 "*example* is the example about to be processed.  *test* is the test "
 "*containing example*.  *out* is the output function that was passed to "
@@ -2245,7 +2262,7 @@ msgstr ""
 " приклад*. *out* — це функція виводу, яка була передана в "
 ":meth:`DocTestRunner.run`."
 
-#: ../../library/doctest.rst:1496
+#: ../../library/doctest.rst:1523
 msgid ""
 "Report that the given example ran successfully.  This method is provided to "
 "allow subclasses of :class:`DocTestRunner` to customize their output; it "
@@ -2255,7 +2272,7 @@ msgstr ""
 "дозволити підкласам :class:`DocTestRunner` налаштовувати свій вихід; його не"
 " слід називати безпосередньо."
 
-#: ../../library/doctest.rst:1500 ../../library/doctest.rst:1511
+#: ../../library/doctest.rst:1527 ../../library/doctest.rst:1538
 msgid ""
 "*example* is the example about to be processed.  *got* is the actual output "
 "from the example.  *test* is the test containing *example*.  *out* is the "
@@ -2265,7 +2282,7 @@ msgstr ""
 "прикладу. *тест* — це тест, що містить *приклад*. *out* — це функція виводу,"
 " яка була передана в :meth:`DocTestRunner.run`."
 
-#: ../../library/doctest.rst:1507
+#: ../../library/doctest.rst:1534
 msgid ""
 "Report that the given example failed.  This method is provided to allow "
 "subclasses of :class:`DocTestRunner` to customize their output; it should "
@@ -2275,7 +2292,7 @@ msgstr ""
 "дозволити підкласам :class:`DocTestRunner` налаштовувати свій вихід; його не"
 " слід називати безпосередньо."
 
-#: ../../library/doctest.rst:1518
+#: ../../library/doctest.rst:1545
 msgid ""
 "Report that the given example raised an unexpected exception. This method is"
 " provided to allow subclasses of :class:`DocTestRunner` to customize their "
@@ -2285,7 +2302,7 @@ msgstr ""
 "надається, щоб дозволити підкласам :class:`DocTestRunner` налаштовувати свій"
 " вихід; його не слід називати безпосередньо."
 
-#: ../../library/doctest.rst:1522
+#: ../../library/doctest.rst:1549
 msgid ""
 "*example* is the example about to be processed. *exc_info* is a tuple "
 "containing information about the unexpected exception (as returned by "
@@ -2297,15 +2314,14 @@ msgstr ""
 ":func:`sys.exc_info`). *тест* — це тест, що містить *приклад*. *out* — це "
 "функція виводу, яка була передана в :meth:`DocTestRunner.run`."
 
-#: ../../library/doctest.rst:1530
+#: ../../library/doctest.rst:1557
 msgid ""
 "Run the examples in *test* (a :class:`DocTest` object), and display the "
-"results using the writer function *out*."
+"results using the writer function *out*. Return a :class:`TestResults` "
+"instance."
 msgstr ""
-"Запустіть приклади в *test* (об’єкт :class:`DocTest`) і відобразіть "
-"результати за допомогою функції запису *out*."
 
-#: ../../library/doctest.rst:1533
+#: ../../library/doctest.rst:1561
 msgid ""
 "The examples are run in the namespace ``test.globs``.  If *clear_globs* is "
 "true (the default), then this namespace will be cleared after the test runs,"
@@ -2318,7 +2334,7 @@ msgstr ""
 "перевірити простір імен після завершення тесту, використовуйте "
 "*clear_globs=False*."
 
-#: ../../library/doctest.rst:1538
+#: ../../library/doctest.rst:1566
 msgid ""
 "*compileflags* gives the set of flags that should be used by the Python "
 "compiler when running the examples.  If not specified, then it will default "
@@ -2329,23 +2345,20 @@ msgstr ""
 "використовуватиметься набір прапорів майбутнього імпорту, які застосовуються"
 " до *globs*."
 
-#: ../../library/doctest.rst:1542
+#: ../../library/doctest.rst:1570
 msgid ""
 "The output of each example is checked using the :class:`DocTestRunner`'s "
 "output checker, and the results are formatted by the "
 ":meth:`!DocTestRunner.report_\\*` methods."
 msgstr ""
 
-#: ../../library/doctest.rst:1549
+#: ../../library/doctest.rst:1577
 msgid ""
 "Print a summary of all the test cases that have been run by this "
-"DocTestRunner, and return a :term:`named tuple` ``TestResults(failed, "
-"attempted)``."
+"DocTestRunner, and return a :class:`TestResults` instance."
 msgstr ""
-"Надрукуйте підсумок усіх тестів, які були запущені цим DocTestRunner, і "
-"поверніть :term:`named tuple` ``TestResults(failed, attempted)``."
 
-#: ../../library/doctest.rst:1552
+#: ../../library/doctest.rst:1580
 msgid ""
 "The optional *verbose* argument controls how detailed the summary is.  If "
 "the verbosity is not specified, then the :class:`DocTestRunner`'s verbosity "
@@ -2355,11 +2368,27 @@ msgstr ""
 "Якщо детальність не вказана, тоді використовується детальність "
 ":class:`DocTestRunner`."
 
-#: ../../library/doctest.rst:1559
+#: ../../library/doctest.rst:1584
+msgid ":class:`DocTestParser` has the following attributes:"
+msgstr ""
+
+#: ../../library/doctest.rst:1588
+msgid "Number of attempted examples."
+msgstr ""
+
+#: ../../library/doctest.rst:1592
+msgid "Number of failed examples."
+msgstr ""
+
+#: ../../library/doctest.rst:1596
+msgid "Number of skipped examples."
+msgstr ""
+
+#: ../../library/doctest.rst:1604
 msgid "OutputChecker objects"
 msgstr "Об'єкти OutputChecker"
 
-#: ../../library/doctest.rst:1564
+#: ../../library/doctest.rst:1609
 msgid ""
 "A class used to check the whether the actual output from a doctest example "
 "matches the expected output.  :class:`OutputChecker` defines two methods: "
@@ -2373,11 +2402,11 @@ msgstr ""
 " і повертає ``True``, якщо вони збігаються; і :meth:`output_difference`, "
 "який повертає рядок, що описує різницю між двома результатами."
 
-#: ../../library/doctest.rst:1571
+#: ../../library/doctest.rst:1616
 msgid ":class:`OutputChecker` defines the following methods:"
 msgstr ":class:`OutputChecker` визначає такі методи:"
 
-#: ../../library/doctest.rst:1575
+#: ../../library/doctest.rst:1620
 msgid ""
 "Return ``True`` iff the actual output from an example (*got*) matches the "
 "expected output (*want*).  These strings are always considered to match if "
@@ -2392,7 +2421,7 @@ msgstr ""
 "типів неточної відповідності. Перегляньте розділ :ref:`doctest-options` для "
 "отримання додаткової інформації про прапорці параметрів."
 
-#: ../../library/doctest.rst:1584
+#: ../../library/doctest.rst:1629
 msgid ""
 "Return a string describing the differences between the expected output for a"
 " given example (*example*) and the actual output (*got*).  *optionflags* is "
@@ -2402,15 +2431,15 @@ msgstr ""
 "прикладу (*example*) і фактичним виходом (*got*). *optionflags* — це набір "
 "позначок параметрів, які використовуються для порівняння *want* і *got*."
 
-#: ../../library/doctest.rst:1592
+#: ../../library/doctest.rst:1637
 msgid "Debugging"
 msgstr "Налагодження"
 
-#: ../../library/doctest.rst:1594
+#: ../../library/doctest.rst:1639
 msgid "Doctest provides several mechanisms for debugging doctest examples:"
 msgstr "Doctest надає кілька механізмів для налагодження прикладів doctest:"
 
-#: ../../library/doctest.rst:1596
+#: ../../library/doctest.rst:1641
 msgid ""
 "Several functions convert doctests to executable Python programs, which can "
 "be run under the Python debugger, :mod:`pdb`."
@@ -2418,7 +2447,7 @@ msgstr ""
 "Декілька функцій перетворюють doctests на виконувані програми Python, які "
 "можна запускати в налагоджувачі Python, :mod:`pdb`."
 
-#: ../../library/doctest.rst:1599
+#: ../../library/doctest.rst:1644
 msgid ""
 "The :class:`DebugRunner` class is a subclass of :class:`DocTestRunner` that "
 "raises an exception for the first failing example, containing information "
@@ -2430,7 +2459,7 @@ msgstr ""
 "приклад. Ця інформація може бути використана для виконання посмертного "
 "налагодження на прикладі."
 
-#: ../../library/doctest.rst:1604
+#: ../../library/doctest.rst:1649
 msgid ""
 "The :mod:`unittest` cases generated by :func:`DocTestSuite` support the "
 ":meth:`debug` method defined by :class:`unittest.TestCase`."
@@ -2438,7 +2467,7 @@ msgstr ""
 "Випадки :mod:`unittest`, згенеровані :func:`DocTestSuite`, підтримують метод"
 " :meth:`debug`, визначений :class:`unittest.TestCase`."
 
-#: ../../library/doctest.rst:1607
+#: ../../library/doctest.rst:1652
 msgid ""
 "You can add a call to :func:`pdb.set_trace` in a doctest example, and you'll"
 " drop into the Python debugger when that line is executed.  Then you can "
@@ -2450,11 +2479,11 @@ msgstr ""
 "можете перевірити поточні значення змінних і так далі. Наприклад, "
 "припустимо, що :file:`a.py` містить лише цей модуль docstring::"
 
-#: ../../library/doctest.rst:1622
+#: ../../library/doctest.rst:1667
 msgid "Then an interactive Python session may look like this::"
 msgstr "Тоді інтерактивний сеанс Python може виглядати так:"
 
-#: ../../library/doctest.rst:1655
+#: ../../library/doctest.rst:1700
 msgid ""
 "Functions that convert doctests to Python code, and possibly run the "
 "synthesized code under the debugger:"
@@ -2462,11 +2491,11 @@ msgstr ""
 "Функції, які перетворюють doctests на код Python і, можливо, запускають "
 "синтезований код під налагоджувачем:"
 
-#: ../../library/doctest.rst:1661
+#: ../../library/doctest.rst:1706
 msgid "Convert text with examples to a script."
 msgstr "Перетворення тексту з прикладами на сценарій."
 
-#: ../../library/doctest.rst:1663
+#: ../../library/doctest.rst:1708
 msgid ""
 "Argument *s* is a string containing doctest examples.  The string is "
 "converted to a Python script, where doctest examples in *s* are converted to"
@@ -2478,11 +2507,11 @@ msgstr ""
 "код, а все інше перетворюється на коментарі Python. Згенерований сценарій "
 "повертається як рядок. Наприклад, ::"
 
-#: ../../library/doctest.rst:1678
+#: ../../library/doctest.rst:1723
 msgid "displays::"
 msgstr "дисплеї::"
 
-#: ../../library/doctest.rst:1688
+#: ../../library/doctest.rst:1733
 msgid ""
 "This function is used internally by other functions (see below), but can "
 "also be useful when you want to transform an interactive Python session into"
@@ -2492,11 +2521,11 @@ msgstr ""
 "також може бути корисною, коли ви хочете перетворити інтерактивний сеанс "
 "Python на сценарій Python."
 
-#: ../../library/doctest.rst:1695
+#: ../../library/doctest.rst:1740
 msgid "Convert the doctest for an object to a script."
 msgstr "Перетворення doctest для об’єкта на сценарій."
 
-#: ../../library/doctest.rst:1697
+#: ../../library/doctest.rst:1742
 msgid ""
 "Argument *module* is a module object, or dotted name of a module, containing"
 " the object whose doctests are of interest.  Argument *name* is the name "
@@ -2506,17 +2535,17 @@ msgid ""
 "if module :file:`a.py` contains a top-level function :func:`!f`, then ::"
 msgstr ""
 
-#: ../../library/doctest.rst:1707
+#: ../../library/doctest.rst:1752
 msgid ""
 "prints a script version of function :func:`!f`'s docstring, with doctests "
 "converted to code, and the rest placed in comments."
 msgstr ""
 
-#: ../../library/doctest.rst:1713
+#: ../../library/doctest.rst:1758
 msgid "Debug the doctests for an object."
 msgstr "Налагодження документів для об’єкта."
 
-#: ../../library/doctest.rst:1715
+#: ../../library/doctest.rst:1760
 msgid ""
 "The *module* and *name* arguments are the same as for function "
 ":func:`testsource` above.  The synthesized Python script for the named "
@@ -2528,7 +2557,7 @@ msgstr ""
 "записується у тимчасовий файл, а потім цей файл запускається під керуванням "
 "налагоджувача Python, :mod:`pdb`."
 
-#: ../../library/doctest.rst:1720
+#: ../../library/doctest.rst:1765
 msgid ""
 "A shallow copy of ``module.__dict__`` is used for both local and global "
 "execution context."
@@ -2536,7 +2565,7 @@ msgstr ""
 "Поверхнева копія ``module.__dict__`` використовується як для локального, так"
 " і для глобального контексту виконання."
 
-#: ../../library/doctest.rst:1723
+#: ../../library/doctest.rst:1768
 msgid ""
 "Optional argument *pm* controls whether post-mortem debugging is used.  If "
 "*pm* has a true value, the script file is run directly, and the debugger "
@@ -2556,11 +2585,11 @@ msgstr ""
 "значення false, сценарій запускається під налагоджувачем із самого початку, "
 "шляхом передачі відповідного виклику :func:`exec` до :func:`pdb.run`."
 
-#: ../../library/doctest.rst:1734
+#: ../../library/doctest.rst:1779
 msgid "Debug the doctests in a string."
 msgstr "Налагодити doctests у рядку."
 
-#: ../../library/doctest.rst:1736
+#: ../../library/doctest.rst:1781
 msgid ""
 "This is like function :func:`debug` above, except that a string containing "
 "doctest examples is specified directly, via the *src* argument."
@@ -2568,7 +2597,7 @@ msgstr ""
 "Це схоже на функцію :func:`debug` вище, за винятком того, що рядок, що "
 "містить приклади doctest, вказується безпосередньо через аргумент *src*."
 
-#: ../../library/doctest.rst:1739
+#: ../../library/doctest.rst:1784
 msgid ""
 "Optional argument *pm* has the same meaning as in function :func:`debug` "
 "above."
@@ -2576,7 +2605,7 @@ msgstr ""
 "Необов’язковий аргумент *pm* має те саме значення, що й у функції "
 ":func:`debug` вище."
 
-#: ../../library/doctest.rst:1741
+#: ../../library/doctest.rst:1786
 msgid ""
 "Optional argument *globs* gives a dictionary to use as both local and global"
 " execution context.  If not specified, or ``None``, an empty dictionary is "
@@ -2587,7 +2616,7 @@ msgstr ""
 "``None``, використовується порожній словник. Якщо вказано, використовується "
 "неглибока копія словника."
 
-#: ../../library/doctest.rst:1746
+#: ../../library/doctest.rst:1791
 msgid ""
 "The :class:`DebugRunner` class, and the special exceptions it may raise, are"
 " of most interest to testing framework authors, and will only be sketched "
@@ -2600,7 +2629,7 @@ msgstr ""
 "документації :class:`DebugRunner` (який є тестом документів!) для отримання "
 "додаткової інформації:"
 
-#: ../../library/doctest.rst:1754
+#: ../../library/doctest.rst:1799
 msgid ""
 "A subclass of :class:`DocTestRunner` that raises an exception as soon as a "
 "failure is encountered.  If an unexpected exception occurs, an "
@@ -2615,7 +2644,7 @@ msgstr ""
 "виняток. Якщо вихідні дані не збігаються, то виникає виняток "
 ":exc:`DocTestFailure`, який містить тест, приклад і фактичний результат."
 
-#: ../../library/doctest.rst:1761
+#: ../../library/doctest.rst:1806
 msgid ""
 "For information about the constructor parameters and methods, see the "
 "documentation for :class:`DocTestRunner` in section :ref:`doctest-advanced-"
@@ -2625,14 +2654,14 @@ msgstr ""
 "документацію для :class:`DocTestRunner` у розділі :ref:`doctest-advanced-"
 "api`."
 
-#: ../../library/doctest.rst:1764
+#: ../../library/doctest.rst:1809
 msgid ""
 "There are two exceptions that may be raised by :class:`DebugRunner` "
 "instances:"
 msgstr ""
 "Є два винятки, які можуть бути викликані екземплярами :class:`DebugRunner`:"
 
-#: ../../library/doctest.rst:1769
+#: ../../library/doctest.rst:1814
 msgid ""
 "An exception raised by :class:`DocTestRunner` to signal that a doctest "
 "example's actual output did not match its expected output. The constructor "
@@ -2643,24 +2672,24 @@ msgstr ""
 "Аргументи конструктора використовуються для ініціалізації однойменних "
 "атрибутів."
 
-#: ../../library/doctest.rst:1773
+#: ../../library/doctest.rst:1818
 msgid ":exc:`DocTestFailure` defines the following attributes:"
 msgstr ":exc:`DocTestFailure` визначає такі атрибути:"
 
-#: ../../library/doctest.rst:1778 ../../library/doctest.rst:1802
+#: ../../library/doctest.rst:1823 ../../library/doctest.rst:1847
 msgid ""
 "The :class:`DocTest` object that was being run when the example failed."
 msgstr "Об’єкт :class:`DocTest`, який запускався під час помилки прикладу."
 
-#: ../../library/doctest.rst:1783 ../../library/doctest.rst:1807
+#: ../../library/doctest.rst:1828 ../../library/doctest.rst:1852
 msgid "The :class:`Example` that failed."
 msgstr "Невдалий :class:`Example`."
 
-#: ../../library/doctest.rst:1788
+#: ../../library/doctest.rst:1833
 msgid "The example's actual output."
 msgstr "Фактичний результат прикладу."
 
-#: ../../library/doctest.rst:1793
+#: ../../library/doctest.rst:1838
 msgid ""
 "An exception raised by :class:`DocTestRunner` to signal that a doctest "
 "example raised an unexpected exception.  The constructor arguments are used "
@@ -2670,11 +2699,11 @@ msgstr ""
 "приклад doctest викликав неочікуваний виняток. Аргументи конструктора "
 "використовуються для ініціалізації однойменних атрибутів."
 
-#: ../../library/doctest.rst:1797
+#: ../../library/doctest.rst:1842
 msgid ":exc:`UnexpectedException` defines the following attributes:"
 msgstr ":exc:`UnexpectedException` визначає такі атрибути:"
 
-#: ../../library/doctest.rst:1812
+#: ../../library/doctest.rst:1857
 msgid ""
 "A tuple containing information about the unexpected exception, as returned "
 "by :func:`sys.exc_info`."
@@ -2682,30 +2711,30 @@ msgstr ""
 "Кортеж, що містить інформацію про неочікуваний виняток, яку повертає "
 ":func:`sys.exc_info`."
 
-#: ../../library/doctest.rst:1819
+#: ../../library/doctest.rst:1864
 msgid "Soapbox"
 msgstr "Мильниця"
 
-#: ../../library/doctest.rst:1821
+#: ../../library/doctest.rst:1866
 msgid ""
 "As mentioned in the introduction, :mod:`doctest` has grown to have three "
 "primary uses:"
 msgstr ""
 "Як згадувалося у вступі, :mod:`doctest` зріс до трьох основних застосувань:"
 
-#: ../../library/doctest.rst:1824
+#: ../../library/doctest.rst:1869
 msgid "Checking examples in docstrings."
 msgstr "Перевірка прикладів у рядках документів."
 
-#: ../../library/doctest.rst:1826
+#: ../../library/doctest.rst:1871
 msgid "Regression testing."
 msgstr "Регресійне тестування."
 
-#: ../../library/doctest.rst:1828
+#: ../../library/doctest.rst:1873
 msgid "Executable documentation / literate testing."
 msgstr "Виконувана документація / грамотне тестування."
 
-#: ../../library/doctest.rst:1830
+#: ../../library/doctest.rst:1875
 msgid ""
 "These uses have different requirements, and it is important to distinguish "
 "them. In particular, filling your docstrings with obscure test cases makes "
@@ -2715,7 +2744,7 @@ msgstr ""
 "заповнення ваших рядків документації незрозумілими тестовими прикладами "
 "створює погану документацію."
 
-#: ../../library/doctest.rst:1834
+#: ../../library/doctest.rst:1879
 msgid ""
 "When writing a docstring, choose docstring examples with care. There's an "
 "art to this that needs to be learned---it may not be natural at first.  "
@@ -2735,7 +2764,7 @@ msgstr ""
 "все змінюється. Мене все ще дивує, як часто один із моїх прикладів "
 ":mod:`doctest` перестає працювати після \"нешкідливої\" зміни."
 
-#: ../../library/doctest.rst:1842
+#: ../../library/doctest.rst:1887
 msgid ""
 "Doctest also makes an excellent tool for regression testing, especially if "
 "you don't skimp on explanatory text.  By interleaving prose and examples, it"
@@ -2774,7 +2803,7 @@ msgstr ""
 "функціональності, здавалося б, випадковим чином. Це інше ставлення, яке дає "
 "інші результати, стираючи різницю між тестуванням і поясненням."
 
-#: ../../library/doctest.rst:1860
+#: ../../library/doctest.rst:1905
 msgid ""
 "Regression testing is best confined to dedicated objects or files.  There "
 "are several options for organizing tests:"
@@ -2782,7 +2811,7 @@ msgstr ""
 "Регресійне тестування найкраще обмежити виділеними об’єктами або файлами. Є "
 "кілька варіантів організації тестів:"
 
-#: ../../library/doctest.rst:1863
+#: ../../library/doctest.rst:1908
 msgid ""
 "Write text files containing test cases as interactive examples, and test the"
 " files using :func:`testfile` or :func:`DocFileSuite`.  This is recommended,"
@@ -2794,7 +2823,7 @@ msgstr ""
 ":func:`DocFileSuite`. Це рекомендовано, хоча це найлегше зробити для нових "
 "проектів, розроблених із самого початку для використання doctest."
 
-#: ../../library/doctest.rst:1868
+#: ../../library/doctest.rst:1913
 msgid ""
 "Define functions named ``_regrtest_topic`` that consist of single "
 "docstrings, containing test cases for the named topics.  These functions can"
@@ -2806,7 +2835,7 @@ msgstr ""
 "можна включити в той самий файл, що й модуль, або відокремити в окремий "
 "тестовий файл."
 
-#: ../../library/doctest.rst:1872
+#: ../../library/doctest.rst:1917
 msgid ""
 "Define a ``__test__`` dictionary mapping from regression test topics to "
 "docstrings containing test cases."
@@ -2814,7 +2843,7 @@ msgstr ""
 "Визначте зіставлення словника ``__test__`` із тем регресійних тестів на "
 "рядки документів, що містять тестові приклади."
 
-#: ../../library/doctest.rst:1875
+#: ../../library/doctest.rst:1920
 msgid ""
 "When you have placed your tests in a module, the module can itself be the "
 "test runner.  When a test fails, you can arrange for your test runner to re-"
@@ -2826,11 +2855,11 @@ msgstr ""
 " лише невдалого документу, поки ви вирішуєте проблему. Ось мінімальний "
 "приклад такого тесту:"
 
-#: ../../library/doctest.rst:1897
+#: ../../library/doctest.rst:1942
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/doctest.rst:1898
+#: ../../library/doctest.rst:1943
 msgid ""
 "Examples containing both expected output and an exception are not supported."
 " Trying to guess where one ends and the other begins is too error-prone, and"

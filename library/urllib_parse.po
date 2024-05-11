@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.12\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-10 14:14+0000\n"
 "PO-Revision-Date: 2021-06-28 01:17+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/urllib.parse.rst:2
-msgid ":mod:`urllib.parse` --- Parse URLs into components"
-msgstr ":mod:`urllib.parse` --- Розберіть URL-адреси на компоненти"
+msgid ":mod:`!urllib.parse` --- Parse URLs into components"
+msgstr ""
 
 #: ../../library/urllib.parse.rst:7
 msgid "**Source code:** :source:`Lib/urllib/parse.py`"
@@ -62,11 +62,19 @@ msgstr ""
 "категорії: аналіз URL-адреси та цитування URL-адреси. Вони детально описані "
 "в наступних розділах."
 
-#: ../../library/urllib.parse.rst:35
+#: ../../library/urllib.parse.rst:34
+msgid ""
+"This module's functions use the deprecated term ``netloc`` (or ``net_loc``),"
+" which was introduced in :rfc:`1808`. However, this term has been obsoleted "
+"by :rfc:`3986`, which introduced the term ``authority`` as its replacement. "
+"The use of ``netloc`` is continued for backward compatibility."
+msgstr ""
+
+#: ../../library/urllib.parse.rst:40
 msgid "URL Parsing"
 msgstr "Розбір URL-адрес"
 
-#: ../../library/urllib.parse.rst:37
+#: ../../library/urllib.parse.rst:42
 msgid ""
 "The URL parsing functions focus on splitting a URL string into its "
 "components, or on combining URL components into a URL string."
@@ -74,7 +82,7 @@ msgstr ""
 "Функції аналізу URL-адреси зосереджені на розділенні рядка URL-адреси на "
 "його компоненти або на об’єднанні компонентів URL-адреси в рядок URL-адреси."
 
-#: ../../library/urllib.parse.rst:42
+#: ../../library/urllib.parse.rst:47
 msgid ""
 "Parse a URL into six components, returning a 6-item :term:`named tuple`.  "
 "This corresponds to the general structure of a URL: "
@@ -94,7 +102,7 @@ msgstr ""
 "винятком початкової скісної риски в компоненті *path*, яка зберігається, "
 "якщо є. Наприклад:"
 
-#: ../../library/urllib.parse.rst:75
+#: ../../library/urllib.parse.rst:80
 msgid ""
 "Following the syntax specifications in :rfc:`1808`, urlparse recognizes a "
 "netloc only if it is properly introduced by '//'.  Otherwise the input is "
@@ -104,7 +112,7 @@ msgstr ""
 "netloc, лише якщо його правильно введено '//'. Інакше введення вважається "
 "відносною URL-адресою і, таким чином, починається з компонента шляху."
 
-#: ../../library/urllib.parse.rst:94
+#: ../../library/urllib.parse.rst:99
 msgid ""
 "The *scheme* argument gives the default addressing scheme, to be used only "
 "if the URL does not specify one.  It should be the same type (text or bytes)"
@@ -117,7 +125,7 @@ msgstr ""
 " ``''`` завжди допускається та автоматично перетворюється на ``b''``, якщо "
 "це необхідно."
 
-#: ../../library/urllib.parse.rst:99
+#: ../../library/urllib.parse.rst:104
 msgid ""
 "If the *allow_fragments* argument is false, fragment identifiers are not "
 "recognized.  Instead, they are parsed as part of the path, parameters or "
@@ -129,7 +137,7 @@ msgstr ""
 "параметрів або компонента запиту, а :attr:`fragment` встановлюється як "
 "порожній рядок у поверненому значенні."
 
-#: ../../library/urllib.parse.rst:104
+#: ../../library/urllib.parse.rst:109
 msgid ""
 "The return value is a :term:`named tuple`, which means that its items can be"
 " accessed by index or as named attributes, which are:"
@@ -137,155 +145,155 @@ msgstr ""
 "Поверненим значенням є :term:`named tuple`, що означає, що до його елементів"
 " можна отримати доступ за індексом або як іменовані атрибути, які:"
 
-#: ../../library/urllib.parse.rst:108 ../../library/urllib.parse.rst:297
-#: ../../library/urllib.parse.rst:410
+#: ../../library/urllib.parse.rst:113 ../../library/urllib.parse.rst:302
+#: ../../library/urllib.parse.rst:415
 msgid "Attribute"
 msgstr "Атрибут"
 
-#: ../../library/urllib.parse.rst:108 ../../library/urllib.parse.rst:297
-#: ../../library/urllib.parse.rst:410
+#: ../../library/urllib.parse.rst:113 ../../library/urllib.parse.rst:302
+#: ../../library/urllib.parse.rst:415
 msgid "Index"
 msgstr "Індекс"
 
-#: ../../library/urllib.parse.rst:108 ../../library/urllib.parse.rst:297
-#: ../../library/urllib.parse.rst:410
+#: ../../library/urllib.parse.rst:113 ../../library/urllib.parse.rst:302
+#: ../../library/urllib.parse.rst:415
 msgid "Value"
 msgstr "Значення"
 
-#: ../../library/urllib.parse.rst:108 ../../library/urllib.parse.rst:297
-#: ../../library/urllib.parse.rst:410
+#: ../../library/urllib.parse.rst:113 ../../library/urllib.parse.rst:302
+#: ../../library/urllib.parse.rst:415
 msgid "Value if not present"
 msgstr "Значення, якщо його немає"
 
-#: ../../library/urllib.parse.rst:110 ../../library/urllib.parse.rst:299
+#: ../../library/urllib.parse.rst:115 ../../library/urllib.parse.rst:304
 msgid ":attr:`scheme`"
 msgstr ":attr:`scheme`"
 
-#: ../../library/urllib.parse.rst:110 ../../library/urllib.parse.rst:299
-#: ../../library/urllib.parse.rst:412
+#: ../../library/urllib.parse.rst:115 ../../library/urllib.parse.rst:304
+#: ../../library/urllib.parse.rst:417
 msgid "0"
 msgstr "0"
 
-#: ../../library/urllib.parse.rst:110 ../../library/urllib.parse.rst:299
+#: ../../library/urllib.parse.rst:115 ../../library/urllib.parse.rst:304
 msgid "URL scheme specifier"
 msgstr "Специфікатор схеми URL"
 
-#: ../../library/urllib.parse.rst:110 ../../library/urllib.parse.rst:299
+#: ../../library/urllib.parse.rst:115 ../../library/urllib.parse.rst:304
 msgid "*scheme* parameter"
 msgstr "Параметр *схема*"
 
-#: ../../library/urllib.parse.rst:112 ../../library/urllib.parse.rst:301
+#: ../../library/urllib.parse.rst:117 ../../library/urllib.parse.rst:306
 msgid ":attr:`netloc`"
 msgstr ":attr:`netloc`"
 
-#: ../../library/urllib.parse.rst:112 ../../library/urllib.parse.rst:301
-#: ../../library/urllib.parse.rst:414
+#: ../../library/urllib.parse.rst:117 ../../library/urllib.parse.rst:306
+#: ../../library/urllib.parse.rst:419
 msgid "1"
 msgstr "1"
 
-#: ../../library/urllib.parse.rst:112 ../../library/urllib.parse.rst:301
+#: ../../library/urllib.parse.rst:117 ../../library/urllib.parse.rst:306
 msgid "Network location part"
 msgstr "Розташування мережі"
 
-#: ../../library/urllib.parse.rst:112 ../../library/urllib.parse.rst:114
-#: ../../library/urllib.parse.rst:116 ../../library/urllib.parse.rst:119
-#: ../../library/urllib.parse.rst:121 ../../library/urllib.parse.rst:301
-#: ../../library/urllib.parse.rst:303 ../../library/urllib.parse.rst:305
-#: ../../library/urllib.parse.rst:307 ../../library/urllib.parse.rst:412
-#: ../../library/urllib.parse.rst:414
+#: ../../library/urllib.parse.rst:117 ../../library/urllib.parse.rst:119
+#: ../../library/urllib.parse.rst:121 ../../library/urllib.parse.rst:124
+#: ../../library/urllib.parse.rst:126 ../../library/urllib.parse.rst:306
+#: ../../library/urllib.parse.rst:308 ../../library/urllib.parse.rst:310
+#: ../../library/urllib.parse.rst:312 ../../library/urllib.parse.rst:417
+#: ../../library/urllib.parse.rst:419
 msgid "empty string"
 msgstr "порожній рядок"
 
-#: ../../library/urllib.parse.rst:114 ../../library/urllib.parse.rst:303
+#: ../../library/urllib.parse.rst:119 ../../library/urllib.parse.rst:308
 msgid ":attr:`path`"
 msgstr ":attr:`path`"
 
-#: ../../library/urllib.parse.rst:114 ../../library/urllib.parse.rst:303
+#: ../../library/urllib.parse.rst:119 ../../library/urllib.parse.rst:308
 msgid "2"
 msgstr "2"
 
-#: ../../library/urllib.parse.rst:114 ../../library/urllib.parse.rst:303
+#: ../../library/urllib.parse.rst:119 ../../library/urllib.parse.rst:308
 msgid "Hierarchical path"
 msgstr "Ієрархічний шлях"
 
-#: ../../library/urllib.parse.rst:116
+#: ../../library/urllib.parse.rst:121
 msgid ":attr:`params`"
 msgstr ":attr:`params`"
 
-#: ../../library/urllib.parse.rst:116 ../../library/urllib.parse.rst:305
+#: ../../library/urllib.parse.rst:121 ../../library/urllib.parse.rst:310
 msgid "3"
 msgstr "3"
 
-#: ../../library/urllib.parse.rst:116
+#: ../../library/urllib.parse.rst:121
 msgid "Parameters for last path element"
 msgstr ""
 
-#: ../../library/urllib.parse.rst:119 ../../library/urllib.parse.rst:305
+#: ../../library/urllib.parse.rst:124 ../../library/urllib.parse.rst:310
 msgid ":attr:`query`"
 msgstr ":attr:`query`"
 
-#: ../../library/urllib.parse.rst:119 ../../library/urllib.parse.rst:307
+#: ../../library/urllib.parse.rst:124 ../../library/urllib.parse.rst:312
 msgid "4"
 msgstr "4"
 
-#: ../../library/urllib.parse.rst:119 ../../library/urllib.parse.rst:305
+#: ../../library/urllib.parse.rst:124 ../../library/urllib.parse.rst:310
 msgid "Query component"
 msgstr "Компонент запиту"
 
-#: ../../library/urllib.parse.rst:121 ../../library/urllib.parse.rst:307
-#: ../../library/urllib.parse.rst:414
+#: ../../library/urllib.parse.rst:126 ../../library/urllib.parse.rst:312
+#: ../../library/urllib.parse.rst:419
 msgid ":attr:`fragment`"
 msgstr ":attr:`fragment`"
 
-#: ../../library/urllib.parse.rst:121
+#: ../../library/urllib.parse.rst:126
 msgid "5"
 msgstr "5"
 
-#: ../../library/urllib.parse.rst:121 ../../library/urllib.parse.rst:307
-#: ../../library/urllib.parse.rst:414
+#: ../../library/urllib.parse.rst:126 ../../library/urllib.parse.rst:312
+#: ../../library/urllib.parse.rst:419
 msgid "Fragment identifier"
 msgstr "Ідентифікатор фрагмента"
 
-#: ../../library/urllib.parse.rst:123 ../../library/urllib.parse.rst:309
+#: ../../library/urllib.parse.rst:128 ../../library/urllib.parse.rst:314
 msgid ":attr:`username`"
 msgstr ":attr:`ім’я користувача`"
 
-#: ../../library/urllib.parse.rst:123 ../../library/urllib.parse.rst:309
+#: ../../library/urllib.parse.rst:128 ../../library/urllib.parse.rst:314
 msgid "User name"
 msgstr "Ім'я користувача"
 
-#: ../../library/urllib.parse.rst:123 ../../library/urllib.parse.rst:125
-#: ../../library/urllib.parse.rst:127 ../../library/urllib.parse.rst:129
-#: ../../library/urllib.parse.rst:309 ../../library/urllib.parse.rst:311
-#: ../../library/urllib.parse.rst:313 ../../library/urllib.parse.rst:315
+#: ../../library/urllib.parse.rst:128 ../../library/urllib.parse.rst:130
+#: ../../library/urllib.parse.rst:132 ../../library/urllib.parse.rst:134
+#: ../../library/urllib.parse.rst:314 ../../library/urllib.parse.rst:316
+#: ../../library/urllib.parse.rst:318 ../../library/urllib.parse.rst:320
 msgid ":const:`None`"
 msgstr ":const:`None`"
 
-#: ../../library/urllib.parse.rst:125 ../../library/urllib.parse.rst:311
+#: ../../library/urllib.parse.rst:130 ../../library/urllib.parse.rst:316
 msgid ":attr:`password`"
 msgstr ":attr:`password`"
 
-#: ../../library/urllib.parse.rst:125 ../../library/urllib.parse.rst:311
+#: ../../library/urllib.parse.rst:130 ../../library/urllib.parse.rst:316
 msgid "Password"
 msgstr "Пароль"
 
-#: ../../library/urllib.parse.rst:127 ../../library/urllib.parse.rst:313
+#: ../../library/urllib.parse.rst:132 ../../library/urllib.parse.rst:318
 msgid ":attr:`hostname`"
 msgstr ":attr:`ім'я хоста`"
 
-#: ../../library/urllib.parse.rst:127 ../../library/urllib.parse.rst:313
+#: ../../library/urllib.parse.rst:132 ../../library/urllib.parse.rst:318
 msgid "Host name (lower case)"
 msgstr "Ім'я хоста (нижній регістр)"
 
-#: ../../library/urllib.parse.rst:129 ../../library/urllib.parse.rst:315
+#: ../../library/urllib.parse.rst:134 ../../library/urllib.parse.rst:320
 msgid ":attr:`port`"
 msgstr ":attr:`port`"
 
-#: ../../library/urllib.parse.rst:129 ../../library/urllib.parse.rst:315
+#: ../../library/urllib.parse.rst:134 ../../library/urllib.parse.rst:320
 msgid "Port number as integer, if present"
 msgstr "Номер порту як ціле число, якщо є"
 
-#: ../../library/urllib.parse.rst:133 ../../library/urllib.parse.rst:319
+#: ../../library/urllib.parse.rst:138 ../../library/urllib.parse.rst:324
 msgid ""
 "Reading the :attr:`port` attribute will raise a :exc:`ValueError` if an "
 "invalid port is specified in the URL.  See section :ref:`urlparse-result-"
@@ -295,7 +303,7 @@ msgstr ""
 "вказано недійсний порт. Перегляньте розділ :ref:`urlparse-result-object` для"
 " отримання додаткової інформації про об’єкт результату."
 
-#: ../../library/urllib.parse.rst:137 ../../library/urllib.parse.rst:323
+#: ../../library/urllib.parse.rst:142 ../../library/urllib.parse.rst:328
 msgid ""
 "Unmatched square brackets in the :attr:`netloc` attribute will raise a "
 ":exc:`ValueError`."
@@ -303,7 +311,7 @@ msgstr ""
 "Невідповідні квадратні дужки в атрибуті :attr:`netloc` викличуть "
 ":exc:`ValueError`."
 
-#: ../../library/urllib.parse.rst:140 ../../library/urllib.parse.rst:326
+#: ../../library/urllib.parse.rst:145 ../../library/urllib.parse.rst:331
 msgid ""
 "Characters in the :attr:`netloc` attribute that decompose under NFKC "
 "normalization (as used by the IDNA encoding) into any of ``/``, ``?``, "
@@ -315,7 +323,7 @@ msgstr ""
 "``@``, або ``:`` викличе :exc:`ValueError`. Якщо перед синтаксичним аналізом"
 " URL-адресу розкладають, помилка не виникне."
 
-#: ../../library/urllib.parse.rst:145
+#: ../../library/urllib.parse.rst:150
 msgid ""
 "As is the case with all named tuples, the subclass has a few additional "
 "methods and attributes that are particularly useful. One such method is "
@@ -327,17 +335,17 @@ msgstr ""
 ":meth:`_replace`. Метод :meth:`_replace` поверне новий об’єкт ParseResult, "
 "замінюючи вказані поля новими значеннями."
 
-#: ../../library/urllib.parse.rst:164
+#: ../../library/urllib.parse.rst:169
 msgid ""
 ":func:`urlparse` does not perform validation.  See :ref:`URL parsing "
 "security <url-parsing-security>` for details."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:167
+#: ../../library/urllib.parse.rst:172
 msgid "Added IPv6 URL parsing capabilities."
 msgstr "Додано можливості розбору URL-адрес IPv6."
 
-#: ../../library/urllib.parse.rst:170
+#: ../../library/urllib.parse.rst:175
 msgid ""
 "The fragment is now parsed for all URL schemes (unless *allow_fragment* is "
 "false), in accordance with :rfc:`3986`.  Previously, an allowlist of schemes"
@@ -347,7 +355,7 @@ msgstr ""
 "не має значення false), відповідно до :rfc:`3986`. Раніше існував дозволений"
 " список схем, які підтримують фрагменти."
 
-#: ../../library/urllib.parse.rst:175 ../../library/urllib.parse.rst:340
+#: ../../library/urllib.parse.rst:180 ../../library/urllib.parse.rst:345
 msgid ""
 "Out-of-range port numbers now raise :exc:`ValueError`, instead of returning "
 ":const:`None`."
@@ -355,7 +363,7 @@ msgstr ""
 "Номери портів поза діапазоном тепер викликають :exc:`ValueError` замість "
 "повернення :const:`None`."
 
-#: ../../library/urllib.parse.rst:179 ../../library/urllib.parse.rst:344
+#: ../../library/urllib.parse.rst:184 ../../library/urllib.parse.rst:349
 msgid ""
 "Characters that affect netloc parsing under NFKC normalization will now "
 "raise :exc:`ValueError`."
@@ -363,7 +371,7 @@ msgstr ""
 "Символи, які впливають на аналіз netloc під час нормалізації NFKC, тепер "
 "викликатимуть :exc:`ValueError`."
 
-#: ../../library/urllib.parse.rst:186
+#: ../../library/urllib.parse.rst:191
 msgid ""
 "Parse a query string given as a string argument (data of type "
 ":mimetype:`application/x-www-form-urlencoded`).  Data are returned as a "
@@ -375,7 +383,7 @@ msgstr ""
 "словник. Ключі словника — це унікальні імена змінних запиту, а значення — це"
 " списки значень для кожного імені."
 
-#: ../../library/urllib.parse.rst:191 ../../library/urllib.parse.rst:236
+#: ../../library/urllib.parse.rst:196 ../../library/urllib.parse.rst:241
 msgid ""
 "The optional argument *keep_blank_values* is a flag indicating whether blank"
 " values in percent-encoded queries should be treated as blank strings. A "
@@ -389,7 +397,7 @@ msgstr ""
 "порожні рядки. Значення false за замовчуванням вказує на те, що порожні "
 "значення слід ігнорувати та розглядати їх так, ніби їх не було включено."
 
-#: ../../library/urllib.parse.rst:197 ../../library/urllib.parse.rst:242
+#: ../../library/urllib.parse.rst:202 ../../library/urllib.parse.rst:247
 msgid ""
 "The optional argument *strict_parsing* is a flag indicating what to do with "
 "parsing errors.  If false (the default), errors are silently ignored.  If "
@@ -399,7 +407,7 @@ msgstr ""
 "робити з помилками аналізу. Якщо false (за замовчуванням), помилки мовчки "
 "ігноруються. Якщо true, помилки викликають виняток :exc:`ValueError`."
 
-#: ../../library/urllib.parse.rst:201 ../../library/urllib.parse.rst:246
+#: ../../library/urllib.parse.rst:206 ../../library/urllib.parse.rst:251
 msgid ""
 "The optional *encoding* and *errors* parameters specify how to decode "
 "percent-encoded sequences into Unicode characters, as accepted by the "
@@ -409,7 +417,7 @@ msgstr ""
 "послідовності, закодовані у відсотках, у символи Юнікоду, як це прийнято "
 "методом :meth:`bytes.decode`."
 
-#: ../../library/urllib.parse.rst:205 ../../library/urllib.parse.rst:250
+#: ../../library/urllib.parse.rst:210 ../../library/urllib.parse.rst:255
 msgid ""
 "The optional argument *max_num_fields* is the maximum number of fields to "
 "read. If set, then throws a :exc:`ValueError` if there are more than "
@@ -419,7 +427,7 @@ msgstr ""
 "для читання. Якщо встановлено, викидає :exc:`ValueError`, якщо прочитано "
 "більше ніж *max_num_fields* полів."
 
-#: ../../library/urllib.parse.rst:209 ../../library/urllib.parse.rst:254
+#: ../../library/urllib.parse.rst:214 ../../library/urllib.parse.rst:259
 msgid ""
 "The optional argument *separator* is the symbol to use for separating the "
 "query arguments. It defaults to ``&``."
@@ -427,7 +435,7 @@ msgstr ""
 "Необов’язковий аргумент *роздільник* — це символ, який використовується для "
 "розділення аргументів запиту. За замовчуванням ``&``."
 
-#: ../../library/urllib.parse.rst:212
+#: ../../library/urllib.parse.rst:217
 msgid ""
 "Use the :func:`urllib.parse.urlencode` function (with the ``doseq`` "
 "parameter set to ``True``) to convert such dictionaries into query strings."
@@ -436,15 +444,15 @@ msgstr ""
 "``doseq``, встановленим на ``True``), щоб конвертувати такі словники в рядки"
 " запиту."
 
-#: ../../library/urllib.parse.rst:217 ../../library/urllib.parse.rst:260
+#: ../../library/urllib.parse.rst:222 ../../library/urllib.parse.rst:265
 msgid "Add *encoding* and *errors* parameters."
 msgstr "Додайте параметри *encoding* і *errors*."
 
-#: ../../library/urllib.parse.rst:220 ../../library/urllib.parse.rst:263
+#: ../../library/urllib.parse.rst:225 ../../library/urllib.parse.rst:268
 msgid "Added *max_num_fields* parameter."
 msgstr "Додано параметр *max_num_fields*."
 
-#: ../../library/urllib.parse.rst:223 ../../library/urllib.parse.rst:266
+#: ../../library/urllib.parse.rst:228 ../../library/urllib.parse.rst:271
 msgid ""
 "Added *separator* parameter with the default value of ``&``. Python versions"
 " earlier than Python 3.10 allowed using both ``;`` and ``&`` as query "
@@ -456,7 +464,7 @@ msgstr ""
 "``&`` як роздільник параметрів запиту. Це було змінено, щоб дозволити лише "
 "один роздільний ключ із ``&`` як роздільником за умовчанням."
 
-#: ../../library/urllib.parse.rst:232
+#: ../../library/urllib.parse.rst:237
 msgid ""
 "Parse a query string given as a string argument (data of type "
 ":mimetype:`application/x-www-form-urlencoded`).  Data are returned as a list"
@@ -466,7 +474,7 @@ msgstr ""
 ":mimetype:`application/x-www-form-urlencoded`). Дані повертаються у вигляді "
 "списку пар імені та значення."
 
-#: ../../library/urllib.parse.rst:257
+#: ../../library/urllib.parse.rst:262
 msgid ""
 "Use the :func:`urllib.parse.urlencode` function to convert such lists of "
 "pairs into query strings."
@@ -474,7 +482,7 @@ msgstr ""
 "Використовуйте функцію :func:`urllib.parse.urlencode`, щоб перетворити такі "
 "списки пар у рядки запиту."
 
-#: ../../library/urllib.parse.rst:275
+#: ../../library/urllib.parse.rst:280
 msgid ""
 "Construct a URL from a tuple as returned by ``urlparse()``. The *parts* "
 "argument can be any six-item iterable. This may result in a slightly "
@@ -488,7 +496,7 @@ msgstr ""
 "URL-адреса мала непотрібні розділювачі (наприклад, ``?`` із порожнім "
 "запитом; у RFC зазначено, що вони еквівалентні)."
 
-#: ../../library/urllib.parse.rst:284
+#: ../../library/urllib.parse.rst:289
 msgid ""
 "This is similar to :func:`urlparse`, but does not split the params from the "
 "URL. This should generally be used instead of :func:`urlparse` if the more "
@@ -504,7 +512,7 @@ msgstr ""
 "розділення сегментів шляху та параметрів потрібна окрема функція. Ця функція"
 " повертає 5-елементний :term:`named tuple`::"
 
-#: ../../library/urllib.parse.rst:293 ../../library/urllib.parse.rst:406
+#: ../../library/urllib.parse.rst:298 ../../library/urllib.parse.rst:411
 msgid ""
 "The return value is a :term:`named tuple`, its items can be accessed by "
 "index or as named attributes:"
@@ -512,29 +520,29 @@ msgstr ""
 "Поверненим значенням є :term:`named tuple`, до його елементів можна отримати"
 " доступ за індексом або як іменовані атрибути:"
 
-#: ../../library/urllib.parse.rst:331
+#: ../../library/urllib.parse.rst:336
 msgid ""
 "Following some of the `WHATWG spec`_ that updates RFC 3986, leading C0 "
 "control and space characters are stripped from the URL. ``\\n``, ``\\r`` and"
 " tab ``\\t`` characters are removed from the URL at any position."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:337
+#: ../../library/urllib.parse.rst:342
 msgid ""
 ":func:`urlsplit` does not perform validation.  See :ref:`URL parsing "
 "security <url-parsing-security>` for details."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:348
+#: ../../library/urllib.parse.rst:353
 msgid "ASCII newline and tab characters are stripped from the URL."
 msgstr "Символи нового рядка та табуляції ASCII видаляються з URL-адреси."
 
-#: ../../library/urllib.parse.rst:351
+#: ../../library/urllib.parse.rst:356
 msgid ""
 "Leading WHATWG C0 control and space characters are stripped from the URL."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:358
+#: ../../library/urllib.parse.rst:363
 msgid ""
 "Combine the elements of a tuple as returned by :func:`urlsplit` into a "
 "complete URL as a string. The *parts* argument can be any five-item "
@@ -548,7 +556,7 @@ msgstr ""
 "якщо спочатку проаналізована URL-адреса мала непотрібні розділювачі "
 "(наприклад, ? із порожнім запитом; у RFC зазначено, що вони еквівалентні)."
 
-#: ../../library/urllib.parse.rst:367
+#: ../../library/urllib.parse.rst:372
 msgid ""
 "Construct a full (\"absolute\") URL by combining a \"base URL\" (*base*) "
 "with another URL (*url*).  Informally, this uses components of the base URL,"
@@ -561,7 +569,7 @@ msgstr ""
 "розташування та (частина) шляху, щоб забезпечити відсутні компоненти у "
 "відносній URL-адресі. Наприклад:"
 
-#: ../../library/urllib.parse.rst:376
+#: ../../library/urllib.parse.rst:381
 msgid ""
 "The *allow_fragments* argument has the same meaning and default as for "
 ":func:`urlparse`."
@@ -569,7 +577,7 @@ msgstr ""
 "Аргумент *allow_fragments* має те саме значення та типове значення, що й для"
 " :func:`urlparse`."
 
-#: ../../library/urllib.parse.rst:381
+#: ../../library/urllib.parse.rst:386
 msgid ""
 "If *url* is an absolute URL (that is, it starts with ``//`` or "
 "``scheme://``), the *url*'s hostname and/or scheme will be present in the "
@@ -579,7 +587,7 @@ msgstr ""
 "``scheme://``), ім'я хосту *url* та/або схема будуть присутні в результаті. "
 "Наприклад:"
 
-#: ../../library/urllib.parse.rst:390
+#: ../../library/urllib.parse.rst:395
 msgid ""
 "If you do not want that behavior, preprocess the *url* with :func:`urlsplit`"
 " and :func:`urlunsplit`, removing possible *scheme* and *netloc* parts."
@@ -588,11 +596,11 @@ msgstr ""
 ":func:`urlsplit` і :func:`urlunsplit`, видаливши можливі частини *scheme* і "
 "*netloc*."
 
-#: ../../library/urllib.parse.rst:396
+#: ../../library/urllib.parse.rst:401
 msgid "Behavior updated to match the semantics defined in :rfc:`3986`."
 msgstr "Поведінку оновлено відповідно до семантики, визначеної в :rfc:`3986`."
 
-#: ../../library/urllib.parse.rst:401
+#: ../../library/urllib.parse.rst:406
 msgid ""
 "If *url* contains a fragment identifier, return a modified version of *url* "
 "with no fragment identifier, and the fragment identifier as a separate "
@@ -604,15 +612,15 @@ msgstr ""
 "рядок. Якщо в *url* немає ідентифікатора фрагмента, поверніть *url* без змін"
 " і порожній рядок."
 
-#: ../../library/urllib.parse.rst:412
+#: ../../library/urllib.parse.rst:417
 msgid ":attr:`url`"
 msgstr ":attr:`url`"
 
-#: ../../library/urllib.parse.rst:412
+#: ../../library/urllib.parse.rst:417
 msgid "URL with no fragment"
 msgstr "URL без фрагмента"
 
-#: ../../library/urllib.parse.rst:417
+#: ../../library/urllib.parse.rst:422
 msgid ""
 "See section :ref:`urlparse-result-object` for more information on the result"
 " object."
@@ -620,11 +628,11 @@ msgstr ""
 "Перегляньте розділ :ref:`urlparse-result-object` для отримання додаткової "
 "інформації про об’єкт результату."
 
-#: ../../library/urllib.parse.rst:420
+#: ../../library/urllib.parse.rst:425
 msgid "Result is a structured object rather than a simple 2-tuple."
 msgstr "Результат – це структурований об’єкт, а не простий 2-кортеж."
 
-#: ../../library/urllib.parse.rst:425
+#: ../../library/urllib.parse.rst:430
 msgid ""
 "Extract the url from a wrapped URL (that is, a string formatted as "
 "``<URL:scheme://host/path>``, ``<scheme://host/path>``, "
@@ -636,11 +644,11 @@ msgstr ""
 "``URL:scheme://host/path`` або ``scheme://host/path``). Якщо *url* не є "
 "загорнутою URL-адресою, вона повертається без змін."
 
-#: ../../library/urllib.parse.rst:433
+#: ../../library/urllib.parse.rst:438
 msgid "URL parsing security"
 msgstr ""
 
-#: ../../library/urllib.parse.rst:435
+#: ../../library/urllib.parse.rst:440
 msgid ""
 "The :func:`urlsplit` and :func:`urlparse` APIs do not perform **validation**"
 " of inputs.  They may not raise errors on inputs that other applications "
@@ -649,14 +657,14 @@ msgid ""
 "rather than purity."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:441
+#: ../../library/urllib.parse.rst:446
 msgid ""
 "Instead of raising an exception on unusual input, they may instead return "
 "some component parts as empty strings. Or components may contain more than "
 "perhaps they should."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:445
+#: ../../library/urllib.parse.rst:450
 msgid ""
 "We recommend that users of these APIs where the values may be used anywhere "
 "with security implications code defensively. Do some verification within "
@@ -665,7 +673,7 @@ msgid ""
 "that ``hostname``?  etc."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:451
+#: ../../library/urllib.parse.rst:456
 msgid ""
 "What constitutes a URL is not universally well defined.  Different "
 "applications have different needs and desired constraints.  For instance the"
@@ -677,11 +685,11 @@ msgid ""
 " API behavior changes."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:462
+#: ../../library/urllib.parse.rst:467
 msgid "Parsing ASCII Encoded Bytes"
 msgstr "Розбір байтів, закодованих ASCII"
 
-#: ../../library/urllib.parse.rst:464
+#: ../../library/urllib.parse.rst:469
 msgid ""
 "The URL parsing functions were originally designed to operate on character "
 "strings only. In practice, it is useful to be able to manipulate properly "
@@ -696,7 +704,7 @@ msgstr ""
 "об’єктами :class:`bytes` і :class:`bytearray` на додаток до об’єктів "
 ":class:`str`."
 
-#: ../../library/urllib.parse.rst:470
+#: ../../library/urllib.parse.rst:475
 msgid ""
 "If :class:`str` data is passed in, the result will also contain only "
 ":class:`str` data. If :class:`bytes` or :class:`bytearray` data is passed "
@@ -706,7 +714,7 @@ msgstr ""
 ":class:`str`. Якщо передано дані :class:`bytes` або :class:`bytearray`, "
 "результат міститиме лише дані :class:`bytes`."
 
-#: ../../library/urllib.parse.rst:474
+#: ../../library/urllib.parse.rst:479
 msgid ""
 "Attempting to mix :class:`str` data with :class:`bytes` or "
 ":class:`bytearray` in a single function call will result in a "
@@ -717,7 +725,7 @@ msgstr ""
 "одному виклику функції призведе до появи :exc:`TypeError` під час спроби "
 "передати не-ASCII значення байтів викликатимуть :exc:`UnicodeDecodeError`."
 
-#: ../../library/urllib.parse.rst:479
+#: ../../library/urllib.parse.rst:484
 msgid ""
 "To support easier conversion of result objects between :class:`str` and "
 ":class:`bytes`, all return values from URL parsing functions provide either "
@@ -739,7 +747,7 @@ msgstr ""
 "яке містить або дані :class:`bytes` (для методів :meth:`encode`), або дані "
 ":class:`str` (для методів :meth:`decode`)."
 
-#: ../../library/urllib.parse.rst:490
+#: ../../library/urllib.parse.rst:495
 msgid ""
 "Applications that need to operate on potentially improperly quoted URLs that"
 " may contain non-ASCII data will need to do their own decoding from bytes to"
@@ -750,7 +758,7 @@ msgstr ""
 "виконати власне декодування з байтів на символи перед тим, як викликати "
 "методи аналізу URL-адрес."
 
-#: ../../library/urllib.parse.rst:494
+#: ../../library/urllib.parse.rst:499
 msgid ""
 "The behaviour described in this section applies only to the URL parsing "
 "functions. The URL quoting functions use their own rules when producing or "
@@ -762,17 +770,17 @@ msgstr ""
 "створення або споживання послідовностей байтів, як описано в документації "
 "окремих функцій цитування URL-адрес."
 
-#: ../../library/urllib.parse.rst:499
+#: ../../library/urllib.parse.rst:504
 msgid "URL parsing functions now accept ASCII encoded byte sequences"
 msgstr ""
 "Функції аналізу URL-адрес тепер приймають послідовності байтів у кодуванні "
 "ASCII"
 
-#: ../../library/urllib.parse.rst:506
+#: ../../library/urllib.parse.rst:511
 msgid "Structured Parse Results"
 msgstr "Структуровані результати аналізу"
 
-#: ../../library/urllib.parse.rst:508
+#: ../../library/urllib.parse.rst:513
 msgid ""
 "The result objects from the :func:`urlparse`, :func:`urlsplit`  and "
 ":func:`urldefrag` functions are subclasses of the :class:`tuple` type. These"
@@ -785,7 +793,7 @@ msgstr ""
 "атрибути, перелічені в документації для цих функцій, підтримку кодування та "
 "декодування, описану в попередньому розділі, а також додатковий метод:"
 
-#: ../../library/urllib.parse.rst:516
+#: ../../library/urllib.parse.rst:521
 msgid ""
 "Return the re-combined version of the original URL as a string. This may "
 "differ from the original URL in that the scheme may be normalized to lower "
@@ -798,7 +806,7 @@ msgstr ""
 "видалені. Зокрема, порожні параметри, запити та ідентифікатори фрагментів "
 "буде видалено."
 
-#: ../../library/urllib.parse.rst:521
+#: ../../library/urllib.parse.rst:526
 msgid ""
 "For :func:`urldefrag` results, only empty fragment identifiers will be "
 "removed. For :func:`urlsplit` and :func:`urlparse` results, all noted "
@@ -808,7 +816,7 @@ msgstr ""
 "фрагментів. Для результатів :func:`urlsplit` і :func:`urlparse` усі "
 "зазначені зміни буде внесено до URL-адреси, яку повертає цей метод."
 
-#: ../../library/urllib.parse.rst:525
+#: ../../library/urllib.parse.rst:530
 msgid ""
 "The result of this method remains unchanged if passed back through the "
 "original parsing function:"
@@ -816,7 +824,7 @@ msgstr ""
 "Результат цього методу залишається незмінним, якщо передати його через "
 "вихідну функцію аналізу:"
 
-#: ../../library/urllib.parse.rst:538
+#: ../../library/urllib.parse.rst:543
 msgid ""
 "The following classes provide the implementations of the structured parse "
 "results when operating on :class:`str` objects:"
@@ -824,7 +832,7 @@ msgstr ""
 "Наступні класи забезпечують реалізацію результатів структурованого аналізу "
 "під час роботи з об’єктами :class:`str`:"
 
-#: ../../library/urllib.parse.rst:543
+#: ../../library/urllib.parse.rst:548
 msgid ""
 "Concrete class for :func:`urldefrag` results containing :class:`str` data. "
 "The :meth:`encode` method returns a :class:`DefragResultBytes` instance."
@@ -833,7 +841,7 @@ msgstr ""
 ":class:`str`. Метод :meth:`encode` повертає екземпляр "
 ":class:`DefragResultBytes`."
 
-#: ../../library/urllib.parse.rst:551
+#: ../../library/urllib.parse.rst:556
 msgid ""
 "Concrete class for :func:`urlparse` results containing :class:`str` data. "
 "The :meth:`encode` method returns a :class:`ParseResultBytes` instance."
@@ -842,7 +850,7 @@ msgstr ""
 ":class:`str`. Метод :meth:`encode` повертає екземпляр "
 ":class:`ParseResultBytes`."
 
-#: ../../library/urllib.parse.rst:557
+#: ../../library/urllib.parse.rst:562
 msgid ""
 "Concrete class for :func:`urlsplit` results containing :class:`str` data. "
 "The :meth:`encode` method returns a :class:`SplitResultBytes` instance."
@@ -851,7 +859,7 @@ msgstr ""
 ":class:`str`. Метод :meth:`encode` повертає екземпляр "
 ":class:`SplitResultBytes`."
 
-#: ../../library/urllib.parse.rst:562
+#: ../../library/urllib.parse.rst:567
 msgid ""
 "The following classes provide the implementations of the parse results when "
 "operating on :class:`bytes` or :class:`bytearray` objects:"
@@ -859,7 +867,7 @@ msgstr ""
 "Наступні класи забезпечують реалізацію результатів аналізу під час роботи з "
 "об’єктами :class:`bytes` або :class:`bytearray`:"
 
-#: ../../library/urllib.parse.rst:567
+#: ../../library/urllib.parse.rst:572
 msgid ""
 "Concrete class for :func:`urldefrag` results containing :class:`bytes` data."
 " The :meth:`decode` method returns a :class:`DefragResult` instance."
@@ -868,7 +876,7 @@ msgstr ""
 ":class:`bytes`. Метод :meth:`decode` повертає екземпляр "
 ":class:`DefragResult`."
 
-#: ../../library/urllib.parse.rst:575
+#: ../../library/urllib.parse.rst:580
 msgid ""
 "Concrete class for :func:`urlparse` results containing :class:`bytes` data. "
 "The :meth:`decode` method returns a :class:`ParseResult` instance."
@@ -877,7 +885,7 @@ msgstr ""
 ":class:`bytes`. Метод :meth:`decode` повертає екземпляр "
 ":class:`ParseResult`."
 
-#: ../../library/urllib.parse.rst:583
+#: ../../library/urllib.parse.rst:588
 msgid ""
 "Concrete class for :func:`urlsplit` results containing :class:`bytes` data. "
 "The :meth:`decode` method returns a :class:`SplitResult` instance."
@@ -886,11 +894,11 @@ msgstr ""
 ":class:`bytes`. Метод :meth:`decode` повертає екземпляр "
 ":class:`SplitResult`."
 
-#: ../../library/urllib.parse.rst:591
+#: ../../library/urllib.parse.rst:596
 msgid "URL Quoting"
 msgstr "Цитування URL"
 
-#: ../../library/urllib.parse.rst:593
+#: ../../library/urllib.parse.rst:598
 msgid ""
 "The URL quoting functions focus on taking program data and making it safe "
 "for use as URL components by quoting special characters and appropriately "
@@ -905,7 +913,7 @@ msgstr ""
 "відтворити вихідні дані з вмісту компонента URL-адреси, якщо це завдання ще "
 "не охоплено функціями аналізу URL-адреси вище."
 
-#: ../../library/urllib.parse.rst:601
+#: ../../library/urllib.parse.rst:606
 msgid ""
 "Replace special characters in *string* using the :samp:`%{xx}` escape. "
 "Letters, digits, and the characters ``'_.-~'`` are never quoted. By default,"
@@ -914,12 +922,12 @@ msgid ""
 "not be quoted --- its default value is ``'/'``."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:607 ../../library/urllib.parse.rst:653
-#: ../../library/urllib.parse.rst:682
+#: ../../library/urllib.parse.rst:612 ../../library/urllib.parse.rst:658
+#: ../../library/urllib.parse.rst:687
 msgid "*string* may be either a :class:`str` or a :class:`bytes` object."
 msgstr "*string* може бути об’єктом :class:`str` або :class:`bytes`."
 
-#: ../../library/urllib.parse.rst:609
+#: ../../library/urllib.parse.rst:614
 msgid ""
 "Moved from :rfc:`2396` to :rfc:`3986` for quoting URL strings. \"~\" is now "
 "included in the set of unreserved characters."
@@ -927,7 +935,7 @@ msgstr ""
 "Переміщено з :rfc:`2396` до :rfc:`3986` для цитування рядків URL. \"~\" "
 "тепер включено до набору незарезервованих символів."
 
-#: ../../library/urllib.parse.rst:613
+#: ../../library/urllib.parse.rst:618
 msgid ""
 "The optional *encoding* and *errors* parameters specify how to deal with "
 "non-ASCII characters, as accepted by the :meth:`str.encode` method. "
@@ -943,7 +951,7 @@ msgstr ""
 ":class:`UnicodeEncodeError`. *кодування* та *помилки* не повинні надаватися,"
 " якщо *рядок* є :class:`bytes` або виникає :class:`TypeError`."
 
-#: ../../library/urllib.parse.rst:621
+#: ../../library/urllib.parse.rst:626
 msgid ""
 "Note that ``quote(string, safe, encoding, errors)`` is equivalent to "
 "``quote_from_bytes(string.encode(encoding, errors), safe)``."
@@ -951,11 +959,11 @@ msgstr ""
 "Зауважте, що ``quote(string, safe, encoding, errors)`` еквівалентно "
 "``quote_from_bytes(string.encode(encoding, errors), safe)``."
 
-#: ../../library/urllib.parse.rst:624
+#: ../../library/urllib.parse.rst:629
 msgid "Example: ``quote('/El Niño/')`` yields ``'/El%20Ni%C3%B1o/'``."
 msgstr "Приклад: ``quote('/El Niño/')`` дає ``'/El%20Ni%C3%B1o/''``."
 
-#: ../../library/urllib.parse.rst:629
+#: ../../library/urllib.parse.rst:634
 msgid ""
 "Like :func:`quote`, but also replace spaces with plus signs, as required for"
 " quoting HTML form values when building up a query string to go into a URL. "
@@ -968,11 +976,11 @@ msgstr ""
 "вони не включені в *safe*. Він також не має *safe* типового значення "
 "``'/'``."
 
-#: ../../library/urllib.parse.rst:634
+#: ../../library/urllib.parse.rst:639
 msgid "Example: ``quote_plus('/El Niño/')`` yields ``'%2FEl+Ni%C3%B1o%2F'``."
 msgstr "Приклад: ``quote_plus('/El Niño/')`` дає ``'%2FEl+Ni%C3%B1o%2F''``."
 
-#: ../../library/urllib.parse.rst:639
+#: ../../library/urllib.parse.rst:644
 msgid ""
 "Like :func:`quote`, but accepts a :class:`bytes` object rather than a "
 ":class:`str`, and does not perform string-to-bytes encoding."
@@ -980,11 +988,11 @@ msgstr ""
 "Подібно до :func:`quote`, але приймає об’єкт :class:`bytes`, а не "
 ":class:`str`, і не виконує кодування рядок-байт."
 
-#: ../../library/urllib.parse.rst:642
+#: ../../library/urllib.parse.rst:647
 msgid "Example: ``quote_from_bytes(b'a&\\xef')`` yields ``'a%26%EF'``."
 msgstr "Приклад: ``quote_from_bytes(b'a&\\xef')`` дає ``'a%26%EF''``."
 
-#: ../../library/urllib.parse.rst:648
+#: ../../library/urllib.parse.rst:653
 msgid ""
 "Replace :samp:`%{xx}` escapes with their single-character equivalent. The "
 "optional *encoding* and *errors* parameters specify how to decode percent-"
@@ -992,7 +1000,7 @@ msgid ""
 ":meth:`bytes.decode` method."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:655
+#: ../../library/urllib.parse.rst:660
 msgid ""
 "*encoding* defaults to ``'utf-8'``. *errors* defaults to ``'replace'``, "
 "meaning invalid sequences are replaced by a placeholder character."
@@ -1001,16 +1009,16 @@ msgstr ""
 "значення ``'replace'``, тобто недійсні послідовності замінюються символом-"
 "заповнювачем."
 
-#: ../../library/urllib.parse.rst:659
+#: ../../library/urllib.parse.rst:664
 msgid "Example: ``unquote('/El%20Ni%C3%B1o/')`` yields ``'/El Niño/'``."
 msgstr "Приклад: ``unquote('/El%20Ni%C3%B1o/')`` дає ``'/El Niño/''``."
 
-#: ../../library/urllib.parse.rst:661
+#: ../../library/urllib.parse.rst:666
 msgid ""
 "*string* parameter supports bytes and str objects (previously only str)."
 msgstr "Параметр *string* підтримує об’єкти bytes і str (раніше лише str)."
 
-#: ../../library/urllib.parse.rst:669
+#: ../../library/urllib.parse.rst:674
 msgid ""
 "Like :func:`unquote`, but also replace plus signs with spaces, as required "
 "for unquoting HTML form values."
@@ -1018,21 +1026,21 @@ msgstr ""
 "Подібно до :func:`unquote`, але також замініть знаки \"плюс\" пробілами, як "
 "це потрібно для зняття лапок значень форми HTML."
 
-#: ../../library/urllib.parse.rst:672
+#: ../../library/urllib.parse.rst:677
 msgid "*string* must be a :class:`str`."
 msgstr "*рядок* має бути :class:`str`."
 
-#: ../../library/urllib.parse.rst:674
+#: ../../library/urllib.parse.rst:679
 msgid "Example: ``unquote_plus('/El+Ni%C3%B1o/')`` yields ``'/El Niño/'``."
 msgstr "Приклад: ``unquote_plus('/El+Ni%C3%B1o/')`` дає ``'/El Niño/''``."
 
-#: ../../library/urllib.parse.rst:679
+#: ../../library/urllib.parse.rst:684
 msgid ""
 "Replace :samp:`%{xx}` escapes with their single-octet equivalent, and return"
 " a :class:`bytes` object."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:684
+#: ../../library/urllib.parse.rst:689
 msgid ""
 "If it is a :class:`str`, unescaped non-ASCII characters in *string* are "
 "encoded into UTF-8 bytes."
@@ -1040,11 +1048,11 @@ msgstr ""
 "Якщо це :class:`str`, неекрановані не-ASCII символи в *string* кодуються в "
 "UTF-8 байтах."
 
-#: ../../library/urllib.parse.rst:687
+#: ../../library/urllib.parse.rst:692
 msgid "Example: ``unquote_to_bytes('a%26%EF')`` yields ``b'a&\\xef'``."
 msgstr "Приклад: ``unquote_to_bytes('a%26%EF')`` дає ``b'a&\\xef'``."
 
-#: ../../library/urllib.parse.rst:693
+#: ../../library/urllib.parse.rst:698
 msgid ""
 "Convert a mapping object or a sequence of two-element tuples, which may "
 "contain :class:`str` or :class:`bytes` objects, to a percent-encoded ASCII "
@@ -1059,7 +1067,7 @@ msgstr ""
 ":func:`~urllib.request.urlopen`, тоді його слід закодувати в байти, інакше "
 "це призведе до :exc:`TypeError`."
 
-#: ../../library/urllib.parse.rst:700
+#: ../../library/urllib.parse.rst:705
 msgid ""
 "The resulting string is a series of ``key=value`` pairs separated by ``'&'``"
 " characters, where both *key* and *value* are quoted using the *quote_via* "
@@ -1081,7 +1089,7 @@ msgstr ""
 "і не кодуватиме символи '/'. Для максимального контролю над тим, що "
 "цитується, використовуйте ``quote`` і вкажіть значення для *safe*."
 
-#: ../../library/urllib.parse.rst:710
+#: ../../library/urllib.parse.rst:715
 msgid ""
 "When a sequence of two-element tuples is used as the *query* argument, the "
 "first element of each tuple is a key and the second is a value. The value "
@@ -1099,7 +1107,7 @@ msgstr ""
 "ключа. Порядок параметрів у закодованому рядку відповідатиме порядку "
 "кортежів параметрів у послідовності."
 
-#: ../../library/urllib.parse.rst:718
+#: ../../library/urllib.parse.rst:723
 msgid ""
 "The *safe*, *encoding*, and *errors* parameters are passed down to "
 "*quote_via* (the *encoding* and *errors* parameters are only passed when a "
@@ -1109,7 +1117,7 @@ msgstr ""
 "(параметри *encoding* і *errors* передаються лише тоді, коли елемент запиту "
 "є :class:`str`)."
 
-#: ../../library/urllib.parse.rst:722
+#: ../../library/urllib.parse.rst:727
 msgid ""
 "To reverse this encoding process, :func:`parse_qs` and :func:`parse_qsl` are"
 " provided in this module to parse query strings into Python data structures."
@@ -1118,7 +1126,7 @@ msgstr ""
 ":func:`parse_qs` і :func:`parse_qsl` для аналізу рядків запиту в структурах "
 "даних Python."
 
-#: ../../library/urllib.parse.rst:725
+#: ../../library/urllib.parse.rst:730
 msgid ""
 "Refer to :ref:`urllib examples <urllib-examples>` to find out how the "
 ":func:`urllib.parse.urlencode` method can be used for generating the query "
@@ -1128,19 +1136,19 @@ msgstr ""
 "метод :func:`urllib.parse.urlencode` можна використовувати для генерації "
 "рядка запиту URL-адреси або даних для запиту POST."
 
-#: ../../library/urllib.parse.rst:729
+#: ../../library/urllib.parse.rst:734
 msgid "*query* supports bytes and string objects."
 msgstr "*query* підтримує байти та рядкові об’єкти."
 
-#: ../../library/urllib.parse.rst:732
+#: ../../library/urllib.parse.rst:737
 msgid "Added the *quote_via* parameter."
 msgstr ""
 
-#: ../../library/urllib.parse.rst:738
+#: ../../library/urllib.parse.rst:743
 msgid "`WHATWG`_ -  URL Living standard"
 msgstr "`WHATWG`_ - URL Життєвий рівень"
 
-#: ../../library/urllib.parse.rst:739
+#: ../../library/urllib.parse.rst:744
 msgid ""
 "Working Group for the URL Standard that defines URLs, domains, IP addresses,"
 " the application/x-www-form-urlencoded format, and their API."
@@ -1148,11 +1156,11 @@ msgstr ""
 "Робоча група для стандарту URL-адрес, яка визначає URL-адреси, домени, IP-"
 "адреси, формат application/x-www-form-urlencoded та їх API."
 
-#: ../../library/urllib.parse.rst:742
+#: ../../library/urllib.parse.rst:747
 msgid ":rfc:`3986` - Uniform Resource Identifiers"
 msgstr ":rfc:`3986` - Уніфіковані ідентифікатори ресурсів"
 
-#: ../../library/urllib.parse.rst:743
+#: ../../library/urllib.parse.rst:748
 msgid ""
 "This is the current standard (STD66). Any changes to urllib.parse module "
 "should conform to this. Certain deviations could be observed, which are "
@@ -1164,20 +1172,20 @@ msgstr ""
 "пов’язані з цілями зворотної сумісності та певними де-факто вимогами до "
 "аналізу, які зазвичай спостерігаються в основних браузерах."
 
-#: ../../library/urllib.parse.rst:748
+#: ../../library/urllib.parse.rst:753
 msgid ":rfc:`2732` - Format for Literal IPv6 Addresses in URL's."
 msgstr ":rfc:`2732` - Формат буквальних IPv6-адрес в URL-адресах."
 
-#: ../../library/urllib.parse.rst:749
+#: ../../library/urllib.parse.rst:754
 msgid "This specifies the parsing requirements of IPv6 URLs."
 msgstr "Це визначає вимоги до аналізу URL-адрес IPv6."
 
-#: ../../library/urllib.parse.rst:751
+#: ../../library/urllib.parse.rst:756
 msgid ":rfc:`2396` - Uniform Resource Identifiers (URI): Generic Syntax"
 msgstr ""
 ":rfc:`2396` - Уніфіковані ідентифікатори ресурсів (URI): загальний синтаксис"
 
-#: ../../library/urllib.parse.rst:752
+#: ../../library/urllib.parse.rst:757
 msgid ""
 "Document describing the generic syntactic requirements for both Uniform "
 "Resource Names (URNs) and Uniform Resource Locators (URLs)."
@@ -1185,19 +1193,19 @@ msgstr ""
 "Документ, що описує загальні синтаксичні вимоги як для уніфікованих імен "
 "ресурсів (URN), так і для уніфікованих покажчиків ресурсів (URL)."
 
-#: ../../library/urllib.parse.rst:755
+#: ../../library/urllib.parse.rst:760
 msgid ":rfc:`2368` - The mailto URL scheme."
 msgstr ":rfc:`2368` - Схема URL-адреси електронної пошти."
 
-#: ../../library/urllib.parse.rst:756
+#: ../../library/urllib.parse.rst:761
 msgid "Parsing requirements for mailto URL schemes."
 msgstr "Вимоги до розбору URL-схем mailto."
 
-#: ../../library/urllib.parse.rst:758
+#: ../../library/urllib.parse.rst:763
 msgid ":rfc:`1808` - Relative Uniform Resource Locators"
 msgstr ":rfc:`1808` - Відносні уніфіковані локатори ресурсів"
 
-#: ../../library/urllib.parse.rst:759
+#: ../../library/urllib.parse.rst:764
 msgid ""
 "This Request For Comments includes the rules for joining an absolute and a "
 "relative URL, including a fair number of \"Abnormal Examples\" which govern "
@@ -1207,11 +1215,11 @@ msgstr ""
 "URL-адрес, включаючи чималу кількість \"ненормальних прикладів\", які "
 "регулюють обробку прикордонних випадків."
 
-#: ../../library/urllib.parse.rst:763
+#: ../../library/urllib.parse.rst:768
 msgid ":rfc:`1738` - Uniform Resource Locators (URL)"
 msgstr ":rfc:`1738` - Уніфіковані покажчики ресурсів (URL)"
 
-#: ../../library/urllib.parse.rst:764
+#: ../../library/urllib.parse.rst:769
 msgid "This specifies the formal syntax and semantics of absolute URLs."
 msgstr "Це визначає формальний синтаксис і семантику абсолютних URL-адрес."
 

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/fcntl.rst:2
-msgid ":mod:`fcntl` --- The ``fcntl`` and ``ioctl`` system calls"
-msgstr ":mod:`fcntl` --- Системні виклики ``fcntl`` і ``ioctl``"
+msgid ":mod:`!fcntl` --- The ``fcntl`` and ``ioctl`` system calls"
+msgstr ""
 
 #: ../../library/fcntl.rst:16
 msgid ""
@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 
 #: ../../library/fcntl.rst:21
-msgid ":ref:`Availability <availability>`: Unix, not Emscripten, not WASI."
+msgid ":ref:`Availability <availability>`: Unix, not WASI."
 msgstr ""
 
 #: ../../library/fcntl.rst:23
@@ -61,38 +61,30 @@ msgstr ""
 
 #: ../../library/fcntl.rst:33
 msgid ""
-"The fcntl module now contains ``F_ADD_SEALS``, ``F_GET_SEALS``, and "
+"The :mod:`!fcntl` module now contains ``F_ADD_SEALS``, ``F_GET_SEALS``, and "
 "``F_SEAL_*`` constants for sealing of :func:`os.memfd_create` file "
 "descriptors."
 msgstr ""
-"Модуль fcntl тепер містить константи ``F_ADD_SEALS``, ``F_GET_SEALS`` і "
-"``F_SEAL_*`` для запечатування дескрипторів файлів :func:`os.memfd_create`."
 
 #: ../../library/fcntl.rst:38
 msgid ""
-"On macOS, the fcntl module exposes the ``F_GETPATH`` constant, which obtains"
-" the path of a file from a file descriptor. On Linux(>=3.15), the fcntl "
-"module exposes the ``F_OFD_GETLK``, ``F_OFD_SETLK`` and ``F_OFD_SETLKW`` "
-"constants, which are used when working with open file description locks."
+"On macOS, the :mod:`!fcntl` module exposes the ``F_GETPATH`` constant, which"
+" obtains the path of a file from a file descriptor. On Linux(>=3.15), the "
+":mod:`!fcntl` module exposes the ``F_OFD_GETLK``, ``F_OFD_SETLK`` and "
+"``F_OFD_SETLKW`` constants, which are used when working with open file "
+"description locks."
 msgstr ""
-"У macOS модуль fcntl надає константу ``F_GETPATH``, яка отримує шлях до "
-"файлу з дескриптора файлу. У Linux (>=3.15) модуль fcntl надає константи "
-"``F_OFD_GETLK``, ``F_OFD_SETLK`` і ``F_OFD_SETLKW``, які використовуються "
-"під час роботи з відкритими блокуваннями опису файлу."
 
 #: ../../library/fcntl.rst:45
 msgid ""
-"On Linux >= 2.6.11, the fcntl module exposes the ``F_GETPIPE_SZ`` and "
-"``F_SETPIPE_SZ`` constants, which allow to check and modify a pipe's size "
-"respectively."
+"On Linux >= 2.6.11, the :mod:`!fcntl` module exposes the ``F_GETPIPE_SZ`` "
+"and ``F_SETPIPE_SZ`` constants, which allow to check and modify a pipe's "
+"size respectively."
 msgstr ""
-"У Linux >= 2.6.11 модуль fcntl надає константи ``F_GETPIPE_SZ`` і "
-"``F_SETPIPE_SZ``, які дозволяють перевіряти та змінювати розмір каналу "
-"відповідно."
 
 #: ../../library/fcntl.rst:50
 msgid ""
-"On FreeBSD, the fcntl module exposes the ``F_DUP2FD`` and "
+"On FreeBSD, the :mod:`!fcntl` module exposes the ``F_DUP2FD`` and "
 "``F_DUP2FD_CLOEXEC`` constants, which allow to duplicate a file descriptor, "
 "the latter setting ``FD_CLOEXEC`` flag in addition."
 msgstr ""
@@ -106,10 +98,31 @@ msgid ""
 msgstr ""
 
 #: ../../library/fcntl.rst:61
+msgid ""
+"On Linux >= 2.6.32, the :mod:`!fcntl` module exposes the ``F_GETOWN_EX``, "
+"``F_SETOWN_EX``, ``F_OWNER_TID``, ``F_OWNER_PID``, ``F_OWNER_PGRP`` "
+"constants, which allow to direct I/O availability signals to a specific "
+"thread, process, or process group. On Linux >= 4.13, the :mod:`!fcntl` "
+"module exposes the ``F_GET_RW_HINT``, ``F_SET_RW_HINT``, "
+"``F_GET_FILE_RW_HINT``, ``F_SET_FILE_RW_HINT``, and ``RWH_WRITE_LIFE_*`` "
+"constants, which allow to inform the kernel about the relative expected "
+"lifetime of writes on a given inode or via a particular open file "
+"description. On Linux >= 5.1 and NetBSD, the :mod:`!fcntl` module exposes "
+"the ``F_SEAL_FUTURE_WRITE`` constant for use with ``F_ADD_SEALS`` and "
+"``F_GET_SEALS`` operations. On FreeBSD, the :mod:`!fcntl` module exposes the"
+" ``F_READAHEAD``, ``F_ISUNIONSTACK``, and ``F_KINFO`` constants. On macOS "
+"and FreeBSD, the :mod:`!fcntl` module exposes the ``F_RDAHEAD`` constant. On"
+" NetBSD and AIX, the :mod:`!fcntl` module exposes the ``F_CLOSEM`` constant."
+" On NetBSD, the :mod:`!fcntl` module exposes the ``F_MAXFD`` constant. On "
+"macOS and NetBSD, the :mod:`!fcntl` module exposes the ``F_GETNOSIGPIPE`` "
+"and ``F_SETNOSIGPIPE`` constant."
+msgstr ""
+
+#: ../../library/fcntl.rst:82
 msgid "The module defines the following functions:"
 msgstr "Модуль визначає такі функції:"
 
-#: ../../library/fcntl.rst:66
+#: ../../library/fcntl.rst:87
 msgid ""
 "Perform the operation *cmd* on file descriptor *fd* (file objects providing "
 "a :meth:`~io.IOBase.fileno` method are accepted as well).  The values used "
@@ -145,11 +158,11 @@ msgstr ""
 "це, швидше за все, призведе до порушення сегментації або більш тонкого "
 "пошкодження даних."
 
-#: ../../library/fcntl.rst:83
+#: ../../library/fcntl.rst:104
 msgid "If the :c:func:`fcntl` call fails, an :exc:`OSError` is raised."
 msgstr ""
 
-#: ../../library/fcntl.rst:85
+#: ../../library/fcntl.rst:106
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.fcntl`` with arguments "
 "``fd``, ``cmd``, ``arg``."
@@ -157,7 +170,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``fcntl.fcntl`` з аргументами "
 "``fd``, ``cmd``, ``arg``."
 
-#: ../../library/fcntl.rst:90
+#: ../../library/fcntl.rst:111
 msgid ""
 "This function is identical to the :func:`~fcntl.fcntl` function, except that"
 " the argument handling is even more complicated."
@@ -165,7 +178,7 @@ msgstr ""
 "Ця функція ідентична функції :func:`~fcntl.fcntl`, за винятком того, що "
 "обробка аргументів ще складніша."
 
-#: ../../library/fcntl.rst:93
+#: ../../library/fcntl.rst:114
 msgid ""
 "The *request* parameter is limited to values that can fit in 32-bits. "
 "Additional constants of interest for use as the *request* argument can be "
@@ -177,7 +190,7 @@ msgstr ""
 "знайти в модулі :mod:`termios` під тими самими назвами, які використовуються"
 " у відповідних файлах заголовків C."
 
-#: ../../library/fcntl.rst:98
+#: ../../library/fcntl.rst:119
 msgid ""
 "The parameter *arg* can be one of an integer, an object supporting the read-"
 "only buffer interface (like :class:`bytes`) or an object supporting the "
@@ -188,7 +201,7 @@ msgstr ""
 "підтримує інтерфейс буфера для читання та запису (наприклад, "
 ":class:`bytearray`)."
 
-#: ../../library/fcntl.rst:102
+#: ../../library/fcntl.rst:123
 msgid ""
 "In all but the last case, behaviour is as for the :func:`~fcntl.fcntl` "
 "function."
@@ -196,7 +209,7 @@ msgstr ""
 "У всіх випадках, крім останнього, поведінка така ж, як у функції "
 ":func:`~fcntl.fcntl`."
 
-#: ../../library/fcntl.rst:105
+#: ../../library/fcntl.rst:126
 msgid ""
 "If a mutable buffer is passed, then the behaviour is determined by the value"
 " of the *mutate_flag* parameter."
@@ -204,7 +217,7 @@ msgstr ""
 "Якщо передається змінний буфер, поведінка визначається значенням параметра "
 "*mutate_flag*."
 
-#: ../../library/fcntl.rst:108
+#: ../../library/fcntl.rst:129
 msgid ""
 "If it is false, the buffer's mutability is ignored and behaviour is as for a"
 " read-only buffer, except that the 1024 byte limit mentioned above is "
@@ -216,7 +229,7 @@ msgstr ""
 "згадане вище, уникає — доки переданий буфер має принаймні таку довжину, як і"
 " операційна система. хоче поставити туди, речі повинні працювати."
 
-#: ../../library/fcntl.rst:113
+#: ../../library/fcntl.rst:134
 msgid ""
 "If *mutate_flag* is true (the default), then the buffer is (in effect) "
 "passed to the underlying :func:`ioctl` system call, the latter's return code"
@@ -234,16 +247,16 @@ msgstr ""
 "статичний буфер довжиною 1024 байти, який потім передається до :func:`ioctl`"
 " і копіюється назад у наданий буфер."
 
-#: ../../library/fcntl.rst:121
+#: ../../library/fcntl.rst:142
 msgid ""
 "If the :c:func:`ioctl` call fails, an :exc:`OSError` exception is raised."
 msgstr ""
 
-#: ../../library/fcntl.rst:123
+#: ../../library/fcntl.rst:144
 msgid "An example::"
 msgstr "Приклад::"
 
-#: ../../library/fcntl.rst:136
+#: ../../library/fcntl.rst:157
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.ioctl`` with arguments "
 "``fd``, ``request``, ``arg``."
@@ -251,7 +264,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``fcntl.ioctl`` з аргументами "
 "``fd``, ``request``, ``arg``."
 
-#: ../../library/fcntl.rst:141
+#: ../../library/fcntl.rst:162
 msgid ""
 "Perform the lock operation *operation* on file descriptor *fd* (file objects"
 " providing a :meth:`~io.IOBase.fileno` method are accepted as well). See the"
@@ -264,12 +277,12 @@ msgstr ""
 "для отримання детальної інформації. (У деяких системах ця функція емулюється"
 " за допомогою :c:func:`fcntl`.)"
 
-#: ../../library/fcntl.rst:146
+#: ../../library/fcntl.rst:167
 msgid ""
 "If the :c:func:`flock` call fails, an :exc:`OSError` exception is raised."
 msgstr ""
 
-#: ../../library/fcntl.rst:148
+#: ../../library/fcntl.rst:169
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.flock`` with arguments "
 "``fd``, ``operation``."
@@ -277,7 +290,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``fcntl.flock`` з аргументами "
 "``fd``, ``operation``."
 
-#: ../../library/fcntl.rst:153
+#: ../../library/fcntl.rst:174
 msgid ""
 "This is essentially a wrapper around the :func:`~fcntl.fcntl` locking calls."
 " *fd* is the file descriptor (file objects providing a "
@@ -289,25 +302,25 @@ msgstr ""
 ":meth:`~io.IOBase.fileno`) файлу, який потрібно заблокувати або "
 "розблокувати, а *cmd* — одне з таких значень:"
 
-#: ../../library/fcntl.rst:160
+#: ../../library/fcntl.rst:181
 msgid "Release an existing lock."
 msgstr ""
 
-#: ../../library/fcntl.rst:164
+#: ../../library/fcntl.rst:185
 msgid "Acquire a shared lock."
 msgstr ""
 
-#: ../../library/fcntl.rst:168
+#: ../../library/fcntl.rst:189
 msgid "Acquire an exclusive lock."
 msgstr ""
 
-#: ../../library/fcntl.rst:172
+#: ../../library/fcntl.rst:193
 msgid ""
 "Bitwise OR with any of the other three ``LOCK_*`` constants to make the "
 "request non-blocking."
 msgstr ""
 
-#: ../../library/fcntl.rst:175
+#: ../../library/fcntl.rst:196
 msgid ""
 "If :const:`!LOCK_NB` is used and the lock cannot be acquired, an "
 ":exc:`OSError` will be raised and the exception will have an *errno* "
@@ -317,7 +330,7 @@ msgid ""
 "descriptor refers to a file opened for writing."
 msgstr ""
 
-#: ../../library/fcntl.rst:182
+#: ../../library/fcntl.rst:203
 msgid ""
 "*len* is the number of bytes to lock, *start* is the byte offset at which "
 "the lock starts, relative to *whence*, and *whence* is as with "
@@ -327,20 +340,20 @@ msgstr ""
 " починається блокування, відносно *whence*, а *whence* — як у "
 ":func:`io.IOBase.seek`, зокрема:"
 
-#: ../../library/fcntl.rst:186
+#: ../../library/fcntl.rst:207
 msgid "``0`` -- relative to the start of the file (:const:`os.SEEK_SET`)"
 msgstr ""
 
-#: ../../library/fcntl.rst:187
+#: ../../library/fcntl.rst:208
 msgid ""
 "``1`` -- relative to the current buffer position (:const:`os.SEEK_CUR`)"
 msgstr ""
 
-#: ../../library/fcntl.rst:188
+#: ../../library/fcntl.rst:209
 msgid "``2`` -- relative to the end of the file (:const:`os.SEEK_END`)"
 msgstr ""
 
-#: ../../library/fcntl.rst:190
+#: ../../library/fcntl.rst:211
 msgid ""
 "The default for *start* is 0, which means to start at the beginning of the "
 "file. The default for *len* is 0 which means to lock to the end of the file."
@@ -350,7 +363,7 @@ msgstr ""
 "Типовим значенням для *len* є 0, що означає блокування до кінця файлу. За "
 "замовчуванням для *whence* також дорівнює 0."
 
-#: ../../library/fcntl.rst:194
+#: ../../library/fcntl.rst:215
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``fcntl.lockf`` with arguments "
 "``fd``, ``cmd``, ``len``, ``start``, ``whence``."
@@ -358,11 +371,11 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``fcntl.lockf`` з аргументами "
 "``fd``, ``cmd``, ``len``, ``start``, ``whence``."
 
-#: ../../library/fcntl.rst:196
+#: ../../library/fcntl.rst:217
 msgid "Examples (all on a SVR4 compliant system)::"
 msgstr "Приклади (усі в системі, сумісній з SVR4):"
 
-#: ../../library/fcntl.rst:206
+#: ../../library/fcntl.rst:227
 msgid ""
 "Note that in the first example the return value variable *rv* will hold an "
 "integer value; in the second example it will hold a :class:`bytes` object.  "
@@ -374,11 +387,11 @@ msgstr ""
 "для змінної *lockdata* залежить від системи --- тому використання виклику "
 ":func:`flock` може бути кращим."
 
-#: ../../library/fcntl.rst:214
+#: ../../library/fcntl.rst:235
 msgid "Module :mod:`os`"
 msgstr "Модуль :mod:`os`"
 
-#: ../../library/fcntl.rst:215
+#: ../../library/fcntl.rst:236
 msgid ""
 "If the locking flags :const:`~os.O_SHLOCK` and :const:`~os.O_EXLOCK` are "
 "present in the :mod:`os` module (on BSD only), the :func:`os.open` function "
