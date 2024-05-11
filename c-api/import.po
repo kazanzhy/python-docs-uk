@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:48+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -48,7 +48,11 @@ msgstr ""
 "блокування по модулю для більшості цілей, тому особлива поведінка цієї "
 "функції більше не потрібна."
 
-#: ../../c-api/import.rst:34
+#: ../../c-api/import.rst:30
+msgid "Use :c:func:`PyImport_ImportModule` instead."
+msgstr ""
+
+#: ../../c-api/import.rst:37
 msgid ""
 "Import a module.  This is best described by referring to the built-in Python"
 " function :func:`__import__`."
@@ -56,7 +60,7 @@ msgstr ""
 "Імпортувати модуль. Найкраще це можна описати, звернувшись до вбудованої "
 "функції Python :func:`__import__`."
 
-#: ../../c-api/import.rst:37 ../../c-api/import.rst:53
+#: ../../c-api/import.rst:40 ../../c-api/import.rst:56
 msgid ""
 "The return value is a new reference to the imported module or top-level "
 "package, or ``NULL`` with an exception set on failure.  Like for "
@@ -70,7 +74,7 @@ msgstr ""
 "підмодуль пакету, зазвичай є пакетом верхнього рівня, якщо не було надано "
 "непорожній *fromlist*."
 
-#: ../../c-api/import.rst:43
+#: ../../c-api/import.rst:46
 msgid ""
 "Failing imports remove incomplete module objects, like with "
 ":c:func:`PyImport_ImportModule`."
@@ -78,7 +82,7 @@ msgstr ""
 "Невдалий імпорт видаляє неповні об’єкти модуля, як-от "
 ":c:func:`PyImport_ImportModule`."
 
-#: ../../c-api/import.rst:49
+#: ../../c-api/import.rst:52
 msgid ""
 "Import a module.  This is best described by referring to the built-in Python"
 " function :func:`__import__`, as the standard :func:`__import__` function "
@@ -88,7 +92,7 @@ msgstr ""
 "функції Python :func:`__import__`, оскільки стандартна функція "
 ":func:`__import__` викликає цю функцію безпосередньо."
 
-#: ../../c-api/import.rst:63
+#: ../../c-api/import.rst:66
 msgid ""
 "Similar to :c:func:`PyImport_ImportModuleLevelObject`, but the name is a "
 "UTF-8 encoded string instead of a Unicode object."
@@ -96,11 +100,11 @@ msgstr ""
 "Подібно до :c:func:`PyImport_ImportModuleLevelObject`, але ім’я є рядком у "
 "кодуванні UTF-8 замість об’єкта Unicode."
 
-#: ../../c-api/import.rst:66
+#: ../../c-api/import.rst:69
 msgid "Negative values for *level* are no longer accepted."
 msgstr "Від’ємні значення для *рівня* більше не приймаються."
 
-#: ../../c-api/import.rst:71
+#: ../../c-api/import.rst:74
 msgid ""
 "This is a higher-level interface that calls the current \"import hook "
 "function\" (with an explicit *level* of 0, meaning absolute import).  It "
@@ -114,11 +118,11 @@ msgstr ""
 " що імпорт виконується за допомогою будь-яких хуків імпорту, встановлених у "
 "поточному середовищі."
 
-#: ../../c-api/import.rst:77
+#: ../../c-api/import.rst:80
 msgid "This function always uses absolute imports."
 msgstr "Ця функція завжди використовує абсолютний імпорт."
 
-#: ../../c-api/import.rst:82
+#: ../../c-api/import.rst:85
 msgid ""
 "Reload a module.  Return a new reference to the reloaded module, or ``NULL``"
 " with an exception set on failure (the module still exists in this case)."
@@ -127,41 +131,49 @@ msgstr ""
 "або ``NULL`` з винятком, встановленим у разі помилки (у цьому випадку модуль"
 " все ще існує)."
 
-#: ../../c-api/import.rst:88
-msgid ""
-"Return the module object corresponding to a module name.  The *name* "
-"argument may be of the form ``package.module``. First check the modules "
-"dictionary if there's one there, and if not, create a new one and insert it "
-"in the modules dictionary. Return ``NULL`` with an exception set on failure."
+#: ../../c-api/import.rst:91
+msgid "Return the module object corresponding to a module name."
 msgstr ""
-"Повертає об’єкт модуля, що відповідає імені модуля. Аргумент *name* може "
-"мати форму ``package.module``. Спочатку перевірте словник модулів, якщо він "
-"там є, а якщо ні, створіть новий і вставте його в словник модулів. Повертає "
-"``NULL`` із встановленим винятком у разі помилки."
 
-#: ../../c-api/import.rst:95
+#: ../../c-api/import.rst:93
+msgid ""
+"The *name* argument may be of the form ``package.module``. First check the "
+"modules dictionary if there's one there, and if not, create a new one and "
+"insert it in the modules dictionary."
+msgstr ""
+
+#: ../../c-api/import.rst:97
+msgid ""
+"Return a :term:`strong reference` to the module on success. Return ``NULL`` "
+"with an exception set on failure."
+msgstr ""
+
+#: ../../c-api/import.rst:100
+msgid "The module name *name* is decoded from UTF-8."
+msgstr ""
+
+#: ../../c-api/import.rst:102
 msgid ""
 "This function does not load or import the module; if the module wasn't "
 "already loaded, you will get an empty module object. Use "
-":c:func:`PyImport_ImportModule` or one of its variants to import a module.  "
+":c:func:`PyImport_ImportModule` or one of its variants to import a module. "
 "Package structures implied by a dotted name for *name* are not created if "
 "not already present."
 msgstr ""
-"Ця функція не завантажує та не імпортує модуль; якщо модуль ще не "
-"завантажено, ви отримаєте порожній об’єкт модуля. Використовуйте "
-":c:func:`PyImport_ImportModule` або один із його варіантів, щоб імпортувати "
-"модуль. Структури пакетів, визначені назвою *name* із крапками, не "
-"створюються, якщо вони ще не присутні."
-
-#: ../../c-api/import.rst:105
-msgid ""
-"Similar to :c:func:`PyImport_AddModuleObject`, but the name is a UTF-8 "
-"encoded string instead of a Unicode object."
-msgstr ""
-"Подібно до :c:func:`PyImport_AddModuleObject`, але ім’я є рядком у кодуванні"
-" UTF-8 замість об’єкта Юнікод."
 
 #: ../../c-api/import.rst:113
+msgid ""
+"Similar to :c:func:`PyImport_AddModuleRef`, but return a :term:`borrowed "
+"reference` and *name* is a Python :class:`str` object."
+msgstr ""
+
+#: ../../c-api/import.rst:121
+msgid ""
+"Similar to :c:func:`PyImport_AddModuleRef`, but return a :term:`borrowed "
+"reference`."
+msgstr ""
+
+#: ../../c-api/import.rst:129
 msgid ""
 "Given a module name (possibly of the form ``package.module``) and a code "
 "object read from a Python bytecode file or obtained from the built-in "
@@ -175,7 +187,7 @@ msgid ""
 "respect to the module author's intents) state."
 msgstr ""
 
-#: ../../c-api/import.rst:123
+#: ../../c-api/import.rst:139
 msgid ""
 "The module's :attr:`__spec__` and :attr:`__loader__` will be set, if not set"
 " already, with the appropriate values.  The spec's loader will be set to the"
@@ -183,14 +195,14 @@ msgid ""
 ":class:`~importlib.machinery.SourceFileLoader` otherwise."
 msgstr ""
 
-#: ../../c-api/import.rst:128
+#: ../../c-api/import.rst:144
 msgid ""
 "The module's :attr:`__file__` attribute will be set to the code object's "
 ":attr:`~codeobject.co_filename`.  If applicable, :attr:`__cached__` will "
 "also be set."
 msgstr ""
 
-#: ../../c-api/import.rst:132
+#: ../../c-api/import.rst:148
 msgid ""
 "This function will reload the module if it was already imported.  See "
 ":c:func:`PyImport_ReloadModule` for the intended way to reload a module."
@@ -199,7 +211,7 @@ msgstr ""
 "Перегляньте :c:func:`PyImport_ReloadModule` для передбачуваного способу "
 "перезавантаження модуля."
 
-#: ../../c-api/import.rst:135
+#: ../../c-api/import.rst:151
 msgid ""
 "If *name* points to a dotted name of the form ``package.module``, any "
 "package structures not already created will still not be created."
@@ -207,7 +219,7 @@ msgstr ""
 "Якщо *name* вказує на ім’я з крапками у формі ``package.module``, будь-які "
 "ще не створені структури пакунків не будуть створені."
 
-#: ../../c-api/import.rst:138
+#: ../../c-api/import.rst:154
 msgid ""
 "See also :c:func:`PyImport_ExecCodeModuleEx` and "
 ":c:func:`PyImport_ExecCodeModuleWithPathnames`."
@@ -215,13 +227,13 @@ msgstr ""
 "Дивіться також :c:func:`PyImport_ExecCodeModuleEx` і "
 ":c:func:`PyImport_ExecCodeModuleWithPathnames`."
 
-#: ../../c-api/import.rst:141
+#: ../../c-api/import.rst:157
 msgid ""
 "The setting of :attr:`__cached__` and :attr:`__loader__` is deprecated. See "
 ":class:`~importlib.machinery.ModuleSpec` for alternatives."
 msgstr ""
 
-#: ../../c-api/import.rst:149
+#: ../../c-api/import.rst:165
 msgid ""
 "Like :c:func:`PyImport_ExecCodeModule`, but the :attr:`__file__` attribute "
 "of the module object is set to *pathname* if it is non-``NULL``."
@@ -229,11 +241,11 @@ msgstr ""
 "Подібно до :c:func:`PyImport_ExecCodeModule`, але атрибут :attr:`__file__` "
 "об’єкта модуля встановлюється на *pathname*, якщо він не є ``NULL``."
 
-#: ../../c-api/import.rst:152
+#: ../../c-api/import.rst:168
 msgid "See also :c:func:`PyImport_ExecCodeModuleWithPathnames`."
 msgstr "Дивіться також :c:func:`PyImport_ExecCodeModuleWithPathnames`."
 
-#: ../../c-api/import.rst:157
+#: ../../c-api/import.rst:173
 msgid ""
 "Like :c:func:`PyImport_ExecCodeModuleEx`, but the :attr:`__cached__` "
 "attribute of the module object is set to *cpathname* if it is non-``NULL``."
@@ -243,13 +255,13 @@ msgstr ""
 ":attr:`__cached__` об’єкта модуля встановлюється на *cpathname*, якщо він не"
 " ``NULL``. З усіх трьох функцій найкраще використовувати цю."
 
-#: ../../c-api/import.rst:163
+#: ../../c-api/import.rst:179
 msgid ""
 "Setting :attr:`__cached__` is deprecated. See "
 ":class:`~importlib.machinery.ModuleSpec` for alternatives."
 msgstr ""
 
-#: ../../c-api/import.rst:170
+#: ../../c-api/import.rst:186
 msgid ""
 "Like :c:func:`PyImport_ExecCodeModuleObject`, but *name*, *pathname* and "
 "*cpathname* are UTF-8 encoded strings. Attempts are also made to figure out "
@@ -261,17 +273,17 @@ msgstr ""
 "яким має бути значення *pathname* від *cpathname*, якщо для першого "
 "встановлено значення ``NULL``."
 
-#: ../../c-api/import.rst:176
+#: ../../c-api/import.rst:192
 msgid ""
 "Uses :func:`!imp.source_from_cache()` in calculating the source path if only"
 " the bytecode path is provided."
 msgstr ""
 
-#: ../../c-api/import.rst:179
+#: ../../c-api/import.rst:195
 msgid "No longer uses the removed :mod:`!imp` module."
 msgstr ""
 
-#: ../../c-api/import.rst:185
+#: ../../c-api/import.rst:201
 msgid ""
 "Return the magic number for Python bytecode files (a.k.a. :file:`.pyc` "
 "file). The magic number should be present in the first four bytes of the "
@@ -282,11 +294,11 @@ msgstr ""
 "файлу байт-коду в порядку байтів у порядку байтів. Повертає ``-1`` у разі "
 "помилки."
 
-#: ../../c-api/import.rst:189
+#: ../../c-api/import.rst:205
 msgid "Return value of ``-1`` upon failure."
 msgstr "Повертає значення \"-1\" у разі помилки."
 
-#: ../../c-api/import.rst:195
+#: ../../c-api/import.rst:211
 msgid ""
 "Return the magic tag string for :pep:`3147` format Python bytecode file "
 "names.  Keep in mind that the value at ``sys.implementation.cache_tag`` is "
@@ -296,7 +308,7 @@ msgstr ""
 ":pep:`3147`. Майте на увазі, що значення в ``sys.implementation.cache_tag`` "
 "є авторитетним і має використовуватися замість цієї функції."
 
-#: ../../c-api/import.rst:203
+#: ../../c-api/import.rst:219
 msgid ""
 "Return the dictionary used for the module administration (a.k.a. "
 "``sys.modules``).  Note that this is a per-interpreter variable."
@@ -304,7 +316,7 @@ msgstr ""
 "Повертає словник, який використовується для адміністрування модуля (він же "
 "``sys.modules``). Зверніть увагу, що це змінна для кожного інтерпретатора."
 
-#: ../../c-api/import.rst:208
+#: ../../c-api/import.rst:224
 msgid ""
 "Return the already imported module with the given name.  If the module has "
 "not been imported yet then returns ``NULL`` but does not set an error.  "
@@ -314,7 +326,7 @@ msgstr ""
 " імпортовано, повертає ``NULL``, але не встановлює помилку. Повертає "
 "``NULL`` і встановлює помилку, якщо пошук не вдався."
 
-#: ../../c-api/import.rst:216
+#: ../../c-api/import.rst:232
 msgid ""
 "Return a finder object for a :data:`sys.path`/:attr:`!pkg.__path__` item "
 "*path*, possibly by fetching it from the :data:`sys.path_importer_cache` "
@@ -326,7 +338,7 @@ msgid ""
 "object."
 msgstr ""
 
-#: ../../c-api/import.rst:227
+#: ../../c-api/import.rst:243
 msgid ""
 "Load a frozen module named *name*.  Return ``1`` for success, ``0`` if the "
 "module is not found, and ``-1`` with an exception set if the initialization "
@@ -341,11 +353,11 @@ msgstr ""
 "(Зверніть увагу на неправильну назву --- ця функція перезавантажить модуль, "
 "якщо його вже було імпортовано.)"
 
-#: ../../c-api/import.rst:235
+#: ../../c-api/import.rst:251
 msgid "The ``__file__`` attribute is no longer set on the module."
 msgstr "Атрибут ``__file__`` більше не встановлено в модулі."
 
-#: ../../c-api/import.rst:241
+#: ../../c-api/import.rst:257
 msgid ""
 "Similar to :c:func:`PyImport_ImportFrozenModuleObject`, but the name is a "
 "UTF-8 encoded string instead of a Unicode object."
@@ -353,7 +365,7 @@ msgstr ""
 "Подібно до :c:func:`PyImport_ImportFrozenModuleObject`, але ім’я є рядком у "
 "кодуванні UTF-8 замість об’єкта Unicode."
 
-#: ../../c-api/import.rst:249
+#: ../../c-api/import.rst:265
 msgid ""
 "This is the structure type definition for frozen module descriptors, as "
 "generated by the :program:`freeze` utility (see :file:`Tools/freeze/` in the"
@@ -364,13 +376,13 @@ msgstr ""
 " утилітою :program:`freeze` (див. :file:`Tools/freeze/` у вихідному коді "
 "Python). Його визначення, знайдене в :file:`Include/import.h`, таке:"
 
-#: ../../c-api/import.rst:261
+#: ../../c-api/import.rst:277
 msgid ""
 "The new ``is_package`` field indicates whether the module is a package or "
 "not. This replaces setting the ``size`` field to a negative value."
 msgstr ""
 
-#: ../../c-api/import.rst:267
+#: ../../c-api/import.rst:283
 msgid ""
 "This pointer is initialized to point to an array of :c:struct:`_frozen` "
 "records, terminated by one whose members are all ``NULL`` or zero.  When a "
@@ -379,7 +391,7 @@ msgid ""
 "frozen modules."
 msgstr ""
 
-#: ../../c-api/import.rst:275
+#: ../../c-api/import.rst:291
 msgid ""
 "Add a single module to the existing table of built-in modules.  This is a "
 "convenience wrapper around :c:func:`PyImport_ExtendInittab`, returning "
@@ -395,7 +407,7 @@ msgstr ""
 "викликану під час першої спроби імпорту. Його слід викликати перед "
 ":c:func:`Py_Initialize`."
 
-#: ../../c-api/import.rst:285
+#: ../../c-api/import.rst:301
 msgid ""
 "Structure describing a single entry in the list of built-in modules. "
 "Programs which embed Python may use an array of these structures in "
@@ -403,15 +415,15 @@ msgid ""
 "built-in modules. The structure consists of two members:"
 msgstr ""
 
-#: ../../c-api/import.rst:293
+#: ../../c-api/import.rst:309
 msgid "The module name, as an ASCII encoded string."
 msgstr ""
 
-#: ../../c-api/import.rst:297
+#: ../../c-api/import.rst:313
 msgid "Initialization function for a module built into the interpreter."
 msgstr ""
 
-#: ../../c-api/import.rst:302
+#: ../../c-api/import.rst:318
 msgid ""
 "Add a collection of modules to the table of built-in modules.  The *newtab* "
 "array must end with a sentinel entry which contains ``NULL`` for the "
@@ -422,7 +434,7 @@ msgid ""
 "before :c:func:`Py_Initialize`."
 msgstr ""
 
-#: ../../c-api/import.rst:309
+#: ../../c-api/import.rst:325
 msgid ""
 "If Python is initialized multiple times, :c:func:`PyImport_AppendInittab` or"
 " :c:func:`PyImport_ExtendInittab` must be called before each Python "
@@ -448,18 +460,18 @@ msgstr ""
 msgid "modules (in module sys)"
 msgstr ""
 
-#: ../../c-api/import.rst:32 ../../c-api/import.rst:111
+#: ../../c-api/import.rst:35 ../../c-api/import.rst:127
 msgid "built-in function"
 msgstr ""
 
-#: ../../c-api/import.rst:32
+#: ../../c-api/import.rst:35
 msgid "__import__"
 msgstr ""
 
-#: ../../c-api/import.rst:111
+#: ../../c-api/import.rst:127
 msgid "compile"
 msgstr ""
 
-#: ../../c-api/import.rst:247
+#: ../../c-api/import.rst:263
 msgid "freeze utility"
 msgstr ""

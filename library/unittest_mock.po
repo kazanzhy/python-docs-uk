@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -21,15 +21,15 @@ msgstr ""
 "Language: uk\n"
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: ../../library/unittest.mock.rst:3
-msgid ":mod:`unittest.mock` --- mock object library"
-msgstr ":mod:`unittest.mock` --- бібліотека макетів об'єктів"
+#: ../../library/unittest.mock.rst:2
+msgid ":mod:`!unittest.mock` --- mock object library"
+msgstr ""
 
-#: ../../library/unittest.mock.rst:13
+#: ../../library/unittest.mock.rst:12
 msgid "**Source code:** :source:`Lib/unittest/mock.py`"
 msgstr "**Вихідний код:** :source:`Lib/unittest/mock.py`"
 
-#: ../../library/unittest.mock.rst:17
+#: ../../library/unittest.mock.rst:16
 msgid ""
 ":mod:`unittest.mock` is a library for testing in Python. It allows you to "
 "replace parts of your system under test with mock objects and make "
@@ -39,7 +39,7 @@ msgstr ""
 "вам замінити частини вашої тестованої системи на фіктивні об’єкти та зробити"
 " твердження про те, як вони використовувалися."
 
-#: ../../library/unittest.mock.rst:21
+#: ../../library/unittest.mock.rst:20
 msgid ""
 ":mod:`unittest.mock` provides a core :class:`Mock` class removing the need "
 "to create a host of stubs throughout your test suite. After performing an "
@@ -54,7 +54,7 @@ msgstr ""
 "вказати значення, що повертаються, і встановити необхідні атрибути звичайним"
 " способом."
 
-#: ../../library/unittest.mock.rst:27
+#: ../../library/unittest.mock.rst:26
 msgid ""
 "Additionally, mock provides a :func:`patch` decorator that handles patching "
 "module and class level attributes within the scope of a test, along with "
@@ -68,7 +68,7 @@ msgstr ""
 "guide`_) для деяких прикладів використання :class:`Mock`, :class:`MagicMock`"
 " і :func:`patch`."
 
-#: ../../library/unittest.mock.rst:33
+#: ../../library/unittest.mock.rst:32
 msgid ""
 "Mock is designed for use with :mod:`unittest` and is based on the 'action ->"
 " assertion' pattern instead of 'record -> replay' used by many mocking "
@@ -78,17 +78,17 @@ msgstr ""
 "\"action -> assertion\" замість \"record -> replay\", який використовується "
 "багатьма фреймворками мокінгу."
 
-#: ../../library/unittest.mock.rst:37
+#: ../../library/unittest.mock.rst:36
 msgid ""
 "There is a backport of :mod:`unittest.mock` for earlier versions of Python, "
 "available as :pypi:`mock` on PyPI."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:42
+#: ../../library/unittest.mock.rst:41
 msgid "Quick Guide"
 msgstr "Короткий посібник"
 
-#: ../../library/unittest.mock.rst:60
+#: ../../library/unittest.mock.rst:59
 msgid ""
 ":class:`Mock` and :class:`MagicMock` objects create all attributes and "
 "methods as you access them and store details of how they have been used. You"
@@ -101,7 +101,7 @@ msgstr ""
 "повертаються, або обмежити доступність атрибутів, а потім зробити твердження"
 " про те, як вони використовувалися:"
 
-#: ../../library/unittest.mock.rst:72
+#: ../../library/unittest.mock.rst:71
 msgid ""
 ":attr:`side_effect` allows you to perform side effects, including raising an"
 " exception when a mock is called:"
@@ -109,7 +109,7 @@ msgstr ""
 ":attr:`side_effect` дозволяє виконувати побічні ефекти, включно з викликом "
 "винятку під час виклику макету:"
 
-#: ../../library/unittest.mock.rst:93
+#: ../../library/unittest.mock.rst:92
 msgid ""
 "Mock has many other ways you can configure it and control its behaviour. For"
 " example the *spec* argument configures the mock to take its specification "
@@ -122,7 +122,7 @@ msgstr ""
 "методів у макеті, які не існують у специфікації, закінчиться помилкою з "
 ":exc:`AttributeError`."
 
-#: ../../library/unittest.mock.rst:98
+#: ../../library/unittest.mock.rst:97
 msgid ""
 "The :func:`patch` decorator / context manager makes it easy to mock classes "
 "or objects in a module under test. The object you specify will be replaced "
@@ -133,7 +133,7 @@ msgstr ""
 " об’єкти в тестованому модулі. Вказаний вами об’єкт буде замінено макетом "
 "(або іншим об’єктом) під час тесту та відновлено після завершення тесту:"
 
-#: ../../library/unittest.mock.rst:117
+#: ../../library/unittest.mock.rst:116
 msgid ""
 "When you nest patch decorators the mocks are passed in to the decorated "
 "function in the same order they applied (the normal *Python* order that "
@@ -145,7 +145,7 @@ msgstr ""
 "порядок застосування декораторів). Це означає знизу вгору, тому у наведеному"
 " вище прикладі спочатку передається макет для ``module.ClassName1``."
 
-#: ../../library/unittest.mock.rst:122
+#: ../../library/unittest.mock.rst:121
 msgid ""
 "With :func:`patch` it matters that you patch objects in the namespace where "
 "they are looked up. This is normally straightforward, but for a quick guide "
@@ -155,7 +155,7 @@ msgstr ""
 "шукаються. Зазвичай це просто, але для короткого посібника прочитайте "
 ":ref:`де патч <where-to-patch>`."
 
-#: ../../library/unittest.mock.rst:126
+#: ../../library/unittest.mock.rst:125
 msgid ""
 "As well as a decorator :func:`patch` can be used as a context manager in a "
 "with statement:"
@@ -163,7 +163,7 @@ msgstr ""
 "Як і декоратор :func:`patch` можна використовувати як менеджер контексту в "
 "операторі with:"
 
-#: ../../library/unittest.mock.rst:136
+#: ../../library/unittest.mock.rst:135
 msgid ""
 "There is also :func:`patch.dict` for setting values in a dictionary just "
 "during a scope and restoring the dictionary to its original state when the "
@@ -173,7 +173,7 @@ msgstr ""
 "час області видимості та відновлення словника до початкового стану після "
 "завершення тесту:"
 
-#: ../../library/unittest.mock.rst:147
+#: ../../library/unittest.mock.rst:146
 msgid ""
 "Mock supports the mocking of Python :ref:`magic methods <magic-methods>`. "
 "The easiest way of using magic methods is with the :class:`MagicMock` class."
@@ -183,7 +183,7 @@ msgstr ""
 "Найпростіший спосіб використання магічних методів — це клас "
 ":class:`MagicMock`. Це дозволяє вам робити такі речі, як:"
 
-#: ../../library/unittest.mock.rst:157
+#: ../../library/unittest.mock.rst:156
 msgid ""
 "Mock allows you to assign functions (or other Mock instances) to magic "
 "methods and they will be called appropriately. The :class:`MagicMock` class "
@@ -195,7 +195,7 @@ msgstr ""
 "це просто варіант Mock, який містить усі магічні методи, попередньо створені"
 " для вас (ну, у всякому разі, всі корисні)."
 
-#: ../../library/unittest.mock.rst:162
+#: ../../library/unittest.mock.rst:161
 msgid ""
 "The following is an example of using magic methods with the ordinary Mock "
 "class:"
@@ -203,7 +203,7 @@ msgstr ""
 "Нижче наведено приклад використання магічних методів із звичайним класом "
 "Mock:"
 
-#: ../../library/unittest.mock.rst:170
+#: ../../library/unittest.mock.rst:169
 msgid ""
 "For ensuring that the mock objects in your tests have the same api as the "
 "objects they are replacing, you can use :ref:`auto-speccing <auto-"
@@ -222,7 +222,7 @@ msgstr ""
 "(включаючи конструктори) мають ту саму сигнатуру виклику, що й реальний "
 "об’єкт."
 
-#: ../../library/unittest.mock.rst:178
+#: ../../library/unittest.mock.rst:177
 msgid ""
 "This ensures that your mocks will fail in the same way as your production "
 "code if they are used incorrectly:"
@@ -230,7 +230,7 @@ msgstr ""
 "Це гарантує, що ваші макети не працюватимуть так само, як і ваш робочий код,"
 " якщо вони використовуються неправильно:"
 
-#: ../../library/unittest.mock.rst:194
+#: ../../library/unittest.mock.rst:193
 msgid ""
 ":func:`create_autospec` can also be used on classes, where it copies the "
 "signature of the ``__init__`` method, and on callable objects where it "
@@ -240,11 +240,11 @@ msgstr ""
 "сигнатуру методу ``__init__``, і на викликаних об’єктах, де він копіює "
 "сигнатуру ``__call__`` методу."
 
-#: ../../library/unittest.mock.rst:201
+#: ../../library/unittest.mock.rst:200
 msgid "The Mock Class"
 msgstr "Імітаційний клас"
 
-#: ../../library/unittest.mock.rst:212
+#: ../../library/unittest.mock.rst:213
 msgid ""
 ":class:`Mock` is a flexible mock object intended to replace the use of stubs"
 " and test doubles throughout your code. Mocks are callable and create "
@@ -259,7 +259,7 @@ msgstr ""
 "записують, як ви їх використовуєте, дозволяючи вам робити твердження про те,"
 " що з ними зробив ваш код."
 
-#: ../../library/unittest.mock.rst:218
+#: ../../library/unittest.mock.rst:219
 msgid ""
 ":class:`MagicMock` is a subclass of :class:`Mock` with all the magic methods"
 " pre-created and ready to use. There are also non-callable variants, useful "
@@ -271,7 +271,7 @@ msgstr ""
 "без можливості виклику, корисні, коли ви знущаєтеся над об’єктами, які не "
 "можна викликати: :class:`NonCallableMock` і :class:`NonCallableMagicMock`"
 
-#: ../../library/unittest.mock.rst:223
+#: ../../library/unittest.mock.rst:224
 msgid ""
 "The :func:`patch` decorators makes it easy to temporarily replace classes in"
 " a particular module with a :class:`Mock` object. By default :func:`patch` "
@@ -283,7 +283,7 @@ msgstr ""
 "вас :class:`MagicMock`. Ви можете вказати альтернативний клас :class:`Mock` "
 "за допомогою аргументу *new_callable* для :func:`patch`."
 
-#: ../../library/unittest.mock.rst:231
+#: ../../library/unittest.mock.rst:232
 msgid ""
 "Create a new :class:`Mock` object. :class:`Mock` takes several optional "
 "arguments that specify the behaviour of the Mock object:"
@@ -291,7 +291,7 @@ msgstr ""
 "Створіть новий об’єкт :class:`Mock`. :class:`Mock` приймає кілька додаткових"
 " аргументів, які визначають поведінку об’єкта Mock:"
 
-#: ../../library/unittest.mock.rst:234
+#: ../../library/unittest.mock.rst:235
 msgid ""
 "*spec*: This can be either a list of strings or an existing object (a class "
 "or instance) that acts as the specification for the mock object. If you pass"
@@ -306,7 +306,7 @@ msgstr ""
 "до будь-якого атрибута, якого немає в цьому списку, викличе "
 ":exc:`AttributeError`."
 
-#: ../../library/unittest.mock.rst:240
+#: ../../library/unittest.mock.rst:241
 msgid ""
 "If *spec* is an object (rather than a list of strings) then "
 ":attr:`~instance.__class__` returns the class of the spec object. This "
@@ -316,7 +316,7 @@ msgstr ""
 ":attr:`~instance.__class__` повертає клас специфікаційного об’єкта. Це "
 "дозволяє макетам проходити тести :func:`isinstance`."
 
-#: ../../library/unittest.mock.rst:244
+#: ../../library/unittest.mock.rst:245
 msgid ""
 "*spec_set*: A stricter variant of *spec*. If used, attempting to *set* or "
 "get an attribute on the mock that isn't on the object passed as *spec_set* "
@@ -326,7 +326,7 @@ msgstr ""
 "*встановити* або отримати атрибут у макеті, якого немає в об’єкті, "
 "переданому як *spec_set*, викличе :exc:`AttributeError`."
 
-#: ../../library/unittest.mock.rst:248
+#: ../../library/unittest.mock.rst:249
 msgid ""
 "*side_effect*: A function to be called whenever the Mock is called. See the "
 ":attr:`~Mock.side_effect` attribute. Useful for raising exceptions or "
@@ -341,7 +341,7 @@ msgstr ""
 ":data:`DEFAULT`, значення, що повертається цією функцією, використовується "
 "як значення, що повертається."
 
-#: ../../library/unittest.mock.rst:254
+#: ../../library/unittest.mock.rst:255
 msgid ""
 "Alternatively *side_effect* can be an exception class or instance. In this "
 "case the exception will be raised when the mock is called."
@@ -349,7 +349,7 @@ msgstr ""
 "Крім того, *side_effect* може бути класом винятків або екземпляром. У цьому "
 "випадку виняток буде викликано під час виклику макета."
 
-#: ../../library/unittest.mock.rst:257
+#: ../../library/unittest.mock.rst:258
 msgid ""
 "If *side_effect* is an iterable then each call to the mock will return the "
 "next value from the iterable."
@@ -357,12 +357,12 @@ msgstr ""
 "Якщо *side_effect* є iterable, тоді кожен виклик mock повертатиме наступне "
 "значення з iterable."
 
-#: ../../library/unittest.mock.rst:260
+#: ../../library/unittest.mock.rst:261
 msgid "A *side_effect* can be cleared by setting it to ``None``."
 msgstr ""
 "*Побічний_ефект* можна очистити, встановивши для нього значення ``None``."
 
-#: ../../library/unittest.mock.rst:262
+#: ../../library/unittest.mock.rst:263
 msgid ""
 "*return_value*: The value returned when the mock is called. By default this "
 "is a new Mock (created on first access). See the :attr:`return_value` "
@@ -372,7 +372,7 @@ msgstr ""
 "замовчуванням це новий макет (створений під час першого доступу). "
 "Перегляньте атрибут :attr:`return_value`."
 
-#: ../../library/unittest.mock.rst:266
+#: ../../library/unittest.mock.rst:267
 msgid ""
 "*unsafe*: By default, accessing any attribute whose name starts with "
 "*assert*, *assret*, *asert*, *aseert* or *assrt* will raise an "
@@ -380,7 +380,7 @@ msgid ""
 "attributes."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:273
+#: ../../library/unittest.mock.rst:274
 msgid ""
 "*wraps*: Item for the mock object to wrap. If *wraps* is not ``None`` then "
 "calling the Mock will pass the call through to the wrapped object (returning"
@@ -395,7 +395,7 @@ msgstr ""
 "обгортає відповідний атрибут упакованого об’єкта (тому спроба отримати "
 "доступ до атрибута, якого не існує, викличе :exc:`AttributeError`)."
 
-#: ../../library/unittest.mock.rst:280
+#: ../../library/unittest.mock.rst:281
 msgid ""
 "If the mock has an explicit *return_value* set then calls are not passed to "
 "the wrapped object and the *return_value* is returned instead."
@@ -403,7 +403,7 @@ msgstr ""
 "Якщо макет має явний набір *return_value*, тоді виклики не передаються до "
 "упакованого об’єкта, а замість нього повертається *return_value*."
 
-#: ../../library/unittest.mock.rst:283
+#: ../../library/unittest.mock.rst:284
 msgid ""
 "*name*: If the mock has a name then it will be used in the repr of the mock."
 " This can be useful for debugging. The name is propagated to child mocks."
@@ -412,7 +412,7 @@ msgstr ""
 "макета. Це може бути корисним для налагодження. Ім'я поширюється на дитячі "
 "глузування."
 
-#: ../../library/unittest.mock.rst:287
+#: ../../library/unittest.mock.rst:288
 msgid ""
 "Mocks can also be called with arbitrary keyword arguments. These will be "
 "used to set attributes on the mock after it is created. See the "
@@ -423,15 +423,15 @@ msgstr ""
 "створення. Дивіться метод :meth:`configure_mock` для отримання детальної "
 "інформації."
 
-#: ../../library/unittest.mock.rst:293
+#: ../../library/unittest.mock.rst:294
 msgid "Assert that the mock was called at least once."
 msgstr "Стверджуйте, що макет був викликаний принаймні один раз."
 
-#: ../../library/unittest.mock.rst:304
+#: ../../library/unittest.mock.rst:305
 msgid "Assert that the mock was called exactly once."
 msgstr "Стверджуйте, що макет був викликаний рівно один раз."
 
-#: ../../library/unittest.mock.rst:322
+#: ../../library/unittest.mock.rst:324
 msgid ""
 "This method is a convenient way of asserting that the last call has been "
 "made in a particular way:"
@@ -439,7 +439,7 @@ msgstr ""
 "Цей метод є зручним способом підтвердження того, що останній виклик було "
 "зроблено певним чином:"
 
-#: ../../library/unittest.mock.rst:332
+#: ../../library/unittest.mock.rst:334
 msgid ""
 "Assert that the mock was called exactly once and that call was with the "
 "specified arguments."
@@ -447,11 +447,11 @@ msgstr ""
 "Стверджуйте, що макет був викликаний рівно один раз і цей виклик був із "
 "зазначеними аргументами."
 
-#: ../../library/unittest.mock.rst:347
+#: ../../library/unittest.mock.rst:349
 msgid "assert the mock has been called with the specified arguments."
 msgstr "стверджувати, що макет був викликаний із зазначеними аргументами."
 
-#: ../../library/unittest.mock.rst:349
+#: ../../library/unittest.mock.rst:351
 msgid ""
 "The assert passes if the mock has *ever* been called, unlike "
 ":meth:`assert_called_with` and :meth:`assert_called_once_with` that only "
@@ -463,7 +463,7 @@ msgstr ""
 "проходять, лише якщо виклик є останнім, і у випадку :meth:`assert_ "
 "called_once_with` це також має бути єдиний виклик."
 
-#: ../../library/unittest.mock.rst:362
+#: ../../library/unittest.mock.rst:364
 msgid ""
 "assert the mock has been called with the specified calls. The "
 ":attr:`mock_calls` list is checked for the calls."
@@ -471,7 +471,7 @@ msgstr ""
 "стверджувати, що макет було викликано за допомогою вказаних викликів. Список"
 " :attr:`mock_calls` перевіряється на наявність викликів."
 
-#: ../../library/unittest.mock.rst:365
+#: ../../library/unittest.mock.rst:367
 msgid ""
 "If *any_order* is false then the calls must be sequential. There can be "
 "extra calls before or after the specified calls."
@@ -479,7 +479,7 @@ msgstr ""
 "Якщо *any_order* має значення false, виклики мають бути послідовними. До або"
 " після вказаних викликів можуть бути додаткові дзвінки."
 
-#: ../../library/unittest.mock.rst:369
+#: ../../library/unittest.mock.rst:371
 msgid ""
 "If *any_order* is true then the calls can be in any order, but they must all"
 " appear in :attr:`mock_calls`."
@@ -487,19 +487,19 @@ msgstr ""
 "Якщо *any_order* має значення true, виклики можуть бути в будь-якому "
 "порядку, але всі вони мають відображатися в :attr:`mock_calls`."
 
-#: ../../library/unittest.mock.rst:384
+#: ../../library/unittest.mock.rst:386
 msgid "Assert the mock was never called."
 msgstr "Стверджуйте, що макет ніколи не викликався."
 
-#: ../../library/unittest.mock.rst:399
+#: ../../library/unittest.mock.rst:402
 msgid "The reset_mock method resets all the call attributes on a mock object:"
 msgstr "Метод reset_mock скидає всі атрибути виклику на макетному об’єкті:"
 
-#: ../../library/unittest.mock.rst:409
+#: ../../library/unittest.mock.rst:412
 msgid "Added two keyword-only arguments to the reset_mock function."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:412
+#: ../../library/unittest.mock.rst:415
 msgid ""
 "This can be useful where you want to make a series of assertions that reuse "
 "the same object. Note that :meth:`reset_mock` *doesn't* clear the return "
@@ -516,11 +516,11 @@ msgstr ""
 " параметр як ``True``. Дочірні імітації та макет повертаного значення (якщо "
 "є) також скидаються."
 
-#: ../../library/unittest.mock.rst:420
+#: ../../library/unittest.mock.rst:423
 msgid "*return_value*, and :attr:`side_effect` are keyword-only arguments."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:426
+#: ../../library/unittest.mock.rst:429
 msgid ""
 "Add a spec to a mock. *spec* can either be an object or a list of strings. "
 "Only attributes on the *spec* can be fetched as attributes from the mock."
@@ -528,13 +528,13 @@ msgstr ""
 "Додайте специфікацію до макета. *spec* може бути або об’єктом, або списком "
 "рядків. Лише атрибути в *специфікації* можна отримати як атрибути з макета."
 
-#: ../../library/unittest.mock.rst:430
+#: ../../library/unittest.mock.rst:433
 msgid "If *spec_set* is true then only attributes on the spec can be set."
 msgstr ""
 "Якщо *spec_set* має значення true, можна встановити лише атрибути "
 "специфікації."
 
-#: ../../library/unittest.mock.rst:435
+#: ../../library/unittest.mock.rst:438
 msgid ""
 "Attach a mock as an attribute of this one, replacing its name and parent. "
 "Calls to the attached mock will be recorded in the :attr:`method_calls` and "
@@ -544,11 +544,11 @@ msgstr ""
 " Виклики вкладеного макету будуть записані в атрибутах :attr:`method_calls` "
 "і :attr:`mock_calls` цього."
 
-#: ../../library/unittest.mock.rst:442
+#: ../../library/unittest.mock.rst:445
 msgid "Set attributes on the mock through keyword arguments."
 msgstr "Встановіть атрибути макета за допомогою аргументів ключових слів."
 
-#: ../../library/unittest.mock.rst:444
+#: ../../library/unittest.mock.rst:447
 msgid ""
 "Attributes plus return values and side effects can be set on child mocks "
 "using standard dot notation and unpacking a dictionary in the method call:"
@@ -557,11 +557,11 @@ msgstr ""
 "встановлені на дочірніх моделях за допомогою стандартної нотації з крапками "
 "та розпакування словника під час виклику методу:"
 
-#: ../../library/unittest.mock.rst:458
+#: ../../library/unittest.mock.rst:461
 msgid "The same thing can be achieved in the constructor call to mocks:"
 msgstr "Те саме можна досягти у виклику конструктора mocks:"
 
-#: ../../library/unittest.mock.rst:471
+#: ../../library/unittest.mock.rst:474
 msgid ""
 ":meth:`configure_mock` exists to make it easier to do configuration after "
 "the mock has been created."
@@ -569,7 +569,7 @@ msgstr ""
 ":meth:`configure_mock` існує, щоб полегшити налаштування після створення "
 "макету."
 
-#: ../../library/unittest.mock.rst:477
+#: ../../library/unittest.mock.rst:480
 msgid ""
 ":class:`Mock` objects limit the results of ``dir(some_mock)`` to useful "
 "results. For mocks with a *spec* this includes all the permitted attributes "
@@ -579,7 +579,7 @@ msgstr ""
 "результатами. Для макетів із *специфікацією* це включає всі дозволені "
 "атрибути для макету."
 
-#: ../../library/unittest.mock.rst:481
+#: ../../library/unittest.mock.rst:484
 msgid ""
 "See :data:`FILTER_DIR` for what this filtering does, and how to switch it "
 "off."
@@ -587,7 +587,7 @@ msgstr ""
 "Перегляньте :data:`FILTER_DIR`, щоб дізнатися, що робить це фільтрування та "
 "як його вимкнути."
 
-#: ../../library/unittest.mock.rst:487
+#: ../../library/unittest.mock.rst:490
 msgid ""
 "Create the child mocks for attributes and return value. By default child "
 "mocks will be the same type as the parent. Subclasses of Mock may want to "
@@ -598,7 +598,7 @@ msgstr ""
 "Підкласи Mock можуть захотіти перевизначити це, щоб налаштувати спосіб "
 "створення дочірніх моків."
 
-#: ../../library/unittest.mock.rst:492
+#: ../../library/unittest.mock.rst:495
 msgid ""
 "For non-callable mocks the callable variant will be used (rather than any "
 "custom subclass)."
@@ -606,22 +606,22 @@ msgstr ""
 "Для макетів, які не підлягають виклику, використовуватиметься варіант, який "
 "можна викликати (а не будь-який настроюваний підклас)."
 
-#: ../../library/unittest.mock.rst:498
+#: ../../library/unittest.mock.rst:501
 msgid "A boolean representing whether or not the mock object has been called:"
 msgstr "Логічне значення, яке вказує, чи було викликано макетний об’єкт:"
 
-#: ../../library/unittest.mock.rst:509
+#: ../../library/unittest.mock.rst:512
 msgid "An integer telling you how many times the mock object has been called:"
 msgstr ""
 "Ціле число, яке повідомляє вам, скільки разів був викликаний макетний "
 "об’єкт:"
 
-#: ../../library/unittest.mock.rst:521
+#: ../../library/unittest.mock.rst:524
 msgid "Set this to configure the value returned by calling the mock:"
 msgstr ""
 "Встановіть це, щоб налаштувати значення, що повертається викликом mock:"
 
-#: ../../library/unittest.mock.rst:528
+#: ../../library/unittest.mock.rst:531
 msgid ""
 "The default return value is a mock object and you can configure it in the "
 "normal way:"
@@ -629,11 +629,11 @@ msgstr ""
 "Типовим значенням, що повертається, є макет об’єкта, і ви можете налаштувати"
 " його звичайним способом:"
 
-#: ../../library/unittest.mock.rst:537
+#: ../../library/unittest.mock.rst:540
 msgid ":attr:`return_value` can also be set in the constructor:"
 msgstr ":attr:`return_value` також можна встановити в конструкторі:"
 
-#: ../../library/unittest.mock.rst:548
+#: ../../library/unittest.mock.rst:551
 msgid ""
 "This can either be a function to be called when the mock is called, an "
 "iterable or an exception (class or instance) to be raised."
@@ -641,7 +641,7 @@ msgstr ""
 "Це може бути або функція, яку потрібно викликати під час виклику макета, "
 "ітерація або виняток (клас або екземпляр), який потрібно викликати."
 
-#: ../../library/unittest.mock.rst:551
+#: ../../library/unittest.mock.rst:554
 msgid ""
 "If you pass in a function it will be called with same arguments as the mock "
 "and unless the function returns the :data:`DEFAULT` singleton the call to "
@@ -654,7 +654,7 @@ msgstr ""
 " поверне те, що повертає функція. Якщо функція повертає :data:`DEFAULT`, "
 "макет поверне своє нормальне значення (з :attr:`return_value`)."
 
-#: ../../library/unittest.mock.rst:557
+#: ../../library/unittest.mock.rst:560
 msgid ""
 "If you pass in an iterable, it is used to retrieve an iterator which must "
 "yield a value on every call.  This value can either be an exception instance"
@@ -666,7 +666,7 @@ msgstr ""
 "бути або екземпляром винятку, який буде створено, або значенням, яке буде "
 "повернуто викликом mock (обробка :data:`DEFAULT` ідентична функції case)."
 
-#: ../../library/unittest.mock.rst:562
+#: ../../library/unittest.mock.rst:565
 msgid ""
 "An example of a mock that raises an exception (to test exception handling of"
 " an API):"
@@ -674,16 +674,16 @@ msgstr ""
 "Приклад макету, який викликає виняткову ситуацію (для перевірки обробки "
 "винятків API):"
 
-#: ../../library/unittest.mock.rst:572
+#: ../../library/unittest.mock.rst:575
 msgid "Using :attr:`side_effect` to return a sequence of values:"
 msgstr ""
 "Використання :attr:`side_effect` для повернення послідовності значень:"
 
-#: ../../library/unittest.mock.rst:579
+#: ../../library/unittest.mock.rst:582
 msgid "Using a callable:"
 msgstr "Використання виклику:"
 
-#: ../../library/unittest.mock.rst:589
+#: ../../library/unittest.mock.rst:592
 msgid ""
 ":attr:`side_effect` can be set in the constructor. Here's an example that "
 "adds one to the value the mock is called with and returns it:"
@@ -691,11 +691,11 @@ msgstr ""
 ":attr:`side_effect` можна встановити в конструкторі. Ось приклад, який додає"
 " одиницю до значення, з яким викликається макет, і повертає його:"
 
-#: ../../library/unittest.mock.rst:599
+#: ../../library/unittest.mock.rst:602
 msgid "Setting :attr:`side_effect` to ``None`` clears it:"
 msgstr "Встановлення :attr:`side_effect` на ``None`` очищає його:"
 
-#: ../../library/unittest.mock.rst:613
+#: ../../library/unittest.mock.rst:616
 msgid ""
 "This is either ``None`` (if the mock hasn't been called), or the arguments "
 "that the mock was last called with. This will be in the form of a tuple: the"
@@ -711,7 +711,7 @@ msgstr ""
 "а другий член, який може доступ також через властивість ``kwargs``, це будь-"
 "які ключові аргументи (або порожній словник)."
 
-#: ../../library/unittest.mock.rst:646
+#: ../../library/unittest.mock.rst:649
 msgid ""
 ":attr:`call_args`, along with members of the lists :attr:`call_args_list`, "
 ":attr:`method_calls` and :attr:`mock_calls` are :data:`call` objects. These "
@@ -724,11 +724,11 @@ msgstr ""
 " складніші твердження. Перегляньте :ref:`виклики як кортежі <calls-as-"
 "tuples>`."
 
-#: ../../library/unittest.mock.rst:652
+#: ../../library/unittest.mock.rst:655
 msgid "Added ``args`` and ``kwargs`` properties."
 msgstr "Додано властивості ``args`` і ``kwargs``."
 
-#: ../../library/unittest.mock.rst:658
+#: ../../library/unittest.mock.rst:661
 msgid ""
 "This is a list of all the calls made to the mock object in sequence (so the "
 "length of the list is the number of times it has been called). Before any "
@@ -741,7 +741,7 @@ msgstr ""
 "порожній список. Об’єкт :data:`call` можна використовувати для зручного "
 "створення списків викликів для порівняння з :attr:`call_args_list`."
 
-#: ../../library/unittest.mock.rst:674
+#: ../../library/unittest.mock.rst:677
 msgid ""
 "Members of :attr:`call_args_list` are :data:`call` objects. These can be "
 "unpacked as tuples to get at the individual arguments. See :ref:`calls as "
@@ -751,7 +751,7 @@ msgstr ""
 "як кортежі, щоб отримати окремі аргументи. Перегляньте :ref:`виклики як "
 "кортежі <calls-as-tuples>`."
 
-#: ../../library/unittest.mock.rst:681
+#: ../../library/unittest.mock.rst:684
 msgid ""
 "As well as tracking calls to themselves, mocks also track calls to methods "
 "and attributes, and *their* methods and attributes:"
@@ -759,7 +759,7 @@ msgstr ""
 "Крім відстеження викликів самих себе, mocks також відстежують виклики "
 "методів і атрибутів, а також *їх* методів і атрибутів:"
 
-#: ../../library/unittest.mock.rst:692
+#: ../../library/unittest.mock.rst:695
 msgid ""
 "Members of :attr:`method_calls` are :data:`call` objects. These can be "
 "unpacked as tuples to get at the individual arguments. See :ref:`calls as "
@@ -769,7 +769,7 @@ msgstr ""
 " кортежі, щоб отримати окремі аргументи. Перегляньте :ref:`виклики як "
 "кортежі <calls-as-tuples>`."
 
-#: ../../library/unittest.mock.rst:699
+#: ../../library/unittest.mock.rst:702
 msgid ""
 ":attr:`mock_calls` records *all* calls to the mock object, its methods, "
 "magic methods *and* return value mocks."
@@ -777,7 +777,7 @@ msgstr ""
 ":attr:`mock_calls` записує *всі* виклики макетного об’єкта, його методи, "
 "чарівні методи *та* імітації значення, що повертається."
 
-#: ../../library/unittest.mock.rst:717
+#: ../../library/unittest.mock.rst:720
 msgid ""
 "Members of :attr:`mock_calls` are :data:`call` objects. These can be "
 "unpacked as tuples to get at the individual arguments. See :ref:`calls as "
@@ -787,7 +787,7 @@ msgstr ""
 "кортежі, щоб отримати окремі аргументи. Перегляньте :ref:`виклики як кортежі"
 " <calls-as-tuples>`."
 
-#: ../../library/unittest.mock.rst:723
+#: ../../library/unittest.mock.rst:726
 msgid ""
 "The way :attr:`mock_calls` are recorded means that where nested calls are "
 "made, the parameters of ancestor calls are not recorded and so will always "
@@ -797,7 +797,7 @@ msgstr ""
 "виклики, параметри викликів предків не записуються, тому порівняння завжди "
 "буде рівним:"
 
-#: ../../library/unittest.mock.rst:737
+#: ../../library/unittest.mock.rst:740
 msgid ""
 "Normally the :attr:`__class__` attribute of an object will return its type. "
 "For a mock object with a :attr:`spec`, ``__class__`` returns the spec class "
@@ -809,7 +809,7 @@ msgstr ""
 "клас специфікації. Це дозволяє фіктивним об’єктам проходити тести "
 ":func:`isinstance` для об’єкта, який вони замінюють/маскують під:"
 
-#: ../../library/unittest.mock.rst:746
+#: ../../library/unittest.mock.rst:749
 msgid ""
 ":attr:`__class__` is assignable to, this allows a mock to pass an "
 ":func:`isinstance` check without forcing you to use a spec:"
@@ -817,7 +817,7 @@ msgstr ""
 ":attr:`__class__` можна призначити, це дозволяє макету проходити перевірку "
 ":func:`isinstance`, не змушуючи вас використовувати специфікацію:"
 
-#: ../../library/unittest.mock.rst:756
+#: ../../library/unittest.mock.rst:759
 msgid ""
 "A non-callable version of :class:`Mock`. The constructor parameters have the"
 " same meaning of :class:`Mock`, with the exception of *return_value* and "
@@ -827,7 +827,7 @@ msgstr ""
 "саме значення, що й :class:`Mock`, за винятком *return_value* і "
 "*side_effect*, які не мають значення для макету, який не викликається."
 
-#: ../../library/unittest.mock.rst:760
+#: ../../library/unittest.mock.rst:763
 msgid ""
 "Mock objects that use a class or an instance as a :attr:`spec` or "
 ":attr:`spec_set` are able to pass :func:`isinstance` tests:"
@@ -835,7 +835,7 @@ msgstr ""
 "Макетні об’єкти, які використовують клас або екземпляр як :attr:`spec` або "
 ":attr:`spec_set`, можуть проходити :func:`isinstance` тести:"
 
-#: ../../library/unittest.mock.rst:770
+#: ../../library/unittest.mock.rst:773
 msgid ""
 "The :class:`Mock` classes have support for mocking magic methods. See "
 ":ref:`magic methods <magic-methods>` for the full details."
@@ -843,7 +843,7 @@ msgstr ""
 "Класи :class:`Mock` підтримують методи насміхуватої магії. Дивіться "
 ":ref:`магічні методи <magic-methods>` для повної інформації."
 
-#: ../../library/unittest.mock.rst:773
+#: ../../library/unittest.mock.rst:776
 msgid ""
 "The mock classes and the :func:`patch` decorators all take arbitrary keyword"
 " arguments for configuration. For the :func:`patch` decorators the keywords "
@@ -855,7 +855,7 @@ msgstr ""
 "передаються до конструктора макета, який створюється. Ключові аргументи "
 "призначені для налаштування атрибутів макета:"
 
-#: ../../library/unittest.mock.rst:784
+#: ../../library/unittest.mock.rst:787
 msgid ""
 "The return value and side effect of child mocks can be set in the same way, "
 "using dotted notation. As you can't use dotted names directly in a call you "
@@ -866,7 +866,7 @@ msgstr ""
 "використовувати імена з крапками безпосередньо у виклику, вам потрібно "
 "створити словник і розпакувати його за допомогою ``**``:"
 
-#: ../../library/unittest.mock.rst:799
+#: ../../library/unittest.mock.rst:802
 msgid ""
 "A callable mock which was created with a *spec* (or a *spec_set*) will "
 "introspect the specification object's signature when matching calls to the "
@@ -878,7 +878,7 @@ msgstr ""
 "чином, він може відповідати фактичним аргументам виклику незалежно від того,"
 " чи були вони передані позиційно чи за назвою::"
 
-#: ../../library/unittest.mock.rst:812
+#: ../../library/unittest.mock.rst:815
 msgid ""
 "This applies to :meth:`~Mock.assert_called_with`, "
 ":meth:`~Mock.assert_called_once_with`, :meth:`~Mock.assert_has_calls` and "
@@ -890,13 +890,13 @@ msgstr ""
 ":meth:`~Mock.assert_any_call`. Коли :ref:`auto-speccing`, це також "
 "застосовуватиметься до викликів методів фіктивного об’єкта."
 
-#: ../../library/unittest.mock.rst:817
+#: ../../library/unittest.mock.rst:820
 msgid "Added signature introspection on specced and autospecced mock objects."
 msgstr ""
 "Додано авторську перевірку підпису на специфіковані та автоматично "
 "специфіковані макетні об’єкти."
 
-#: ../../library/unittest.mock.rst:823
+#: ../../library/unittest.mock.rst:826
 msgid ""
 "A mock intended to be used as a :class:`property`, or other "
 ":term:`descriptor`, on a class. :class:`PropertyMock` provides "
@@ -904,7 +904,7 @@ msgid ""
 "specify a return value when it is fetched."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:828
+#: ../../library/unittest.mock.rst:831
 msgid ""
 "Fetching a :class:`PropertyMock` instance from an object calls the mock, "
 "with no args. Setting it calls the mock with the value being set. ::"
@@ -912,7 +912,7 @@ msgstr ""
 "Отримання екземпляра :class:`PropertyMock` з об’єкта викликає макет без "
 "аргументів. Його встановлення викликає макет із встановленим значенням. ::"
 
-#: ../../library/unittest.mock.rst:849
+#: ../../library/unittest.mock.rst:852
 msgid ""
 "Because of the way mock attributes are stored you can't directly attach a "
 ":class:`PropertyMock` to a mock object. Instead you can attach it to the "
@@ -922,7 +922,7 @@ msgstr ""
 "прикріпити :class:`PropertyMock` до макетного об’єкта. Замість цього ви "
 "можете прикріпити його до об’єкта макетного типу::"
 
-#: ../../library/unittest.mock.rst:863
+#: ../../library/unittest.mock.rst:866
 msgid ""
 "An asynchronous version of :class:`MagicMock`. The :class:`AsyncMock` object"
 " will behave so the object is recognized as an async function, and the "
@@ -932,7 +932,7 @@ msgstr ""
 "поводитиметься таким чином, що об’єкт розпізнається як асинхронна функція, а"
 " результат виклику є очікуваним."
 
-#: ../../library/unittest.mock.rst:873
+#: ../../library/unittest.mock.rst:876
 msgid ""
 "The result of ``mock()`` is an async function which will have the outcome of"
 " ``side_effect`` or ``return_value`` after it has been awaited:"
@@ -940,7 +940,7 @@ msgstr ""
 "Результатом ``mock()`` є асинхронна функція, яка матиме результат "
 "``side_effect`` або ``return_value`` після очікування:"
 
-#: ../../library/unittest.mock.rst:876
+#: ../../library/unittest.mock.rst:879
 msgid ""
 "if ``side_effect`` is a function, the async function will return the result "
 "of that function,"
@@ -948,13 +948,13 @@ msgstr ""
 "якщо ``side_effect`` є функцією, асинхронна функція поверне результат цієї "
 "функції,"
 
-#: ../../library/unittest.mock.rst:878
+#: ../../library/unittest.mock.rst:881
 msgid ""
 "if ``side_effect`` is an exception, the async function will raise the "
 "exception,"
 msgstr "якщо ``side_effect`` є винятком, функція async викличе виняток,"
 
-#: ../../library/unittest.mock.rst:880
+#: ../../library/unittest.mock.rst:883
 msgid ""
 "if ``side_effect`` is an iterable, the async function will return the next "
 "value of the iterable, however, if the sequence of result is exhausted, "
@@ -964,7 +964,7 @@ msgstr ""
 "ітерованого, однак, якщо послідовність результатів вичерпана, "
 "``StopAsyncIteration`` викликається негайно,"
 
-#: ../../library/unittest.mock.rst:883
+#: ../../library/unittest.mock.rst:886
 msgid ""
 "if ``side_effect`` is not defined, the async function will return the value "
 "defined by ``return_value``, hence, by default, the async function returns a"
@@ -974,7 +974,7 @@ msgstr ""
 " ``return_value``, отже, за замовчуванням функція async повертає новий "
 "об’єкт :class:`AsyncMock`."
 
-#: ../../library/unittest.mock.rst:888
+#: ../../library/unittest.mock.rst:891
 msgid ""
 "Setting the *spec* of a :class:`Mock` or :class:`MagicMock` to an async "
 "function will result in a coroutine object being returned after calling."
@@ -983,7 +983,7 @@ msgstr ""
 "асинхронну функцію призведе до повернення об’єкта співпрограми після "
 "виклику."
 
-#: ../../library/unittest.mock.rst:900
+#: ../../library/unittest.mock.rst:903
 msgid ""
 "Setting the *spec* of a :class:`Mock`, :class:`MagicMock`, or "
 ":class:`AsyncMock` to a class with asynchronous and synchronous functions "
@@ -999,7 +999,7 @@ msgstr ""
 ":class:`MagicMock`) або :class:`Mock` (якщо батьківським макетом є "
 ":class:`Mock`). Усі асинхронні функції будуть :class:`AsyncMock`."
 
-#: ../../library/unittest.mock.rst:928
+#: ../../library/unittest.mock.rst:931
 msgid ""
 "Assert that the mock was awaited at least once. Note that this is separate "
 "from the object having been called, the ``await`` keyword must be used:"
@@ -1007,28 +1007,28 @@ msgstr ""
 "Стверджуйте, що макету чекали хоча б раз. Зауважте, що це окремо від "
 "викликаного об’єкта, необхідно використовувати ключове слово ``await``:"
 
-#: ../../library/unittest.mock.rst:947
+#: ../../library/unittest.mock.rst:950
 msgid "Assert that the mock was awaited exactly once."
 msgstr "Стверджують, що макет чекали рівно один раз."
 
-#: ../../library/unittest.mock.rst:963
+#: ../../library/unittest.mock.rst:966
 msgid "Assert that the last await was with the specified arguments."
 msgstr ""
 "Підтвердження того, що останнє очікування було з указаними аргументами."
 
-#: ../../library/unittest.mock.rst:980
+#: ../../library/unittest.mock.rst:983
 msgid ""
 "Assert that the mock was awaited exactly once and with the specified "
 "arguments."
 msgstr ""
 "Стверджуйте, що макет очікувався рівно один раз і з вказаними аргументами."
 
-#: ../../library/unittest.mock.rst:997
+#: ../../library/unittest.mock.rst:1000
 msgid "Assert the mock has ever been awaited with the specified arguments."
 msgstr ""
 "Стверджуйте, що макет коли-небудь був очікуваний із зазначеними аргументами."
 
-#: ../../library/unittest.mock.rst:1013
+#: ../../library/unittest.mock.rst:1016
 msgid ""
 "Assert the mock has been awaited with the specified calls. The "
 ":attr:`await_args_list` list is checked for the awaits."
@@ -1036,7 +1036,7 @@ msgstr ""
 "Стверджувати, що макет очікувався з указаними викликами. Список "
 ":attr:`await_args_list` перевіряється на наявність очікувань."
 
-#: ../../library/unittest.mock.rst:1016
+#: ../../library/unittest.mock.rst:1019
 msgid ""
 "If *any_order* is false then the awaits must be sequential. There can be "
 "extra calls before or after the specified awaits."
@@ -1044,7 +1044,7 @@ msgstr ""
 "Якщо *any_order* має значення false, очікування мають бути послідовними. "
 "Можуть бути додаткові виклики до або після вказаних очікувань."
 
-#: ../../library/unittest.mock.rst:1020
+#: ../../library/unittest.mock.rst:1023
 msgid ""
 "If *any_order* is true then the awaits can be in any order, but they must "
 "all appear in :attr:`await_args_list`."
@@ -1052,11 +1052,11 @@ msgstr ""
 "Якщо *any_order* має значення true, очікування можуть бути в будь-якому "
 "порядку, але всі вони мають відображатися в :attr:`await_args_list`."
 
-#: ../../library/unittest.mock.rst:1040
+#: ../../library/unittest.mock.rst:1043
 msgid "Assert that the mock was never awaited."
 msgstr "Стверджують, що макет так і не дочекався."
 
-#: ../../library/unittest.mock.rst:1047
+#: ../../library/unittest.mock.rst:1050
 msgid ""
 "See :func:`Mock.reset_mock`. Also sets :attr:`await_count` to 0, "
 ":attr:`await_args` to None, and clears the :attr:`await_args_list`."
@@ -1064,12 +1064,12 @@ msgstr ""
 "Перегляньте :func:`Mock.reset_mock`. Також встановлює :attr:`await_count` на"
 " 0, :attr:`await_args` на None і очищає :attr:`await_args_list`."
 
-#: ../../library/unittest.mock.rst:1052
+#: ../../library/unittest.mock.rst:1055
 msgid ""
 "An integer keeping track of how many times the mock object has been awaited."
 msgstr "Ціле число, яке відстежує, скільки разів очікувався макетний об’єкт."
 
-#: ../../library/unittest.mock.rst:1067
+#: ../../library/unittest.mock.rst:1070
 msgid ""
 "This is either ``None`` (if the mock hasn’t been awaited), or the arguments "
 "that the mock was last awaited with. Functions the same as "
@@ -1078,7 +1078,7 @@ msgstr ""
 "Це або ``None`` (якщо макет не був очікуваний), або аргументи, з якими макет"
 " було очікувано востаннє. Функціонує так само, як :attr:`Mock.call_args`."
 
-#: ../../library/unittest.mock.rst:1085
+#: ../../library/unittest.mock.rst:1088
 msgid ""
 "This is a list of all the awaits made to the mock object in sequence (so the"
 " length of the list is the number of times it has been awaited). Before any "
@@ -1088,11 +1088,58 @@ msgstr ""
 "(тому довжина списку — це кількість разів, коли його очікували). Перш ніж "
 "було зроблено будь-які очікування, це порожній список."
 
-#: ../../library/unittest.mock.rst:1104
+#: ../../library/unittest.mock.rst:1108
+msgid ""
+"A version of :class:`MagicMock` for multithreading tests. The "
+":class:`ThreadingMock` object provides extra methods to wait for a call to "
+"be invoked, rather than assert on it immediately."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1112
+msgid ""
+"The default timeout is specified by the ``timeout`` argument, or if unset by"
+" the :attr:`ThreadingMock.DEFAULT_TIMEOUT` attribute, which defaults to "
+"blocking (``None``)."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1115
+msgid ""
+"You can configure the global default timeout by setting "
+":attr:`ThreadingMock.DEFAULT_TIMEOUT`."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1119
+msgid "Waits until the mock is called."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1121
+msgid ""
+"If a timeout was passed at the creation of the mock or if a timeout argument"
+" is passed to this function, the function raises an :exc:`AssertionError` if"
+" the call is not performed in time."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1133
+msgid "Waits until the mock is called with the specified arguments."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1135
+msgid ""
+"If a timeout was passed at the creation of the mock the function raises an "
+":exc:`AssertionError` if the call is not performed in time."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1146
+msgid ""
+"Global default timeout in seconds to create instances of "
+":class:`ThreadingMock`."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:1152
 msgid "Calling"
 msgstr "Дзвінок"
 
-#: ../../library/unittest.mock.rst:1106
+#: ../../library/unittest.mock.rst:1154
 msgid ""
 "Mock objects are callable. The call will return the value set as the "
 ":attr:`~Mock.return_value` attribute. The default return value is a new Mock"
@@ -1106,7 +1153,7 @@ msgstr ""
 "повертається (явним чином або шляхом виклику Mock), але воно зберігається й "
 "кожного разу повертається те саме."
 
-#: ../../library/unittest.mock.rst:1112
+#: ../../library/unittest.mock.rst:1160
 msgid ""
 "Calls made to the object will be recorded in the attributes like "
 ":attr:`~Mock.call_args` and :attr:`~Mock.call_args_list`."
@@ -1114,7 +1161,7 @@ msgstr ""
 "Виклики, здійснені до об’єкта, будуть записані в такі атрибути, як "
 ":attr:`~Mock.call_args` і :attr:`~Mock.call_args_list`."
 
-#: ../../library/unittest.mock.rst:1115
+#: ../../library/unittest.mock.rst:1163
 msgid ""
 "If :attr:`~Mock.side_effect` is set then it will be called after the call "
 "has been recorded, so if :attr:`side_effect` raises an exception the call is"
@@ -1124,7 +1171,7 @@ msgstr ""
 " виклику, отже, якщо :attr:`side_effect` викликає виняток, виклик усе одно "
 "записується."
 
-#: ../../library/unittest.mock.rst:1119
+#: ../../library/unittest.mock.rst:1167
 msgid ""
 "The simplest way to make a mock raise an exception when called is to make "
 ":attr:`~Mock.side_effect` an exception class or instance:"
@@ -1132,7 +1179,7 @@ msgstr ""
 "Найпростіший спосіб змусити макет викликати виняток під час виклику — це "
 "зробити :attr:`~Mock.side_effect` класом або екземпляром виключення:"
 
-#: ../../library/unittest.mock.rst:1137
+#: ../../library/unittest.mock.rst:1185
 msgid ""
 "If :attr:`side_effect` is a function then whatever that function returns is "
 "what calls to the mock return. The :attr:`side_effect` function is called "
@@ -1144,7 +1191,7 @@ msgstr ""
 " аргументами, що й макет. Це дозволяє динамічно змінювати значення, що "
 "повертається викликом, на основі вхідних даних:"
 
-#: ../../library/unittest.mock.rst:1153
+#: ../../library/unittest.mock.rst:1201
 msgid ""
 "If you want the mock to still return the default return value (a new mock), "
 "or any set return value, then there are two ways of doing this. Either "
@@ -1156,7 +1203,7 @@ msgstr ""
 "способи зробити це. Або поверніть :attr:`mock.return_value` зсередини "
 ":attr:`side_effect`, або поверніть :data:`DEFAULT`:"
 
-#: ../../library/unittest.mock.rst:1172
+#: ../../library/unittest.mock.rst:1220
 msgid ""
 "To remove a :attr:`side_effect`, and return to the default behaviour, set "
 "the :attr:`side_effect` to ``None``:"
@@ -1164,7 +1211,7 @@ msgstr ""
 "Щоб видалити :attr:`side_effect` і повернутися до типової поведінки, "
 "установіть :attr:`side_effect` значення ``None``:"
 
-#: ../../library/unittest.mock.rst:1186
+#: ../../library/unittest.mock.rst:1234
 msgid ""
 "The :attr:`side_effect` can also be any iterable object. Repeated calls to "
 "the mock will return values from the iterable (until the iterable is "
@@ -1174,7 +1221,7 @@ msgstr ""
 "виклики mock повертатимуть значення з iterable (поки iterable не буде "
 "вичерпано та не буде викликано :exc:`StopIteration`):"
 
-#: ../../library/unittest.mock.rst:1202
+#: ../../library/unittest.mock.rst:1250
 msgid ""
 "If any members of the iterable are exceptions they will be raised instead of"
 " returned::"
@@ -1182,11 +1229,11 @@ msgstr ""
 "Якщо будь-які члени iterable є винятками, вони будуть викликані замість "
 "повернення::"
 
-#: ../../library/unittest.mock.rst:1220
+#: ../../library/unittest.mock.rst:1268
 msgid "Deleting Attributes"
 msgstr "Видалення атрибутів"
 
-#: ../../library/unittest.mock.rst:1222
+#: ../../library/unittest.mock.rst:1270
 msgid ""
 "Mock objects create attributes on demand. This allows them to pretend to be "
 "objects of any type."
@@ -1194,7 +1241,7 @@ msgstr ""
 "Макетні об’єкти створюють атрибути на вимогу. Це дозволяє їм видавати себе "
 "за об’єкти будь-якого типу."
 
-#: ../../library/unittest.mock.rst:1225
+#: ../../library/unittest.mock.rst:1273
 msgid ""
 "You may want a mock object to return ``False`` to a :func:`hasattr` call, or"
 " raise an :exc:`AttributeError` when an attribute is fetched. You can do "
@@ -1206,7 +1253,7 @@ msgstr ""
 "отримується. Ви можете зробити це, надавши об’єкт як :attr:`spec` для "
 "макету, але це не завжди зручно."
 
-#: ../../library/unittest.mock.rst:1229
+#: ../../library/unittest.mock.rst:1277
 msgid ""
 "You \"block\" attributes by deleting them. Once deleted, accessing an "
 "attribute will raise an :exc:`AttributeError`."
@@ -1214,11 +1261,11 @@ msgstr ""
 "Ви \"блокуєте\" атрибути, видаляючи їх. Після видалення доступ до атрибута "
 "викличе :exc:`AttributeError`."
 
-#: ../../library/unittest.mock.rst:1246
+#: ../../library/unittest.mock.rst:1294
 msgid "Mock names and the name attribute"
 msgstr "Макетні назви та атрибут name"
 
-#: ../../library/unittest.mock.rst:1248
+#: ../../library/unittest.mock.rst:1296
 msgid ""
 "Since \"name\" is an argument to the :class:`Mock` constructor, if you want "
 "your mock object to have a \"name\" attribute you can't just pass it in at "
@@ -1230,7 +1277,7 @@ msgstr ""
 "його під час створення. Є дві альтернативи. Одним із варіантів є "
 "використання :meth:`~Mock.configure_mock`::"
 
-#: ../../library/unittest.mock.rst:1258
+#: ../../library/unittest.mock.rst:1306
 msgid ""
 "A simpler option is to simply set the \"name\" attribute after mock "
 "creation::"
@@ -1238,11 +1285,11 @@ msgstr ""
 "Простішим варіантом є просто встановити атрибут \"name\" після створення "
 "макета::"
 
-#: ../../library/unittest.mock.rst:1265
+#: ../../library/unittest.mock.rst:1313
 msgid "Attaching Mocks as Attributes"
 msgstr "Додавання макетів як атрибутів"
 
-#: ../../library/unittest.mock.rst:1267
+#: ../../library/unittest.mock.rst:1315
 msgid ""
 "When you attach a mock as an attribute of another mock (or as the return "
 "value) it becomes a \"child\" of that mock. Calls to the child are recorded "
@@ -1260,7 +1307,7 @@ msgstr ""
 "імітацій до батьківського, який записує всі виклики до нащадків і дозволяє "
 "вам робити твердження щодо порядку викликів між імітаціями:"
 
-#: ../../library/unittest.mock.rst:1285
+#: ../../library/unittest.mock.rst:1333
 msgid ""
 "The exception to this is if the mock has a name. This allows you to prevent "
 "the \"parenting\" if for some reason you don't want it to happen."
@@ -1268,7 +1315,7 @@ msgstr ""
 "Винятком є випадки, коли макет має назву. Це дозволяє запобігти "
 "\"батьківству\", якщо з якихось причин ви цього не хочете."
 
-#: ../../library/unittest.mock.rst:1296
+#: ../../library/unittest.mock.rst:1344
 msgid ""
 "Mocks created for you by :func:`patch` are automatically given names. To "
 "attach mocks that have names to a parent you use the "
@@ -1278,7 +1325,7 @@ msgstr ""
 "приєднати імена до батьківського елемента, ви використовуєте метод "
 ":meth:`~Mock.attach_mock`::"
 
-#: ../../library/unittest.mock.rst:1314
+#: ../../library/unittest.mock.rst:1362
 msgid ""
 "The only exceptions are magic methods and attributes (those that have "
 "leading and trailing double underscores). Mock doesn't create these but "
@@ -1294,11 +1341,11 @@ msgstr ""
 "Mock, коли очікує чарівний метод. Якщо вам потрібна підтримка магічних "
 "методів, перегляньте :ref:`магічні методи <magic-methods>`."
 
-#: ../../library/unittest.mock.rst:1323
+#: ../../library/unittest.mock.rst:1371
 msgid "The patchers"
 msgstr "Патчери"
 
-#: ../../library/unittest.mock.rst:1325
+#: ../../library/unittest.mock.rst:1373
 msgid ""
 "The patch decorators are used for patching objects only within the scope of "
 "the function they decorate. They automatically handle the unpatching for "
@@ -1310,11 +1357,11 @@ msgstr ""
 " навіть якщо виникають винятки. Усі ці функції також можна використовувати в"
 " операторах або як декоратори класів."
 
-#: ../../library/unittest.mock.rst:1332
+#: ../../library/unittest.mock.rst:1380
 msgid "patch"
 msgstr "патч"
 
-#: ../../library/unittest.mock.rst:1336
+#: ../../library/unittest.mock.rst:1384
 msgid ""
 "The key is to do the patching in the right namespace. See the section `where"
 " to patch`_."
@@ -1322,7 +1369,7 @@ msgstr ""
 "Головне — виконати виправлення у правильному просторі імен. Дивіться розділ "
 "`where to patch`_."
 
-#: ../../library/unittest.mock.rst:1340
+#: ../../library/unittest.mock.rst:1388
 msgid ""
 ":func:`patch` acts as a function decorator, class decorator or a context "
 "manager. Inside the body of the function or with statement, the *target* is "
@@ -1333,7 +1380,7 @@ msgstr ""
 "контексту. Усередині тіла функції або оператора *ціль* додається до *нового*"
 " об’єкта. Коли оператор function/with завершує роботу, патч скасовується."
 
-#: ../../library/unittest.mock.rst:1345
+#: ../../library/unittest.mock.rst:1393
 msgid ""
 "If *new* is omitted, then the target is replaced with an :class:`AsyncMock` "
 "if the patched object is an async function or a :class:`MagicMock` "
@@ -1349,7 +1396,7 @@ msgstr ""
 ":func:`patch` використовується як менеджер контексту, створений макет "
 "повертається менеджером контексту."
 
-#: ../../library/unittest.mock.rst:1353
+#: ../../library/unittest.mock.rst:1401
 msgid ""
 "*target* should be a string in the form ``'package.module.ClassName'``. The "
 "*target* is imported and the specified object replaced with the *new* "
@@ -1363,7 +1410,7 @@ msgstr ""
 "Ціль імпортується під час виконання декорованої функції, а не під час "
 "декорування."
 
-#: ../../library/unittest.mock.rst:1359
+#: ../../library/unittest.mock.rst:1407
 msgid ""
 "The *spec* and *spec_set* keyword arguments are passed to the "
 ":class:`MagicMock` if patch is creating one for you."
@@ -1371,7 +1418,7 @@ msgstr ""
 "Ключові аргументи *spec* і *spec_set* передаються в :class:`MagicMock`, якщо"
 " patch створює його для вас."
 
-#: ../../library/unittest.mock.rst:1362
+#: ../../library/unittest.mock.rst:1410
 msgid ""
 "In addition you can pass ``spec=True`` or ``spec_set=True``, which causes "
 "patch to pass in the object being mocked as the spec/spec_set object."
@@ -1380,7 +1427,7 @@ msgstr ""
 "спричиняє передачу латки в об’єкті, який імітується, як об’єкт "
 "spec/spec_set."
 
-#: ../../library/unittest.mock.rst:1365
+#: ../../library/unittest.mock.rst:1413
 msgid ""
 "*new_callable* allows you to specify a different class, or callable object, "
 "that will be called to create the *new* object. By default "
@@ -1392,7 +1439,7 @@ msgstr ""
 ":class:`AsyncMock` використовується для асинхронних функцій, а "
 ":class:`MagicMock` для решти."
 
-#: ../../library/unittest.mock.rst:1369
+#: ../../library/unittest.mock.rst:1417
 msgid ""
 "A more powerful form of *spec* is *autospec*. If you set ``autospec=True`` "
 "then the mock will be created with a spec from the object being replaced. "
@@ -1412,7 +1459,7 @@ msgstr ""
 "повертається (\"екземпляр\") матиме ту саму специфікацію, що й клас. "
 "Перегляньте функцію :func:`create_autospec` і :ref:`auto-speccing`."
 
-#: ../../library/unittest.mock.rst:1379
+#: ../../library/unittest.mock.rst:1427
 msgid ""
 "Instead of ``autospec=True`` you can pass ``autospec=some_object`` to use an"
 " arbitrary object as the spec instead of the one being replaced."
@@ -1421,7 +1468,7 @@ msgstr ""
 "використовувати довільний об’єкт як специфікацію замість того, що "
 "замінюється."
 
-#: ../../library/unittest.mock.rst:1382
+#: ../../library/unittest.mock.rst:1430
 msgid ""
 "By default :func:`patch` will fail to replace attributes that don't exist. "
 "If you pass in ``create=True``, and the attribute doesn't exist, patch will "
@@ -1439,7 +1486,7 @@ msgstr ""
 " вимкнено, оскільки це може бути небезпечно. Якщо його ввімкнути, ви можете "
 "писати тести проходження проти API, яких насправді не існує!"
 
-#: ../../library/unittest.mock.rst:1392
+#: ../../library/unittest.mock.rst:1440
 msgid ""
 "If you are patching builtins in a module then you don't need to pass "
 "``create=True``, it will be added by default."
@@ -1447,7 +1494,7 @@ msgstr ""
 "Якщо ви виправляєте вбудовані компоненти в модулі, вам не потрібно "
 "передавати ``create=True``, він буде доданий за замовчуванням."
 
-#: ../../library/unittest.mock.rst:1396
+#: ../../library/unittest.mock.rst:1444
 msgid ""
 "Patch can be used as a :class:`TestCase` class decorator. It works by "
 "decorating each test method in the class. This reduces the boilerplate code "
@@ -1465,7 +1512,7 @@ msgstr ""
 "способу, яким :mod:`unittest` знаходить тести. Ви можете вказати "
 "альтернативний префікс, встановивши ``patch.TEST_PREFIX``."
 
-#: ../../library/unittest.mock.rst:1403
+#: ../../library/unittest.mock.rst:1451
 msgid ""
 "Patch can be used as a context manager, with the with statement. Here the "
 "patching applies to the indented block after the with statement. If you use "
@@ -1478,7 +1525,7 @@ msgstr ""
 "прив’язаний до імені після \"as\"; дуже корисно, якщо :func:`patch` створює "
 "для вас макет об’єкта."
 
-#: ../../library/unittest.mock.rst:1408
+#: ../../library/unittest.mock.rst:1456
 msgid ""
 ":func:`patch` takes arbitrary keyword arguments. These will be passed to "
 ":class:`AsyncMock` if the patched object is asynchronous, to "
@@ -1488,7 +1535,7 @@ msgstr ""
 ":class:`AsyncMock`, якщо виправлений об’єкт є асинхронним, до "
 ":class:`MagicMock` інакше або до *new_callable*, якщо вказано."
 
-#: ../../library/unittest.mock.rst:1412
+#: ../../library/unittest.mock.rst:1460
 msgid ""
 "``patch.dict(...)``, ``patch.multiple(...)`` and ``patch.object(...)`` are "
 "available for alternate use-cases."
@@ -1496,7 +1543,7 @@ msgstr ""
 "``patch.dict(...)``, ``patch.multiple(...)`` і ``patch.object(...)`` "
 "доступні для альтернативних варіантів використання."
 
-#: ../../library/unittest.mock.rst:1415
+#: ../../library/unittest.mock.rst:1463
 msgid ""
 ":func:`patch` as function decorator, creating the mock for you and passing "
 "it into the decorated function::"
@@ -1504,7 +1551,7 @@ msgstr ""
 ":func:`patch` як декоратор функції, створює макет для вас і передає його в "
 "декоровану функцію::"
 
-#: ../../library/unittest.mock.rst:1425
+#: ../../library/unittest.mock.rst:1473
 msgid ""
 "Patching a class replaces the class with a :class:`MagicMock` *instance*. If"
 " the class is instantiated in the code under test then it will be the "
@@ -1514,7 +1561,7 @@ msgstr ""
 "екземпляр класу створено в тестованому коді, тоді використовуватиметься "
 ":attr:`~Mock.return_value` макету."
 
-#: ../../library/unittest.mock.rst:1429
+#: ../../library/unittest.mock.rst:1477
 msgid ""
 "If the class is instantiated multiple times you could use "
 ":attr:`~Mock.side_effect` to return a new mock each time. Alternatively you "
@@ -1524,7 +1571,7 @@ msgstr ""
 ":attr:`~Mock.side_effect`, щоб щоразу повертати новий макет. Крім того, ви "
 "можете встановити *return_value* як будь-яке значення."
 
-#: ../../library/unittest.mock.rst:1433
+#: ../../library/unittest.mock.rst:1481
 msgid ""
 "To configure return values on methods of *instances* on the patched class "
 "you must do this on the :attr:`return_value`. For example::"
@@ -1533,7 +1580,7 @@ msgstr ""
 "виправленому класі, ви повинні зробити це в :attr:`return_value`. "
 "Наприклад::"
 
-#: ../../library/unittest.mock.rst:1447
+#: ../../library/unittest.mock.rst:1495
 msgid ""
 "If you use *spec* or *spec_set* and :func:`patch` is replacing a *class*, "
 "then the return value of the created mock will have the same spec. ::"
@@ -1542,7 +1589,7 @@ msgstr ""
 " тоді значення, що повертається створеним макетом, матиме ту саму "
 "специфікацію. ::"
 
-#: ../../library/unittest.mock.rst:1457
+#: ../../library/unittest.mock.rst:1505
 msgid ""
 "The *new_callable* argument is useful where you want to use an alternative "
 "class to the default :class:`MagicMock` for the created mock. For example, "
@@ -1552,7 +1599,7 @@ msgstr ""
 "альтернативний типовому :class:`MagicMock` для створеного макету. Наприклад,"
 " якщо ви хочете використовувати :class:`NonCallableMock`:"
 
-#: ../../library/unittest.mock.rst:1470
+#: ../../library/unittest.mock.rst:1518
 msgid ""
 "Another use case might be to replace an object with an :class:`io.StringIO` "
 "instance::"
@@ -1560,7 +1607,7 @@ msgstr ""
 "Іншим варіантом використання може бути заміна об’єкта екземпляром "
 ":class:`io.StringIO`::"
 
-#: ../../library/unittest.mock.rst:1483
+#: ../../library/unittest.mock.rst:1531
 msgid ""
 "When :func:`patch` is creating a mock for you, it is common that the first "
 "thing you need to do is to configure the mock. Some of that configuration "
@@ -1572,7 +1619,7 @@ msgstr ""
 "час виклику patch. Будь-які довільні ключові слова, які ви передаєте у "
 "виклик, використовуватимуться для встановлення атрибутів створеного mock::"
 
-#: ../../library/unittest.mock.rst:1495
+#: ../../library/unittest.mock.rst:1543
 msgid ""
 "As well as attributes on the created mock attributes, like the "
 ":attr:`~Mock.return_value` and :attr:`~Mock.side_effect`, of child mocks can"
@@ -1586,7 +1633,7 @@ msgstr ""
 "передачі як аргументи ключового слова, але словник із ними як ключами все "
 "одно можна розгорнути у виклик :func:`patch` за допомогою ``**``::"
 
-#: ../../library/unittest.mock.rst:1511
+#: ../../library/unittest.mock.rst:1559
 msgid ""
 "By default, attempting to patch a function in a module (or a method or an "
 "attribute in a class) that does not exist will fail with "
@@ -1595,7 +1642,7 @@ msgstr ""
 "За замовчуванням спроба виправити функцію в модулі (або метод чи атрибут у "
 "класі), який не існує, закінчиться помилкою з :exc:`AttributeError`::"
 
-#: ../../library/unittest.mock.rst:1523
+#: ../../library/unittest.mock.rst:1571
 msgid ""
 "but adding ``create=True`` in the call to :func:`patch` will make the "
 "previous example work as expected::"
@@ -1603,7 +1650,7 @@ msgstr ""
 "але додавання ``create=True`` до виклику :func:`patch` змусить попередній "
 "приклад працювати належним чином::"
 
-#: ../../library/unittest.mock.rst:1534
+#: ../../library/unittest.mock.rst:1582
 msgid ""
 ":func:`patch` now returns an :class:`AsyncMock` if the target is an async "
 "function."
@@ -1611,11 +1658,11 @@ msgstr ""
 ":func:`patch` тепер повертає :class:`AsyncMock`, якщо метою є асинхронна "
 "функція."
 
-#: ../../library/unittest.mock.rst:1538
+#: ../../library/unittest.mock.rst:1586
 msgid "patch.object"
 msgstr "patch.object"
 
-#: ../../library/unittest.mock.rst:1542
+#: ../../library/unittest.mock.rst:1590
 msgid ""
 "patch the named member (*attribute*) on an object (*target*) with a mock "
 "object."
@@ -1623,7 +1670,7 @@ msgstr ""
 "заправити названий член (*атрибут*) на об’єкті (*ціль*) за допомогою "
 "макетного об’єкта."
 
-#: ../../library/unittest.mock.rst:1545
+#: ../../library/unittest.mock.rst:1593
 msgid ""
 ":func:`patch.object` can be used as a decorator, class decorator or a "
 "context manager. Arguments *new*, *spec*, *create*, *spec_set*, *autospec* "
@@ -1637,7 +1684,7 @@ msgstr ""
 "Подібно до :func:`patch`, :func:`patch.object` приймає довільні ключові "
 "аргументи для налаштування макетного об’єкта, який він створює."
 
-#: ../../library/unittest.mock.rst:1551
+#: ../../library/unittest.mock.rst:1599
 msgid ""
 "When used as a class decorator :func:`patch.object` honours "
 "``patch.TEST_PREFIX`` for choosing which methods to wrap."
@@ -1645,7 +1692,7 @@ msgstr ""
 "При використанні як декоратора класу :func:`patch.object` враховує "
 "``patch.TEST_PREFIX`` для вибору методів для обгортання."
 
-#: ../../library/unittest.mock.rst:1554
+#: ../../library/unittest.mock.rst:1602
 msgid ""
 "You can either call :func:`patch.object` with three arguments or two "
 "arguments. The three argument form takes the object to be patched, the "
@@ -1655,7 +1702,7 @@ msgstr ""
 "Форма з трьома аргументами містить об’єкт, який потрібно виправити, ім’я "
 "атрибута та об’єкт, на який потрібно замінити атрибут."
 
-#: ../../library/unittest.mock.rst:1558
+#: ../../library/unittest.mock.rst:1606
 msgid ""
 "When calling with the two argument form you omit the replacement object, and"
 " a mock is created for you and passed in as an extra argument to the "
@@ -1665,7 +1712,7 @@ msgstr ""
 " для вас створюється макет, який передається як додатковий аргумент до "
 "декорованої функції:"
 
-#: ../../library/unittest.mock.rst:1569
+#: ../../library/unittest.mock.rst:1617
 msgid ""
 "*spec*, *create* and the other arguments to :func:`patch.object` have the "
 "same meaning as they do for :func:`patch`."
@@ -1673,11 +1720,11 @@ msgstr ""
 "*spec*, *create* та інші аргументи для :func:`patch.object` мають те саме "
 "значення, що й для :func:`patch`."
 
-#: ../../library/unittest.mock.rst:1574
+#: ../../library/unittest.mock.rst:1622
 msgid "patch.dict"
 msgstr "patch.dict"
 
-#: ../../library/unittest.mock.rst:1578
+#: ../../library/unittest.mock.rst:1626
 msgid ""
 "Patch a dictionary, or dictionary like object, and restore the dictionary to"
 " its original state after the test."
@@ -1685,7 +1732,7 @@ msgstr ""
 "Виправте словник або об’єкт, схожий на словник, і відновіть словник до "
 "початкового стану після тесту."
 
-#: ../../library/unittest.mock.rst:1581
+#: ../../library/unittest.mock.rst:1629
 msgid ""
 "*in_dict* can be a dictionary or a mapping like container. If it is a "
 "mapping then it must at least support getting, setting and deleting items "
@@ -1695,7 +1742,7 @@ msgstr ""
 "це відображення, то воно повинно принаймні підтримувати отримання, "
 "встановлення та видалення елементів, а також ітерацію по ключах."
 
-#: ../../library/unittest.mock.rst:1585
+#: ../../library/unittest.mock.rst:1633
 msgid ""
 "*in_dict* can also be a string specifying the name of the dictionary, which "
 "will then be fetched by importing it."
@@ -1703,7 +1750,7 @@ msgstr ""
 "*in_dict* також може бути рядком, що визначає назву словника, який потім "
 "буде отримано шляхом його імпорту."
 
-#: ../../library/unittest.mock.rst:1588
+#: ../../library/unittest.mock.rst:1636
 msgid ""
 "*values* can be a dictionary of values to set in the dictionary. *values* "
 "can also be an iterable of ``(key, value)`` pairs."
@@ -1711,7 +1758,7 @@ msgstr ""
 "*values* може бути словником значень для встановлення в словнику. *значення*"
 " також можуть бути повторюваними парами ``(ключ, значення)``."
 
-#: ../../library/unittest.mock.rst:1591
+#: ../../library/unittest.mock.rst:1639
 msgid ""
 "If *clear* is true then the dictionary will be cleared before the new values"
 " are set."
@@ -1719,7 +1766,7 @@ msgstr ""
 "Якщо *clear* має значення true, словник буде очищено перед встановленням "
 "нових значень."
 
-#: ../../library/unittest.mock.rst:1594
+#: ../../library/unittest.mock.rst:1642
 msgid ""
 ":func:`patch.dict` can also be called with arbitrary keyword arguments to "
 "set values in the dictionary."
@@ -1727,7 +1774,7 @@ msgstr ""
 ":func:`patch.dict` також можна викликати з довільними ключовими аргументами "
 "для встановлення значень у словнику."
 
-#: ../../library/unittest.mock.rst:1599
+#: ../../library/unittest.mock.rst:1647
 msgid ""
 ":func:`patch.dict` now returns the patched dictionary when used as a context"
 " manager."
@@ -1735,7 +1782,7 @@ msgstr ""
 ":func:`patch.dict` тепер повертає виправлений словник, коли використовується"
 " як менеджер контексту."
 
-#: ../../library/unittest.mock.rst:1602
+#: ../../library/unittest.mock.rst:1650
 msgid ""
 ":func:`patch.dict` can be used as a context manager, decorator or class "
 "decorator:"
@@ -1743,7 +1790,7 @@ msgstr ""
 ":func:`patch.dict` можна використовувати як контекстний менеджер, декоратор "
 "або декоратор класу:"
 
-#: ../../library/unittest.mock.rst:1613
+#: ../../library/unittest.mock.rst:1661
 msgid ""
 "When used as a class decorator :func:`patch.dict` honours "
 "``patch.TEST_PREFIX`` (default to ``'test'``) for choosing which methods to "
@@ -1753,7 +1800,7 @@ msgstr ""
 "``patch.TEST_PREFIX`` (за замовчуванням ``'test'``) для вибору методів для "
 "обгортання:"
 
-#: ../../library/unittest.mock.rst:1624
+#: ../../library/unittest.mock.rst:1672
 msgid ""
 "If you want to use a different prefix for your test, you can inform the "
 "patchers of the different prefix by setting ``patch.TEST_PREFIX``. For more "
@@ -1763,7 +1810,7 @@ msgstr ""
 "повідомити патчерів про інший префікс, встановивши ``patch.TEST_PREFIX``. "
 "Докладніше про те, як змінити значення див. :ref:`test-prefix`."
 
-#: ../../library/unittest.mock.rst:1628
+#: ../../library/unittest.mock.rst:1676
 msgid ""
 ":func:`patch.dict` can be used to add members to a dictionary, or simply let"
 " a test change a dictionary, and ensure the dictionary is restored when the "
@@ -1773,7 +1820,7 @@ msgstr ""
 "або просто дозволити тесту змінити словник і переконатися, що словник буде "
 "відновлено після завершення тесту."
 
-#: ../../library/unittest.mock.rst:1649
+#: ../../library/unittest.mock.rst:1697
 msgid ""
 "Keywords can be used in the :func:`patch.dict` call to set values in the "
 "dictionary:"
@@ -1781,7 +1828,7 @@ msgstr ""
 "Ключові слова можна використовувати у виклику :func:`patch.dict` для "
 "встановлення значень у словнику:"
 
-#: ../../library/unittest.mock.rst:1659
+#: ../../library/unittest.mock.rst:1707
 msgid ""
 ":func:`patch.dict` can be used with dictionary like objects that aren't "
 "actually dictionaries. At the very minimum they must support item getting, "
@@ -1791,11 +1838,11 @@ msgid ""
 ":meth:`~container.__iter__` or :meth:`~object.__contains__`."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:1689
+#: ../../library/unittest.mock.rst:1737
 msgid "patch.multiple"
 msgstr "patch.multiple"
 
-#: ../../library/unittest.mock.rst:1693
+#: ../../library/unittest.mock.rst:1741
 msgid ""
 "Perform multiple patches in a single call. It takes the object to be patched"
 " (either as an object or a string to fetch the object by importing) and "
@@ -1805,7 +1852,7 @@ msgstr ""
 "виправити (або як об’єкт, або рядок для отримання об’єкта шляхом імпорту), а"
 " також ключові аргументи для патчів::"
 
-#: ../../library/unittest.mock.rst:1700
+#: ../../library/unittest.mock.rst:1748
 msgid ""
 "Use :data:`DEFAULT` as the value if you want :func:`patch.multiple` to "
 "create mocks for you. In this case the created mocks are passed into a "
@@ -1818,7 +1865,7 @@ msgstr ""
 "повертається, коли :func:`patch.multiple` використовується як менеджер "
 "контексту."
 
-#: ../../library/unittest.mock.rst:1705
+#: ../../library/unittest.mock.rst:1753
 msgid ""
 ":func:`patch.multiple` can be used as a decorator, class decorator or a "
 "context manager. The arguments *spec*, *spec_set*, *create*, *autospec* and "
@@ -1830,7 +1877,7 @@ msgstr ""
 " *new_callable* мають те саме значення, що й для :func:`patch`. Ці аргументи"
 " будуть застосовані до *всіх* патчів, створених :func:`patch.multiple`."
 
-#: ../../library/unittest.mock.rst:1710
+#: ../../library/unittest.mock.rst:1758
 msgid ""
 "When used as a class decorator :func:`patch.multiple` honours "
 "``patch.TEST_PREFIX`` for choosing which methods to wrap."
@@ -1838,7 +1885,7 @@ msgstr ""
 "При використанні як декоратор класу :func:`patch.multiple` враховує "
 "``patch.TEST_PREFIX`` для вибору методів для обгортання."
 
-#: ../../library/unittest.mock.rst:1713
+#: ../../library/unittest.mock.rst:1761
 msgid ""
 "If you want :func:`patch.multiple` to create mocks for you, then you can use"
 " :data:`DEFAULT` as the value. If you use :func:`patch.multiple` as a "
@@ -1850,7 +1897,7 @@ msgstr ""
 ":func:`patch.multiple` як декоратор, тоді створені макети передаються в "
 "декоровану функцію за ключовим словом. ::"
 
-#: ../../library/unittest.mock.rst:1727
+#: ../../library/unittest.mock.rst:1775
 msgid ""
 ":func:`patch.multiple` can be nested with other ``patch`` decorators, but "
 "put arguments passed by keyword *after* any of the standard arguments "
@@ -1860,7 +1907,7 @@ msgstr ""
 "розміщувати аргументи, передані ключовим словом *після* будь-яких "
 "стандартних аргументів, створених :func:`patch`::"
 
-#: ../../library/unittest.mock.rst:1739
+#: ../../library/unittest.mock.rst:1787
 msgid ""
 "If :func:`patch.multiple` is used as a context manager, the value returned "
 "by the context manager is a dictionary where created mocks are keyed by "
@@ -1870,11 +1917,11 @@ msgstr ""
 "значення, яке повертає менеджер контексту, є словником, у якому створені "
 "макети вказуються за назвою::"
 
-#: ../../library/unittest.mock.rst:1753
+#: ../../library/unittest.mock.rst:1801
 msgid "patch methods: start and stop"
 msgstr "методи латання: запуск і зупинка"
 
-#: ../../library/unittest.mock.rst:1755
+#: ../../library/unittest.mock.rst:1803
 msgid ""
 "All the patchers have :meth:`start` and :meth:`stop` methods. These make it "
 "simpler to do patching in ``setUp`` methods or where you want to do multiple"
@@ -1884,7 +1931,7 @@ msgstr ""
 "виправлень у методах ``setUp`` або там, де потрібно виконати кілька латок "
 "без декораторів вкладення або за допомогою операторів."
 
-#: ../../library/unittest.mock.rst:1759
+#: ../../library/unittest.mock.rst:1807
 msgid ""
 "To use them call :func:`patch`, :func:`patch.object` or :func:`patch.dict` "
 "as normal and keep a reference to the returned ``patcher`` object. You can "
@@ -1896,7 +1943,7 @@ msgstr ""
 "``patcher``. Потім ви можете викликати :meth:`start`, щоб поставити патч на "
 "місце, і :meth:`stop`, щоб скасувати його."
 
-#: ../../library/unittest.mock.rst:1763
+#: ../../library/unittest.mock.rst:1811
 msgid ""
 "If you are using :func:`patch` to create a mock for you then it will be "
 "returned by the call to ``patcher.start``. ::"
@@ -1904,7 +1951,7 @@ msgstr ""
 "Якщо ви використовуєте :func:`patch` для створення макету, його буде "
 "повернено викликом ``patcher.start``. ::"
 
-#: ../../library/unittest.mock.rst:1777
+#: ../../library/unittest.mock.rst:1825
 msgid ""
 "A typical use case for this might be for doing multiple patches in the "
 "``setUp`` method of a :class:`TestCase`::"
@@ -1912,7 +1959,7 @@ msgstr ""
 "Типовим випадком використання для цього може бути виконання кількох патчів у"
 " методі ``setUp`` :class:`TestCase`::"
 
-#: ../../library/unittest.mock.rst:1799
+#: ../../library/unittest.mock.rst:1847
 msgid ""
 "If you use this technique you must ensure that the patching is \"undone\" by"
 " calling ``stop``. This can be fiddlier than you might think, because if an "
@@ -1924,7 +1971,7 @@ msgstr ""
 "подумати, оскільки якщо в ``setUp`` виникає виняток, ``tearDown`` не "
 "викликається. :meth:`unittest.TestCase.addCleanup` полегшує це::"
 
-#: ../../library/unittest.mock.rst:1814
+#: ../../library/unittest.mock.rst:1862
 msgid ""
 "As an added bonus you no longer need to keep a reference to the ``patcher`` "
 "object."
@@ -1932,23 +1979,23 @@ msgstr ""
 "Як додатковий бонус, вам більше не потрібно зберігати посилання на об’єкт "
 "``patcher``."
 
-#: ../../library/unittest.mock.rst:1817
+#: ../../library/unittest.mock.rst:1865
 msgid ""
 "It is also possible to stop all patches which have been started by using "
 ":func:`patch.stopall`."
 msgstr ""
 "Також можна зупинити всі запущені латки за допомогою :func:`patch.stopall`."
 
-#: ../../library/unittest.mock.rst:1822
+#: ../../library/unittest.mock.rst:1870
 msgid "Stop all active patches. Only stops patches started with ``start``."
 msgstr ""
 "Зупинити всі активні патчі. Зупиняє лише патчі, розпочаті з ``start``."
 
-#: ../../library/unittest.mock.rst:1828
+#: ../../library/unittest.mock.rst:1876
 msgid "patch builtins"
 msgstr "вбудовані виправлення"
 
-#: ../../library/unittest.mock.rst:1829
+#: ../../library/unittest.mock.rst:1877
 msgid ""
 "You can patch any builtins within a module. The following example patches "
 "builtin :func:`ord`::"
@@ -1956,11 +2003,11 @@ msgstr ""
 "Ви можете виправляти будь-які вбудовані компоненти в модулі. Наступні "
 "приклади патчів вбудовані в :func:`ord`::"
 
-#: ../../library/unittest.mock.rst:1844
+#: ../../library/unittest.mock.rst:1892
 msgid "TEST_PREFIX"
 msgstr "TEST_PREFIX"
 
-#: ../../library/unittest.mock.rst:1846
+#: ../../library/unittest.mock.rst:1894
 msgid ""
 "All of the patchers can be used as class decorators. When used in this way "
 "they wrap every test method on the class. The patchers recognise methods "
@@ -1973,7 +2020,7 @@ msgstr ""
 "Таким же чином :class:`unittest.TestLoader` знаходить тестові методи за "
 "замовчуванням."
 
-#: ../../library/unittest.mock.rst:1851
+#: ../../library/unittest.mock.rst:1899
 msgid ""
 "It is possible that you want to use a different prefix for your tests. You "
 "can inform the patchers of the different prefix by setting "
@@ -1982,23 +2029,23 @@ msgstr ""
 "Можливо, ви хочете використовувати інший префікс для своїх тестів. Ви можете"
 " повідомити патчерів про інший префікс, встановивши ``patch.TEST_PREFIX``::"
 
-#: ../../library/unittest.mock.rst:1874
+#: ../../library/unittest.mock.rst:1922
 msgid "Nesting Patch Decorators"
 msgstr "Декоратори вкладених патчів"
 
-#: ../../library/unittest.mock.rst:1876
+#: ../../library/unittest.mock.rst:1924
 msgid ""
 "If you want to perform multiple patches then you can simply stack up the "
 "decorators."
 msgstr ""
 "Якщо ви хочете виконати кілька патчів, ви можете просто скласти декоратори."
 
-#: ../../library/unittest.mock.rst:1879
+#: ../../library/unittest.mock.rst:1927
 msgid "You can stack up multiple patch decorators using this pattern:"
 msgstr ""
 "Ви можете скласти кілька декораторів патчів, використовуючи цей шаблон:"
 
-#: ../../library/unittest.mock.rst:1895
+#: ../../library/unittest.mock.rst:1943
 msgid ""
 "Note that the decorators are applied from the bottom upwards. This is the "
 "standard way that Python applies decorators. The order of the created mocks "
@@ -2008,11 +2055,11 @@ msgstr ""
 " у який Python застосовує декоратори. Порядок створених макетів, переданих у"
 " вашу тестову функцію, відповідає цьому порядку."
 
-#: ../../library/unittest.mock.rst:1903
+#: ../../library/unittest.mock.rst:1951
 msgid "Where to patch"
 msgstr "Де латати"
 
-#: ../../library/unittest.mock.rst:1905
+#: ../../library/unittest.mock.rst:1953
 msgid ""
 ":func:`patch` works by (temporarily) changing the object that a *name* "
 "points to with another one. There can be many names pointing to any "
@@ -2024,7 +2071,7 @@ msgstr ""
 "тому, щоб виправлення працювало, ви повинні переконатися, що ви виправляєте "
 "ім’я, яке використовує тестована система."
 
-#: ../../library/unittest.mock.rst:1910
+#: ../../library/unittest.mock.rst:1958
 msgid ""
 "The basic principle is that you patch where an object is *looked up*, which "
 "is not necessarily the same place as where it is defined. A couple of "
@@ -2034,14 +2081,14 @@ msgstr ""
 "*переглядається*, що не обов’язково є тим самим місцем, де він визначений. "
 "Кілька прикладів допоможуть прояснити це."
 
-#: ../../library/unittest.mock.rst:1914
+#: ../../library/unittest.mock.rst:1962
 msgid ""
 "Imagine we have a project that we want to test with the following "
 "structure::"
 msgstr ""
 "Уявіть, що у нас є проект, який ми хочемо перевірити з такою структурою:"
 
-#: ../../library/unittest.mock.rst:1923
+#: ../../library/unittest.mock.rst:1971
 msgid ""
 "Now we want to test ``some_function`` but we want to mock out ``SomeClass`` "
 "using :func:`patch`. The problem is that when we import module b, which we "
@@ -2057,7 +2104,7 @@ msgstr ""
 "``a.SomeClass``, то це не вплине на наш тест; модуль b уже містить посилання"
 " на *справжній* ``SomeClass``, і, схоже, наше виправлення не мало ефекту."
 
-#: ../../library/unittest.mock.rst:1930
+#: ../../library/unittest.mock.rst:1978
 msgid ""
 "The key is to patch out ``SomeClass`` where it is used (or where it is "
 "looked up). In this case ``some_function`` will actually look up "
@@ -2068,7 +2115,7 @@ msgstr ""
 "шукають). У цьому випадку ``some_function`` фактично шукатиме ``SomeClass`` "
 "у модулі b, куди ми його імпортували. Виправлення має виглядати:"
 
-#: ../../library/unittest.mock.rst:1936
+#: ../../library/unittest.mock.rst:1984
 msgid ""
 "However, consider the alternative scenario where instead of ``from a import "
 "SomeClass`` module b does ``import a`` and ``some_function`` uses "
@@ -2082,11 +2129,11 @@ msgstr ""
 "який ми хочемо виправити, шукається в модулі, тому ми повинні замість цього "
 "виправити ``a.SomeClass``::"
 
-#: ../../library/unittest.mock.rst:1945
+#: ../../library/unittest.mock.rst:1993
 msgid "Patching Descriptors and Proxy Objects"
 msgstr "Виправлення дескрипторів і проксі-об’єктів"
 
-#: ../../library/unittest.mock.rst:1947
+#: ../../library/unittest.mock.rst:1995
 msgid ""
 "Both patch_ and patch.object_ correctly patch and restore descriptors: class"
 " methods, static methods and properties. You should patch these on the "
@@ -2095,22 +2142,22 @@ msgid ""
 "<https://web.archive.org/web/20200603181648/http://www.voidspace.org.uk/python/weblog/arch_d7_2010_12_04.shtml#e1198>`_."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:1955
+#: ../../library/unittest.mock.rst:2003
 msgid "MagicMock and magic method support"
 msgstr "Підтримка MagicMock і магічного методу"
 
-#: ../../library/unittest.mock.rst:1960
+#: ../../library/unittest.mock.rst:2008
 msgid "Mocking Magic Methods"
 msgstr "Знущальні магічні методи"
 
-#: ../../library/unittest.mock.rst:1962
+#: ../../library/unittest.mock.rst:2010
 msgid ""
 ":class:`Mock` supports mocking the Python protocol methods, also known as "
 ":term:`\"magic methods\" <magic method>`. This allows mock objects to "
 "replace containers or other objects that implement Python protocols."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:1966
+#: ../../library/unittest.mock.rst:2014
 msgid ""
 "Because magic methods are looked up differently from normal methods [#]_, "
 "this support has been specially implemented. This means that only specific "
@@ -2122,7 +2169,7 @@ msgstr ""
 "певні магічні методи. Список підтримуваних включає *майже* всі з них. Якщо "
 "вам бракує чогось, повідомте нам."
 
-#: ../../library/unittest.mock.rst:1971
+#: ../../library/unittest.mock.rst:2019
 msgid ""
 "You mock magic methods by setting the method you are interested in to a "
 "function or a mock instance. If you are using a function then it *must* take"
@@ -2132,7 +2179,7 @@ msgstr ""
 "функцію або імітаційний екземпляр. Якщо ви використовуєте функцію, вона "
 "*має* приймати ``self`` як перший аргумент [#]_."
 
-#: ../../library/unittest.mock.rst:1994
+#: ../../library/unittest.mock.rst:2042
 msgid ""
 "One use case for this is for mocking objects used as context managers in a "
 ":keyword:`with` statement:"
@@ -2140,7 +2187,7 @@ msgstr ""
 "Одним із варіантів використання цього є знущання над об’єктами, що "
 "використовуються як менеджери контексту в операторі :keyword:`with`:"
 
-#: ../../library/unittest.mock.rst:2006
+#: ../../library/unittest.mock.rst:2054
 msgid ""
 "Calls to magic methods do not appear in :attr:`~Mock.method_calls`, but they"
 " are recorded in :attr:`~Mock.mock_calls`."
@@ -2148,7 +2195,7 @@ msgstr ""
 "Виклики магічних методів не відображаються в :attr:`~Mock.method_calls`, але"
 " вони записуються в :attr:`~Mock.mock_calls`."
 
-#: ../../library/unittest.mock.rst:2011
+#: ../../library/unittest.mock.rst:2059
 msgid ""
 "If you use the *spec* keyword argument to create a mock then attempting to "
 "set a magic method that isn't in the spec will raise an "
@@ -2158,23 +2205,23 @@ msgstr ""
 " тоді спроба встановити магічний метод, якого немає в специфікації, призведе"
 " до появи :exc:`AttributeError`."
 
-#: ../../library/unittest.mock.rst:2014
+#: ../../library/unittest.mock.rst:2062
 msgid "The full list of supported magic methods is:"
 msgstr "Повний список підтримуваних магічних методів:"
 
-#: ../../library/unittest.mock.rst:2016
+#: ../../library/unittest.mock.rst:2064
 msgid "``__hash__``, ``__sizeof__``, ``__repr__`` and ``__str__``"
 msgstr "``__hash__``, ``__sizeof__``, ``__repr__`` і ``__str__``"
 
-#: ../../library/unittest.mock.rst:2017
+#: ../../library/unittest.mock.rst:2065
 msgid "``__dir__``, ``__format__`` and ``__subclasses__``"
 msgstr "``__dir__``, ``__format__`` і ``__subclasses__``"
 
-#: ../../library/unittest.mock.rst:2018
+#: ../../library/unittest.mock.rst:2066
 msgid "``__round__``, ``__floor__``, ``__trunc__`` and ``__ceil__``"
 msgstr "``__round__``, ``__floor__``, ``__trunc__`` і ``__ceil__``"
 
-#: ../../library/unittest.mock.rst:2019
+#: ../../library/unittest.mock.rst:2067
 msgid ""
 "Comparisons: ``__lt__``, ``__gt__``, ``__le__``, ``__ge__``, ``__eq__`` and "
 "``__ne__``"
@@ -2182,7 +2229,7 @@ msgstr ""
 "Порівняння: ``__lt__``, ``__gt__``, ``__le__``, ``__ge__``, ``__eq__`` і "
 "``__ne__``"
 
-#: ../../library/unittest.mock.rst:2021
+#: ../../library/unittest.mock.rst:2069
 msgid ""
 "Container methods: ``__getitem__``, ``__setitem__``, ``__delitem__``, "
 "``__contains__``, ``__len__``, ``__iter__``, ``__reversed__`` and "
@@ -2192,7 +2239,7 @@ msgstr ""
 "``__contains__``, ``__len__``, ``__iter__``, ``__reversed__`` і "
 "``__missing__``"
 
-#: ../../library/unittest.mock.rst:2024
+#: ../../library/unittest.mock.rst:2072
 msgid ""
 "Context manager: ``__enter__``, ``__exit__``, ``__aenter__`` and "
 "``__aexit__``"
@@ -2200,11 +2247,11 @@ msgstr ""
 "Менеджер контексту: ``__enter__``, ``__exit__``, ``__aenter__`` і "
 "``__aexit__``"
 
-#: ../../library/unittest.mock.rst:2025
+#: ../../library/unittest.mock.rst:2073
 msgid "Unary numeric methods: ``__neg__``, ``__pos__`` and ``__invert__``"
 msgstr "Унарні числові методи: ``__neg__``, ``__pos__`` і ``__invert__``"
 
-#: ../../library/unittest.mock.rst:2026
+#: ../../library/unittest.mock.rst:2074
 msgid ""
 "The numeric methods (including right hand and in-place variants): "
 "``__add__``, ``__sub__``, ``__mul__``, ``__matmul__``, ``__truediv__``, "
@@ -2212,7 +2259,7 @@ msgid ""
 "``__rshift__``, ``__and__``, ``__xor__``, ``__or__``, and ``__pow__``"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2030
+#: ../../library/unittest.mock.rst:2078
 msgid ""
 "Numeric conversion methods: ``__complex__``, ``__int__``, ``__float__`` and "
 "``__index__``"
@@ -2220,11 +2267,11 @@ msgstr ""
 "Числові методи перетворення: ``__complex__``, ``__int__``, ``__float__`` і "
 "``__index__``"
 
-#: ../../library/unittest.mock.rst:2032
+#: ../../library/unittest.mock.rst:2080
 msgid "Descriptor methods: ``__get__``, ``__set__`` and ``__delete__``"
 msgstr "Методи дескриптора: ``__get__``, ``__set__`` і ``__delete__``"
 
-#: ../../library/unittest.mock.rst:2033
+#: ../../library/unittest.mock.rst:2081
 msgid ""
 "Pickling: ``__reduce__``, ``__reduce_ex__``, ``__getinitargs__``, "
 "``__getnewargs__``, ``__getstate__`` and ``__setstate__``"
@@ -2232,19 +2279,19 @@ msgstr ""
 "Травлення: ``__reduce__``, ``__reduce_ex__``, ``__getinitargs__``, "
 "``__getnewargs__``, ``__getstate__`` і ``__setstate__``"
 
-#: ../../library/unittest.mock.rst:2035
+#: ../../library/unittest.mock.rst:2083
 msgid "File system path representation: ``__fspath__``"
 msgstr "Представлення шляху файлової системи: ``__fspath__``"
 
-#: ../../library/unittest.mock.rst:2036
+#: ../../library/unittest.mock.rst:2084
 msgid "Asynchronous iteration methods: ``__aiter__`` and ``__anext__``"
 msgstr "Асинхронні методи ітерації: ``__aiter__`` і ``__anext__``"
 
-#: ../../library/unittest.mock.rst:2038
+#: ../../library/unittest.mock.rst:2086
 msgid "Added support for :func:`os.PathLike.__fspath__`."
 msgstr "Додано підтримку для :func:`os.PathLike.__fspath__`."
 
-#: ../../library/unittest.mock.rst:2041
+#: ../../library/unittest.mock.rst:2089
 msgid ""
 "Added support for ``__aenter__``, ``__aexit__``, ``__aiter__`` and "
 "``__anext__``."
@@ -2252,7 +2299,7 @@ msgstr ""
 "Додано підтримку ``__aenter__``, ``__aexit__``, ``__aiter__`` і "
 "``__anext__``."
 
-#: ../../library/unittest.mock.rst:2045
+#: ../../library/unittest.mock.rst:2093
 msgid ""
 "The following methods exist but are *not* supported as they are either in "
 "use by mock, can't be set dynamically, or can cause problems:"
@@ -2261,21 +2308,21 @@ msgstr ""
 "використовуються макетом, не можуть бути встановлені динамічно або можуть "
 "спричиняти проблеми:"
 
-#: ../../library/unittest.mock.rst:2048
+#: ../../library/unittest.mock.rst:2096
 msgid "``__getattr__``, ``__setattr__``, ``__init__`` and ``__new__``"
 msgstr "``__getattr__``, ``__setattr__``, ``__init__`` і ``__new__``"
 
-#: ../../library/unittest.mock.rst:2049
+#: ../../library/unittest.mock.rst:2097
 msgid ""
 "``__prepare__``, ``__instancecheck__``, ``__subclasscheck__``, ``__del__``"
 msgstr ""
 "``__prepare__``, ``__instancecheck__``, ``__subclasscheck__``, ``__del__``"
 
-#: ../../library/unittest.mock.rst:2054
+#: ../../library/unittest.mock.rst:2102
 msgid "Magic Mock"
 msgstr "Магічний макет"
 
-#: ../../library/unittest.mock.rst:2056
+#: ../../library/unittest.mock.rst:2104
 msgid ""
 "There are two ``MagicMock`` variants: :class:`MagicMock` and "
 ":class:`NonCallableMagicMock`."
@@ -2283,19 +2330,19 @@ msgstr ""
 "Є два варіанти ``MagicMock``: :class:`MagicMock` і "
 ":class:`NonCallableMagicMock`."
 
-#: ../../library/unittest.mock.rst:2061
+#: ../../library/unittest.mock.rst:2109
 msgid ""
 "``MagicMock`` is a subclass of :class:`Mock` with default implementations of"
 " most of the :term:`magic methods <magic method>`. You can use ``MagicMock``"
 " without having to configure the magic methods yourself."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2065
+#: ../../library/unittest.mock.rst:2113
 msgid "The constructor parameters have the same meaning as for :class:`Mock`."
 msgstr ""
 "Параметри конструктора мають те саме значення, що й для :class:`Mock`."
 
-#: ../../library/unittest.mock.rst:2067
+#: ../../library/unittest.mock.rst:2115
 msgid ""
 "If you use the *spec* or *spec_set* arguments then *only* magic methods that"
 " exist in the spec will be created."
@@ -2303,11 +2350,11 @@ msgstr ""
 "Якщо ви використовуєте аргументи *spec* або *spec_set*, тоді будуть створені"
 " *лише* магічні методи, які існують у специфікації."
 
-#: ../../library/unittest.mock.rst:2073
+#: ../../library/unittest.mock.rst:2121
 msgid "A non-callable version of :class:`MagicMock`."
 msgstr "Версія :class:`MagicMock`, яка не викликається."
 
-#: ../../library/unittest.mock.rst:2075
+#: ../../library/unittest.mock.rst:2123
 msgid ""
 "The constructor parameters have the same meaning as for :class:`MagicMock`, "
 "with the exception of *return_value* and *side_effect* which have no meaning"
@@ -2317,7 +2364,7 @@ msgstr ""
 "за винятком *return_value* і *side_effect*, які не мають значення для "
 "макету, який не викликається."
 
-#: ../../library/unittest.mock.rst:2079
+#: ../../library/unittest.mock.rst:2127
 msgid ""
 "The magic methods are setup with :class:`MagicMock` objects, so you can "
 "configure them and use them in the usual way:"
@@ -2325,7 +2372,7 @@ msgstr ""
 "Магічні методи встановлюються за допомогою об’єктів :class:`MagicMock`, тож "
 "ви можете налаштувати їх і використовувати у звичайний спосіб:"
 
-#: ../../library/unittest.mock.rst:2089
+#: ../../library/unittest.mock.rst:2137
 msgid ""
 "By default many of the protocol methods are required to return objects of a "
 "specific type. These methods are preconfigured with a default return value, "
@@ -2340,83 +2387,83 @@ msgstr ""
 "можете *встановити* значення, що повертається, вручну, якщо ви хочете "
 "змінити значення за замовчуванням."
 
-#: ../../library/unittest.mock.rst:2095
+#: ../../library/unittest.mock.rst:2143
 msgid "Methods and their defaults:"
 msgstr "Методи та їх значення за замовчуванням:"
 
-#: ../../library/unittest.mock.rst:2097
+#: ../../library/unittest.mock.rst:2145
 msgid "``__lt__``: :data:`NotImplemented`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2098
+#: ../../library/unittest.mock.rst:2146
 msgid "``__gt__``: :data:`!NotImplemented`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2099
+#: ../../library/unittest.mock.rst:2147
 msgid "``__le__``: :data:`!NotImplemented`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2100
+#: ../../library/unittest.mock.rst:2148
 msgid "``__ge__``: :data:`!NotImplemented`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2101
+#: ../../library/unittest.mock.rst:2149
 msgid "``__int__``: ``1``"
 msgstr "``__int__``: ``1``"
 
-#: ../../library/unittest.mock.rst:2102
+#: ../../library/unittest.mock.rst:2150
 msgid "``__contains__``: ``False``"
 msgstr "``__contains__``: ``False``"
 
-#: ../../library/unittest.mock.rst:2103
+#: ../../library/unittest.mock.rst:2151
 msgid "``__len__``: ``0``"
 msgstr "``__len__``: ``0``"
 
-#: ../../library/unittest.mock.rst:2104
+#: ../../library/unittest.mock.rst:2152
 msgid "``__iter__``: ``iter([])``"
 msgstr "``__iter__``: ``iter([])``"
 
-#: ../../library/unittest.mock.rst:2105
+#: ../../library/unittest.mock.rst:2153
 msgid "``__exit__``: ``False``"
 msgstr "``__exit__``: ``False``"
 
-#: ../../library/unittest.mock.rst:2106
+#: ../../library/unittest.mock.rst:2154
 msgid "``__aexit__``: ``False``"
 msgstr "``__aexit__``: ``False``"
 
-#: ../../library/unittest.mock.rst:2107
+#: ../../library/unittest.mock.rst:2155
 msgid "``__complex__``: ``1j``"
 msgstr "``__complex__``: ``1j``"
 
-#: ../../library/unittest.mock.rst:2108
+#: ../../library/unittest.mock.rst:2156
 msgid "``__float__``: ``1.0``"
 msgstr "``__float__``: ``1.0``"
 
-#: ../../library/unittest.mock.rst:2109
+#: ../../library/unittest.mock.rst:2157
 msgid "``__bool__``: ``True``"
 msgstr "``__bool__``: ``Правда``"
 
-#: ../../library/unittest.mock.rst:2110
+#: ../../library/unittest.mock.rst:2158
 msgid "``__index__``: ``1``"
 msgstr "``__index__``: ``1``"
 
-#: ../../library/unittest.mock.rst:2111
+#: ../../library/unittest.mock.rst:2159
 msgid "``__hash__``: default hash for the mock"
 msgstr "``__hash__``: типовий хеш для макета"
 
-#: ../../library/unittest.mock.rst:2112
+#: ../../library/unittest.mock.rst:2160
 msgid "``__str__``: default str for the mock"
 msgstr "``__str__``: рядок за умовчанням для макета"
 
-#: ../../library/unittest.mock.rst:2113
+#: ../../library/unittest.mock.rst:2161
 msgid "``__sizeof__``: default sizeof for the mock"
 msgstr "``__sizeof__``: розмір за замовчуванням для макету"
 
-#: ../../library/unittest.mock.rst:2115
+#: ../../library/unittest.mock.rst:2163
 msgid "For example:"
 msgstr "Наприклад:"
 
-#: ../../library/unittest.mock.rst:2127
+#: ../../library/unittest.mock.rst:2175
 msgid ""
 "The two equality methods, :meth:`!__eq__` and :meth:`!__ne__`, are special. "
 "They do the default equality comparison on identity, using the "
@@ -2424,7 +2471,7 @@ msgid ""
 " return something else::"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2141
+#: ../../library/unittest.mock.rst:2189
 msgid ""
 "The return value of :meth:`MagicMock.__iter__` can be any iterable object "
 "and isn't required to be an iterator:"
@@ -2432,7 +2479,7 @@ msgstr ""
 "Повернене значення :meth:`MagicMock.__iter__` може бути будь-яким ітерованим"
 " об’єктом і не обов’язково бути ітератором:"
 
-#: ../../library/unittest.mock.rst:2151
+#: ../../library/unittest.mock.rst:2199
 msgid ""
 "If the return value *is* an iterator, then iterating over it once will "
 "consume it and subsequent iterations will result in an empty list:"
@@ -2440,7 +2487,7 @@ msgstr ""
 "Якщо значення, що повертається, *є* ітератором, одноразове повторення над "
 "ним споживатиме його, а наступні ітерації призведуть до порожнього списку:"
 
-#: ../../library/unittest.mock.rst:2160
+#: ../../library/unittest.mock.rst:2208
 msgid ""
 "``MagicMock`` has all of the supported magic methods configured except for "
 "some of the obscure and obsolete ones. You can still set these up if you "
@@ -2450,7 +2497,7 @@ msgstr ""
 "деяких незрозумілих і застарілих. Ви все ще можете налаштувати їх, якщо "
 "хочете."
 
-#: ../../library/unittest.mock.rst:2163
+#: ../../library/unittest.mock.rst:2211
 msgid ""
 "Magic methods that are supported but not setup by default in ``MagicMock`` "
 "are:"
@@ -2458,27 +2505,27 @@ msgstr ""
 "Магічні методи, які підтримуються, але не налаштовані за замовчуванням у "
 "``MagicMock``:"
 
-#: ../../library/unittest.mock.rst:2165
+#: ../../library/unittest.mock.rst:2213
 msgid "``__subclasses__``"
 msgstr "``__subclasses__``"
 
-#: ../../library/unittest.mock.rst:2166
+#: ../../library/unittest.mock.rst:2214
 msgid "``__dir__``"
 msgstr "``__dir__``"
 
-#: ../../library/unittest.mock.rst:2167
+#: ../../library/unittest.mock.rst:2215
 msgid "``__format__``"
 msgstr "``__format__``"
 
-#: ../../library/unittest.mock.rst:2168
+#: ../../library/unittest.mock.rst:2216
 msgid "``__get__``, ``__set__`` and ``__delete__``"
 msgstr "``__get__``, ``__set__`` і ``__delete__``"
 
-#: ../../library/unittest.mock.rst:2169
+#: ../../library/unittest.mock.rst:2217
 msgid "``__reversed__`` and ``__missing__``"
 msgstr "``__reversed__`` і ``__missing__``"
 
-#: ../../library/unittest.mock.rst:2170
+#: ../../library/unittest.mock.rst:2218
 msgid ""
 "``__reduce__``, ``__reduce_ex__``, ``__getinitargs__``, ``__getnewargs__``, "
 "``__getstate__`` and ``__setstate__``"
@@ -2486,11 +2533,11 @@ msgstr ""
 "``__reduce__``, ``__reduce_ex__``, ``__getinitargs__``, ``__getnewargs__``, "
 "``__getstate__`` і ``__setstate__``"
 
-#: ../../library/unittest.mock.rst:2172
+#: ../../library/unittest.mock.rst:2220
 msgid "``__getformat__``"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2176
+#: ../../library/unittest.mock.rst:2224
 msgid ""
 "Magic methods *should* be looked up on the class rather than the instance. "
 "Different versions of Python are inconsistent about applying this rule. The "
@@ -2501,7 +2548,7 @@ msgstr ""
 " несумісні щодо застосування цього правила. Підтримувані методи протоколу "
 "мають працювати з усіма підтримуваними версіями Python."
 
-#: ../../library/unittest.mock.rst:2180
+#: ../../library/unittest.mock.rst:2228
 msgid ""
 "The function is basically hooked up to the class, but each ``Mock`` instance"
 " is kept isolated from the others."
@@ -2509,15 +2556,15 @@ msgstr ""
 "Функція в основному підключена до класу, але кожен екземпляр ``Mock`` "
 "зберігається ізольованим від інших."
 
-#: ../../library/unittest.mock.rst:2185
+#: ../../library/unittest.mock.rst:2233
 msgid "Helpers"
 msgstr "Помічники"
 
-#: ../../library/unittest.mock.rst:2188
+#: ../../library/unittest.mock.rst:2236
 msgid "sentinel"
 msgstr "дозорний"
 
-#: ../../library/unittest.mock.rst:2192
+#: ../../library/unittest.mock.rst:2240
 msgid ""
 "The ``sentinel`` object provides a convenient way of providing unique "
 "objects for your tests."
@@ -2525,7 +2572,7 @@ msgstr ""
 "Об’єкт ``sentinel`` забезпечує зручний спосіб надання унікальних об’єктів "
 "для ваших тестів."
 
-#: ../../library/unittest.mock.rst:2195
+#: ../../library/unittest.mock.rst:2243
 msgid ""
 "Attributes are created on demand when you access them by name. Accessing the"
 " same attribute will always return the same object. The objects returned "
@@ -2536,7 +2583,7 @@ msgstr ""
 "Повернуті об’єкти мають розумне відображення, тому повідомлення про помилку "
 "тесту можна прочитати."
 
-#: ../../library/unittest.mock.rst:2199
+#: ../../library/unittest.mock.rst:2247
 msgid ""
 "The ``sentinel`` attributes now preserve their identity when they are "
 ":mod:`copied <copy>` or :mod:`pickled <pickle>`."
@@ -2544,7 +2591,7 @@ msgstr ""
 "Атрибути ``sentinel`` тепер зберігають свою ідентичність, коли їх "
 ":mod:`скопіюють <copy>` або :mod:`маринують <pickle>`."
 
-#: ../../library/unittest.mock.rst:2203
+#: ../../library/unittest.mock.rst:2251
 msgid ""
 "Sometimes when testing you need to test that a specific object is passed as "
 "an argument to another method, or returned. It can be common to create named"
@@ -2557,7 +2604,7 @@ msgstr ""
 ":data:`sentinel` забезпечує зручний спосіб створення та перевірки "
 "ідентичності таких об’єктів."
 
-#: ../../library/unittest.mock.rst:2208
+#: ../../library/unittest.mock.rst:2256
 msgid ""
 "In this example we monkey patch ``method`` to return "
 "``sentinel.some_object``:"
@@ -2565,11 +2612,11 @@ msgstr ""
 "У цьому прикладі ми використовуємо ``method`` для повернення "
 "``sentinel.some_object``:"
 
-#: ../../library/unittest.mock.rst:2220
+#: ../../library/unittest.mock.rst:2268
 msgid "DEFAULT"
 msgstr "ЗА ПРОМОВЧАННЯМ"
 
-#: ../../library/unittest.mock.rst:2225
+#: ../../library/unittest.mock.rst:2273
 msgid ""
 "The :data:`DEFAULT` object is a pre-created sentinel (actually "
 "``sentinel.DEFAULT``). It can be used by :attr:`~Mock.side_effect` functions"
@@ -2580,11 +2627,11 @@ msgstr ""
 ":attr:`~Mock.side_effect`, щоб вказати, що потрібно використовувати звичайне"
 " повертане значення."
 
-#: ../../library/unittest.mock.rst:2231
+#: ../../library/unittest.mock.rst:2279
 msgid "call"
 msgstr "виклик"
 
-#: ../../library/unittest.mock.rst:2235
+#: ../../library/unittest.mock.rst:2283
 msgid ""
 ":func:`call` is a helper object for making simpler assertions, for comparing"
 " with :attr:`~Mock.call_args`, :attr:`~Mock.call_args_list`, "
@@ -2596,7 +2643,7 @@ msgstr ""
 ":attr:`~Mock.mock_calls` і :attr:`~Mock.method_calls`. :func:`call` також "
 "можна використовувати з :meth:`~Mock.assert_has_calls`."
 
-#: ../../library/unittest.mock.rst:2248
+#: ../../library/unittest.mock.rst:2296
 msgid ""
 "For a call object that represents multiple calls, :meth:`call_list` returns "
 "a list of all the intermediate calls as well as the final call."
@@ -2604,7 +2651,7 @@ msgstr ""
 "Для об’єкта виклику, який представляє кілька викликів, :meth:`call_list` "
 "повертає список усіх проміжних викликів, а також остаточний виклик."
 
-#: ../../library/unittest.mock.rst:2252
+#: ../../library/unittest.mock.rst:2300
 msgid ""
 "``call_list`` is particularly useful for making assertions on \"chained "
 "calls\". A chained call is multiple calls on a single line of code. This "
@@ -2616,7 +2663,7 @@ msgstr ""
 "призводить до кількох записів у :attr:`~Mock.mock_calls` на макеті. Побудова"
 " послідовності викликів вручну може бути виснажливою."
 
-#: ../../library/unittest.mock.rst:2257
+#: ../../library/unittest.mock.rst:2305
 msgid ""
 ":meth:`~call.call_list` can construct the sequence of calls from the same "
 "chained call:"
@@ -2624,7 +2671,7 @@ msgstr ""
 ":meth:`~call.call_list` може побудувати послідовність викликів з одного "
 "ланцюжкового виклику:"
 
-#: ../../library/unittest.mock.rst:2274
+#: ../../library/unittest.mock.rst:2322
 msgid ""
 "A ``call`` object is either a tuple of (positional args, keyword args) or "
 "(name, positional args, keyword args) depending on how it was constructed. "
@@ -2641,7 +2688,7 @@ msgstr ""
 ":attr:`Mock.mock_calls` атрибути можна перевірити, щоб отримати окремі "
 "аргументи, які вони містять."
 
-#: ../../library/unittest.mock.rst:2281
+#: ../../library/unittest.mock.rst:2329
 msgid ""
 "The ``call`` objects in :attr:`Mock.call_args` and "
 ":attr:`Mock.call_args_list` are two-tuples of (positional args, keyword "
@@ -2655,7 +2702,7 @@ msgstr ""
 "самостійно, складаються з трьох кортежів (ім’я, позиційні аргументи, "
 "аргументи ключового слова)."
 
-#: ../../library/unittest.mock.rst:2286
+#: ../../library/unittest.mock.rst:2334
 msgid ""
 "You can use their \"tupleness\" to pull out the individual arguments for "
 "more complex introspection and assertions. The positional arguments are a "
@@ -2667,11 +2714,11 @@ msgstr ""
 "(порожній кортеж, якщо позиційних аргументів немає), а ключові аргументи — "
 "це словник:"
 
-#: ../../library/unittest.mock.rst:2319
+#: ../../library/unittest.mock.rst:2367
 msgid "create_autospec"
 msgstr "create_autospec"
 
-#: ../../library/unittest.mock.rst:2323
+#: ../../library/unittest.mock.rst:2371
 msgid ""
 "Create a mock object using another object as a spec. Attributes on the mock "
 "will use the corresponding attribute on the *spec* object as their spec."
@@ -2680,7 +2727,7 @@ msgstr ""
 "Атрибути на макеті використовуватимуть відповідний атрибут об’єкта *spec* як"
 " свою специфікацію."
 
-#: ../../library/unittest.mock.rst:2327
+#: ../../library/unittest.mock.rst:2375
 msgid ""
 "Functions or methods being mocked will have their arguments checked to "
 "ensure that they are called with the correct signature."
@@ -2688,7 +2735,7 @@ msgstr ""
 "Аргументи функцій або методів, які висміюються, перевірятимуть, щоб "
 "переконатися, що вони викликаються з правильною сигнатурою."
 
-#: ../../library/unittest.mock.rst:2330
+#: ../../library/unittest.mock.rst:2378
 msgid ""
 "If *spec_set* is ``True`` then attempting to set attributes that don't exist"
 " on the spec object will raise an :exc:`AttributeError`."
@@ -2696,7 +2743,7 @@ msgstr ""
 "Якщо *spec_set* має значення ``True``, тоді спроба встановити атрибути, яких"
 " не існує в об’єкті специфікації, призведе до появи :exc:`AttributeError`."
 
-#: ../../library/unittest.mock.rst:2333
+#: ../../library/unittest.mock.rst:2381
 msgid ""
 "If a class is used as a spec then the return value of the mock (the instance"
 " of the class) will have the same spec. You can use a class as the spec for "
@@ -2709,7 +2756,7 @@ msgstr ""
 "``instance=True``. Повернений макет можна буде викликати, лише якщо його "
 "екземпляри можна викликати."
 
-#: ../../library/unittest.mock.rst:2338
+#: ../../library/unittest.mock.rst:2386
 msgid ""
 ":func:`create_autospec` also takes arbitrary keyword arguments that are "
 "passed to the constructor of the created mock."
@@ -2717,7 +2764,7 @@ msgstr ""
 ":func:`create_autospec` також приймає довільні ключові аргументи, які "
 "передаються конструктору створеного макету."
 
-#: ../../library/unittest.mock.rst:2341
+#: ../../library/unittest.mock.rst:2389
 msgid ""
 "See :ref:`auto-speccing` for examples of how to use auto-speccing with "
 ":func:`create_autospec` and the *autospec* argument to :func:`patch`."
@@ -2726,7 +2773,7 @@ msgstr ""
 "специфікації з :func:`create_autospec` і аргументом *autospec* для "
 ":func:`patch`."
 
-#: ../../library/unittest.mock.rst:2347
+#: ../../library/unittest.mock.rst:2395
 msgid ""
 ":func:`create_autospec` now returns an :class:`AsyncMock` if the target is "
 "an async function."
@@ -2734,11 +2781,11 @@ msgstr ""
 ":func:`create_autospec` тепер повертає :class:`AsyncMock`, якщо метою є "
 "асинхронна функція."
 
-#: ../../library/unittest.mock.rst:2352
+#: ../../library/unittest.mock.rst:2400
 msgid "ANY"
 msgstr "БУДЬ-ЯКИЙ"
 
-#: ../../library/unittest.mock.rst:2356
+#: ../../library/unittest.mock.rst:2404
 msgid ""
 "Sometimes you may need to make assertions about *some* of the arguments in a"
 " call to mock, but either not care about some of the arguments or want to "
@@ -2750,7 +2797,7 @@ msgstr ""
 "вилучити їх окремо з :attr:`~Mock.call_args` і зробити складнішими "
 "твердження на них."
 
-#: ../../library/unittest.mock.rst:2361
+#: ../../library/unittest.mock.rst:2409
 msgid ""
 "To ignore certain arguments you can pass in objects that compare equal to "
 "*everything*. Calls to :meth:`~Mock.assert_called_with` and "
@@ -2762,7 +2809,7 @@ msgstr ""
 ":meth:`~Mock.assert_ called_once_with` будуть успішними незалежно від того, "
 "що було передано."
 
-#: ../../library/unittest.mock.rst:2370
+#: ../../library/unittest.mock.rst:2418
 msgid ""
 ":data:`ANY` can also be used in comparisons with call lists like "
 ":attr:`~Mock.mock_calls`:"
@@ -2770,17 +2817,17 @@ msgstr ""
 ":data:`ANY` також можна використовувати для порівняння зі списками викликів,"
 " наприклад :attr:`~Mock.mock_calls`:"
 
-#: ../../library/unittest.mock.rst:2380
+#: ../../library/unittest.mock.rst:2428
 msgid ""
 ":data:`ANY` is not limited to comparisons with call objects and so can also "
 "be used in test assertions::"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2391
+#: ../../library/unittest.mock.rst:2439
 msgid "FILTER_DIR"
 msgstr "FILTER_DIR"
 
-#: ../../library/unittest.mock.rst:2395
+#: ../../library/unittest.mock.rst:2443
 msgid ""
 ":data:`FILTER_DIR` is a module level variable that controls the way mock "
 "objects respond to :func:`dir`. The default is ``True``, which uses the "
@@ -2789,7 +2836,7 @@ msgid ""
 "``mock.FILTER_DIR = False``."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2401
+#: ../../library/unittest.mock.rst:2449
 msgid ""
 "With filtering on, ``dir(some_mock)`` shows only useful attributes and will "
 "include any dynamically created attributes that wouldn't normally be shown. "
@@ -2803,7 +2850,7 @@ msgstr ""
 "*autospec*, звичайно), тоді відображаються всі атрибути з оригіналу, навіть "
 "якщо до них ще не було доступу:"
 
-#: ../../library/unittest.mock.rst:2428
+#: ../../library/unittest.mock.rst:2476
 msgid ""
 "Many of the not-very-useful (private to :class:`Mock` rather than the thing "
 "being mocked) underscore and double underscore prefixed attributes have been"
@@ -2817,18 +2864,18 @@ msgstr ""
 "вам не подобається така поведінка, ви можете вимкнути її, встановивши "
 "перемикач рівня модуля :data:`FILTER_DIR`:"
 
-#: ../../library/unittest.mock.rst:2449
+#: ../../library/unittest.mock.rst:2497
 msgid ""
 "Alternatively you can just use ``vars(my_mock)`` (instance members) and "
 "``dir(type(my_mock))`` (type members) to bypass the filtering irrespective "
 "of :const:`mock.FILTER_DIR`."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2455
+#: ../../library/unittest.mock.rst:2503
 msgid "mock_open"
 msgstr "mock_open"
 
-#: ../../library/unittest.mock.rst:2459
+#: ../../library/unittest.mock.rst:2507
 msgid ""
 "A helper function to create a mock to replace the use of :func:`open`. It "
 "works for :func:`open` called directly or used as a context manager."
@@ -2837,7 +2884,7 @@ msgstr ""
 " працює для :func:`open`, що викликається безпосередньо або використовується"
 " як контекстний менеджер."
 
-#: ../../library/unittest.mock.rst:2462
+#: ../../library/unittest.mock.rst:2510
 msgid ""
 "The *mock* argument is the mock object to configure. If ``None`` (the "
 "default) then a :class:`MagicMock` will be created for you, with the API "
@@ -2848,7 +2895,7 @@ msgstr ""
 "обмеженим методами чи атрибутами, доступними для стандартних дескрипторів "
 "файлів."
 
-#: ../../library/unittest.mock.rst:2466
+#: ../../library/unittest.mock.rst:2514
 msgid ""
 "*read_data* is a string for the :meth:`~io.IOBase.read`, "
 ":meth:`~io.IOBase.readline`, and :meth:`~io.IOBase.readlines` methods of the"
@@ -2870,7 +2917,7 @@ msgstr ""
 "із пакетів файлової системи в пам’яті на `PyPI <https://pypi.org>`_ може "
 "запропонувати реалістичну файлову систему для тестування."
 
-#: ../../library/unittest.mock.rst:2476
+#: ../../library/unittest.mock.rst:2524
 msgid ""
 "Added :meth:`~io.IOBase.readline` and :meth:`~io.IOBase.readlines` support. "
 "The mock of :meth:`~io.IOBase.read` changed to consume *read_data* rather "
@@ -2880,17 +2927,17 @@ msgstr ""
 " Макет :meth:`~io.IOBase.read` змінено, щоб споживати *read_data*, а не "
 "повертати їх під час кожного виклику."
 
-#: ../../library/unittest.mock.rst:2481
+#: ../../library/unittest.mock.rst:2529
 msgid "*read_data* is now reset on each call to the *mock*."
 msgstr "*read_data* тепер скидається під час кожного виклику *mock*."
 
-#: ../../library/unittest.mock.rst:2484
+#: ../../library/unittest.mock.rst:2532
 msgid ""
 "Added :meth:`~container.__iter__` to implementation so that iteration (such "
 "as in for loops) correctly consumes *read_data*."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2488
+#: ../../library/unittest.mock.rst:2536
 msgid ""
 "Using :func:`open` as a context manager is a great way to ensure your file "
 "handles are closed properly and is becoming common::"
@@ -2899,14 +2946,14 @@ msgstr ""
 "переконатися, що ваші дескриптори файлів закриті належним чином, і стає "
 "поширеним::"
 
-#: ../../library/unittest.mock.rst:2494
+#: ../../library/unittest.mock.rst:2542
 msgid ""
 "The issue is that even if you mock out the call to :func:`open` it is the "
 "*returned object* that is used as a context manager (and has "
 ":meth:`~object.__enter__` and :meth:`~object.__exit__` called)."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2498
+#: ../../library/unittest.mock.rst:2546
 msgid ""
 "Mocking context managers with a :class:`MagicMock` is common enough and "
 "fiddly enough that a helper function is useful. ::"
@@ -2914,15 +2961,15 @@ msgstr ""
 "Знущання над контекстними менеджерами за допомогою :class:`MagicMock` є "
 "досить поширеним і досить складним, щоб допоміжна функція була корисною. ::"
 
-#: ../../library/unittest.mock.rst:2515
+#: ../../library/unittest.mock.rst:2563
 msgid "And for reading files::"
 msgstr "І для читання файлів::"
 
-#: ../../library/unittest.mock.rst:2528
+#: ../../library/unittest.mock.rst:2576
 msgid "Autospeccing"
 msgstr "Автоматична специфікація"
 
-#: ../../library/unittest.mock.rst:2530
+#: ../../library/unittest.mock.rst:2578
 msgid ""
 "Autospeccing is based on the existing :attr:`spec` feature of mock. It "
 "limits the api of mocks to the api of an original object (the spec), but it "
@@ -2938,13 +2985,13 @@ msgstr ""
 "таку саму сигнатуру виклику, як і оригінальні, тому вони викликають "
 ":exc:`TypeError`, якщо їх викликають неправильно."
 
-#: ../../library/unittest.mock.rst:2537
+#: ../../library/unittest.mock.rst:2585
 msgid "Before I explain how auto-speccing works, here's why it is needed."
 msgstr ""
 "Перш ніж пояснювати, як працює автоматична специфікація, ось чому вона "
 "потрібна."
 
-#: ../../library/unittest.mock.rst:2539
+#: ../../library/unittest.mock.rst:2587
 msgid ""
 ":class:`Mock` is a very powerful and flexible object, but it suffers from "
 "two flaws when used to mock out objects from a system under test. One of "
@@ -2956,7 +3003,7 @@ msgstr ""
 "тестується. Одна з цих недоліків є специфічною для API :class:`Mock`, а інша"
 " є більш загальною проблемою використання фіктивних об’єктів."
 
-#: ../../library/unittest.mock.rst:2544
+#: ../../library/unittest.mock.rst:2592
 msgid ""
 "First the problem specific to :class:`Mock`. :class:`Mock` has two assert "
 "methods that are extremely handy: :meth:`~Mock.assert_called_with` and "
@@ -2966,7 +3013,7 @@ msgstr ""
 "надзвичайно зручні методи підтвердження: :meth:`~Mock.assert_ called_with` і"
 " :meth:`~Mock.assert_ called_once_with`."
 
-#: ../../library/unittest.mock.rst:2557
+#: ../../library/unittest.mock.rst:2605
 msgid ""
 "Because mocks auto-create attributes on demand, and allow you to call them "
 "with arbitrary arguments, if you misspell one of these assert methods then "
@@ -2976,11 +3023,11 @@ msgstr ""
 "викликати їх із довільними аргументами, якщо ви неправильно напишете один із"
 " цих методів assert, ваше твердження зникне:"
 
-#: ../../library/unittest.mock.rst:2567
+#: ../../library/unittest.mock.rst:2615
 msgid "Your tests can pass silently and incorrectly because of the typo."
 msgstr "Ваші тести можуть проходити мовчки та неправильно через помилку."
 
-#: ../../library/unittest.mock.rst:2569
+#: ../../library/unittest.mock.rst:2617
 msgid ""
 "The second issue is more general to mocking. If you refactor some of your "
 "code, rename members and so on, any tests for code that is still using the "
@@ -2993,7 +3040,7 @@ msgstr ""
 "пройдуть. Це означає, що всі ваші тести можуть пройти, навіть якщо ваш код "
 "зламано."
 
-#: ../../library/unittest.mock.rst:2574
+#: ../../library/unittest.mock.rst:2622
 msgid ""
 "Note that this is another reason why you need integration tests as well as "
 "unit tests. Testing everything in isolation is all fine and dandy, but if "
@@ -3005,7 +3052,7 @@ msgstr ""
 "перевірятимете, як ваші пристрої \"з’єднані між собою\", все ще є багато "
 "місця для помилок, які могли виявити тести."
 
-#: ../../library/unittest.mock.rst:2579
+#: ../../library/unittest.mock.rst:2627
 msgid ""
 ":mod:`mock` already provides a feature to help with this, called speccing. "
 "If you use a class or instance as the :attr:`spec` for a mock then you can "
@@ -3016,7 +3063,7 @@ msgstr ""
 "макету, ви зможете отримати доступ лише до тих атрибутів макета, які існують"
 " у реальному класі:"
 
-#: ../../library/unittest.mock.rst:2590
+#: ../../library/unittest.mock.rst:2638
 msgid ""
 "The spec only applies to the mock itself, so we still have the same issue "
 "with any methods on the mock:"
@@ -3024,7 +3071,7 @@ msgstr ""
 "Специфікація стосується лише самого макету, тому ми все ще маємо ту саму "
 "проблему з будь-якими методами на макеті:"
 
-#: ../../library/unittest.mock.rst:2599
+#: ../../library/unittest.mock.rst:2647
 msgid ""
 "Auto-speccing solves this problem. You can either pass ``autospec=True`` to "
 ":func:`patch` / :func:`patch.object` or use the :func:`create_autospec` "
@@ -3045,11 +3092,11 @@ msgstr ""
 "або глибоко вкладеними об’єктами (як-от модулі, які імпортують модулі, які "
 "імпортують модулі) без значного зниження продуктивності."
 
-#: ../../library/unittest.mock.rst:2608
+#: ../../library/unittest.mock.rst:2656
 msgid "Here's an example of it in use::"
 msgstr "Ось приклад його використання::"
 
-#: ../../library/unittest.mock.rst:2618
+#: ../../library/unittest.mock.rst:2666
 msgid ""
 "You can see that :class:`request.Request` has a spec. "
 ":class:`request.Request` takes two arguments in the constructor (one of "
@@ -3059,7 +3106,7 @@ msgstr ""
 ":class:`request.Request` приймає два аргументи в конструкторі (один з яких "
 "*self*). Ось що станеться, якщо ми спробуємо викликати його неправильно:"
 
-#: ../../library/unittest.mock.rst:2627
+#: ../../library/unittest.mock.rst:2675
 msgid ""
 "The spec also applies to instantiated classes (i.e. the return value of "
 "specced mocks)::"
@@ -3067,7 +3114,7 @@ msgstr ""
 "Специфікація також стосується екземплярів класів (тобто значення, що "
 "повертається specced mocks):"
 
-#: ../../library/unittest.mock.rst:2634
+#: ../../library/unittest.mock.rst:2682
 msgid ""
 ":class:`Request` objects are not callable, so the return value of "
 "instantiating our mocked out :class:`request.Request` is a non-callable "
@@ -3079,7 +3126,7 @@ msgstr ""
 "можна викликати. Якщо специфікація на місці, будь-які друкарські помилки в "
 "наших твердженнях викличуть правильну помилку::"
 
-#: ../../library/unittest.mock.rst:2646
+#: ../../library/unittest.mock.rst:2694
 msgid ""
 "In many cases you will just be able to add ``autospec=True`` to your "
 "existing :func:`patch` calls and then be protected against bugs due to typos"
@@ -3089,7 +3136,7 @@ msgstr ""
 "викликів :func:`patch` і тоді захистити себе від помилок через помилки друку"
 " та зміни API."
 
-#: ../../library/unittest.mock.rst:2650
+#: ../../library/unittest.mock.rst:2698
 msgid ""
 "As well as using *autospec* through :func:`patch` there is a "
 ":func:`create_autospec` for creating autospecced mocks directly:"
@@ -3098,7 +3145,7 @@ msgstr ""
 ":func:`create_autospec` для безпосереднього створення автоспецованих "
 "макетів:"
 
-#: ../../library/unittest.mock.rst:2658
+#: ../../library/unittest.mock.rst:2706
 msgid ""
 "This isn't without caveats and limitations however, which is why it is not "
 "the default behaviour. In order to know what attributes are available on the"
@@ -3118,7 +3165,7 @@ msgstr ""
 "використовувати автоспец. З іншого боку, набагато краще проектувати ваші "
 "об’єкти так, щоб самоаналіз був безпечним [#]_."
 
-#: ../../library/unittest.mock.rst:2667
+#: ../../library/unittest.mock.rst:2715
 msgid ""
 "A more serious problem is that it is common for instance attributes to be "
 "created in the :meth:`~object.__init__` method and not to exist on the class"
@@ -3126,7 +3173,7 @@ msgid ""
 "restricts the api to visible attributes. ::"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2684
+#: ../../library/unittest.mock.rst:2732
 msgid ""
 "There are a few different ways of resolving this problem. The easiest, but "
 "not necessarily the least annoying, way is to simply set the required "
@@ -3140,7 +3187,7 @@ msgstr ""
 "отримати атрибути, яких немає в специфікації, це не заважає вам налаштувати "
 "їх::"
 
-#: ../../library/unittest.mock.rst:2695
+#: ../../library/unittest.mock.rst:2743
 msgid ""
 "There is a more aggressive version of both *spec* and *autospec* that *does*"
 " prevent you setting non-existent attributes. This is useful if you want to "
@@ -3152,7 +3199,7 @@ msgstr ""
 "також *встановлював* дійсні атрибути, але, очевидно, це запобігає цьому "
 "конкретному сценарію:"
 
-#: ../../library/unittest.mock.rst:2708
+#: ../../library/unittest.mock.rst:2756
 msgid ""
 "Probably the best way of solving the problem is to add class attributes as "
 "default values for instance members initialised in :meth:`~object.__init__`."
@@ -3161,7 +3208,7 @@ msgid ""
 "course) is faster too. e.g."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2719
+#: ../../library/unittest.mock.rst:2767
 msgid ""
 "This brings up another issue. It is relatively common to provide a default "
 "value of ``None`` for members that will later be an object of a different "
@@ -3180,7 +3227,7 @@ msgstr ""
 "членів, для яких встановлено ``None``. Це будуть просто звичайні макети "
 "(добре - MagicMocks):"
 
-#: ../../library/unittest.mock.rst:2734
+#: ../../library/unittest.mock.rst:2782
 msgid ""
 "If modifying your production classes to add defaults isn't to your liking "
 "then there are more options. One of these is simply to use an instance as "
@@ -3199,7 +3246,7 @@ msgstr ""
 ":func:`patch` підтримує це — ви можете просто передати альтернативний об’єкт"
 " як аргумент *autospec*::"
 
-#: ../../library/unittest.mock.rst:2755
+#: ../../library/unittest.mock.rst:2803
 msgid ""
 "This only applies to classes or already instantiated objects. Calling a "
 "mocked class to create a mock instance *does not* create a real instance. It"
@@ -3210,11 +3257,11 @@ msgstr ""
 "класу для створення фальшивого екземпляра *не* створює справжній екземпляр. "
 "Виконуються лише пошуки атрибутів разом із викликами :func:`dir`."
 
-#: ../../library/unittest.mock.rst:2760
+#: ../../library/unittest.mock.rst:2808
 msgid "Sealing mocks"
 msgstr "Герметизація макетів"
 
-#: ../../library/unittest.mock.rst:2769
+#: ../../library/unittest.mock.rst:2817
 msgid ""
 "Seal will disable the automatic creation of mocks when accessing an "
 "attribute of the mock being sealed or any of its attributes that are already"
@@ -3224,7 +3271,7 @@ msgstr ""
 "макету, який запечатується, або будь-якого з його атрибутів, які вже є "
 "макетами рекурсивно."
 
-#: ../../library/unittest.mock.rst:2772
+#: ../../library/unittest.mock.rst:2820
 msgid ""
 "If a mock instance with a name or a spec is assigned to an attribute it "
 "won't be considered in the sealing chain. This allows one to prevent seal "
@@ -3234,28 +3281,28 @@ msgstr ""
 "враховуватиметься в ланцюжку запечатування. Це дозволяє запобігти фіксації "
 "пломбою частини фіктивного об'єкта. ::"
 
-#: ../../library/unittest.mock.rst:2788
+#: ../../library/unittest.mock.rst:2836
 msgid ""
 "Order of precedence of :attr:`side_effect`, :attr:`return_value` and *wraps*"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2790
+#: ../../library/unittest.mock.rst:2838
 msgid "The order of their precedence is:"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2792
+#: ../../library/unittest.mock.rst:2840
 msgid ":attr:`~Mock.side_effect`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2793
+#: ../../library/unittest.mock.rst:2841
 msgid ":attr:`~Mock.return_value`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2794
+#: ../../library/unittest.mock.rst:2842
 msgid "*wraps*"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2796
+#: ../../library/unittest.mock.rst:2844
 msgid ""
 "If all three are set, mock will return the value from "
 ":attr:`~Mock.side_effect`, ignoring :attr:`~Mock.return_value` and the "
@@ -3264,7 +3311,7 @@ msgid ""
 "first, the order of precedence remains unchanged."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2814
+#: ../../library/unittest.mock.rst:2862
 msgid ""
 "As ``None`` is the default value of :attr:`~Mock.side_effect`, if you "
 "reassign its value back to ``None``, the order of precedence will be checked"
@@ -3272,46 +3319,46 @@ msgid ""
 ":attr:`~Mock.side_effect`."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2823
+#: ../../library/unittest.mock.rst:2871
 msgid ""
 "If the value being returned by :attr:`~Mock.side_effect` is :data:`DEFAULT`,"
 " it is ignored and the order of precedence moves to the successor to obtain "
 "the value to return."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2832
+#: ../../library/unittest.mock.rst:2880
 msgid ""
 "When :class:`Mock` wraps an object, the default value of "
 ":attr:`~Mock.return_value` will be :data:`DEFAULT`."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2841
+#: ../../library/unittest.mock.rst:2889
 msgid ""
 "The order of precedence will ignore this value and it will move to the last "
 "successor which is the wrapped object."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2844
+#: ../../library/unittest.mock.rst:2892
 msgid ""
 "As the real call is being made to the wrapped object, creating an instance "
 "of this mock will return the real instance of the class. The positional "
 "arguments, if any, required by the wrapped object must be passed."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2862
+#: ../../library/unittest.mock.rst:2910
 msgid ""
 "But if you assign ``None`` to it, this will not be ignored as it is an "
 "explicit assignment. So, the order of precedence will not move to the "
 "wrapped object."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2870
+#: ../../library/unittest.mock.rst:2918
 msgid ""
 "Even if you set all three at once when initializing the mock, the order of "
 "precedence remains the same:"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2887
+#: ../../library/unittest.mock.rst:2935
 msgid ""
 "If :attr:`~Mock.side_effect` is exhausted, the order of precedence will not "
 "cause a value to be obtained from the successors. Instead, ``StopIteration``"

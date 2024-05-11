@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/mailbox.rst:2
-msgid ":mod:`mailbox` --- Manipulate mailboxes in various formats"
-msgstr ":mod:`mailbox` --- Керуйте поштовими скриньками в різних форматах"
+msgid ":mod:`!mailbox` --- Manipulate mailboxes in various formats"
+msgstr ""
 
 #: ../../library/mailbox.rst:10
 msgid "**Source code:** :source:`Lib/mailbox.py`"
@@ -485,29 +485,33 @@ msgid "The :attr:`!colon` attribute may also be set on a per-instance basis."
 msgstr ""
 
 #: ../../library/mailbox.rst:367
+msgid ":class:`Maildir` now ignores files with a leading dot."
+msgstr ""
+
+#: ../../library/mailbox.rst:370
 msgid ""
 ":class:`!Maildir` instances have all of the methods of :class:`Mailbox` in "
 "addition to the following:"
 msgstr ""
 
-#: ../../library/mailbox.rst:373 ../../library/mailbox.rst:545
+#: ../../library/mailbox.rst:376 ../../library/mailbox.rst:654
 msgid "Return a list of the names of all folders."
 msgstr "Повернути список імен усіх папок."
 
-#: ../../library/mailbox.rst:378
+#: ../../library/mailbox.rst:381
 msgid ""
 "Return a :class:`!Maildir` instance representing the folder whose name is "
 "*folder*. A :exc:`NoSuchMailboxError` exception is raised if the folder does"
 " not exist."
 msgstr ""
 
-#: ../../library/mailbox.rst:385
+#: ../../library/mailbox.rst:388
 msgid ""
 "Create a folder whose name is *folder* and return a :class:`!Maildir` "
 "instance representing it."
 msgstr ""
 
-#: ../../library/mailbox.rst:391 ../../library/mailbox.rst:563
+#: ../../library/mailbox.rst:394 ../../library/mailbox.rst:672
 msgid ""
 "Delete the folder whose name is *folder*. If the folder contains any "
 "messages, a :exc:`NotEmptyError` exception will be raised and the folder "
@@ -516,7 +520,7 @@ msgstr ""
 "Видаліть папку з назвою *папка*. Якщо папка містить будь-які повідомлення, "
 "буде викликано виняток :exc:`NotEmptyError` і папку не буде видалено."
 
-#: ../../library/mailbox.rst:398
+#: ../../library/mailbox.rst:401
 msgid ""
 "Delete temporary files from the mailbox that have not been accessed in the "
 "last 36 hours. The Maildir specification says that mail-reading programs "
@@ -526,13 +530,108 @@ msgstr ""
 "протягом останніх 36 годин. Специфікація Maildir говорить, що програми для "
 "читання пошти повинні робити це час від часу."
 
-#: ../../library/mailbox.rst:402
+#: ../../library/mailbox.rst:408
+msgid ""
+"Return as a string the flags that are set on the message corresponding to "
+"*key*. This is the same as ``get_message(key).get_flags()`` but much faster,"
+" because it does not open the message file. Use this method when iterating "
+"over the keys to determine which messages are interesting to get."
+msgstr ""
+
+#: ../../library/mailbox.rst:415
+msgid ""
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.get_flags` method instead, because changes made by "
+"the message's :meth:`~MaildirMessage.set_flags`, "
+":meth:`~MaildirMessage.add_flag` and :meth:`~MaildirMessage.remove_flag` "
+"methods are not reflected here until the mailbox's :meth:`__setitem__` "
+"method is called."
+msgstr ""
+
+#: ../../library/mailbox.rst:427
+msgid ""
+"On the message corresponding to *key*, set the flags specified by *flags* "
+"and unset all others. Calling ``some_mailbox.set_flags(key, flags)`` is "
+"similar to ::"
+msgstr ""
+
+#: ../../library/mailbox.rst:435 ../../library/mailbox.rst:498
+msgid "but faster, because it does not open the message file."
+msgstr ""
+
+#: ../../library/mailbox.rst:437
+msgid ""
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.set_flags` method instead, because changes made with "
+"this mailbox method will not be visible to the message object's method, "
+":meth:`~MaildirMessage.get_flags`."
+msgstr ""
+
+#: ../../library/mailbox.rst:447
+msgid ""
+"On the message corresponding to *key*, set the flags specified by *flag* "
+"without changing other flags. To add more than one flag at a time, *flag* "
+"may be a string of more than one character."
+msgstr ""
+
+#: ../../library/mailbox.rst:451
+msgid ""
+"Considerations for using this method versus the message object's "
+":meth:`~MaildirMessage.add_flag` method are similar to those for "
+":meth:`set_flags`; see the discussion there."
+msgstr ""
+
+#: ../../library/mailbox.rst:460
+msgid ""
+"On the message corresponding to *key*, unset the flags specified by *flag* "
+"without changing other flags. To remove more than one flag at a time, *flag*"
+" may be a string of more than one character."
+msgstr ""
+
+#: ../../library/mailbox.rst:464
+msgid ""
+"Considerations for using this method versus the message object's "
+":meth:`~MaildirMessage.remove_flag` method are similar to those for "
+":meth:`set_flags`; see the discussion there."
+msgstr ""
+
+#: ../../library/mailbox.rst:473
+msgid ""
+"Return a string containing the info for the message corresponding to *key*. "
+"This is the same as ``get_message(key).get_info()`` but much faster, because"
+" it does not open the message file. Use this method when iterating over the "
+"keys to determine which messages are interesting to get."
+msgstr ""
+
+#: ../../library/mailbox.rst:480
+msgid ""
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.get_info` method instead, because changes made by the"
+" message's :meth:`~MaildirMessage.set_info` method are not reflected here "
+"until the mailbox's :meth:`__setitem__` method is called."
+msgstr ""
+
+#: ../../library/mailbox.rst:491
+msgid ""
+"Set the info of the message corresponding to *key* to *info*. Calling "
+"``some_mailbox.set_info(key, flags)`` is similar to ::"
+msgstr ""
+
+#: ../../library/mailbox.rst:500
+msgid ""
+"If you do have a :class:`MaildirMessage` object, use its "
+":meth:`~MaildirMessage.set_info` method instead, because changes made with "
+"this mailbox method will not be visible to the message object's method, "
+":meth:`~MaildirMessage.get_info`."
+msgstr ""
+
+#: ../../library/mailbox.rst:507
 msgid ""
 "Some :class:`Mailbox` methods implemented by :class:`!Maildir` deserve "
 "special remarks:"
 msgstr ""
 
-#: ../../library/mailbox.rst:412
+#: ../../library/mailbox.rst:517
 msgid ""
 "These methods generate unique file names based upon the current process ID. "
 "When using multiple threads, undetected name clashes may occur and cause "
@@ -545,7 +644,7 @@ msgstr ""
 "потоки не координуються, щоб уникнути використання цих методів для "
 "одночасного маніпулювання тією самою поштовою скринькою."
 
-#: ../../library/mailbox.rst:420
+#: ../../library/mailbox.rst:525
 msgid ""
 "All changes to Maildir mailboxes are immediately applied, so this method "
 "does nothing."
@@ -553,7 +652,7 @@ msgstr ""
 "Усі зміни в поштових скриньках Maildir застосовуються негайно, тому цей "
 "метод нічого не робить."
 
-#: ../../library/mailbox.rst:427
+#: ../../library/mailbox.rst:532
 msgid ""
 "Maildir mailboxes do not support (or require) locking, so these methods do "
 "nothing."
@@ -561,13 +660,13 @@ msgstr ""
 "Поштові скриньки Maildir не підтримують (або вимагають) блокування, тому ці "
 "методи нічого не роблять."
 
-#: ../../library/mailbox.rst:433
+#: ../../library/mailbox.rst:538
 msgid ""
 ":class:`!Maildir` instances do not keep any open files and the underlying "
 "mailboxes do not support locking, so this method does nothing."
 msgstr ""
 
-#: ../../library/mailbox.rst:439
+#: ../../library/mailbox.rst:544
 msgid ""
 "Depending upon the host platform, it may not be possible to modify or remove"
 " the underlying message while the returned file remains open."
@@ -575,22 +674,22 @@ msgstr ""
 "Залежно від хост-платформи може бути неможливо змінити або видалити базове "
 "повідомлення, поки повернутий файл залишається відкритим."
 
-#: ../../library/mailbox.rst:445
+#: ../../library/mailbox.rst:550
 msgid ""
 "`maildir man page from Courier <https://www.courier-mta.org/maildir.html>`_"
 msgstr ""
 
-#: ../../library/mailbox.rst:446
+#: ../../library/mailbox.rst:551
 msgid ""
 "A specification of the format. Describes a common extension for supporting "
 "folders."
 msgstr "Специфікація формату. Описує загальне розширення для підтримки папок."
 
-#: ../../library/mailbox.rst:449
+#: ../../library/mailbox.rst:554
 msgid "`Using maildir format <https://cr.yp.to/proto/maildir.html>`_"
 msgstr "`Використання формату maildir <https://cr.yp.to/proto/maildir.html>`_"
 
-#: ../../library/mailbox.rst:450
+#: ../../library/mailbox.rst:555
 msgid ""
 "Notes on Maildir by its inventor. Includes an updated name-creation scheme "
 "and details on \"info\" semantics."
@@ -598,11 +697,11 @@ msgstr ""
 "Нотатки про Maildir від його винахідника. Включає оновлену схему створення "
 "імен і подробиці семантики \"info\"."
 
-#: ../../library/mailbox.rst:457
+#: ../../library/mailbox.rst:562
 msgid ":class:`!mbox` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:462
+#: ../../library/mailbox.rst:567
 msgid ""
 "A subclass of :class:`Mailbox` for mailboxes in mbox format. Parameter "
 "*factory* is a callable object that accepts a file-like message "
@@ -619,7 +718,7 @@ msgstr ""
 "Якщо *create* має значення ``True``, поштова скринька буде створена, якщо "
 "вона не існує."
 
-#: ../../library/mailbox.rst:469
+#: ../../library/mailbox.rst:574
 msgid ""
 "The mbox format is the classic format for storing mail on Unix systems. All "
 "messages in an mbox mailbox are stored in a single file with the beginning "
@@ -631,7 +730,7 @@ msgstr ""
 "кожного повідомлення позначається рядком, перші п’ять символів якого є "
 "\"Від\"."
 
-#: ../../library/mailbox.rst:473
+#: ../../library/mailbox.rst:578
 msgid ""
 "Several variations of the mbox format exist to address perceived "
 "shortcomings in the original. In the interest of compatibility, "
@@ -643,27 +742,27 @@ msgid ""
 "to \"From \" when reading the message."
 msgstr ""
 
-#: ../../library/mailbox.rst:481
+#: ../../library/mailbox.rst:586
 msgid ""
 "Some :class:`Mailbox` methods implemented by :class:`!mbox` deserve special "
 "remarks:"
 msgstr ""
 
-#: ../../library/mailbox.rst:487
+#: ../../library/mailbox.rst:592
 msgid ""
 "Using the file after calling :meth:`~Mailbox.flush` or "
 ":meth:`~Mailbox.close` on the :class:`!mbox` instance may yield "
 "unpredictable results or raise an exception."
 msgstr ""
 
-#: ../../library/mailbox.rst:495 ../../library/mailbox.rst:704
-#: ../../library/mailbox.rst:755
+#: ../../library/mailbox.rst:600 ../../library/mailbox.rst:813
+#: ../../library/mailbox.rst:864
 msgid ""
 "Three locking mechanisms are used---dot locking and, if available, the "
 ":c:func:`!flock` and :c:func:`!lockf` system calls."
 msgstr ""
 
-#: ../../library/mailbox.rst:501
+#: ../../library/mailbox.rst:606
 msgid ""
 "`mbox man page from tin "
 "<http://www.tin.org/bin/man.cgi?section=5&topic=mbox>`_"
@@ -671,11 +770,11 @@ msgstr ""
 "`сторінка довідки mbox з tin "
 "<http://www.tin.org/bin/man.cgi?section=5&topic=mbox>`_"
 
-#: ../../library/mailbox.rst:502
+#: ../../library/mailbox.rst:607
 msgid "A specification of the format, with details on locking."
 msgstr "Специфікація формату з деталями щодо блокування."
 
-#: ../../library/mailbox.rst:504
+#: ../../library/mailbox.rst:609
 msgid ""
 "`Configuring Netscape Mail on Unix: Why The Content-Length Format is Bad "
 "<https://www.jwz.org/doc/content-length.html>`_"
@@ -683,12 +782,12 @@ msgstr ""
 "`Налаштування Netscape Mail в Unix: Чому формат довжини вмісту поганий "
 "<https://www.jwz.org/doc/content-length.html>`_"
 
-#: ../../library/mailbox.rst:505
+#: ../../library/mailbox.rst:610
 msgid ""
 "An argument for using the original mbox format rather than a variation."
 msgstr "Аргумент для використання оригінального формату mbox, а не варіації."
 
-#: ../../library/mailbox.rst:507
+#: ../../library/mailbox.rst:612
 msgid ""
 "`\"mbox\" is a family of several mutually incompatible mailbox formats "
 "<https://www.loc.gov/preservation/digital/formats/fdd/fdd000383.shtml>`_"
@@ -697,15 +796,15 @@ msgstr ""
 "скриньок "
 "<https://www.loc.gov/preservation/digital/formats/fdd/fdd000383.shtml>`_"
 
-#: ../../library/mailbox.rst:508
+#: ../../library/mailbox.rst:613
 msgid "A history of mbox variations."
 msgstr "Історія різновидів mbox."
 
-#: ../../library/mailbox.rst:514
+#: ../../library/mailbox.rst:619
 msgid ":class:`!MH` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:519
+#: ../../library/mailbox.rst:624
 msgid ""
 "A subclass of :class:`Mailbox` for mailboxes in MH format. Parameter "
 "*factory* is a callable object that accepts a file-like message "
@@ -722,7 +821,7 @@ msgstr ""
 "Якщо *create* має значення ``True``, поштова скринька буде створена, якщо "
 "вона не існує."
 
-#: ../../library/mailbox.rst:526
+#: ../../library/mailbox.rst:631
 msgid ""
 "MH is a directory-based mailbox format invented for the MH Message Handling "
 "System, a mail user agent. Each message in an MH mailbox resides in its own "
@@ -742,7 +841,7 @@ msgstr ""
 "переміщення до підпапок. Послідовності визначено у файлі під назвою "
 ":file:`.mh_sequences` у кожній папці."
 
-#: ../../library/mailbox.rst:534
+#: ../../library/mailbox.rst:639
 msgid ""
 "The :class:`!MH` class manipulates MH mailboxes, but it does not attempt to "
 "emulate all of :program:`mh`'s behaviors. In particular, it does not modify "
@@ -750,26 +849,30 @@ msgid ""
 " are used by :program:`mh` to store its state and configuration."
 msgstr ""
 
-#: ../../library/mailbox.rst:539
+#: ../../library/mailbox.rst:644
 msgid ""
 ":class:`!MH` instances have all of the methods of :class:`Mailbox` in "
 "addition to the following:"
 msgstr ""
 
-#: ../../library/mailbox.rst:550
+#: ../../library/mailbox.rst:649
+msgid "Supported folders that don't contain a :file:`.mh_sequences` file."
+msgstr ""
+
+#: ../../library/mailbox.rst:659
 msgid ""
 "Return an :class:`!MH` instance representing the folder whose name is "
 "*folder*. A :exc:`NoSuchMailboxError` exception is raised if the folder does"
 " not exist."
 msgstr ""
 
-#: ../../library/mailbox.rst:557
+#: ../../library/mailbox.rst:666
 msgid ""
 "Create a folder whose name is *folder* and return an :class:`!MH` instance "
 "representing it."
 msgstr ""
 
-#: ../../library/mailbox.rst:570
+#: ../../library/mailbox.rst:679
 msgid ""
 "Return a dictionary of sequence names mapped to key lists. If there are no "
 "sequences, the empty dictionary is returned."
@@ -777,7 +880,7 @@ msgstr ""
 "Повертає словник імен послідовностей, зіставлених зі списками ключів. Якщо "
 "послідовностей немає, повертається порожній словник."
 
-#: ../../library/mailbox.rst:576
+#: ../../library/mailbox.rst:685
 msgid ""
 "Re-define the sequences that exist in the mailbox based upon *sequences*, a "
 "dictionary of names mapped to key lists, like returned by "
@@ -787,7 +890,7 @@ msgstr ""
 "*sequences*, словника імен, зіставлених зі списками ключів, як повертає "
 ":meth:`get_sequences`."
 
-#: ../../library/mailbox.rst:583
+#: ../../library/mailbox.rst:692
 msgid ""
 "Rename messages in the mailbox as necessary to eliminate gaps in numbering."
 "  Entries in the sequences list are updated correspondingly."
@@ -796,7 +899,7 @@ msgstr ""
 "прогалини в нумерації. Записи в списку послідовностей оновлюються "
 "відповідно."
 
-#: ../../library/mailbox.rst:588
+#: ../../library/mailbox.rst:697
 msgid ""
 "Already-issued keys are invalidated by this operation and should not be "
 "subsequently used."
@@ -804,13 +907,13 @@ msgstr ""
 "Уже видані ключі стають недійсними під час цієї операції та не повинні "
 "використовуватися згодом."
 
-#: ../../library/mailbox.rst:591
+#: ../../library/mailbox.rst:700
 msgid ""
 "Some :class:`Mailbox` methods implemented by :class:`!MH` deserve special "
 "remarks:"
 msgstr ""
 
-#: ../../library/mailbox.rst:599
+#: ../../library/mailbox.rst:708
 msgid ""
 "These methods immediately delete the message. The MH convention of marking a"
 " message for deletion by prepending a comma to its name is not used."
@@ -819,7 +922,7 @@ msgstr ""
 "повідомлення для видалення шляхом додавання коми перед його назвою не "
 "використовується."
 
-#: ../../library/mailbox.rst:606
+#: ../../library/mailbox.rst:715
 msgid ""
 "Three locking mechanisms are used---dot locking and, if available, the "
 ":c:func:`!flock` and :c:func:`!lockf` system calls. For MH mailboxes, "
@@ -828,7 +931,7 @@ msgid ""
 "message files."
 msgstr ""
 
-#: ../../library/mailbox.rst:615
+#: ../../library/mailbox.rst:724
 msgid ""
 "Depending upon the host platform, it may not be possible to remove the "
 "underlying message while the returned file remains open."
@@ -836,7 +939,7 @@ msgstr ""
 "Залежно від хост-платформи може бути неможливо видалити базове повідомлення,"
 " поки повернутий файл залишається відкритим."
 
-#: ../../library/mailbox.rst:621
+#: ../../library/mailbox.rst:730
 msgid ""
 "All changes to MH mailboxes are immediately applied, so this method does "
 "nothing."
@@ -844,17 +947,17 @@ msgstr ""
 "Усі зміни до поштових скриньок MH негайно застосовуються, тому цей метод "
 "нічого не робить."
 
-#: ../../library/mailbox.rst:627
+#: ../../library/mailbox.rst:736
 msgid ""
 ":class:`!MH` instances do not keep any open files, so this method is "
 "equivalent to :meth:`unlock`."
 msgstr ""
 
-#: ../../library/mailbox.rst:633
+#: ../../library/mailbox.rst:742
 msgid "`nmh - Message Handling System <https://www.nongnu.org/nmh/>`_"
 msgstr ""
 
-#: ../../library/mailbox.rst:634
+#: ../../library/mailbox.rst:743
 msgid ""
 "Home page of :program:`nmh`, an updated version of the original "
 ":program:`mh`."
@@ -862,7 +965,7 @@ msgstr ""
 "Домашня сторінка :program:`nmh`, оновленої версії оригінальної "
 ":program:`mh`."
 
-#: ../../library/mailbox.rst:636
+#: ../../library/mailbox.rst:745
 msgid ""
 "`MH & nmh: Email for Users & Programmers <https://rand-"
 "mh.sourceforge.io/book/>`_"
@@ -870,7 +973,7 @@ msgstr ""
 "`MH & nmh: Електронна пошта для користувачів і програмістів <https://rand-"
 "mh.sourceforge.io/book/>`_"
 
-#: ../../library/mailbox.rst:637
+#: ../../library/mailbox.rst:746
 msgid ""
 "A GPL-licensed book on :program:`mh` and :program:`nmh`, with some "
 "information on the mailbox format."
@@ -878,11 +981,11 @@ msgstr ""
 "Ліцензована GPL книга про :program:`mh` і :program:`nmh`, з деякою "
 "інформацією про формат поштової скриньки."
 
-#: ../../library/mailbox.rst:644
+#: ../../library/mailbox.rst:753
 msgid ":class:`!Babyl` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:649
+#: ../../library/mailbox.rst:758
 msgid ""
 "A subclass of :class:`Mailbox` for mailboxes in Babyl format. Parameter "
 "*factory* is a callable object that accepts a file-like message "
@@ -899,7 +1002,7 @@ msgstr ""
 " Якщо *create* має значення ``True``, поштова скринька буде створена, якщо "
 "вона не існує."
 
-#: ../../library/mailbox.rst:656
+#: ../../library/mailbox.rst:765
 msgid ""
 "Babyl is a single-file mailbox format used by the Rmail mail user agent "
 "included with Emacs. The beginning of a message is indicated by a line "
@@ -915,7 +1018,7 @@ msgstr ""
 "початком наступного повідомлення або, у випадку останнього повідомлення, "
 "рядком, що містить символ Control-Underscore (``'\\037'``)."
 
-#: ../../library/mailbox.rst:663
+#: ../../library/mailbox.rst:772
 msgid ""
 "Messages in a Babyl mailbox have two sets of headers, original headers and "
 "so-called visible headers. Visible headers are typically a subset of the "
@@ -934,20 +1037,20 @@ msgstr ""
 "визначених користувачем міток, знайдених у поштовій скриньці, зберігається в"
 " розділі параметрів Babyl ."
 
-#: ../../library/mailbox.rst:671
+#: ../../library/mailbox.rst:780
 msgid ""
 ":class:`!Babyl` instances have all of the methods of :class:`Mailbox` in "
 "addition to the following:"
 msgstr ""
 
-#: ../../library/mailbox.rst:677
+#: ../../library/mailbox.rst:786
 msgid ""
 "Return a list of the names of all user-defined labels used in the mailbox."
 msgstr ""
 "Повертає список імен усіх визначених користувачем міток, які "
 "використовуються в поштовій скриньці."
 
-#: ../../library/mailbox.rst:681
+#: ../../library/mailbox.rst:790
 msgid ""
 "The actual messages are inspected to determine which labels exist in the "
 "mailbox rather than consulting the list of labels in the Babyl options "
@@ -958,13 +1061,13 @@ msgstr ""
 "Babyl, але розділ Babyl оновлюється щоразу, коли поштова скринька "
 "змінюється."
 
-#: ../../library/mailbox.rst:686
+#: ../../library/mailbox.rst:795
 msgid ""
 "Some :class:`Mailbox` methods implemented by :class:`!Babyl` deserve special"
 " remarks:"
 msgstr ""
 
-#: ../../library/mailbox.rst:692
+#: ../../library/mailbox.rst:801
 msgid ""
 "In Babyl mailboxes, the headers of a message are not stored contiguously "
 "with the body of the message. To generate a file-like representation, the "
@@ -980,16 +1083,16 @@ msgstr ""
 "від базової поштової скриньки, але не економить пам’ять у порівнянні з "
 "представленням рядків."
 
-#: ../../library/mailbox.rst:710
+#: ../../library/mailbox.rst:819
 msgid ""
 "`Format of Version 5 Babyl Files <https://quimby.gnus.org/notes/BABYL>`_"
 msgstr "`Формат файлів Babyl версії 5 <https://quimby.gnus.org/notes/BABYL>`_"
 
-#: ../../library/mailbox.rst:711
+#: ../../library/mailbox.rst:820
 msgid "A specification of the Babyl format."
 msgstr "Специфікація формату Babyl."
 
-#: ../../library/mailbox.rst:713
+#: ../../library/mailbox.rst:822
 msgid ""
 "`Reading Mail with Rmail "
 "<https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html>`_"
@@ -997,15 +1100,15 @@ msgstr ""
 "`Читання пошти за допомогою Rmail "
 "<https://www.gnu.org/software/emacs/manual/html_node/emacs/Rmail.html>`_"
 
-#: ../../library/mailbox.rst:714
+#: ../../library/mailbox.rst:823
 msgid "The Rmail manual, with some information on Babyl semantics."
 msgstr "Посібник Rmail з деякою інформацією про семантику Babyl."
 
-#: ../../library/mailbox.rst:720
+#: ../../library/mailbox.rst:829
 msgid ":class:`!MMDF` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:725
+#: ../../library/mailbox.rst:834
 msgid ""
 "A subclass of :class:`Mailbox` for mailboxes in MMDF format. Parameter "
 "*factory* is a callable object that accepts a file-like message "
@@ -1022,7 +1125,7 @@ msgstr ""
 "Якщо *create* має значення ``True``, поштова скринька буде створена, якщо "
 "вона не існує."
 
-#: ../../library/mailbox.rst:732
+#: ../../library/mailbox.rst:841
 msgid ""
 "MMDF is a single-file mailbox format invented for the Multichannel "
 "Memorandum Distribution Facility, a mail transfer agent. Each message is in "
@@ -1044,20 +1147,20 @@ msgstr ""
 "роздільники повідомлень запобігають помилково приймаючи такі випадки за "
 "початок наступних повідомлень."
 
-#: ../../library/mailbox.rst:741
+#: ../../library/mailbox.rst:850
 msgid ""
 "Some :class:`Mailbox` methods implemented by :class:`!MMDF` deserve special "
 "remarks:"
 msgstr ""
 
-#: ../../library/mailbox.rst:747
+#: ../../library/mailbox.rst:856
 msgid ""
 "Using the file after calling :meth:`~Mailbox.flush` or "
 ":meth:`~Mailbox.close` on the :class:`!MMDF` instance may yield "
 "unpredictable results or raise an exception."
 msgstr ""
 
-#: ../../library/mailbox.rst:761
+#: ../../library/mailbox.rst:870
 msgid ""
 "`mmdf man page from tin "
 "<http://www.tin.org/bin/man.cgi?section=5&topic=mmdf>`_"
@@ -1065,16 +1168,16 @@ msgstr ""
 "`сторінка довідки mmdf з tin "
 "<http://www.tin.org/bin/man.cgi?section=5&topic=mmdf>`_"
 
-#: ../../library/mailbox.rst:762
+#: ../../library/mailbox.rst:871
 msgid ""
 "A specification of MMDF format from the documentation of tin, a newsreader."
 msgstr "Специфікація формату MMDF із документації tin, читання новин."
 
-#: ../../library/mailbox.rst:764
+#: ../../library/mailbox.rst:873
 msgid "`MMDF <https://en.wikipedia.org/wiki/MMDF>`_"
 msgstr "`MMDF <https://en.wikipedia.org/wiki/MMDF>`_"
 
-#: ../../library/mailbox.rst:765
+#: ../../library/mailbox.rst:874
 msgid ""
 "A Wikipedia article describing the Multichannel Memorandum Distribution "
 "Facility."
@@ -1082,18 +1185,18 @@ msgstr ""
 "Стаття у Вікіпедії, що описує багатоканальний засіб розповсюдження "
 "меморандумів."
 
-#: ../../library/mailbox.rst:772
+#: ../../library/mailbox.rst:881
 msgid ":class:`!Message` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:777
+#: ../../library/mailbox.rst:886
 msgid ""
 "A subclass of the :mod:`email.message` module's "
 ":class:`~email.message.Message`. Subclasses of :class:`!mailbox.Message` add"
 " mailbox-format-specific state and behavior."
 msgstr ""
 
-#: ../../library/mailbox.rst:781
+#: ../../library/mailbox.rst:890
 msgid ""
 "If *message* is omitted, the new instance is created in a default, empty "
 "state. If *message* is an :class:`email.message.Message` instance, its "
@@ -1105,7 +1208,7 @@ msgid ""
 "compatibility."
 msgstr ""
 
-#: ../../library/mailbox.rst:790
+#: ../../library/mailbox.rst:899
 msgid ""
 "The format-specific state and behaviors offered by subclasses vary, but in "
 "general it is only the properties that are not specific to a particular "
@@ -1126,7 +1229,7 @@ msgstr ""
 "те, чи було повідомлення прочитано користувачем або позначено як важливе, "
 "зберігається, оскільки воно стосується самого повідомлення."
 
-#: ../../library/mailbox.rst:799
+#: ../../library/mailbox.rst:908
 msgid ""
 "There is no requirement that :class:`!Message` instances be used to "
 "represent messages retrieved using :class:`Mailbox` instances. In some "
@@ -1137,11 +1240,11 @@ msgid ""
 "instance is initialized."
 msgstr ""
 
-#: ../../library/mailbox.rst:810
+#: ../../library/mailbox.rst:919
 msgid ":class:`!MaildirMessage` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:815
+#: ../../library/mailbox.rst:924
 msgid ""
 "A message with Maildir-specific behaviors. Parameter *message* has the same "
 "meaning as with the :class:`Message` constructor."
@@ -1149,7 +1252,7 @@ msgstr ""
 "Повідомлення зі специфічною поведінкою Maildir. Параметр *message* має те "
 "саме значення, що й у конструкторі :class:`Message`."
 
-#: ../../library/mailbox.rst:818
+#: ../../library/mailbox.rst:927
 msgid ""
 "Typically, a mail user agent application moves all of the messages in the "
 ":file:`new` subdirectory to the :file:`cur` subdirectory after the first "
@@ -1174,108 +1277,108 @@ msgstr ""
 "\"2,FR\") або може містити \"1\", за яким слідує так звана експериментальна "
 "інформація. Стандартні позначки для повідомлень Maildir такі:"
 
-#: ../../library/mailbox.rst:830 ../../library/mailbox.rst:997
-#: ../../library/mailbox.rst:1368
+#: ../../library/mailbox.rst:939 ../../library/mailbox.rst:1106
+#: ../../library/mailbox.rst:1477
 msgid "Flag"
 msgstr "Прапор"
 
-#: ../../library/mailbox.rst:830 ../../library/mailbox.rst:997
-#: ../../library/mailbox.rst:1368
+#: ../../library/mailbox.rst:939 ../../library/mailbox.rst:1106
+#: ../../library/mailbox.rst:1477
 msgid "Meaning"
 msgstr "Значення"
 
-#: ../../library/mailbox.rst:830 ../../library/mailbox.rst:997
-#: ../../library/mailbox.rst:1148 ../../library/mailbox.rst:1235
-#: ../../library/mailbox.rst:1368
+#: ../../library/mailbox.rst:939 ../../library/mailbox.rst:1106
+#: ../../library/mailbox.rst:1257 ../../library/mailbox.rst:1344
+#: ../../library/mailbox.rst:1477
 msgid "Explanation"
 msgstr "Пояснення"
 
-#: ../../library/mailbox.rst:832 ../../library/mailbox.rst:1003
-#: ../../library/mailbox.rst:1374
+#: ../../library/mailbox.rst:941 ../../library/mailbox.rst:1112
+#: ../../library/mailbox.rst:1483
 msgid "D"
 msgstr "Д"
 
-#: ../../library/mailbox.rst:832
+#: ../../library/mailbox.rst:941
 msgid "Draft"
 msgstr "Чернетка"
 
-#: ../../library/mailbox.rst:832
+#: ../../library/mailbox.rst:941
 msgid "Under composition"
 msgstr "Під композицією"
 
-#: ../../library/mailbox.rst:834 ../../library/mailbox.rst:1005
-#: ../../library/mailbox.rst:1376
+#: ../../library/mailbox.rst:943 ../../library/mailbox.rst:1114
+#: ../../library/mailbox.rst:1485
 msgid "F"
 msgstr "Ф"
 
-#: ../../library/mailbox.rst:834 ../../library/mailbox.rst:1005
-#: ../../library/mailbox.rst:1376
+#: ../../library/mailbox.rst:943 ../../library/mailbox.rst:1114
+#: ../../library/mailbox.rst:1485
 msgid "Flagged"
 msgstr "Позначено"
 
-#: ../../library/mailbox.rst:834 ../../library/mailbox.rst:1005
-#: ../../library/mailbox.rst:1154 ../../library/mailbox.rst:1376
+#: ../../library/mailbox.rst:943 ../../library/mailbox.rst:1114
+#: ../../library/mailbox.rst:1263 ../../library/mailbox.rst:1485
 msgid "Marked as important"
 msgstr "Позначено як важливе"
 
-#: ../../library/mailbox.rst:836
+#: ../../library/mailbox.rst:945
 msgid "P"
 msgstr "П"
 
-#: ../../library/mailbox.rst:836
+#: ../../library/mailbox.rst:945
 msgid "Passed"
 msgstr "Пройшов"
 
-#: ../../library/mailbox.rst:836
+#: ../../library/mailbox.rst:945
 msgid "Forwarded, resent, or bounced"
 msgstr "Переслано, повторно надіслано або відхилено"
 
-#: ../../library/mailbox.rst:838 ../../library/mailbox.rst:999
-#: ../../library/mailbox.rst:1370
+#: ../../library/mailbox.rst:947 ../../library/mailbox.rst:1108
+#: ../../library/mailbox.rst:1479
 msgid "R"
 msgstr "Р"
 
-#: ../../library/mailbox.rst:838
+#: ../../library/mailbox.rst:947
 msgid "Replied"
 msgstr "Відповів"
 
-#: ../../library/mailbox.rst:838 ../../library/mailbox.rst:1007
-#: ../../library/mailbox.rst:1152 ../../library/mailbox.rst:1243
-#: ../../library/mailbox.rst:1378
+#: ../../library/mailbox.rst:947 ../../library/mailbox.rst:1116
+#: ../../library/mailbox.rst:1261 ../../library/mailbox.rst:1352
+#: ../../library/mailbox.rst:1487
 msgid "Replied to"
 msgstr "Відповів"
 
-#: ../../library/mailbox.rst:840
+#: ../../library/mailbox.rst:949
 msgid "S"
 msgstr "С"
 
-#: ../../library/mailbox.rst:840
+#: ../../library/mailbox.rst:949
 msgid "Seen"
 msgstr "Бачив"
 
-#: ../../library/mailbox.rst:840 ../../library/mailbox.rst:999
-#: ../../library/mailbox.rst:1370
+#: ../../library/mailbox.rst:949 ../../library/mailbox.rst:1108
+#: ../../library/mailbox.rst:1479
 msgid "Read"
 msgstr "Прочитайте"
 
-#: ../../library/mailbox.rst:842
+#: ../../library/mailbox.rst:951
 msgid "T"
 msgstr "Т"
 
-#: ../../library/mailbox.rst:842
+#: ../../library/mailbox.rst:951
 msgid "Trashed"
 msgstr "У кошик"
 
-#: ../../library/mailbox.rst:842 ../../library/mailbox.rst:1003
-#: ../../library/mailbox.rst:1239 ../../library/mailbox.rst:1374
+#: ../../library/mailbox.rst:951 ../../library/mailbox.rst:1112
+#: ../../library/mailbox.rst:1348 ../../library/mailbox.rst:1483
 msgid "Marked for subsequent deletion"
 msgstr "Позначено для подальшого видалення"
 
-#: ../../library/mailbox.rst:845
+#: ../../library/mailbox.rst:954
 msgid ":class:`!MaildirMessage` instances offer the following methods:"
 msgstr ""
 
-#: ../../library/mailbox.rst:850
+#: ../../library/mailbox.rst:959
 msgid ""
 "Return either \"new\" (if the message should be stored in the :file:`new` "
 "subdirectory) or \"cur\" (if the message should be stored in the :file:`cur`"
@@ -1285,18 +1388,14 @@ msgstr ""
 ":file:`new`), або \"cur\" (якщо повідомлення має зберігатися в підкаталозі "
 ":file:`cur`)."
 
-#: ../../library/mailbox.rst:856
+#: ../../library/mailbox.rst:965
 msgid ""
 "A message is typically moved from :file:`new` to :file:`cur` after its "
-"mailbox has been accessed, whether or not the message is has been read. A "
+"mailbox has been accessed, whether or not the message has been read. A "
 "message ``msg`` has been read if ``\"S\" in msg.get_flags()`` is ``True``."
 msgstr ""
-"Зазвичай повідомлення переміщується з :file:`new` до :file:`cur` після "
-"доступу до його поштової скриньки, незалежно від того, прочитано чи ні "
-"повідомлення. Повідомлення ``msg`` було прочитано, якщо ``\"S\" у "
-"msg.get_flags()`` має значення ``True``."
 
-#: ../../library/mailbox.rst:864
+#: ../../library/mailbox.rst:973
 msgid ""
 "Set the subdirectory the message should be stored in. Parameter *subdir* "
 "must be either \"new\" or \"cur\"."
@@ -1304,7 +1403,7 @@ msgstr ""
 "Встановіть підкаталог, у якому має зберігатися повідомлення. Параметр "
 "*subdir* повинен мати значення \"new\" або \"cur\"."
 
-#: ../../library/mailbox.rst:870
+#: ../../library/mailbox.rst:979
 msgid ""
 "Return a string specifying the flags that are currently set. If the message "
 "complies with the standard Maildir format, the result is the concatenation "
@@ -1319,11 +1418,11 @@ msgstr ""
 "повертається, якщо не встановлено прапори або якщо \"info\" містить "
 "експериментальну семантику."
 
-#: ../../library/mailbox.rst:880
+#: ../../library/mailbox.rst:989
 msgid "Set the flags specified by *flags* and unset all others."
 msgstr "Встановіть прапорці, визначені *flags*, і скасуйте всі інші."
 
-#: ../../library/mailbox.rst:885
+#: ../../library/mailbox.rst:994
 msgid ""
 "Set the flag(s) specified by *flag* without changing other flags. To add "
 "more than one flag at a time, *flag* may be a string of more than one "
@@ -1335,7 +1434,7 @@ msgstr ""
 "символів. Поточна \"інформація\" перезаписується незалежно від того, чи "
 "містить вона експериментальну інформацію, а не прапорці."
 
-#: ../../library/mailbox.rst:893
+#: ../../library/mailbox.rst:1002
 msgid ""
 "Unset the flag(s) specified by *flag* without changing other flags. To "
 "remove more than one flag at a time, *flag* maybe a string of more than one "
@@ -1347,7 +1446,7 @@ msgstr ""
 "символів. Якщо \"info\" містить експериментальну інформацію, а не прапорці, "
 "поточна \"info\" не змінюється."
 
-#: ../../library/mailbox.rst:901
+#: ../../library/mailbox.rst:1010
 msgid ""
 "Return the delivery date of the message as a floating-point number "
 "representing seconds since the epoch."
@@ -1355,7 +1454,7 @@ msgstr ""
 "Повертає дату доставки повідомлення як число з плаваючою комою, яке "
 "представляє секунди з епохи."
 
-#: ../../library/mailbox.rst:907
+#: ../../library/mailbox.rst:1016
 msgid ""
 "Set the delivery date of the message to *date*, a floating-point number "
 "representing seconds since the epoch."
@@ -1363,7 +1462,7 @@ msgstr ""
 "Встановіть дату доставки повідомлення на *date*, число з плаваючою комою, "
 "яке представляє секунди з епохи."
 
-#: ../../library/mailbox.rst:913
+#: ../../library/mailbox.rst:1022
 msgid ""
 "Return a string containing the \"info\" for a message. This is useful for "
 "accessing and modifying \"info\" that is experimental (i.e., not a list of "
@@ -1373,11 +1472,11 @@ msgstr ""
 "доступу та модифікації \"інформації\", яка є експериментальною (тобто не "
 "списку позначок)."
 
-#: ../../library/mailbox.rst:920
+#: ../../library/mailbox.rst:1029
 msgid "Set \"info\" to *info*, which should be a string."
 msgstr "Встановіть для \"info\" значення *info*, яке має бути рядком."
 
-#: ../../library/mailbox.rst:922
+#: ../../library/mailbox.rst:1031
 msgid ""
 "When a :class:`!MaildirMessage` instance is created based upon an "
 ":class:`mboxMessage` or :class:`MMDFMessage` instance, the "
@@ -1385,170 +1484,170 @@ msgid ""
 "following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:928 ../../library/mailbox.rst:946
-#: ../../library/mailbox.rst:961 ../../library/mailbox.rst:1068
-#: ../../library/mailbox.rst:1085 ../../library/mailbox.rst:1100
-#: ../../library/mailbox.rst:1116 ../../library/mailbox.rst:1183
-#: ../../library/mailbox.rst:1198 ../../library/mailbox.rst:1212
-#: ../../library/mailbox.rst:1309 ../../library/mailbox.rst:1326
-#: ../../library/mailbox.rst:1340 ../../library/mailbox.rst:1440
-#: ../../library/mailbox.rst:1457 ../../library/mailbox.rst:1472
-#: ../../library/mailbox.rst:1488
+#: ../../library/mailbox.rst:1037 ../../library/mailbox.rst:1055
+#: ../../library/mailbox.rst:1070 ../../library/mailbox.rst:1177
+#: ../../library/mailbox.rst:1194 ../../library/mailbox.rst:1209
+#: ../../library/mailbox.rst:1225 ../../library/mailbox.rst:1292
+#: ../../library/mailbox.rst:1307 ../../library/mailbox.rst:1321
+#: ../../library/mailbox.rst:1418 ../../library/mailbox.rst:1435
+#: ../../library/mailbox.rst:1449 ../../library/mailbox.rst:1549
+#: ../../library/mailbox.rst:1566 ../../library/mailbox.rst:1581
+#: ../../library/mailbox.rst:1597
 msgid "Resulting state"
 msgstr "Результуючий стан"
 
-#: ../../library/mailbox.rst:928 ../../library/mailbox.rst:1198
-#: ../../library/mailbox.rst:1326
+#: ../../library/mailbox.rst:1037 ../../library/mailbox.rst:1307
+#: ../../library/mailbox.rst:1435
 msgid ":class:`mboxMessage` or :class:`MMDFMessage` state"
 msgstr "стан :class:`mboxMessage` або :class:`MMDFMessage`"
 
-#: ../../library/mailbox.rst:931 ../../library/mailbox.rst:948
-#: ../../library/mailbox.rst:963 ../../library/mailbox.rst:1072
-#: ../../library/mailbox.rst:1444
+#: ../../library/mailbox.rst:1040 ../../library/mailbox.rst:1057
+#: ../../library/mailbox.rst:1072 ../../library/mailbox.rst:1181
+#: ../../library/mailbox.rst:1553
 msgid "\"cur\" subdirectory"
 msgstr "підкаталог \"cur\"."
 
-#: ../../library/mailbox.rst:931 ../../library/mailbox.rst:1072
-#: ../../library/mailbox.rst:1089 ../../library/mailbox.rst:1104
-#: ../../library/mailbox.rst:1120 ../../library/mailbox.rst:1444
-#: ../../library/mailbox.rst:1461 ../../library/mailbox.rst:1476
-#: ../../library/mailbox.rst:1492
+#: ../../library/mailbox.rst:1040 ../../library/mailbox.rst:1181
+#: ../../library/mailbox.rst:1198 ../../library/mailbox.rst:1213
+#: ../../library/mailbox.rst:1229 ../../library/mailbox.rst:1553
+#: ../../library/mailbox.rst:1570 ../../library/mailbox.rst:1585
+#: ../../library/mailbox.rst:1601
 msgid "O flag"
 msgstr "О прапор"
 
-#: ../../library/mailbox.rst:933 ../../library/mailbox.rst:952
-#: ../../library/mailbox.rst:1076 ../../library/mailbox.rst:1091
-#: ../../library/mailbox.rst:1124 ../../library/mailbox.rst:1189
-#: ../../library/mailbox.rst:1205 ../../library/mailbox.rst:1448
-#: ../../library/mailbox.rst:1463 ../../library/mailbox.rst:1496
+#: ../../library/mailbox.rst:1042 ../../library/mailbox.rst:1061
+#: ../../library/mailbox.rst:1185 ../../library/mailbox.rst:1200
+#: ../../library/mailbox.rst:1233 ../../library/mailbox.rst:1298
+#: ../../library/mailbox.rst:1314 ../../library/mailbox.rst:1557
+#: ../../library/mailbox.rst:1572 ../../library/mailbox.rst:1605
 msgid "F flag"
 msgstr "Прапор F"
 
-#: ../../library/mailbox.rst:935 ../../library/mailbox.rst:937
-#: ../../library/mailbox.rst:954 ../../library/mailbox.rst:969
-#: ../../library/mailbox.rst:1070 ../../library/mailbox.rst:1078
-#: ../../library/mailbox.rst:1118 ../../library/mailbox.rst:1187
-#: ../../library/mailbox.rst:1315 ../../library/mailbox.rst:1442
-#: ../../library/mailbox.rst:1450 ../../library/mailbox.rst:1490
+#: ../../library/mailbox.rst:1044 ../../library/mailbox.rst:1046
+#: ../../library/mailbox.rst:1063 ../../library/mailbox.rst:1078
+#: ../../library/mailbox.rst:1179 ../../library/mailbox.rst:1187
+#: ../../library/mailbox.rst:1227 ../../library/mailbox.rst:1296
+#: ../../library/mailbox.rst:1424 ../../library/mailbox.rst:1551
+#: ../../library/mailbox.rst:1559 ../../library/mailbox.rst:1599
 msgid "R flag"
 msgstr "Прапор R"
 
-#: ../../library/mailbox.rst:935 ../../library/mailbox.rst:1078
-#: ../../library/mailbox.rst:1093 ../../library/mailbox.rst:1108
-#: ../../library/mailbox.rst:1126 ../../library/mailbox.rst:1203
-#: ../../library/mailbox.rst:1333 ../../library/mailbox.rst:1450
-#: ../../library/mailbox.rst:1465 ../../library/mailbox.rst:1480
-#: ../../library/mailbox.rst:1498
+#: ../../library/mailbox.rst:1044 ../../library/mailbox.rst:1187
+#: ../../library/mailbox.rst:1202 ../../library/mailbox.rst:1217
+#: ../../library/mailbox.rst:1235 ../../library/mailbox.rst:1312
+#: ../../library/mailbox.rst:1442 ../../library/mailbox.rst:1559
+#: ../../library/mailbox.rst:1574 ../../library/mailbox.rst:1589
+#: ../../library/mailbox.rst:1607
 msgid "A flag"
 msgstr "Прапор"
 
-#: ../../library/mailbox.rst:937 ../../library/mailbox.rst:1070
-#: ../../library/mailbox.rst:1442
+#: ../../library/mailbox.rst:1046 ../../library/mailbox.rst:1179
+#: ../../library/mailbox.rst:1551
 msgid "S flag"
 msgstr "S прапор"
 
-#: ../../library/mailbox.rst:939 ../../library/mailbox.rst:971
-#: ../../library/mailbox.rst:1074 ../../library/mailbox.rst:1313
-#: ../../library/mailbox.rst:1446
+#: ../../library/mailbox.rst:1048 ../../library/mailbox.rst:1080
+#: ../../library/mailbox.rst:1183 ../../library/mailbox.rst:1422
+#: ../../library/mailbox.rst:1555
 msgid "T flag"
 msgstr "Т прапор"
 
-#: ../../library/mailbox.rst:939 ../../library/mailbox.rst:1074
-#: ../../library/mailbox.rst:1106 ../../library/mailbox.rst:1122
-#: ../../library/mailbox.rst:1331 ../../library/mailbox.rst:1446
-#: ../../library/mailbox.rst:1478 ../../library/mailbox.rst:1494
+#: ../../library/mailbox.rst:1048 ../../library/mailbox.rst:1183
+#: ../../library/mailbox.rst:1215 ../../library/mailbox.rst:1231
+#: ../../library/mailbox.rst:1440 ../../library/mailbox.rst:1555
+#: ../../library/mailbox.rst:1587 ../../library/mailbox.rst:1603
 msgid "D flag"
 msgstr "D прапор"
 
-#: ../../library/mailbox.rst:942
+#: ../../library/mailbox.rst:1051
 msgid ""
 "When a :class:`!MaildirMessage` instance is created based upon an "
 ":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:946 ../../library/mailbox.rst:1085
-#: ../../library/mailbox.rst:1340 ../../library/mailbox.rst:1457
+#: ../../library/mailbox.rst:1055 ../../library/mailbox.rst:1194
+#: ../../library/mailbox.rst:1449 ../../library/mailbox.rst:1566
 msgid ":class:`MHMessage` state"
 msgstr ":class:`MHMessage` стан"
 
-#: ../../library/mailbox.rst:948 ../../library/mailbox.rst:1089
-#: ../../library/mailbox.rst:1185 ../../library/mailbox.rst:1201
-#: ../../library/mailbox.rst:1214 ../../library/mailbox.rst:1342
-#: ../../library/mailbox.rst:1461
+#: ../../library/mailbox.rst:1057 ../../library/mailbox.rst:1198
+#: ../../library/mailbox.rst:1294 ../../library/mailbox.rst:1310
+#: ../../library/mailbox.rst:1323 ../../library/mailbox.rst:1451
+#: ../../library/mailbox.rst:1570
 msgid "\"unseen\" sequence"
 msgstr "\"невидима\" послідовність"
 
-#: ../../library/mailbox.rst:950 ../../library/mailbox.rst:965
+#: ../../library/mailbox.rst:1059 ../../library/mailbox.rst:1074
 msgid "\"cur\" subdirectory and S flag"
 msgstr "підкаталог \"cur\" і прапор S"
 
-#: ../../library/mailbox.rst:950 ../../library/mailbox.rst:1087
-#: ../../library/mailbox.rst:1459
+#: ../../library/mailbox.rst:1059 ../../library/mailbox.rst:1196
+#: ../../library/mailbox.rst:1568
 msgid "no \"unseen\" sequence"
 msgstr "немає \"невидимої\" послідовності"
 
-#: ../../library/mailbox.rst:952 ../../library/mailbox.rst:1091
-#: ../../library/mailbox.rst:1189 ../../library/mailbox.rst:1205
-#: ../../library/mailbox.rst:1463
+#: ../../library/mailbox.rst:1061 ../../library/mailbox.rst:1200
+#: ../../library/mailbox.rst:1298 ../../library/mailbox.rst:1314
+#: ../../library/mailbox.rst:1572
 msgid "\"flagged\" sequence"
 msgstr "\"позначена\" послідовність"
 
-#: ../../library/mailbox.rst:954 ../../library/mailbox.rst:1093
-#: ../../library/mailbox.rst:1187 ../../library/mailbox.rst:1203
-#: ../../library/mailbox.rst:1216 ../../library/mailbox.rst:1344
-#: ../../library/mailbox.rst:1465
+#: ../../library/mailbox.rst:1063 ../../library/mailbox.rst:1202
+#: ../../library/mailbox.rst:1296 ../../library/mailbox.rst:1312
+#: ../../library/mailbox.rst:1325 ../../library/mailbox.rst:1453
+#: ../../library/mailbox.rst:1574
 msgid "\"replied\" sequence"
 msgstr "послідовність \"відповів\"."
 
-#: ../../library/mailbox.rst:957
+#: ../../library/mailbox.rst:1066
 msgid ""
 "When a :class:`!MaildirMessage` instance is created based upon a "
 ":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:961 ../../library/mailbox.rst:1100
-#: ../../library/mailbox.rst:1212 ../../library/mailbox.rst:1472
+#: ../../library/mailbox.rst:1070 ../../library/mailbox.rst:1209
+#: ../../library/mailbox.rst:1321 ../../library/mailbox.rst:1581
 msgid ":class:`BabylMessage` state"
 msgstr ":class:`BabylMessage` стан"
 
-#: ../../library/mailbox.rst:963 ../../library/mailbox.rst:1104
-#: ../../library/mailbox.rst:1214 ../../library/mailbox.rst:1311
-#: ../../library/mailbox.rst:1329 ../../library/mailbox.rst:1342
-#: ../../library/mailbox.rst:1476
+#: ../../library/mailbox.rst:1072 ../../library/mailbox.rst:1213
+#: ../../library/mailbox.rst:1323 ../../library/mailbox.rst:1420
+#: ../../library/mailbox.rst:1438 ../../library/mailbox.rst:1451
+#: ../../library/mailbox.rst:1585
 msgid "\"unseen\" label"
 msgstr "ярлик \"невидимий\"."
 
-#: ../../library/mailbox.rst:965 ../../library/mailbox.rst:1102
-#: ../../library/mailbox.rst:1474
+#: ../../library/mailbox.rst:1074 ../../library/mailbox.rst:1211
+#: ../../library/mailbox.rst:1583
 msgid "no \"unseen\" label"
 msgstr "немає мітки \"невидиме\"."
 
-#: ../../library/mailbox.rst:967 ../../library/mailbox.rst:1317
+#: ../../library/mailbox.rst:1076 ../../library/mailbox.rst:1426
 msgid "P flag"
 msgstr "P прапор"
 
-#: ../../library/mailbox.rst:967
+#: ../../library/mailbox.rst:1076
 msgid "\"forwarded\" or \"resent\" label"
 msgstr "мітка \"переслано\" або \"повторно надіслано\"."
 
-#: ../../library/mailbox.rst:969 ../../library/mailbox.rst:1108
-#: ../../library/mailbox.rst:1216 ../../library/mailbox.rst:1315
-#: ../../library/mailbox.rst:1333 ../../library/mailbox.rst:1344
-#: ../../library/mailbox.rst:1480
+#: ../../library/mailbox.rst:1078 ../../library/mailbox.rst:1217
+#: ../../library/mailbox.rst:1325 ../../library/mailbox.rst:1424
+#: ../../library/mailbox.rst:1442 ../../library/mailbox.rst:1453
+#: ../../library/mailbox.rst:1589
 msgid "\"answered\" label"
 msgstr "мітка \"відповів\"."
 
-#: ../../library/mailbox.rst:971 ../../library/mailbox.rst:1106
-#: ../../library/mailbox.rst:1313 ../../library/mailbox.rst:1331
-#: ../../library/mailbox.rst:1478
+#: ../../library/mailbox.rst:1080 ../../library/mailbox.rst:1215
+#: ../../library/mailbox.rst:1422 ../../library/mailbox.rst:1440
+#: ../../library/mailbox.rst:1587
 msgid "\"deleted\" label"
 msgstr "ярлик \"видалено\"."
 
-#: ../../library/mailbox.rst:978
+#: ../../library/mailbox.rst:1087
 msgid ":class:`!mboxMessage` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:983
+#: ../../library/mailbox.rst:1092
 msgid ""
 "A message with mbox-specific behaviors. Parameter *message* has the same "
 "meaning as with the :class:`Message` constructor."
@@ -1556,7 +1655,7 @@ msgstr ""
 "Повідомлення зі специфічною поведінкою mbox. Параметр *message* має те саме "
 "значення, що й у конструкторі :class:`Message`."
 
-#: ../../library/mailbox.rst:986
+#: ../../library/mailbox.rst:1095
 msgid ""
 "Messages in an mbox mailbox are stored together in a single file. The "
 "sender's envelope address and the time of delivery are typically stored in a"
@@ -1574,35 +1673,35 @@ msgstr ""
 "наприклад, чи було воно прочитано чи позначено як важливе, зазвичай "
 "зберігаються в заголовках :mailheader:`Status` і :mailheader:`X-Status`."
 
-#: ../../library/mailbox.rst:994
+#: ../../library/mailbox.rst:1103
 msgid "Conventional flags for mbox messages are as follows:"
 msgstr "Звичайні позначки для повідомлень mbox такі:"
 
-#: ../../library/mailbox.rst:1001 ../../library/mailbox.rst:1372
+#: ../../library/mailbox.rst:1110 ../../library/mailbox.rst:1481
 msgid "O"
 msgstr "О"
 
-#: ../../library/mailbox.rst:1001 ../../library/mailbox.rst:1372
+#: ../../library/mailbox.rst:1110 ../../library/mailbox.rst:1481
 msgid "Old"
 msgstr "Старий"
 
-#: ../../library/mailbox.rst:1001 ../../library/mailbox.rst:1372
+#: ../../library/mailbox.rst:1110 ../../library/mailbox.rst:1481
 msgid "Previously detected by MUA"
 msgstr "Раніше виявлено MUA"
 
-#: ../../library/mailbox.rst:1003 ../../library/mailbox.rst:1374
+#: ../../library/mailbox.rst:1112 ../../library/mailbox.rst:1483
 msgid "Deleted"
 msgstr "Видалено"
 
-#: ../../library/mailbox.rst:1007 ../../library/mailbox.rst:1378
+#: ../../library/mailbox.rst:1116 ../../library/mailbox.rst:1487
 msgid "A"
 msgstr "А"
 
-#: ../../library/mailbox.rst:1007 ../../library/mailbox.rst:1378
+#: ../../library/mailbox.rst:1116 ../../library/mailbox.rst:1487
 msgid "Answered"
 msgstr "відповів"
 
-#: ../../library/mailbox.rst:1010 ../../library/mailbox.rst:1381
+#: ../../library/mailbox.rst:1119 ../../library/mailbox.rst:1490
 msgid ""
 "The \"R\" and \"O\" flags are stored in the :mailheader:`Status` header, and"
 " the \"D\", \"F\", and \"A\" flags are stored in the :mailheader:`X-Status` "
@@ -1613,11 +1712,11 @@ msgstr ""
 ":mailheader:`X-Status`. Прапорці та заголовки зазвичай з’являються у "
 "зазначеному порядку."
 
-#: ../../library/mailbox.rst:1014
+#: ../../library/mailbox.rst:1123
 msgid ":class:`!mboxMessage` instances offer the following methods:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1019 ../../library/mailbox.rst:1391
+#: ../../library/mailbox.rst:1128 ../../library/mailbox.rst:1500
 msgid ""
 "Return a string representing the \"From \" line that marks the start of the "
 "message in an mbox mailbox. The leading \"From \" and the trailing newline "
@@ -1627,7 +1726,7 @@ msgstr ""
 "повідомлення в поштовій скриньці mbox. Початковий \"Від\" і кінцевий символ "
 "нового рядка виключаються."
 
-#: ../../library/mailbox.rst:1026 ../../library/mailbox.rst:1398
+#: ../../library/mailbox.rst:1135 ../../library/mailbox.rst:1507
 msgid ""
 "Set the \"From \" line to *from_*, which should be specified without a "
 "leading \"From \" or trailing newline. For convenience, *time_* may be "
@@ -1637,7 +1736,7 @@ msgid ""
 ":func:`time.gmtime`)."
 msgstr ""
 
-#: ../../library/mailbox.rst:1036 ../../library/mailbox.rst:1408
+#: ../../library/mailbox.rst:1145 ../../library/mailbox.rst:1517
 msgid ""
 "Return a string specifying the flags that are currently set. If the message "
 "complies with the conventional format, the result is the concatenation in "
@@ -1649,7 +1748,7 @@ msgstr ""
 "конкатенація в наступному порядку нуля або одного входження кожного з "
 "``'R'``, ``'O'``, ``'D'``, ``'F''`` і ``'A'``."
 
-#: ../../library/mailbox.rst:1044 ../../library/mailbox.rst:1416
+#: ../../library/mailbox.rst:1153 ../../library/mailbox.rst:1525
 msgid ""
 "Set the flags specified by *flags* and unset all others. Parameter *flags* "
 "should be the concatenation in any order of zero or more occurrences of each"
@@ -1659,7 +1758,7 @@ msgstr ""
 "*flags* має бути конкатенацією в будь-якому порядку нуля або більше входжень"
 " кожного з ``'R'``, ``'O'``, ``'D'``, ``'F'`` і ``'A'``."
 
-#: ../../library/mailbox.rst:1051 ../../library/mailbox.rst:1423
+#: ../../library/mailbox.rst:1160 ../../library/mailbox.rst:1532
 msgid ""
 "Set the flag(s) specified by *flag* without changing other flags. To add "
 "more than one flag at a time, *flag* may be a string of more than one "
@@ -1669,7 +1768,7 @@ msgstr ""
 " більше ніж один прапор одночасно, *flag* може бути рядком із кількох "
 "символів."
 
-#: ../../library/mailbox.rst:1058 ../../library/mailbox.rst:1430
+#: ../../library/mailbox.rst:1167 ../../library/mailbox.rst:1539
 msgid ""
 "Unset the flag(s) specified by *flag* without changing other flags. To "
 "remove more than one flag at a time, *flag* maybe a string of more than one "
@@ -1679,7 +1778,7 @@ msgstr ""
 "видалити кілька прапорців одночасно, *flag* може бути рядком із кількох "
 "символів."
 
-#: ../../library/mailbox.rst:1062
+#: ../../library/mailbox.rst:1171
 msgid ""
 "When an :class:`!mboxMessage` instance is created based upon a "
 ":class:`MaildirMessage` instance, a \"From \" line is generated based upon "
@@ -1687,44 +1786,44 @@ msgid ""
 "conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1068 ../../library/mailbox.rst:1183
-#: ../../library/mailbox.rst:1309 ../../library/mailbox.rst:1440
+#: ../../library/mailbox.rst:1177 ../../library/mailbox.rst:1292
+#: ../../library/mailbox.rst:1418 ../../library/mailbox.rst:1549
 msgid ":class:`MaildirMessage` state"
 msgstr ":class:`MaildirMessage` стан"
 
-#: ../../library/mailbox.rst:1081
+#: ../../library/mailbox.rst:1190
 msgid ""
 "When an :class:`!mboxMessage` instance is created based upon an "
 ":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1087 ../../library/mailbox.rst:1102
-#: ../../library/mailbox.rst:1459 ../../library/mailbox.rst:1474
+#: ../../library/mailbox.rst:1196 ../../library/mailbox.rst:1211
+#: ../../library/mailbox.rst:1568 ../../library/mailbox.rst:1583
 msgid "R flag and O flag"
 msgstr "Прапор R і прапор O"
 
-#: ../../library/mailbox.rst:1096
+#: ../../library/mailbox.rst:1205
 msgid ""
 "When an :class:`!mboxMessage` instance is created based upon a "
 ":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1111
+#: ../../library/mailbox.rst:1220
 msgid ""
 "When a :class:`!mboxMessage` instance is created based upon an "
 ":class:`MMDFMessage` instance, the \"From \" line is copied and all flags "
 "directly correspond:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1116
+#: ../../library/mailbox.rst:1225
 msgid ":class:`MMDFMessage` state"
 msgstr ":class:`MMDFMessage` стан"
 
-#: ../../library/mailbox.rst:1133
+#: ../../library/mailbox.rst:1242
 msgid ":class:`!MHMessage` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:1138
+#: ../../library/mailbox.rst:1247
 msgid ""
 "A message with MH-specific behaviors. Parameter *message* has the same "
 "meaning as with the :class:`Message` constructor."
@@ -1732,7 +1831,7 @@ msgstr ""
 "Повідомлення зі специфічними для MH поведінками. Параметр *message* має те "
 "саме значення, що й у конструкторі :class:`Message`."
 
-#: ../../library/mailbox.rst:1141
+#: ../../library/mailbox.rst:1250
 msgid ""
 "MH messages do not support marks or flags in the traditional sense, but they"
 " do support sequences, which are logical groupings of arbitrary messages. "
@@ -1746,62 +1845,62 @@ msgstr ""
 ":program:`mh` і :program:`nmh`) використовують послідовності приблизно так "
 "само, як прапорці використовуються з іншими форматами, а саме:"
 
-#: ../../library/mailbox.rst:1148
+#: ../../library/mailbox.rst:1257
 msgid "Sequence"
 msgstr "Послідовність"
 
-#: ../../library/mailbox.rst:1150 ../../library/mailbox.rst:1237
+#: ../../library/mailbox.rst:1259 ../../library/mailbox.rst:1346
 msgid "unseen"
 msgstr "невидимий"
 
-#: ../../library/mailbox.rst:1150 ../../library/mailbox.rst:1237
+#: ../../library/mailbox.rst:1259 ../../library/mailbox.rst:1346
 msgid "Not read, but previously detected by MUA"
 msgstr "Не прочитано, але раніше виявлено MUA"
 
-#: ../../library/mailbox.rst:1152
+#: ../../library/mailbox.rst:1261
 msgid "replied"
 msgstr "відповів"
 
-#: ../../library/mailbox.rst:1154
+#: ../../library/mailbox.rst:1263
 msgid "flagged"
 msgstr "позначено"
 
-#: ../../library/mailbox.rst:1157
+#: ../../library/mailbox.rst:1266
 msgid ":class:`!MHMessage` instances offer the following methods:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1162
+#: ../../library/mailbox.rst:1271
 msgid "Return a list of the names of sequences that include this message."
 msgstr "Повернути список імен послідовностей, які містять це повідомлення."
 
-#: ../../library/mailbox.rst:1167
+#: ../../library/mailbox.rst:1276
 msgid "Set the list of sequences that include this message."
 msgstr "Встановіть список послідовностей, які включають це повідомлення."
 
-#: ../../library/mailbox.rst:1172
+#: ../../library/mailbox.rst:1281
 msgid "Add *sequence* to the list of sequences that include this message."
 msgstr ""
 "Додайте *послідовність* до списку послідовностей, які містять це "
 "повідомлення."
 
-#: ../../library/mailbox.rst:1177
+#: ../../library/mailbox.rst:1286
 msgid ""
 "Remove *sequence* from the list of sequences that include this message."
 msgstr ""
 "Видаліть *послідовність* зі списку послідовностей, які містять це "
 "повідомлення."
 
-#: ../../library/mailbox.rst:1179
+#: ../../library/mailbox.rst:1288
 msgid ""
 "When an :class:`!MHMessage` instance is created based upon a "
 ":class:`MaildirMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1185 ../../library/mailbox.rst:1311
+#: ../../library/mailbox.rst:1294 ../../library/mailbox.rst:1420
 msgid "no S flag"
 msgstr "немає прапора S"
 
-#: ../../library/mailbox.rst:1192
+#: ../../library/mailbox.rst:1301
 msgid ""
 "When an :class:`!MHMessage` instance is created based upon an "
 ":class:`mboxMessage` or :class:`MMDFMessage` instance, the "
@@ -1809,21 +1908,21 @@ msgid ""
 "following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1201 ../../library/mailbox.rst:1329
+#: ../../library/mailbox.rst:1310 ../../library/mailbox.rst:1438
 msgid "no R flag"
 msgstr "немає прапора R"
 
-#: ../../library/mailbox.rst:1208
+#: ../../library/mailbox.rst:1317
 msgid ""
 "When an :class:`!MHMessage` instance is created based upon a "
 ":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1223
+#: ../../library/mailbox.rst:1332
 msgid ":class:`!BabylMessage` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:1228
+#: ../../library/mailbox.rst:1337
 msgid ""
 "A message with Babyl-specific behaviors. Parameter *message* has the same "
 "meaning as with the :class:`Message` constructor."
@@ -1831,7 +1930,7 @@ msgstr ""
 "Повідомлення з особливостями поведінки Babyl. Параметр *message* має те саме"
 " значення, що й у конструкторі :class:`Message`."
 
-#: ../../library/mailbox.rst:1231
+#: ../../library/mailbox.rst:1340
 msgid ""
 "Certain message labels, called :dfn:`attributes`, are defined by convention "
 "to have special meanings. The attributes are as follows:"
@@ -1839,78 +1938,78 @@ msgstr ""
 "Певні мітки повідомлень, які називаються :dfn:`attributes`, визначені угодою"
 " як такі, що мають спеціальні значення. Атрибути такі:"
 
-#: ../../library/mailbox.rst:1235
+#: ../../library/mailbox.rst:1344
 msgid "Label"
 msgstr "Мітка"
 
-#: ../../library/mailbox.rst:1239
+#: ../../library/mailbox.rst:1348
 msgid "deleted"
 msgstr "видалено"
 
-#: ../../library/mailbox.rst:1241
+#: ../../library/mailbox.rst:1350
 msgid "filed"
 msgstr "подано"
 
-#: ../../library/mailbox.rst:1241
+#: ../../library/mailbox.rst:1350
 msgid "Copied to another file or mailbox"
 msgstr "Скопійовано в інший файл або поштову скриньку"
 
-#: ../../library/mailbox.rst:1243
+#: ../../library/mailbox.rst:1352
 msgid "answered"
 msgstr "відповів"
 
-#: ../../library/mailbox.rst:1245
+#: ../../library/mailbox.rst:1354
 msgid "forwarded"
 msgstr "пересилається"
 
-#: ../../library/mailbox.rst:1245
+#: ../../library/mailbox.rst:1354
 msgid "Forwarded"
 msgstr "Переслано"
 
-#: ../../library/mailbox.rst:1247
+#: ../../library/mailbox.rst:1356
 msgid "edited"
 msgstr "відредаговано"
 
-#: ../../library/mailbox.rst:1247
+#: ../../library/mailbox.rst:1356
 msgid "Modified by the user"
 msgstr "Змінено користувачем"
 
-#: ../../library/mailbox.rst:1249
+#: ../../library/mailbox.rst:1358
 msgid "resent"
 msgstr "обурюватися"
 
-#: ../../library/mailbox.rst:1249
+#: ../../library/mailbox.rst:1358
 msgid "Resent"
 msgstr "Обурюватися"
 
-#: ../../library/mailbox.rst:1252
+#: ../../library/mailbox.rst:1361
 msgid ""
 "By default, Rmail displays only visible headers. The :class:`!BabylMessage` "
 "class, though, uses the original headers because they are more complete. "
 "Visible headers may be accessed explicitly if desired."
 msgstr ""
 
-#: ../../library/mailbox.rst:1256
+#: ../../library/mailbox.rst:1365
 msgid ":class:`!BabylMessage` instances offer the following methods:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1261
+#: ../../library/mailbox.rst:1370
 msgid "Return a list of labels on the message."
 msgstr "Повернути список міток у повідомленні."
 
-#: ../../library/mailbox.rst:1266
+#: ../../library/mailbox.rst:1375
 msgid "Set the list of labels on the message to *labels*."
 msgstr "Установіть список міток у повідомленні на *мітки*."
 
-#: ../../library/mailbox.rst:1271
+#: ../../library/mailbox.rst:1380
 msgid "Add *label* to the list of labels on the message."
 msgstr "Додайте *label* до списку міток у повідомленні."
 
-#: ../../library/mailbox.rst:1276
+#: ../../library/mailbox.rst:1385
 msgid "Remove *label* from the list of labels on the message."
 msgstr "Видаліть *label* зі списку міток у повідомленні."
 
-#: ../../library/mailbox.rst:1281
+#: ../../library/mailbox.rst:1390
 msgid ""
 "Return an :class:`Message` instance whose headers are the message's visible "
 "headers and whose body is empty."
@@ -1918,7 +2017,7 @@ msgstr ""
 "Повертає екземпляр :class:`Message`, заголовки якого є видимими заголовками "
 "повідомлення, а тіло порожнє."
 
-#: ../../library/mailbox.rst:1287
+#: ../../library/mailbox.rst:1396
 msgid ""
 "Set the message's visible headers to be the same as the headers in "
 "*message*.  Parameter *visible* should be a :class:`Message` instance, an "
@@ -1930,7 +2029,7 @@ msgstr ""
 "екземпляром :class:`email.message.Message`, рядком або файлоподібним "
 "об’єктом (який має бути відкритий у текстовому режимі)."
 
-#: ../../library/mailbox.rst:1295
+#: ../../library/mailbox.rst:1404
 msgid ""
 "When a :class:`!BabylMessage` instance's original headers are modified, the "
 "visible headers are not automatically modified to correspond. This method "
@@ -1943,17 +2042,17 @@ msgid ""
 " visible headers."
 msgstr ""
 
-#: ../../library/mailbox.rst:1305
+#: ../../library/mailbox.rst:1414
 msgid ""
 "When a :class:`!BabylMessage` instance is created based upon a "
 ":class:`MaildirMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1317
+#: ../../library/mailbox.rst:1426
 msgid "\"forwarded\" label"
 msgstr "мітка \"переслано\"."
 
-#: ../../library/mailbox.rst:1320
+#: ../../library/mailbox.rst:1429
 msgid ""
 "When a :class:`!BabylMessage` instance is created based upon an "
 ":class:`mboxMessage` or :class:`MMDFMessage` instance, the "
@@ -1961,17 +2060,17 @@ msgid ""
 "following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1336
+#: ../../library/mailbox.rst:1445
 msgid ""
 "When a :class:`!BabylMessage` instance is created based upon an "
 ":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1351
+#: ../../library/mailbox.rst:1460
 msgid ":class:`!MMDFMessage` objects"
 msgstr ""
 
-#: ../../library/mailbox.rst:1356
+#: ../../library/mailbox.rst:1465
 msgid ""
 "A message with MMDF-specific behaviors. Parameter *message* has the same "
 "meaning as with the :class:`Message` constructor."
@@ -1979,7 +2078,7 @@ msgstr ""
 "Повідомлення зі специфічною для MMDF поведінкою. Параметр *message* має те "
 "саме значення, що й у конструкторі :class:`Message`."
 
-#: ../../library/mailbox.rst:1359
+#: ../../library/mailbox.rst:1468
 msgid ""
 "As with message in an mbox mailbox, MMDF messages are stored with the "
 "sender's address and the delivery date in an initial line beginning with "
@@ -1992,7 +2091,7 @@ msgstr ""
 "зазвичай зберігаються в заголовках :mailheader:`Status` і "
 ":mailheader:`X-Status`."
 
-#: ../../library/mailbox.rst:1364
+#: ../../library/mailbox.rst:1473
 msgid ""
 "Conventional flags for MMDF messages are identical to those of mbox message "
 "and are as follows:"
@@ -2000,13 +2099,13 @@ msgstr ""
 "Звичайні позначки для повідомлень MMDF ідентичні прапорцям для повідомлень "
 "mbox і такі:"
 
-#: ../../library/mailbox.rst:1385
+#: ../../library/mailbox.rst:1494
 msgid ""
 ":class:`!MMDFMessage` instances offer the following methods, which are "
 "identical to those offered by :class:`mboxMessage`:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1434
+#: ../../library/mailbox.rst:1543
 msgid ""
 "When an :class:`!MMDFMessage` instance is created based upon a "
 ":class:`MaildirMessage` instance, a \"From \" line is generated based upon "
@@ -2014,43 +2113,43 @@ msgid ""
 "conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1453
+#: ../../library/mailbox.rst:1562
 msgid ""
 "When an :class:`!MMDFMessage` instance is created based upon an "
 ":class:`MHMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1468
+#: ../../library/mailbox.rst:1577
 msgid ""
 "When an :class:`!MMDFMessage` instance is created based upon a "
 ":class:`BabylMessage` instance, the following conversions take place:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1483
+#: ../../library/mailbox.rst:1592
 msgid ""
 "When an :class:`!MMDFMessage` instance is created based upon an "
 ":class:`mboxMessage` instance, the \"From \" line is copied and all flags "
 "directly correspond:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1488
+#: ../../library/mailbox.rst:1597
 msgid ":class:`mboxMessage` state"
 msgstr ":class:`mboxMessage` стан"
 
-#: ../../library/mailbox.rst:1503
+#: ../../library/mailbox.rst:1612
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../library/mailbox.rst:1505
+#: ../../library/mailbox.rst:1614
 msgid ""
 "The following exception classes are defined in the :mod:`!mailbox` module:"
 msgstr ""
 
-#: ../../library/mailbox.rst:1510
+#: ../../library/mailbox.rst:1619
 msgid "The based class for all other module-specific exceptions."
 msgstr "Основний клас для всіх інших винятків, специфічних для модуля."
 
-#: ../../library/mailbox.rst:1515
+#: ../../library/mailbox.rst:1624
 msgid ""
 "Raised when a mailbox is expected but is not found, such as when "
 "instantiating a :class:`Mailbox` subclass with a path that does not exist "
@@ -2062,7 +2161,7 @@ msgstr ""
 "існує (і з параметром *create*, встановленим на ``False``), або під час "
 "відкриття папку, яка не існує."
 
-#: ../../library/mailbox.rst:1522
+#: ../../library/mailbox.rst:1631
 msgid ""
 "Raised when a mailbox is not empty but is expected to be, such as when "
 "deleting a folder that contains messages."
@@ -2070,7 +2169,7 @@ msgstr ""
 "Викликається, коли поштова скринька не порожня, але очікується, що вона буде"
 " порожньою, наприклад, під час видалення папки, яка містить повідомлення."
 
-#: ../../library/mailbox.rst:1528
+#: ../../library/mailbox.rst:1637
 msgid ""
 "Raised when some mailbox-related condition beyond the control of the program"
 " causes it to be unable to proceed, such as when failing to acquire a lock "
@@ -2078,7 +2177,7 @@ msgid ""
 " name already exists."
 msgstr ""
 
-#: ../../library/mailbox.rst:1536
+#: ../../library/mailbox.rst:1645
 msgid ""
 "Raised when the data in a file cannot be parsed, such as when an :class:`MH`"
 " instance attempts to read a corrupted :file:`.mh_sequences` file."
@@ -2087,11 +2186,11 @@ msgstr ""
 "примірник :class:`MH` намагається прочитати пошкоджений файл "
 ":file:`.mh_sequences`."
 
-#: ../../library/mailbox.rst:1543
+#: ../../library/mailbox.rst:1652
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/mailbox.rst:1545
+#: ../../library/mailbox.rst:1654
 msgid ""
 "A simple example of printing the subjects of all messages in a mailbox that "
 "seem interesting::"
@@ -2099,7 +2198,7 @@ msgstr ""
 "Простий приклад друку тем усіх повідомлень у поштовій скриньці, які здаються"
 " цікавими:"
 
-#: ../../library/mailbox.rst:1554
+#: ../../library/mailbox.rst:1663
 msgid ""
 "To copy all mail from a Babyl mailbox to an MH mailbox, converting all of "
 "the format-specific information that can be converted::"
@@ -2107,7 +2206,7 @@ msgstr ""
 "Щоб скопіювати всю пошту з поштової скриньки Babyl до поштової скриньки MH, "
 "перетворивши всю інформацію про певний формат, яку можна конвертувати:"
 
-#: ../../library/mailbox.rst:1565
+#: ../../library/mailbox.rst:1674
 msgid ""
 "This example sorts mail from several mailing lists into different mailboxes,"
 " being careful to avoid mail corruption due to concurrent modification by "

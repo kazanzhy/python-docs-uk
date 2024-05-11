@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/readline.rst:2
-msgid ":mod:`readline` --- GNU readline interface"
-msgstr ":mod:`readline` --- інтерфейс GNU readline"
+msgid ":mod:`!readline` --- GNU readline interface"
+msgstr ""
 
 #: ../../library/readline.rst:12
 msgid ""
@@ -53,51 +53,57 @@ msgid ""
 "library in general."
 msgstr ""
 
-#: ../../library/readline.rst:29
-msgid ""
-"The underlying Readline library API may be implemented by the ``libedit`` "
-"library instead of GNU readline. On macOS the :mod:`readline` module detects"
-" which library is being used at run time."
+#: ../../includes/wasm-ios-notavail.rst:3
+msgid ":ref:`Availability <availability>`: not WASI, not iOS."
 msgstr ""
-"Базовий API бібліотеки Readline може бути реалізований бібліотекою "
-"``libedit`` замість GNU readline. У macOS модуль :mod:`readline` визначає, "
-"яка бібліотека використовується під час виконання."
 
-#: ../../library/readline.rst:34
+#: ../../includes/wasm-ios-notavail.rst:5
 msgid ""
-"The configuration file for ``libedit`` is different from that of GNU "
-"readline. If you programmatically load configuration strings you can check "
-"for the text \"libedit\" in :const:`readline.__doc__` to differentiate "
-"between GNU readline and libedit."
+"This module does not work or is not available on WebAssembly platforms, or "
+"on iOS. See :ref:`wasm-availability` for more information on WASM "
+"availability; see :ref:`iOS-availability` for more information on iOS "
+"availability."
 msgstr ""
-"Файл конфігурації для ``libedit`` відрізняється від файлу GNU readline. Якщо"
-" ви програмно завантажуєте рядки конфігурації, ви можете перевірити текст "
-"\"libedit\" у :const:`readline.__doc__`, щоб відрізнити GNU readline від "
-"libedit."
 
-#: ../../library/readline.rst:39
+#: ../../library/readline.rst:31
 msgid ""
-"If you use *editline*/``libedit`` readline emulation on macOS, the "
+"The underlying Readline library API may be implemented by the ``editline`` "
+"(``libedit``) library instead of GNU readline. On macOS the :mod:`readline` "
+"module detects which library is being used at run time."
+msgstr ""
+
+#: ../../library/readline.rst:36
+msgid ""
+"The configuration file for ``editline`` is different from that of GNU "
+"readline. If you programmatically load configuration strings you can use "
+":data:`backend` to determine which library is being used."
+msgstr ""
+
+#: ../../library/readline.rst:40
+msgid ""
+"If you use ``editline``/``libedit`` readline emulation on macOS, the "
 "initialization file located in your home directory is named ``.editrc``. For"
 " example, the following content in ``~/.editrc`` will turn ON *vi* "
 "keybindings and TAB completion::"
 msgstr ""
-"Якщо ви використовуєте емуляцію *editline*/``libedit`` readline в macOS, "
-"файл ініціалізації, розташований у вашому домашньому каталозі, називається "
-"``.editrc``. Наприклад, такий вміст у ``~/.editrc`` увімкне *vi* сполучення "
-"клавіш і завершення TAB::"
 
-#: ../../library/readline.rst:49
+#: ../../library/readline.rst:50
+msgid ""
+"The name of the underlying Readline library being used, either "
+"``\"readline\"`` or ``\"editline\"``."
+msgstr ""
+
+#: ../../library/readline.rst:56
 msgid "Init file"
 msgstr "Ініціальний файл"
 
-#: ../../library/readline.rst:51
+#: ../../library/readline.rst:58
 msgid ""
 "The following functions relate to the init file and user configuration:"
 msgstr ""
 "Наступні функції стосуються файлу ініціалізації та конфігурації користувача:"
 
-#: ../../library/readline.rst:56
+#: ../../library/readline.rst:63
 msgid ""
 "Execute the init line provided in the *string* argument. This calls "
 ":c:func:`rl_parse_and_bind` in the underlying library."
@@ -105,7 +111,7 @@ msgstr ""
 "Виконайте рядок ініціалізації, наданий в аргументі *string*. Це викликає "
 ":c:func:`rl_parse_and_bind` у базовій бібліотеці."
 
-#: ../../library/readline.rst:62
+#: ../../library/readline.rst:69
 msgid ""
 "Execute a readline initialization file. The default filename is the last "
 "filename used. This calls :c:func:`rl_read_init_file` in the underlying "
@@ -115,15 +121,15 @@ msgstr ""
 "це останнє використане ім’я файлу. Це викликає :c:func:`rl_read_init_file` у"
 " базовій бібліотеці."
 
-#: ../../library/readline.rst:67
+#: ../../library/readline.rst:74
 msgid "Line buffer"
 msgstr "Лінійний буфер"
 
-#: ../../library/readline.rst:69
+#: ../../library/readline.rst:76
 msgid "The following functions operate on the line buffer:"
 msgstr "На буфері лінії працюють такі функції:"
 
-#: ../../library/readline.rst:74
+#: ../../library/readline.rst:81
 msgid ""
 "Return the current contents of the line buffer (:c:data:`rl_line_buffer` in "
 "the underlying library)."
@@ -131,7 +137,7 @@ msgstr ""
 "Повертає поточний вміст буфера рядків (:c:data:`rl_line_buffer` у базовій "
 "бібліотеці)."
 
-#: ../../library/readline.rst:80
+#: ../../library/readline.rst:87
 msgid ""
 "Insert text into the line buffer at the cursor position.  This calls "
 ":c:func:`rl_insert_text` in the underlying library, but ignores the return "
@@ -141,7 +147,7 @@ msgstr ""
 ":c:func:`rl_insert_text` у базовій бібліотеці, але ігнорує повернуте "
 "значення."
 
-#: ../../library/readline.rst:87
+#: ../../library/readline.rst:94
 msgid ""
 "Change what's displayed on the screen to reflect the current contents of the"
 " line buffer.  This calls :c:func:`rl_redisplay` in the underlying library."
@@ -149,15 +155,15 @@ msgstr ""
 "Змініть те, що відображається на екрані, щоб відобразити поточний вміст "
 "рядкового буфера. Це викликає :c:func:`rl_redisplay` у базовій бібліотеці."
 
-#: ../../library/readline.rst:92
+#: ../../library/readline.rst:99
 msgid "History file"
 msgstr "Файл історії"
 
-#: ../../library/readline.rst:94
+#: ../../library/readline.rst:101
 msgid "The following functions operate on a history file:"
 msgstr "З файлом історії працюють такі функції:"
 
-#: ../../library/readline.rst:99
+#: ../../library/readline.rst:106
 msgid ""
 "Load a readline history file, and append it to the history list. The default"
 " filename is :file:`~/.history`.  This calls :c:func:`read_history` in the "
@@ -167,7 +173,7 @@ msgstr ""
 "Назва файлу за замовчуванням :file:`~/.history`. Це викликає "
 ":c:func:`read_history` у базовій бібліотеці."
 
-#: ../../library/readline.rst:106
+#: ../../library/readline.rst:113
 msgid ""
 "Save the history list to a readline history file, overwriting any existing "
 "file.  The default filename is :file:`~/.history`.  This calls "
@@ -177,7 +183,7 @@ msgstr ""
 "який існуючий файл. Назва файлу за замовчуванням :file:`~/.history`. Це "
 "викликає :c:func:`write_history` у базовій бібліотеці."
 
-#: ../../library/readline.rst:113
+#: ../../library/readline.rst:120
 msgid ""
 "Append the last *nelements* items of history to a file.  The default "
 "filename is :file:`~/.history`.  The file must already exist.  This calls "
@@ -189,7 +195,7 @@ msgstr ""
 ":c:func:`append_history` у базовій бібліотеці. Ця функція існує, лише якщо "
 "Python було скомпільовано для версії бібліотеки, яка її підтримує."
 
-#: ../../library/readline.rst:125
+#: ../../library/readline.rst:132
 msgid ""
 "Set or return the desired number of lines to save in the history file. The "
 ":func:`write_history_file` function uses this value to truncate the history "
@@ -202,15 +208,15 @@ msgstr ""
 "базовій бібліотеці. Від’ємні значення означають необмежений розмір файлу "
 "історії."
 
-#: ../../library/readline.rst:133
+#: ../../library/readline.rst:140
 msgid "History list"
 msgstr "Список історії"
 
-#: ../../library/readline.rst:135
+#: ../../library/readline.rst:142
 msgid "The following functions operate on a global history list:"
 msgstr "У списку глобальної історії працюють такі функції:"
 
-#: ../../library/readline.rst:140
+#: ../../library/readline.rst:147
 msgid ""
 "Clear the current history.  This calls :c:func:`clear_history` in the "
 "underlying library.  The Python function only exists if Python was compiled "
@@ -220,7 +226,7 @@ msgstr ""
 "бібліотеці. Функція Python існує, лише якщо Python було скомпільовано для "
 "версії бібліотеки, яка її підтримує."
 
-#: ../../library/readline.rst:147
+#: ../../library/readline.rst:154
 msgid ""
 "Return the number of items currently in the history.  (This is different "
 "from :func:`get_history_length`, which returns the maximum number of lines "
@@ -230,7 +236,7 @@ msgstr ""
 ":func:`get_history_length`, який повертає максимальну кількість рядків, які "
 "будуть записані у файл історії.)"
 
-#: ../../library/readline.rst:154
+#: ../../library/readline.rst:161
 msgid ""
 "Return the current contents of history item at *index*.  The item index is "
 "one-based.  This calls :c:func:`history_get` in the underlying library."
@@ -239,7 +245,7 @@ msgstr ""
 "складається з однієї основи. Це викликає :c:func:`history_get` у базовій "
 "бібліотеці."
 
-#: ../../library/readline.rst:160
+#: ../../library/readline.rst:167
 msgid ""
 "Remove history item specified by its position from the history. The position"
 " is zero-based.  This calls :c:func:`remove_history` in the underlying "
@@ -249,7 +255,7 @@ msgstr ""
 "відраховується з нуля. Це викликає :c:func:`remove_history` у базовій "
 "бібліотеці."
 
-#: ../../library/readline.rst:167
+#: ../../library/readline.rst:174
 msgid ""
 "Replace history item specified by its position with *line*. The position is "
 "zero-based.  This calls :c:func:`replace_history_entry` in the underlying "
@@ -259,7 +265,7 @@ msgstr ""
 "відраховується з нуля. Це викликає :c:func:`replace_history_entry` у базовій"
 " бібліотеці."
 
-#: ../../library/readline.rst:174
+#: ../../library/readline.rst:181
 msgid ""
 "Append *line* to the history buffer, as if it was the last line typed. This "
 "calls :c:func:`add_history` in the underlying library."
@@ -267,7 +273,7 @@ msgstr ""
 "Додайте *рядок* до буфера історії, ніби це був останній введений рядок. Це "
 "викликає :c:func:`add_history` у базовій бібліотеці."
 
-#: ../../library/readline.rst:180
+#: ../../library/readline.rst:187
 msgid ""
 "Enable or disable automatic calls to :c:func:`add_history` when reading "
 "input via readline.  The *enabled* argument should be a Boolean value that "
@@ -278,17 +284,17 @@ msgstr ""
 "логічним значенням, яке, коли істина, вмикає автоматичну історію, а коли "
 "хибна, вимикає автоматичну історію."
 
-#: ../../library/readline.rst:188
+#: ../../library/readline.rst:195
 msgid ""
 "Auto history is enabled by default, and changes to this do not persist "
 "across multiple sessions."
 msgstr ""
 
-#: ../../library/readline.rst:193
+#: ../../library/readline.rst:200
 msgid "Startup hooks"
 msgstr "Хуки для запуску"
 
-#: ../../library/readline.rst:198
+#: ../../library/readline.rst:205
 msgid ""
 "Set or remove the function invoked by the :c:data:`rl_startup_hook` callback"
 " of the underlying library.  If *function* is specified, it will be used as "
@@ -302,7 +308,7 @@ msgstr ""
 " вже встановлені функції буде видалено. Хук викликається без аргументів "
 "безпосередньо перед тим, як readline надрукує перший запит."
 
-#: ../../library/readline.rst:207
+#: ../../library/readline.rst:214
 msgid ""
 "Set or remove the function invoked by the :c:data:`rl_pre_input_hook` "
 "callback of the underlying library.  If *function* is specified, it will be "
@@ -320,11 +326,11 @@ msgstr ""
 " як readline почне читати введені символи. Ця функція існує, лише якщо "
 "Python було скомпільовано для версії бібліотеки, яка її підтримує."
 
-#: ../../library/readline.rst:219
+#: ../../library/readline.rst:226
 msgid "Completion"
 msgstr "Завершення"
 
-#: ../../library/readline.rst:221
+#: ../../library/readline.rst:228
 msgid ""
 "The following functions relate to implementing a custom word completion "
 "function.  This is typically operated by the Tab key, and can suggest and "
@@ -341,7 +347,7 @@ msgstr ""
 "використовуватиметься з настроюваним доповнювачем, слід встановити інший "
 "набір розділювачів слів."
 
-#: ../../library/readline.rst:231
+#: ../../library/readline.rst:238
 msgid ""
 "Set or remove the completer function.  If *function* is specified, it will "
 "be used as the new completer function; if omitted or ``None``, any completer"
@@ -357,7 +363,7 @@ msgstr ""
 " ..., доки вона не поверне не- значення рядка. Він має повернути наступне "
 "можливе завершення, починаючи з *тексту*."
 
-#: ../../library/readline.rst:238
+#: ../../library/readline.rst:245
 msgid ""
 "The installed completer function is invoked by the *entry_func* callback "
 "passed to :c:func:`rl_completion_matches` in the underlying library. The "
@@ -370,7 +376,7 @@ msgstr ""
 "бібліотеці. Рядок *text* надходить із першого параметра зворотного виклику "
 ":c:data:`rl_attempted_completion_function` основної бібліотеки."
 
-#: ../../library/readline.rst:247
+#: ../../library/readline.rst:254
 msgid ""
 "Get the completer function, or ``None`` if no completer function has been "
 "set."
@@ -378,7 +384,7 @@ msgstr ""
 "Отримайте функцію завершувача або ``None``, якщо функцію завершувача не "
 "встановлено."
 
-#: ../../library/readline.rst:252
+#: ../../library/readline.rst:259
 msgid ""
 "Get the type of completion being attempted.  This returns the "
 ":c:data:`rl_completion_type` variable in the underlying library as an "
@@ -387,7 +393,7 @@ msgstr ""
 "Отримайте тип завершення, яке намагається виконати. Це повертає змінну "
 ":c:data:`rl_completion_type` у базовій бібліотеці як ціле число."
 
-#: ../../library/readline.rst:260
+#: ../../library/readline.rst:267
 msgid ""
 "Get the beginning or ending index of the completion scope. These indexes are"
 " the *start* and *end* arguments passed to the "
@@ -403,7 +409,7 @@ msgstr ""
 "базової реалізації C readline. Приклад: libedit, як відомо, поводиться "
 "інакше, ніж libreadline."
 
-#: ../../library/readline.rst:271
+#: ../../library/readline.rst:278
 msgid ""
 "Set or get the word delimiters for completion.  These determine the start of"
 " the word to be considered for completion (the completion scope). These "
@@ -415,7 +421,7 @@ msgstr ""
 "функції отримують доступ до змінної "
 ":c:data:`rl_completer_word_break_characters` у базовій бібліотеці."
 
-#: ../../library/readline.rst:279
+#: ../../library/readline.rst:286
 msgid ""
 "Set or remove the completion display function.  If *function* is specified, "
 "it will be used as the new completion display function; if omitted or "
@@ -433,11 +439,11 @@ msgstr ""
 "Функція відображення завершення викликається як ``function(substitution, "
 "[matches], longest_match_length)`` щоразу, коли потрібно відображати збіги."
 
-#: ../../library/readline.rst:292
+#: ../../library/readline.rst:299
 msgid "Example"
 msgstr "приклад"
 
-#: ../../library/readline.rst:294
+#: ../../library/readline.rst:301
 msgid ""
 "The following example demonstrates how to use the :mod:`readline` module's "
 "history reading and writing functions to automatically load and save a "
@@ -451,7 +457,7 @@ msgstr ""
 "користувача. Наведений нижче код зазвичай виконується автоматично під час "
 "інтерактивних сеансів із файлу користувача :envvar:`PYTHONSTARTUP`. ::"
 
-#: ../../library/readline.rst:314
+#: ../../library/readline.rst:321
 msgid ""
 "This code is actually automatically run when Python is run in "
 ":ref:`interactive mode <tut-interactive>` (see :ref:`rlcompleter-config`)."
@@ -460,7 +466,7 @@ msgstr ""
 ":ref:`інтерактивному режимі <tut-interactive>` (див. :ref:`rlcompleter-"
 "config`)."
 
-#: ../../library/readline.rst:317
+#: ../../library/readline.rst:324
 msgid ""
 "The following example achieves the same goal but supports concurrent "
 "interactive sessions, by only appending the new history. ::"
@@ -468,7 +474,7 @@ msgstr ""
 "Наступний приклад досягає тієї ж мети, але підтримує одночасні інтерактивні "
 "сеанси, лише додаючи нову історію. ::"
 
-#: ../../library/readline.rst:338
+#: ../../library/readline.rst:345
 msgid ""
 "The following example extends the :class:`code.InteractiveConsole` class to "
 "support history save/restore. ::"

@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -138,7 +138,15 @@ msgstr ""
 "Подібно до :c:func:`PyTuple_SetItem`, але не перевіряє помилки, і його слід "
 "використовувати *лише* для заповнення абсолютно нових кортежів."
 
-#: ../../c-api/tuple.rst:100
+#: ../../c-api/tuple.rst:98 ../../c-api/tuple.rst:209
+#: ../../c-api/tuple.rst:227
+msgid ""
+"Bounds checking is performed as an assertion if Python is built in "
+":ref:`debug mode <debug-build>` or :option:`with assertions <--with-"
+"assertions>`."
+msgstr ""
+
+#: ../../c-api/tuple.rst:103
 msgid ""
 "This function \"steals\" a reference to *o*, and, unlike "
 ":c:func:`PyTuple_SetItem`, does *not* discard a reference to any item that "
@@ -146,7 +154,7 @@ msgid ""
 "leaked."
 msgstr ""
 
-#: ../../c-api/tuple.rst:108
+#: ../../c-api/tuple.rst:111
 msgid ""
 "Can be used to resize a tuple.  *newsize* will be the new length of the "
 "tuple. Because tuples are *supposed* to be immutable, this should only be "
@@ -172,11 +180,11 @@ msgstr ""
 "знищується. У разі помилки повертає ``-1`` і встановлює ``*p`` значення "
 "``NULL`` і викликає :exc:`MemoryError` або :exc:`SystemError`."
 
-#: ../../c-api/tuple.rst:123
+#: ../../c-api/tuple.rst:126
 msgid "Struct Sequence Objects"
 msgstr "Структуруйте об’єкти послідовності"
 
-#: ../../c-api/tuple.rst:125
+#: ../../c-api/tuple.rst:128
 msgid ""
 "Struct sequence objects are the C equivalent of "
 ":func:`~collections.namedtuple` objects, i.e. a sequence whose items can "
@@ -188,7 +196,7 @@ msgstr ""
 "також можна отримати доступ через атрибути. Щоб створити послідовність "
 "структур, спочатку потрібно створити певний тип послідовності структур."
 
-#: ../../c-api/tuple.rst:132
+#: ../../c-api/tuple.rst:135
 msgid ""
 "Create a new struct sequence type from the data in *desc*, described below. "
 "Instances of the resulting type can be created with "
@@ -198,11 +206,11 @@ msgstr ""
 "нижче. Екземпляри отриманого типу можна створити за допомогою "
 ":c:func:`PyStructSequence_New`."
 
-#: ../../c-api/tuple.rst:138
+#: ../../c-api/tuple.rst:141
 msgid "Initializes a struct sequence type *type* from *desc* in place."
 msgstr "Ініціалізує структурну послідовність типу *type* з *desc* на місці."
 
-#: ../../c-api/tuple.rst:143
+#: ../../c-api/tuple.rst:146
 msgid ""
 "The same as ``PyStructSequence_InitType``, but returns ``0`` on success and "
 "``-1`` on failure."
@@ -210,28 +218,28 @@ msgstr ""
 "Те саме, що ``PyStructSequence_InitType``, але повертає ``0`` у разі успіху "
 "та ``-1`` у разі невдачі."
 
-#: ../../c-api/tuple.rst:151
+#: ../../c-api/tuple.rst:154
 msgid "Contains the meta information of a struct sequence type to create."
 msgstr ""
 "Містить метаінформацію типу послідовності структур, яку потрібно створити."
 
-#: ../../c-api/tuple.rst:155
+#: ../../c-api/tuple.rst:158
 msgid "Name of the struct sequence type."
 msgstr ""
 
-#: ../../c-api/tuple.rst:159
+#: ../../c-api/tuple.rst:162
 msgid "Pointer to docstring for the type or ``NULL`` to omit."
 msgstr ""
 
-#: ../../c-api/tuple.rst:163
+#: ../../c-api/tuple.rst:166
 msgid "Pointer to ``NULL``-terminated array with field names of the new type."
 msgstr ""
 
-#: ../../c-api/tuple.rst:167
+#: ../../c-api/tuple.rst:170
 msgid "Number of fields visible to the Python side (if used as tuple)."
 msgstr ""
 
-#: ../../c-api/tuple.rst:172
+#: ../../c-api/tuple.rst:175
 msgid ""
 "Describes a field of a struct sequence. As a struct sequence is modeled as a"
 " tuple, all fields are typed as :c:expr:`PyObject*`.  The index in the "
@@ -240,25 +248,25 @@ msgid ""
 "sequence is described."
 msgstr ""
 
-#: ../../c-api/tuple.rst:180
+#: ../../c-api/tuple.rst:183
 msgid ""
 "Name for the field or ``NULL`` to end the list of named fields, set to "
 ":c:data:`PyStructSequence_UnnamedField` to leave unnamed."
 msgstr ""
 
-#: ../../c-api/tuple.rst:185
+#: ../../c-api/tuple.rst:188
 msgid "Field docstring or ``NULL`` to omit."
 msgstr ""
 
-#: ../../c-api/tuple.rst:190
+#: ../../c-api/tuple.rst:193
 msgid "Special value for a field name to leave it unnamed."
 msgstr "Спеціальне значення для імені поля, щоб залишити його без імені."
 
-#: ../../c-api/tuple.rst:192
+#: ../../c-api/tuple.rst:195
 msgid "The type was changed from ``char *``."
 msgstr "Тип змінено з ``char *``."
 
-#: ../../c-api/tuple.rst:198
+#: ../../c-api/tuple.rst:201
 msgid ""
 "Creates an instance of *type*, which must have been created with "
 ":c:func:`PyStructSequence_NewType`."
@@ -266,19 +274,21 @@ msgstr ""
 "Створює екземпляр *type*, який має бути створено за допомогою "
 ":c:func:`PyStructSequence_NewType`."
 
-#: ../../c-api/tuple.rst:204
+#: ../../c-api/tuple.rst:207
 msgid ""
 "Return the object at position *pos* in the struct sequence pointed to by "
-"*p*. No bounds checking is performed."
+"*p*."
 msgstr ""
-"Повертає об’єкт у позицію *pos* у послідовності структур, на яку вказує *p*."
-" Перевірка меж не виконується."
-
-#: ../../c-api/tuple.rst:210
-msgid "Macro equivalent of :c:func:`PyStructSequence_GetItem`."
-msgstr "Макроеквівалент :c:func:`PyStructSequence_GetItem`."
 
 #: ../../c-api/tuple.rst:215
+msgid "Alias to :c:func:`PyStructSequence_GetItem`."
+msgstr ""
+
+#: ../../c-api/tuple.rst:217
+msgid "Now implemented as an alias to :c:func:`PyStructSequence_GetItem`."
+msgstr ""
+
+#: ../../c-api/tuple.rst:223
 msgid ""
 "Sets the field at index *pos* of the struct sequence *p* to value *o*.  Like"
 " :c:func:`PyTuple_SET_ITEM`, this should only be used to fill in brand new "
@@ -288,14 +298,16 @@ msgstr ""
 "*o*. Як і :c:func:`PyTuple_SET_ITEM`, це слід використовувати лише для "
 "заповнення абсолютно нових екземплярів."
 
-#: ../../c-api/tuple.rst:221 ../../c-api/tuple.rst:231
+#: ../../c-api/tuple.rst:232
 msgid "This function \"steals\" a reference to *o*."
 msgstr "Ця функція \"краде\" посилання на *o*."
 
-#: ../../c-api/tuple.rst:226
-msgid ""
-"Similar to :c:func:`PyStructSequence_SetItem`, but implemented as a static "
-"inlined function."
+#: ../../c-api/tuple.rst:237
+msgid "Alias to :c:func:`PyStructSequence_SetItem`."
+msgstr ""
+
+#: ../../c-api/tuple.rst:239
+msgid "Now implemented as an alias to :c:func:`PyStructSequence_SetItem`."
 msgstr ""
 
 #: ../../c-api/tuple.rst:8
