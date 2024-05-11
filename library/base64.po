@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:55+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/base64.rst:2
-msgid ":mod:`base64` --- Base16, Base32, Base64, Base85 Data Encodings"
-msgstr ":mod:`base64` --- Кодування даних Base16, Base32, Base64, Base85"
+msgid ":mod:`!base64` --- Base16, Base32, Base64, Base85 Data Encodings"
+msgstr ""
 
 #: ../../library/base64.rst:8
 msgid "**Source code:** :source:`Lib/base64.py`"
@@ -420,11 +420,25 @@ msgstr ""
 "та повертайте декодований :class:`bytes`. Відступи неявно видаляються, якщо "
 "необхідно."
 
-#: ../../library/base64.rst:247
+#: ../../library/base64.rst:249
+msgid ""
+"Encode the :term:`bytes-like object` *s* using Z85 (as used in ZeroMQ) and "
+"return the encoded :class:`bytes`.  See `Z85  specification "
+"<https://rfc.zeromq.org/spec/32/>`_ for more information."
+msgstr ""
+
+#: ../../library/base64.rst:258
+msgid ""
+"Decode the Z85-encoded :term:`bytes-like object` or ASCII string *s* and "
+"return the decoded :class:`bytes`.  See `Z85  specification "
+"<https://rfc.zeromq.org/spec/32/>`_ for more information."
+msgstr ""
+
+#: ../../library/base64.rst:265
 msgid "The legacy interface:"
 msgstr "Застарілий інтерфейс:"
 
-#: ../../library/base64.rst:251
+#: ../../library/base64.rst:269
 msgid ""
 "Decode the contents of the binary *input* file and write the resulting "
 "binary data to the *output* file. *input* and *output* must be :term:`file "
@@ -436,7 +450,7 @@ msgstr ""
 "об’єктами <file object>`. *input* читатиметься, доки ``input.readline()`` не"
 " поверне порожній об’єкт bytes."
 
-#: ../../library/base64.rst:259
+#: ../../library/base64.rst:277
 msgid ""
 "Decode the :term:`bytes-like object` *s*, which must contain one or more "
 "lines of base64 encoded data, and return the decoded :class:`bytes`."
@@ -444,7 +458,7 @@ msgstr ""
 "Декодуйте :term:`bytes-like object` *s*, який має містити один або кілька "
 "рядків даних у кодуванні base64, і повертайте розкодовані :class:`bytes`."
 
-#: ../../library/base64.rst:267
+#: ../../library/base64.rst:285
 msgid ""
 "Encode the contents of the binary *input* file and write the resulting "
 "base64 encoded data to the *output* file. *input* and *output* must be "
@@ -462,7 +476,7 @@ msgstr ""
 "гарантує, що вивід завжди закінчується символом нового рядка, відповідно до "
 ":rfc:`2045` (MIME)."
 
-#: ../../library/base64.rst:277
+#: ../../library/base64.rst:295
 msgid ""
 "Encode the :term:`bytes-like object` *s*, which can contain arbitrary binary"
 " data, and return :class:`bytes` containing the base64-encoded data, with "
@@ -475,15 +489,15 @@ msgstr ""
 "виводу та забезпечує наявність кінцевого нового рядка відповідно до "
 ":rfc:`2045` (MIME)."
 
-#: ../../library/base64.rst:285
+#: ../../library/base64.rst:303
 msgid "An example usage of the module:"
 msgstr "Приклад використання модуля:"
 
-#: ../../library/base64.rst:298
+#: ../../library/base64.rst:316
 msgid "Security Considerations"
 msgstr "Міркування безпеки"
 
-#: ../../library/base64.rst:300
+#: ../../library/base64.rst:318
 msgid ""
 "A new security considerations section was added to :rfc:`4648` (section 12);"
 " it's recommended to review the security section for any code deployed to "
@@ -493,18 +507,18 @@ msgstr ""
 "рекомендуємо переглянути розділ безпеки для будь-якого коду, розгорнутого в "
 "робочій версії."
 
-#: ../../library/base64.rst:305
+#: ../../library/base64.rst:323
 msgid "Module :mod:`binascii`"
 msgstr "Модуль :mod:`binascii`"
 
-#: ../../library/base64.rst:306
+#: ../../library/base64.rst:324
 msgid ""
 "Support module containing ASCII-to-binary and binary-to-ASCII conversions."
 msgstr ""
 "Модуль підтримки, що містить перетворення ASCII у двійковий і двійковий у "
 "ASCII."
 
-#: ../../library/base64.rst:308
+#: ../../library/base64.rst:326
 msgid ""
 ":rfc:`1521` - MIME (Multipurpose Internet Mail Extensions) Part One: "
 "Mechanisms for Specifying and Describing the Format of Internet Message "
@@ -513,7 +527,7 @@ msgstr ""
 ":rfc:`1521` - MIME (багатоцільові розширення інтернет-пошти), частина перша:"
 " механізми визначення й опису формату тіл інтернет-повідомлень"
 
-#: ../../library/base64.rst:309
+#: ../../library/base64.rst:327
 msgid ""
 "Section 5.2, \"Base64 Content-Transfer-Encoding,\" provides the definition "
 "of the base64 encoding."

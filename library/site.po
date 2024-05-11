@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/site.rst:2
-msgid ":mod:`site` --- Site-specific configuration hook"
-msgstr ":mod:`site` --- Спеціальний для сайту хук конфігурації"
+msgid ":mod:`!site` --- Site-specific configuration hook"
+msgstr ""
 
 #: ../../library/site.rst:7
 msgid "**Source code:** :source:`Lib/site.py`"
@@ -139,7 +139,13 @@ msgstr ""
 " модуля, якщо і коли це відбувається. Обмеження фрагмента коду одним рядком "
 "є навмисним заходом, щоб перешкодити розміщенню тут чогось більш складного."
 
-#: ../../library/site.rst:81
+#: ../../library/site.rst:77
+msgid ""
+"The :file:`.pth` files are now decoded by UTF-8 at first and then by the "
+":term:`locale encoding` if it fails."
+msgstr ""
+
+#: ../../library/site.rst:85
 msgid ""
 "For example, suppose ``sys.prefix`` and ``sys.exec_prefix`` are set to "
 ":file:`/usr/local`.  The Python X.Y library is then installed in "
@@ -157,11 +163,11 @@ msgstr ""
 ":file:`foo.pth` і :file:`bar.pth`. Припустимо, що :file:`foo.pth` містить "
 "наступне:"
 
-#: ../../library/site.rst:95
+#: ../../library/site.rst:99
 msgid "and :file:`bar.pth` contains::"
 msgstr "і :file:`bar.pth` містить::"
 
-#: ../../library/site.rst:101
+#: ../../library/site.rst:105
 msgid ""
 "Then the following version-specific directories are added to ``sys.path``, "
 "in this order::"
@@ -169,7 +175,7 @@ msgstr ""
 "Потім до ``sys.path`` додаються наступні каталоги для певної версії в такому"
 " порядку:"
 
-#: ../../library/site.rst:107
+#: ../../library/site.rst:111
 msgid ""
 "Note that :file:`bletch` is omitted because it doesn't exist; the "
 ":file:`bar` directory precedes the :file:`foo` directory because "
@@ -182,11 +188,11 @@ msgstr ""
 "перед :file:`foo.pth` в алфавітному порядку; і :file:`spam` пропущено, "
 "оскільки він не згадується в обох файлах конфігурації шляху."
 
-#: ../../library/site.rst:113
+#: ../../library/site.rst:117
 msgid ":mod:`sitecustomize`"
 msgstr ""
 
-#: ../../library/site.rst:117
+#: ../../library/site.rst:121
 msgid ""
 "After these path manipulations, an attempt is made to import a module named "
 ":mod:`sitecustomize`, which can perform arbitrary site-specific "
@@ -200,11 +206,11 @@ msgid ""
 "perhaps mysterious failure of the process."
 msgstr ""
 
-#: ../../library/site.rst:129
+#: ../../library/site.rst:133
 msgid ":mod:`usercustomize`"
 msgstr ""
 
-#: ../../library/site.rst:133
+#: ../../library/site.rst:137
 msgid ""
 "After this, an attempt is made to import a module named "
 ":mod:`usercustomize`, which can perform arbitrary user-specific "
@@ -216,7 +222,7 @@ msgid ""
 "``'usercustomize'``, it is silently ignored."
 msgstr ""
 
-#: ../../library/site.rst:141
+#: ../../library/site.rst:145
 msgid ""
 "Note that for some non-Unix systems, ``sys.prefix`` and ``sys.exec_prefix`` "
 "are empty, and the path manipulations are skipped; however the import of "
@@ -226,11 +232,11 @@ msgstr ""
 "порожні, а маніпуляції зі шляхом пропускаються; проте спроба імпорту "
 ":mod:`sitecustomize` і :mod:`usercustomize` все ще робиться."
 
-#: ../../library/site.rst:150
+#: ../../library/site.rst:154
 msgid "Readline configuration"
 msgstr "Конфігурація Readline"
 
-#: ../../library/site.rst:152
+#: ../../library/site.rst:156
 msgid ""
 "On systems that support :mod:`readline`, this module will also import and "
 "configure the :mod:`rlcompleter` module, if Python is started in "
@@ -250,19 +256,19 @@ msgstr ""
 "модулі :mod:`sitecustomize` або :mod:`usercustomize` або у вашому файлі "
 ":envvar:`PYTHONSTARTUP`."
 
-#: ../../library/site.rst:161
+#: ../../library/site.rst:165
 msgid "Activation of rlcompleter and history was made automatic."
 msgstr "Активацію rlcompleter та історії було зроблено автоматично."
 
-#: ../../library/site.rst:166
+#: ../../library/site.rst:170
 msgid "Module contents"
 msgstr "Зміст модуля"
 
-#: ../../library/site.rst:170
+#: ../../library/site.rst:174
 msgid "A list of prefixes for site-packages directories."
 msgstr "Список префіксів для каталогів пакетів сайту."
 
-#: ../../library/site.rst:175
+#: ../../library/site.rst:179
 msgid ""
 "Flag showing the status of the user site-packages directory.  ``True`` means"
 " that it is enabled and was added to ``sys.path``.  ``False`` means that it "
@@ -278,7 +284,7 @@ msgstr ""
 "міркувань безпеки (невідповідність між ідентифікатором користувача чи групи "
 "та ефективним ідентифікатором) або адміністратором."
 
-#: ../../library/site.rst:185
+#: ../../library/site.rst:189
 msgid ""
 "Path to the user site-packages for the running Python.  Can be ``None`` if "
 ":func:`getusersitepackages` hasn't been called yet.  Default value is "
@@ -298,7 +304,7 @@ msgstr ""
 "Цей каталог є каталогом сайту, що означає, що файли :file:`.pth` у ньому "
 "будуть оброблені."
 
-#: ../../library/site.rst:196
+#: ../../library/site.rst:200
 msgid ""
 "Path to the base directory for the user site-packages.  Can be ``None`` if "
 ":func:`getuserbase` hasn't been called yet.  Default value is "
@@ -310,7 +316,7 @@ msgid ""
 ":envvar:`PYTHONUSERBASE`."
 msgstr ""
 
-#: ../../library/site.rst:208
+#: ../../library/site.rst:212
 msgid ""
 "Adds all the standard site-specific directories to the module search path.  "
 "This function is called automatically when this module is imported, unless "
@@ -320,11 +326,11 @@ msgstr ""
 "викликається автоматично під час імпорту цього модуля, якщо інтерпретатор "
 "Python не було запущено з прапорцем :option:`-S`."
 
-#: ../../library/site.rst:212
+#: ../../library/site.rst:216
 msgid "This function used to be called unconditionally."
 msgstr "Ця функція раніше називалася безумовно."
 
-#: ../../library/site.rst:218
+#: ../../library/site.rst:222
 msgid ""
 "Add a directory to sys.path and process its :file:`.pth` files.  Typically "
 "used in :mod:`sitecustomize` or :mod:`usercustomize` (see above)."
@@ -333,11 +339,11 @@ msgstr ""
 "використовується в :mod:`sitecustomize` або :mod:`usercustomize` (див. "
 "вище)."
 
-#: ../../library/site.rst:224
+#: ../../library/site.rst:228
 msgid "Return a list containing all global site-packages directories."
 msgstr "Повертає список, що містить усі глобальні каталоги пакетів сайту."
 
-#: ../../library/site.rst:231
+#: ../../library/site.rst:235
 msgid ""
 "Return the path of the user base directory, :data:`USER_BASE`.  If it is not"
 " initialized yet, this function will also set it, respecting "
@@ -347,7 +353,7 @@ msgstr ""
 "не ініціалізований, ця функція також встановить його, поважаючи "
 ":envvar:`PYTHONUSERBASE`."
 
-#: ../../library/site.rst:240
+#: ../../library/site.rst:244
 msgid ""
 "Return the path of the user-specific site-packages directory, "
 ":data:`USER_SITE`.  If it is not initialized yet, this function will also "
@@ -361,11 +367,11 @@ msgstr ""
 "пакети сайтів до ``sys.path``, слід використовувати "
 ":data:`ENABLE_USER_SITE`."
 
-#: ../../library/site.rst:252
+#: ../../library/site.rst:256
 msgid "Command Line Interface"
 msgstr "Інтерфейс командного рядка"
 
-#: ../../library/site.rst:256
+#: ../../library/site.rst:260
 msgid ""
 "The :mod:`site` module also provides a way to get the user directories from "
 "the command line:"
@@ -373,7 +379,7 @@ msgstr ""
 "Модуль :mod:`site` також надає спосіб отримати каталоги користувача з "
 "командного рядка:"
 
-#: ../../library/site.rst:264
+#: ../../library/site.rst:268
 msgid ""
 "If it is called without arguments, it will print the contents of "
 ":data:`sys.path` on the standard output, followed by the value of "
@@ -385,15 +391,15 @@ msgstr ""
 "каталог, потім те саме для :data:`USER_SITE` і, нарешті, значення "
 ":data:`ENABLE_USER_SITE`."
 
-#: ../../library/site.rst:271
+#: ../../library/site.rst:275
 msgid "Print the path to the user base directory."
 msgstr "Надрукуйте шлях до каталогу бази користувача."
 
-#: ../../library/site.rst:275
+#: ../../library/site.rst:279
 msgid "Print the path to the user site-packages directory."
 msgstr "Надрукуйте шлях до каталогу site-packages користувача."
 
-#: ../../library/site.rst:277
+#: ../../library/site.rst:281
 msgid ""
 "If both options are given, user base and user site will be printed (always "
 "in this order), separated by :data:`os.pathsep`."
@@ -401,7 +407,7 @@ msgstr ""
 "Якщо задано обидва параметри, буде надруковано базу користувачів і сайт "
 "користувачів (завжди в такому порядку), розділених :data:`os.pathsep`."
 
-#: ../../library/site.rst:280
+#: ../../library/site.rst:284
 msgid ""
 "If any option is given, the script will exit with one of these values: ``0``"
 " if the user site-packages directory is enabled, ``1`` if it was disabled by"
@@ -413,11 +419,11 @@ msgstr ""
 "якщо він був вимкнений користувачем, ``2``, якщо його вимкнено з міркувань "
 "безпеки або адміністратором, і значення більше 2, якщо є помилка."
 
-#: ../../library/site.rst:287
+#: ../../library/site.rst:291
 msgid ":pep:`370` -- Per user site-packages directory"
 msgstr ":pep:`370` -- Каталог пакетів сайту для кожного користувача"
 
-#: ../../library/site.rst:288
+#: ../../library/site.rst:292
 msgid ":ref:`sys-path-init` -- The initialization of :data:`sys.path`."
 msgstr ""
 
@@ -429,7 +435,7 @@ msgstr "модуль"
 msgid "search"
 msgstr ""
 
-#: ../../library/site.rst:16 ../../library/site.rst:77
+#: ../../library/site.rst:16 ../../library/site.rst:81
 msgid "path"
 msgstr ""
 
@@ -457,14 +463,14 @@ msgstr "заява"
 msgid "import"
 msgstr ""
 
-#: ../../library/site.rst:77
+#: ../../library/site.rst:81
 msgid "package"
 msgstr "пакет"
 
-#: ../../library/site.rst:77
+#: ../../library/site.rst:81
 msgid "configuration"
 msgstr ""
 
-#: ../../library/site.rst:77
+#: ../../library/site.rst:81
 msgid "file"
 msgstr ""

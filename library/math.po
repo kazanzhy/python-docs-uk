@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/math.rst:2
-msgid ":mod:`math` --- Mathematical functions"
-msgstr ":mod:`math` --- Математичні функції"
+msgid ":mod:`!math` --- Mathematical functions"
+msgstr ""
 
 #: ../../library/math.rst:13
 msgid ""
@@ -98,7 +98,7 @@ msgid ""
 "coefficient of k-th term in polynomial expansion of ``(1 + x)ⁿ``."
 msgstr ""
 
-#: ../../library/math.rst:51 ../../library/math.rst:258
+#: ../../library/math.rst:51 ../../library/math.rst:274
 msgid ""
 "Raises :exc:`TypeError` if either of the arguments are not integers. Raises "
 ":exc:`ValueError` if either of the arguments are negative."
@@ -127,10 +127,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/math.rst:74
-msgid "Accepting floats with integral values (like ``5.0``) is deprecated."
+msgid "Floats with integral values (like ``5.0``) are no longer accepted."
 msgstr ""
-"Прийняття числа з плаваючою точкою з цілими значеннями (наприклад, ``5.0``) "
-"застаріло."
 
 #: ../../library/math.rst:80
 msgid ""
@@ -143,6 +141,23 @@ msgstr ""
 "<object.__floor__>`, який має повернути значення :class:`~numbers.Integral`."
 
 #: ../../library/math.rst:87
+msgid ""
+"Fused multiply-add operation. Return ``(x * y) + z``, computed as though "
+"with infinite precision and range followed by a single round to the "
+"``float`` format. This operation often provides better accuracy than the "
+"direct expression ``(x * y) + z``."
+msgstr ""
+
+#: ../../library/math.rst:92
+msgid ""
+"This function follows the specification of the fusedMultiplyAdd operation "
+"described in the IEEE 754 standard. The standard leaves one case "
+"implementation-defined, namely the result of ``fma(0, inf, nan)`` and "
+"``fma(inf, 0, nan)``. In these cases, ``math.fma`` returns a NaN, and does "
+"not raise any exception."
+msgstr ""
+
+#: ../../library/math.rst:103
 msgid ""
 "Return ``fmod(x, y)``, as defined by the platform C library. Note that the "
 "Python expression ``x % y`` may not return the same result.  The intent of "
@@ -170,7 +185,7 @@ msgstr ""
 ":func:`fmod` зазвичай є кращою під час роботи з числами з плаваючою точкою, "
 "тоді як ``x % y`` Python є кращою під час роботи з цілими числами."
 
-#: ../../library/math.rst:102
+#: ../../library/math.rst:118
 msgid ""
 "Return the mantissa and exponent of *x* as the pair ``(m, e)``.  *m* is a "
 "float and *e* is an integer such that ``x == m * 2**e`` exactly. If *x* is "
@@ -183,13 +198,13 @@ msgstr ""
 " < 1``. Це використовується, щоб \"розібрати\" внутрішнє представлення float"
 " переносним способом."
 
-#: ../../library/math.rst:110
+#: ../../library/math.rst:126
 msgid ""
 "Return an accurate floating point sum of values in the iterable.  Avoids "
 "loss of precision by tracking multiple intermediate partial sums."
 msgstr ""
 
-#: ../../library/math.rst:113
+#: ../../library/math.rst:129
 msgid ""
 "The algorithm's accuracy depends on IEEE-754 arithmetic guarantees and the "
 "typical case where the rounding mode is half-even.  On some non-Windows "
@@ -203,17 +218,15 @@ msgstr ""
 "та іноді може подвоїти округлення проміжної суми, спричиняючи її вимкнення у"
 " своєму молодшому розряді."
 
-#: ../../library/math.rst:119
+#: ../../library/math.rst:135
 msgid ""
 "For further discussion and two alternative approaches, see the `ASPN "
 "cookbook recipes for accurate floating point summation "
-"<https://code.activestate.com/recipes/393090/>`_\\."
+"<https://code.activestate.com/recipes/393090-binary-floating-point-"
+"summation-accurate-to-full-p/>`_\\."
 msgstr ""
-"Для подальшого обговорення та двох альтернативних підходів див. `Рецепти "
-"ASPN кулінарної книги для точного підсумовування з плаваючою комою "
-"<https://code.activestate.com/recipes/393090/>`_\\."
 
-#: ../../library/math.rst:126
+#: ../../library/math.rst:142
 msgid ""
 "Return the greatest common divisor of the specified integer arguments. If "
 "any of the arguments is nonzero, then the returned value is the largest "
@@ -227,7 +240,7 @@ msgstr ""
 "дорівнюють нулю, то повертається значення ``0``. ``gcd()`` без аргументів "
 "повертає ``0``."
 
-#: ../../library/math.rst:134
+#: ../../library/math.rst:150
 msgid ""
 "Added support for an arbitrary number of arguments. Formerly, only two "
 "arguments were supported."
@@ -235,7 +248,7 @@ msgstr ""
 "Додано підтримку довільної кількості аргументів. Раніше підтримувалися лише "
 "два аргументи."
 
-#: ../../library/math.rst:141
+#: ../../library/math.rst:157
 msgid ""
 "Return ``True`` if the values *a* and *b* are close to each other and "
 "``False`` otherwise."
@@ -243,7 +256,7 @@ msgstr ""
 "Повертає ``True``, якщо значення *a* і *b* близькі одне до одного, і "
 "``False`` в іншому випадку."
 
-#: ../../library/math.rst:144
+#: ../../library/math.rst:160
 msgid ""
 "Whether or not two values are considered close is determined according to "
 "given absolute and relative tolerances."
@@ -251,7 +264,7 @@ msgstr ""
 "Чи вважаються два значення близькими чи ні, визначається відповідно до "
 "заданих абсолютних і відносних допусків."
 
-#: ../../library/math.rst:147
+#: ../../library/math.rst:163
 msgid ""
 "*rel_tol* is the relative tolerance -- it is the maximum allowed difference "
 "between *a* and *b*, relative to the larger absolute value of *a* or *b*. "
@@ -265,7 +278,7 @@ msgstr ""
 "``1e-09``, який гарантує, що два значення збігаються в межах приблизно 9 "
 "десяткових цифр. *rel_tol* має бути більше нуля."
 
-#: ../../library/math.rst:153
+#: ../../library/math.rst:169
 msgid ""
 "*abs_tol* is the minimum absolute tolerance -- useful for comparisons near "
 "zero. *abs_tol* must be at least zero."
@@ -273,7 +286,7 @@ msgstr ""
 "*abs_tol* — це мінімальний абсолютний допуск — корисний для порівнянь біля "
 "нуля. *abs_tol* має бути не менше нуля."
 
-#: ../../library/math.rst:156
+#: ../../library/math.rst:172
 msgid ""
 "If no errors occur, the result will be: ``abs(a-b) <= max(rel_tol * "
 "max(abs(a), abs(b)), abs_tol)``."
@@ -281,7 +294,7 @@ msgstr ""
 "Якщо помилок не буде, результатом буде: ``abs(a-b) <= max(rel_tol * "
 "max(abs(a), abs(b)), abs_tol)``."
 
-#: ../../library/math.rst:159
+#: ../../library/math.rst:175
 msgid ""
 "The IEEE 754 special values of ``NaN``, ``inf``, and ``-inf`` will be "
 "handled according to IEEE rules.  Specifically, ``NaN`` is not considered "
@@ -293,11 +306,11 @@ msgstr ""
 "якого іншого значення, включаючи ``NaN``. ``inf`` і ``-inf`` вважаються лише"
 " близькими до самих себе."
 
-#: ../../library/math.rst:168
+#: ../../library/math.rst:184
 msgid ":pep:`485` -- A function for testing approximate equality"
 msgstr ":pep:`485` -- Функція для перевірки приблизної рівності"
 
-#: ../../library/math.rst:173
+#: ../../library/math.rst:189
 msgid ""
 "Return ``True`` if *x* is neither an infinity nor a NaN, and ``False`` "
 "otherwise.  (Note that ``0.0`` *is* considered finite.)"
@@ -305,7 +318,7 @@ msgstr ""
 "Повертає ``True``, якщо *x* не є ні нескінченністю, ні NaN, і ``False`` в "
 "іншому випадку. (Зверніть увагу, що ``0.0`` *вважається* кінцевим.)"
 
-#: ../../library/math.rst:181
+#: ../../library/math.rst:197
 msgid ""
 "Return ``True`` if *x* is a positive or negative infinity, and ``False`` "
 "otherwise."
@@ -313,14 +326,14 @@ msgstr ""
 "Повертає ``True``, якщо *x* є додатною або від’ємною нескінченністю, і "
 "``False`` в іншому випадку."
 
-#: ../../library/math.rst:187
+#: ../../library/math.rst:203
 msgid ""
 "Return ``True`` if *x* is a NaN (not a number), and ``False`` otherwise."
 msgstr ""
 "Повертає ``True``, якщо *x* є NaN (а не число), і ``False`` в іншому "
 "випадку."
 
-#: ../../library/math.rst:192
+#: ../../library/math.rst:208
 msgid ""
 "Return the integer square root of the nonnegative integer *n*. This is the "
 "floor of the exact square root of *n*, or equivalently the greatest integer "
@@ -330,7 +343,7 @@ msgstr ""
 "частина точного квадратного кореня з *n* або, що еквівалентно, найбільше "
 "ціле число *a* таке, що *a*\\ ² |nbsp| ≤ |nbsp| *n*."
 
-#: ../../library/math.rst:196
+#: ../../library/math.rst:212
 msgid ""
 "For some applications, it may be more convenient to have the least integer "
 "*a* such that *n* |nbsp| ≤ |nbsp| *a*\\ ², or in other words the ceiling of "
@@ -342,7 +355,7 @@ msgstr ""
 "кореня з *n*. Для позитивного *n* це можна обчислити за допомогою ``a = 1 + "
 "isqrt(n - 1)``."
 
-#: ../../library/math.rst:206
+#: ../../library/math.rst:222
 msgid ""
 "Return the least common multiple of the specified integer arguments. If all "
 "arguments are nonzero, then the returned value is the smallest positive "
@@ -355,13 +368,13 @@ msgstr ""
 "кратне всім аргументам. Якщо будь-який з аргументів дорівнює нулю, то "
 "повертається значення ``0``. ``lcm()`` без аргументів повертає ``1``."
 
-#: ../../library/math.rst:217
+#: ../../library/math.rst:233
 msgid ""
 "Return ``x * (2**i)``.  This is essentially the inverse of function "
 ":func:`frexp`."
 msgstr "Повернути ``x * (2**i)``. По суті, це зворотна функція :func:`frexp`."
 
-#: ../../library/math.rst:223
+#: ../../library/math.rst:239
 msgid ""
 "Return the fractional and integer parts of *x*.  Both results carry the sign"
 " of *x* and are floats."
@@ -369,44 +382,44 @@ msgstr ""
 "Повертає дробову та цілу частини *x*. Обидва результати мають знак *x* і є "
 "числами з плаваючою точкою."
 
-#: ../../library/math.rst:229
+#: ../../library/math.rst:245
 msgid "Return the floating-point value *steps* steps after *x* towards *y*."
 msgstr ""
 
-#: ../../library/math.rst:231
+#: ../../library/math.rst:247
 msgid "If *x* is equal to *y*, return *y*, unless *steps* is zero."
 msgstr ""
 
-#: ../../library/math.rst:233
+#: ../../library/math.rst:249
 msgid "Examples:"
 msgstr "приклади:"
 
-#: ../../library/math.rst:235
+#: ../../library/math.rst:251
 msgid "``math.nextafter(x, math.inf)`` goes up: towards positive infinity."
 msgstr ""
 "``math.nextafter(x, math.inf)`` йде вгору: до позитивної нескінченності."
 
-#: ../../library/math.rst:236
+#: ../../library/math.rst:252
 msgid "``math.nextafter(x, -math.inf)`` goes down: towards minus infinity."
 msgstr "``math.nextafter(x, -math.inf)`` йде вниз: до мінус нескінченності."
 
-#: ../../library/math.rst:237
+#: ../../library/math.rst:253
 msgid "``math.nextafter(x, 0.0)`` goes towards zero."
 msgstr "``math.nextafter(x, 0.0)`` рухається до нуля."
 
-#: ../../library/math.rst:238
+#: ../../library/math.rst:254
 msgid "``math.nextafter(x, math.copysign(math.inf, x))`` goes away from zero."
 msgstr "``math.nextafter(x, math.copysign(math.inf, x))`` відходить від нуля."
 
-#: ../../library/math.rst:240
+#: ../../library/math.rst:256
 msgid "See also :func:`math.ulp`."
 msgstr "Дивіться також :func:`math.ulp`."
 
-#: ../../library/math.rst:244
+#: ../../library/math.rst:260
 msgid "Added the *steps* argument."
 msgstr ""
 
-#: ../../library/math.rst:249
+#: ../../library/math.rst:265
 msgid ""
 "Return the number of ways to choose *k* items from *n* items without "
 "repetition and with order."
@@ -414,7 +427,7 @@ msgstr ""
 "Повернути кількість способів вибору *k* елементів з *n* елементів без "
 "повторення та з порядком."
 
-#: ../../library/math.rst:252
+#: ../../library/math.rst:268
 msgid ""
 "Evaluates to ``n! / (n - k)!`` when ``k <= n`` and evaluates to zero when "
 "``k > n``."
@@ -422,15 +435,13 @@ msgstr ""
 "Оцінюється як ``n! / (n - k)!`` коли ``k <= n`` and evaluates to zero when "
 "``k > n``."
 
-#: ../../library/math.rst:255
+#: ../../library/math.rst:271
 msgid ""
-"If *k* is not specified or is None, then *k* defaults to *n* and the "
+"If *k* is not specified or is ``None``, then *k* defaults to *n* and the "
 "function returns ``n!``."
 msgstr ""
-"Якщо *k* не вказано або має значення None, тоді *k* за замовчуванням має "
-"*n*, а функція повертає ``n!``."
 
-#: ../../library/math.rst:266
+#: ../../library/math.rst:282
 msgid ""
 "Calculate the product of all the elements in the input *iterable*. The "
 "default *start* value for the product is ``1``."
@@ -438,7 +449,7 @@ msgstr ""
 "Обчислити добуток усіх елементів у вхідному *iterable*. Типовим *початковим*"
 " значенням для продукту є \"1\"."
 
-#: ../../library/math.rst:269
+#: ../../library/math.rst:285
 msgid ""
 "When the iterable is empty, return the start value.  This function is "
 "intended specifically for use with numeric values and may reject non-numeric"
@@ -448,7 +459,7 @@ msgstr ""
 "спеціально для використання з числовими значеннями та може відхиляти "
 "нечислові типи."
 
-#: ../../library/math.rst:278
+#: ../../library/math.rst:294
 msgid ""
 "Return the IEEE 754-style remainder of *x* with respect to *y*.  For finite "
 "*x* and finite nonzero *y*, this is the difference ``x - n*y``, where ``n`` "
@@ -464,7 +475,7 @@ msgstr ""
 "``n`` використовується найближче *парне* ціле число. Таким чином, залишок "
 "``r = залишок(x, y)`` завжди задовольняє ``abs(r) <= 0,5 * abs(y)``."
 
-#: ../../library/math.rst:285
+#: ../../library/math.rst:301
 msgid ""
 "Special cases follow IEEE 754: in particular, ``remainder(x, math.inf)`` is "
 "*x* for any finite *x*, and ``remainder(x, 0)`` and ``remainder(math.inf, "
@@ -477,7 +488,7 @@ msgstr ""
 "не-NaN *x*. Якщо результатом операції залишку є нуль, цей нуль матиме той "
 "самий знак, що й *x*."
 
-#: ../../library/math.rst:291
+#: ../../library/math.rst:307
 msgid ""
 "On platforms using IEEE 754 binary floating-point, the result of this "
 "operation is always exactly representable: no rounding error is introduced."
@@ -486,25 +497,25 @@ msgstr ""
 "754, результат цієї операції завжди можна точно представити: помилка "
 "округлення не виникає."
 
-#: ../../library/math.rst:299
+#: ../../library/math.rst:315
 msgid "Return the sum of products of values from two iterables *p* and *q*."
 msgstr ""
 
-#: ../../library/math.rst:301
+#: ../../library/math.rst:317
 msgid "Raises :exc:`ValueError` if the inputs do not have the same length."
 msgstr ""
 
-#: ../../library/math.rst:303 ../../library/math.rst:498
+#: ../../library/math.rst:319 ../../library/math.rst:514
 msgid "Roughly equivalent to::"
 msgstr "Приблизно еквівалентно::"
 
-#: ../../library/math.rst:307
+#: ../../library/math.rst:323
 msgid ""
 "For float and mixed int/float inputs, the intermediate products and sums are"
 " computed with extended precision."
 msgstr ""
 
-#: ../../library/math.rst:315
+#: ../../library/math.rst:331
 msgid ""
 "Return *x* with the fractional part removed, leaving the integer part.  This"
 " rounds toward 0: ``trunc()`` is equivalent to :func:`floor` for positive "
@@ -518,23 +529,23 @@ msgstr ""
 "плаваючою точкою, делегує :meth:`x.__trunc__ <object.__trunc__>`, який має "
 "повернути значення :class:`~numbers.Integral`."
 
-#: ../../library/math.rst:323
+#: ../../library/math.rst:339
 msgid "Return the value of the least significant bit of the float *x*:"
 msgstr "Повертає значення молодшого біта числа з плаваючою точкою *x*:"
 
-#: ../../library/math.rst:325
+#: ../../library/math.rst:341
 msgid "If *x* is a NaN (not a number), return *x*."
 msgstr "Якщо *x* є NaN (а не числом), поверніть *x*."
 
-#: ../../library/math.rst:326
+#: ../../library/math.rst:342
 msgid "If *x* is negative, return ``ulp(-x)``."
 msgstr "Якщо *x* від’ємне, поверніть ``ulp(-x)``."
 
-#: ../../library/math.rst:327
+#: ../../library/math.rst:343
 msgid "If *x* is a positive infinity, return *x*."
 msgstr "Якщо *x* є позитивною нескінченністю, поверніть *x*."
 
-#: ../../library/math.rst:328
+#: ../../library/math.rst:344
 msgid ""
 "If *x* is equal to zero, return the smallest positive *denormalized* "
 "representable float (smaller than the minimum positive *normalized* float, "
@@ -544,7 +555,7 @@ msgstr ""
 "плаваючою точкою (менше ніж мінімальне позитивне *нормалізоване* число з "
 "плаваючою точкою, :data:`sys.float_info.min <sys.float_info>`)."
 
-#: ../../library/math.rst:331
+#: ../../library/math.rst:347
 msgid ""
 "If *x* is equal to the largest positive representable float, return the "
 "value of the least significant bit of *x*, such that the first float smaller"
@@ -554,7 +565,7 @@ msgstr ""
 "значення молодшого значущого біта *x*, щоб перше число з плаваючою точкою, "
 "менше за *x*, було ``x - ulp(x)``."
 
-#: ../../library/math.rst:334
+#: ../../library/math.rst:350
 msgid ""
 "Otherwise (*x* is a positive finite number), return the value of the least "
 "significant bit of *x*, such that the first float bigger than *x* is ``x + "
@@ -564,11 +575,11 @@ msgstr ""
 "молодшого біта *x*, щоб перше число з плаваючою речовиною, більше за *x*, "
 "було ``x + ulp(x)``."
 
-#: ../../library/math.rst:338
+#: ../../library/math.rst:354
 msgid "ULP stands for \"Unit in the Last Place\"."
 msgstr "ULP розшифровується як \"Unit in the Last Place\"."
 
-#: ../../library/math.rst:340
+#: ../../library/math.rst:356
 msgid ""
 "See also :func:`math.nextafter` and :data:`sys.float_info.epsilon "
 "<sys.float_info>`."
@@ -576,7 +587,7 @@ msgstr ""
 "Дивіться також :func:`math.nextafter` і :data:`sys.float_info.epsilon "
 "<sys.float_info>`."
 
-#: ../../library/math.rst:346
+#: ../../library/math.rst:362
 msgid ""
 "Note that :func:`frexp` and :func:`modf` have a different call/return "
 "pattern than their C equivalents: they take a single argument and return a "
@@ -588,7 +599,7 @@ msgstr ""
 "повертають пару значень, замість того, щоб повертати друге значення, що "
 "повертається через 'вихід параметр\" (у Python такого немає)."
 
-#: ../../library/math.rst:351
+#: ../../library/math.rst:367
 msgid ""
 "For the :func:`ceil`, :func:`floor`, and :func:`modf` functions, note that "
 "*all* floating-point numbers of sufficiently large magnitude are exact "
@@ -602,15 +613,15 @@ msgstr ""
 "подвійний тип платформи C), у цьому випадку будь-яке число з плаваючою "
 "речовиною *x* із ``abs(x) >= 2**52`` обов’язково не має дробових бітів. ."
 
-#: ../../library/math.rst:359
+#: ../../library/math.rst:375
 msgid "Power and logarithmic functions"
 msgstr "Степеневі та логарифмічні функції"
 
-#: ../../library/math.rst:363
+#: ../../library/math.rst:379
 msgid "Return the cube root of *x*."
 msgstr ""
 
-#: ../../library/math.rst:370
+#: ../../library/math.rst:386
 msgid ""
 "Return *e* raised to the power *x*, where *e* = 2.718281... is the base of "
 "natural logarithms.  This is usually more accurate than ``math.e ** x`` or "
@@ -619,11 +630,11 @@ msgstr ""
 "Поверніть *e* у степені *x*, де *e* = 2,718281... є основою натуральних "
 "логарифмів. Зазвичай це точніше, ніж ``math.e ** x`` або ``pow(math.e, x)``."
 
-#: ../../library/math.rst:377
+#: ../../library/math.rst:393
 msgid "Return *2* raised to the power *x*."
 msgstr ""
 
-#: ../../library/math.rst:384
+#: ../../library/math.rst:400
 msgid ""
 "Return *e* raised to the power *x*, minus 1.  Here *e* is the base of "
 "natural logarithms.  For small floats *x*, the subtraction in ``exp(x) - 1``"
@@ -632,12 +643,12 @@ msgid ""
 "function provides a way to compute this quantity to full precision:"
 msgstr ""
 
-#: ../../library/math.rst:401
+#: ../../library/math.rst:417
 msgid "With one argument, return the natural logarithm of *x* (to base *e*)."
 msgstr ""
 "З одним аргументом повертає натуральний логарифм *x* (за основою *e*)."
 
-#: ../../library/math.rst:403
+#: ../../library/math.rst:419
 msgid ""
 "With two arguments, return the logarithm of *x* to the given *base*, "
 "calculated as ``log(x)/log(base)``."
@@ -645,7 +656,7 @@ msgstr ""
 "З двома аргументами повертає логарифм від *x* до заданої *основи*, "
 "обчислений як ``log(x)/log(основа)``."
 
-#: ../../library/math.rst:409
+#: ../../library/math.rst:425
 msgid ""
 "Return the natural logarithm of *1+x* (base *e*). The result is calculated "
 "in a way which is accurate for *x* near zero."
@@ -653,14 +664,14 @@ msgstr ""
 "Повертає натуральний логарифм *1+x* (за основою *e*). Результат обчислюється"
 " таким чином, що є точним для *x* біля нуля."
 
-#: ../../library/math.rst:415
+#: ../../library/math.rst:431
 msgid ""
 "Return the base-2 logarithm of *x*. This is usually more accurate than "
 "``log(x, 2)``."
 msgstr ""
 "Повертає логарифм *x* за основою 2. Зазвичай це точніше, ніж ``log(x, 2)``."
 
-#: ../../library/math.rst:422
+#: ../../library/math.rst:438
 msgid ""
 ":meth:`int.bit_length` returns the number of bits necessary to represent an "
 "integer in binary, excluding the sign and leading zeros."
@@ -668,7 +679,7 @@ msgstr ""
 ":meth:`int.bit_length` повертає кількість бітів, необхідну для представлення"
 " цілого числа в двійковій формі, за винятком знака та нулів на початку."
 
-#: ../../library/math.rst:428
+#: ../../library/math.rst:444
 msgid ""
 "Return the base-10 logarithm of *x*.  This is usually more accurate than "
 "``log(x, 10)``."
@@ -676,7 +687,7 @@ msgstr ""
 "Повертає логарифм *x* за основою 10. Зазвичай це точніше, ніж ``log(x, "
 "10)``."
 
-#: ../../library/math.rst:434
+#: ../../library/math.rst:450
 msgid ""
 "Return ``x`` raised to the power ``y``.  Exceptional cases follow the IEEE "
 "754 standard as far as possible.  In particular, ``pow(1.0, x)`` and "
@@ -685,7 +696,7 @@ msgid ""
 "integer then ``pow(x, y)`` is undefined, and raises :exc:`ValueError`."
 msgstr ""
 
-#: ../../library/math.rst:441
+#: ../../library/math.rst:457
 msgid ""
 "Unlike the built-in ``**`` operator, :func:`math.pow` converts both its "
 "arguments to type :class:`float`.  Use ``**`` or the built-in :func:`pow` "
@@ -695,28 +706,28 @@ msgstr ""
 "обидва свої аргументи на тип :class:`float`. Використовуйте ``**`` або "
 "вбудовану функцію :func:`pow` для обчислення точних цілих степенів."
 
-#: ../../library/math.rst:445
+#: ../../library/math.rst:461
 msgid ""
 "The special cases ``pow(0.0, -inf)`` and ``pow(-0.0, -inf)`` were changed to"
 " return ``inf`` instead of raising :exc:`ValueError`, for consistency with "
 "IEEE 754."
 msgstr ""
 
-#: ../../library/math.rst:453
+#: ../../library/math.rst:469
 msgid "Return the square root of *x*."
 msgstr "Повертає квадратний корінь з *x*."
 
-#: ../../library/math.rst:457
+#: ../../library/math.rst:473
 msgid "Trigonometric functions"
 msgstr "Тригонометричні функції"
 
-#: ../../library/math.rst:461
+#: ../../library/math.rst:477
 msgid ""
 "Return the arc cosine of *x*, in radians. The result is between ``0`` and "
 "``pi``."
 msgstr "Повертає арккосинус *x* у радіанах. Результат між ``0`` і ``pi``."
 
-#: ../../library/math.rst:467
+#: ../../library/math.rst:483
 msgid ""
 "Return the arc sine of *x*, in radians. The result is between ``-pi/2`` and "
 "``pi/2``."
@@ -724,7 +735,7 @@ msgstr ""
 "Повертає арксинус *x* у радіанах. Результат знаходиться між ``-pi/2`` і "
 "``pi/2``."
 
-#: ../../library/math.rst:473
+#: ../../library/math.rst:489
 msgid ""
 "Return the arc tangent of *x*, in radians. The result is between ``-pi/2`` "
 "and ``pi/2``."
@@ -732,7 +743,7 @@ msgstr ""
 "Повертає арктангенс *x* у радіанах. Результат знаходиться між ``-pi/2`` і "
 "``pi/2``."
 
-#: ../../library/math.rst:479
+#: ../../library/math.rst:495
 msgid ""
 "Return ``atan(y / x)``, in radians. The result is between ``-pi`` and "
 "``pi``. The vector in the plane from the origin to point ``(x, y)`` makes "
@@ -748,11 +759,11 @@ msgstr ""
 " для кута. Наприклад, ``atan(1)`` і ``atan2(1, 1)`` обидва є ``pi/4``, але "
 "``atan2(-1, -1)`` є ``-3*pi/4``."
 
-#: ../../library/math.rst:489
+#: ../../library/math.rst:505
 msgid "Return the cosine of *x* radians."
 msgstr "Повертає косинус *x* радіан."
 
-#: ../../library/math.rst:494
+#: ../../library/math.rst:510
 msgid ""
 "Return the Euclidean distance between two points *p* and *q*, each given as "
 "a sequence (or iterable) of coordinates.  The two points must have the same "
@@ -762,7 +773,7 @@ msgstr ""
 " як послідовність (або повторювана) координат. Дві точки повинні мати "
 "однаковий розмір."
 
-#: ../../library/math.rst:507
+#: ../../library/math.rst:523
 msgid ""
 "Return the Euclidean norm, ``sqrt(sum(x**2 for x in coordinates))``. This is"
 " the length of the vector from the origin to the point given by the "
@@ -771,7 +782,7 @@ msgstr ""
 "Повертає евклідову норму, ``sqrt(sum(x**2 для x у координатах))``. Це "
 "довжина вектора від початку координат до точки, заданої координатами."
 
-#: ../../library/math.rst:511
+#: ../../library/math.rst:527
 msgid ""
 "For a two dimensional point ``(x, y)``, this is equivalent to computing the "
 "hypotenuse of a right triangle using the Pythagorean theorem, ``sqrt(x*x + "
@@ -780,7 +791,7 @@ msgstr ""
 "Для двовимірної точки ``(x, y)`` це еквівалентно обчисленню гіпотенузи "
 "прямокутного трикутника за допомогою теореми Піфагора ``sqrt(x*x + y*y)``."
 
-#: ../../library/math.rst:515
+#: ../../library/math.rst:531
 msgid ""
 "Added support for n-dimensional points. Formerly, only the two dimensional "
 "case was supported."
@@ -788,7 +799,7 @@ msgstr ""
 "Додано підтримку n-вимірних точок. Раніше підтримувався лише двовимірний "
 "випадок."
 
-#: ../../library/math.rst:519
+#: ../../library/math.rst:535
 msgid ""
 "Improved the algorithm's accuracy so that the maximum error is under 1 ulp "
 "(unit in the last place).  More typically, the result is almost always "
@@ -798,66 +809,66 @@ msgstr ""
 "(одиниця на останньому місці). Як правило, результат майже завжди правильно "
 "округлюється з точністю до 1/2 ulp."
 
-#: ../../library/math.rst:527
+#: ../../library/math.rst:543
 msgid "Return the sine of *x* radians."
 msgstr "Повернути синус *x* радіан."
 
-#: ../../library/math.rst:532
+#: ../../library/math.rst:548
 msgid "Return the tangent of *x* radians."
 msgstr "Повертає тангенс *x* радіан."
 
-#: ../../library/math.rst:536
+#: ../../library/math.rst:552
 msgid "Angular conversion"
 msgstr "Кутове перетворення"
 
-#: ../../library/math.rst:540
+#: ../../library/math.rst:556
 msgid "Convert angle *x* from radians to degrees."
 msgstr "Перетворіть кут *x* з радіан на градуси."
 
-#: ../../library/math.rst:545
+#: ../../library/math.rst:561
 msgid "Convert angle *x* from degrees to radians."
 msgstr "Переведіть кут *x* із градусів у радіани."
 
-#: ../../library/math.rst:549
+#: ../../library/math.rst:565
 msgid "Hyperbolic functions"
 msgstr "Гіперболічні функції"
 
-#: ../../library/math.rst:551
+#: ../../library/math.rst:567
 msgid ""
 "`Hyperbolic functions <https://en.wikipedia.org/wiki/Hyperbolic_functions>`_"
 " are analogs of trigonometric functions that are based on hyperbolas instead"
 " of circles."
 msgstr ""
 
-#: ../../library/math.rst:557
+#: ../../library/math.rst:573
 msgid "Return the inverse hyperbolic cosine of *x*."
 msgstr "Повертає арккосинус *x*."
 
-#: ../../library/math.rst:562
+#: ../../library/math.rst:578
 msgid "Return the inverse hyperbolic sine of *x*."
 msgstr "Повертає гіперболічний арксинус *x*."
 
-#: ../../library/math.rst:567
+#: ../../library/math.rst:583
 msgid "Return the inverse hyperbolic tangent of *x*."
 msgstr "Повертає гіперболічний обернений тангенс *x*."
 
-#: ../../library/math.rst:572
+#: ../../library/math.rst:588
 msgid "Return the hyperbolic cosine of *x*."
 msgstr "Повертає гіперболічний косинус *x*."
 
-#: ../../library/math.rst:577
+#: ../../library/math.rst:593
 msgid "Return the hyperbolic sine of *x*."
 msgstr "Повернути гіперболічний синус *x*."
 
-#: ../../library/math.rst:582
+#: ../../library/math.rst:598
 msgid "Return the hyperbolic tangent of *x*."
 msgstr "Поверніть гіперболічний тангенс *x*."
 
-#: ../../library/math.rst:586
+#: ../../library/math.rst:602
 msgid "Special functions"
 msgstr "Спеціальні функції"
 
-#: ../../library/math.rst:590
+#: ../../library/math.rst:606
 msgid ""
 "Return the `error function <https://en.wikipedia.org/wiki/Error_function>`_ "
 "at *x*."
@@ -865,14 +876,14 @@ msgstr ""
 "Повертає `функцію помилки <https://en.wikipedia.org/wiki/Error_function>`_ у"
 " *x*."
 
-#: ../../library/math.rst:593
+#: ../../library/math.rst:609
 msgid ""
 "The :func:`erf` function can be used to compute traditional statistical "
 "functions such as the `cumulative standard normal distribution "
 "<https://en.wikipedia.org/wiki/Cumulative_distribution_function>`_::"
 msgstr ""
 
-#: ../../library/math.rst:606
+#: ../../library/math.rst:622
 msgid ""
 "Return the complementary error function at *x*.  The `complementary error "
 "function <https://en.wikipedia.org/wiki/Error_function>`_ is defined as "
@@ -886,7 +897,7 @@ msgstr ""
 "одиниці спричинило б `втрату значущості "
 "<https://en.wikipedia.org/wiki/Loss_of_significance>`_\\."
 
-#: ../../library/math.rst:617
+#: ../../library/math.rst:633
 msgid ""
 "Return the `Gamma function <https://en.wikipedia.org/wiki/Gamma_function>`_ "
 "at *x*."
@@ -894,26 +905,26 @@ msgstr ""
 "Повертає `Гамма-функцію <https://en.wikipedia.org/wiki/Gamma_function>`_ у "
 "*x*."
 
-#: ../../library/math.rst:625
+#: ../../library/math.rst:641
 msgid ""
 "Return the natural logarithm of the absolute value of the Gamma function at "
 "*x*."
 msgstr ""
 "Повертає натуральний логарифм абсолютного значення гамма-функції при *x*."
 
-#: ../../library/math.rst:632
+#: ../../library/math.rst:648
 msgid "Constants"
 msgstr "Константи"
 
-#: ../../library/math.rst:636
+#: ../../library/math.rst:652
 msgid "The mathematical constant *π* = 3.141592..., to available precision."
 msgstr "Математична константа *π* = 3,141592... з доступною точністю."
 
-#: ../../library/math.rst:641
+#: ../../library/math.rst:657
 msgid "The mathematical constant *e* = 2.718281..., to available precision."
 msgstr "Математична константа *e* = 2,718281... з доступною точністю."
 
-#: ../../library/math.rst:646
+#: ../../library/math.rst:662
 msgid ""
 "The mathematical constant *τ* = 6.283185..., to available precision. Tau is "
 "a circle constant equal to 2\\ *π*, the ratio of a circle's circumference to"
@@ -927,7 +938,7 @@ msgstr ""
 "ще) неправильне <https://www.youtube.com/watch?v=jG7vhMMXagQ>`_, і почніть "
 "святкувати `День Тау <https://tauday.com/>`_, з’ївши вдвічі більше пирога!"
 
-#: ../../library/math.rst:657
+#: ../../library/math.rst:673
 msgid ""
 "A floating-point positive infinity.  (For negative infinity, use "
 "``-math.inf``.)  Equivalent to the output of ``float('inf')``."
@@ -935,7 +946,7 @@ msgstr ""
 "Додатна нескінченність із плаваючою комою. (Для негативної нескінченності "
 "використовуйте ``-math.inf``.) Еквівалент виведення ``float('inf')``."
 
-#: ../../library/math.rst:665
+#: ../../library/math.rst:681
 msgid ""
 "A floating-point \"not a number\" (NaN) value. Equivalent to the output of "
 "``float('nan')``. Due to the requirements of the `IEEE-754 standard "
@@ -946,11 +957,11 @@ msgid ""
 "Example:"
 msgstr ""
 
-#: ../../library/math.rst:685
+#: ../../library/math.rst:701
 msgid "It is now always available."
 msgstr ""
 
-#: ../../library/math.rst:691
+#: ../../library/math.rst:707
 msgid ""
 "The :mod:`math` module consists mostly of thin wrappers around the platform "
 "C math library functions.  Behavior in exceptional cases follows Annex F of "
@@ -976,7 +987,7 @@ msgstr ""
 "відповідно до Додатку F C99) є деякі винятки з цього правила, наприклад "
 "``pow(float('nan'), 0.0)`` або ``hypot(float ('nan'), float('inf'))``."
 
-#: ../../library/math.rst:703
+#: ../../library/math.rst:719
 msgid ""
 "Note that Python makes no effort to distinguish signaling NaNs from quiet "
 "NaNs, and behavior for signaling NaNs remains unspecified. Typical behavior "
@@ -986,10 +997,10 @@ msgstr ""
 "від тихих NaN, і поведінка для сигнальних NaN залишається невизначеною. "
 "Типовою поведінкою є ставлення до всіх NaN так, ніби вони тихі."
 
-#: ../../library/math.rst:710
+#: ../../library/math.rst:726
 msgid "Module :mod:`cmath`"
 msgstr "Модуль :mod:`cmath`"
 
-#: ../../library/math.rst:711
+#: ../../library/math.rst:727
 msgid "Complex number versions of many of these functions."
 msgstr "Версії комплексних чисел багатьох із цих функцій."

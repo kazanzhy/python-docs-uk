@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -964,24 +964,17 @@ msgstr ""
 ":envvar:`PYTHONHOME`, або вставте додаткові каталоги перед стандартним "
 "шляхом, встановивши :envvar:`PYTHONPATH`."
 
-#: ../../c-api/intro.rst:779
+#: ../../c-api/intro.rst:778
 msgid ""
-"The embedding application can steer the search by calling "
-"``Py_SetProgramName(file)`` *before* calling  :c:func:`Py_Initialize`.  Note"
-" that :envvar:`PYTHONHOME` still overrides this and :envvar:`PYTHONPATH` is "
-"still inserted in front of the standard path.  An application that requires "
-"total control has to provide its own implementation of :c:func:`Py_GetPath`,"
-" :c:func:`Py_GetPrefix`, :c:func:`Py_GetExecPrefix`, and "
-":c:func:`Py_GetProgramFullPath` (all defined in :file:`Modules/getpath.c`)."
+"The embedding application can steer the search by setting "
+":c:member:`PyConfig.program_name` *before* calling "
+":c:func:`Py_InitializeFromConfig`. Note that :envvar:`PYTHONHOME` still "
+"overrides this and :envvar:`PYTHONPATH` is still inserted in front of the "
+"standard path.  An application that requires total control has to provide "
+"its own implementation of :c:func:`Py_GetPath`, :c:func:`Py_GetPrefix`, "
+":c:func:`Py_GetExecPrefix`, and :c:func:`Py_GetProgramFullPath` (all defined"
+" in :file:`Modules/getpath.c`)."
 msgstr ""
-"Програма для вбудовування може керувати пошуком, викликаючи "
-"``Py_SetProgramName(file)`` *перед* викликом :c:func:`Py_Initialize`. "
-"Зауважте, що :envvar:`PYTHONHOME` все ще перевизначає це, а "
-":envvar:`PYTHONPATH` все ще вставляється перед стандартним шляхом. Програма,"
-" яка потребує повного контролю, має забезпечити власну реалізацію "
-":c:func:`Py_GetPath`, :c:func:`Py_GetPrefix`, :c:func:`Py_GetExecPrefix` і "
-":c:func:`Py_GetProgramFullPath` ( все визначено в "
-":file:`Modules/getpath.c`)."
 
 #: ../../c-api/intro.rst:789
 msgid ""
@@ -1177,10 +1170,6 @@ msgstr ""
 
 #: ../../c-api/intro.rst:737
 msgid "path (in module sys)"
-msgstr ""
-
-#: ../../c-api/intro.rst:772
-msgid "Py_SetProgramName (C function)"
 msgstr ""
 
 #: ../../c-api/intro.rst:772

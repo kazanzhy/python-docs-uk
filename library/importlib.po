@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:08+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1652,7 +1652,7 @@ msgstr ""
 msgid "Multi-phase init is now required for use in subinterpreters."
 msgstr ""
 
-#: ../../library/importlib.rst:1109
+#: ../../library/importlib.rst:1109 ../../library/importlib.rst:1300
 msgid "Name of the module the loader supports."
 msgstr "Назва модуля, який підтримує завантажувач."
 
@@ -1796,15 +1796,89 @@ msgid ""
 "and how the module's :attr:`__file__` is populated."
 msgstr ""
 
-#: ../../library/importlib.rst:1245
+#: ../../library/importlib.rst:1246
+msgid ""
+"A specialization of :class:`importlib.machinery.ExtensionFileLoader` that is"
+" able to load extension modules in Framework format."
+msgstr ""
+
+#: ../../library/importlib.rst:1249
+msgid ""
+"For compatibility with the iOS App Store, *all* binary modules in an iOS app"
+" must be dynamic libraries, contained in a framework with appropriate "
+"metadata, stored in the ``Frameworks`` folder of the packaged app. There can"
+" be only a single binary per framework, and there can be no executable "
+"binary material outside the Frameworks folder."
+msgstr ""
+
+#: ../../library/importlib.rst:1255
+msgid ""
+"To accomodate this requirement, when running on iOS, extension module "
+"binaries are *not* packaged as ``.so`` files on ``sys.path``, but as "
+"individual standalone frameworks. To discover those frameworks, this loader "
+"is be registered against the ``.fwork`` file extension, with a ``.fwork`` "
+"file acting as a placeholder in the original location of the binary on "
+"``sys.path``. The ``.fwork`` file contains the path of the actual binary in "
+"the ``Frameworks`` folder, relative to the app bundle. To allow for "
+"resolving a framework-packaged binary back to the original location, the "
+"framework is expected to contain a ``.origin`` file that contains the "
+"location of the ``.fwork`` file, relative to the app bundle."
+msgstr ""
+
+#: ../../library/importlib.rst:1266
+msgid ""
+"For example, consider the case of an import ``from foo.bar import _whiz``, "
+"where ``_whiz`` is implemented with the binary module "
+"``sources/foo/bar/_whiz.abi3.so``, with ``sources`` being the location "
+"registered on ``sys.path``, relative to the application bundle. This module "
+"*must* be distributed as "
+"``Frameworks/foo.bar._whiz.framework/foo.bar._whiz`` (creating the framework"
+" name from the full import path of the module), with an ``Info.plist`` file "
+"in the ``.framework`` directory identifying the binary as a framework. The "
+"``foo.bar._whiz`` module would be represented in the original location with "
+"a ``sources/foo/bar/_whiz.abi3.fwork`` marker file, containing the path "
+"``Frameworks/foo.bar._whiz/foo.bar._whiz``. The framework would also contain"
+" ``Frameworks/foo.bar._whiz.framework/foo.bar._whiz.origin``, containing the"
+" path to the ``.fwork`` file."
+msgstr ""
+
+#: ../../library/importlib.rst:1280
+msgid ""
+"When a module is loaded with this loader, the ``__file__`` for the module "
+"will report as the location of the ``.fwork`` file. This allows code to use "
+"the ``__file__`` of a  module as an anchor for file system traveral. "
+"However, the spec origin will reference the location of the *actual* binary "
+"in the ``.framework`` folder."
+msgstr ""
+
+#: ../../library/importlib.rst:1286
+msgid ""
+"The Xcode project building the app is responsible for converting any ``.so``"
+" files from wherever they exist in the ``PYTHONPATH`` into frameworks in the"
+" ``Frameworks`` folder (including stripping extensions from the module file,"
+" the addition of framework metadata, and signing the resulting framework), "
+"and creating the ``.fwork`` and ``.origin`` files. This will usually be done"
+" with a build step in the Xcode project; see the iOS documentation for "
+"details on how to construct this build step."
+msgstr ""
+
+#: ../../library/importlib.rst:1296
+msgid ":ref:`Availability <availability>`: iOS."
+msgstr ""
+
+#: ../../library/importlib.rst:1304
+msgid "Path to the ``.fwork`` file for the extension module."
+msgstr ""
+
+#: ../../library/importlib.rst:1308
 msgid ":mod:`importlib.util` -- Utility code for importers"
 msgstr ":mod:`importlib.util` -- Код утиліти для імпортерів"
 
-#: ../../library/importlib.rst:1251
+#: ../../library/importlib.rst:1314
 msgid "**Source code:** :source:`Lib/importlib/util.py`"
 msgstr "**Вихідний код:** :source:`Lib/importlib/util.py`"
 
-#: ../../library/importlib.rst:1255
+#: ../../library/importlib.rst:1318
 msgid ""
 "This module contains the various objects that help in the construction of an"
 " :term:`importer`."
@@ -1812,7 +1886,7 @@ msgstr ""
 "Цей модуль містить різні об’єкти, які допомагають у створенні "
 ":term:`importer`."
 
-#: ../../library/importlib.rst:1260
+#: ../../library/importlib.rst:1323
 msgid ""
 "The bytes which represent the bytecode version number. If you need help with"
 " loading/writing bytecode then consider :class:`importlib.abc.SourceLoader`."
@@ -1821,7 +1895,7 @@ msgstr ""
 "із завантаженням/записом байт-коду, скористайтеся "
 ":class:`importlib.abc.SourceLoader`."
 
-#: ../../library/importlib.rst:1267
+#: ../../library/importlib.rst:1330
 msgid ""
 "Return the :pep:`3147`/:pep:`488` path to the byte-compiled file associated "
 "with the source *path*.  For example, if *path* is ``/foo/bar/baz.py`` the "
@@ -1837,7 +1911,7 @@ msgstr ""
 " :func:`get_tag`; якщо :attr:`sys.implementation.cache_tag` не визначено, "
 "тоді буде викликана :exc:`NotImplementedError`)."
 
-#: ../../library/importlib.rst:1274
+#: ../../library/importlib.rst:1337
 msgid ""
 "The *optimization* parameter is used to specify the optimization level of "
 "the bytecode file. An empty string represents no optimization, so "
@@ -1860,7 +1934,7 @@ msgstr ""
 "cpython-32.opt-2.pyc``. Рядкове представлення *оптимізації* може бути лише "
 "буквено-цифровим, інакше виникає :exc:`ValueError`."
 
-#: ../../library/importlib.rst:1284
+#: ../../library/importlib.rst:1347
 msgid ""
 "The *debug_override* parameter is deprecated and can be used to override the"
 " system's value for ``__debug__``. A ``True`` value is the equivalent of "
@@ -1874,7 +1948,7 @@ msgstr ""
 "саме, що встановити *optimization* на ``1``. Якщо *debug_override* і "
 "*оптимізація* не мають значення ``None``, тоді виникає :exc:`TypeError`."
 
-#: ../../library/importlib.rst:1292
+#: ../../library/importlib.rst:1355
 msgid ""
 "The *optimization* parameter was added and the *debug_override* parameter "
 "was deprecated."
@@ -1882,12 +1956,12 @@ msgstr ""
 "Параметр *optimization* було додано, а параметр *debug_override* визнано "
 "застарілим."
 
-#: ../../library/importlib.rst:1296 ../../library/importlib.rst:1312
-#: ../../library/importlib.rst:1401
+#: ../../library/importlib.rst:1359 ../../library/importlib.rst:1375
+#: ../../library/importlib.rst:1464
 msgid "Accepts a :term:`path-like object`."
 msgstr "Приймає :term:`path-like object`."
 
-#: ../../library/importlib.rst:1302
+#: ../../library/importlib.rst:1365
 msgid ""
 "Given the *path* to a :pep:`3147` file name, return the associated source "
 "code file path.  For example, if *path* is "
@@ -1905,7 +1979,7 @@ msgstr ""
 ":exc:`ValueError`. Якщо :attr:`sys.implementation.cache_tag` не визначено, "
 "виникає :exc:`NotImplementedError`."
 
-#: ../../library/importlib.rst:1317
+#: ../../library/importlib.rst:1380
 msgid ""
 "Decode the given bytes representing source code and return it as a string "
 "with universal newlines (as required by "
@@ -1915,11 +1989,11 @@ msgstr ""
 "рядок із універсальними символами нового рядка (як вимагає "
 ":meth:`importlib.abc.InspectLoader.get_source`)."
 
-#: ../../library/importlib.rst:1325
+#: ../../library/importlib.rst:1388
 msgid "Resolve a relative module name to an absolute one."
 msgstr "Розділіть відносну назву модуля на абсолютну."
 
-#: ../../library/importlib.rst:1327
+#: ../../library/importlib.rst:1390
 msgid ""
 "If  **name** has no leading dots, then **name** is simply returned. This "
 "allows for usage such as ``importlib.util.resolve_name('sys', "
@@ -1931,7 +2005,7 @@ msgstr ""
 "__spec__.parent)`` без виконання перевірки, щоб побачити, чи потрібен "
 "аргумент **package**."
 
-#: ../../library/importlib.rst:1332
+#: ../../library/importlib.rst:1395
 msgid ""
 ":exc:`ImportError` is raised if **name** is a relative module name but "
 "**package** is a false value (e.g. ``None`` or the empty string). "
@@ -1940,7 +2014,7 @@ msgid ""
 "package)."
 msgstr ""
 
-#: ../../library/importlib.rst:1340
+#: ../../library/importlib.rst:1403
 msgid ""
 "To improve consistency with import statements, raise :exc:`ImportError` "
 "instead of :exc:`ValueError` for invalid relative import attempts."
@@ -1949,7 +2023,7 @@ msgstr ""
 ":exc:`ImportError` замість :exc:`ValueError` для недійсних відносних спроб "
 "імпорту."
 
-#: ../../library/importlib.rst:1347
+#: ../../library/importlib.rst:1410
 msgid ""
 "Find the :term:`spec <module spec>` for a module, optionally relative to the"
 " specified **package** name. If the module is in :data:`sys.modules`, then "
@@ -1959,7 +2033,7 @@ msgid ""
 " if no spec is found."
 msgstr ""
 
-#: ../../library/importlib.rst:1354
+#: ../../library/importlib.rst:1417
 msgid ""
 "If **name** is for a submodule (contains a dot), the parent module is "
 "automatically imported."
@@ -1967,12 +2041,12 @@ msgstr ""
 "Якщо **назва** призначена для підмодуля (містить крапку), батьківський "
 "модуль імпортується автоматично."
 
-#: ../../library/importlib.rst:1357
+#: ../../library/importlib.rst:1420
 msgid "**name** and **package** work the same as for :func:`import_module`."
 msgstr ""
 "**name** і **package** працюють так само, як і для :func:`import_module`."
 
-#: ../../library/importlib.rst:1361
+#: ../../library/importlib.rst:1424
 msgid ""
 "Raises :exc:`ModuleNotFoundError` instead of :exc:`AttributeError` if "
 "**package** is in fact not a package (i.e. lacks a :attr:`__path__` "
@@ -1981,7 +2055,7 @@ msgstr ""
 "Викликає :exc:`ModuleNotFoundError` замість :exc:`AttributeError`, якщо "
 "**package** насправді не є пакетом (тобто не має атрибута :attr:`__path__`)."
 
-#: ../../library/importlib.rst:1368
+#: ../../library/importlib.rst:1431
 msgid ""
 "Create a new module based on **spec** and :meth:`spec.loader.create_module "
 "<importlib.abc.Loader.create_module>`."
@@ -1989,7 +2063,7 @@ msgstr ""
 "Створіть новий модуль на основі **spec** і :meth:`spec.loader.create_module "
 "<importlib.abc.Loader.create_module>`."
 
-#: ../../library/importlib.rst:1371
+#: ../../library/importlib.rst:1434
 msgid ""
 "If :meth:`spec.loader.create_module <importlib.abc.Loader.create_module>` "
 "does not return ``None``, then any pre-existing attributes will not be "
@@ -2002,7 +2076,7 @@ msgstr ""
 "вона буде активована під час доступу до **spec** або встановлення атрибута в"
 " модулі."
 
-#: ../../library/importlib.rst:1376
+#: ../../library/importlib.rst:1439
 msgid ""
 "This function is preferred over using :class:`types.ModuleType` to create a "
 "new module as **spec** is used to set as many import-controlled attributes "
@@ -2012,7 +2086,7 @@ msgstr ""
 "нового модуля, оскільки **spec** використовується для встановлення якомога "
 "більшої кількості керованих імпортом атрибутів для модуля."
 
-#: ../../library/importlib.rst:1384
+#: ../../library/importlib.rst:1447
 msgid ""
 "A factory function for creating a :class:`~importlib.machinery.ModuleSpec` "
 "instance based on a loader.  The parameters have the same meaning as they do"
@@ -2026,7 +2100,7 @@ msgstr ""
 "API :term:`loader`, такі як :meth:`InspectLoader.is_package`, щоб заповнити "
 "будь-яку відсутню інформацію в специфікації."
 
-#: ../../library/importlib.rst:1394
+#: ../../library/importlib.rst:1457
 msgid ""
 "A factory function for creating a :class:`~importlib.machinery.ModuleSpec` "
 "instance based on the path to a file.  Missing information will be filled in"
@@ -2038,7 +2112,7 @@ msgstr ""
 "інформацію буде заповнено в специфікації за допомогою API завантажувача та "
 "через те, що модуль буде заснований на файлі."
 
-#: ../../library/importlib.rst:1406
+#: ../../library/importlib.rst:1469
 msgid ""
 "Return the hash of *source_bytes* as bytes. A hash-based ``.pyc`` file "
 "embeds the :func:`source_hash` of the corresponding source file's contents "
@@ -2047,7 +2121,7 @@ msgstr ""
 "Повертає хеш *source_bytes* як байти. Файл ``.pyc`` на основі хешу вставляє "
 ":func:`source_hash` вмісту відповідного вихідного файлу у свій заголовок."
 
-#: ../../library/importlib.rst:1414
+#: ../../library/importlib.rst:1477
 msgid ""
 "A context manager that can temporarily skip the compatibility check for "
 "extension modules.  By default the check is enabled and will fail when a "
@@ -2056,27 +2130,27 @@ msgid ""
 "interpreter GIL, when imported in an interpreter with its own GIL."
 msgstr ""
 
-#: ../../library/importlib.rst:1421
+#: ../../library/importlib.rst:1484
 msgid ""
 "Note that this function is meant to accommodate an unusual case; one which "
 "is likely to eventually go away.  There's is a pretty good chance this is "
 "not what you were looking for."
 msgstr ""
 
-#: ../../library/importlib.rst:1425
+#: ../../library/importlib.rst:1488
 msgid ""
 "You can get the same effect as this function by implementing the basic "
 "interface of multi-phase init (:pep:`489`) and lying about support for "
 "multiple interpreters (or per-interpreter GIL)."
 msgstr ""
 
-#: ../../library/importlib.rst:1430
+#: ../../library/importlib.rst:1493
 msgid ""
 "Using this function to disable the check can lead to unexpected behavior and"
 " even crashes.  It should only be used during extension module development."
 msgstr ""
 
-#: ../../library/importlib.rst:1438
+#: ../../library/importlib.rst:1501
 msgid ""
 "A class which postpones the execution of the loader of a module until the "
 "module has an attribute accessed."
@@ -2084,7 +2158,7 @@ msgstr ""
 "Клас, який відкладає виконання завантажувача модуля, поки модуль не отримає "
 "доступ до атрибута."
 
-#: ../../library/importlib.rst:1441
+#: ../../library/importlib.rst:1504
 msgid ""
 "This class **only** works with loaders that define "
 ":meth:`~importlib.abc.Loader.exec_module` as control over what module type "
@@ -2097,7 +2171,7 @@ msgid ""
 ":exc:`ValueError` is raised if such a substitution is detected."
 msgstr ""
 
-#: ../../library/importlib.rst:1452
+#: ../../library/importlib.rst:1515
 msgid ""
 "For projects where startup time is critical, this class allows for "
 "potentially minimizing the cost of loading a module if it is never used. For"
@@ -2112,7 +2186,7 @@ msgstr ""
 "помилки, створені під час завантаження, відкладаються та, таким чином, "
 "виникають поза контекстом."
 
-#: ../../library/importlib.rst:1460
+#: ../../library/importlib.rst:1523
 msgid ""
 "Began calling :meth:`~importlib.abc.Loader.create_module`, removing the "
 "compatibility warning for :class:`importlib.machinery.BuiltinImporter` and "
@@ -2122,33 +2196,33 @@ msgstr ""
 "попередження про сумісність для :class:`importlib.machinery.BuiltinImporter`"
 " і :class:`importlib.machinery.ExtensionFileLoader`."
 
-#: ../../library/importlib.rst:1467
+#: ../../library/importlib.rst:1530
 msgid ""
 "A class method which returns a callable that creates a lazy loader. This is "
 "meant to be used in situations where the loader is passed by class instead "
 "of by instance. ::"
 msgstr ""
 
-#: ../../library/importlib.rst:1480
+#: ../../library/importlib.rst:1543
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/importlib.rst:1483
+#: ../../library/importlib.rst:1546
 msgid "Importing programmatically"
 msgstr "Програмний імпорт"
 
-#: ../../library/importlib.rst:1485
+#: ../../library/importlib.rst:1548
 msgid ""
 "To programmatically import a module, use :func:`importlib.import_module`. ::"
 msgstr ""
 "Щоб програмно імпортувати модуль, використовуйте "
 ":func:`importlib.import_module`. ::"
 
-#: ../../library/importlib.rst:1494
+#: ../../library/importlib.rst:1557
 msgid "Checking if a module can be imported"
 msgstr "Перевірка можливості імпорту модуля"
 
-#: ../../library/importlib.rst:1496
+#: ../../library/importlib.rst:1559
 msgid ""
 "If you need to find out if a module can be imported without actually doing "
 "the import, then you should use :func:`importlib.util.find_spec`."
@@ -2156,7 +2230,7 @@ msgstr ""
 "Якщо вам потрібно з’ясувати, чи можна імпортувати модуль без фактичного "
 "імпортування, тоді вам слід скористатися :func:`importlib.util.find_spec`."
 
-#: ../../library/importlib.rst:1499
+#: ../../library/importlib.rst:1562
 msgid ""
 "Note that if ``name`` is a submodule (contains a dot), "
 ":func:`importlib.util.find_spec` will import the parent module. ::"
@@ -2164,27 +2238,27 @@ msgstr ""
 "Зауважте, що якщо ``name`` є підмодулем (містить крапку), "
 ":func:`importlib.util.find_spec` імпортує батьківський модуль. ::"
 
-#: ../../library/importlib.rst:1522
+#: ../../library/importlib.rst:1585
 msgid "Importing a source file directly"
 msgstr "Пряме імпортування вихідного файлу"
 
-#: ../../library/importlib.rst:1524
+#: ../../library/importlib.rst:1587
 msgid "To import a Python source file directly, use the following recipe::"
 msgstr ""
 
-#: ../../library/importlib.rst:1541
+#: ../../library/importlib.rst:1604
 msgid "Implementing lazy imports"
 msgstr "Реалізація відкладеного імпорту"
 
-#: ../../library/importlib.rst:1543
+#: ../../library/importlib.rst:1606
 msgid "The example below shows how to implement lazy imports::"
 msgstr "У прикладі нижче показано, як реалізувати відкладений імпорт:"
 
-#: ../../library/importlib.rst:1565
+#: ../../library/importlib.rst:1628
 msgid "Setting up an importer"
 msgstr "Налаштування імпортера"
 
-#: ../../library/importlib.rst:1567
+#: ../../library/importlib.rst:1630
 msgid ""
 "For deep customizations of import, you typically want to implement an "
 ":term:`importer`. This means managing both the :term:`finder` and "
@@ -2199,11 +2273,11 @@ msgid ""
 "this package)::"
 msgstr ""
 
-#: ../../library/importlib.rst:1599
+#: ../../library/importlib.rst:1662
 msgid "Approximating :func:`importlib.import_module`"
 msgstr "Наближення :func:`importlib.import_module`"
 
-#: ../../library/importlib.rst:1601
+#: ../../library/importlib.rst:1664
 msgid ""
 "Import itself is implemented in Python code, making it possible to expose "
 "most of the import machinery through importlib. The following helps "
