@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:17+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/wave.rst:2
-msgid ":mod:`wave` --- Read and write WAV files"
-msgstr ":mod:`wave` --- Читання та запис файлів WAV"
+msgid ":mod:`!wave` --- Read and write WAV files"
+msgstr ""
 
 #: ../../library/wave.rst:10
 msgid "**Source code:** :source:`Lib/wave.py`"
@@ -100,7 +100,7 @@ msgid ""
 ":meth:`Wave_write.close()` method is called."
 msgstr ""
 
-#: ../../library/wave.rst:52 ../../library/wave.rst:176
+#: ../../library/wave.rst:52 ../../library/wave.rst:184
 msgid "Added support for unseekable files."
 msgstr "Додано підтримку файлів, які неможливо шукати."
 
@@ -181,21 +181,25 @@ msgstr "Перемотайте покажчик файлу на початок �
 
 #: ../../library/wave.rst:126
 msgid ""
-"The following two methods are defined for compatibility with the :mod:`aifc`"
-" module, and don't do anything interesting."
+"The following two methods are defined for compatibility with the old "
+":mod:`!aifc` module, and don't do anything interesting."
 msgstr ""
-"Наступні два методи визначені для сумісності з модулем :mod:`aifc` і не "
-"роблять нічого цікавого."
 
 #: ../../library/wave.rst:132
 msgid "Returns ``None``."
 msgstr "Повертає ``None``."
 
-#: ../../library/wave.rst:137
+#: ../../library/wave.rst:136 ../../library/wave.rst:145
+msgid ""
+"The method only existed for compatibility with the :mod:`!aifc` module which"
+" has been removed in Python 3.13."
+msgstr ""
+
+#: ../../library/wave.rst:141
 msgid "Raise an error."
 msgstr "Викликати помилку."
 
-#: ../../library/wave.rst:139
+#: ../../library/wave.rst:147
 msgid ""
 "The following two methods define a term \"position\" which is compatible "
 "between them, and is otherwise implementation dependent."
@@ -203,27 +207,27 @@ msgstr ""
 "Наступні два методи визначають термін \"позиція\", який є сумісним між ними,"
 " а в інших випадках залежить від реалізації."
 
-#: ../../library/wave.rst:145
+#: ../../library/wave.rst:153
 msgid "Set the file pointer to the specified position."
 msgstr "Встановити вказівник файлу у вказане положення."
 
-#: ../../library/wave.rst:150
+#: ../../library/wave.rst:158
 msgid "Return current file pointer position."
 msgstr "Повернути поточне положення покажчика файлу."
 
-#: ../../library/wave.rst:156
+#: ../../library/wave.rst:164
 msgid "Wave_write Objects"
 msgstr "Об’єкти Wave_write"
 
-#: ../../library/wave.rst:160
+#: ../../library/wave.rst:168
 msgid "Write a WAV file."
 msgstr ""
 
-#: ../../library/wave.rst:162
+#: ../../library/wave.rst:170
 msgid "Wave_write objects, as returned by :func:`.open`."
 msgstr ""
 
-#: ../../library/wave.rst:164
+#: ../../library/wave.rst:172
 msgid ""
 "For seekable output streams, the ``wave`` header will automatically be "
 "updated to reflect the number of frames actually written.  For unseekable "
@@ -237,11 +241,11 @@ msgid ""
 "and set *nframes* accordingly before writing the frame data."
 msgstr ""
 
-#: ../../library/wave.rst:179
+#: ../../library/wave.rst:187
 msgid "Wave_write objects have the following methods:"
 msgstr ""
 
-#: ../../library/wave.rst:183
+#: ../../library/wave.rst:191
 msgid ""
 "Make sure *nframes* is correct, and close the file if it was opened by "
 ":mod:`wave`.  This method is called upon object collection.  It will raise "
@@ -253,24 +257,24 @@ msgstr ""
 "якщо вихідний потік не доступний для пошуку та *nframes* не відповідає "
 "кількості фактично записаних кадрів."
 
-#: ../../library/wave.rst:191
+#: ../../library/wave.rst:199
 msgid "Set the number of channels."
 msgstr "Встановіть кількість каналів."
 
-#: ../../library/wave.rst:196
+#: ../../library/wave.rst:204
 msgid "Set the sample width to *n* bytes."
 msgstr "Встановіть ширину вибірки на *n* байтів."
 
-#: ../../library/wave.rst:201
+#: ../../library/wave.rst:209
 msgid "Set the frame rate to *n*."
 msgstr "Встановіть частоту кадрів на *n*."
 
-#: ../../library/wave.rst:203
+#: ../../library/wave.rst:211
 msgid "A non-integral input to this method is rounded to the nearest integer."
 msgstr ""
 "Неінтегральний вхід у цей метод округлюється до найближчого цілого числа."
 
-#: ../../library/wave.rst:210
+#: ../../library/wave.rst:218
 msgid ""
 "Set the number of frames to *n*.  This will be changed later if the number "
 "of frames actually written is different (this update attempt will raise an "
@@ -280,7 +284,7 @@ msgstr ""
 "записана кількість кадрів буде іншою (ця спроба оновлення викличе помилку, "
 "якщо вихідний потік не доступний для пошуку)."
 
-#: ../../library/wave.rst:217
+#: ../../library/wave.rst:225
 msgid ""
 "Set the compression type and description. At the moment, only compression "
 "type ``NONE`` is supported, meaning no compression."
@@ -288,14 +292,14 @@ msgstr ""
 "Встановіть тип стиснення та опис. На даний момент підтримується лише тип "
 "стиснення ``NONE``, що означає відсутність стиснення."
 
-#: ../../library/wave.rst:223
+#: ../../library/wave.rst:231
 msgid ""
 "The *tuple* should be ``(nchannels, sampwidth, framerate, nframes, comptype,"
 " compname)``, with values valid for the ``set*()`` methods.  Sets all "
 "parameters."
 msgstr ""
 
-#: ../../library/wave.rst:230
+#: ../../library/wave.rst:238
 msgid ""
 "Return current position in the file, with the same disclaimer for the "
 ":meth:`Wave_read.tell` and :meth:`Wave_read.setpos` methods."
@@ -303,15 +307,15 @@ msgstr ""
 "Повертає поточну позицію у файлі з тим самим застереженням для методів "
 ":meth:`Wave_read.tell` і :meth:`Wave_read.setpos`."
 
-#: ../../library/wave.rst:236
+#: ../../library/wave.rst:244
 msgid "Write audio frames, without correcting *nframes*."
 msgstr "Записуйте аудіокадри, не виправляючи *nframes*."
 
-#: ../../library/wave.rst:238 ../../library/wave.rst:249
+#: ../../library/wave.rst:246 ../../library/wave.rst:257
 msgid "Any :term:`bytes-like object` is now accepted."
 msgstr "Тепер приймається будь-який :term:`bytes-like object`."
 
-#: ../../library/wave.rst:244
+#: ../../library/wave.rst:252
 msgid ""
 "Write audio frames and make sure *nframes* is correct.  It will raise an "
 "error if the output stream is not seekable and the total number of frames "
@@ -323,7 +327,7 @@ msgstr ""
 "кадрів, які були записані після запису *data*, не збігається з попередньо "
 "встановленим значенням для *nframes*."
 
-#: ../../library/wave.rst:252
+#: ../../library/wave.rst:260
 msgid ""
 "Note that it is invalid to set any parameters after calling "
 ":meth:`writeframes` or :meth:`writeframesraw`, and any attempt to do so will"

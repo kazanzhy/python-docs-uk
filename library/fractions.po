@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/fractions.rst:2
-msgid ":mod:`fractions` --- Rational numbers"
-msgstr ":mod:`fractions` --- Раціональні числа"
+msgid ":mod:`!fractions` --- Rational numbers"
+msgstr ""
 
 #: ../../library/fractions.rst:10
 msgid "**Source code:** :source:`Lib/fractions.py`"
@@ -123,25 +123,31 @@ msgid ""
 "``\"G\"`` and ``\"%\"\"``."
 msgstr ""
 
-#: ../../library/fractions.rst:111
+#: ../../library/fractions.rst:109
+msgid ""
+"Formatting of :class:`Fraction` instances without a presentation type now "
+"supports fill, alignment, sign handling, minimum width and grouping."
+msgstr ""
+
+#: ../../library/fractions.rst:115
 msgid "Numerator of the Fraction in lowest term."
 msgstr "Чисельник дробу в молодшому члені."
 
-#: ../../library/fractions.rst:115
+#: ../../library/fractions.rst:119
 msgid "Denominator of the Fraction in lowest term."
 msgstr "Знаменник дробу в найменшому члені."
 
-#: ../../library/fractions.rst:120
+#: ../../library/fractions.rst:124
 msgid ""
 "Return a tuple of two integers, whose ratio is equal to the original "
 "Fraction.  The ratio is in lowest terms and has a positive denominator."
 msgstr ""
 
-#: ../../library/fractions.rst:128
+#: ../../library/fractions.rst:132
 msgid "Return ``True`` if the Fraction is an integer."
 msgstr ""
 
-#: ../../library/fractions.rst:134
+#: ../../library/fractions.rst:138
 msgid ""
 "Alternative constructor which only accepts instances of :class:`float` or "
 ":class:`numbers.Integral`. Beware that ``Fraction.from_float(0.3)`` is not "
@@ -151,7 +157,7 @@ msgstr ""
 ":class:`numbers.Integral`. Майте на увазі, що ``Fraction.from_float(0.3)`` "
 "не є тим самим значенням ``Fraction(3, 10)``."
 
-#: ../../library/fractions.rst:140
+#: ../../library/fractions.rst:144
 msgid ""
 "From Python 3.2 onwards, you can also construct a :class:`Fraction` instance"
 " directly from a :class:`float`."
@@ -159,7 +165,7 @@ msgstr ""
 "Починаючи з Python 3.2 і далі, ви також можете створити екземпляр "
 ":class:`Fraction` безпосередньо з :class:`float`."
 
-#: ../../library/fractions.rst:146
+#: ../../library/fractions.rst:150
 msgid ""
 "Alternative constructor which only accepts instances of "
 ":class:`decimal.Decimal` or :class:`numbers.Integral`."
@@ -167,7 +173,7 @@ msgstr ""
 "Альтернативний конструктор, який приймає лише екземпляри "
 ":class:`decimal.Decimal` або :class:`numbers.Integral`."
 
-#: ../../library/fractions.rst:151
+#: ../../library/fractions.rst:155
 msgid ""
 "From Python 3.2 onwards, you can also construct a :class:`Fraction` instance"
 " directly from a :class:`decimal.Decimal` instance."
@@ -175,7 +181,7 @@ msgstr ""
 "Починаючи з Python 3.2 і далі, ви також можете створити екземпляр "
 ":class:`Fraction` безпосередньо з екземпляра :class:`decimal.Decimal`."
 
-#: ../../library/fractions.rst:158
+#: ../../library/fractions.rst:162
 msgid ""
 "Finds and returns the closest :class:`Fraction` to ``self`` that has "
 "denominator at most max_denominator.  This method is useful for finding "
@@ -185,13 +191,13 @@ msgstr ""
 "знаменник не більше max_denominator. Цей метод корисний для знаходження "
 "раціональних наближень до даного числа з плаваючою комою:"
 
-#: ../../library/fractions.rst:166
+#: ../../library/fractions.rst:170
 msgid "or for recovering a rational number that's represented as a float:"
 msgstr ""
 "або для відновлення раціонального числа, представленого як число з плаваючою"
 " точкою:"
 
-#: ../../library/fractions.rst:179
+#: ../../library/fractions.rst:183
 msgid ""
 "Returns the greatest :class:`int` ``<= self``.  This method can also be "
 "accessed through the :func:`math.floor` function:"
@@ -199,7 +205,7 @@ msgstr ""
 "Повертає найбільше :class:`int` ``<= self``. Цей метод також можна отримати "
 "через функцію :func:`math.floor`:"
 
-#: ../../library/fractions.rst:189
+#: ../../library/fractions.rst:193
 msgid ""
 "Returns the least :class:`int` ``>= self``.  This method can also be "
 "accessed through the :func:`math.ceil` function."
@@ -207,7 +213,7 @@ msgstr ""
 "Повертає найменше :class:`int` ``>= self``. Цей метод також можна отримати "
 "через функцію :func:`math.ceil`."
 
-#: ../../library/fractions.rst:196
+#: ../../library/fractions.rst:200
 msgid ""
 "The first version returns the nearest :class:`int` to ``self``, rounding "
 "half to even. The second version rounds ``self`` to the nearest multiple of "
@@ -221,25 +227,41 @@ msgstr ""
 "округлюючи половину до парного. Цей метод також можна отримати через функцію"
 " :func:`round`."
 
-#: ../../library/fractions.rst:204
+#: ../../library/fractions.rst:208
 msgid ""
-"Provides support for float-style formatting of :class:`Fraction` instances "
-"via the :meth:`str.format` method, the :func:`format` built-in function, or "
-":ref:`Formatted string literals <f-strings>`. The presentation types "
-"``\"e\"``, ``\"E\"``, ``\"f\"``, ``\"F\"``, ``\"g\"``, ``\"G\"`` and "
-"``\"%\"`` are supported. For these presentation types, formatting for a "
-":class:`Fraction` object ``x`` follows the rules outlined for the "
-":class:`float` type in the :ref:`formatspec` section."
+"Provides support for formatting of :class:`Fraction` instances via the "
+":meth:`str.format` method, the :func:`format` built-in function, or "
+":ref:`Formatted string literals <f-strings>`."
 msgstr ""
 
 #: ../../library/fractions.rst:212
+msgid ""
+"If the ``format_spec`` format specification string does not end with one of "
+"the presentation types ``'e'``, ``'E'``, ``'f'``, ``'F'``, ``'g'``, ``'G'`` "
+"or ``'%'`` then formatting follows the general rules for fill, alignment, "
+"sign handling, minimum width, and grouping as described in the :ref:`format "
+"specification mini-language <formatspec>`. The \"alternate form\" flag "
+"``'#'`` is supported: if present, it forces the output string to always "
+"include an explicit denominator, even when the value being formatted is an "
+"exact integer. The zero-fill flag ``'0'`` is not supported."
+msgstr ""
+
+#: ../../library/fractions.rst:222
+msgid ""
+"If the ``format_spec`` format specification string ends with one of the "
+"presentation types ``'e'``, ``'E'``, ``'f'``, ``'F'``, ``'g'``, ``'G'`` or "
+"``'%'`` then formatting follows the rules outlined for the :class:`float` "
+"type in the :ref:`formatspec` section."
+msgstr ""
+
+#: ../../library/fractions.rst:227
 msgid "Here are some examples::"
 msgstr "Ось кілька прикладів:"
 
-#: ../../library/fractions.rst:228
+#: ../../library/fractions.rst:251
 msgid "Module :mod:`numbers`"
 msgstr "Модуль :mod:`numbers`"
 
-#: ../../library/fractions.rst:229
+#: ../../library/fractions.rst:252
 msgid "The abstract base classes making up the numeric tower."
 msgstr "Абстрактні базові класи, що утворюють числову вежу."

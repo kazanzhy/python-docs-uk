@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/lzma.rst:2
-msgid ":mod:`lzma` --- Compression using the LZMA algorithm"
-msgstr ":mod:`lzma` --- Стиснення за допомогою алгоритму LZMA"
+msgid ":mod:`!lzma` --- Compression using the LZMA algorithm"
+msgstr ""
 
 #: ../../library/lzma.rst:12
 msgid "**Source code:** :source:`Lib/lzma.py`"
@@ -140,7 +140,7 @@ msgstr ""
 msgid "Added support for the ``\"x\"``, ``\"xb\"`` and ``\"xt\"`` modes."
 msgstr "Додано підтримку режимів ``\"x\"``, ``\"xb\"`` і ``\"xt\"``."
 
-#: ../../library/lzma.rst:68 ../../library/lzma.rst:127
+#: ../../library/lzma.rst:68 ../../library/lzma.rst:141
 msgid "Accepts a :term:`path-like object`."
 msgstr "Приймає :term:`path-like object`."
 
@@ -204,8 +204,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/lzma.rst:107
-msgid "The following method is also provided:"
-msgstr "Також передбачено наступний спосіб:"
+msgid "The following method and attributes are also provided:"
+msgstr ""
 
 #: ../../library/lzma.rst:111
 msgid ""
@@ -229,22 +229,32 @@ msgstr ""
 ":class:`LZMAFile` було створено шляхом передачі файлового об’єкта для *ім'я "
 "файлу*)."
 
-#: ../../library/lzma.rst:120
+#: ../../library/lzma.rst:122
+msgid "``'rb'`` for reading and ``'wb'`` for writing."
+msgstr ""
+
+#: ../../library/lzma.rst:128
+msgid ""
+"The lzma file name.  Equivalent to the :attr:`~io.FileIO.name` attribute of "
+"the underlying :term:`file object`."
+msgstr ""
+
+#: ../../library/lzma.rst:134
 msgid "Added support for the ``\"x\"`` and ``\"xb\"`` modes."
 msgstr "Додано підтримку режимів ``\"x\"`` і ``\"xb\"``."
 
-#: ../../library/lzma.rst:123
+#: ../../library/lzma.rst:137
 msgid ""
 "The :meth:`~io.BufferedIOBase.read` method now accepts an argument of "
 "``None``."
 msgstr ""
 "Метод :meth:`~io.BufferedIOBase.read` тепер приймає аргумент ``None``."
 
-#: ../../library/lzma.rst:132
+#: ../../library/lzma.rst:146
 msgid "Compressing and decompressing data in memory"
 msgstr "Стиснення та розпакування даних у пам'яті"
 
-#: ../../library/lzma.rst:136
+#: ../../library/lzma.rst:150
 msgid ""
 "Create a compressor object, which can be used to compress data "
 "incrementally."
@@ -252,7 +262,7 @@ msgstr ""
 "Створіть об’єкт компресора, який можна використовувати для поступового "
 "стиснення даних."
 
-#: ../../library/lzma.rst:138
+#: ../../library/lzma.rst:152
 msgid ""
 "For a more convenient way of compressing a single chunk of data, see "
 ":func:`compress`."
@@ -260,7 +270,7 @@ msgstr ""
 "Для більш зручного способу стиснення окремої частини даних див. "
 ":func:`compress`."
 
-#: ../../library/lzma.rst:141
+#: ../../library/lzma.rst:155
 msgid ""
 "The *format* argument specifies what container format should be used. "
 "Possible values are:"
@@ -268,19 +278,19 @@ msgstr ""
 "Аргумент *format* визначає, який формат контейнера слід використовувати. "
 "Можливі значення:"
 
-#: ../../library/lzma.rst:144
+#: ../../library/lzma.rst:158
 msgid ":const:`FORMAT_XZ`: The ``.xz`` container format."
 msgstr ":const:`FORMAT_XZ`: Формат контейнера ``.xz``."
 
-#: ../../library/lzma.rst:145
+#: ../../library/lzma.rst:159
 msgid "This is the default format."
 msgstr "Це стандартний формат."
 
-#: ../../library/lzma.rst:147
+#: ../../library/lzma.rst:161
 msgid ":const:`FORMAT_ALONE`: The legacy ``.lzma`` container format."
 msgstr ":const:`FORMAT_ALONE`: Застарілий формат контейнера ``.lzma``."
 
-#: ../../library/lzma.rst:148
+#: ../../library/lzma.rst:162
 msgid ""
 "This format is more limited than ``.xz`` -- it does not support integrity "
 "checks or multiple filters."
@@ -288,14 +298,14 @@ msgstr ""
 "Цей формат є більш обмеженим, ніж ``.xz`` - він не підтримує перевірку "
 "цілісності або кілька фільтрів."
 
-#: ../../library/lzma.rst:151
+#: ../../library/lzma.rst:165
 msgid ""
 ":const:`FORMAT_RAW`: A raw data stream, not using any container format."
 msgstr ""
 ":const:`FORMAT_RAW`: Потік необроблених даних без використання формату "
 "контейнера."
 
-#: ../../library/lzma.rst:152
+#: ../../library/lzma.rst:166
 msgid ""
 "This format specifier does not support integrity checks, and requires that "
 "you always specify a custom filter chain (for both compression and "
@@ -308,7 +318,7 @@ msgstr ""
 "розпакувати за допомогою :const:`FORMAT_AUTO` (див. "
 ":class:`LZMADecompressor`)."
 
-#: ../../library/lzma.rst:157
+#: ../../library/lzma.rst:171
 msgid ""
 "The *check* argument specifies the type of integrity check to include in the"
 " compressed data. This check is used when decompressing, to ensure that the "
@@ -318,7 +328,7 @@ msgstr ""
 "стиснутих даних. Ця перевірка використовується під час розпакування, щоб "
 "переконатися, що дані не пошкоджено. Можливі значення:"
 
-#: ../../library/lzma.rst:161
+#: ../../library/lzma.rst:175
 msgid ""
 ":const:`CHECK_NONE`: No integrity check. This is the default (and the only "
 "acceptable value) for :const:`FORMAT_ALONE` and :const:`FORMAT_RAW`."
@@ -326,11 +336,11 @@ msgstr ""
 ":const:`CHECK_NONE`: Без перевірки цілісності. Це стандартне (і єдине "
 "прийнятне значення) для :const:`FORMAT_ALONE` і :const:`FORMAT_RAW`."
 
-#: ../../library/lzma.rst:165
+#: ../../library/lzma.rst:179
 msgid ":const:`CHECK_CRC32`: 32-bit Cyclic Redundancy Check."
 msgstr ":const:`CHECK_CRC32`: 32-розрядна циклічна перевірка надмірності."
 
-#: ../../library/lzma.rst:167
+#: ../../library/lzma.rst:181
 msgid ""
 ":const:`CHECK_CRC64`: 64-bit Cyclic Redundancy Check. This is the default "
 "for :const:`FORMAT_XZ`."
@@ -338,17 +348,17 @@ msgstr ""
 ":const:`CHECK_CRC64`: 64-бітна циклічна перевірка надмірності. Це типове "
 "значення для :const:`FORMAT_XZ`."
 
-#: ../../library/lzma.rst:170
+#: ../../library/lzma.rst:184
 msgid ":const:`CHECK_SHA256`: 256-bit Secure Hash Algorithm."
 msgstr ":const:`CHECK_SHA256`: 256-бітний безпечний алгоритм хешування."
 
-#: ../../library/lzma.rst:172
+#: ../../library/lzma.rst:186
 msgid ""
 "If the specified check is not supported, an :class:`LZMAError` is raised."
 msgstr ""
 "Якщо зазначена перевірка не підтримується, виникає :class:`LZMAError`."
 
-#: ../../library/lzma.rst:174
+#: ../../library/lzma.rst:188
 msgid ""
 "The compression settings can be specified either as a preset compression "
 "level (with the *preset* argument), or in detail as a custom filter chain "
@@ -358,7 +368,7 @@ msgstr ""
 "стиснення (за допомогою аргументу *preset*), або детально як спеціальний "
 "ланцюжок фільтрів (за допомогою аргументу *filters*)."
 
-#: ../../library/lzma.rst:178
+#: ../../library/lzma.rst:192
 msgid ""
 "The *preset* argument (if provided) should be an integer between ``0`` and "
 "``9`` (inclusive), optionally OR-ed with the constant "
@@ -374,7 +384,7 @@ msgstr ""
 "попереднього налаштування ``6``). Більш високі налаштування дають менший "
 "вихід, але сповільнюють процес стиснення."
 
-#: ../../library/lzma.rst:187
+#: ../../library/lzma.rst:201
 msgid ""
 "In addition to being more CPU-intensive, compression with higher presets "
 "also requires much more memory (and produces output that needs more memory "
@@ -389,7 +399,7 @@ msgstr ""
 " можуть сягати 800 МіБ. З цієї причини, як правило, краще дотримуватися "
 "попереднього налаштування за замовчуванням."
 
-#: ../../library/lzma.rst:193
+#: ../../library/lzma.rst:207
 msgid ""
 "The *filters* argument (if provided) should be a filter chain specifier. See"
 " :ref:`filter-chain-specs` for details."
@@ -397,7 +407,7 @@ msgstr ""
 "Аргумент *filters* (якщо надається) має бути специфікатором ланцюжка "
 "фільтрів. Дивіться :ref:`filter-chain-specs` для деталей."
 
-#: ../../library/lzma.rst:198
+#: ../../library/lzma.rst:212
 msgid ""
 "Compress *data* (a :class:`bytes` object), returning a :class:`bytes` object"
 " containing compressed data for at least part of the input. Some of *data* "
@@ -411,7 +421,7 @@ msgstr ""
 ":meth:`compress` і :meth:`flush`. Повернуті дані мають бути об’єднані з "
 "результатами будь-яких попередніх викликів :meth:`compress`."
 
-#: ../../library/lzma.rst:206
+#: ../../library/lzma.rst:220
 msgid ""
 "Finish the compression process, returning a :class:`bytes` object containing"
 " any data stored in the compressor's internal buffers."
@@ -419,11 +429,11 @@ msgstr ""
 "Завершіть процес стиснення, повернувши об’єкт :class:`bytes`, що містить "
 "будь-які дані, що зберігаються у внутрішніх буферах компресора."
 
-#: ../../library/lzma.rst:209
+#: ../../library/lzma.rst:223
 msgid "The compressor cannot be used after this method has been called."
 msgstr "Компресор не можна використовувати після виклику цього методу."
 
-#: ../../library/lzma.rst:214
+#: ../../library/lzma.rst:228
 msgid ""
 "Create a decompressor object, which can be used to decompress data "
 "incrementally."
@@ -431,7 +441,7 @@ msgstr ""
 "Створіть об’єкт декомпресії, який можна використовувати для поступового "
 "розпакування даних."
 
-#: ../../library/lzma.rst:217
+#: ../../library/lzma.rst:231
 msgid ""
 "For a more convenient way of decompressing an entire compressed stream at "
 "once, see :func:`decompress`."
@@ -439,7 +449,7 @@ msgstr ""
 "Для більш зручного способу розпакування всього стисненого потоку одночасно "
 "див. :func:`decompress`."
 
-#: ../../library/lzma.rst:220
+#: ../../library/lzma.rst:234
 msgid ""
 "The *format* argument specifies the container format that should be used. "
 "The default is :const:`FORMAT_AUTO`, which can decompress both ``.xz`` and "
@@ -451,7 +461,7 @@ msgstr ""
 "і ``.lzma``. Інші можливі значення: :const:`FORMAT_XZ`, "
 ":const:`FORMAT_ALONE` і :const:`FORMAT_RAW`."
 
-#: ../../library/lzma.rst:225
+#: ../../library/lzma.rst:239
 msgid ""
 "The *memlimit* argument specifies a limit (in bytes) on the amount of memory"
 " that the decompressor can use. When this argument is used, decompression "
@@ -463,7 +473,7 @@ msgstr ""
 "декомпресія буде невдалою з :class:`LZMAError`, якщо неможливо розпакувати "
 "вхідні дані в межах заданого ліміту пам’яті."
 
-#: ../../library/lzma.rst:230
+#: ../../library/lzma.rst:244
 msgid ""
 "The *filters* argument specifies the filter chain that was used to create "
 "the stream being decompressed. This argument is required if *format* is "
@@ -476,7 +486,7 @@ msgstr ""
 "для інших форматів. Перегляньте :ref:`filter-chain-specs` для отримання "
 "додаткової інформації про ланцюги фільтрів."
 
-#: ../../library/lzma.rst:236
+#: ../../library/lzma.rst:250
 msgid ""
 "This class does not transparently handle inputs containing multiple "
 "compressed streams, unlike :func:`decompress` and :class:`LZMAFile`. To "
@@ -488,7 +498,7 @@ msgstr ""
 "розпакувати багатопотоковий вхід за допомогою :class:`LZMADecompressor`, ви "
 "повинні створити новий розпаковувач для кожного потоку."
 
-#: ../../library/lzma.rst:243
+#: ../../library/lzma.rst:257
 msgid ""
 "Decompress *data* (a :term:`bytes-like object`), returning uncompressed data"
 " as bytes. Some of *data* may be buffered internally, for use in later calls"
@@ -501,7 +511,7 @@ msgstr ""
 "мають бути об’єднані з результатами будь-яких попередніх викликів "
 ":meth:`decompress`."
 
-#: ../../library/lzma.rst:249
+#: ../../library/lzma.rst:263
 msgid ""
 "If *max_length* is nonnegative, returns at most *max_length* bytes of "
 "decompressed data. If this limit is reached and further output can be "
@@ -515,7 +525,7 @@ msgstr ""
 " випадку наступний виклик :meth:`~.decompress` може надати *data* як "
 "``b''``, щоб отримати більше вихідних даних."
 
-#: ../../library/lzma.rst:256
+#: ../../library/lzma.rst:270
 msgid ""
 "If all of the input data was decompressed and returned (either because this "
 "was less than *max_length* bytes, or because *max_length* was negative), the"
@@ -526,18 +536,18 @@ msgstr ""
 "від’ємним), для атрибута :attr:`~.needs_input` буде встановлено значення "
 "``True`` ."
 
-#: ../../library/lzma.rst:261
+#: ../../library/lzma.rst:275
 msgid ""
 "Attempting to decompress data after the end of stream is reached raises an "
 ":exc:`EOFError`.  Any data found after the end of the stream is ignored and "
 "saved in the :attr:`~.unused_data` attribute."
 msgstr ""
 
-#: ../../library/lzma.rst:265
+#: ../../library/lzma.rst:279
 msgid "Added the *max_length* parameter."
 msgstr "Додано параметр *max_length*."
 
-#: ../../library/lzma.rst:270
+#: ../../library/lzma.rst:284
 msgid ""
 "The ID of the integrity check used by the input stream. This may be "
 ":const:`CHECK_UNKNOWN` until enough of the input has been decoded to "
@@ -547,19 +557,19 @@ msgstr ""
 "Це може бути :const:`CHECK_UNKNOWN`, поки не буде декодовано достатньо "
 "вхідних даних, щоб визначити, яку перевірку цілісності він використовує."
 
-#: ../../library/lzma.rst:276
+#: ../../library/lzma.rst:290
 msgid "``True`` if the end-of-stream marker has been reached."
 msgstr "``True``, якщо досягнуто маркера кінця потоку."
 
-#: ../../library/lzma.rst:280
+#: ../../library/lzma.rst:294
 msgid "Data found after the end of the compressed stream."
 msgstr "Дані знайдено після закінчення стисненого потоку."
 
-#: ../../library/lzma.rst:282
+#: ../../library/lzma.rst:296
 msgid "Before the end of the stream is reached, this will be ``b\"\"``."
 msgstr "До кінця потоку це буде ``b\"\"``."
 
-#: ../../library/lzma.rst:286
+#: ../../library/lzma.rst:300
 msgid ""
 "``False`` if the :meth:`.decompress` method can provide more decompressed "
 "data before requiring new uncompressed input."
@@ -567,7 +577,7 @@ msgstr ""
 "``False``, якщо метод :meth:`.decompress` може надати більше розпакованих "
 "даних перед запитом нового нестисненого введення."
 
-#: ../../library/lzma.rst:293
+#: ../../library/lzma.rst:307
 msgid ""
 "Compress *data* (a :class:`bytes` object), returning the compressed data as "
 "a :class:`bytes` object."
@@ -575,7 +585,7 @@ msgstr ""
 "Стискати *data* (об’єкт :class:`bytes`), повертаючи стислі дані як об’єкт "
 ":class:`bytes`."
 
-#: ../../library/lzma.rst:296
+#: ../../library/lzma.rst:310
 msgid ""
 "See :class:`LZMACompressor` above for a description of the *format*, "
 "*check*, *preset* and *filters* arguments."
@@ -583,7 +593,7 @@ msgstr ""
 "Перегляньте :class:`LZMACompressor` вище для опису аргументів *format*, "
 "*check*, *preset* і *filters*."
 
-#: ../../library/lzma.rst:302
+#: ../../library/lzma.rst:316
 msgid ""
 "Decompress *data* (a :class:`bytes` object), returning the uncompressed data"
 " as a :class:`bytes` object."
@@ -591,7 +601,7 @@ msgstr ""
 "Розархівуйте *data* (об’єкт :class:`bytes`), повертаючи нестиснуті дані як "
 "об’єкт :class:`bytes`."
 
-#: ../../library/lzma.rst:305
+#: ../../library/lzma.rst:319
 msgid ""
 "If *data* is the concatenation of multiple distinct compressed streams, "
 "decompress all of these streams, and return the concatenation of the "
@@ -600,7 +610,7 @@ msgstr ""
 "Якщо *data* є конкатенацією кількох окремих стиснутих потоків, розпакуйте "
 "всі ці потоки та поверніть конкатенацію результатів."
 
-#: ../../library/lzma.rst:308
+#: ../../library/lzma.rst:322
 msgid ""
 "See :class:`LZMADecompressor` above for a description of the *format*, "
 "*memlimit* and *filters* arguments."
@@ -608,17 +618,17 @@ msgstr ""
 "Перегляньте :class:`LZMADecompressor` вище для опису аргументів *format*, "
 "*memlimit* і *filters*."
 
-#: ../../library/lzma.rst:313
+#: ../../library/lzma.rst:327
 msgid "Miscellaneous"
 msgstr "Різне"
 
-#: ../../library/lzma.rst:317
+#: ../../library/lzma.rst:331
 msgid ""
 "Return ``True`` if the given integrity check is supported on this system."
 msgstr ""
 "Повертає ``True``, якщо ця перевірка цілісності підтримується цією системою."
 
-#: ../../library/lzma.rst:319
+#: ../../library/lzma.rst:333
 msgid ""
 ":const:`CHECK_NONE` and :const:`CHECK_CRC32` are always supported. "
 ":const:`CHECK_CRC64` and :const:`CHECK_SHA256` may be unavailable if you are"
@@ -630,11 +640,11 @@ msgstr ""
 " використовуєте версію :program:`liblzma`, яка була скомпільована з "
 "обмеженим набором функцій."
 
-#: ../../library/lzma.rst:328
+#: ../../library/lzma.rst:342
 msgid "Specifying custom filter chains"
 msgstr "Визначення власних ланцюжків фільтрів"
 
-#: ../../library/lzma.rst:330
+#: ../../library/lzma.rst:344
 msgid ""
 "A filter chain specifier is a sequence of dictionaries, where each "
 "dictionary contains the ID and options for a single filter. Each dictionary "
@@ -646,15 +656,15 @@ msgstr ""
 "має містити ключ ``\"id\"`` і може містити додаткові ключі для визначення "
 "залежних від фільтрів параметрів. Дійсні ідентифікатори фільтрів:"
 
-#: ../../library/lzma.rst:335
+#: ../../library/lzma.rst:349
 msgid "Compression filters:"
 msgstr "Компресійні фільтри:"
 
-#: ../../library/lzma.rst:337
+#: ../../library/lzma.rst:351
 msgid ":const:`FILTER_LZMA1` (for use with :const:`FORMAT_ALONE`)"
 msgstr ":const:`FILTER_LZMA1` (для використання з :const:`FORMAT_ALONE`)"
 
-#: ../../library/lzma.rst:338
+#: ../../library/lzma.rst:352
 msgid ""
 ":const:`FILTER_LZMA2` (for use with :const:`FORMAT_XZ` and "
 ":const:`FORMAT_RAW`)"
@@ -662,43 +672,43 @@ msgstr ""
 ":const:`FILTER_LZMA2` (для використання з :const:`FORMAT_XZ` і "
 ":const:`FORMAT_RAW`)"
 
-#: ../../library/lzma.rst:340
+#: ../../library/lzma.rst:354
 msgid "Delta filter:"
 msgstr "Дельта-фільтр:"
 
-#: ../../library/lzma.rst:342
+#: ../../library/lzma.rst:356
 msgid ":const:`FILTER_DELTA`"
 msgstr ":const:`FILTER_DELTA`"
 
-#: ../../library/lzma.rst:344
+#: ../../library/lzma.rst:358
 msgid "Branch-Call-Jump (BCJ) filters:"
 msgstr "Фільтри Branch-Call-Jump (BCJ):"
 
-#: ../../library/lzma.rst:346
+#: ../../library/lzma.rst:360
 msgid ":const:`FILTER_X86`"
 msgstr ":const:`FILTER_X86`"
 
-#: ../../library/lzma.rst:347
+#: ../../library/lzma.rst:361
 msgid ":const:`FILTER_IA64`"
 msgstr ":const:`FILTER_IA64`"
 
-#: ../../library/lzma.rst:348
+#: ../../library/lzma.rst:362
 msgid ":const:`FILTER_ARM`"
 msgstr ":const:`FILTER_ARM`"
 
-#: ../../library/lzma.rst:349
+#: ../../library/lzma.rst:363
 msgid ":const:`FILTER_ARMTHUMB`"
 msgstr ":const:`FILTER_ARMTHUMB`"
 
-#: ../../library/lzma.rst:350
+#: ../../library/lzma.rst:364
 msgid ":const:`FILTER_POWERPC`"
 msgstr ":const:`FILTER_POWERPC`"
 
-#: ../../library/lzma.rst:351
+#: ../../library/lzma.rst:365
 msgid ":const:`FILTER_SPARC`"
 msgstr ":const:`FILTER_SPARC`"
 
-#: ../../library/lzma.rst:353
+#: ../../library/lzma.rst:367
 msgid ""
 "A filter chain can consist of up to 4 filters, and cannot be empty. The last"
 " filter in the chain must be a compression filter, and any other filters "
@@ -708,7 +718,7 @@ msgstr ""
 "Останній фільтр у ланцюжку має бути фільтром стиснення, а будь-які інші "
 "фільтри мають бути фільтрами дельта або BCJ."
 
-#: ../../library/lzma.rst:357
+#: ../../library/lzma.rst:371
 msgid ""
 "Compression filters support the following options (specified as additional "
 "entries in the dictionary representing the filter):"
@@ -716,7 +726,7 @@ msgstr ""
 "Фільтри стиснення підтримують такі параметри (зазначені як додаткові записи "
 "в словнику, що представляє фільтр):"
 
-#: ../../library/lzma.rst:360
+#: ../../library/lzma.rst:374
 msgid ""
 "``preset``: A compression preset to use as a source of default values for "
 "options that are not specified explicitly."
@@ -725,7 +735,7 @@ msgstr ""
 "використовується як джерело значень за замовчуванням для параметрів, які не "
 "вказані явно."
 
-#: ../../library/lzma.rst:362
+#: ../../library/lzma.rst:376
 msgid ""
 "``dict_size``: Dictionary size in bytes. This should be between 4 KiB and "
 "1.5 GiB (inclusive)."
@@ -733,11 +743,11 @@ msgstr ""
 "``dict_size``: розмір словника в байтах. Це має бути від 4 КіБ до 1,5 ГіБ "
 "(включно)."
 
-#: ../../library/lzma.rst:364
+#: ../../library/lzma.rst:378
 msgid "``lc``: Number of literal context bits."
 msgstr "``lc``: кількість літеральних бітів контексту."
 
-#: ../../library/lzma.rst:365
+#: ../../library/lzma.rst:379
 msgid ""
 "``lp``: Number of literal position bits. The sum ``lc + lp`` must be at most"
 " 4."
@@ -745,15 +755,15 @@ msgstr ""
 "``lp``: кількість літеральних бітів позиції. Сума \"lc + lp\" має бути не "
 "більше 4."
 
-#: ../../library/lzma.rst:367
+#: ../../library/lzma.rst:381
 msgid "``pb``: Number of position bits; must be at most 4."
 msgstr "``pb``: кількість бітів позиції; повинно бути не більше 4."
 
-#: ../../library/lzma.rst:368
+#: ../../library/lzma.rst:382
 msgid "``mode``: :const:`MODE_FAST` or :const:`MODE_NORMAL`."
 msgstr "``режим``: :const:`MODE_FAST` або :const:`MODE_NORMAL`."
 
-#: ../../library/lzma.rst:369
+#: ../../library/lzma.rst:383
 msgid ""
 "``nice_len``: What should be considered a \"nice length\" for a match. This "
 "should be 273 or less."
@@ -761,7 +771,7 @@ msgstr ""
 "``nice_len``: що слід вважати \"гарною довжиною\" для збігу. Це має бути 273"
 " або менше."
 
-#: ../../library/lzma.rst:371
+#: ../../library/lzma.rst:385
 msgid ""
 "``mf``: What match finder to use -- :const:`MF_HC3`, :const:`MF_HC4`, "
 ":const:`MF_BT2`, :const:`MF_BT3`, or :const:`MF_BT4`."
@@ -769,7 +779,7 @@ msgstr ""
 "``mf``: Який засіб пошуку збігів використовувати -- :const:`MF_HC3`, "
 ":const:`MF_HC4`, :const:`MF_BT2`, :const:`MF_BT3` або :const:`MF_BT4`."
 
-#: ../../library/lzma.rst:373
+#: ../../library/lzma.rst:387
 msgid ""
 "``depth``: Maximum search depth used by match finder. 0 (default) means to "
 "select automatically based on other filter options."
@@ -778,7 +788,7 @@ msgstr ""
 "0 (за замовчуванням) означає автоматичний вибір на основі інших параметрів "
 "фільтра."
 
-#: ../../library/lzma.rst:376
+#: ../../library/lzma.rst:390
 msgid ""
 "The delta filter stores the differences between bytes, producing more "
 "repetitive input for the compressor in certain circumstances. It supports "
@@ -791,7 +801,7 @@ msgstr ""
 "``dist``. Це вказує на відстань між байтами, які потрібно відняти. За "
 "замовчуванням 1, тобто беруться різниці між сусідніми байтами."
 
-#: ../../library/lzma.rst:381
+#: ../../library/lzma.rst:395
 msgid ""
 "The BCJ filters are intended to be applied to machine code. They convert "
 "relative branches, calls and jumps in the code to use absolute addressing, "
@@ -807,31 +817,31 @@ msgstr ""
 "``start_offset``. Це вказує адресу, яку слід відобразити на початку вхідних "
 "даних. За замовчуванням 0."
 
-#: ../../library/lzma.rst:389
+#: ../../library/lzma.rst:403
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/lzma.rst:391
+#: ../../library/lzma.rst:405
 msgid "Reading in a compressed file::"
 msgstr "Читання у стисненому файлі::"
 
-#: ../../library/lzma.rst:397
+#: ../../library/lzma.rst:411
 msgid "Creating a compressed file::"
 msgstr "Створення стисненого файлу::"
 
-#: ../../library/lzma.rst:404
+#: ../../library/lzma.rst:418
 msgid "Compressing data in memory::"
 msgstr "Стиснення даних у пам'яті:"
 
-#: ../../library/lzma.rst:410
+#: ../../library/lzma.rst:424
 msgid "Incremental compression::"
 msgstr "Поступове стиснення::"
 
-#: ../../library/lzma.rst:421
+#: ../../library/lzma.rst:435
 msgid "Writing compressed data to an already-open file::"
 msgstr "Запис стислих даних у вже відкритий файл::"
 
-#: ../../library/lzma.rst:430
+#: ../../library/lzma.rst:444
 msgid "Creating a compressed file using a custom filter chain::"
 msgstr ""
 "Створення стисненого файлу за допомогою спеціального ланцюжка фільтрів::"

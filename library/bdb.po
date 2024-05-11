@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:55+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/bdb.rst:2
-msgid ":mod:`bdb` --- Debugger framework"
-msgstr ":mod:`bdb` --- Фреймворк налагоджувача"
+msgid ":mod:`!bdb` --- Debugger framework"
+msgstr ""
 
 #: ../../library/bdb.rst:7
 msgid "**Source code:** :source:`Lib/bdb.py`"
@@ -153,7 +153,7 @@ msgid "Line number of the :class:`Breakpoint` within :attr:`file`."
 msgstr ""
 
 #: ../../library/bdb.rst:89
-msgid "True if a :class:`Breakpoint` at (file, line) is temporary."
+msgid "``True`` if a :class:`Breakpoint` at (file, line) is temporary."
 msgstr ""
 
 #: ../../library/bdb.rst:93
@@ -167,7 +167,7 @@ msgid ""
 msgstr ""
 
 #: ../../library/bdb.rst:102
-msgid "True if :class:`Breakpoint` is enabled."
+msgid "``True`` if :class:`Breakpoint` is enabled."
 msgstr ""
 
 #: ../../library/bdb.rst:106
@@ -361,15 +361,15 @@ msgstr ""
 "хочуть перевизначити визначення зупинки та точок зупинки."
 
 #: ../../library/bdb.rst:218
-msgid "Return True if *module_name* matches any skip pattern."
+msgid "Return ``True`` if *module_name* matches any skip pattern."
 msgstr ""
 
 #: ../../library/bdb.rst:222
-msgid "Return True if *frame* is below the starting frame in the stack."
+msgid "Return ``True`` if *frame* is below the starting frame in the stack."
 msgstr ""
 
 #: ../../library/bdb.rst:226
-msgid "Return True if there is an effective breakpoint for this line."
+msgid "Return ``True`` if there is an effective breakpoint for this line."
 msgstr ""
 
 #: ../../library/bdb.rst:228
@@ -379,7 +379,7 @@ msgid ""
 msgstr ""
 
 #: ../../library/bdb.rst:233
-msgid "Return True if any breakpoint exists for *frame*'s filename."
+msgid "Return ``True`` if any breakpoint exists for *frame*'s filename."
 msgstr ""
 
 #: ../../library/bdb.rst:235
@@ -461,7 +461,13 @@ msgstr ""
 "Почніть налагодження з *фрейму*. Якщо *frame* не вказано, налагодження "
 "починається з кадру абонента."
 
-#: ../../library/bdb.rst:294
+#: ../../library/bdb.rst:292
+msgid ""
+":func:`set_trace` will enter the debugger immediately, rather than on the "
+"next line of code to be executed."
+msgstr ""
+
+#: ../../library/bdb.rst:298
 msgid ""
 "Stop only at breakpoints or when finished.  If there are no breakpoints, set"
 " the system trace function to ``None``."
@@ -470,13 +476,13 @@ msgstr ""
 "контрольних точок, встановіть для функції трасування системи значення "
 "``None``."
 
-#: ../../library/bdb.rst:301
+#: ../../library/bdb.rst:305
 msgid ""
 "Set the :attr:`!quitting` attribute to ``True``.  This raises :exc:`BdbQuit`"
 " in the next call to one of the :meth:`!dispatch_\\*` methods."
 msgstr ""
 
-#: ../../library/bdb.rst:305
+#: ../../library/bdb.rst:309
 msgid ""
 "Derived classes and clients can call the following methods to manipulate "
 "breakpoints.  These methods return a string containing an error message if "
@@ -487,7 +493,7 @@ msgstr ""
 "повідомлення про помилку, якщо щось пішло не так, або ``None``, якщо все "
 "добре."
 
-#: ../../library/bdb.rst:311
+#: ../../library/bdb.rst:315
 msgid ""
 "Set a new breakpoint.  If the *lineno* line doesn't exist for the *filename*"
 " passed as argument, return an error message.  The *filename* should be in "
@@ -497,13 +503,13 @@ msgstr ""
 "файлу*, переданого як аргумент, поверніть повідомлення про помилку. *Ім’я* "
 "файлу має бути в канонічній формі, як описано в методі :meth:`canonic`."
 
-#: ../../library/bdb.rst:317
+#: ../../library/bdb.rst:321
 msgid ""
 "Delete the breakpoints in *filename* and *lineno*.  If none were set, return"
 " an error message."
 msgstr ""
 
-#: ../../library/bdb.rst:322
+#: ../../library/bdb.rst:326
 msgid ""
 "Delete the breakpoint which has the index *arg* in the "
 ":attr:`Breakpoint.bpbynumber`.  If *arg* is not numeric or out of range, "
@@ -513,18 +519,18 @@ msgstr ""
 " Якщо *arg* не є числом або виходить за межі діапазону, повертає "
 "повідомлення про помилку."
 
-#: ../../library/bdb.rst:328
+#: ../../library/bdb.rst:332
 msgid ""
 "Delete all breakpoints in *filename*.  If none were set, return an error "
 "message."
 msgstr ""
 
-#: ../../library/bdb.rst:333
+#: ../../library/bdb.rst:337
 msgid ""
 "Delete all existing breakpoints.  If none were set, return an error message."
 msgstr ""
 
-#: ../../library/bdb.rst:338
+#: ../../library/bdb.rst:342
 msgid ""
 "Return a breakpoint specified by the given number.  If *arg* is a string, it"
 " will be converted to a number.  If *arg* is a non-numeric string, if the "
@@ -535,11 +541,11 @@ msgstr ""
 "буде перетворено на число. Якщо *arg* є нечисловим рядком, якщо задана точка"
 " зупину ніколи не існувала або була видалена, виникає :exc:`ValueError`."
 
-#: ../../library/bdb.rst:347
-msgid "Return True if there is a breakpoint for *lineno* in *filename*."
+#: ../../library/bdb.rst:351
+msgid "Return ``True`` if there is a breakpoint for *lineno* in *filename*."
 msgstr ""
 
-#: ../../library/bdb.rst:351
+#: ../../library/bdb.rst:355
 msgid ""
 "Return all breakpoints for *lineno* in *filename*, or an empty list if none "
 "are set."
@@ -547,18 +553,18 @@ msgstr ""
 "Повертає всі контрольні точки для *lineno* в *імені файлу* або порожній "
 "список, якщо жодна з них не встановлена."
 
-#: ../../library/bdb.rst:356
+#: ../../library/bdb.rst:360
 msgid ""
 "Return all breakpoints in *filename*, or an empty list if none are set."
 msgstr ""
 "Повертає всі контрольні точки в *назві файлу* або порожній список, якщо "
 "жодна з них не встановлена."
 
-#: ../../library/bdb.rst:360
+#: ../../library/bdb.rst:364
 msgid "Return all breakpoints that are set."
 msgstr "Повернути всі встановлені точки зупину."
 
-#: ../../library/bdb.rst:363
+#: ../../library/bdb.rst:367
 msgid ""
 "Derived classes and clients can call the following methods to get a data "
 "structure representing a stack trace."
@@ -566,43 +572,43 @@ msgstr ""
 "Похідні класи та клієнти можуть викликати наведені нижче методи, щоб "
 "отримати структуру даних, що представляє трасування стека."
 
-#: ../../library/bdb.rst:368
+#: ../../library/bdb.rst:372
 msgid "Return a list of (frame, lineno) tuples in a stack trace, and a size."
 msgstr ""
 
-#: ../../library/bdb.rst:370
+#: ../../library/bdb.rst:374
 msgid ""
 "The most recently called frame is last in the list. The size is the number "
 "of frames below the frame where the debugger was invoked."
 msgstr ""
 
-#: ../../library/bdb.rst:375
+#: ../../library/bdb.rst:379
 msgid ""
 "Return a string with information about a stack entry, which is a ``(frame, "
 "lineno)`` tuple.  The return string contains:"
 msgstr ""
 
-#: ../../library/bdb.rst:378
+#: ../../library/bdb.rst:382
 msgid "The canonical filename which contains the frame."
 msgstr ""
 
-#: ../../library/bdb.rst:379
+#: ../../library/bdb.rst:383
 msgid "The function name or ``\"<lambda>\"``."
 msgstr ""
 
-#: ../../library/bdb.rst:380
+#: ../../library/bdb.rst:384
 msgid "The input arguments."
 msgstr "Вхідні аргументи."
 
-#: ../../library/bdb.rst:381
+#: ../../library/bdb.rst:385
 msgid "The return value."
 msgstr "Повернене значення."
 
-#: ../../library/bdb.rst:382
+#: ../../library/bdb.rst:386
 msgid "The line of code (if it exists)."
 msgstr "Рядок коду (якщо він існує)."
 
-#: ../../library/bdb.rst:385
+#: ../../library/bdb.rst:389
 msgid ""
 "The following two methods can be called by clients to use a debugger to "
 "debug a :term:`statement`, given as a string."
@@ -610,13 +616,13 @@ msgstr ""
 "Наступні два методи можуть бути викликані клієнтами для використання "
 "налагоджувача для налагодження :term:`statement`, поданого як рядок."
 
-#: ../../library/bdb.rst:390
+#: ../../library/bdb.rst:394
 msgid ""
 "Debug a statement executed via the :func:`exec` function.  *globals* "
 "defaults to :attr:`!__main__.__dict__`, *locals* defaults to *globals*."
 msgstr ""
 
-#: ../../library/bdb.rst:395
+#: ../../library/bdb.rst:399
 msgid ""
 "Debug an expression executed via the :func:`eval` function.  *globals* and "
 "*locals* have the same meaning as in :meth:`run`."
@@ -624,25 +630,25 @@ msgstr ""
 "Налагодити вираз, що виконується за допомогою функції :func:`eval`. "
 "*globals* і *locals* мають те саме значення, що й у :meth:`run`."
 
-#: ../../library/bdb.rst:400
+#: ../../library/bdb.rst:404
 msgid "For backwards compatibility.  Calls the :meth:`run` method."
 msgstr "Для зворотної сумісності. Викликає метод :meth:`run`."
 
-#: ../../library/bdb.rst:404
+#: ../../library/bdb.rst:408
 msgid "Debug a single function call, and return its result."
 msgstr "Налагодити один виклик функції та повернути його результат."
 
-#: ../../library/bdb.rst:407
+#: ../../library/bdb.rst:411
 msgid "Finally, the module defines the following functions:"
 msgstr "Нарешті, модуль визначає такі функції:"
 
-#: ../../library/bdb.rst:411
+#: ../../library/bdb.rst:415
 msgid ""
-"Return True if we should break here, depending on the way the "
+"Return ``True`` if we should break here, depending on the way the "
 ":class:`Breakpoint` *b* was set."
 msgstr ""
 
-#: ../../library/bdb.rst:414
+#: ../../library/bdb.rst:418
 msgid ""
 "If it was set via line number, it checks if :attr:`b.line "
 "<bdb.Breakpoint.line>` is the same as the one in *frame*. If the breakpoint "
@@ -651,33 +657,33 @@ msgid ""
 "first executable line."
 msgstr ""
 
-#: ../../library/bdb.rst:423
+#: ../../library/bdb.rst:427
 msgid ""
 "Return ``(active breakpoint, delete temporary flag)`` or ``(None, None)`` as"
 " the breakpoint to act upon."
 msgstr ""
 
-#: ../../library/bdb.rst:426
+#: ../../library/bdb.rst:430
 msgid ""
 "The *active breakpoint* is the first entry in :attr:`bplist "
 "<bdb.Breakpoint.bplist>` for the (:attr:`file <bdb.Breakpoint.file>`, "
 ":attr:`line <bdb.Breakpoint.line>`) (which must exist) that is "
 ":attr:`enabled <bdb.Breakpoint.enabled>`, for which :func:`checkfuncname` is"
-" True, and that has neither a False :attr:`condition <bdb.Breakpoint.cond>` "
+" true, and that has neither a false :attr:`condition <bdb.Breakpoint.cond>` "
 "nor positive :attr:`ignore <bdb.Breakpoint.ignore>` count.  The *flag*, "
-"meaning that a temporary breakpoint should be deleted, is False only when "
-"the :attr:`cond <bdb.Breakpoint.cond>` cannot be evaluated (in which case, "
-":attr:`ignore <bdb.Breakpoint.ignore>` count is ignored)."
+"meaning that a temporary breakpoint should be deleted, is ``False`` only "
+"when the :attr:`cond <bdb.Breakpoint.cond>` cannot be evaluated (in which "
+"case, :attr:`ignore <bdb.Breakpoint.ignore>` count is ignored)."
 msgstr ""
 
-#: ../../library/bdb.rst:437
-msgid "If no such entry exists, then (None, None) is returned."
+#: ../../library/bdb.rst:441
+msgid "If no such entry exists, then ``(None, None)`` is returned."
 msgstr ""
 
-#: ../../library/bdb.rst:442
+#: ../../library/bdb.rst:446
 msgid "Start debugging with a :class:`Bdb` instance from caller's frame."
 msgstr "Почніть налагодження з екземпляра :class:`Bdb` із фрейму абонента."
 
-#: ../../library/bdb.rst:299
+#: ../../library/bdb.rst:303
 msgid "quitting (bdb.Bdb attribute)"
 msgstr ""

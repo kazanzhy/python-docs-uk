@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:08+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/locale.rst:2
-msgid ":mod:`locale` --- Internationalization services"
-msgstr ":mod:`locale` --- Послуги інтернаціоналізації"
+msgid ":mod:`!locale` --- Internationalization services"
+msgstr ""
 
 #: ../../library/locale.rst:10
 msgid "**Source code:** :source:`Lib/locale.py`"
@@ -702,18 +702,6 @@ msgstr ""
 "кодування за замовчуванням для коду мови, як :func:`setlocale`."
 
 #: ../../library/locale.rst:409
-msgid "Sets the locale for *category* to the default setting."
-msgstr "Встановлює для *категорії* налаштування за замовчуванням."
-
-#: ../../library/locale.rst:411
-msgid ""
-"The default setting is determined by calling :func:`getdefaultlocale`. "
-"*category* defaults to :const:`LC_ALL`."
-msgstr ""
-"Налаштування за замовчуванням визначається викликом "
-":func:`getdefaultlocale`. *категорія* за замовчуванням :const:`LC_ALL`."
-
-#: ../../library/locale.rst:419
 msgid ""
 "Compares two strings according to the current :const:`LC_COLLATE` setting. "
 "As any other compare function, returns a negative, or a positive value, or "
@@ -725,7 +713,7 @@ msgstr ""
 " або ``0``, залежно від того, чи *рядок1* порівнює до чи після *рядок2* або "
 "дорівнює йому."
 
-#: ../../library/locale.rst:427
+#: ../../library/locale.rst:417
 msgid ""
 "Transforms a string to one that can be used in locale-aware comparisons.  "
 "For example, ``strxfrm(s1) < strxfrm(s2)`` is equivalent to ``strcoll(s1, "
@@ -738,7 +726,7 @@ msgstr ""
 "рядок порівнюється багаторазово, наприклад. під час зіставлення "
 "послідовності рядків."
 
-#: ../../library/locale.rst:436
+#: ../../library/locale.rst:426
 msgid ""
 "Formats a number *val* according to the current :const:`LC_NUMERIC` setting."
 " The format follows the conventions of the ``%`` operator.  For floating "
@@ -746,7 +734,7 @@ msgid ""
 "is ``True``, also takes the grouping into account."
 msgstr ""
 
-#: ../../library/locale.rst:441
+#: ../../library/locale.rst:431
 msgid ""
 "If *monetary* is true, the conversion uses monetary thousands separator and "
 "grouping strings."
@@ -754,7 +742,7 @@ msgstr ""
 "Якщо *monetary* має значення true, для перетворення використовуються грошові"
 " розділювачі тисяч і рядки групування."
 
-#: ../../library/locale.rst:444
+#: ../../library/locale.rst:434
 msgid ""
 "Processes formatting specifiers as in ``format % val``, but takes the "
 "current locale settings into account."
@@ -762,11 +750,11 @@ msgstr ""
 "Обробляє специфікатори форматування як у ``format % val``, але враховує "
 "поточні налаштування мови."
 
-#: ../../library/locale.rst:447
+#: ../../library/locale.rst:437
 msgid "The *monetary* keyword parameter was added."
 msgstr "Додано параметр ключового слова *monetary*."
 
-#: ../../library/locale.rst:453
+#: ../../library/locale.rst:443
 msgid ""
 "Formats a number *val* according to the current :const:`LC_MONETARY` "
 "settings."
@@ -774,7 +762,7 @@ msgstr ""
 "Форматує число *val* відповідно до поточних налаштувань "
 ":const:`LC_MONETARY`."
 
-#: ../../library/locale.rst:455
+#: ../../library/locale.rst:445
 msgid ""
 "The returned string includes the currency symbol if *symbol* is true, which "
 "is the default. If *grouping* is ``True`` (which is not the default), "
@@ -782,13 +770,13 @@ msgid ""
 "not the default), the international currency symbol is used."
 msgstr ""
 
-#: ../../library/locale.rst:462
+#: ../../library/locale.rst:452
 msgid ""
 "This function will not work with the 'C' locale, so you have to set a locale"
 " via :func:`setlocale` first."
 msgstr ""
 
-#: ../../library/locale.rst:468
+#: ../../library/locale.rst:458
 msgid ""
 "Formats a floating point number using the same format as the built-in "
 "function ``str(float)``, but takes the decimal point into account."
@@ -796,7 +784,7 @@ msgstr ""
 "Форматує число з плаваючою комою, використовуючи той самий формат, що й "
 "вбудована функція ``str(float)``, але враховує десяткову крапку."
 
-#: ../../library/locale.rst:474
+#: ../../library/locale.rst:464
 msgid ""
 "Converts a string into a normalized number string, following the "
 ":const:`LC_NUMERIC` settings."
@@ -804,7 +792,7 @@ msgstr ""
 "Перетворює рядок у нормалізований числовий рядок відповідно до параметрів "
 ":const:`LC_NUMERIC`."
 
-#: ../../library/locale.rst:482
+#: ../../library/locale.rst:472
 msgid ""
 "Converts a normalized number string into a formatted string following the "
 ":const:`LC_NUMERIC` settings."
@@ -812,7 +800,7 @@ msgstr ""
 "Перетворює нормалізований числовий рядок у відформатований рядок відповідно "
 "до параметрів :const:`LC_NUMERIC`."
 
-#: ../../library/locale.rst:490
+#: ../../library/locale.rst:480
 msgid ""
 "Converts a string to a number, following the :const:`LC_NUMERIC` settings, "
 "by calling *func* on the result of calling :func:`delocalize` on *string*."
@@ -820,14 +808,14 @@ msgstr ""
 "Перетворює рядок на число відповідно до налаштувань :const:`LC_NUMERIC`, "
 "викликаючи *func* в результаті виклику :func:`delocalize` для *string*."
 
-#: ../../library/locale.rst:496
+#: ../../library/locale.rst:486
 msgid ""
 "Converts a string to an integer, following the :const:`LC_NUMERIC` "
 "conventions."
 msgstr ""
 "Перетворює рядок на ціле число, дотримуючись угод :const:`LC_NUMERIC`."
 
-#: ../../library/locale.rst:501
+#: ../../library/locale.rst:491
 msgid ""
 "Locale category for the character type functions.  Most importantly, this "
 "category defines the text encoding, i.e. how bytes are interpreted as "
@@ -837,14 +825,14 @@ msgid ""
 "SSH connections."
 msgstr ""
 
-#: ../../library/locale.rst:508
+#: ../../library/locale.rst:498
 msgid ""
 "Python doesn't internally use locale-dependent character transformation "
 "functions from ``ctype.h``. Instead, an internal ``pyctype.h`` provides "
 "locale-independent equivalents like :c:macro:`!Py_TOLOWER`."
 msgstr ""
 
-#: ../../library/locale.rst:515
+#: ../../library/locale.rst:505
 msgid ""
 "Locale category for sorting strings.  The functions :func:`strcoll` and "
 ":func:`strxfrm` of the :mod:`locale` module are affected."
@@ -852,7 +840,7 @@ msgstr ""
 "Локальна категорія для сортування рядків. Це впливає на функції "
 ":func:`strcoll` і :func:`strxfrm` модуля :mod:`locale`."
 
-#: ../../library/locale.rst:521
+#: ../../library/locale.rst:511
 msgid ""
 "Locale category for the formatting of time.  The function "
 ":func:`time.strftime` follows these conventions."
@@ -860,7 +848,7 @@ msgstr ""
 "Локальна категорія для форматування часу. Функція :func:`time.strftime` "
 "відповідає цим умовам."
 
-#: ../../library/locale.rst:527
+#: ../../library/locale.rst:517
 msgid ""
 "Locale category for formatting of monetary values.  The available options "
 "are available from the :func:`localeconv` function."
@@ -868,7 +856,7 @@ msgstr ""
 "Локальна категорія для форматування грошових значень. Доступні параметри "
 "доступні з функції :func:`localeconv`."
 
-#: ../../library/locale.rst:533
+#: ../../library/locale.rst:523
 msgid ""
 "Locale category for message display. Python currently does not support "
 "application specific locale-aware messages.  Messages displayed by the "
@@ -880,13 +868,13 @@ msgstr ""
 "повідомлення, які відображає операційна система, наприклад ті, що повертає "
 ":func:`os.strerror`."
 
-#: ../../library/locale.rst:538
+#: ../../library/locale.rst:528
 msgid ""
 "This value may not be available on operating systems not conforming to the "
 "POSIX standard, most notably Windows."
 msgstr ""
 
-#: ../../library/locale.rst:544
+#: ../../library/locale.rst:534
 msgid ""
 "Locale category for formatting numbers.  The functions "
 ":func:`format_string`, :func:`atoi`, :func:`atof` and :func:`.str` of the "
@@ -894,7 +882,7 @@ msgid ""
 "formatting operations are not affected."
 msgstr ""
 
-#: ../../library/locale.rst:552
+#: ../../library/locale.rst:542
 msgid ""
 "Combination of all locale settings.  If this flag is used when the locale is"
 " changed, setting the locale for all categories is attempted. If that fails "
@@ -910,7 +898,7 @@ msgstr ""
 "вказує на налаштування для всіх категорій. Цей рядок пізніше можна "
 "використати для відновлення налаштувань."
 
-#: ../../library/locale.rst:561
+#: ../../library/locale.rst:551
 msgid ""
 "This is a symbolic constant used for different values returned by "
 ":func:`localeconv`."
@@ -918,15 +906,15 @@ msgstr ""
 "Це символічна константа, яка використовується для різних значень, які "
 "повертає :func:`localeconv`."
 
-#: ../../library/locale.rst:565
+#: ../../library/locale.rst:555
 msgid "Example::"
 msgstr "Приклад::"
 
-#: ../../library/locale.rst:578
+#: ../../library/locale.rst:568
 msgid "Background, details, hints, tips and caveats"
 msgstr "Передумови, деталі, підказки, поради та застереження"
 
-#: ../../library/locale.rst:580
+#: ../../library/locale.rst:570
 msgid ""
 "The C standard defines the locale as a program-wide property that may be "
 "relatively expensive to change.  On top of that, some implementations are "
@@ -938,7 +926,7 @@ msgstr ""
 " часті зміни локалі можуть спричинити дамп ядра. Це робить локаль дещо "
 "болючим для правильного використання."
 
-#: ../../library/locale.rst:585
+#: ../../library/locale.rst:575
 msgid ""
 "Initially, when a program is started, the locale is the ``C`` locale, no "
 "matter what the user's preferred locale is.  There is one exception: the "
@@ -954,7 +942,7 @@ msgstr ""
 "вказати, що їй потрібні бажані налаштування локалі користувача для інших "
 "категорій, викликавши ``setlocale(LC_ALL, '')``."
 
-#: ../../library/locale.rst:592
+#: ../../library/locale.rst:582
 msgid ""
 "It is generally a bad idea to call :func:`setlocale` in some library "
 "routine, since as a side effect it affects the entire program.  Saving and "
@@ -966,7 +954,7 @@ msgstr ""
 "Зберігати та відновлювати його майже так само погано: це дорого та впливає "
 "на інші потоки, які запускаються до відновлення налаштувань."
 
-#: ../../library/locale.rst:597
+#: ../../library/locale.rst:587
 msgid ""
 "If, when coding a module for general use, you need a locale independent "
 "version of an operation that is affected by the locale (such as certain "
@@ -984,14 +972,14 @@ msgstr ""
 " нормально. Лише в крайньому випадку ви повинні задокументувати, що ваш "
 "модуль несумісний з налаштуваннями локалі, відмінними від \\ ``C``."
 
-#: ../../library/locale.rst:604
+#: ../../library/locale.rst:594
 msgid ""
 "The only way to perform numeric operations according to the locale is to use"
 " the special functions defined by this module: :func:`atof`, :func:`atoi`, "
 ":func:`format_string`, :func:`.str`."
 msgstr ""
 
-#: ../../library/locale.rst:608
+#: ../../library/locale.rst:598
 msgid ""
 "There is no way to perform case conversions and character classifications "
 "according to the locale.  For (Unicode) text strings these are done "
@@ -1009,11 +997,11 @@ msgstr ""
 "не перетворюються та не вважаються частиною класу символів, такого як літера"
 " чи пробіл."
 
-#: ../../library/locale.rst:619
+#: ../../library/locale.rst:609
 msgid "For extension writers and programs that embed Python"
 msgstr "Для авторів розширень і програм, які вбудовують Python"
 
-#: ../../library/locale.rst:621
+#: ../../library/locale.rst:611
 msgid ""
 "Extension modules should never call :func:`setlocale`, except to find out "
 "what the current locale is.  But since the return value can only be used "
@@ -1026,7 +1014,7 @@ msgstr ""
 "дуже корисно (за винятком, можливо, для того, щоб дізнатися, чи є локаль "
 "``C``)."
 
-#: ../../library/locale.rst:626
+#: ../../library/locale.rst:616
 msgid ""
 "When Python code uses the :mod:`locale` module to change the locale, this "
 "also affects the embedding application.  If the embedding application "
@@ -1036,11 +1024,11 @@ msgid ""
 "accessible as a shared library."
 msgstr ""
 
-#: ../../library/locale.rst:637
+#: ../../library/locale.rst:627
 msgid "Access to message catalogs"
 msgstr "Доступ до каталогів повідомлень"
 
-#: ../../library/locale.rst:646
+#: ../../library/locale.rst:636
 msgid ""
 "The locale module exposes the C library's gettext interface on systems that "
 "provide this interface.  It consists of the functions :func:`gettext`, "
@@ -1051,7 +1039,7 @@ msgid ""
 "algorithms for locating message catalogs."
 msgstr ""
 
-#: ../../library/locale.rst:653
+#: ../../library/locale.rst:643
 msgid ""
 "Python applications should normally find no need to invoke these functions, "
 "and should use :mod:`gettext` instead.  A known exception to this rule are "
