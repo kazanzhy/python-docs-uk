@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/gc.rst:2
-msgid ":mod:`gc` --- Garbage Collector interface"
-msgstr ":mod:`gc` --- Інтерфейс збирача сміття"
+msgid ":mod:`!gc` --- Garbage Collector interface"
+msgstr ""
 
 #: ../../library/gc.rst:12
 msgid ""
@@ -71,12 +71,8 @@ msgid ""
 "With no arguments, run a full collection.  The optional argument "
 "*generation* may be an integer specifying which generation to collect (from "
 "0 to 2).  A :exc:`ValueError` is raised if the generation number  is "
-"invalid. The number of unreachable objects found is returned."
+"invalid. The sum of collected objects and uncollectable objects is returned."
 msgstr ""
-"Без аргументів запустіть повний збір. Необов’язковий аргумент *генерація* "
-"може бути цілим числом, що вказує, яку генерацію збирати (від 0 до 2). Якщо "
-"номер покоління недійсний, виникає помилка :exc:`ValueError`. Повертається "
-"кількість знайдених недоступних об'єктів."
 
 #: ../../library/gc.rst:48
 msgid ""
@@ -114,12 +110,9 @@ msgstr "Повернути поточні встановлені позначк�
 #: ../../library/gc.rst:71
 msgid ""
 "Returns a list of all objects tracked by the collector, excluding the list "
-"returned. If *generation* is not None, return only the objects tracked by "
-"the collector that are in that generation."
+"returned. If *generation* is not ``None``, return only the objects tracked "
+"by the collector that are in that generation."
 msgstr ""
-"Повертає список усіх об’єктів, які відстежує збирач, за винятком повернутого"
-" списку. Якщо *генерація* не має значення \"Немає\", повертаються лише "
-"об’єкти, відстежувані збирачем, які знаходяться в цій генерації."
 
 #: ../../library/gc.rst:75
 msgid "New *generation* parameter."

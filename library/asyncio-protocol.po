@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 00:55+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -637,7 +637,14 @@ msgstr ""
 ":const:`None`, дані надсилаються на цільову адресу, указану під час "
 "створення транспорту."
 
-#: ../../library/asyncio-protocol.rst:367
+#: ../../library/asyncio-protocol.rst:365
+msgid ""
+"This method can be called with an empty bytes object to send a zero-length "
+"datagram. The buffer size calculation used for flow control is also updated "
+"to account for the datagram header."
+msgstr ""
+
+#: ../../library/asyncio-protocol.rst:372
 msgid ""
 "Close the transport immediately, without waiting for pending operations to "
 "complete.  Buffered data will be lost. No more data will be received.  The "
@@ -649,15 +656,15 @@ msgstr ""
 ":meth:`protocol.connection_lost() <BaseProtocol.connection_lost>` протоколу "
 "зрештою буде викликано з :const:`None` як аргумент."
 
-#: ../../library/asyncio-protocol.rst:377
+#: ../../library/asyncio-protocol.rst:382
 msgid "Subprocess Transports"
 msgstr "Транспортування підпроцесів"
 
-#: ../../library/asyncio-protocol.rst:381
+#: ../../library/asyncio-protocol.rst:386
 msgid "Return the subprocess process id as an integer."
 msgstr "Повертає ідентифікатор процесу підпроцесу як ціле число."
 
-#: ../../library/asyncio-protocol.rst:385
+#: ../../library/asyncio-protocol.rst:390
 msgid ""
 "Return the transport for the communication pipe corresponding to the integer"
 " file descriptor *fd*:"
@@ -665,7 +672,7 @@ msgstr ""
 "Повертає транспорт для комунікаційного каналу, що відповідає цілочисельному "
 "файловому дескриптору *fd*:"
 
-#: ../../library/asyncio-protocol.rst:388
+#: ../../library/asyncio-protocol.rst:393
 msgid ""
 "``0``: readable streaming transport of the standard input (*stdin*), or "
 ":const:`None` if the subprocess was not created with ``stdin=PIPE``"
@@ -674,7 +681,7 @@ msgstr ""
 "(*stdin*) або :const:`None`, якщо підпроцес не було створено за допомогою "
 "``stdin=PIPE``"
 
-#: ../../library/asyncio-protocol.rst:390
+#: ../../library/asyncio-protocol.rst:395
 msgid ""
 "``1``: writable streaming transport of the standard output (*stdout*), or "
 ":const:`None` if the subprocess was not created with ``stdout=PIPE``"
@@ -683,7 +690,7 @@ msgstr ""
 "(*stdout*) або :const:`None`, якщо підпроцес не було створено за допомогою "
 "``stdout=PIPE``"
 
-#: ../../library/asyncio-protocol.rst:392
+#: ../../library/asyncio-protocol.rst:397
 msgid ""
 "``2``: writable streaming transport of the standard error (*stderr*), or "
 ":const:`None` if the subprocess was not created with ``stderr=PIPE``"
@@ -692,11 +699,11 @@ msgstr ""
 "(*stderr*) або :const:`None`, якщо підпроцес не було створено за допомогою "
 "``stderr=PIPE``"
 
-#: ../../library/asyncio-protocol.rst:394
+#: ../../library/asyncio-protocol.rst:399
 msgid "other *fd*: :const:`None`"
 msgstr "інший *fd*: :const:`None`"
 
-#: ../../library/asyncio-protocol.rst:398
+#: ../../library/asyncio-protocol.rst:403
 msgid ""
 "Return the subprocess return code as an integer or :const:`None` if it "
 "hasn't returned, which is similar to the :attr:`subprocess.Popen.returncode`"
@@ -705,11 +712,11 @@ msgstr ""
 "Повертає код повернення підпроцесу як ціле число або :const:`None`, якщо він"
 " не повернувся, що подібно до атрибута :attr:`subprocess.Popen.returncode`."
 
-#: ../../library/asyncio-protocol.rst:404
+#: ../../library/asyncio-protocol.rst:409
 msgid "Kill the subprocess."
 msgstr "Закрийте підпроцес."
 
-#: ../../library/asyncio-protocol.rst:406
+#: ../../library/asyncio-protocol.rst:411
 msgid ""
 "On POSIX systems, the function sends SIGKILL to the subprocess. On Windows, "
 "this method is an alias for :meth:`terminate`."
@@ -717,11 +724,11 @@ msgstr ""
 "У системах POSIX функція надсилає SIGKILL підпроцесу. У Windows цей метод є "
 "псевдонімом для :meth:`terminate`."
 
-#: ../../library/asyncio-protocol.rst:409
+#: ../../library/asyncio-protocol.rst:414
 msgid "See also :meth:`subprocess.Popen.kill`."
 msgstr "Дивіться також :meth:`subprocess.Popen.kill`."
 
-#: ../../library/asyncio-protocol.rst:413
+#: ../../library/asyncio-protocol.rst:418
 msgid ""
 "Send the *signal* number to the subprocess, as in "
 ":meth:`subprocess.Popen.send_signal`."
@@ -729,26 +736,26 @@ msgstr ""
 "Надішліть номер *сигналу* підпроцесу, як у "
 ":meth:`subprocess.Popen.send_signal`."
 
-#: ../../library/asyncio-protocol.rst:418
+#: ../../library/asyncio-protocol.rst:423
 msgid "Stop the subprocess."
 msgstr "Зупиніть підпроцес."
 
-#: ../../library/asyncio-protocol.rst:420
+#: ../../library/asyncio-protocol.rst:425
 msgid ""
 "On POSIX systems, this method sends :py:const:`~signal.SIGTERM` to the "
 "subprocess. On Windows, the Windows API function :c:func:`!TerminateProcess`"
 " is called to stop the subprocess."
 msgstr ""
 
-#: ../../library/asyncio-protocol.rst:424
+#: ../../library/asyncio-protocol.rst:429
 msgid "See also :meth:`subprocess.Popen.terminate`."
 msgstr "Дивіться також :meth:`subprocess.Popen.terminate`."
 
-#: ../../library/asyncio-protocol.rst:428
+#: ../../library/asyncio-protocol.rst:433
 msgid "Kill the subprocess by calling the :meth:`kill` method."
 msgstr "Закрийте підпроцес, викликавши метод :meth:`kill`."
 
-#: ../../library/asyncio-protocol.rst:430
+#: ../../library/asyncio-protocol.rst:435
 msgid ""
 "If the subprocess hasn't returned yet, and close transports of *stdin*, "
 "*stdout*, and *stderr* pipes."
@@ -756,15 +763,15 @@ msgstr ""
 "Якщо підпроцес ще не повернувся, закрийте транспорти каналів *stdin*, "
 "*stdout* і *stderr*."
 
-#: ../../library/asyncio-protocol.rst:437
+#: ../../library/asyncio-protocol.rst:442
 msgid "Protocols"
 msgstr "Протоколи"
 
-#: ../../library/asyncio-protocol.rst:439
+#: ../../library/asyncio-protocol.rst:444
 msgid "**Source code:** :source:`Lib/asyncio/protocols.py`"
 msgstr "**Вихідний код:** :source:`Lib/asyncio/protocols.py`"
 
-#: ../../library/asyncio-protocol.rst:443
+#: ../../library/asyncio-protocol.rst:448
 msgid ""
 "asyncio provides a set of abstract base classes that should be used to "
 "implement network protocols.  Those classes are meant to be used together "
@@ -774,7 +781,7 @@ msgstr ""
 " реалізації мережевих протоколів. Ці класи призначені для використання разом"
 " із :ref:`transports <asyncio-transport>`."
 
-#: ../../library/asyncio-protocol.rst:447
+#: ../../library/asyncio-protocol.rst:452
 msgid ""
 "Subclasses of abstract base protocol classes may implement some or all "
 "methods.  All these methods are callbacks: they are called by transports on "
@@ -786,22 +793,22 @@ msgstr ""
 "транспортами під час певних подій, наприклад, коли надходять якісь дані. "
 "Метод базового протоколу має викликатися відповідним транспортом."
 
-#: ../../library/asyncio-protocol.rst:454
+#: ../../library/asyncio-protocol.rst:459
 msgid "Base Protocols"
 msgstr "Базові протоколи"
 
-#: ../../library/asyncio-protocol.rst:458
+#: ../../library/asyncio-protocol.rst:463
 msgid "Base protocol with methods that all protocols share."
 msgstr "Базовий протокол із методами, які використовують усі протоколи."
 
-#: ../../library/asyncio-protocol.rst:462
+#: ../../library/asyncio-protocol.rst:467
 msgid ""
 "The base class for implementing streaming protocols (TCP, Unix sockets, "
 "etc)."
 msgstr ""
 "Базовий клас для реалізації потокових протоколів (TCP, Unix-сокети тощо)."
 
-#: ../../library/asyncio-protocol.rst:467
+#: ../../library/asyncio-protocol.rst:472
 msgid ""
 "A base class for implementing streaming protocols with manual control of the"
 " receive buffer."
@@ -809,11 +816,11 @@ msgstr ""
 "Базовий клас для реалізації потокових протоколів із ручним керуванням "
 "приймальним буфером."
 
-#: ../../library/asyncio-protocol.rst:472
+#: ../../library/asyncio-protocol.rst:477
 msgid "The base class for implementing datagram (UDP) protocols."
 msgstr "Базовий клас для реалізації протоколів дейтаграм (UDP)."
 
-#: ../../library/asyncio-protocol.rst:476
+#: ../../library/asyncio-protocol.rst:481
 msgid ""
 "The base class for implementing protocols communicating with child processes"
 " (unidirectional pipes)."
@@ -821,21 +828,21 @@ msgstr ""
 "Базовий клас для реалізації протоколів, що спілкуються з дочірніми процесами"
 " (односпрямовані канали)."
 
-#: ../../library/asyncio-protocol.rst:481
+#: ../../library/asyncio-protocol.rst:486
 msgid "Base Protocol"
 msgstr "Базовий протокол"
 
-#: ../../library/asyncio-protocol.rst:483
+#: ../../library/asyncio-protocol.rst:488
 msgid "All asyncio protocols can implement Base Protocol callbacks."
 msgstr ""
 "Усі асинхронні протоколи можуть реалізовувати зворотні виклики базового "
 "протоколу."
 
-#: ../../library/asyncio-protocol.rst:486
+#: ../../library/asyncio-protocol.rst:491
 msgid "Connection Callbacks"
 msgstr "Зворотні виклики підключення"
 
-#: ../../library/asyncio-protocol.rst:487
+#: ../../library/asyncio-protocol.rst:492
 msgid ""
 "Connection callbacks are called on all protocols, exactly once per a "
 "successful connection.  All other protocol callbacks can only be called "
@@ -845,11 +852,11 @@ msgstr ""
 " за успішне підключення. Усі інші зворотні виклики протоколу можна викликати"
 " лише між цими двома методами."
 
-#: ../../library/asyncio-protocol.rst:493
+#: ../../library/asyncio-protocol.rst:498
 msgid "Called when a connection is made."
 msgstr "Викликається, коли встановлено з'єднання."
 
-#: ../../library/asyncio-protocol.rst:495
+#: ../../library/asyncio-protocol.rst:500
 msgid ""
 "The *transport* argument is the transport representing the connection.  The "
 "protocol is responsible for storing the reference to its transport."
@@ -857,11 +864,11 @@ msgstr ""
 "Аргумент *transport* — це транспорт, що представляє з’єднання. Протокол "
 "відповідає за збереження посилання на свій транспорт."
 
-#: ../../library/asyncio-protocol.rst:501
+#: ../../library/asyncio-protocol.rst:506
 msgid "Called when the connection is lost or closed."
 msgstr "Викликається, коли з'єднання втрачено або закрито."
 
-#: ../../library/asyncio-protocol.rst:503
+#: ../../library/asyncio-protocol.rst:508
 msgid ""
 "The argument is either an exception object or :const:`None`. The latter "
 "means a regular EOF is received, or the connection was aborted or closed by "
@@ -871,11 +878,11 @@ msgstr ""
 "отримано звичайний EOF, або з’єднання було перервано чи закрито цією "
 "стороною з’єднання."
 
-#: ../../library/asyncio-protocol.rst:509
+#: ../../library/asyncio-protocol.rst:514
 msgid "Flow Control Callbacks"
 msgstr "Зворотні виклики керування потоком"
 
-#: ../../library/asyncio-protocol.rst:510
+#: ../../library/asyncio-protocol.rst:515
 msgid ""
 "Flow control callbacks can be called by transports to pause or resume "
 "writing performed by the protocol."
@@ -883,7 +890,7 @@ msgstr ""
 "Зворотні виклики керування потоком можуть бути викликані транспортами, щоб "
 "призупинити або відновити запис, який виконується протоколом."
 
-#: ../../library/asyncio-protocol.rst:513
+#: ../../library/asyncio-protocol.rst:518
 msgid ""
 "See the documentation of the :meth:`~WriteTransport.set_write_buffer_limits`"
 " method for more details."
@@ -891,18 +898,18 @@ msgstr ""
 "Додаткову інформацію дивіться в документації методу "
 ":meth:`~WriteTransport.set_write_buffer_limits`."
 
-#: ../../library/asyncio-protocol.rst:518
+#: ../../library/asyncio-protocol.rst:523
 msgid "Called when the transport's buffer goes over the high watermark."
 msgstr ""
 "Викликається, коли транспортний буфер переходить верхній водяний знак."
 
-#: ../../library/asyncio-protocol.rst:522
+#: ../../library/asyncio-protocol.rst:527
 msgid "Called when the transport's buffer drains below the low watermark."
 msgstr ""
 "Викликається, коли транспортний буфер закінчується нижче низького водяного "
 "знака."
 
-#: ../../library/asyncio-protocol.rst:524
+#: ../../library/asyncio-protocol.rst:529
 msgid ""
 "If the buffer size equals the high watermark, "
 ":meth:`~BaseProtocol.pause_writing` is not called: the buffer size must go "
@@ -912,7 +919,7 @@ msgstr ""
 ":meth:`~BaseProtocol.pause_writing` не викликається: розмір буфера має "
 "суворо перевищувати."
 
-#: ../../library/asyncio-protocol.rst:528
+#: ../../library/asyncio-protocol.rst:533
 msgid ""
 "Conversely, :meth:`~BaseProtocol.resume_writing` is called when the buffer "
 "size is equal or lower than the low watermark.  These end conditions are "
@@ -923,11 +930,11 @@ msgstr ""
 "для забезпечення того, щоб усе відбувалося так, як очікувалося, коли будь-"
 "яка позначка дорівнює нулю."
 
-#: ../../library/asyncio-protocol.rst:535
+#: ../../library/asyncio-protocol.rst:540
 msgid "Streaming Protocols"
 msgstr "Протоколи потокової передачі"
 
-#: ../../library/asyncio-protocol.rst:537
+#: ../../library/asyncio-protocol.rst:542
 msgid ""
 "Event methods, such as :meth:`loop.create_server`, "
 ":meth:`loop.create_unix_server`, :meth:`loop.create_connection`, "
@@ -941,7 +948,7 @@ msgstr ""
 ":meth:`loop.connect_read_pipe` і :meth:`loop.connect_write_pipe` приймають "
 "фабрики, які повертають потокові протоколи."
 
-#: ../../library/asyncio-protocol.rst:545
+#: ../../library/asyncio-protocol.rst:550
 msgid ""
 "Called when some data is received.  *data* is a non-empty bytes object "
 "containing the incoming data."
@@ -949,7 +956,7 @@ msgstr ""
 "Викликається при отриманні деяких даних. *data* — це об’єкт із непорожніми "
 "байтами, що містить вхідні дані."
 
-#: ../../library/asyncio-protocol.rst:548
+#: ../../library/asyncio-protocol.rst:553
 msgid ""
 "Whether the data is buffered, chunked or reassembled depends on the "
 "transport.  In general, you shouldn't rely on specific semantics and instead"
@@ -961,21 +968,21 @@ msgstr ""
 " натомість робити аналіз загальним і гнучким. Однак дані завжди надходять у "
 "правильному порядку."
 
-#: ../../library/asyncio-protocol.rst:553
+#: ../../library/asyncio-protocol.rst:558
 msgid ""
 "The method can be called an arbitrary number of times while a connection is "
 "open."
 msgstr ""
 "Метод можна викликати довільну кількість разів, поки з’єднання відкрито."
 
-#: ../../library/asyncio-protocol.rst:556
+#: ../../library/asyncio-protocol.rst:561
 msgid ""
 "However, :meth:`protocol.eof_received() <Protocol.eof_received>` is called "
 "at most once.  Once ``eof_received()`` is called, ``data_received()`` is not"
 " called anymore."
 msgstr ""
 
-#: ../../library/asyncio-protocol.rst:562
+#: ../../library/asyncio-protocol.rst:567
 msgid ""
 "Called when the other end signals it won't send any more data (for example "
 "by calling :meth:`transport.write_eof() <WriteTransport.write_eof>`, if the "
@@ -985,7 +992,7 @@ msgstr ""
 "(наприклад, викликом :meth:`transport.write_eof() "
 "<WriteTransport.write_eof>`, якщо інший кінець також використовує asyncio)."
 
-#: ../../library/asyncio-protocol.rst:567
+#: ../../library/asyncio-protocol.rst:572
 msgid ""
 "This method may return a false value (including ``None``), in which case the"
 " transport will close itself.  Conversely, if this method returns a true "
@@ -999,7 +1006,7 @@ msgstr ""
 "транспорт. Оскільки реалізація за замовчуванням повертає ``None``, вона "
 "неявно закриває з’єднання."
 
-#: ../../library/asyncio-protocol.rst:573
+#: ../../library/asyncio-protocol.rst:578
 msgid ""
 "Some transports, including SSL, don't support half-closed connections, in "
 "which case returning true from this method will result in the connection "
@@ -1009,16 +1016,16 @@ msgstr ""
 "з’єднання, і в цьому випадку повернення true з цього методу призведе до "
 "закриття з’єднання."
 
-#: ../../library/asyncio-protocol.rst:578
-#: ../../library/asyncio-protocol.rst:636
+#: ../../library/asyncio-protocol.rst:583
+#: ../../library/asyncio-protocol.rst:641
 msgid "State machine:"
 msgstr "Державна машина:"
 
-#: ../../library/asyncio-protocol.rst:589
+#: ../../library/asyncio-protocol.rst:594
 msgid "Buffered Streaming Protocols"
 msgstr "Буферизовані потокові протоколи"
 
-#: ../../library/asyncio-protocol.rst:593
+#: ../../library/asyncio-protocol.rst:598
 msgid ""
 "Buffered Protocols can be used with any event loop method that supports "
 "`Streaming Protocols`_."
@@ -1026,7 +1033,7 @@ msgstr ""
 "Буферизовані протоколи можна використовувати з будь-яким методом циклу "
 "подій, який підтримує `Streaming Protocols`_."
 
-#: ../../library/asyncio-protocol.rst:596
+#: ../../library/asyncio-protocol.rst:601
 msgid ""
 "``BufferedProtocol`` implementations allow explicit manual allocation and "
 "control of the receive buffer.  Event loops can then use the buffer provided"
@@ -1042,18 +1049,18 @@ msgstr ""
 "отримують великі обсяги даних. Складні реалізації протоколів можуть значно "
 "зменшити кількість розподілів буферів."
 
-#: ../../library/asyncio-protocol.rst:603
+#: ../../library/asyncio-protocol.rst:608
 msgid ""
 "The following callbacks are called on :class:`BufferedProtocol` instances:"
 msgstr ""
 "Наступні зворотні виклики викликаються в екземплярах "
 ":class:`BufferedProtocol`:"
 
-#: ../../library/asyncio-protocol.rst:608
+#: ../../library/asyncio-protocol.rst:613
 msgid "Called to allocate a new receive buffer."
 msgstr "Викликається для виділення нового буфера отримання."
 
-#: ../../library/asyncio-protocol.rst:610
+#: ../../library/asyncio-protocol.rst:615
 msgid ""
 "*sizehint* is the recommended minimum size for the returned buffer.  It is "
 "acceptable to return smaller or larger buffers than what *sizehint* "
@@ -1065,7 +1072,7 @@ msgstr ""
 "встановлено значення -1, розмір буфера може бути довільним. Помилкою є "
 "повернення буфера з нульовим розміром."
 
-#: ../../library/asyncio-protocol.rst:615
+#: ../../library/asyncio-protocol.rst:620
 msgid ""
 "``get_buffer()`` must return an object implementing the :ref:`buffer "
 "protocol <bufferobjects>`."
@@ -1073,15 +1080,15 @@ msgstr ""
 "``get_buffer()`` має повертати об’єкт, що реалізує :ref:`протокол буфера "
 "<bufferobjects>`."
 
-#: ../../library/asyncio-protocol.rst:620
+#: ../../library/asyncio-protocol.rst:625
 msgid "Called when the buffer was updated with the received data."
 msgstr "Викликається, коли буфер оновлюється отриманими даними."
 
-#: ../../library/asyncio-protocol.rst:622
+#: ../../library/asyncio-protocol.rst:627
 msgid "*nbytes* is the total number of bytes that were written to the buffer."
 msgstr "*nbytes* — це загальна кількість байтів, які були записані в буфер."
 
-#: ../../library/asyncio-protocol.rst:626
+#: ../../library/asyncio-protocol.rst:631
 msgid ""
 "See the documentation of the :meth:`protocol.eof_received() "
 "<Protocol.eof_received>` method."
@@ -1089,7 +1096,7 @@ msgstr ""
 "Перегляньте документацію методу :meth:`protocol.eof_received() "
 "<Protocol.eof_received>`."
 
-#: ../../library/asyncio-protocol.rst:630
+#: ../../library/asyncio-protocol.rst:635
 msgid ""
 ":meth:`~BufferedProtocol.get_buffer` can be called an arbitrary number of "
 "times during a connection.  However, :meth:`protocol.eof_received() "
@@ -1103,11 +1110,11 @@ msgstr ""
 "викликано, :meth:`~BufferedProtocol.get_buffer` і "
 ":meth:`~BufferedProtocol.buffer_updated` не будуть викликатися після нього."
 
-#: ../../library/asyncio-protocol.rst:649
+#: ../../library/asyncio-protocol.rst:654
 msgid "Datagram Protocols"
 msgstr "Протоколи дейтаграм"
 
-#: ../../library/asyncio-protocol.rst:651
+#: ../../library/asyncio-protocol.rst:656
 msgid ""
 "Datagram Protocol instances should be constructed by protocol factories "
 "passed to the :meth:`loop.create_datagram_endpoint` method."
@@ -1115,7 +1122,7 @@ msgstr ""
 "Екземпляри протоколу дейтаграм мають бути створені фабриками протоколів, "
 "переданими в метод :meth:`loop.create_datagram_endpoint`."
 
-#: ../../library/asyncio-protocol.rst:656
+#: ../../library/asyncio-protocol.rst:661
 msgid ""
 "Called when a datagram is received.  *data* is a bytes object containing the"
 " incoming data.  *addr* is the address of the peer sending the data; the "
@@ -1125,7 +1132,7 @@ msgstr ""
 " вхідні дані. *addr* — це адреса вузла, який надсилає дані; точний формат "
 "залежить від транспорту."
 
-#: ../../library/asyncio-protocol.rst:662
+#: ../../library/asyncio-protocol.rst:667
 msgid ""
 "Called when a previous send or receive operation raises an :class:`OSError`."
 "  *exc* is the :class:`OSError` instance."
@@ -1133,7 +1140,7 @@ msgstr ""
 "Викликається, коли попередня операція надсилання чи отримання викликає "
 ":class:`OSError`. *exc* — це екземпляр :class:`OSError`."
 
-#: ../../library/asyncio-protocol.rst:665
+#: ../../library/asyncio-protocol.rst:670
 msgid ""
 "This method is called in rare conditions, when the transport (e.g. UDP) "
 "detects that a datagram could not be delivered to its recipient. In many "
@@ -1143,7 +1150,7 @@ msgstr ""
 " виявляє, що дейтаграму не вдалося доставити одержувачу. Однак у багатьох "
 "випадках дейтаграми, які неможливо доставити, будуть мовчки видалені."
 
-#: ../../library/asyncio-protocol.rst:672
+#: ../../library/asyncio-protocol.rst:677
 msgid ""
 "On BSD systems (macOS, FreeBSD, etc.) flow control is not supported for "
 "datagram protocols, because there is no reliable way to detect send failures"
@@ -1153,7 +1160,7 @@ msgstr ""
 "протоколів дейтаграм, оскільки немає надійного способу виявити помилки "
 "надсилання, спричинені записом занадто великої кількості пакетів."
 
-#: ../../library/asyncio-protocol.rst:676
+#: ../../library/asyncio-protocol.rst:681
 msgid ""
 "The socket always appears 'ready' and excess packets are dropped. An "
 ":class:`OSError` with ``errno`` set to :const:`errno.ENOBUFS` may or may not"
@@ -1166,11 +1173,11 @@ msgstr ""
 ":meth:`DatagramProtocol.error_received`, але в інших випадках воно буде "
 "проігноровано."
 
-#: ../../library/asyncio-protocol.rst:685
+#: ../../library/asyncio-protocol.rst:690
 msgid "Subprocess Protocols"
 msgstr "Протоколи підпроцесів"
 
-#: ../../library/asyncio-protocol.rst:687
+#: ../../library/asyncio-protocol.rst:692
 msgid ""
 "Subprocess Protocol instances should be constructed by protocol factories "
 "passed to the :meth:`loop.subprocess_exec` and :meth:`loop.subprocess_shell`"
@@ -1180,49 +1187,49 @@ msgstr ""
 "переданими методам :meth:`loop.subprocess_exec` і "
 ":meth:`loop.subprocess_shell`."
 
-#: ../../library/asyncio-protocol.rst:693
+#: ../../library/asyncio-protocol.rst:698
 msgid ""
 "Called when the child process writes data into its stdout or stderr pipe."
 msgstr ""
 "Викликається, коли дочірній процес записує дані в канал stdout або stderr."
 
-#: ../../library/asyncio-protocol.rst:696
+#: ../../library/asyncio-protocol.rst:701
 msgid "*fd* is the integer file descriptor of the pipe."
 msgstr "*fd* — цілочисельний файловий дескриптор каналу."
 
-#: ../../library/asyncio-protocol.rst:698
+#: ../../library/asyncio-protocol.rst:703
 msgid "*data* is a non-empty bytes object containing the received data."
 msgstr "*data* — об’єкт із непорожніми байтами, що містить отримані дані."
 
-#: ../../library/asyncio-protocol.rst:702
+#: ../../library/asyncio-protocol.rst:707
 msgid ""
 "Called when one of the pipes communicating with the child process is closed."
 msgstr ""
 "Викликається, коли одна з труб, що спілкуються з дочірнім процесом, закрита."
 
-#: ../../library/asyncio-protocol.rst:705
+#: ../../library/asyncio-protocol.rst:710
 msgid "*fd* is the integer file descriptor that was closed."
 msgstr "*fd* — цілочисельний файловий дескриптор, який було закрито."
 
-#: ../../library/asyncio-protocol.rst:709
+#: ../../library/asyncio-protocol.rst:714
 msgid "Called when the child process has exited."
 msgstr "Викликається, коли дочірній процес завершився."
 
-#: ../../library/asyncio-protocol.rst:711
+#: ../../library/asyncio-protocol.rst:716
 msgid ""
 "It can be called before :meth:`~SubprocessProtocol.pipe_data_received` and "
 ":meth:`~SubprocessProtocol.pipe_connection_lost` methods."
 msgstr ""
 
-#: ../../library/asyncio-protocol.rst:716
+#: ../../library/asyncio-protocol.rst:721
 msgid "Examples"
 msgstr "Приклади"
 
-#: ../../library/asyncio-protocol.rst:721
+#: ../../library/asyncio-protocol.rst:726
 msgid "TCP Echo Server"
 msgstr "TCP Echo Server"
 
-#: ../../library/asyncio-protocol.rst:723
+#: ../../library/asyncio-protocol.rst:728
 msgid ""
 "Create a TCP echo server using the :meth:`loop.create_server` method, send "
 "back received data, and close the connection::"
@@ -1230,7 +1237,7 @@ msgstr ""
 "Створіть TCP-сервер ехо за допомогою методу :meth:`loop.create_server`, "
 "надішліть назад отримані дані та закрийте з’єднання::"
 
-#: ../../library/asyncio-protocol.rst:764
+#: ../../library/asyncio-protocol.rst:769
 msgid ""
 "The :ref:`TCP echo server using streams <asyncio-tcp-echo-server-streams>` "
 "example uses the high-level :func:`asyncio.start_server` function."
@@ -1239,11 +1246,11 @@ msgstr ""
 "streams>` використовується функція :func:`asyncio.start_server` високого "
 "рівня."
 
-#: ../../library/asyncio-protocol.rst:770
+#: ../../library/asyncio-protocol.rst:775
 msgid "TCP Echo Client"
 msgstr "TCP Echo Client"
 
-#: ../../library/asyncio-protocol.rst:772
+#: ../../library/asyncio-protocol.rst:777
 msgid ""
 "A TCP echo client using the :meth:`loop.create_connection` method, sends "
 "data, and waits until the connection is closed::"
@@ -1251,7 +1258,7 @@ msgstr ""
 "TCP-клієнт відлуння, використовуючи метод :meth:`loop.create_connection`, "
 "надсилає дані та чекає, доки з’єднання не буде закрито::"
 
-#: ../../library/asyncio-protocol.rst:820
+#: ../../library/asyncio-protocol.rst:825
 msgid ""
 "The :ref:`TCP echo client using streams <asyncio-tcp-echo-client-streams>` "
 "example uses the high-level :func:`asyncio.open_connection` function."
@@ -1260,11 +1267,11 @@ msgstr ""
 "streams>` використовується функція :func:`asyncio.open_connection` високого "
 "рівня."
 
-#: ../../library/asyncio-protocol.rst:827
+#: ../../library/asyncio-protocol.rst:832
 msgid "UDP Echo Server"
 msgstr "Сервер UDP Echo"
 
-#: ../../library/asyncio-protocol.rst:829
+#: ../../library/asyncio-protocol.rst:834
 msgid ""
 "A UDP echo server, using the :meth:`loop.create_datagram_endpoint` method, "
 "sends back received data::"
@@ -1272,11 +1279,11 @@ msgstr ""
 "Ехо-сервер UDP за допомогою методу :meth:`loop.create_datagram_endpoint` "
 "повертає отримані дані:"
 
-#: ../../library/asyncio-protocol.rst:871
+#: ../../library/asyncio-protocol.rst:876
 msgid "UDP Echo Client"
 msgstr "UDP Echo Client"
 
-#: ../../library/asyncio-protocol.rst:873
+#: ../../library/asyncio-protocol.rst:878
 msgid ""
 "A UDP echo client, using the :meth:`loop.create_datagram_endpoint` method, "
 "sends data and closes the transport when it receives the answer::"
@@ -1284,11 +1291,11 @@ msgstr ""
 "Ехо-клієнт UDP, використовуючи метод :meth:`loop.create_datagram_endpoint`, "
 "надсилає дані та закриває транспорт, коли отримує відповідь:"
 
-#: ../../library/asyncio-protocol.rst:928
+#: ../../library/asyncio-protocol.rst:933
 msgid "Connecting Existing Sockets"
 msgstr "Підключення наявних розеток"
 
-#: ../../library/asyncio-protocol.rst:930
+#: ../../library/asyncio-protocol.rst:935
 msgid ""
 "Wait until a socket receives data using the :meth:`loop.create_connection` "
 "method with a protocol::"
@@ -1296,7 +1303,7 @@ msgstr ""
 "Зачекайте, поки сокет отримає дані за допомогою методу "
 ":meth:`loop.create_connection` з протоколом::"
 
-#: ../../library/asyncio-protocol.rst:984
+#: ../../library/asyncio-protocol.rst:989
 msgid ""
 "The :ref:`watch a file descriptor for read events "
 "<asyncio_example_watch_fd>` example uses the low-level "
@@ -1306,7 +1313,7 @@ msgstr ""
 "<asyncio_example_watch_fd>` використовується метод низького рівня "
 ":meth:`loop.add_reader` для реєстрації FD."
 
-#: ../../library/asyncio-protocol.rst:988
+#: ../../library/asyncio-protocol.rst:993
 msgid ""
 "The :ref:`register an open socket to wait for data using streams "
 "<asyncio_example_create_connection-streams>` example uses high-level streams"
@@ -1316,11 +1323,11 @@ msgstr ""
 "<asyncio_example_create_connection-streams>` використовуються потоки "
 "високого рівня, створені функцією :func:`open_connection` у співпрограмі."
 
-#: ../../library/asyncio-protocol.rst:995
+#: ../../library/asyncio-protocol.rst:1000
 msgid "loop.subprocess_exec() and SubprocessProtocol"
 msgstr "loop.subprocess_exec() і SubprocessProtocol"
 
-#: ../../library/asyncio-protocol.rst:997
+#: ../../library/asyncio-protocol.rst:1002
 msgid ""
 "An example of a subprocess protocol used to get the output of a subprocess "
 "and to wait for the subprocess exit."
@@ -1328,11 +1335,11 @@ msgstr ""
 "Приклад протоколу підпроцесу, який використовується для отримання "
 "результатів підпроцесу та очікування виходу підпроцесу."
 
-#: ../../library/asyncio-protocol.rst:1000
+#: ../../library/asyncio-protocol.rst:1005
 msgid "The subprocess is created by the :meth:`loop.subprocess_exec` method::"
 msgstr "Підпроцес створюється методом :meth:`loop.subprocess_exec`::"
 
-#: ../../library/asyncio-protocol.rst:1060
+#: ../../library/asyncio-protocol.rst:1065
 msgid ""
 "See also the :ref:`same example <asyncio_example_create_subprocess_exec>` "
 "written using high-level APIs."

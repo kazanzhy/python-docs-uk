@@ -12,9 +12,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-03 14:14+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:19+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -796,8 +796,8 @@ msgstr ""
 "містить таку саму кількість елементів, як і формальний список параметрів "
 "функції."
 
-#: ../../reference/datamodel.rst:541 ../../reference/datamodel.rst:1127
-#: ../../reference/datamodel.rst:1322
+#: ../../reference/datamodel.rst:541 ../../reference/datamodel.rst:1136
+#: ../../reference/datamodel.rst:1333
 msgid "Special read-only attributes"
 msgstr ""
 
@@ -830,7 +830,7 @@ msgstr ""
 "Об’єкт клітинки має атрибут ``cell_contents``. Це можна використовувати для "
 "отримання значення комірки, а також для встановлення значення."
 
-#: ../../reference/datamodel.rst:567 ../../reference/datamodel.rst:1359
+#: ../../reference/datamodel.rst:567 ../../reference/datamodel.rst:1375
 msgid "Special writable attributes"
 msgstr ""
 
@@ -936,7 +936,7 @@ msgstr ""
 "Об’єкт методу екземпляра поєднує в собі клас, екземпляр класу та будь-який "
 "об’єкт, що викликається (зазвичай це функція, визначена користувачем)."
 
-#: ../../reference/datamodel.rst:672 ../../reference/datamodel.rst:1450
+#: ../../reference/datamodel.rst:672 ../../reference/datamodel.rst:1471
 msgid "Special read-only attributes:"
 msgstr ""
 
@@ -1225,7 +1225,7 @@ msgstr ":attr:`__name__`"
 msgid "The module's name."
 msgstr "Назва модуля."
 
-#: ../../reference/datamodel.rst:891 ../../reference/datamodel.rst:989
+#: ../../reference/datamodel.rst:891 ../../reference/datamodel.rst:991
 msgid ":attr:`__doc__`"
 msgstr ":attr:`__doc__`"
 
@@ -1251,7 +1251,7 @@ msgstr ""
 "модулів розширення, які динамічно завантажуються зі спільної бібліотеки, це "
 "шлях до файлу спільної бібліотеки."
 
-#: ../../reference/datamodel.rst:904 ../../reference/datamodel.rst:992
+#: ../../reference/datamodel.rst:904 ../../reference/datamodel.rst:994
 msgid ":attr:`__annotations__`"
 msgstr ":attr:`__annotations__`"
 
@@ -1331,50 +1331,50 @@ msgstr ""
 "Об’єкт класу можна викликати (див. вище), щоб створити екземпляр класу (див."
 " нижче)."
 
-#: ../../reference/datamodel.rst:974
+#: ../../reference/datamodel.rst:976
 msgid "Special attributes:"
 msgstr "Особливі атрибути:"
 
-#: ../../reference/datamodel.rst:976
+#: ../../reference/datamodel.rst:978
 msgid ":attr:`~definition.__name__`"
 msgstr ":attr:`~definition.__name__`"
 
-#: ../../reference/datamodel.rst:977
+#: ../../reference/datamodel.rst:979
 msgid "The class name."
 msgstr "Назва класу."
 
-#: ../../reference/datamodel.rst:979
+#: ../../reference/datamodel.rst:981
 msgid ":attr:`__module__`"
 msgstr ":attr:`__module__`"
 
-#: ../../reference/datamodel.rst:980
+#: ../../reference/datamodel.rst:982
 msgid "The name of the module in which the class was defined."
 msgstr "Ім'я модуля, в якому було визначено клас."
 
-#: ../../reference/datamodel.rst:982
+#: ../../reference/datamodel.rst:984
 msgid ":attr:`~object.__dict__`"
 msgstr ":attr:`~об’єкт.__dict__`"
 
-#: ../../reference/datamodel.rst:983
+#: ../../reference/datamodel.rst:985
 msgid "The dictionary containing the class's namespace."
 msgstr "Словник, що містить простір імен класу."
 
-#: ../../reference/datamodel.rst:985
+#: ../../reference/datamodel.rst:987
 msgid ":attr:`~class.__bases__`"
 msgstr ":attr:`~class.__bases__`"
 
-#: ../../reference/datamodel.rst:986
+#: ../../reference/datamodel.rst:988
 msgid ""
 "A tuple containing the base classes, in the order of their occurrence in the"
 " base class list."
 msgstr ""
 "Кортеж, що містить базові класи в порядку їх появи в списку базових класів."
 
-#: ../../reference/datamodel.rst:990
+#: ../../reference/datamodel.rst:992
 msgid "The class's documentation string, or ``None`` if undefined."
 msgstr "Рядок документації класу або ``None``, якщо не визначено."
 
-#: ../../reference/datamodel.rst:993
+#: ../../reference/datamodel.rst:995
 msgid ""
 "A dictionary containing :term:`variable annotations <variable annotation>` "
 "collected during class body execution.  For best practices on working with "
@@ -1384,21 +1384,41 @@ msgstr ""
 "під час виконання тіла класу. Найкращі методи роботи з "
 ":attr:`__annotations__` див. :ref:`annotations-howto`."
 
-#: ../../reference/datamodel.rst:999
+#: ../../reference/datamodel.rst:1001
 msgid ":attr:`__type_params__`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1000
+#: ../../reference/datamodel.rst:1002
 msgid ""
 "A tuple containing the :ref:`type parameters <type-params>` of a "
 ":ref:`generic class <generic-classes>`."
 msgstr ""
 
 #: ../../reference/datamodel.rst:1005
+msgid ":attr:`~class.__static_attributes__`"
+msgstr ""
+
+#: ../../reference/datamodel.rst:1006
+msgid ""
+"A tuple containing names of attributes of this class which are accessed "
+"through ``self.X`` from any function in its body."
+msgstr ""
+
+#: ../../reference/datamodel.rst:1009
+msgid ":attr:`__firstlineno__`"
+msgstr ""
+
+#: ../../reference/datamodel.rst:1010
+msgid ""
+"The line number of the first line of the class definition, including "
+"decorators."
+msgstr ""
+
+#: ../../reference/datamodel.rst:1014
 msgid "Class instances"
 msgstr "Екземпляри класу"
 
-#: ../../reference/datamodel.rst:1013
+#: ../../reference/datamodel.rst:1022
 msgid ""
 "A class instance is created by calling a class object (see above).  A class "
 "instance has a namespace implemented as a dictionary which is the first "
@@ -1415,7 +1435,7 @@ msgid ""
 ":meth:`~object.__getattr__` method, that is called to satisfy the lookup."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1029
+#: ../../reference/datamodel.rst:1038
 msgid ""
 "Attribute assignments and deletions update the instance's dictionary, never "
 "a class's dictionary.  If the class has a :meth:`~object.__setattr__` or "
@@ -1427,7 +1447,7 @@ msgstr ""
 ":meth:`~object.__delattr__`, він викликається замість безпосереднього "
 "оновлення словника примірника."
 
-#: ../../reference/datamodel.rst:1039
+#: ../../reference/datamodel.rst:1048
 msgid ""
 "Class instances can pretend to be numbers, sequences, or mappings if they "
 "have methods with certain special names.  See section :ref:`specialnames`."
@@ -1436,7 +1456,7 @@ msgstr ""
 "відображення, якщо вони мають методи з певними спеціальними назвами. "
 "Дивіться розділ :ref:`specialnames`."
 
-#: ../../reference/datamodel.rst:1046
+#: ../../reference/datamodel.rst:1055
 msgid ""
 "Special attributes: :attr:`~object.__dict__` is the attribute dictionary; "
 ":attr:`~instance.__class__` is the instance's class."
@@ -1444,11 +1464,11 @@ msgstr ""
 "Спеціальні атрибути: :attr:`~object.__dict__` — це словник атрибутів; "
 ":attr:`~instance.__class__` є класом екземпляра."
 
-#: ../../reference/datamodel.rst:1051
+#: ../../reference/datamodel.rst:1060
 msgid "I/O objects (also known as file objects)"
 msgstr "Об’єкти введення-виведення (також відомі як файлові об’єкти)"
 
-#: ../../reference/datamodel.rst:1066
+#: ../../reference/datamodel.rst:1075
 msgid ""
 "A :term:`file object` represents an open file.  Various shortcuts are "
 "available to create file objects: the :func:`open` built-in function, and "
@@ -1462,7 +1482,7 @@ msgstr ""
 " об’єктів сокета (і, можливо, за допомогою інших функцій або методів, "
 "наданих модулями розширення)."
 
-#: ../../reference/datamodel.rst:1072
+#: ../../reference/datamodel.rst:1081
 msgid ""
 "The objects ``sys.stdin``, ``sys.stdout`` and ``sys.stderr`` are initialized"
 " to file objects corresponding to the interpreter's standard input, output "
@@ -1475,11 +1495,11 @@ msgstr ""
 "відповідають інтерфейсу, визначеному :class:`io.TextIOBase` абстрактним "
 "класом."
 
-#: ../../reference/datamodel.rst:1080
+#: ../../reference/datamodel.rst:1089
 msgid "Internal types"
 msgstr "Внутрішні типи"
 
-#: ../../reference/datamodel.rst:1086
+#: ../../reference/datamodel.rst:1095
 msgid ""
 "A few types used internally by the interpreter are exposed to the user. "
 "Their definitions may change with future versions of the interpreter, but "
@@ -1489,11 +1509,11 @@ msgstr ""
 "користувачеві. Їх визначення можуть змінюватися в майбутніх версіях "
 "інтерпретатора, але вони згадуються тут для повноти."
 
-#: ../../reference/datamodel.rst:1094
+#: ../../reference/datamodel.rst:1103
 msgid "Code objects"
 msgstr "Об'єкти коду"
 
-#: ../../reference/datamodel.rst:1098
+#: ../../reference/datamodel.rst:1107
 msgid ""
 "Code objects represent *byte-compiled* executable Python code, or "
 ":term:`bytecode`. The difference between a code object and a function object"
@@ -1515,104 +1535,104 @@ msgstr ""
 "об’єкти коду є незмінними і не містять посилань (прямих чи опосередкованих) "
 "на змінні об’єкти."
 
-#: ../../reference/datamodel.rst:1132
+#: ../../reference/datamodel.rst:1141
 msgid "The function name"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1135
+#: ../../reference/datamodel.rst:1144
 msgid "The fully qualified function name"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1140
+#: ../../reference/datamodel.rst:1149
 msgid ""
 "The total number of positional :term:`parameters <parameter>` (including "
 "positional-only parameters and parameters with default values) that the "
 "function has"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1145
+#: ../../reference/datamodel.rst:1154
 msgid ""
 "The number of positional-only :term:`parameters <parameter>` (including "
 "arguments with default values) that the function has"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1149
+#: ../../reference/datamodel.rst:1158
 msgid ""
 "The number of keyword-only :term:`parameters <parameter>` (including "
 "arguments with default values) that the function has"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1153
+#: ../../reference/datamodel.rst:1162
 msgid ""
 "The number of :ref:`local variables <naming>` used by the function "
 "(including parameters)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1157
+#: ../../reference/datamodel.rst:1166
 msgid ""
 "A :class:`tuple` containing the names of the local variables in the function"
 " (starting with the parameter names)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1161
+#: ../../reference/datamodel.rst:1170
 msgid ""
 "A :class:`tuple` containing the names of :ref:`local variables <naming>` "
 "that are referenced by nested functions inside the function"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1165
+#: ../../reference/datamodel.rst:1174
 msgid ""
 "A :class:`tuple` containing the names of free variables in the function"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1168
+#: ../../reference/datamodel.rst:1177
 msgid ""
 "A string representing the sequence of :term:`bytecode` instructions in the "
 "function"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1172
+#: ../../reference/datamodel.rst:1181
 msgid ""
 "A :class:`tuple` containing the literals used by the :term:`bytecode` in the"
 " function"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1176
+#: ../../reference/datamodel.rst:1185
 msgid ""
 "A :class:`tuple` containing the names used by the :term:`bytecode` in the "
 "function"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1180
+#: ../../reference/datamodel.rst:1189
 msgid "The name of the file from which the code was compiled"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1183
+#: ../../reference/datamodel.rst:1192
 msgid "The line number of the first line of the function"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1186
+#: ../../reference/datamodel.rst:1195
 msgid ""
 "A string encoding the mapping from :term:`bytecode` offsets to line numbers."
 " For details, see the source code of the interpreter."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1189
+#: ../../reference/datamodel.rst:1198
 msgid ""
 "This attribute of code objects is deprecated, and may be removed in Python "
 "3.14."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1194
+#: ../../reference/datamodel.rst:1203
 msgid "The required stack size of the code object"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1197
+#: ../../reference/datamodel.rst:1206
 msgid ""
 "An :class:`integer <int>` encoding a number of flags for the interpreter."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1202
+#: ../../reference/datamodel.rst:1211
 msgid ""
 "The following flag bits are defined for :attr:`~codeobject.co_flags`: bit "
 "``0x04`` is set if the function uses the ``*arguments`` syntax to accept an "
@@ -1623,7 +1643,7 @@ msgid ""
 "that might be present."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1210
+#: ../../reference/datamodel.rst:1219
 msgid ""
 "Future feature declarations (``from __future__ import division``) also use "
 "bits in :attr:`~codeobject.co_flags` to indicate whether a code object was "
@@ -1632,29 +1652,29 @@ msgid ""
 "``0x1000`` were used in earlier versions of Python."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1216
+#: ../../reference/datamodel.rst:1225
 msgid ""
 "Other bits in :attr:`~codeobject.co_flags` are reserved for internal use."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1220
+#: ../../reference/datamodel.rst:1229
 msgid ""
 "If a code object represents a function, the first item in "
 ":attr:`~codeobject.co_consts` is the documentation string of the function, "
 "or ``None`` if undefined."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1225
+#: ../../reference/datamodel.rst:1234
 msgid "Methods on code objects"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1229
+#: ../../reference/datamodel.rst:1238
 msgid ""
 "Returns an iterable over the source code positions of each :term:`bytecode` "
 "instruction in the code object."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1232
+#: ../../reference/datamodel.rst:1241
 msgid ""
 "The iterator returns :class:`tuple`\\s containing the ``(start_line, "
 "end_line, start_column, end_column)``. The *i-th* tuple corresponds to the "
@@ -1662,37 +1682,37 @@ msgid ""
 "information is 0-indexed utf-8 byte offsets on the given source line."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1238
+#: ../../reference/datamodel.rst:1247
 msgid ""
 "This positional information can be missing. A non-exhaustive lists of cases "
 "where this may happen:"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1241
+#: ../../reference/datamodel.rst:1250
 msgid "Running the interpreter with :option:`-X` ``no_debug_ranges``."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1242
+#: ../../reference/datamodel.rst:1251
 msgid ""
 "Loading a pyc file compiled while using :option:`-X` ``no_debug_ranges``."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1243
+#: ../../reference/datamodel.rst:1252
 msgid "Position tuples corresponding to artificial instructions."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1244
+#: ../../reference/datamodel.rst:1253
 msgid ""
 "Line and column numbers that can't be represented due to implementation "
 "specific limitations."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1247
+#: ../../reference/datamodel.rst:1256
 msgid ""
 "When this occurs, some or all of the tuple elements can be :const:`None`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1253
+#: ../../reference/datamodel.rst:1262
 msgid ""
 "This feature requires storing column positions in code objects which may "
 "result in a small increase of disk usage of compiled Python files or "
@@ -1702,144 +1722,156 @@ msgid ""
 "environment variable can be used."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1262
+#: ../../reference/datamodel.rst:1271
 msgid ""
 "Returns an iterator that yields information about successive ranges of "
 ":term:`bytecode`\\s. Each item yielded is a ``(start, end, lineno)`` "
 ":class:`tuple`:"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1266
+#: ../../reference/datamodel.rst:1275
 msgid ""
 "``start`` (an :class:`int`) represents the offset (inclusive) of the start "
 "of the :term:`bytecode` range"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1268
+#: ../../reference/datamodel.rst:1277
 msgid ""
 "``end`` (an :class:`int`) represents the offset (exclusive) of the end of "
 "the :term:`bytecode` range"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1270
+#: ../../reference/datamodel.rst:1279
 msgid ""
 "``lineno`` is an :class:`int` representing the line number of the "
 ":term:`bytecode` range, or ``None`` if the bytecodes in the given range have"
 " no line number"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1274
+#: ../../reference/datamodel.rst:1283
 msgid "The items yielded will have the following properties:"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1276
+#: ../../reference/datamodel.rst:1285
 msgid "The first range yielded will have a ``start`` of 0."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1277
+#: ../../reference/datamodel.rst:1286
 msgid ""
 "The ``(start, end)`` ranges will be non-decreasing and consecutive. That is,"
 " for any pair of :class:`tuple`\\s, the ``start`` of the second will be "
 "equal to the ``end`` of the first."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1280
+#: ../../reference/datamodel.rst:1289
 msgid "No range will be backwards: ``end >= start`` for all triples."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1281
+#: ../../reference/datamodel.rst:1290
 msgid ""
 "The last :class:`tuple` yielded will have ``end`` equal to the size of the "
 ":term:`bytecode`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1284
+#: ../../reference/datamodel.rst:1293
 msgid ""
 "Zero-width ranges, where ``start == end``, are allowed. Zero-width ranges "
 "are used for lines that are present in the source code, but have been "
 "eliminated by the :term:`bytecode` compiler."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1292
+#: ../../reference/datamodel.rst:1301
 msgid ":pep:`626` - Precise line numbers for debugging and other tools."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1293
+#: ../../reference/datamodel.rst:1302
 msgid "The PEP that introduced the :meth:`!co_lines` method."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1297
+#: ../../reference/datamodel.rst:1306
 msgid ""
 "Return a copy of the code object with new values for the specified fields."
 msgstr "Повернути копію об’єкта коду з новими значеннями для вказаних полів."
 
-#: ../../reference/datamodel.rst:1305
+#: ../../reference/datamodel.rst:1308
+msgid ""
+"Code objects are also supported by the generic function "
+":func:`copy.replace`."
+msgstr ""
+
+#: ../../reference/datamodel.rst:1316
 msgid "Frame objects"
 msgstr "Рамкові об'єкти"
 
-#: ../../reference/datamodel.rst:1309
+#: ../../reference/datamodel.rst:1320
 msgid ""
 "Frame objects represent execution frames.  They may occur in :ref:`traceback"
 " objects <traceback-objects>`, and are also passed to registered trace "
 "functions."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1327
+#: ../../reference/datamodel.rst:1338
 msgid ""
 "Points to the previous stack frame (towards the caller), or ``None`` if this"
 " is the bottom stack frame"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1331
+#: ../../reference/datamodel.rst:1342
 msgid ""
 "The :ref:`code object <code-objects>` being executed in this frame. "
 "Accessing this attribute raises an :ref:`auditing event <auditing>` "
 "``object.__getattr__`` with arguments ``obj`` and ``\"f_code\"``."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1336
+#: ../../reference/datamodel.rst:1347
 msgid ""
-"The dictionary used by the frame to look up :ref:`local variables <naming>`"
+"The dictionary used by the frame to look up :ref:`local variables <naming>`."
+" If the frame refers to a function or comprehension, this may return a "
+"write-through proxy object."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1340
+#: ../../reference/datamodel.rst:1352
+msgid "Return a proxy for functions and comprehensions."
+msgstr ""
+
+#: ../../reference/datamodel.rst:1356
 msgid ""
 "The dictionary used by the frame to look up :ref:`global variables <naming>`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1344
+#: ../../reference/datamodel.rst:1360
 msgid ""
 "The dictionary used by the frame to look up :ref:`built-in (intrinsic) names"
 " <naming>`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1348
+#: ../../reference/datamodel.rst:1364
 msgid ""
 "The \"precise instruction\" of the frame object (this is an index into the "
 ":term:`bytecode` string of the :ref:`code object <code-objects>`)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1364
+#: ../../reference/datamodel.rst:1380
 msgid ""
 "If not ``None``, this is a function called for various events during code "
 "execution (this is used by debuggers). Normally an event is triggered for "
 "each new source line (see :attr:`~frame.f_trace_lines`)."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1369
+#: ../../reference/datamodel.rst:1385
 msgid ""
 "Set this attribute to :const:`False` to disable triggering a tracing event "
 "for each source line."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1373
+#: ../../reference/datamodel.rst:1389
 msgid ""
 "Set this attribute to :const:`True` to allow per-opcode events to be "
 "requested. Note that this may lead to undefined interpreter behaviour if "
 "exceptions raised by the trace function escape to the function being traced."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1379
+#: ../../reference/datamodel.rst:1395
 msgid ""
 "The current line number of the frame -- writing to this from within a trace "
 "function jumps to the given line (only for the bottom-most frame).  A "
@@ -1847,15 +1879,15 @@ msgid ""
 " this attribute."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1385
+#: ../../reference/datamodel.rst:1401
 msgid "Frame object methods"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1387
+#: ../../reference/datamodel.rst:1403
 msgid "Frame objects support one method:"
 msgstr "Об’єкти фрейму підтримують один метод:"
 
-#: ../../reference/datamodel.rst:1391
+#: ../../reference/datamodel.rst:1407
 msgid ""
 "This method clears all references to :ref:`local variables <naming>` held by"
 " the frame.  Also, if the frame belonged to a :term:`generator`, the "
@@ -1864,26 +1896,34 @@ msgid ""
 "and storing its :ref:`traceback <traceback-objects>` for later use)."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1397
-msgid ":exc:`RuntimeError` is raised if the frame is currently executing."
-msgstr ":exc:`RuntimeError` виникає, якщо кадр зараз виконується."
+#: ../../reference/datamodel.rst:1413
+msgid ""
+":exc:`RuntimeError` is raised if the frame is currently executing or "
+"suspended."
+msgstr ""
 
-#: ../../reference/datamodel.rst:1405
+#: ../../reference/datamodel.rst:1418
+msgid ""
+"Attempting to clear a suspended frame raises :exc:`RuntimeError` (as has "
+"always been the case for executing frames)."
+msgstr ""
+
+#: ../../reference/datamodel.rst:1426
 msgid "Traceback objects"
 msgstr "Об'єкти відстеження"
 
-#: ../../reference/datamodel.rst:1418
+#: ../../reference/datamodel.rst:1439
 msgid ""
 "Traceback objects represent the stack trace of an :ref:`exception <tut-"
 "errors>`. A traceback object is implicitly created when an exception occurs,"
 " and may also be explicitly created by calling :class:`types.TracebackType`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1423
+#: ../../reference/datamodel.rst:1444
 msgid "Traceback objects can now be explicitly instantiated from Python code."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1426
+#: ../../reference/datamodel.rst:1447
 msgid ""
 "For implicitly created tracebacks, when the search for an exception handler "
 "unwinds the execution stack, at each unwound level a traceback object is "
@@ -1894,7 +1934,7 @@ msgid ""
 "attribute of the caught exception."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1435
+#: ../../reference/datamodel.rst:1456
 msgid ""
 "When the program contains no suitable handler, the stack trace is written "
 "(nicely formatted) to the standard error stream; if the interpreter is "
@@ -1902,33 +1942,33 @@ msgid ""
 ":data:`sys.last_traceback`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1440
+#: ../../reference/datamodel.rst:1461
 msgid ""
 "For explicitly created tracebacks, it is up to the creator of the traceback "
 "to determine how the :attr:`~traceback.tb_next` attributes should be linked "
 "to form a full stack trace."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1455
+#: ../../reference/datamodel.rst:1476
 msgid ""
 "Points to the execution :ref:`frame <frame-objects>` of the current level."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1458
+#: ../../reference/datamodel.rst:1479
 msgid ""
 "Accessing this attribute raises an :ref:`auditing event <auditing>` "
 "``object.__getattr__`` with arguments ``obj`` and ``\"tb_frame\"``."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1463
+#: ../../reference/datamodel.rst:1484
 msgid "Gives the line number where the exception occurred"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1466
+#: ../../reference/datamodel.rst:1487
 msgid "Indicates the \"precise instruction\"."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1468
+#: ../../reference/datamodel.rst:1489
 msgid ""
 "The line number and last instruction in the traceback may differ from the "
 "line number of its :ref:`frame object <frame-objects>` if the exception "
@@ -1936,22 +1976,22 @@ msgid ""
 "with a :keyword:`finally` clause."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1479
+#: ../../reference/datamodel.rst:1500
 msgid ""
 "The special writable attribute :attr:`!tb_next` is the next level in the "
 "stack trace (towards the frame where the exception occurred), or ``None`` if"
 " there is no next level."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1483
+#: ../../reference/datamodel.rst:1504
 msgid "This attribute is now writable"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1488
+#: ../../reference/datamodel.rst:1509
 msgid "Slice objects"
 msgstr "Розрізати об'єкти"
 
-#: ../../reference/datamodel.rst:1492
+#: ../../reference/datamodel.rst:1513
 msgid ""
 "Slice objects are used to represent slices for :meth:`~object.__getitem__` "
 "methods.  They are also created by the built-in :func:`slice` function."
@@ -1960,7 +2000,7 @@ msgstr ""
 " :meth:`~object.__getitem__`. Вони також створюються за допомогою вбудованої"
 " функції :func:`slice`."
 
-#: ../../reference/datamodel.rst:1501
+#: ../../reference/datamodel.rst:1522
 msgid ""
 "Special read-only attributes: :attr:`~slice.start` is the lower bound; "
 ":attr:`~slice.stop` is the upper bound; :attr:`~slice.step` is the step "
@@ -1971,11 +2011,11 @@ msgstr ""
 "якщо опущено, кожен має значення ``None``. Ці атрибути можуть мати будь-який"
 " тип."
 
-#: ../../reference/datamodel.rst:1505
+#: ../../reference/datamodel.rst:1526
 msgid "Slice objects support one method:"
 msgstr "Об'єкти Slice підтримують один метод:"
 
-#: ../../reference/datamodel.rst:1509
+#: ../../reference/datamodel.rst:1530
 msgid ""
 "This method takes a single integer argument *length* and computes "
 "information about the slice that the slice object would describe if applied "
@@ -1991,11 +2031,11 @@ msgstr ""
 "Відсутні індекси або індекси, що виходять за межі, обробляються відповідно "
 "до звичайних фрагментів."
 
-#: ../../reference/datamodel.rst:1518
+#: ../../reference/datamodel.rst:1539
 msgid "Static method objects"
 msgstr "Об’єкти статичних методів"
 
-#: ../../reference/datamodel.rst:1520
+#: ../../reference/datamodel.rst:1541
 msgid ""
 "Static method objects provide a way of defeating the transformation of "
 "function objects to method objects described above. A static method object "
@@ -2014,11 +2054,11 @@ msgstr ""
 "викликати. Об’єкти статичних методів створюються за допомогою вбудованого "
 "конструктора :func:`staticmethod`."
 
-#: ../../reference/datamodel.rst:1530
+#: ../../reference/datamodel.rst:1551
 msgid "Class method objects"
 msgstr "Об’єкти методу класу"
 
-#: ../../reference/datamodel.rst:1532
+#: ../../reference/datamodel.rst:1553
 msgid ""
 "A class method object, like a static method object, is a wrapper around "
 "another object that alters the way in which that object is retrieved from "
@@ -2028,11 +2068,11 @@ msgid ""
 ":func:`classmethod` constructor."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1542
+#: ../../reference/datamodel.rst:1563
 msgid "Special method names"
 msgstr "Назви спеціальних методів"
 
-#: ../../reference/datamodel.rst:1548
+#: ../../reference/datamodel.rst:1569
 msgid ""
 "A class can implement certain operations that are invoked by special syntax "
 "(such as arithmetic operations or subscripting and slicing) by defining "
@@ -2055,7 +2095,7 @@ msgstr ""
 "вище, спроби виконати операцію викликають виняток, якщо відповідний метод не"
 " визначено (зазвичай :exc:`AttributeError` або :exc:`TypeError`)."
 
-#: ../../reference/datamodel.rst:1559
+#: ../../reference/datamodel.rst:1580
 msgid ""
 "Setting a special method to ``None`` indicates that the corresponding "
 "operation is not available.  For example, if a class sets "
@@ -2069,7 +2109,7 @@ msgstr ""
 "виклик :func:`iter` у його екземплярах викличе :exc:`TypeError` ( не "
 "повертаючись до :meth:`~object.__getitem__`). [#]_"
 
-#: ../../reference/datamodel.rst:1565
+#: ../../reference/datamodel.rst:1586
 msgid ""
 "When implementing a class that emulates any built-in type, it is important "
 "that the emulation only be implemented to the degree that it makes sense for"
@@ -2085,11 +2125,11 @@ msgstr ""
 "(Одним із прикладів цього є інтерфейс :class:`~xml.dom.NodeList` в об’єктній"
 " моделі документа W3C.)"
 
-#: ../../reference/datamodel.rst:1576
+#: ../../reference/datamodel.rst:1597
 msgid "Basic customization"
 msgstr "Базове налаштування"
 
-#: ../../reference/datamodel.rst:1582
+#: ../../reference/datamodel.rst:1603
 msgid ""
 "Called to create a new instance of class *cls*.  :meth:`__new__` is a static"
 " method (special-cased so you need not declare it as such) that takes the "
@@ -2105,7 +2145,7 @@ msgstr ""
 "(виклик класу). Поверненим значенням :meth:`__new__` має бути новий "
 "екземпляр об’єкта (зазвичай це екземпляр *cls*)."
 
-#: ../../reference/datamodel.rst:1589
+#: ../../reference/datamodel.rst:1610
 msgid ""
 "Typical implementations create a new instance of the class by invoking the "
 "superclass's :meth:`__new__` method using ``super().__new__(cls[, ...])`` "
@@ -2113,7 +2153,7 @@ msgid ""
 "necessary before returning it."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1594
+#: ../../reference/datamodel.rst:1615
 msgid ""
 "If :meth:`__new__` is invoked during object construction and it returns an "
 "instance of *cls*, then the new instance’s :meth:`__init__` method will be "
@@ -2126,7 +2166,7 @@ msgstr ""
 "``__init__(self[, ...])``, де *self* — це новий екземпляр, а решта "
 "аргументів ті самі, що були передані конструктору об’єкта."
 
-#: ../../reference/datamodel.rst:1599
+#: ../../reference/datamodel.rst:1620
 msgid ""
 "If :meth:`__new__` does not return an instance of *cls*, then the new "
 "instance's :meth:`__init__` method will not be invoked."
@@ -2134,7 +2174,7 @@ msgstr ""
 "Якщо :meth:`__new__` не повертає екземпляр *cls*, то метод :meth:`__init__` "
 "нового екземпляра не буде викликано."
 
-#: ../../reference/datamodel.rst:1602
+#: ../../reference/datamodel.rst:1623
 msgid ""
 ":meth:`__new__` is intended mainly to allow subclasses of immutable types "
 "(like int, str, or tuple) to customize instance creation.  It is also "
@@ -2146,7 +2186,7 @@ msgstr ""
 "екземплярів. Його також зазвичай перевизначають у власних метакласах, щоб "
 "налаштувати створення класу."
 
-#: ../../reference/datamodel.rst:1611
+#: ../../reference/datamodel.rst:1632
 msgid ""
 "Called after the instance has been created (by :meth:`__new__`), but before "
 "it is returned to the caller.  The arguments are those passed to the class "
@@ -2162,7 +2202,7 @@ msgstr ""
 " його, щоб забезпечити правильну ініціалізацію частини базового класу "
 "примірника; наприклад: ``super().__init__([args...])``."
 
-#: ../../reference/datamodel.rst:1618
+#: ../../reference/datamodel.rst:1639
 msgid ""
 "Because :meth:`__new__` and :meth:`__init__` work together in constructing "
 "objects (:meth:`__new__` to create it, and :meth:`__init__` to customize "
@@ -2174,7 +2214,7 @@ msgstr ""
 "налаштувати його), немає не-``None`` значення може повертати "
 ":meth:`__init__`; це призведе до появи :exc:`TypeError` під час виконання."
 
-#: ../../reference/datamodel.rst:1631
+#: ../../reference/datamodel.rst:1652
 msgid ""
 "Called when the instance is about to be destroyed.  This is also called a "
 "finalizer or (improperly) a destructor.  If a base class has a "
@@ -2188,7 +2228,7 @@ msgstr ""
 "повинен явно викликати його, щоб забезпечити належне видалення частини "
 "базового класу екземпляра."
 
-#: ../../reference/datamodel.rst:1637
+#: ../../reference/datamodel.rst:1658
 msgid ""
 "It is possible (though not recommended!) for the :meth:`__del__` method to "
 "postpone destruction of the instance by creating a new reference to it.  "
@@ -2203,7 +2243,7 @@ msgstr ""
 "викликається вдруге, коли воскреслий об’єкт збирається знищити; поточна "
 "реалізація :term:`CPython` викликає його лише один раз."
 
-#: ../../reference/datamodel.rst:1644
+#: ../../reference/datamodel.rst:1665
 msgid ""
 "It is not guaranteed that :meth:`__del__` methods are called for objects "
 "that still exist when the interpreter exits."
@@ -2211,7 +2251,7 @@ msgstr ""
 "Не гарантується, що методи :meth:`__del__` викликаються для об’єктів, які "
 "все ще існують, коли інтерпретатор завершує роботу."
 
-#: ../../reference/datamodel.rst:1649
+#: ../../reference/datamodel.rst:1670
 msgid ""
 "``del x`` doesn't directly call ``x.__del__()`` --- the former decrements "
 "the reference count for ``x`` by one, and the latter is only called when "
@@ -2221,7 +2261,7 @@ msgstr ""
 "посилань для ``x`` на одиницю, а останній викликається лише тоді, коли ``x``"
 " кількість посилань досягає нуля."
 
-#: ../../reference/datamodel.rst:1654
+#: ../../reference/datamodel.rst:1675
 msgid ""
 "It is possible for a reference cycle to prevent the reference count of an "
 "object from going to zero.  In this case, the cycle will be later detected "
@@ -2232,11 +2272,11 @@ msgid ""
 "caught in the traceback."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1664
+#: ../../reference/datamodel.rst:1685
 msgid "Documentation for the :mod:`gc` module."
 msgstr "Документація для модуля :mod:`gc`."
 
-#: ../../reference/datamodel.rst:1668
+#: ../../reference/datamodel.rst:1689
 msgid ""
 "Due to the precarious circumstances under which :meth:`__del__` methods are "
 "invoked, exceptions that occur during their execution are ignored, and a "
@@ -2246,7 +2286,7 @@ msgstr ""
 "винятки, що виникають під час їх виконання, ігноруються, а попередження "
 "друкується в ``sys.stderr``. Зокрема:"
 
-#: ../../reference/datamodel.rst:1672
+#: ../../reference/datamodel.rst:1693
 msgid ""
 ":meth:`__del__` can be invoked when arbitrary code is being executed, "
 "including from any arbitrary thread.  If :meth:`__del__` needs to take a "
@@ -2260,7 +2300,7 @@ msgstr ""
 "призвести до блокування, оскільки ресурс може вже бути зайнятий кодом, який "
 "переривається для виконання :meth:`__del__`."
 
-#: ../../reference/datamodel.rst:1678
+#: ../../reference/datamodel.rst:1699
 msgid ""
 ":meth:`__del__` can be executed during interpreter shutdown.  As a "
 "consequence, the global variables it needs to access (including other "
@@ -2279,7 +2319,7 @@ msgstr ""
 "допомогти впевнитися, що імпортовані модулі все ще доступні під час виклику "
 "методу :meth:`__del__`."
 
-#: ../../reference/datamodel.rst:1693
+#: ../../reference/datamodel.rst:1714
 msgid ""
 "Called by the :func:`repr` built-in function to compute the \"official\" "
 "string representation of an object.  If at all possible, this should look "
@@ -2300,7 +2340,7 @@ msgstr ""
 "але не :meth:`__str__`, тоді :meth:`__repr__` також використовується, коли "
 "потрібне \"неформальне\" рядкове представлення екземплярів цього класу."
 
-#: ../../reference/datamodel.rst:1702
+#: ../../reference/datamodel.rst:1723
 msgid ""
 "This is typically used for debugging, so it is important that the "
 "representation is information-rich and unambiguous."
@@ -2308,7 +2348,7 @@ msgstr ""
 "Це зазвичай використовується для налагодження, тому важливо, щоб "
 "представлення було насиченим інформацією та однозначним."
 
-#: ../../reference/datamodel.rst:1713
+#: ../../reference/datamodel.rst:1734
 msgid ""
 "Called by :func:`str(object) <str>` and the built-in functions "
 ":func:`format` and :func:`print` to compute the \"informal\" or nicely "
@@ -2320,7 +2360,7 @@ msgstr ""
 " для друку рядкового представлення об’єкта. Повернене значення має бути "
 "об’єктом :ref:`string <textseq>`."
 
-#: ../../reference/datamodel.rst:1718
+#: ../../reference/datamodel.rst:1739
 msgid ""
 "This method differs from :meth:`object.__repr__` in that there is no "
 "expectation that :meth:`__str__` return a valid Python expression: a more "
@@ -2330,7 +2370,7 @@ msgstr ""
 "що :meth:`__str__` поверне дійсний вираз Python: можна використовувати більш"
 " зручне або стисле представлення."
 
-#: ../../reference/datamodel.rst:1722
+#: ../../reference/datamodel.rst:1743
 msgid ""
 "The default implementation defined by the built-in type :class:`object` "
 "calls :meth:`object.__repr__`."
@@ -2338,7 +2378,7 @@ msgstr ""
 "Стандартна реалізація, визначена вбудованим типом :class:`object`, викликає "
 ":meth:`object.__repr__`."
 
-#: ../../reference/datamodel.rst:1732
+#: ../../reference/datamodel.rst:1753
 msgid ""
 "Called by :ref:`bytes <func-bytes>` to compute a byte-string representation "
 "of an object. This should return a :class:`bytes` object."
@@ -2346,7 +2386,7 @@ msgstr ""
 "Викликається :ref:`bytes <func-bytes>` для обчислення байтового "
 "представлення об’єкта. Це має повернути об’єкт :class:`bytes`."
 
-#: ../../reference/datamodel.rst:1743
+#: ../../reference/datamodel.rst:1764
 msgid ""
 "Called by the :func:`format` built-in function, and by extension, evaluation"
 " of :ref:`formatted string literals <f-strings>` and the :meth:`str.format` "
@@ -2366,18 +2406,18 @@ msgstr ""
 "форматування одному з вбудованих типів, або використовують подібний "
 "синтаксис параметрів форматування."
 
-#: ../../reference/datamodel.rst:1753
+#: ../../reference/datamodel.rst:1774
 msgid ""
 "See :ref:`formatspec` for a description of the standard formatting syntax."
 msgstr ""
 "Перегляньте :ref:`formatspec` для опису стандартного синтаксису "
 "форматування."
 
-#: ../../reference/datamodel.rst:1755
+#: ../../reference/datamodel.rst:1776
 msgid "The return value must be a string object."
 msgstr "Повернене значення має бути рядковим об’єктом."
 
-#: ../../reference/datamodel.rst:1757
+#: ../../reference/datamodel.rst:1778
 msgid ""
 "The __format__ method of ``object`` itself raises a :exc:`TypeError` if "
 "passed any non-empty string."
@@ -2385,7 +2425,7 @@ msgstr ""
 "Сам метод __format__ ``object`` викликає :exc:`TypeError`, якщо передати "
 "будь-який непорожній рядок."
 
-#: ../../reference/datamodel.rst:1761
+#: ../../reference/datamodel.rst:1782
 msgid ""
 "``object.__format__(x, '')`` is now equivalent to ``str(x)`` rather than "
 "``format(str(x), '')``."
@@ -2393,7 +2433,7 @@ msgstr ""
 "``object.__format__(x, '')`` тепер еквівалентний ``str(x)``, а не "
 "``format(str(x), '')``."
 
-#: ../../reference/datamodel.rst:1777
+#: ../../reference/datamodel.rst:1798
 msgid ""
 "These are the so-called \"rich comparison\" methods. The correspondence "
 "between operator symbols and method names is as follows: ``x<y`` calls "
@@ -2407,7 +2447,7 @@ msgstr ""
 "``x.__ne__(y)``, ``x> y`` викликає ``x.__gt__(y)``, а ``x>=y`` викликає "
 "``x.__ge__(y)``."
 
-#: ../../reference/datamodel.rst:1783
+#: ../../reference/datamodel.rst:1804
 msgid ""
 "A rich comparison method may return the singleton :data:`NotImplemented` if "
 "it does not implement the operation for a given pair of arguments. By "
@@ -2418,7 +2458,7 @@ msgid ""
 "result is true or false."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1790
+#: ../../reference/datamodel.rst:1811
 msgid ""
 "By default, ``object`` implements :meth:`__eq__` by using ``is``, returning "
 ":data:`NotImplemented` in the case of a false comparison: ``True if x is y "
@@ -2430,7 +2470,7 @@ msgid ""
 "single root operation, see :func:`functools.total_ordering`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1799
+#: ../../reference/datamodel.rst:1820
 msgid ""
 "See the paragraph on :meth:`__hash__` for some important notes on creating "
 ":term:`hashable` objects which support custom comparison operations and are "
@@ -2440,7 +2480,7 @@ msgstr ""
 "створення об’єктів :term:`hashable`, які підтримують спеціальні операції "
 "порівняння та використовуються як ключі словника."
 
-#: ../../reference/datamodel.rst:1803
+#: ../../reference/datamodel.rst:1824
 msgid ""
 "There are no swapped-argument versions of these methods (to be used when the"
 " left argument does not support the operation but the right argument does); "
@@ -2453,14 +2493,14 @@ msgid ""
 "Virtual subclassing is not considered."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1814
+#: ../../reference/datamodel.rst:1835
 msgid ""
 "When no appropriate method returns any value other than "
 ":data:`NotImplemented`, the ``==`` and ``!=`` operators will fall back to "
 "``is`` and ``is not``, respectively."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1823
+#: ../../reference/datamodel.rst:1844
 msgid ""
 "Called by built-in function :func:`hash` and for operations on members of "
 "hashed collections including :class:`set`, :class:`frozenset`, and "
@@ -2478,7 +2518,7 @@ msgstr ""
 " також відіграють роль у порівнянні об’єктів, упаковуючи їх у кортеж і "
 "хешуючи кортеж. Приклад::"
 
-#: ../../reference/datamodel.rst:1836
+#: ../../reference/datamodel.rst:1857
 msgid ""
 ":func:`hash` truncates the value returned from an object's custom "
 ":meth:`__hash__` method to the size of a :c:type:`Py_ssize_t`.  This is "
@@ -2495,7 +2535,7 @@ msgstr ""
 "спосіб зробити це за допомогою ``python -c \"import sys; "
 "print(sys.hash_info.width)\"``."
 
-#: ../../reference/datamodel.rst:1844
+#: ../../reference/datamodel.rst:1865
 msgid ""
 "If a class does not define an :meth:`__eq__` method it should not define a "
 ":meth:`__hash__` operation either; if it defines :meth:`__eq__` but not "
@@ -2507,7 +2547,7 @@ msgid ""
 "wrong hash bucket)."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1853
+#: ../../reference/datamodel.rst:1874
 msgid ""
 "User-defined classes have :meth:`__eq__` and :meth:`__hash__` methods by "
 "default; with them, all objects compare unequal (except with themselves) and"
@@ -2519,7 +2559,7 @@ msgstr ""
 " і ``x.__hash__()`` повертає відповідне значення, так що ``x == y`` означає,"
 " що ``x є y`` і ``hash (x) == хеш(y)``."
 
-#: ../../reference/datamodel.rst:1858
+#: ../../reference/datamodel.rst:1879
 msgid ""
 "A class that overrides :meth:`__eq__` and does not define :meth:`__hash__` "
 "will have its :meth:`__hash__` implicitly set to ``None``.  When the "
@@ -2535,7 +2575,7 @@ msgstr ""
 "значення, а також будуть правильно визначені як нехешується під час "
 "перевірки ``isinstance(obj, collections.abc.Hashable)``."
 
-#: ../../reference/datamodel.rst:1865
+#: ../../reference/datamodel.rst:1886
 msgid ""
 "If a class that overrides :meth:`__eq__` needs to retain the implementation "
 "of :meth:`__hash__` from a parent class, the interpreter must be told this "
@@ -2546,7 +2586,7 @@ msgstr ""
 "повідомлений про це явно, встановивши ``__hash__ = <ParentClass> "
 ".__hash__``."
 
-#: ../../reference/datamodel.rst:1869
+#: ../../reference/datamodel.rst:1890
 msgid ""
 "If a class that does not override :meth:`__eq__` wishes to suppress hash "
 "support, it should include ``__hash__ = None`` in the class definition. A "
@@ -2560,7 +2600,7 @@ msgstr ""
 " буде неправильно ідентифікований як хешований викликом ``isinstance(obj, "
 "collections.abc.Hashable)``."
 
-#: ../../reference/datamodel.rst:1878
+#: ../../reference/datamodel.rst:1899
 msgid ""
 "By default, the :meth:`__hash__` values of str and bytes objects are "
 "\"salted\" with an unpredictable random value.  Although they remain "
@@ -2572,7 +2612,7 @@ msgstr ""
 "залишаються незмінними в окремому процесі Python, вони не передбачувані між "
 "повторними викликами Python."
 
-#: ../../reference/datamodel.rst:1883
+#: ../../reference/datamodel.rst:1904
 msgid ""
 "This is intended to provide protection against a denial-of-service caused by"
 " carefully chosen inputs that exploit the worst case performance of a dict "
@@ -2580,7 +2620,7 @@ msgid ""
 "http://ocert.org/advisories/ocert-2011-003.html for details."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1888
+#: ../../reference/datamodel.rst:1909
 msgid ""
 "Changing hash values affects the iteration order of sets. Python has never "
 "made guarantees about this ordering (and it typically varies between 32-bit "
@@ -2590,15 +2630,15 @@ msgstr ""
 "надавав гарантій щодо такого порядку (і він зазвичай варіюється між "
 "32-бітними та 64-бітними збірками)."
 
-#: ../../reference/datamodel.rst:1892
+#: ../../reference/datamodel.rst:1913
 msgid "See also :envvar:`PYTHONHASHSEED`."
 msgstr "Дивіться також :envvar:`PYTHONHASHSEED`."
 
-#: ../../reference/datamodel.rst:1894
+#: ../../reference/datamodel.rst:1915
 msgid "Hash randomization is enabled by default."
 msgstr "Хеш-рандомізація ввімкнена за замовчуванням."
 
-#: ../../reference/datamodel.rst:1902
+#: ../../reference/datamodel.rst:1923
 msgid ""
 "Called to implement truth value testing and the built-in operation "
 "``bool()``; should return ``False`` or ``True``.  When this method is not "
@@ -2608,11 +2648,11 @@ msgid ""
 "true."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1913
+#: ../../reference/datamodel.rst:1934
 msgid "Customizing attribute access"
 msgstr "Налаштування доступу до атрибутів"
 
-#: ../../reference/datamodel.rst:1915
+#: ../../reference/datamodel.rst:1936
 msgid ""
 "The following methods can be defined to customize the meaning of attribute "
 "access (use of, assignment to, or deletion of ``x.name``) for class "
@@ -2622,7 +2662,7 @@ msgstr ""
 "атрибутів (використання, призначення або видалення ``x.name``) для "
 "екземплярів класу."
 
-#: ../../reference/datamodel.rst:1923
+#: ../../reference/datamodel.rst:1944
 msgid ""
 "Called when the default attribute access fails with an :exc:`AttributeError`"
 " (either :meth:`__getattribute__` raises an :exc:`AttributeError` because "
@@ -2638,29 +2678,20 @@ msgstr ""
 "*name* викликає :exc:`AttributeError`). Цей метод має повертати (обчислене) "
 "значення атрибута або викликати виняток :exc:`AttributeError`."
 
-#: ../../reference/datamodel.rst:1930
+#: ../../reference/datamodel.rst:1951
 msgid ""
 "Note that if the attribute is found through the normal mechanism, "
 ":meth:`__getattr__` is not called.  (This is an intentional asymmetry "
 "between :meth:`__getattr__` and :meth:`__setattr__`.) This is done both for "
 "efficiency reasons and because otherwise :meth:`__getattr__` would have no "
 "way to access other attributes of the instance.  Note that at least for "
-"instance variables, you can fake total control by not inserting any values "
+"instance variables, you can take total control by not inserting any values "
 "in the instance attribute dictionary (but instead inserting them in another "
 "object).  See the :meth:`__getattribute__` method below for a way to "
 "actually get total control over attribute access."
 msgstr ""
-"Зауважте, що якщо атрибут знайдено за допомогою звичайного механізму, "
-":meth:`__getattr__` не викликається. (Це навмисна асиметрія між "
-":meth:`__getattr__` і :meth:`__setattr__`.) Це зроблено як з міркувань "
-"ефективності, так і тому, що інакше :meth:`__getattr__` не матиме доступу до"
-" інших атрибутів примірника. Зауважте, що принаймні для змінних екземпляра "
-"ви можете імітувати повний контроль, не вставляючи жодних значень у словник "
-"атрибутів екземпляра (а натомість вставляючи їх в інший об’єкт). Перегляньте"
-" метод :meth:`__getattribute__` нижче, щоб дізнатися, як фактично отримати "
-"повний контроль над доступом до атрибутів."
 
-#: ../../reference/datamodel.rst:1943
+#: ../../reference/datamodel.rst:1964
 msgid ""
 "Called unconditionally to implement attribute accesses for instances of the "
 "class. If the class also defines :meth:`__getattr__`, the latter will not be"
@@ -2680,14 +2711,14 @@ msgstr ""
 "викликати метод базового класу з тим самим іменем для доступу до будь-яких "
 "необхідних атрибутів, наприклад, ``object.__getattribute__(self, name)``."
 
-#: ../../reference/datamodel.rst:1954
+#: ../../reference/datamodel.rst:1975
 msgid ""
 "This method may still be bypassed when looking up special methods as the "
 "result of implicit invocation via language syntax or :ref:`built-in "
 "functions <builtin-functions>`. See :ref:`special-lookup`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:1959
+#: ../../reference/datamodel.rst:1980
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``object.__getattr__`` with "
 "arguments ``obj``, ``name``."
@@ -2695,7 +2726,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``object.__getattr__`` з аргументами"
 " ``obj``, ``name``."
 
-#: ../../reference/datamodel.rst:1961
+#: ../../reference/datamodel.rst:1982
 msgid ""
 "For certain sensitive attribute accesses, raises an :ref:`auditing event "
 "<auditing>` ``object.__getattr__`` with arguments ``obj`` and ``name``."
@@ -2703,7 +2734,7 @@ msgstr ""
 "Для доступу до певних конфіденційних атрибутів викликає :ref:`подію аудиту "
 "<auditing>` ``object.__getattr__`` з аргументами ``obj`` і ``name``."
 
-#: ../../reference/datamodel.rst:1968
+#: ../../reference/datamodel.rst:1989
 msgid ""
 "Called when an attribute assignment is attempted.  This is called instead of"
 " the normal mechanism (i.e. store the value in the instance dictionary). "
@@ -2713,7 +2744,7 @@ msgstr ""
 "звичайного механізму (тобто збереження значення в словнику екземпляра). "
 "*name* — ім’я атрибута, *value* — значення, яке йому буде присвоєно."
 
-#: ../../reference/datamodel.rst:1972
+#: ../../reference/datamodel.rst:1993
 msgid ""
 "If :meth:`__setattr__` wants to assign to an instance attribute, it should "
 "call the base class method with the same name, for example, "
@@ -2723,7 +2754,7 @@ msgstr ""
 "викликати метод базового класу з такою самою назвою, наприклад, "
 "``object.__setattr__(self, name, value)``."
 
-#: ../../reference/datamodel.rst:1976
+#: ../../reference/datamodel.rst:1997
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``object.__setattr__`` with "
 "arguments ``obj``, ``name``, ``value``."
@@ -2731,7 +2762,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``object.__setattr__`` з аргументами"
 " ``obj``, ``name``, ``value``."
 
-#: ../../reference/datamodel.rst:1978
+#: ../../reference/datamodel.rst:1999
 msgid ""
 "For certain sensitive attribute assignments, raises an :ref:`auditing event "
 "<auditing>` ``object.__setattr__`` with arguments ``obj``, ``name``, "
@@ -2741,7 +2772,7 @@ msgstr ""
 "<auditing>` ``object.__setattr__`` з аргументами ``obj``, ``name``, "
 "``value``."
 
-#: ../../reference/datamodel.rst:1985
+#: ../../reference/datamodel.rst:2006
 msgid ""
 "Like :meth:`__setattr__` but for attribute deletion instead of assignment.  "
 "This should only be implemented if ``del obj.name`` is meaningful for the "
@@ -2750,7 +2781,7 @@ msgstr ""
 "Як :meth:`__setattr__`, але для видалення атрибута замість призначення. Це "
 "слід застосовувати, лише якщо ``del obj.name`` має значення для об’єкта."
 
-#: ../../reference/datamodel.rst:1988
+#: ../../reference/datamodel.rst:2009
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``object.__delattr__`` with "
 "arguments ``obj``, ``name``."
@@ -2758,7 +2789,7 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``object.__delattr__`` з аргументами"
 " ``obj``, ``name``."
 
-#: ../../reference/datamodel.rst:1990
+#: ../../reference/datamodel.rst:2011
 msgid ""
 "For certain sensitive attribute deletions, raises an :ref:`auditing event "
 "<auditing>` ``object.__delattr__`` with arguments ``obj`` and ``name``."
@@ -2766,17 +2797,17 @@ msgstr ""
 "Для певних видалень конфіденційних атрибутів викликає :ref:`подію аудиту "
 "<auditing>` ``object.__delattr__`` з аргументами ``obj`` і ``name``."
 
-#: ../../reference/datamodel.rst:1997
+#: ../../reference/datamodel.rst:2018
 msgid ""
 "Called when :func:`dir` is called on the object. An iterable must be "
 "returned. :func:`dir` converts the returned iterable to a list and sorts it."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2002
+#: ../../reference/datamodel.rst:2023
 msgid "Customizing module attribute access"
 msgstr "Налаштування доступу до атрибутів модуля"
 
-#: ../../reference/datamodel.rst:2009
+#: ../../reference/datamodel.rst:2030
 msgid ""
 "Special names ``__getattr__`` and ``__dir__`` can be also used to customize "
 "access to module attributes. The ``__getattr__`` function at the module "
@@ -2796,14 +2827,14 @@ msgstr ""
 "``__dict__`` перед тим, як викликати :exc:`AttributeError` . Якщо знайдено, "
 "воно викликається з назвою атрибута та повертає результат."
 
-#: ../../reference/datamodel.rst:2018
+#: ../../reference/datamodel.rst:2039
 msgid ""
 "The ``__dir__`` function should accept no arguments, and return an iterable "
 "of strings that represents the names accessible on module. If present, this "
 "function overrides the standard :func:`dir` search on a module."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2022
+#: ../../reference/datamodel.rst:2043
 msgid ""
 "For a more fine grained customization of the module behavior (setting "
 "attributes, properties, etc.), one can set the ``__class__`` attribute of a "
@@ -2813,7 +2844,7 @@ msgstr ""
 "властивостей тощо) можна встановити атрибут ``__class__`` об’єкта модуля до "
 "підкласу :class:`types.ModuleType`. Наприклад::"
 
-#: ../../reference/datamodel.rst:2040
+#: ../../reference/datamodel.rst:2061
 msgid ""
 "Defining module ``__getattr__`` and setting module ``__class__`` only affect"
 " lookups made using the attribute access syntax -- directly accessing the "
@@ -2825,27 +2856,27 @@ msgstr ""
 "атрибутів – прямий доступ до глобалів модуля (чи то за допомогою коду в "
 "модулі, чи через посилання на словник глобалів модуля) не впливає."
 
-#: ../../reference/datamodel.rst:2045
+#: ../../reference/datamodel.rst:2066
 msgid "``__class__`` module attribute is now writable."
 msgstr "Атрибут модуля ``__class__`` тепер доступний для запису."
 
-#: ../../reference/datamodel.rst:2048
+#: ../../reference/datamodel.rst:2069
 msgid "``__getattr__`` and ``__dir__`` module attributes."
 msgstr "Атрибути модуля ``__getattr__`` і ``__dir__``."
 
-#: ../../reference/datamodel.rst:2053
+#: ../../reference/datamodel.rst:2074
 msgid ":pep:`562` - Module __getattr__ and __dir__"
 msgstr ":pep:`562` - Модуль __getattr__ і __dir__"
 
-#: ../../reference/datamodel.rst:2054
+#: ../../reference/datamodel.rst:2075
 msgid "Describes the ``__getattr__`` and ``__dir__`` functions on modules."
 msgstr "Описує функції ``__getattr__`` і ``__dir__`` для модулів."
 
-#: ../../reference/datamodel.rst:2060
+#: ../../reference/datamodel.rst:2081
 msgid "Implementing Descriptors"
 msgstr "Реалізація дескрипторів"
 
-#: ../../reference/datamodel.rst:2062
+#: ../../reference/datamodel.rst:2083
 msgid ""
 "The following methods only apply when an instance of the class containing "
 "the method (a so-called *descriptor* class) appears in an *owner* class (the"
@@ -2861,7 +2892,7 @@ msgstr ""
 "до атрибута, ім’я якого є ключем властивості в класі власника "
 ":attr:`~object.__dict__`."
 
-#: ../../reference/datamodel.rst:2072
+#: ../../reference/datamodel.rst:2093
 msgid ""
 "Called to get the attribute of the owner class (class attribute access) or "
 "of an instance of that class (instance attribute access). The optional "
@@ -2875,7 +2906,7 @@ msgstr ""
 "через який був доступ до атрибута, або ``None``, коли доступ до атрибута "
 "здійснюється через *owner*."
 
-#: ../../reference/datamodel.rst:2078
+#: ../../reference/datamodel.rst:2099
 msgid ""
 "This method should return the computed attribute value or raise an "
 ":exc:`AttributeError` exception."
@@ -2883,7 +2914,7 @@ msgstr ""
 "Цей метод має повертати обчислене значення атрибута або викликати виняток "
 ":exc:`AttributeError`."
 
-#: ../../reference/datamodel.rst:2081
+#: ../../reference/datamodel.rst:2102
 msgid ""
 ":PEP:`252` specifies that :meth:`__get__` is callable with one or two "
 "arguments.  Python's own built-in descriptors support this specification; "
@@ -2899,7 +2930,7 @@ msgstr ""
 ":meth:`__getattribute__` Python завжди передає обидва аргументи незалежно "
 "від того, потрібні вони чи ні."
 
-#: ../../reference/datamodel.rst:2090
+#: ../../reference/datamodel.rst:2111
 msgid ""
 "Called to set the attribute on an instance *instance* of the owner class to "
 "a new value, *value*."
@@ -2907,7 +2938,7 @@ msgstr ""
 "Викликається, щоб встановити атрибуту екземпляра *екземпляру* класу власника"
 " нове значення *value*."
 
-#: ../../reference/datamodel.rst:2093
+#: ../../reference/datamodel.rst:2114
 msgid ""
 "Note, adding :meth:`__set__` or :meth:`__delete__` changes the kind of "
 "descriptor to a \"data descriptor\".  See :ref:`descriptor-invocation` for "
@@ -2917,19 +2948,19 @@ msgstr ""
 "дескриптора на \"дескриптор даних\". Перегляньте :ref:`descriptor-"
 "invocation` для отримання додаткової інформації."
 
-#: ../../reference/datamodel.rst:2099
+#: ../../reference/datamodel.rst:2120
 msgid ""
 "Called to delete the attribute on an instance *instance* of the owner class."
 msgstr ""
 "Викликається для видалення атрибута екземпляра *екземпляра* класу власника."
 
-#: ../../reference/datamodel.rst:2101
+#: ../../reference/datamodel.rst:2122
 msgid ""
 "Instances of descriptors may also have the :attr:`!__objclass__` attribute "
 "present:"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2106
+#: ../../reference/datamodel.rst:2127
 msgid ""
 "The attribute :attr:`!__objclass__` is interpreted by the :mod:`inspect` "
 "module as specifying the class where this object was defined (setting this "
@@ -2940,11 +2971,11 @@ msgid ""
 "are implemented in C)."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2117
+#: ../../reference/datamodel.rst:2138
 msgid "Invoking Descriptors"
 msgstr "Виклик дескрипторів"
 
-#: ../../reference/datamodel.rst:2119
+#: ../../reference/datamodel.rst:2140
 msgid ""
 "In general, a descriptor is an object attribute with \"binding behavior\", "
 "one whose attribute access has been overridden by methods in the descriptor "
@@ -2958,7 +2989,7 @@ msgstr ""
 ":meth:`~object.__delete__`. Якщо будь-який із цих методів визначено для "
 "об’єкта, він називається дескриптором."
 
-#: ../../reference/datamodel.rst:2125
+#: ../../reference/datamodel.rst:2146
 msgid ""
 "The default behavior for attribute access is to get, set, or delete the "
 "attribute from an object's dictionary. For instance, ``a.x`` has a lookup "
@@ -2971,7 +3002,7 @@ msgstr ""
 "``type(a).__dict__['x']`` і продовжується через базові класи типу "
 "``type(a)``, за винятком метакласів."
 
-#: ../../reference/datamodel.rst:2130
+#: ../../reference/datamodel.rst:2151
 msgid ""
 "However, if the looked-up value is an object defining one of the descriptor "
 "methods, then Python may override the default behavior and invoke the "
@@ -2984,7 +3015,7 @@ msgstr ""
 "пріоритетів, залежить від того, які методи дескриптора були визначені та як "
 "вони були викликані."
 
-#: ../../reference/datamodel.rst:2135
+#: ../../reference/datamodel.rst:2156
 msgid ""
 "The starting point for descriptor invocation is a binding, ``a.x``. How the "
 "arguments are assembled depends on ``a``:"
@@ -2992,11 +3023,11 @@ msgstr ""
 "Початковою точкою для виклику дескриптора є прив’язка, ``a.x``. Спосіб "
 "збирання аргументів залежить від ``a``:"
 
-#: ../../reference/datamodel.rst:2138
+#: ../../reference/datamodel.rst:2159
 msgid "Direct Call"
 msgstr "Прямий дзвінок"
 
-#: ../../reference/datamodel.rst:2139
+#: ../../reference/datamodel.rst:2160
 msgid ""
 "The simplest and least common call is when user code directly invokes a "
 "descriptor method:    ``x.__get__(a)``."
@@ -3004,11 +3035,11 @@ msgstr ""
 "Найпростіший і найменш поширений виклик — це коли код користувача "
 "безпосередньо викликає метод дескриптора: ``x.__get__(a)``."
 
-#: ../../reference/datamodel.rst:2142
+#: ../../reference/datamodel.rst:2163
 msgid "Instance Binding"
 msgstr "Прив'язка екземпляра"
 
-#: ../../reference/datamodel.rst:2143
+#: ../../reference/datamodel.rst:2164
 msgid ""
 "If binding to an object instance, ``a.x`` is transformed into the call: "
 "``type(a).__dict__['x'].__get__(a, type(a))``."
@@ -3016,11 +3047,11 @@ msgstr ""
 "У разі прив’язки до екземпляра об’єкта ``a.x`` перетворюється на виклик: "
 "``type(a).__dict__['x'].__get__(a, type(a))``."
 
-#: ../../reference/datamodel.rst:2146
+#: ../../reference/datamodel.rst:2167
 msgid "Class Binding"
 msgstr "Прив'язка класу"
 
-#: ../../reference/datamodel.rst:2147
+#: ../../reference/datamodel.rst:2168
 msgid ""
 "If binding to a class, ``A.x`` is transformed into the call: "
 "``A.__dict__['x'].__get__(None, A)``."
@@ -3028,11 +3059,11 @@ msgstr ""
 "Якщо прив’язується до класу, ``A.x`` перетворюється на виклик: "
 "``A.__dict__['x'].__get__(None, A)``."
 
-#: ../../reference/datamodel.rst:2150
+#: ../../reference/datamodel.rst:2171
 msgid "Super Binding"
 msgstr "Супер прив'язка"
 
-#: ../../reference/datamodel.rst:2151
+#: ../../reference/datamodel.rst:2172
 msgid ""
 "A dotted lookup such as ``super(A, a).x`` searches ``a.__class__.__mro__`` "
 "for a base class ``B`` following ``A`` and then returns "
@@ -3040,7 +3071,7 @@ msgid ""
 "unchanged."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2188
+#: ../../reference/datamodel.rst:2209
 msgid ""
 "For instance bindings, the precedence of descriptor invocation depends on "
 "which descriptor methods are defined.  A descriptor can define any "
@@ -3058,7 +3089,7 @@ msgid ""
 "instances."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2203
+#: ../../reference/datamodel.rst:2224
 msgid ""
 "Python methods (including those decorated with :func:`@staticmethod "
 "<staticmethod>` and :func:`@classmethod <classmethod>`) are implemented as "
@@ -3072,7 +3103,7 @@ msgstr ""
 "замінювати методи. Це дозволяє окремим примірникам набувати поведінки, яка "
 "відрізняється від інших примірників того самого класу."
 
-#: ../../reference/datamodel.rst:2209
+#: ../../reference/datamodel.rst:2230
 msgid ""
 "The :func:`property` function is implemented as a data descriptor. "
 "Accordingly, instances cannot override the behavior of a property."
@@ -3080,11 +3111,11 @@ msgstr ""
 "Функція :func:`property` реалізована як дескриптор даних. Відповідно, "
 "екземпляри не можуть перевизначати поведінку властивості."
 
-#: ../../reference/datamodel.rst:2216
+#: ../../reference/datamodel.rst:2237
 msgid "__slots__"
 msgstr "__slots__"
 
-#: ../../reference/datamodel.rst:2218
+#: ../../reference/datamodel.rst:2239
 msgid ""
 "*__slots__* allow us to explicitly declare data members (like properties) "
 "and deny the creation of :attr:`~object.__dict__` and *__weakref__* (unless "
@@ -3094,7 +3125,7 @@ msgstr ""
 "властивості) і забороняти створення :attr:`~object.__dict__` і *__weakref__*"
 " (якщо це явно не оголошено в *__slots__* або доступно в батьківському)."
 
-#: ../../reference/datamodel.rst:2222
+#: ../../reference/datamodel.rst:2243
 msgid ""
 "The space saved over using :attr:`~object.__dict__` can be significant. "
 "Attribute lookup speed can be significantly improved as well."
@@ -3102,7 +3133,7 @@ msgstr ""
 "Місце, збережене за допомогою :attr:`~object.__dict__` може бути значним. "
 "Швидкість пошуку атрибутів також можна значно покращити."
 
-#: ../../reference/datamodel.rst:2227
+#: ../../reference/datamodel.rst:2248
 msgid ""
 "This class variable can be assigned a string, iterable, or sequence of "
 "strings with variable names used by instances.  *__slots__* reserves space "
@@ -3114,11 +3145,11 @@ msgstr ""
 "місце для оголошених змінних і запобігає автоматичному створенню "
 ":attr:`~object.__dict__` і *__weakref__* для кожного екземпляра."
 
-#: ../../reference/datamodel.rst:2236
+#: ../../reference/datamodel.rst:2257
 msgid "Notes on using *__slots__*:"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2238
+#: ../../reference/datamodel.rst:2259
 msgid ""
 "When inheriting from a class without *__slots__*, the "
 ":attr:`~object.__dict__` and *__weakref__* attribute of the instances will "
@@ -3127,7 +3158,7 @@ msgstr ""
 "При успадкуванні від класу без *__slots__* атрибути :attr:`~object.__dict__`"
 " і *__weakref__* екземплярів завжди будуть доступними."
 
-#: ../../reference/datamodel.rst:2242
+#: ../../reference/datamodel.rst:2263
 msgid ""
 "Without a :attr:`~object.__dict__` variable, instances cannot be assigned "
 "new variables not listed in the *__slots__* definition.  Attempts to assign "
@@ -3141,7 +3172,7 @@ msgstr ""
 " динамічне призначення нових змінних, тоді додайте ``'__dict__'`` до "
 "послідовності рядків у декларації *__slots__*."
 
-#: ../../reference/datamodel.rst:2249
+#: ../../reference/datamodel.rst:2270
 msgid ""
 "Without a *__weakref__* variable for each instance, classes defining "
 "*__slots__* do not support :mod:`weak references <weakref>` to its "
@@ -3153,7 +3184,7 @@ msgstr ""
 "екземпляри. Якщо необхідна підтримка слабких посилань, додайте "
 "``'__weakref__'`` до послідовності рядків у декларації *__slots__*."
 
-#: ../../reference/datamodel.rst:2255
+#: ../../reference/datamodel.rst:2276
 msgid ""
 "*__slots__* are implemented at the class level by creating :ref:`descriptors"
 " <descriptors>` for each variable name.  As a result, class attributes "
@@ -3167,7 +3198,7 @@ msgstr ""
 "екземплярів, визначених *__slots__*; інакше атрибут класу перезапише "
 "призначення дескриптора."
 
-#: ../../reference/datamodel.rst:2261
+#: ../../reference/datamodel.rst:2282
 msgid ""
 "The action of a *__slots__* declaration is not limited to the class where it"
 " is defined.  *__slots__* declared in parents are available in child "
@@ -3181,7 +3212,7 @@ msgstr ""
 "якщо вони також не визначають *__slots__* (які мають містити лише назви "
 "будь-яких *додаткових* слотів)."
 
-#: ../../reference/datamodel.rst:2267
+#: ../../reference/datamodel.rst:2288
 msgid ""
 "If a class defines a slot also defined in a base class, the instance "
 "variable defined by the base class slot is inaccessible (except by "
@@ -3195,7 +3226,7 @@ msgstr ""
 " програми невизначеним. У майбутньому для запобігання цьому може бути додана"
 " перевірка."
 
-#: ../../reference/datamodel.rst:2272
+#: ../../reference/datamodel.rst:2293
 msgid ""
 ":exc:`TypeError` will be raised if nonempty *__slots__* are defined for a "
 "class derived from a :c:member:`\"variable-length\" built-in type "
@@ -3203,12 +3234,12 @@ msgid ""
 ":class:`tuple`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2277
+#: ../../reference/datamodel.rst:2298
 msgid "Any non-string :term:`iterable` may be assigned to *__slots__*."
 msgstr ""
 "Будь-який нерядковий :term:`iterable` може бути призначений *__slots__*."
 
-#: ../../reference/datamodel.rst:2279
+#: ../../reference/datamodel.rst:2300
 msgid ""
 "If a :class:`dictionary <dict>` is used to assign *__slots__*, the "
 "dictionary keys will be used as the slot names. The values of the dictionary"
@@ -3221,7 +3252,7 @@ msgstr ""
 "атрибута, які розпізнаються :func:`inspect.getdoc` і відображаються у виводі"
 " :func:`help`."
 
-#: ../../reference/datamodel.rst:2284
+#: ../../reference/datamodel.rst:2305
 msgid ""
 ":attr:`~instance.__class__` assignment works only if both classes have the "
 "same *__slots__*."
@@ -3229,7 +3260,7 @@ msgstr ""
 ":attr:`~instance.__class__` призначення працює, лише якщо обидва класи мають"
 " однакові *__slots__*."
 
-#: ../../reference/datamodel.rst:2287
+#: ../../reference/datamodel.rst:2308
 msgid ""
 ":ref:`Multiple inheritance <tut-multiple>` with multiple slotted parent "
 "classes can be used, but only one parent is allowed to have attributes "
@@ -3241,7 +3272,7 @@ msgstr ""
 "дозволено мати атрибути, створені слотами (інші бази повинні мати порожні "
 "макети слотів) - порушення викликають :exc:`TypeError`."
 
-#: ../../reference/datamodel.rst:2293
+#: ../../reference/datamodel.rst:2314
 msgid ""
 "If an :term:`iterator` is used for *__slots__* then a :term:`descriptor` is "
 "created for each of the iterator's values. However, the *__slots__* "
@@ -3251,11 +3282,11 @@ msgstr ""
 ":term:`descriptor` створюється для кожного значення ітератора. Однак атрибут"
 " *__slots__* буде порожнім ітератором."
 
-#: ../../reference/datamodel.rst:2301
+#: ../../reference/datamodel.rst:2322
 msgid "Customizing class creation"
 msgstr "Налаштування створення класу"
 
-#: ../../reference/datamodel.rst:2303
+#: ../../reference/datamodel.rst:2324
 msgid ""
 "Whenever a class inherits from another class, "
 ":meth:`~object.__init_subclass__` is called on the parent class. This way, "
@@ -3271,7 +3302,7 @@ msgstr ""
 "застосовані, ``__init_subclass__`` застосовується виключно до майбутніх "
 "підкласів класу, що визначає метод."
 
-#: ../../reference/datamodel.rst:2312
+#: ../../reference/datamodel.rst:2333
 msgid ""
 "This method is called whenever the containing class is subclassed. *cls* is "
 "then the new subclass. If defined as a normal instance method, this method "
@@ -3281,7 +3312,7 @@ msgstr ""
 "Тоді *cls* є новим підкласом. Якщо визначено як звичайний метод екземпляра, "
 "цей метод неявно перетворюється на метод класу."
 
-#: ../../reference/datamodel.rst:2316
+#: ../../reference/datamodel.rst:2337
 msgid ""
 "Keyword arguments which are given to a new class are passed to the parent "
 "class's ``__init_subclass__``. For compatibility with other classes using "
@@ -3289,7 +3320,7 @@ msgid ""
 "pass the others over to the base class, as in::"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2330
+#: ../../reference/datamodel.rst:2351
 msgid ""
 "The default implementation ``object.__init_subclass__`` does nothing, but "
 "raises an error if it is called with any arguments."
@@ -3297,7 +3328,7 @@ msgstr ""
 "Реалізація за замовчуванням ``object.__init_subclass__`` нічого не робить, "
 "але викликає помилку, якщо вона викликається з будь-якими аргументами."
 
-#: ../../reference/datamodel.rst:2335
+#: ../../reference/datamodel.rst:2356
 msgid ""
 "The metaclass hint ``metaclass`` is consumed by the rest of the type "
 "machinery, and is never passed to ``__init_subclass__`` implementations. The"
@@ -3308,7 +3339,7 @@ msgstr ""
 "ніколи не передається реалізаціям ``__init_subclass__``. Фактичний метаклас "
 "(а не явна підказка) можна отримати як ``type(cls)``."
 
-#: ../../reference/datamodel.rst:2343
+#: ../../reference/datamodel.rst:2364
 msgid ""
 "When a class is created, :meth:`type.__new__` scans the class variables and "
 "makes callbacks to those with a :meth:`~object.__set_name__` hook."
@@ -3316,7 +3347,7 @@ msgstr ""
 "Коли клас створюється, :meth:`type.__new__` сканує змінні класу та виконує "
 "зворотні виклики до тих, що мають хук :meth:`~object.__set_name__`."
 
-#: ../../reference/datamodel.rst:2348
+#: ../../reference/datamodel.rst:2369
 msgid ""
 "Automatically called at the time the owning class *owner* is created. The "
 "object has been assigned to *name* in that class::"
@@ -3324,7 +3355,7 @@ msgstr ""
 "Автоматично викликається під час створення класу власника *owner*. Об’єкту "
 "було призначено *name* у цьому класі::"
 
-#: ../../reference/datamodel.rst:2354
+#: ../../reference/datamodel.rst:2375
 msgid ""
 "If the class variable is assigned after the class is created, "
 ":meth:`__set_name__` will not be called automatically. If needed, "
@@ -3334,16 +3365,16 @@ msgstr ""
 "не буде викликатися автоматично. За потреби :meth:`__set_name__` можна "
 "викликати безпосередньо::"
 
-#: ../../reference/datamodel.rst:2365
+#: ../../reference/datamodel.rst:2386
 msgid "See :ref:`class-object-creation` for more details."
 msgstr ""
 "Дивіться :ref:`class-object-creation` для отримання додаткової інформації."
 
-#: ../../reference/datamodel.rst:2373
+#: ../../reference/datamodel.rst:2394
 msgid "Metaclasses"
 msgstr "Метакласи"
 
-#: ../../reference/datamodel.rst:2380
+#: ../../reference/datamodel.rst:2401
 msgid ""
 "By default, classes are constructed using :func:`type`. The class body is "
 "executed in a new namespace and the class name is bound locally to the "
@@ -3353,7 +3384,7 @@ msgstr ""
 "виконується в новому просторі імен, а ім’я класу прив’язується локально до "
 "результату ``type(name, bases, namespace)``."
 
-#: ../../reference/datamodel.rst:2384
+#: ../../reference/datamodel.rst:2405
 msgid ""
 "The class creation process can be customized by passing the ``metaclass`` "
 "keyword argument in the class definition line, or by inheriting from an "
@@ -3365,7 +3396,7 @@ msgstr ""
 "класу, який містив такий аргумент. У наступному прикладі і ``MyClass``, і "
 "``MySubclass`` є екземплярами ``Meta``::"
 
-#: ../../reference/datamodel.rst:2398
+#: ../../reference/datamodel.rst:2419
 msgid ""
 "Any other keyword arguments that are specified in the class definition are "
 "passed through to all metaclass operations described below."
@@ -3373,35 +3404,35 @@ msgstr ""
 "Будь-які інші ключові аргументи, указані у визначенні класу, передаються до "
 "всіх операцій метакласу, описаних нижче."
 
-#: ../../reference/datamodel.rst:2401
+#: ../../reference/datamodel.rst:2422
 msgid "When a class definition is executed, the following steps occur:"
 msgstr "Коли виконується визначення класу, відбуваються наступні кроки:"
 
-#: ../../reference/datamodel.rst:2403
+#: ../../reference/datamodel.rst:2424
 msgid "MRO entries are resolved;"
 msgstr "Записи MRO вирішено;"
 
-#: ../../reference/datamodel.rst:2404
+#: ../../reference/datamodel.rst:2425
 msgid "the appropriate metaclass is determined;"
 msgstr "визначається відповідний метаклас;"
 
-#: ../../reference/datamodel.rst:2405
+#: ../../reference/datamodel.rst:2426
 msgid "the class namespace is prepared;"
 msgstr "підготовлено простір імен класу;"
 
-#: ../../reference/datamodel.rst:2406
+#: ../../reference/datamodel.rst:2427
 msgid "the class body is executed;"
 msgstr "виконується тіло класу;"
 
-#: ../../reference/datamodel.rst:2407
+#: ../../reference/datamodel.rst:2428
 msgid "the class object is created."
 msgstr "створюється об'єкт класу."
 
-#: ../../reference/datamodel.rst:2411
+#: ../../reference/datamodel.rst:2432
 msgid "Resolving MRO entries"
 msgstr "Вирішення записів MRO"
 
-#: ../../reference/datamodel.rst:2415
+#: ../../reference/datamodel.rst:2436
 msgid ""
 "If a base that appears in a class definition is not an instance of "
 ":class:`type`, then an :meth:`!__mro_entries__` method is searched on the "
@@ -3413,49 +3444,49 @@ msgid ""
 "cases, the original base is ignored."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2426
+#: ../../reference/datamodel.rst:2447
 msgid ":func:`types.resolve_bases`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2427
+#: ../../reference/datamodel.rst:2448
 msgid "Dynamically resolve bases that are not instances of :class:`type`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2429
+#: ../../reference/datamodel.rst:2450
 msgid ":func:`types.get_original_bases`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2430
+#: ../../reference/datamodel.rst:2451
 msgid ""
 "Retrieve a class's \"original bases\" prior to modifications by "
 ":meth:`~object.__mro_entries__`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2433
+#: ../../reference/datamodel.rst:2454
 msgid ":pep:`560`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2434
+#: ../../reference/datamodel.rst:2455
 msgid "Core support for typing module and generic types."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2438
+#: ../../reference/datamodel.rst:2459
 msgid "Determining the appropriate metaclass"
 msgstr "Визначення відповідного метакласу"
 
-#: ../../reference/datamodel.rst:2442
+#: ../../reference/datamodel.rst:2463
 msgid ""
 "The appropriate metaclass for a class definition is determined as follows:"
 msgstr "Відповідний метаклас для визначення класу визначається таким чином:"
 
-#: ../../reference/datamodel.rst:2444
+#: ../../reference/datamodel.rst:2465
 msgid ""
 "if no bases and no explicit metaclass are given, then :func:`type` is used;"
 msgstr ""
 "якщо не вказано жодних баз і явного метакласу, то використовується "
 ":func:`type`;"
 
-#: ../../reference/datamodel.rst:2445
+#: ../../reference/datamodel.rst:2466
 msgid ""
 "if an explicit metaclass is given and it is *not* an instance of "
 ":func:`type`, then it is used directly as the metaclass;"
@@ -3463,7 +3494,7 @@ msgstr ""
 "якщо задано явний метаклас і він *не* є екземпляром :func:`type`, тоді він "
 "використовується безпосередньо як метаклас;"
 
-#: ../../reference/datamodel.rst:2447
+#: ../../reference/datamodel.rst:2468
 msgid ""
 "if an instance of :func:`type` is given as the explicit metaclass, or bases "
 "are defined, then the most derived metaclass is used."
@@ -3471,7 +3502,7 @@ msgstr ""
 "якщо екземпляр :func:`type` задано як явний метаклас або визначено основи, "
 "то використовується найбільш похідний метаклас."
 
-#: ../../reference/datamodel.rst:2450
+#: ../../reference/datamodel.rst:2471
 msgid ""
 "The most derived metaclass is selected from the explicitly specified "
 "metaclass (if any) and the metaclasses (i.e. ``type(cls)``) of all specified"
@@ -3485,11 +3516,11 @@ msgstr ""
 "кандидатів. Якщо жоден із метакласів-кандидатів не відповідає цьому "
 "критерію, визначення класу буде невдалим із ``TypeError``."
 
-#: ../../reference/datamodel.rst:2460
+#: ../../reference/datamodel.rst:2481
 msgid "Preparing the class namespace"
 msgstr "Підготовка простору імен класу"
 
-#: ../../reference/datamodel.rst:2465
+#: ../../reference/datamodel.rst:2486
 msgid ""
 "Once the appropriate metaclass has been identified, then the class namespace"
 " is prepared. If the metaclass has a ``__prepare__`` attribute, it is called"
@@ -3509,7 +3540,7 @@ msgstr ""
 "коли створюється останній об’єкт класу, простір імен копіюється в новий "
 "``dict``."
 
-#: ../../reference/datamodel.rst:2474
+#: ../../reference/datamodel.rst:2495
 msgid ""
 "If the metaclass has no ``__prepare__`` attribute, then the class namespace "
 "is initialised as an empty ordered mapping."
@@ -3517,19 +3548,19 @@ msgstr ""
 "Якщо метаклас не має атрибута ``__prepare__``, тоді простір імен класу "
 "ініціалізується як порожнє впорядковане відображення."
 
-#: ../../reference/datamodel.rst:2479
+#: ../../reference/datamodel.rst:2500
 msgid ":pep:`3115` - Metaclasses in Python 3000"
 msgstr ":pep:`3115` - Метакласи в Python 3000"
 
-#: ../../reference/datamodel.rst:2480
+#: ../../reference/datamodel.rst:2501
 msgid "Introduced the ``__prepare__`` namespace hook"
 msgstr "Представлено хук простору імен ``__prepare__``"
 
-#: ../../reference/datamodel.rst:2484
+#: ../../reference/datamodel.rst:2505
 msgid "Executing the class body"
 msgstr "Виконання тіла класу"
 
-#: ../../reference/datamodel.rst:2489
+#: ../../reference/datamodel.rst:2510
 msgid ""
 "The class body is executed (approximately) as ``exec(body, globals(), "
 "namespace)``. The key difference from a normal call to :func:`exec` is that "
@@ -3543,7 +3574,7 @@ msgstr ""
 "посилатися на імена з поточної та зовнішньої областей, коли визначення класу"
 " відбувається всередині функції."
 
-#: ../../reference/datamodel.rst:2495
+#: ../../reference/datamodel.rst:2516
 msgid ""
 "However, even when the class definition occurs inside the function, methods "
 "defined inside the class still cannot see names defined at the class scope. "
@@ -3557,11 +3588,11 @@ msgstr ""
 "параметр екземпляра або методів класу, або через неявне посилання "
 "``__class__`` з лексичною областю, описане в наступному розділі."
 
-#: ../../reference/datamodel.rst:2504
+#: ../../reference/datamodel.rst:2525
 msgid "Creating the class object"
 msgstr "Створення об'єкта класу"
 
-#: ../../reference/datamodel.rst:2511
+#: ../../reference/datamodel.rst:2532
 msgid ""
 "Once the class namespace has been populated by executing the class body, the"
 " class object is created by calling ``metaclass(name, bases, namespace, "
@@ -3573,7 +3604,7 @@ msgstr ""
 "(додаткові ключові слова, передані тут, такі самі, як ті, що передані` "
 "`__prepare__``)."
 
-#: ../../reference/datamodel.rst:2516
+#: ../../reference/datamodel.rst:2537
 msgid ""
 "This class object is the one that will be referenced by the zero-argument "
 "form of :func:`super`. ``__class__`` is an implicit closure reference "
@@ -3592,7 +3623,7 @@ msgstr ""
 " здійснення поточного виклику, ідентифікується на основі першого аргументу, "
 "переданого методу."
 
-#: ../../reference/datamodel.rst:2526
+#: ../../reference/datamodel.rst:2547
 msgid ""
 "In CPython 3.6 and later, the ``__class__`` cell is passed to the metaclass "
 "as a ``__classcell__`` entry in the class namespace. If present, this must "
@@ -3605,7 +3636,7 @@ msgstr ""
 "бути передано до виклику ``type.__new__`` для правильної ініціалізації "
 "класу. Якщо цього не зробити, у Python 3.8 виникне :exc:`RuntimeError`."
 
-#: ../../reference/datamodel.rst:2532
+#: ../../reference/datamodel.rst:2553
 msgid ""
 "When using the default metaclass :class:`type`, or any metaclass that "
 "ultimately calls ``type.__new__``, the following additional customization "
@@ -3615,7 +3646,7 @@ msgstr ""
 "метакласу, який остаточно викликає ``type.__new__``, наступні додаткові "
 "кроки налаштування викликаються після створення об’єкта класу:"
 
-#: ../../reference/datamodel.rst:2536
+#: ../../reference/datamodel.rst:2557
 msgid ""
 "The ``type.__new__`` method collects all of the attributes in the class "
 "namespace that define a :meth:`~object.__set_name__` method;"
@@ -3623,7 +3654,7 @@ msgstr ""
 "Метод ``type.__new__`` збирає всі атрибути в просторі імен класу, які "
 "визначають метод :meth:`~object.__set_name__`;"
 
-#: ../../reference/datamodel.rst:2538
+#: ../../reference/datamodel.rst:2559
 msgid ""
 "Those ``__set_name__`` methods are called with the class being defined and "
 "the assigned name of that particular attribute;"
@@ -3631,7 +3662,7 @@ msgstr ""
 "Ці методи ``__set_name__`` викликаються з визначеним класом і присвоєною "
 "назвою цього конкретного атрибута;"
 
-#: ../../reference/datamodel.rst:2540
+#: ../../reference/datamodel.rst:2561
 msgid ""
 "The :meth:`~object.__init_subclass__` hook is called on the immediate parent"
 " of the new class in its method resolution order."
@@ -3639,7 +3670,7 @@ msgstr ""
 "Хук :meth:`~object.__init_subclass__` викликається на безпосередньому "
 "батькові нового класу в порядку вирішення методів."
 
-#: ../../reference/datamodel.rst:2543
+#: ../../reference/datamodel.rst:2564
 msgid ""
 "After the class object is created, it is passed to the class decorators "
 "included in the class definition (if any) and the resulting object is bound "
@@ -3649,7 +3680,7 @@ msgstr ""
 "включених у визначення класу (якщо такі є), і отриманий об’єкт зв’язується в"
 " локальному просторі імен як визначений клас."
 
-#: ../../reference/datamodel.rst:2547
+#: ../../reference/datamodel.rst:2568
 msgid ""
 "When a new class is created by ``type.__new__``, the object provided as the "
 "namespace parameter is copied to a new ordered mapping and the original "
@@ -3661,19 +3692,19 @@ msgstr ""
 " а вихідний об’єкт відкидається. Нову копію загортають у проксі-сервер лише "
 "для читання, який стає атрибутом :attr:`~object.__dict__` об’єкта класу."
 
-#: ../../reference/datamodel.rst:2554
+#: ../../reference/datamodel.rst:2575
 msgid ":pep:`3135` - New super"
 msgstr ":pep:`3135` - Новий супер"
 
-#: ../../reference/datamodel.rst:2555
+#: ../../reference/datamodel.rst:2576
 msgid "Describes the implicit ``__class__`` closure reference"
 msgstr "Описує неявне посилання на закриття ``__class__``"
 
-#: ../../reference/datamodel.rst:2559
+#: ../../reference/datamodel.rst:2580
 msgid "Uses for metaclasses"
 msgstr "Використання для метакласів"
 
-#: ../../reference/datamodel.rst:2561
+#: ../../reference/datamodel.rst:2582
 msgid ""
 "The potential uses for metaclasses are boundless. Some ideas that have been "
 "explored include enum, logging, interface checking, automatic delegation, "
@@ -3685,11 +3716,11 @@ msgstr ""
 "делегування, автоматичне створення властивостей, проксі, фреймворки та "
 "автоматичне блокування/синхронізацію ресурсів."
 
-#: ../../reference/datamodel.rst:2568
+#: ../../reference/datamodel.rst:2589
 msgid "Customizing instance and subclass checks"
 msgstr "Налаштування перевірок екземплярів і підкласів"
 
-#: ../../reference/datamodel.rst:2570
+#: ../../reference/datamodel.rst:2591
 msgid ""
 "The following methods are used to override the default behavior of the "
 ":func:`isinstance` and :func:`issubclass` built-in functions."
@@ -3697,7 +3728,7 @@ msgstr ""
 "Наступні методи використовуються для заміни типової поведінки вбудованих "
 "функцій :func:`isinstance` і :func:`issubclass`."
 
-#: ../../reference/datamodel.rst:2573
+#: ../../reference/datamodel.rst:2594
 msgid ""
 "In particular, the metaclass :class:`abc.ABCMeta` implements these methods "
 "in order to allow the addition of Abstract Base Classes (ABCs) as \"virtual "
@@ -3709,7 +3740,7 @@ msgstr ""
 " до будь-якого класу або типу (включно з вбудованими типами), включаючи інші"
 " Азбука."
 
-#: ../../reference/datamodel.rst:2580
+#: ../../reference/datamodel.rst:2601
 msgid ""
 "Return true if *instance* should be considered a (direct or indirect) "
 "instance of *class*. If defined, called to implement ``isinstance(instance, "
@@ -3719,7 +3750,7 @@ msgstr ""
 "екземпляром *класу*. Якщо визначено, викликається для реалізації "
 "``isinstance(instance, class)``."
 
-#: ../../reference/datamodel.rst:2587
+#: ../../reference/datamodel.rst:2608
 msgid ""
 "Return true if *subclass* should be considered a (direct or indirect) "
 "subclass of *class*.  If defined, called to implement ``issubclass(subclass,"
@@ -3729,7 +3760,7 @@ msgstr ""
 "*класу*. Якщо визначено, викликається для реалізації ``issubclass(subclass, "
 "class)``."
 
-#: ../../reference/datamodel.rst:2592
+#: ../../reference/datamodel.rst:2613
 msgid ""
 "Note that these methods are looked up on the type (metaclass) of a class.  "
 "They cannot be defined as class methods in the actual class.  This is "
@@ -3741,11 +3772,11 @@ msgstr ""
 " спеціальних методів, які викликаються для екземплярів, тільки в цьому "
 "випадку екземпляр сам по собі є класом."
 
-#: ../../reference/datamodel.rst:2599
+#: ../../reference/datamodel.rst:2620
 msgid ":pep:`3119` - Introducing Abstract Base Classes"
 msgstr ":pep:`3119` - Представляємо абстрактні базові класи"
 
-#: ../../reference/datamodel.rst:2600
+#: ../../reference/datamodel.rst:2621
 msgid ""
 "Includes the specification for customizing :func:`isinstance` and "
 ":func:`issubclass` behavior through :meth:`~class.__instancecheck__` and "
@@ -3758,11 +3789,11 @@ msgstr ""
 ":meth:`~class.__subclasscheck__` з мотивацією для цієї функції в контексті "
 "додавання Абстрактні базові класи (див. модуль :mod:`abc`) до мови."
 
-#: ../../reference/datamodel.rst:2608
+#: ../../reference/datamodel.rst:2629
 msgid "Emulating generic types"
 msgstr "Емуляція загальних типів"
 
-#: ../../reference/datamodel.rst:2610
+#: ../../reference/datamodel.rst:2631
 msgid ""
 "When using :term:`type annotations<annotation>`, it is often useful to "
 "*parameterize* a :term:`generic type` using Python's square-brackets "
@@ -3775,24 +3806,24 @@ msgstr ""
 "використовувати для позначення :class:`list`, у якому всі елементи мають тип"
 " :class:`int`."
 
-#: ../../reference/datamodel.rst:2617
+#: ../../reference/datamodel.rst:2638
 msgid ":pep:`484` - Type Hints"
 msgstr ":pep:`484` - підказки типу"
 
-#: ../../reference/datamodel.rst:2618
+#: ../../reference/datamodel.rst:2639
 msgid "Introducing Python's framework for type annotations"
 msgstr "Представляємо структуру Python для анотацій типів"
 
-#: ../../reference/datamodel.rst:2620
+#: ../../reference/datamodel.rst:2641
 msgid ":ref:`Generic Alias Types<types-genericalias>`"
 msgstr ":ref:`Загальні типи псевдонімів <types-genericalias>`"
 
-#: ../../reference/datamodel.rst:2621
+#: ../../reference/datamodel.rst:2642
 msgid "Documentation for objects representing parameterized generic classes"
 msgstr ""
 "Документація для об'єктів, що представляють параметризовані загальні класи"
 
-#: ../../reference/datamodel.rst:2623
+#: ../../reference/datamodel.rst:2644
 msgid ""
 ":ref:`Generics`, :ref:`user-defined generics<user-defined-generics>` and "
 ":class:`typing.Generic`"
@@ -3800,7 +3831,7 @@ msgstr ""
 ":ref:`Generics`, :ref:`визначені користувачем узагальнення <user-defined-"
 "generics>` і :class:`typing.Generic`"
 
-#: ../../reference/datamodel.rst:2624
+#: ../../reference/datamodel.rst:2645
 msgid ""
 "Documentation on how to implement generic classes that can be parameterized "
 "at runtime and understood by static type-checkers."
@@ -3809,7 +3840,7 @@ msgstr ""
 "параметризувати під час виконання та розуміти статичними засобами перевірки "
 "типів."
 
-#: ../../reference/datamodel.rst:2627
+#: ../../reference/datamodel.rst:2648
 msgid ""
 "A class can *generally* only be parameterized if it defines the special "
 "class method ``__class_getitem__()``."
@@ -3817,7 +3848,7 @@ msgstr ""
 "*Зазвичай* клас може бути параметризований, лише якщо він визначає "
 "спеціальний метод класу ``__class_getitem__()``."
 
-#: ../../reference/datamodel.rst:2632
+#: ../../reference/datamodel.rst:2653
 msgid ""
 "Return an object representing the specialization of a generic class by type "
 "arguments found in *key*."
@@ -3825,7 +3856,7 @@ msgstr ""
 "Повертає об’єкт, який представляє спеціалізацію загального класу за "
 "аргументами типу, знайденими в *key*."
 
-#: ../../reference/datamodel.rst:2635
+#: ../../reference/datamodel.rst:2656
 msgid ""
 "When defined on a class, ``__class_getitem__()`` is automatically a class "
 "method. As such, there is no need for it to be decorated with "
@@ -3835,11 +3866,11 @@ msgstr ""
 "класу. Таким чином, немає необхідності прикрашати його :func:`@classmethod "
 "<classmethod>`, коли він визначений."
 
-#: ../../reference/datamodel.rst:2641
+#: ../../reference/datamodel.rst:2662
 msgid "The purpose of *__class_getitem__*"
 msgstr "Мета *__class_getitem__*"
 
-#: ../../reference/datamodel.rst:2643
+#: ../../reference/datamodel.rst:2664
 msgid ""
 "The purpose of :meth:`~object.__class_getitem__` is to allow runtime "
 "parameterization of standard-library generic classes in order to more easily"
@@ -3849,7 +3880,7 @@ msgstr ""
 "загальних класів стандартної бібліотеки під час виконання, щоб легше "
 "застосовувати :term:`підказки типу <type hint>` до цих класів."
 
-#: ../../reference/datamodel.rst:2647
+#: ../../reference/datamodel.rst:2668
 msgid ""
 "To implement custom generic classes that can be parameterized at runtime and"
 " understood by static type-checkers, users should either inherit from a "
@@ -3864,7 +3895,7 @@ msgstr ""
 ":class:`typing. Generic`, який має власну реалізацію "
 "``__class_getitem__()``."
 
-#: ../../reference/datamodel.rst:2653
+#: ../../reference/datamodel.rst:2674
 msgid ""
 "Custom implementations of :meth:`~object.__class_getitem__` on classes "
 "defined outside of the standard library may not be understood by third-party"
@@ -3877,11 +3908,11 @@ msgstr ""
 "``__class_getitem__()`` для будь-якого класу для цілей, відмінних від "
 "підказки типу."
 
-#: ../../reference/datamodel.rst:2663
+#: ../../reference/datamodel.rst:2684
 msgid "*__class_getitem__* versus *__getitem__*"
 msgstr "*__class_getitem__* проти *__getitem__*"
 
-#: ../../reference/datamodel.rst:2665
+#: ../../reference/datamodel.rst:2686
 msgid ""
 "Usually, the :ref:`subscription<subscriptions>` of an object using square "
 "brackets will call the :meth:`~object.__getitem__` instance method defined "
@@ -3897,7 +3928,7 @@ msgstr ""
 " ``__class_getitem__()`` має повертати об’єкт :ref:`GenericAlias <types-"
 "genericalias>`, якщо він правильно визначений."
 
-#: ../../reference/datamodel.rst:2672
+#: ../../reference/datamodel.rst:2693
 msgid ""
 "Presented with the :term:`expression` ``obj[x]``, the Python interpreter "
 "follows something like the following process to decide whether "
@@ -3909,7 +3940,7 @@ msgstr ""
 ":meth:`~object.__getitem__` або :meth:`~object.__class_getitem__` бути "
 "викликаним::"
 
-#: ../../reference/datamodel.rst:2700
+#: ../../reference/datamodel.rst:2721
 msgid ""
 "In Python, all classes are themselves instances of other classes. The class "
 "of a class is known as that class's :term:`metaclass`, and most classes have"
@@ -3924,7 +3955,7 @@ msgstr ""
 "такі вирази, як ``list[int]``, ``dict[str, float]`` і ``tuple[str, bytes]`` "
 "все призводить до виклику :meth:`~object.__class_getitem__`::"
 
-#: ../../reference/datamodel.rst:2719
+#: ../../reference/datamodel.rst:2740
 msgid ""
 "However, if a class has a custom metaclass that defines "
 ":meth:`~object.__getitem__`, subscribing the class may result in different "
@@ -3934,12 +3965,12 @@ msgstr ""
 ":meth:`~object.__getitem__`, підписка на клас може призвести до іншої "
 "поведінки. Приклад цього можна знайти в модулі :mod:`enum`::"
 
-#: ../../reference/datamodel.rst:2742
+#: ../../reference/datamodel.rst:2763
 msgid ":pep:`560` - Core Support for typing module and generic types"
 msgstr ""
 ":pep:`560` - Основна підтримка модуля введення тексту та загальних типів"
 
-#: ../../reference/datamodel.rst:2743
+#: ../../reference/datamodel.rst:2764
 msgid ""
 "Introducing :meth:`~object.__class_getitem__`, and outlining when a "
 ":ref:`subscription<subscriptions>` results in ``__class_getitem__()`` being "
@@ -3949,11 +3980,11 @@ msgstr ""
 ":ref:`підписка <subscriptions>` призводить до виклику "
 "``__class_getitem__()`` замість :meth:`~object.__getitem__`"
 
-#: ../../reference/datamodel.rst:2751
+#: ../../reference/datamodel.rst:2772
 msgid "Emulating callable objects"
 msgstr "Емуляція викликаних об'єктів"
 
-#: ../../reference/datamodel.rst:2758
+#: ../../reference/datamodel.rst:2779
 msgid ""
 "Called when the instance is \"called\" as a function; if this method is "
 "defined, ``x(arg1, arg2, ...)`` roughly translates to ``type(x).__call__(x, "
@@ -3963,11 +3994,11 @@ msgstr ""
 "визначено, ``x(arg1, arg2, ...)`` приблизно перекладається як "
 "``type(x).__call__(x, arg1, ...)``."
 
-#: ../../reference/datamodel.rst:2765
+#: ../../reference/datamodel.rst:2786
 msgid "Emulating container types"
 msgstr "Емуляція типів контейнерів"
 
-#: ../../reference/datamodel.rst:2767
+#: ../../reference/datamodel.rst:2788
 msgid ""
 "The following methods can be defined to implement container objects.  "
 "Containers usually are :term:`sequences <sequence>` (such as :class:`lists "
@@ -4004,7 +4035,7 @@ msgid ""
 "object's keys; for sequences, it should iterate through the values."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2808
+#: ../../reference/datamodel.rst:2829
 msgid ""
 "Called to implement the built-in function :func:`len`.  Should return the "
 "length of the object, an integer ``>=`` 0.  Also, an object that doesn't "
@@ -4012,7 +4043,7 @@ msgid ""
 "returns zero is considered to be false in a Boolean context."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2815
+#: ../../reference/datamodel.rst:2836
 msgid ""
 "In CPython, the length is required to be at most :data:`sys.maxsize`. If the"
 " length is larger than :data:`!sys.maxsize` some features (such as "
@@ -4021,7 +4052,7 @@ msgid ""
 ":meth:`~object.__bool__` method."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2824
+#: ../../reference/datamodel.rst:2845
 msgid ""
 "Called to implement :func:`operator.length_hint`. Should return an estimated"
 " length for the object (which may be greater or less than the actual "
@@ -4031,21 +4062,21 @@ msgid ""
 "optimization and is never required for correctness."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2838
+#: ../../reference/datamodel.rst:2859
 msgid ""
 "Slicing is done exclusively with the following three methods.  A call like "
 "::"
 msgstr "Нарізка виконується виключно трьома способами. Дзвінок типу ::"
 
-#: ../../reference/datamodel.rst:2842
+#: ../../reference/datamodel.rst:2863
 msgid "is translated to ::"
 msgstr "перекладається на ::"
 
-#: ../../reference/datamodel.rst:2846
+#: ../../reference/datamodel.rst:2867
 msgid "and so forth.  Missing slice items are always filled in with ``None``."
 msgstr "і так далі. Відсутні елементи фрагмента завжди заповнюються ``None``."
 
-#: ../../reference/datamodel.rst:2851
+#: ../../reference/datamodel.rst:2872
 msgid ""
 "Called to implement evaluation of ``self[key]``. For :term:`sequence` types,"
 " the accepted keys should be integers. Optionally, they may support "
@@ -4057,7 +4088,7 @@ msgid ""
 ":exc:`KeyError` should be raised."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2863
+#: ../../reference/datamodel.rst:2884
 msgid ""
 ":keyword:`for` loops expect that an :exc:`IndexError` will be raised for "
 "illegal indexes to allow proper detection of the end of the sequence."
@@ -4066,7 +4097,7 @@ msgstr ""
 "недопустимих індексів, щоб забезпечити належне виявлення кінця "
 "послідовності."
 
-#: ../../reference/datamodel.rst:2868
+#: ../../reference/datamodel.rst:2889
 msgid ""
 "When :ref:`subscripting<subscriptions>` a *class*, the special class method "
 ":meth:`~object.__class_getitem__` may be called instead of "
@@ -4077,7 +4108,7 @@ msgstr ""
 "``__getitem__()``. Перегляньте :ref:`classgetitem-versus-getitem` для "
 "отримання додаткової інформації."
 
-#: ../../reference/datamodel.rst:2876
+#: ../../reference/datamodel.rst:2897
 msgid ""
 "Called to implement assignment to ``self[key]``.  Same note as for "
 ":meth:`__getitem__`.  This should only be implemented for mappings if the "
@@ -4092,7 +4123,7 @@ msgstr ""
 "неправильних значень *key* мають бути викликані ті самі винятки, що й для "
 "методу :meth:`__getitem__`."
 
-#: ../../reference/datamodel.rst:2885
+#: ../../reference/datamodel.rst:2906
 msgid ""
 "Called to implement deletion of ``self[key]``.  Same note as for "
 ":meth:`__getitem__`.  This should only be implemented for mappings if the "
@@ -4106,7 +4137,7 @@ msgstr ""
 "можна видалити з послідовності. Для неправильних значень *key* мають бути "
 "викликані ті самі винятки, що й для методу :meth:`__getitem__`."
 
-#: ../../reference/datamodel.rst:2894
+#: ../../reference/datamodel.rst:2915
 msgid ""
 "Called by :class:`dict`\\ .\\ :meth:`__getitem__` to implement ``self[key]``"
 " for dict subclasses when key is not in the dictionary."
@@ -4114,7 +4145,7 @@ msgstr ""
 "Викликається :class:`dict`\\ .\\ :meth:`__getitem__` для реалізації "
 "``self[key]`` для підкласів dict, коли ключа немає в словнику."
 
-#: ../../reference/datamodel.rst:2900
+#: ../../reference/datamodel.rst:2921
 msgid ""
 "This method is called when an :term:`iterator` is required for a container. "
 "This method should return a new iterator object that can iterate over all "
@@ -4126,7 +4157,7 @@ msgstr ""
 "всіх об’єктах у контейнері. Для зіставлення він повинен перебирати ключі "
 "контейнера."
 
-#: ../../reference/datamodel.rst:2908
+#: ../../reference/datamodel.rst:2929
 msgid ""
 "Called (if present) by the :func:`reversed` built-in to implement reverse "
 "iteration.  It should return a new iterator object that iterates over all "
@@ -4136,7 +4167,7 @@ msgstr ""
 "ітерації. Він має повернути новий об’єкт-ітератор, який обходить усі об’єкти"
 " в контейнері у зворотному порядку."
 
-#: ../../reference/datamodel.rst:2912
+#: ../../reference/datamodel.rst:2933
 msgid ""
 "If the :meth:`__reversed__` method is not provided, the :func:`reversed` "
 "built-in will fall back to using the sequence protocol (:meth:`__len__` and "
@@ -4150,7 +4181,7 @@ msgstr ""
 "повинні надавати лише :meth:`__reversed__`, якщо вони можуть забезпечити "
 "ефективнішу реалізацію, ніж та, яку надає :func:`reversed`."
 
-#: ../../reference/datamodel.rst:2919
+#: ../../reference/datamodel.rst:2940
 msgid ""
 "The membership test operators (:keyword:`in` and :keyword:`not in`) are "
 "normally implemented as an iteration through a container. However, container"
@@ -4162,7 +4193,7 @@ msgstr ""
 "надавати наступний спеціальний метод з більш ефективною реалізацією, яка "
 "також не вимагає, щоб об’єкт був повторюваним."
 
-#: ../../reference/datamodel.rst:2926
+#: ../../reference/datamodel.rst:2947
 msgid ""
 "Called to implement membership test operators.  Should return true if *item*"
 " is in *self*, false otherwise.  For mapping objects, this should consider "
@@ -4173,7 +4204,7 @@ msgstr ""
 "об’єктів це має враховувати ключі відображення, а не значення або пари ключ-"
 "елемент."
 
-#: ../../reference/datamodel.rst:2930
+#: ../../reference/datamodel.rst:2951
 msgid ""
 "For objects that don't define :meth:`__contains__`, the membership test "
 "first tries iteration via :meth:`__iter__`, then the old sequence iteration "
@@ -4185,11 +4216,11 @@ msgstr ""
 "протокол ітерації послідовності через :meth:`__getitem__`, див. :ref:`цей "
 "розділ у посилання на мову <membership-test-details>`."
 
-#: ../../reference/datamodel.rst:2939
+#: ../../reference/datamodel.rst:2960
 msgid "Emulating numeric types"
 msgstr "Емуляція числових типів"
 
-#: ../../reference/datamodel.rst:2941
+#: ../../reference/datamodel.rst:2962
 msgid ""
 "The following methods can be defined to emulate numeric objects. Methods "
 "corresponding to operations that are not supported by the particular kind of"
@@ -4201,7 +4232,7 @@ msgstr ""
 "числа (наприклад, побітові операції для нецілісних чисел), слід залишити "
 "невизначеними."
 
-#: ../../reference/datamodel.rst:2967
+#: ../../reference/datamodel.rst:2988
 msgid ""
 "These methods are called to implement the binary arithmetic operations "
 "(``+``, ``-``, ``*``, ``@``, ``/``, ``//``, ``%``, :func:`divmod`, "
@@ -4215,13 +4246,13 @@ msgid ""
 ":func:`pow` function is to be supported."
 msgstr ""
 
-#: ../../reference/datamodel.rst:2978
+#: ../../reference/datamodel.rst:2999
 msgid ""
 "If one of those methods does not support the operation with the supplied "
 "arguments, it should return :data:`NotImplemented`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3001
+#: ../../reference/datamodel.rst:3022
 msgid ""
 "These methods are called to implement the binary arithmetic operations "
 "(``+``, ``-``, ``*``, ``@``, ``/``, ``//``, ``%``, :func:`divmod`, "
@@ -4234,7 +4265,7 @@ msgid ""
 ":data:`NotImplemented`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3013
+#: ../../reference/datamodel.rst:3034
 msgid ""
 "Note that ternary :func:`pow` will not try calling :meth:`__rpow__` (the "
 "coercion rules would become too complicated)."
@@ -4242,7 +4273,7 @@ msgstr ""
 "Зауважте, що тернарний :func:`pow` не намагатиметься викликати "
 ":meth:`__rpow__` (правила примусу стануть надто складними)."
 
-#: ../../reference/datamodel.rst:3018
+#: ../../reference/datamodel.rst:3039
 msgid ""
 "If the right operand's type is a subclass of the left operand's type and "
 "that subclass provides a different implementation of the reflected method "
@@ -4255,7 +4286,7 @@ msgstr ""
 " викликаний перед невідображеним методом лівого операнда. Така поведінка "
 "дозволяє підкласам перевизначати операції своїх предків."
 
-#: ../../reference/datamodel.rst:3039
+#: ../../reference/datamodel.rst:3060
 msgid ""
 "These methods are called to implement the augmented arithmetic assignments "
 "(``+=``, ``-=``, ``*=``, ``@=``, ``/=``, ``//=``, ``%=``, ``**=``, ``<<=``, "
@@ -4273,7 +4304,7 @@ msgid ""
 "fact part of the data model."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3062
+#: ../../reference/datamodel.rst:3083
 msgid ""
 "Called to implement the unary arithmetic operations (``-``, ``+``, "
 ":func:`abs` and ``~``)."
@@ -4281,7 +4312,7 @@ msgstr ""
 "Викликається для реалізації унарних арифметичних операцій (``-``, ``+``, "
 ":func:`abs` і ``~``)."
 
-#: ../../reference/datamodel.rst:3075
+#: ../../reference/datamodel.rst:3096
 msgid ""
 "Called to implement the built-in functions :func:`complex`, :func:`int` and "
 ":func:`float`.  Should return a value of the appropriate type."
@@ -4289,7 +4320,7 @@ msgstr ""
 "Викликається для реалізації вбудованих функцій :func:`complex`, :func:`int` "
 "і :func:`float`. Має повертати значення відповідного типу."
 
-#: ../../reference/datamodel.rst:3082
+#: ../../reference/datamodel.rst:3103
 msgid ""
 "Called to implement :func:`operator.index`, and whenever Python needs to "
 "losslessly convert the numeric object to an integer object (such as in "
@@ -4303,7 +4334,7 @@ msgstr ""
 ":func:`oct`). Наявність цього методу вказує на те, що числовий об'єкт є "
 "цілим типом. Має повертати ціле число."
 
-#: ../../reference/datamodel.rst:3088
+#: ../../reference/datamodel.rst:3109
 msgid ""
 "If :meth:`__int__`, :meth:`__float__` and :meth:`__complex__` are not "
 "defined then corresponding built-in functions :func:`int`, :func:`float` and"
@@ -4313,7 +4344,7 @@ msgstr ""
 "то відповідні вбудовані функції :func:`int`, :func:`float` і :func:`complex`"
 " повернутися до :meth:`__index__`."
 
-#: ../../reference/datamodel.rst:3100
+#: ../../reference/datamodel.rst:3121
 msgid ""
 "Called to implement the built-in function :func:`round` and :mod:`math` "
 "functions :func:`~math.trunc`, :func:`~math.floor` and :func:`~math.ceil`. "
@@ -4327,7 +4358,7 @@ msgstr ""
 "значення об’єкта, усічене до :class:`~numbers.Integral` (зазвичай "
 ":class:`int`)."
 
-#: ../../reference/datamodel.rst:3106
+#: ../../reference/datamodel.rst:3127
 msgid ""
 "The built-in function :func:`int` falls back to :meth:`__trunc__` if neither"
 " :meth:`__int__` nor :meth:`__index__` is defined."
@@ -4335,15 +4366,15 @@ msgstr ""
 "Вбудована функція :func:`int` повертається до :meth:`__trunc__`, якщо не "
 "визначено ні :meth:`__int__`, ні :meth:`__index__`."
 
-#: ../../reference/datamodel.rst:3109
+#: ../../reference/datamodel.rst:3130
 msgid "The delegation of :func:`int` to :meth:`__trunc__` is deprecated."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3116
+#: ../../reference/datamodel.rst:3137
 msgid "With Statement Context Managers"
 msgstr "З менеджерами контексту операторів"
 
-#: ../../reference/datamodel.rst:3118
+#: ../../reference/datamodel.rst:3139
 msgid ""
 "A :dfn:`context manager` is an object that defines the runtime context to be"
 " established when executing a :keyword:`with` statement. The context manager"
@@ -4359,7 +4390,7 @@ msgstr ""
 " оператора :keyword:`!with` (описаного в розділі :ref:`with`), але їх також "
 "можна використовувати шляхом безпосереднього виклику їхніх методів."
 
-#: ../../reference/datamodel.rst:3129
+#: ../../reference/datamodel.rst:3150
 msgid ""
 "Typical uses of context managers include saving and restoring various kinds "
 "of global state, locking and unlocking resources, closing opened files, etc."
@@ -4368,14 +4399,14 @@ msgstr ""
 " різних видів глобального стану, блокування та розблокування ресурсів, "
 "закриття відкритих файлів тощо."
 
-#: ../../reference/datamodel.rst:3132
+#: ../../reference/datamodel.rst:3153
 msgid ""
 "For more information on context managers, see :ref:`typecontextmanager`."
 msgstr ""
 "Для отримання додаткової інформації про контекстні менеджери див. "
 ":ref:`typecontextmanager`."
 
-#: ../../reference/datamodel.rst:3137
+#: ../../reference/datamodel.rst:3158
 msgid ""
 "Enter the runtime context related to this object. The :keyword:`with` "
 "statement will bind this method's return value to the target(s) specified in"
@@ -4385,7 +4416,7 @@ msgstr ""
 ":keyword:`with` прив’яже значення, що повертається цим методом, до "
 "цілей(ів), указаних у пункті :keyword:`!as` оператора, якщо такий є."
 
-#: ../../reference/datamodel.rst:3144
+#: ../../reference/datamodel.rst:3165
 msgid ""
 "Exit the runtime context related to this object. The parameters describe the"
 " exception that caused the context to be exited. If the context was exited "
@@ -4395,7 +4426,7 @@ msgstr ""
 "виняток, який спричинив вихід із контексту. Якщо контекст вийшов без "
 "винятку, усі три аргументи будуть :const:`None`."
 
-#: ../../reference/datamodel.rst:3148
+#: ../../reference/datamodel.rst:3169
 msgid ""
 "If an exception is supplied, and the method wishes to suppress the exception"
 " (i.e., prevent it from being propagated), it should return a true value. "
@@ -4406,28 +4437,28 @@ msgstr ""
 " розповсюдженню), він повинен повернути істинне значення. В іншому випадку "
 "виняток буде оброблено звичайним чином після виходу з цього методу."
 
-#: ../../reference/datamodel.rst:3152
+#: ../../reference/datamodel.rst:3173
 msgid ""
 "Note that :meth:`~object.__exit__` methods should not reraise the passed-in "
 "exception; this is the caller's responsibility."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3158
+#: ../../reference/datamodel.rst:3179
 msgid ":pep:`343` - The \"with\" statement"
 msgstr ":pep:`343` - оператор \"з\"."
 
-#: ../../reference/datamodel.rst:3159
+#: ../../reference/datamodel.rst:3180
 msgid ""
 "The specification, background, and examples for the Python :keyword:`with` "
 "statement."
 msgstr ""
 "Специфікація, передумови та приклади оператора Python :keyword:`with`."
 
-#: ../../reference/datamodel.rst:3166
+#: ../../reference/datamodel.rst:3187
 msgid "Customizing positional arguments in class pattern matching"
 msgstr "Налаштування позиційних аргументів у відповідності шаблону класу"
 
-#: ../../reference/datamodel.rst:3168
+#: ../../reference/datamodel.rst:3189
 msgid ""
 "When using a class name in a pattern, positional arguments in the pattern "
 "are not allowed by default, i.e. ``case MyClass(x, y)`` is typically invalid"
@@ -4435,7 +4466,7 @@ msgid ""
 "pattern, the class needs to define a *__match_args__* attribute."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3175
+#: ../../reference/datamodel.rst:3196
 msgid ""
 "This class variable can be assigned a tuple of strings. When this class is "
 "used in a class pattern with positional arguments, each positional argument "
@@ -4449,7 +4480,7 @@ msgstr ""
 "відповідне значення в *__match_args__* як ключове слово. Відсутність цього "
 "атрибута еквівалентна встановленню для нього значення ``()``."
 
-#: ../../reference/datamodel.rst:3181
+#: ../../reference/datamodel.rst:3202
 msgid ""
 "For example, if ``MyClass.__match_args__`` is ``(\"left\", \"center\", "
 "\"right\")`` that means that ``case MyClass(x, y)`` is equivalent to ``case "
@@ -4465,19 +4496,19 @@ msgstr ""
 "*__match_args__*; якщо він більший, спроба збігу шаблону викличе "
 ":exc:`TypeError`."
 
-#: ../../reference/datamodel.rst:3191
+#: ../../reference/datamodel.rst:3212
 msgid ":pep:`634` - Structural Pattern Matching"
 msgstr ":pep:`634` - зіставлення структурних шаблонів"
 
-#: ../../reference/datamodel.rst:3192
+#: ../../reference/datamodel.rst:3213
 msgid "The specification for the Python ``match`` statement."
 msgstr "Специфікація оператора ``match`` Python."
 
-#: ../../reference/datamodel.rst:3198
+#: ../../reference/datamodel.rst:3219
 msgid "Emulating buffer types"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3200
+#: ../../reference/datamodel.rst:3221
 msgid ""
 "The :ref:`buffer protocol <bufferobjects>` provides a way for Python objects"
 " to expose efficient access to a low-level memory array. This protocol is "
@@ -4485,13 +4516,13 @@ msgid ""
 " and third-party libraries may define additional buffer types."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3205
+#: ../../reference/datamodel.rst:3226
 msgid ""
 "While buffer types are usually implemented in C, it is also possible to "
 "implement the protocol in Python."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3210
+#: ../../reference/datamodel.rst:3231
 msgid ""
 "Called when a buffer is requested from *self* (for example, by the "
 ":class:`memoryview` constructor). The *flags* argument is an integer "
@@ -4501,7 +4532,7 @@ msgid ""
 ":class:`memoryview` object."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3219
+#: ../../reference/datamodel.rst:3240
 msgid ""
 "Called when a buffer is no longer needed. The *buffer* argument is a "
 ":class:`memoryview` object that was previously returned by "
@@ -4510,28 +4541,28 @@ msgid ""
 " not need to perform any cleanup are not required to implement this method."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3230
+#: ../../reference/datamodel.rst:3251
 msgid ":pep:`688` - Making the buffer protocol accessible in Python"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3231
+#: ../../reference/datamodel.rst:3252
 msgid ""
 "Introduces the Python ``__buffer__`` and ``__release_buffer__`` methods."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3233
+#: ../../reference/datamodel.rst:3254
 msgid ":class:`collections.abc.Buffer`"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3234
+#: ../../reference/datamodel.rst:3255
 msgid "ABC for buffer types."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3239
+#: ../../reference/datamodel.rst:3260
 msgid "Special method lookup"
 msgstr "Спеціальний метод пошуку"
 
-#: ../../reference/datamodel.rst:3241
+#: ../../reference/datamodel.rst:3262
 msgid ""
 "For custom classes, implicit invocations of special methods are only "
 "guaranteed to work correctly if defined on an object's type, not in the "
@@ -4543,7 +4574,7 @@ msgstr ""
 "словнику екземплярів об’єкта. Така поведінка є причиною того, що наступний "
 "код викликає виняток::"
 
-#: ../../reference/datamodel.rst:3256
+#: ../../reference/datamodel.rst:3277
 msgid ""
 "The rationale behind this behaviour lies with a number of special methods "
 "such as :meth:`~object.__hash__` and :meth:`~object.__repr__` that are "
@@ -4557,7 +4588,7 @@ msgstr ""
 "використовував звичайний процес пошуку, вони зазнали б помилки під час "
 "виклику в самому об’єкті типу:"
 
-#: ../../reference/datamodel.rst:3270
+#: ../../reference/datamodel.rst:3291
 msgid ""
 "Incorrectly attempting to invoke an unbound method of a class in this way is"
 " sometimes referred to as 'metaclass confusion', and is avoided by bypassing"
@@ -4567,7 +4598,7 @@ msgstr ""
 "називається \"плутаниною метакласу\", і її можна уникнути шляхом обходу "
 "екземпляра під час пошуку спеціальних методів:"
 
-#: ../../reference/datamodel.rst:3279
+#: ../../reference/datamodel.rst:3300
 msgid ""
 "In addition to bypassing any instance attributes in the interest of "
 "correctness, implicit special method lookup generally also bypasses the "
@@ -4577,7 +4608,7 @@ msgstr ""
 " пошук спеціального методу зазвичай також обходить метод "
 ":meth:`~object.__getattribute__` навіть метакласу об’єкта::"
 
-#: ../../reference/datamodel.rst:3305
+#: ../../reference/datamodel.rst:3326
 msgid ""
 "Bypassing the :meth:`~object.__getattribute__` machinery in this fashion "
 "provides significant scope for speed optimisations within the interpreter, "
@@ -4591,15 +4622,15 @@ msgstr ""
 " встановлений на об’єкті класу сам для того, щоб бути послідовно викликаним "
 "інтерпретатором)."
 
-#: ../../reference/datamodel.rst:3316
+#: ../../reference/datamodel.rst:3337
 msgid "Coroutines"
 msgstr "Співпрограми"
 
-#: ../../reference/datamodel.rst:3320
+#: ../../reference/datamodel.rst:3341
 msgid "Awaitable Objects"
 msgstr "Очікувані об'єкти"
 
-#: ../../reference/datamodel.rst:3322
+#: ../../reference/datamodel.rst:3343
 msgid ""
 "An :term:`awaitable` object generally implements an "
 ":meth:`~object.__await__` method. :term:`Coroutine objects <coroutine>` "
@@ -4609,14 +4640,14 @@ msgstr ""
 ":term:`Очікуються об’єкти співпрограми <coroutine>`, повернуті функціями "
 ":keyword:`async def`."
 
-#: ../../reference/datamodel.rst:3328
+#: ../../reference/datamodel.rst:3349
 msgid ""
 "The :term:`generator iterator` objects returned from generators decorated "
 "with :func:`types.coroutine` are also awaitable, but they do not implement "
 ":meth:`~object.__await__`."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3334
+#: ../../reference/datamodel.rst:3355
 msgid ""
 "Must return an :term:`iterator`.  Should be used to implement "
 ":term:`awaitable` objects.  For instance, :class:`asyncio.Future` implements"
@@ -4626,7 +4657,7 @@ msgstr ""
 " :term:`awaitable`. Наприклад, :class:`asyncio.Future` реалізує цей метод "
 "для сумісності з виразом :keyword:`await`."
 
-#: ../../reference/datamodel.rst:3340
+#: ../../reference/datamodel.rst:3361
 msgid ""
 "The language doesn't place any restriction on the type or value of the "
 "objects yielded by the iterator returned by ``__await__``, as this is "
@@ -4634,15 +4665,15 @@ msgid ""
 " :mod:`asyncio`) that will be managing the :term:`awaitable` object."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3348
+#: ../../reference/datamodel.rst:3369
 msgid ":pep:`492` for additional information about awaitable objects."
 msgstr ":pep:`492` для додаткової інформації про очікувані об’єкти."
 
-#: ../../reference/datamodel.rst:3354
+#: ../../reference/datamodel.rst:3375
 msgid "Coroutine Objects"
 msgstr "Об’єкти співпрограми"
 
-#: ../../reference/datamodel.rst:3356
+#: ../../reference/datamodel.rst:3377
 msgid ""
 ":term:`Coroutine objects <coroutine>` are :term:`awaitable` objects. A "
 "coroutine's execution can be controlled by calling :meth:`~object.__await__`"
@@ -4660,7 +4691,7 @@ msgstr ""
 "співпрограма викликає виключення, воно поширюється ітератором. Співпрограми "
 "не повинні безпосередньо викликати необроблені винятки :exc:`StopIteration`."
 
-#: ../../reference/datamodel.rst:3364
+#: ../../reference/datamodel.rst:3385
 msgid ""
 "Coroutines also have the methods listed below, which are analogous to those "
 "of generators (see :ref:`generator-methods`).  However, unlike generators, "
@@ -4670,12 +4701,12 @@ msgstr ""
 " :ref:`generator-methods`). Однак, на відміну від генераторів, співпрограми "
 "безпосередньо не підтримують ітерацію."
 
-#: ../../reference/datamodel.rst:3368
+#: ../../reference/datamodel.rst:3389
 msgid "It is a :exc:`RuntimeError` to await on a coroutine more than once."
 msgstr ""
 "Це :exc:`RuntimeError`, якщо очікувати в співпрограмі більше одного разу."
 
-#: ../../reference/datamodel.rst:3374
+#: ../../reference/datamodel.rst:3395
 msgid ""
 "Starts or resumes execution of the coroutine.  If *value* is ``None``, this "
 "is equivalent to advancing the iterator returned by "
@@ -4686,7 +4717,7 @@ msgid ""
 ":meth:`!__await__` return value, described above."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3385
+#: ../../reference/datamodel.rst:3406
 msgid ""
 "Raises the specified exception in the coroutine.  This method delegates to "
 "the :meth:`~generator.throw` method of the iterator that caused the "
@@ -4704,13 +4735,13 @@ msgstr ""
 ":meth:`~object.__await__`, описаному вище. Якщо виняток не перехоплюється "
 "співпрограмою, він поширюється назад до абонента."
 
-#: ../../reference/datamodel.rst:3396
+#: ../../reference/datamodel.rst:3417
 msgid ""
 "The second signature \\(type\\[, value\\[, traceback\\]\\]\\) is deprecated "
 "and may be removed in a future version of Python."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3401
+#: ../../reference/datamodel.rst:3422
 msgid ""
 "Causes the coroutine to clean itself up and exit.  If the coroutine is "
 "suspended, this method first delegates to the :meth:`~generator.close` "
@@ -4726,7 +4757,7 @@ msgstr ""
 "змушуючи співпрограму негайно очищатися. Нарешті, співпрограма позначається "
 "як завершена, навіть якщо вона ніколи не запускалася."
 
-#: ../../reference/datamodel.rst:3409
+#: ../../reference/datamodel.rst:3430
 msgid ""
 "Coroutine objects are automatically closed using the above process when they"
 " are about to be destroyed."
@@ -4734,11 +4765,11 @@ msgstr ""
 "Об’єкти співпрограми автоматично закриваються за допомогою описаного вище "
 "процесу, коли їх збираються знищити."
 
-#: ../../reference/datamodel.rst:3415
+#: ../../reference/datamodel.rst:3436
 msgid "Asynchronous Iterators"
 msgstr "Асинхронні ітератори"
 
-#: ../../reference/datamodel.rst:3417
+#: ../../reference/datamodel.rst:3438
 msgid ""
 "An *asynchronous iterator* can call asynchronous code in its ``__anext__`` "
 "method."
@@ -4746,17 +4777,17 @@ msgstr ""
 "*Асинхронний ітератор* може викликати асинхронний код у своєму методі "
 "``__anext__``."
 
-#: ../../reference/datamodel.rst:3420
+#: ../../reference/datamodel.rst:3441
 msgid ""
 "Asynchronous iterators can be used in an :keyword:`async for` statement."
 msgstr ""
 "Асинхронні ітератори можна використовувати в операторі :keyword:`async for`."
 
-#: ../../reference/datamodel.rst:3424
+#: ../../reference/datamodel.rst:3445
 msgid "Must return an *asynchronous iterator* object."
 msgstr "Має повертати об’єкт *асинхронного ітератора*."
 
-#: ../../reference/datamodel.rst:3428
+#: ../../reference/datamodel.rst:3449
 msgid ""
 "Must return an *awaitable* resulting in a next value of the iterator.  "
 "Should raise a :exc:`StopAsyncIteration` error when the iteration is over."
@@ -4764,11 +4795,11 @@ msgstr ""
 "Має повернути *waitable*, що призводить до наступного значення ітератора. "
 "Має викликати помилку :exc:`StopAsyncIteration` після завершення ітерації."
 
-#: ../../reference/datamodel.rst:3431
+#: ../../reference/datamodel.rst:3452
 msgid "An example of an asynchronous iterable object::"
 msgstr "Приклад асинхронного ітерованого об'єкта::"
 
-#: ../../reference/datamodel.rst:3448
+#: ../../reference/datamodel.rst:3469
 msgid ""
 "Prior to Python 3.7, :meth:`~object.__aiter__` could return an *awaitable* "
 "that would resolve to an :term:`asynchronous iterator <asynchronous "
@@ -4777,7 +4808,7 @@ msgstr ""
 "До Python 3.7 :meth:`~object.__aiter__` міг повертати *waitable*, який "
 "перетворювався на :term:`асинхронний ітератор <asynchronous iterator>`."
 
-#: ../../reference/datamodel.rst:3453
+#: ../../reference/datamodel.rst:3474
 msgid ""
 "Starting with Python 3.7, :meth:`~object.__aiter__` must return an "
 "asynchronous iterator object.  Returning anything else will result in a "
@@ -4787,11 +4818,11 @@ msgstr ""
 "асинхронного ітератора. Повернення чогось іншого призведе до помилки "
 ":exc:`TypeError`."
 
-#: ../../reference/datamodel.rst:3461
+#: ../../reference/datamodel.rst:3482
 msgid "Asynchronous Context Managers"
 msgstr "Менеджери асинхронного контексту"
 
-#: ../../reference/datamodel.rst:3463
+#: ../../reference/datamodel.rst:3484
 msgid ""
 "An *asynchronous context manager* is a *context manager* that is able to "
 "suspend execution in its ``__aenter__`` and ``__aexit__`` methods."
@@ -4799,7 +4830,7 @@ msgstr ""
 "*Асинхронний контекстний менеджер* — це *контекстний менеджер*, який може "
 "призупинити виконання своїх методів ``__aenter__`` і ``__aexit__``."
 
-#: ../../reference/datamodel.rst:3466
+#: ../../reference/datamodel.rst:3487
 msgid ""
 "Asynchronous context managers can be used in an :keyword:`async with` "
 "statement."
@@ -4807,27 +4838,27 @@ msgstr ""
 "Асинхронні менеджери контексту можна використовувати в операторі "
 ":keyword:`async with`."
 
-#: ../../reference/datamodel.rst:3470
+#: ../../reference/datamodel.rst:3491
 msgid ""
 "Semantically similar to :meth:`~object.__enter__`, the only difference being"
 " that it must return an *awaitable*."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3475
+#: ../../reference/datamodel.rst:3496
 msgid ""
 "Semantically similar to :meth:`~object.__exit__`, the only difference being "
 "that it must return an *awaitable*."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3478
+#: ../../reference/datamodel.rst:3499
 msgid "An example of an asynchronous context manager class::"
 msgstr "Приклад класу диспетчера асинхронного контексту::"
 
-#: ../../reference/datamodel.rst:3491
+#: ../../reference/datamodel.rst:3512
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../reference/datamodel.rst:3492
+#: ../../reference/datamodel.rst:3513
 msgid ""
 "It *is* possible in some cases to change an object's type, under certain "
 "controlled conditions. It generally isn't a good idea though, since it can "
@@ -4837,19 +4868,17 @@ msgstr ""
 "умов. Загалом це не дуже гарна ідея, оскільки це може призвести до дуже "
 "дивної поведінки, якщо з ним поводитись неправильно."
 
-#: ../../reference/datamodel.rst:3496
+#: ../../reference/datamodel.rst:3517
 msgid ""
 "The :meth:`~object.__hash__`, :meth:`~object.__iter__`, "
-":meth:`~object.__reversed__`, and :meth:`~object.__contains__` methods have "
-"special handling for this; others will still raise a :exc:`TypeError`, but "
-"may do so by relying on the behavior that ``None`` is not callable."
+":meth:`~object.__reversed__`, :meth:`~object.__contains__`, "
+":meth:`~object.__class_getitem__` and :meth:`~os.PathLike.__fspath__` "
+"methods have special handling for this. Others will still raise a "
+":exc:`TypeError`, but may do so by relying on the behavior that ``None`` is "
+"not callable."
 msgstr ""
-"Методи :meth:`~object.__hash__`, :meth:`~object.__iter__`, "
-":meth:`~object.__reversed__` і :meth:`~object.__contains__` мають спеціальну"
-" обробку для цього; інші все одно викличуть :exc:`TypeError`, але можуть "
-"зробити це, покладаючись на поведінку, що ``None`` не викликається."
 
-#: ../../reference/datamodel.rst:3502
+#: ../../reference/datamodel.rst:3524
 msgid ""
 "\"Does not support\" here means that the class has no such method, or the "
 "method returns :data:`NotImplemented`.  Do not set the method to ``None`` if"
@@ -4858,7 +4887,7 @@ msgid ""
 "fallback."
 msgstr ""
 
-#: ../../reference/datamodel.rst:3508
+#: ../../reference/datamodel.rst:3530
 msgid ""
 "For operands of the same type, it is assumed that if the non-reflected "
 "method -- such as :meth:`~object.__add__` -- fails then the overall "
@@ -4881,10 +4910,10 @@ msgstr ""
 #: ../../reference/datamodel.rst:530 ../../reference/datamodel.rst:657
 #: ../../reference/datamodel.rst:802 ../../reference/datamodel.rst:826
 #: ../../reference/datamodel.rst:859 ../../reference/datamodel.rst:938
-#: ../../reference/datamodel.rst:1007 ../../reference/datamodel.rst:1034
-#: ../../reference/datamodel.rst:1096 ../../reference/datamodel.rst:1200
-#: ../../reference/datamodel.rst:1307 ../../reference/datamodel.rst:1407
-#: ../../reference/datamodel.rst:1819 ../../reference/datamodel.rst:2834
+#: ../../reference/datamodel.rst:1016 ../../reference/datamodel.rst:1043
+#: ../../reference/datamodel.rst:1105 ../../reference/datamodel.rst:1209
+#: ../../reference/datamodel.rst:1318 ../../reference/datamodel.rst:1428
+#: ../../reference/datamodel.rst:1840 ../../reference/datamodel.rst:2855
 msgid "object"
 msgstr "об'єкт"
 
@@ -4895,13 +4924,13 @@ msgstr "даних"
 #: ../../reference/datamodel.rst:23 ../../reference/datamodel.rst:292
 #: ../../reference/datamodel.rst:339 ../../reference/datamodel.rst:423
 #: ../../reference/datamodel.rst:462 ../../reference/datamodel.rst:802
-#: ../../reference/datamodel.rst:1053 ../../reference/datamodel.rst:1490
-#: ../../reference/datamodel.rst:1730 ../../reference/datamodel.rst:1735
-#: ../../reference/datamodel.rst:1819 ../../reference/datamodel.rst:2375
-#: ../../reference/datamodel.rst:2804 ../../reference/datamodel.rst:2962
-#: ../../reference/datamodel.rst:2997 ../../reference/datamodel.rst:3011
-#: ../../reference/datamodel.rst:3060 ../../reference/datamodel.rst:3070
-#: ../../reference/datamodel.rst:3098
+#: ../../reference/datamodel.rst:1062 ../../reference/datamodel.rst:1511
+#: ../../reference/datamodel.rst:1751 ../../reference/datamodel.rst:1756
+#: ../../reference/datamodel.rst:1840 ../../reference/datamodel.rst:2396
+#: ../../reference/datamodel.rst:2825 ../../reference/datamodel.rst:2983
+#: ../../reference/datamodel.rst:3018 ../../reference/datamodel.rst:3032
+#: ../../reference/datamodel.rst:3081 ../../reference/datamodel.rst:3091
+#: ../../reference/datamodel.rst:3119
 msgid "built-in function"
 msgstr ""
 
@@ -4910,7 +4939,7 @@ msgid "id"
 msgstr "id"
 
 #: ../../reference/datamodel.rst:23 ../../reference/datamodel.rst:122
-#: ../../reference/datamodel.rst:2375
+#: ../../reference/datamodel.rst:2396
 msgid "type"
 msgstr "тип"
 
@@ -4961,7 +4990,7 @@ msgstr ""
 #: ../../reference/datamodel.rst:122 ../../reference/datamodel.rst:396
 #: ../../reference/datamodel.rst:397 ../../reference/datamodel.rst:498
 #: ../../reference/datamodel.rst:859 ../../reference/datamodel.rst:879
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "module"
 msgstr "модуль"
 
@@ -4976,8 +5005,8 @@ msgid "language"
 msgstr ""
 
 #: ../../reference/datamodel.rst:135 ../../reference/datamodel.rst:938
-#: ../../reference/datamodel.rst:956 ../../reference/datamodel.rst:1007
-#: ../../reference/datamodel.rst:1027
+#: ../../reference/datamodel.rst:956 ../../reference/datamodel.rst:1016
+#: ../../reference/datamodel.rst:1036
 msgid "attribute"
 msgstr "атрибут"
 
@@ -4997,7 +5026,7 @@ msgstr ""
 msgid "ellipsis literal"
 msgstr ""
 
-#: ../../reference/datamodel.rst:192 ../../reference/datamodel.rst:1034
+#: ../../reference/datamodel.rst:192 ../../reference/datamodel.rst:1043
 msgid "numeric"
 msgstr ""
 
@@ -5034,16 +5063,16 @@ msgstr "номер"
 msgid "Java"
 msgstr ""
 
-#: ../../reference/datamodel.rst:279 ../../reference/datamodel.rst:3070
+#: ../../reference/datamodel.rst:279 ../../reference/datamodel.rst:3091
 msgid "complex"
 msgstr ""
 
 #: ../../reference/datamodel.rst:292 ../../reference/datamodel.rst:423
-#: ../../reference/datamodel.rst:462 ../../reference/datamodel.rst:2804
+#: ../../reference/datamodel.rst:462 ../../reference/datamodel.rst:2825
 msgid "len"
 msgstr ""
 
-#: ../../reference/datamodel.rst:292 ../../reference/datamodel.rst:1034
+#: ../../reference/datamodel.rst:292 ../../reference/datamodel.rst:1043
 msgid "sequence"
 msgstr "послідовність"
 
@@ -5072,8 +5101,8 @@ msgstr ""
 msgid "immutable"
 msgstr "незмінний"
 
-#: ../../reference/datamodel.rst:335 ../../reference/datamodel.rst:1705
-#: ../../reference/datamodel.rst:1735
+#: ../../reference/datamodel.rst:335 ../../reference/datamodel.rst:1726
+#: ../../reference/datamodel.rst:1756
 msgid "string"
 msgstr "рядок"
 
@@ -5109,7 +5138,7 @@ msgstr ""
 msgid "empty"
 msgstr ""
 
-#: ../../reference/datamodel.rst:372 ../../reference/datamodel.rst:1730
+#: ../../reference/datamodel.rst:372 ../../reference/datamodel.rst:1751
 msgid "bytes"
 msgstr "байтів"
 
@@ -5126,13 +5155,13 @@ msgid "mutable"
 msgstr "мінливий"
 
 #: ../../reference/datamodel.rst:384 ../../reference/datamodel.rst:956
-#: ../../reference/datamodel.rst:1027
+#: ../../reference/datamodel.rst:1036
 msgid "assignment"
 msgstr ""
 
 #: ../../reference/datamodel.rst:384 ../../reference/datamodel.rst:859
-#: ../../reference/datamodel.rst:1444 ../../reference/datamodel.rst:1626
-#: ../../reference/datamodel.rst:3125
+#: ../../reference/datamodel.rst:1465 ../../reference/datamodel.rst:1647
+#: ../../reference/datamodel.rst:3146
 msgid "statement"
 msgstr "заява"
 
@@ -5164,12 +5193,12 @@ msgstr "встановити"
 msgid "frozenset"
 msgstr ""
 
-#: ../../reference/datamodel.rst:462 ../../reference/datamodel.rst:1034
+#: ../../reference/datamodel.rst:462 ../../reference/datamodel.rst:1043
 msgid "mapping"
 msgstr "відображення"
 
 #: ../../reference/datamodel.rst:479 ../../reference/datamodel.rst:938
-#: ../../reference/datamodel.rst:1819
+#: ../../reference/datamodel.rst:1840
 msgid "dictionary"
 msgstr "словник"
 
@@ -5192,7 +5221,7 @@ msgid "function"
 msgstr "функція"
 
 #: ../../reference/datamodel.rst:515 ../../reference/datamodel.rst:938
-#: ../../reference/datamodel.rst:961 ../../reference/datamodel.rst:2756
+#: ../../reference/datamodel.rst:961 ../../reference/datamodel.rst:2777
 msgid "call"
 msgstr "виклик"
 
@@ -5292,7 +5321,7 @@ msgstr ""
 msgid "__module__ (method attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:746 ../../reference/datamodel.rst:1200
+#: ../../reference/datamodel.rst:746 ../../reference/datamodel.rst:1209
 msgid "generator"
 msgstr "generator"
 
@@ -5300,7 +5329,7 @@ msgstr "generator"
 msgid "iterator"
 msgstr "ітератор"
 
-#: ../../reference/datamodel.rst:764 ../../reference/datamodel.rst:3312
+#: ../../reference/datamodel.rst:764 ../../reference/datamodel.rst:3333
 msgid "coroutine"
 msgstr "coroutine"
 
@@ -5345,18 +5374,18 @@ msgid "__dict__ (module attribute)"
 msgstr ""
 
 #: ../../reference/datamodel.rst:938 ../../reference/datamodel.rst:956
-#: ../../reference/datamodel.rst:1007 ../../reference/datamodel.rst:1609
-#: ../../reference/datamodel.rst:2486
+#: ../../reference/datamodel.rst:1016 ../../reference/datamodel.rst:1630
+#: ../../reference/datamodel.rst:2507
 msgid "class"
 msgstr "клас"
 
-#: ../../reference/datamodel.rst:938 ../../reference/datamodel.rst:1007
-#: ../../reference/datamodel.rst:1027
+#: ../../reference/datamodel.rst:938 ../../reference/datamodel.rst:1016
+#: ../../reference/datamodel.rst:1036
 msgid "class instance"
 msgstr ""
 
-#: ../../reference/datamodel.rst:938 ../../reference/datamodel.rst:1007
-#: ../../reference/datamodel.rst:2756
+#: ../../reference/datamodel.rst:938 ../../reference/datamodel.rst:1016
+#: ../../reference/datamodel.rst:2777
 msgid "instance"
 msgstr ""
 
@@ -5392,431 +5421,439 @@ msgstr ""
 msgid "__type_params__ (class attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1042
+#: ../../reference/datamodel.rst:965
+msgid "__static_attributes__ (class attribute)"
+msgstr ""
+
+#: ../../reference/datamodel.rst:965
+msgid "__firstlineno__ (class attribute)"
+msgstr ""
+
+#: ../../reference/datamodel.rst:1051
 msgid "__dict__ (instance attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1042
+#: ../../reference/datamodel.rst:1051
 msgid "__class__ (instance attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "open"
 msgstr "ВІДЧИНЕНО"
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "io"
 msgstr "io"
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "popen() (in module os)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "makefile() (socket method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "sys.stdin"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "sys.stdout"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "sys.stderr"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "stdio"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "stdin (in module sys)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "stdout (in module sys)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1053
+#: ../../reference/datamodel.rst:1062
 msgid "stderr (in module sys)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1082
+#: ../../reference/datamodel.rst:1091
 msgid "internal type"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1082
+#: ../../reference/datamodel.rst:1091
 msgid "types, internal"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1096
+#: ../../reference/datamodel.rst:1105
 msgid "bytecode"
 msgstr "байт-код"
 
-#: ../../reference/datamodel.rst:1096
+#: ../../reference/datamodel.rst:1105
 msgid "code"
 msgstr "код"
 
-#: ../../reference/datamodel.rst:1096
+#: ../../reference/datamodel.rst:1105
 msgid "code object"
 msgstr "об'єкт коду"
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_argcount (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_posonlyargcount (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_kwonlyargcount (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_code (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_consts (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_filename (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_firstlineno (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_flags (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_lnotab (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_name (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_names (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_nlocals (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_stacksize (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_varnames (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_cellvars (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_freevars (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1107
+#: ../../reference/datamodel.rst:1116
 msgid "co_qualname (code object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1218
+#: ../../reference/datamodel.rst:1227
 msgid "documentation string"
 msgstr "рядок документації"
 
-#: ../../reference/datamodel.rst:1307
+#: ../../reference/datamodel.rst:1318
 msgid "frame"
 msgstr "frame"
 
-#: ../../reference/datamodel.rst:1313
+#: ../../reference/datamodel.rst:1324
 msgid "f_back (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1313
+#: ../../reference/datamodel.rst:1324
 msgid "f_code (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1313
+#: ../../reference/datamodel.rst:1324
 msgid "f_globals (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1313
+#: ../../reference/datamodel.rst:1324
 msgid "f_locals (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1313
+#: ../../reference/datamodel.rst:1324
 msgid "f_lasti (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1313
+#: ../../reference/datamodel.rst:1324
 msgid "f_builtins (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1352
+#: ../../reference/datamodel.rst:1368
 msgid "f_trace (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1352
+#: ../../reference/datamodel.rst:1368
 msgid "f_trace_lines (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1352
+#: ../../reference/datamodel.rst:1368
 msgid "f_trace_opcodes (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1352
+#: ../../reference/datamodel.rst:1368
 msgid "f_lineno (frame attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "traceback"
 msgstr "traceback"
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "stack"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "trace"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "exception"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "handler"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "execution"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "exc_info (in module sys)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "last_traceback (in module sys)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "sys.exc_info"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "sys.exception"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1407
+#: ../../reference/datamodel.rst:1428
 msgid "sys.last_traceback"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1444
+#: ../../reference/datamodel.rst:1465
 msgid "tb_frame (traceback attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1444
+#: ../../reference/datamodel.rst:1465
 msgid "tb_lineno (traceback attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1444
+#: ../../reference/datamodel.rst:1465
 msgid "tb_lasti (traceback attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1444
+#: ../../reference/datamodel.rst:1465
 msgid "try"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1474
+#: ../../reference/datamodel.rst:1495
 msgid "tb_next (traceback attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1490 ../../reference/datamodel.rst:2834
+#: ../../reference/datamodel.rst:1511 ../../reference/datamodel.rst:2855
 msgid "slice"
 msgstr "шматочок"
 
-#: ../../reference/datamodel.rst:1496
+#: ../../reference/datamodel.rst:1517
 msgid "start (slice object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1496
+#: ../../reference/datamodel.rst:1517
 msgid "stop (slice object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1496
+#: ../../reference/datamodel.rst:1517
 msgid "step (slice object attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1544
+#: ../../reference/datamodel.rst:1565
 msgid "operator"
 msgstr "оператор"
 
-#: ../../reference/datamodel.rst:1544
+#: ../../reference/datamodel.rst:1565
 msgid "overloading"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1544
+#: ../../reference/datamodel.rst:1565
 msgid "__getitem__() (mapping object method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1580
+#: ../../reference/datamodel.rst:1601
 msgid "subclassing"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1580
+#: ../../reference/datamodel.rst:1601
 msgid "immutable types"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1609
+#: ../../reference/datamodel.rst:1630
 msgid "constructor"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1626
+#: ../../reference/datamodel.rst:1647
 msgid "destructor"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1626
+#: ../../reference/datamodel.rst:1647
 msgid "finalizer"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1626
+#: ../../reference/datamodel.rst:1647
 msgid "del"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1688
+#: ../../reference/datamodel.rst:1709
 msgid "repr() (built-in function)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1688
+#: ../../reference/datamodel.rst:1709
 msgid "__repr__() (object method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1705
+#: ../../reference/datamodel.rst:1726
 msgid "__str__() (object method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1705
+#: ../../reference/datamodel.rst:1726
 msgid "format() (built-in function)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1705
+#: ../../reference/datamodel.rst:1726
 msgid "print() (built-in function)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1735
+#: ../../reference/datamodel.rst:1756
 msgid "__format__() (object method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1735
+#: ../../reference/datamodel.rst:1756
 msgid "conversion"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1735
+#: ../../reference/datamodel.rst:1756
 msgid "print"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1774
+#: ../../reference/datamodel.rst:1795
 msgid "comparisons"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1819
+#: ../../reference/datamodel.rst:1840
 msgid "hash"
 msgstr ""
 
-#: ../../reference/datamodel.rst:1900
+#: ../../reference/datamodel.rst:1921
 msgid "__len__() (mapping object method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2004
+#: ../../reference/datamodel.rst:2025
 msgid "__getattr__ (module attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2004
+#: ../../reference/datamodel.rst:2025
 msgid "__dir__ (module attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2004
+#: ../../reference/datamodel.rst:2025
 msgid "__class__ (module attribute)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2375
+#: ../../reference/datamodel.rst:2396
 msgid "metaclass"
 msgstr "метаклас"
 
-#: ../../reference/datamodel.rst:2375
+#: ../../reference/datamodel.rst:2396
 msgid "= (equals)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2375
+#: ../../reference/datamodel.rst:2396
 msgid "class definition"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2439
+#: ../../reference/datamodel.rst:2460
 msgid "metaclass hint"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2462
+#: ../../reference/datamodel.rst:2483
 msgid "__prepare__ (metaclass method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2486
+#: ../../reference/datamodel.rst:2507
 msgid "body"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2506
+#: ../../reference/datamodel.rst:2527
 msgid "__class__ (method cell)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2506
+#: ../../reference/datamodel.rst:2527
 msgid "__classcell__ (class namespace entry)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2804
+#: ../../reference/datamodel.rst:2825
 msgid "__bool__() (object method)"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2962 ../../reference/datamodel.rst:2997
+#: ../../reference/datamodel.rst:2983 ../../reference/datamodel.rst:3018
 msgid "divmod"
 msgstr ""
 
-#: ../../reference/datamodel.rst:2962 ../../reference/datamodel.rst:2997
-#: ../../reference/datamodel.rst:3011
+#: ../../reference/datamodel.rst:2983 ../../reference/datamodel.rst:3018
+#: ../../reference/datamodel.rst:3032
 msgid "pow"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3060
+#: ../../reference/datamodel.rst:3081
 msgid "abs"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3070
+#: ../../reference/datamodel.rst:3091
 msgid "int"
 msgstr "int"
 
-#: ../../reference/datamodel.rst:3070
+#: ../../reference/datamodel.rst:3091
 msgid "float"
 msgstr "плавати"
 
-#: ../../reference/datamodel.rst:3098
+#: ../../reference/datamodel.rst:3119
 msgid "round"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3125
+#: ../../reference/datamodel.rst:3146
 msgid "with"
 msgstr ""
 
-#: ../../reference/datamodel.rst:3125
+#: ../../reference/datamodel.rst:3146
 msgid "context manager"
 msgstr "контекстний менеджер"

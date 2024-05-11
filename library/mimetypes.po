@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/mimetypes.rst:2
-msgid ":mod:`mimetypes` --- Map filenames to MIME types"
-msgstr ":mod:`mimetypes` --- зіставлення назв файлів із типами MIME"
+msgid ":mod:`!mimetypes` --- Map filenames to MIME types"
+msgstr ""
 
 #: ../../library/mimetypes.rst:9
 msgid "**Source code:** :source:`Lib/mimetypes.py`"
@@ -115,24 +115,32 @@ msgstr ""
 "додаткові нестандартні, але часто використовувані типи MIME."
 
 #: ../../library/mimetypes.rst:54
-msgid "Added support for url being a :term:`path-like object`."
-msgstr "Додано підтримку того, що url є :term:`path-like object`."
+msgid "Added support for *url* being a :term:`path-like object`."
+msgstr ""
 
-#: ../../library/mimetypes.rst:60
+#: ../../library/mimetypes.rst:57
+msgid ""
+"Passing a file path instead of URL is :term:`soft deprecated`. Use "
+":func:`guess_file_type` for this."
+msgstr ""
+
+#: ../../library/mimetypes.rst:66
+msgid ""
+"Guess the type of a file based on its path, given by *path*. Similar to the "
+":func:`guess_type` function, but accepts a path instead of URL. Path can be "
+"a string, a bytes object or a :term:`path-like object`."
+msgstr ""
+
+#: ../../library/mimetypes.rst:75
 msgid ""
 "Guess the extensions for a file based on its MIME type, given by *type*. The"
 " return value is a list of strings giving all possible filename extensions, "
 "including the leading dot (``'.'``).  The extensions are not guaranteed to "
 "have been associated with any particular data stream, but would be mapped to"
-" the MIME type *type* by :func:`guess_type`."
+" the MIME type *type* by :func:`guess_type` and :func:`guess_file_type`."
 msgstr ""
-"Вгадайте розширення для файлу на основі його типу MIME, заданого *type*. "
-"Повернене значення — це список рядків із усіма можливими розширеннями імен "
-"файлів, включаючи крапку на початку (``'.'``). Не гарантується, що "
-"розширення будуть пов’язані з будь-яким конкретним потоком даних, але вони "
-"будуть зіставлені з типом MIME *type* за допомогою :func:`guess_type`."
 
-#: ../../library/mimetypes.rst:66 ../../library/mimetypes.rst:78
+#: ../../library/mimetypes.rst:81 ../../library/mimetypes.rst:93
 msgid ""
 "The optional *strict* argument has the same meaning as with the "
 ":func:`guess_type` function."
@@ -140,23 +148,17 @@ msgstr ""
 "Необов’язковий аргумент *strict* має те саме значення, що й функція "
 ":func:`guess_type`."
 
-#: ../../library/mimetypes.rst:71
+#: ../../library/mimetypes.rst:86
 msgid ""
 "Guess the extension for a file based on its MIME type, given by *type*. The "
 "return value is a string giving a filename extension, including the leading "
 "dot (``'.'``).  The extension is not guaranteed to have been associated with"
 " any particular data stream, but would be mapped to the MIME type *type* by "
-":func:`guess_type`.  If no extension can be guessed for *type*, ``None`` is "
-"returned."
+":func:`guess_type` and :func:`guess_file_type`. If no extension can be "
+"guessed for *type*, ``None`` is returned."
 msgstr ""
-"Вгадайте розширення файлу на основі його типу MIME, заданого *type*. "
-"Поверненим значенням є рядок із розширенням назви файлу, включаючи крапку на"
-" початку (``'.'``). Не гарантується, що розширення буде пов’язане з будь-"
-"яким конкретним потоком даних, але буде зіставлено з типом MIME *type* за "
-"допомогою :func:`guess_type`. Якщо для *type* не вдається вгадати "
-"розширення, повертається ``None``."
 
-#: ../../library/mimetypes.rst:80
+#: ../../library/mimetypes.rst:95
 msgid ""
 "Some additional functions and data items are available for controlling the "
 "behavior of the module."
@@ -164,7 +166,7 @@ msgstr ""
 "Деякі додаткові функції та елементи даних доступні для керування поведінкою "
 "модуля."
 
-#: ../../library/mimetypes.rst:86
+#: ../../library/mimetypes.rst:101
 msgid ""
 "Initialize the internal data structures.  If given, *files* must be a "
 "sequence of file names which should be used to augment the default type map."
@@ -180,7 +182,7 @@ msgstr ""
 "Кожен файл, названий у *files* або :const:`knownfiles`, має пріоритет над "
 "файлами, названими перед ним. Повторний виклик :func:`init` дозволено."
 
-#: ../../library/mimetypes.rst:93
+#: ../../library/mimetypes.rst:108
 msgid ""
 "Specifying an empty list for *files* will prevent the system defaults from "
 "being applied: only the well-known values will be present from a built-in "
@@ -190,7 +192,7 @@ msgstr ""
 "замовчуванням не будуть застосовані: із вбудованого списку будуть присутні "
 "лише добре відомі значення."
 
-#: ../../library/mimetypes.rst:96
+#: ../../library/mimetypes.rst:111
 msgid ""
 "If *files* is ``None`` the internal data structure is completely rebuilt to "
 "its initial default value. This is a stable operation and will produce the "
@@ -200,11 +202,11 @@ msgstr ""
 "перебудовується до початкового значення за замовчуванням. Це стабільна "
 "операція, яка дає однакові результати при багаторазовому виклику."
 
-#: ../../library/mimetypes.rst:100
+#: ../../library/mimetypes.rst:115
 msgid "Previously, Windows registry settings were ignored."
 msgstr "Раніше параметри реєстру Windows ігнорувалися."
 
-#: ../../library/mimetypes.rst:106
+#: ../../library/mimetypes.rst:121
 msgid ""
 "Load the type map given in the file *filename*, if it exists.  The type map "
 "is returned as a dictionary mapping filename extensions, including the "
@@ -217,7 +219,7 @@ msgstr ""
 "Якщо файл *filename* не існує або не може бути прочитаний, повертається "
 "``None``."
 
-#: ../../library/mimetypes.rst:114
+#: ../../library/mimetypes.rst:129
 msgid ""
 "Add a mapping from the MIME type *type* to the extension *ext*. When the "
 "extension is already known, the new type will replace the old one. When the "
@@ -228,7 +230,7 @@ msgstr ""
 "вже відомо, новий тип замінить старий. Якщо тип уже відомий, розширення буде"
 " додано до списку відомих розширень."
 
-#: ../../library/mimetypes.rst:118
+#: ../../library/mimetypes.rst:133
 msgid ""
 "When *strict* is ``True`` (the default), the mapping will be added to the "
 "official MIME types, otherwise to the non-standard ones."
@@ -236,7 +238,7 @@ msgstr ""
 "Якщо *strict* має значення ``True`` (за замовчуванням), відображення буде "
 "додано до офіційних типів MIME, інакше – до нестандартних."
 
-#: ../../library/mimetypes.rst:124
+#: ../../library/mimetypes.rst:139
 msgid ""
 "Flag indicating whether or not the global data structures have been "
 "initialized. This is set to ``True`` by :func:`init`."
@@ -244,7 +246,7 @@ msgstr ""
 "Прапорець, що вказує, чи ініціалізовано глобальні структури даних. "
 ":func:`init` встановлює значення ``True``."
 
-#: ../../library/mimetypes.rst:132
+#: ../../library/mimetypes.rst:147
 msgid ""
 "List of type map file names commonly installed.  These files are typically "
 "named :file:`mime.types` and are installed in different locations by "
@@ -254,7 +256,7 @@ msgstr ""
 "зазвичай називаються :file:`mime.types` і встановлюються в різних місцях "
 "різними пакетами."
 
-#: ../../library/mimetypes.rst:139
+#: ../../library/mimetypes.rst:154
 msgid ""
 "Dictionary mapping suffixes to suffixes.  This is used to allow recognition "
 "of encoded files for which the encoding and the type are indicated by the "
@@ -266,15 +268,15 @@ msgstr ""
 "самим розширенням. Наприклад, розширення :file:`.tgz` зіставляється з "
 ":file:`.tar.gz`, щоб дозволити кодування та тип розпізнаватися окремо."
 
-#: ../../library/mimetypes.rst:147
+#: ../../library/mimetypes.rst:162
 msgid "Dictionary mapping filename extensions to encoding types."
 msgstr "Словник зіставляє розширення імен файлів із типами кодування."
 
-#: ../../library/mimetypes.rst:152
+#: ../../library/mimetypes.rst:167
 msgid "Dictionary mapping filename extensions to MIME types."
 msgstr "Словник зіставляє розширення імен файлів із типами MIME."
 
-#: ../../library/mimetypes.rst:157
+#: ../../library/mimetypes.rst:172
 msgid ""
 "Dictionary mapping filename extensions to non-standard, but commonly found "
 "MIME types."
@@ -282,15 +284,15 @@ msgstr ""
 "Словник зіставляє розширення імен файлів із нестандартними, але часто "
 "зустрічаються типами MIME."
 
-#: ../../library/mimetypes.rst:161
+#: ../../library/mimetypes.rst:176
 msgid "An example usage of the module::"
 msgstr "Приклад використання модуля::"
 
-#: ../../library/mimetypes.rst:178
+#: ../../library/mimetypes.rst:193
 msgid "MimeTypes Objects"
 msgstr "Об’єкти MimeTypes"
 
-#: ../../library/mimetypes.rst:180
+#: ../../library/mimetypes.rst:195
 msgid ""
 "The :class:`MimeTypes` class may be useful for applications which may want "
 "more than one MIME-type database; it provides an interface similar to the "
@@ -300,7 +302,7 @@ msgstr ""
 "знадобитися більше однієї бази даних типу MIME; він забезпечує інтерфейс, "
 "подібний до інтерфейсу модуля :mod:`mimetypes`."
 
-#: ../../library/mimetypes.rst:187
+#: ../../library/mimetypes.rst:202
 msgid ""
 "This class represents a MIME-types database.  By default, it provides access"
 " to the same database as the rest of this module. The initial database is a "
@@ -318,7 +320,7 @@ msgstr ""
 " можна очистити перед завантаженням додаткових даних, якщо дані за "
 "замовчуванням не потрібні."
 
-#: ../../library/mimetypes.rst:194
+#: ../../library/mimetypes.rst:209
 msgid ""
 "The optional *filenames* parameter can be used to cause additional files to "
 "be loaded \"on top\" of the default database."
@@ -326,7 +328,7 @@ msgstr ""
 "Необов’язковий параметр *filenames* можна використовувати, щоб завантажувати"
 " додаткові файли \"поверх\" бази даних за замовчуванням."
 
-#: ../../library/mimetypes.rst:200
+#: ../../library/mimetypes.rst:215
 msgid ""
 "Dictionary mapping suffixes to suffixes.  This is used to allow recognition "
 "of encoded files for which the encoding and the type are indicated by the "
@@ -341,7 +343,7 @@ msgstr ""
 ":file:`.tar.gz`, щоб дозволити кодування та тип розпізнаватися окремо. "
 "Спочатку це копія глобального :data:`suffix_map`, визначеного в модулі."
 
-#: ../../library/mimetypes.rst:209
+#: ../../library/mimetypes.rst:224
 msgid ""
 "Dictionary mapping filename extensions to encoding types.  This is initially"
 " a copy of the global :data:`encodings_map` defined in the module."
@@ -349,7 +351,7 @@ msgstr ""
 "Словник зіставляє розширення імен файлів із типами кодування. Спочатку це "
 "копія глобального :data:`encodings_map`, визначеного в модулі."
 
-#: ../../library/mimetypes.rst:215
+#: ../../library/mimetypes.rst:230
 msgid ""
 "Tuple containing two dictionaries, mapping filename extensions to MIME "
 "types: the first dictionary is for the non-standards types and the second "
@@ -361,7 +363,7 @@ msgstr ""
 "для стандартних типів. Вони ініціалізуються :data:`common_types` і "
 ":data:`types_map`."
 
-#: ../../library/mimetypes.rst:223
+#: ../../library/mimetypes.rst:238
 msgid ""
 "Tuple containing two dictionaries, mapping MIME types to a list of filename "
 "extensions: the first dictionary is for the non-standards types and the "
@@ -373,7 +375,7 @@ msgstr ""
 "для стандартних типів. Вони ініціалізуються :data:`common_types` і "
 ":data:`types_map`."
 
-#: ../../library/mimetypes.rst:231
+#: ../../library/mimetypes.rst:246
 msgid ""
 "Similar to the :func:`guess_extension` function, using the tables stored as "
 "part of the object."
@@ -381,7 +383,7 @@ msgstr ""
 "Подібно до функції :func:`guess_extension`, використовуючи таблиці, що "
 "зберігаються як частина об’єкта."
 
-#: ../../library/mimetypes.rst:237
+#: ../../library/mimetypes.rst:252
 msgid ""
 "Similar to the :func:`guess_type` function, using the tables stored as part "
 "of the object."
@@ -389,7 +391,13 @@ msgstr ""
 "Подібно до функції :func:`guess_type`, використовуючи таблиці, що "
 "зберігаються як частина об’єкта."
 
-#: ../../library/mimetypes.rst:243
+#: ../../library/mimetypes.rst:258
+msgid ""
+"Similar to the :func:`guess_file_type` function, using the tables stored as "
+"part of the object."
+msgstr ""
+
+#: ../../library/mimetypes.rst:266
 msgid ""
 "Similar to the :func:`guess_all_extensions` function, using the tables "
 "stored as part of the object."
@@ -397,7 +405,7 @@ msgstr ""
 "Подібно до функції :func:`guess_all_extensions`, використовуючи таблиці, що "
 "зберігаються як частина об’єкта."
 
-#: ../../library/mimetypes.rst:249
+#: ../../library/mimetypes.rst:272
 msgid ""
 "Load MIME information from a file named *filename*.  This uses "
 ":meth:`readfp` to parse the file."
@@ -405,7 +413,7 @@ msgstr ""
 "Завантажте інформацію MIME з файлу з іменем *filename*. Це використовує "
 ":meth:`readfp` для аналізу файлу."
 
-#: ../../library/mimetypes.rst:252
+#: ../../library/mimetypes.rst:275
 msgid ""
 "If *strict* is ``True``, information will be added to list of standard "
 "types, else to the list of non-standard types."
@@ -413,7 +421,7 @@ msgstr ""
 "Якщо *strict* має значення ``True``, інформацію буде додано до списку "
 "стандартних типів, інакше до списку нестандартних типів."
 
-#: ../../library/mimetypes.rst:258
+#: ../../library/mimetypes.rst:281
 msgid ""
 "Load MIME type information from an open file *fp*.  The file must have the "
 "format of the standard :file:`mime.types` files."
@@ -421,7 +429,7 @@ msgstr ""
 "Завантажте інформацію про тип MIME із відкритого файлу *fp*. Файл повинен "
 "мати формат стандартних файлів :file:`mime.types`."
 
-#: ../../library/mimetypes.rst:261 ../../library/mimetypes.rst:271
+#: ../../library/mimetypes.rst:284 ../../library/mimetypes.rst:294
 msgid ""
 "If *strict* is ``True``, information will be added to the list of standard "
 "types, else to the list of non-standard types."
@@ -429,15 +437,16 @@ msgstr ""
 "Якщо *strict* має значення ``True``, інформацію буде додано до списку "
 "стандартних типів, інакше – до списку нестандартних типів."
 
-#: ../../library/mimetypes.rst:267
+#: ../../library/mimetypes.rst:290
 msgid "Load MIME type information from the Windows registry."
 msgstr "Завантажте інформацію про тип MIME з реєстру Windows."
 
-#: ../../library/mimetypes.rst:269
+#: ../../library/mimetypes.rst:292
 msgid ":ref:`Availability <availability>`: Windows."
 msgstr ":ref:`Наявність <availability>`: Windows."
 
 #: ../../library/mimetypes.rst:11 ../../library/mimetypes.rst:31
+#: ../../library/mimetypes.rst:64
 msgid "MIME"
 msgstr ""
 
@@ -445,14 +454,14 @@ msgstr ""
 msgid "content type"
 msgstr ""
 
-#: ../../library/mimetypes.rst:31
+#: ../../library/mimetypes.rst:31 ../../library/mimetypes.rst:64
 msgid "headers"
 msgstr ""
 
-#: ../../library/mimetypes.rst:130
+#: ../../library/mimetypes.rst:145
 msgid "file"
 msgstr ""
 
-#: ../../library/mimetypes.rst:130
+#: ../../library/mimetypes.rst:145
 msgid "mime.types"
 msgstr ""

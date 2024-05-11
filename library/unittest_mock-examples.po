@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-19 14:13+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,8 +22,8 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/unittest.mock-examples.rst:2
-msgid ":mod:`unittest.mock` --- getting started"
-msgstr ":mod:`unittest.mock` --- початок роботи"
+msgid ":mod:`!unittest.mock` --- getting started"
+msgstr ""
 
 #: ../../library/unittest.mock-examples.rst:27
 msgid "Using Mock"
@@ -920,7 +920,7 @@ msgid ""
 ":attr:`~Mock.call_count` is one."
 msgstr ""
 
-#: ../../library/unittest.mock-examples.rst:803
+#: ../../library/unittest.mock-examples.rst:804
 msgid ""
 "Both ``assert_called_with`` and ``assert_called_once_with`` make assertions "
 "about the *most recent* call. If your mock is going to be called several "
@@ -932,7 +932,7 @@ msgstr ""
 "разів, і ви хочете зробити твердження щодо *всіх* цих викликів, ви можете "
 "використовувати :attr:`~Mock.call_args_list`:"
 
-#: ../../library/unittest.mock-examples.rst:815
+#: ../../library/unittest.mock-examples.rst:816
 msgid ""
 "The :data:`call` helper makes it easy to make assertions about these calls. "
 "You can build up a list of expected calls and compare it to "
@@ -944,11 +944,11 @@ msgstr ""
 "``call_args_list``. Це виглядає надзвичайно схожим на відображення ``списку "
 "викликів_аргів``:"
 
-#: ../../library/unittest.mock-examples.rst:825
+#: ../../library/unittest.mock-examples.rst:826
 msgid "Coping with mutable arguments"
 msgstr "Робота зі змінними аргументами"
 
-#: ../../library/unittest.mock-examples.rst:827
+#: ../../library/unittest.mock-examples.rst:828
 msgid ""
 "Another situation is rare, but can bite you, is when your mock is called "
 "with mutable arguments. ``call_args`` and ``call_args_list`` store "
@@ -962,7 +962,7 @@ msgstr ""
 "більше не зможете робити твердження про те, якими були значення під час "
 "виклику макету."
 
-#: ../../library/unittest.mock-examples.rst:832
+#: ../../library/unittest.mock-examples.rst:833
 msgid ""
 "Here's some example code that shows the problem. Imagine the following "
 "functions defined in 'mymodule'::"
@@ -970,7 +970,7 @@ msgstr ""
 "Ось приклад коду, який показує проблему. Уявіть собі такі функції, визначені"
 " в 'mymodule'::"
 
-#: ../../library/unittest.mock-examples.rst:843
+#: ../../library/unittest.mock-examples.rst:844
 msgid ""
 "When we try to test that ``grob`` calls ``frob`` with the correct argument "
 "look what happens::"
@@ -978,7 +978,7 @@ msgstr ""
 "Коли ми намагаємося перевірити, що ``grob`` викликає ``frob`` з правильним "
 "аргументом, подивіться, що відбувається:"
 
-#: ../../library/unittest.mock-examples.rst:858
+#: ../../library/unittest.mock-examples.rst:859
 msgid ""
 "One possibility would be for mock to copy the arguments you pass in. This "
 "could then cause problems if you do assertions that rely on object identity "
@@ -988,7 +988,7 @@ msgstr ""
 "передаєте. Це може спричинити проблеми, якщо ви робите твердження, які "
 "покладаються на ідентичність об’єкта для рівності."
 
-#: ../../library/unittest.mock-examples.rst:862
+#: ../../library/unittest.mock-examples.rst:863
 msgid ""
 "Here's one solution that uses the :attr:`~Mock.side_effect` functionality. "
 "If you provide a ``side_effect`` function for a mock then ``side_effect`` "
@@ -999,7 +999,7 @@ msgid ""
 "me. ::"
 msgstr ""
 
-#: ../../library/unittest.mock-examples.rst:891
+#: ../../library/unittest.mock-examples.rst:892
 msgid ""
 "``copy_call_args`` is called with the mock that will be called. It returns a"
 " new mock that we do the assertion on. The ``side_effect`` function makes a "
@@ -1010,7 +1010,7 @@ msgstr ""
 "``side_effect`` створює копію аргументів і викликає наш ``new_mock`` разом "
 "із копією."
 
-#: ../../library/unittest.mock-examples.rst:897
+#: ../../library/unittest.mock-examples.rst:898
 msgid ""
 "If your mock is only going to be used once there is an easier way of "
 "checking arguments at the point they are called. You can simply do the "
@@ -1020,7 +1020,7 @@ msgstr ""
 "перевірити аргументи в момент їх виклику. Ви можете просто зробити перевірку"
 " всередині функції ``side_effect``."
 
-#: ../../library/unittest.mock-examples.rst:911
+#: ../../library/unittest.mock-examples.rst:912
 msgid ""
 "An alternative approach is to create a subclass of :class:`Mock` or "
 ":class:`MagicMock` that copies (using :func:`copy.deepcopy`) the arguments. "
@@ -1030,7 +1030,7 @@ msgstr ""
 ":class:`MagicMock`, який копіює (за допомогою :func:`copy.deepcopy`) "
 "аргументи. Ось приклад реалізації:"
 
-#: ../../library/unittest.mock-examples.rst:935
+#: ../../library/unittest.mock-examples.rst:937
 msgid ""
 "When you subclass ``Mock`` or ``MagicMock`` all dynamically created "
 "attributes, and the ``return_value`` will use your subclass automatically. "
@@ -1042,11 +1042,11 @@ msgstr ""
 "Це означає, що всі нащадки ``CopyingMock`` також матимуть тип "
 "``CopyingMock``."
 
-#: ../../library/unittest.mock-examples.rst:941
+#: ../../library/unittest.mock-examples.rst:943
 msgid "Nesting Patches"
 msgstr "Патчі гніздування"
 
-#: ../../library/unittest.mock-examples.rst:943
+#: ../../library/unittest.mock-examples.rst:945
 msgid ""
 "Using patch as a context manager is nice, but if you do multiple patches you"
 " can end up with nested with statements indenting further and further to the"
@@ -1056,7 +1056,7 @@ msgstr ""
 " патчів, ви можете отримати вкладені з операторами відступи все далі й далі "
 "праворуч::"
 
-#: ../../library/unittest.mock-examples.rst:961
+#: ../../library/unittest.mock-examples.rst:963
 msgid ""
 "With unittest ``cleanup`` functions and the :ref:`start-and-stop` we can "
 "achieve the same effect without the nested indentation. A simple helper "
@@ -1068,11 +1068,11 @@ msgstr ""
 "метод, ``create_patch``, ставить патч на місце та повертає створений макет "
 "для нас::"
 
-#: ../../library/unittest.mock-examples.rst:989
+#: ../../library/unittest.mock-examples.rst:991
 msgid "Mocking a dictionary with MagicMock"
 msgstr "Знущання над словником за допомогою MagicMock"
 
-#: ../../library/unittest.mock-examples.rst:991
+#: ../../library/unittest.mock-examples.rst:993
 msgid ""
 "You may want to mock a dictionary, or other container object, recording all "
 "access to it whilst having it still behave like a dictionary."
@@ -1080,7 +1080,7 @@ msgstr ""
 "Можливо, ви захочете імітувати словник або інший об’єкт-контейнер, записуючи"
 " всі доступи до нього, водночас залишаючи його поведінку як словник."
 
-#: ../../library/unittest.mock-examples.rst:994
+#: ../../library/unittest.mock-examples.rst:996
 msgid ""
 "We can do this with :class:`MagicMock`, which will behave like a dictionary,"
 " and using :data:`~Mock.side_effect` to delegate dictionary access to a real"
@@ -1091,7 +1091,7 @@ msgstr ""
 "до словника справжньому базовому словнику, який знаходиться під нашим "
 "контролем."
 
-#: ../../library/unittest.mock-examples.rst:998
+#: ../../library/unittest.mock-examples.rst:1000
 msgid ""
 "When the :meth:`~object.__getitem__` and :meth:`~object.__setitem__` methods"
 " of our ``MagicMock`` are called (normal dictionary access) then "
@@ -1099,7 +1099,7 @@ msgid ""
 "the value too). We can also control what is returned."
 msgstr ""
 
-#: ../../library/unittest.mock-examples.rst:1003
+#: ../../library/unittest.mock-examples.rst:1005
 msgid ""
 "After the ``MagicMock`` has been used we can use attributes like "
 ":data:`~Mock.call_args_list` to assert about how the dictionary was used:"
@@ -1107,7 +1107,7 @@ msgstr ""
 "Після використання ``MagicMock`` ми можемо використовувати такі атрибути, як"
 " :data:`~Mock.call_args_list`, щоб підтвердити, як використовувався словник:"
 
-#: ../../library/unittest.mock-examples.rst:1019
+#: ../../library/unittest.mock-examples.rst:1021
 msgid ""
 "An alternative to using ``MagicMock`` is to use ``Mock`` and *only* provide "
 "the magic methods you specifically want:"
@@ -1115,7 +1115,7 @@ msgstr ""
 "Альтернативою використанню ``MagicMock`` є використання ``Mock`` і *лише* "
 "надання магічних методів, які вам потрібні:"
 
-#: ../../library/unittest.mock-examples.rst:1026
+#: ../../library/unittest.mock-examples.rst:1028
 msgid ""
 "A *third* option is to use ``MagicMock`` but passing in ``dict`` as the "
 "*spec* (or *spec_set*) argument so that the ``MagicMock`` created only has "
@@ -1125,7 +1125,7 @@ msgstr ""
 "аргумент *spec* (або *spec_set*), щоб створений ``MagicMock`` мав доступні "
 "лише магічні методи словника:"
 
-#: ../../library/unittest.mock-examples.rst:1034
+#: ../../library/unittest.mock-examples.rst:1036
 msgid ""
 "With these side effect functions in place, the ``mock`` will behave like a "
 "normal dictionary but recording the access. It even raises a :exc:`KeyError`"
@@ -1135,7 +1135,7 @@ msgstr ""
 "словник, але записуватиме доступ. Він навіть викликає :exc:`KeyError`, якщо "
 "ви намагаєтеся отримати доступ до ключа, якого не існує."
 
-#: ../../library/unittest.mock-examples.rst:1053
+#: ../../library/unittest.mock-examples.rst:1055
 msgid ""
 "After it has been used you can make assertions about the access using the "
 "normal mock methods and attributes:"
@@ -1143,11 +1143,11 @@ msgstr ""
 "Після його використання ви можете робити твердження щодо доступу за "
 "допомогою звичайних методів і атрибутів:"
 
-#: ../../library/unittest.mock-examples.rst:1065
+#: ../../library/unittest.mock-examples.rst:1067
 msgid "Mock subclasses and their attributes"
 msgstr "Макетні підкласи та їхні атрибути"
 
-#: ../../library/unittest.mock-examples.rst:1067
+#: ../../library/unittest.mock-examples.rst:1069
 msgid ""
 "There are various reasons why you might want to subclass :class:`Mock`. One "
 "reason might be to add helper methods. Here's a silly example:"
@@ -1155,7 +1155,7 @@ msgstr ""
 "Існують різні причини, чому ви можете створити підклас :class:`Mock`. Однією"
 " з причин може бути додавання допоміжних методів. Ось дурний приклад:"
 
-#: ../../library/unittest.mock-examples.rst:1083
+#: ../../library/unittest.mock-examples.rst:1085
 msgid ""
 "The standard behaviour for ``Mock`` instances is that attributes and the "
 "return value mocks are of the same type as the mock they are accessed on. "
@@ -1171,7 +1171,7 @@ msgstr ""
 " для додавання допоміжних методів, вони також будуть доступні в атрибутах і "
 "повертаються значеннях екземплярів вашого підкласу."
 
-#: ../../library/unittest.mock-examples.rst:1099
+#: ../../library/unittest.mock-examples.rst:1101
 msgid ""
 "Sometimes this is inconvenient. For example, `one user "
 "<https://code.google.com/archive/p/mock/issues/105>`_ is subclassing mock to"
@@ -1180,7 +1180,7 @@ msgid ""
 " Having this applied to attributes too actually causes errors."
 msgstr ""
 
-#: ../../library/unittest.mock-examples.rst:1105
+#: ../../library/unittest.mock-examples.rst:1107
 msgid ""
 "``Mock`` (in all its flavours) uses a method called ``_get_child_mock`` to "
 "create these \"sub-mocks\" for attributes and return values. You can prevent"
@@ -1195,7 +1195,7 @@ msgstr ""
 "довільні аргументи ключового слова (``**kwargs``), які потім передаються в "
 "макетний конструктор:"
 
-#: ../../library/unittest.mock-examples.rst:1122
+#: ../../library/unittest.mock-examples.rst:1124
 msgid ""
 "An exception to this rule are the non-callable mocks. Attributes use the "
 "callable variant because otherwise non-callable mocks couldn't have callable"
@@ -1205,11 +1205,11 @@ msgstr ""
 "викликаючий варіант, оскільки інакше невикликані макети не могли б мати "
 "викликані методи."
 
-#: ../../library/unittest.mock-examples.rst:1128
+#: ../../library/unittest.mock-examples.rst:1130
 msgid "Mocking imports with patch.dict"
 msgstr "Знущання над імпортом за допомогою patch.dict"
 
-#: ../../library/unittest.mock-examples.rst:1130
+#: ../../library/unittest.mock-examples.rst:1132
 msgid ""
 "One situation where mocking can be hard is where you have a local import "
 "inside a function. These are harder to mock because they aren't using an "
@@ -1219,7 +1219,7 @@ msgstr ""
 "імпорт всередині функції. Їх важче висміяти, оскільки вони не використовують"
 " об’єкт із простору імен модуля, який ми можемо виправити."
 
-#: ../../library/unittest.mock-examples.rst:1134
+#: ../../library/unittest.mock-examples.rst:1136
 msgid ""
 "Generally local imports are to be avoided. They are sometimes done to "
 "prevent circular dependencies, for which there is *usually* a much better "
@@ -1235,7 +1235,7 @@ msgstr ""
 "безумовний локальний імпорт (зберігайте модуль як клас або атрибут модуля та"
 " виконуйте імпорт лише під час першого використання)."
 
-#: ../../library/unittest.mock-examples.rst:1141
+#: ../../library/unittest.mock-examples.rst:1143
 msgid ""
 "That aside there is a way to use ``mock`` to affect the results of an "
 "import. Importing fetches an *object* from the :data:`sys.modules` "
@@ -1245,7 +1245,7 @@ msgid ""
 "back. This need not be the case however."
 msgstr ""
 
-#: ../../library/unittest.mock-examples.rst:1148
+#: ../../library/unittest.mock-examples.rst:1150
 msgid ""
 "This means you can use :func:`patch.dict` to *temporarily* put a mock in "
 "place in :data:`sys.modules`. Any imports whilst this patch is active will "
@@ -1259,11 +1259,11 @@ msgstr ""
 "функція завершує роботу, тіло оператора with завершено або викликається "
 "``patcher.stop()``), тоді все, що було раніше, буде безпечно відновлено."
 
-#: ../../library/unittest.mock-examples.rst:1154
+#: ../../library/unittest.mock-examples.rst:1156
 msgid "Here's an example that mocks out the 'fooble' module."
 msgstr "Ось приклад, який висміює модуль \"fooble\"."
 
-#: ../../library/unittest.mock-examples.rst:1166
+#: ../../library/unittest.mock-examples.rst:1168
 msgid ""
 "As you can see the ``import fooble`` succeeds, but on exit there is no "
 "'fooble' left in :data:`sys.modules`."
@@ -1271,20 +1271,20 @@ msgstr ""
 "Як ви бачите, ``імпорт fooble`` вдається, але після виходу в "
 ":data:`sys.modules` не залишилося жодного 'fooble'."
 
-#: ../../library/unittest.mock-examples.rst:1169
+#: ../../library/unittest.mock-examples.rst:1171
 msgid "This also works for the ``from module import name`` form:"
 msgstr "Це також працює для форми ``from module import name``:"
 
-#: ../../library/unittest.mock-examples.rst:1179
+#: ../../library/unittest.mock-examples.rst:1181
 msgid "With slightly more work you can also mock package imports:"
 msgstr ""
 "Доклавши трохи більше зусиль, ви також можете імітувати імпорт пакетів:"
 
-#: ../../library/unittest.mock-examples.rst:1192
+#: ../../library/unittest.mock-examples.rst:1194
 msgid "Tracking order of calls and less verbose call assertions"
 msgstr "Відстеження порядку викликів і менш докладні підтвердження викликів"
 
-#: ../../library/unittest.mock-examples.rst:1194
+#: ../../library/unittest.mock-examples.rst:1196
 msgid ""
 "The :class:`Mock` class allows you to track the *order* of method calls on "
 "your mock objects through the :attr:`~Mock.method_calls` attribute. This "
@@ -1297,7 +1297,7 @@ msgstr ""
 "об’єктами, однак ми можемо використовувати :attr:`~Mock.mock_calls` для "
 "досягнення того самого ефекту."
 
-#: ../../library/unittest.mock-examples.rst:1199
+#: ../../library/unittest.mock-examples.rst:1201
 msgid ""
 "Because mocks track calls to child mocks in ``mock_calls``, and accessing an"
 " arbitrary attribute of a mock creates a child mock, we can create our "
@@ -1309,7 +1309,7 @@ msgstr ""
 "окремі моки від батьківського. Виклики цих дочірніх маніпуляцій будуть "
 "записані по порядку в ``mock_calls`` батьківського:"
 
-#: ../../library/unittest.mock-examples.rst:1216
+#: ../../library/unittest.mock-examples.rst:1218
 msgid ""
 "We can then assert about the calls, including the order, by comparing with "
 "the ``mock_calls`` attribute on the manager mock:"
@@ -1317,7 +1317,7 @@ msgstr ""
 "Потім ми можемо стверджувати про виклики, включаючи порядок, порівнюючи з "
 "атрибутом ``mock_calls`` макет менеджера:"
 
-#: ../../library/unittest.mock-examples.rst:1223
+#: ../../library/unittest.mock-examples.rst:1225
 msgid ""
 "If ``patch`` is creating, and putting in place, your mocks then you can "
 "attach them to a manager mock using the :meth:`~Mock.attach_mock` method. "
@@ -1327,7 +1327,7 @@ msgstr ""
 "макета менеджера за допомогою методу :meth:`~Mock.attach_mock`. Після "
 "прикріплення виклики будуть записані в ``mock_calls`` менеджера. ::"
 
-#: ../../library/unittest.mock-examples.rst:1242
+#: ../../library/unittest.mock-examples.rst:1244
 msgid ""
 "If many calls have been made, but you're only interested in a particular "
 "sequence of them then an alternative is to use the "
@@ -1341,7 +1341,7 @@ msgstr ""
 "допомогою об’єкта :data:`call`). Якщо ця послідовність викликів міститься в "
 ":attr:`~Mock.mock_calls`, тоді твердження буде успішним."
 
-#: ../../library/unittest.mock-examples.rst:1256
+#: ../../library/unittest.mock-examples.rst:1258
 msgid ""
 "Even though the chained call ``m.one().two().three()`` aren't the only calls"
 " that have been made to the mock, the assert still succeeds."
@@ -1349,7 +1349,7 @@ msgstr ""
 "Незважаючи на те, що зв’язаний виклик ``m.one().two().three()`` не єдиний "
 "виклик, який було зроблено для mock, твердження все одно успішне."
 
-#: ../../library/unittest.mock-examples.rst:1259
+#: ../../library/unittest.mock-examples.rst:1261
 msgid ""
 "Sometimes a mock may have several calls made to it, and you are only "
 "interested in asserting about *some* of those calls. You may not even care "
@@ -1361,11 +1361,11 @@ msgstr ""
 "порядок. У цьому випадку ви можете передати ``any_order=True`` до "
 "``assert_has_calls``:"
 
-#: ../../library/unittest.mock-examples.rst:1271
+#: ../../library/unittest.mock-examples.rst:1273
 msgid "More complex argument matching"
 msgstr "Складніше зіставлення аргументів"
 
-#: ../../library/unittest.mock-examples.rst:1273
+#: ../../library/unittest.mock-examples.rst:1275
 msgid ""
 "Using the same basic concept as :data:`ANY` we can implement matchers to do "
 "more complex assertions on objects used as arguments to mocks."
@@ -1374,7 +1374,7 @@ msgstr ""
 "реалізувати збіги для більш складних тверджень щодо об’єктів, які "
 "використовуються як аргументи для імітації."
 
-#: ../../library/unittest.mock-examples.rst:1276
+#: ../../library/unittest.mock-examples.rst:1278
 msgid ""
 "Suppose we expect some object to be passed to a mock that by default "
 "compares equal based on object identity (which is the Python default for "
@@ -1391,7 +1391,7 @@ msgstr ""
 "об’єкта, ми можемо створити відповідник, який перевірить ці атрибути для "
 "нас."
 
-#: ../../library/unittest.mock-examples.rst:1283
+#: ../../library/unittest.mock-examples.rst:1285
 msgid ""
 "You can see in this example how a 'standard' call to ``assert_called_with`` "
 "isn't sufficient:"
@@ -1399,13 +1399,13 @@ msgstr ""
 "У цьому прикладі ви можете побачити, як \"стандартного\" виклику ``assert_ "
 "called_with`` недостатньо:"
 
-#: ../../library/unittest.mock-examples.rst:1298
+#: ../../library/unittest.mock-examples.rst:1301
 msgid ""
 "A comparison function for our ``Foo`` class might look something like this:"
 msgstr ""
 "Функція порівняння для нашого класу ``Foo`` може виглядати приблизно так:"
 
-#: ../../library/unittest.mock-examples.rst:1310
+#: ../../library/unittest.mock-examples.rst:1313
 msgid ""
 "And a matcher object that can use comparison functions like this for its "
 "equality operation would look something like this:"
@@ -1413,11 +1413,11 @@ msgstr ""
 "І об’єкт відповідності, який може використовувати такі функції порівняння "
 "для своєї операції рівності, виглядатиме приблизно так:"
 
-#: ../../library/unittest.mock-examples.rst:1321
+#: ../../library/unittest.mock-examples.rst:1324
 msgid "Putting all this together:"
 msgstr "Зібравши все це разом:"
 
-#: ../../library/unittest.mock-examples.rst:1326
+#: ../../library/unittest.mock-examples.rst:1329
 msgid ""
 "The ``Matcher`` is instantiated with our compare function and the ``Foo`` "
 "object we want to compare against. In ``assert_called_with`` the ``Matcher``"
@@ -1433,7 +1433,7 @@ msgstr ""
 "збігаються, ``assert_ called_with`` пропускається, а якщо вони не "
 "збігаються, виникає :exc:`AssertionError`:"
 
-#: ../../library/unittest.mock-examples.rst:1339
+#: ../../library/unittest.mock-examples.rst:1342
 msgid ""
 "With a bit of tweaking you could have the comparison function raise the "
 ":exc:`AssertionError` directly and provide a more useful failure message."
@@ -1441,7 +1441,7 @@ msgstr ""
 "Трохи налаштувавши функцію порівняння, ви могли б безпосередньо викликати "
 ":exc:`AssertionError` і надавати більш корисне повідомлення про помилку."
 
-#: ../../library/unittest.mock-examples.rst:1342
+#: ../../library/unittest.mock-examples.rst:1345
 msgid ""
 "As of version 1.5, the Python testing library `PyHamcrest "
 "<https://pyhamcrest.readthedocs.io/>`_ provides similar functionality, that "

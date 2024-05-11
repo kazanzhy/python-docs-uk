@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Python 3.12\n"
+"Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-04 01:27+0000\n"
+"POT-Creation-Date: 2024-05-11 02:33+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -22,74 +22,60 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../library/getopt.rst:2
-msgid ":mod:`getopt` --- C-style parser for command line options"
-msgstr ":mod:`getopt` --- Парсер у стилі C для параметрів командного рядка"
+msgid ":mod:`!getopt` --- C-style parser for command line options"
+msgstr ""
 
 #: ../../library/getopt.rst:8
 msgid "**Source code:** :source:`Lib/getopt.py`"
 msgstr "**Вихідний код:** :source:`Lib/getopt.py`"
 
-#: ../../library/getopt.rst:12
+#: ../../library/getopt.rst:10
+msgid ""
+"The :mod:`getopt` module is :term:`soft deprecated` and will not be "
+"developed further; development will continue with the :mod:`argparse` "
+"module."
+msgstr ""
+
+#: ../../library/getopt.rst:17
 msgid ""
 "The :mod:`getopt` module is a parser for command line options whose API is "
-"designed to be familiar to users of the C :c:func:`getopt` function. Users "
-"who are unfamiliar with the C :c:func:`getopt` function or who would like to"
-" write less code and get better help and error messages should consider "
+"designed to be familiar to users of the C :c:func:`!getopt` function. Users "
+"who are unfamiliar with the C :c:func:`!getopt` function or who would like "
+"to write less code and get better help and error messages should consider "
 "using the :mod:`argparse` module instead."
 msgstr ""
-"Модуль :mod:`getopt` — це синтаксичний аналізатор параметрів командного "
-"рядка, API якого розроблений таким чином, щоб бути знайомим користувачам "
-"функції C :c:func:`getopt`. Користувачі, які не знайомі з функцією C "
-":c:func:`getopt` або бажають писати менше коду та отримувати кращу допомогу "
-"та повідомлення про помилки, повинні розглянути можливість використання "
-"замість цього модуля :mod:`argparse`."
 
-#: ../../library/getopt.rst:20
+#: ../../library/getopt.rst:25
 msgid ""
 "This module helps scripts to parse the command line arguments in "
-"``sys.argv``. It supports the same conventions as the Unix :c:func:`getopt` "
-"function (including the special meanings of arguments of the form '``-``' "
+"``sys.argv``. It supports the same conventions as the Unix :c:func:`!getopt`"
+" function (including the special meanings of arguments of the form '``-``' "
 "and '``--``').  Long options similar to those supported by GNU software may "
 "be used as well via an optional third argument."
 msgstr ""
-"Цей модуль допомагає сценаріям аналізувати аргументи командного рядка в "
-"``sys.argv``. Він підтримує ті самі конвенції, що й функція Unix "
-":c:func:`getopt` (включно зі спеціальними значеннями аргументів у формі "
-"''``-``' і ''``--``'). Довгі параметри, подібні до тих, що підтримуються "
-"програмним забезпеченням GNU, також можна використовувати через "
-"необов’язковий третій аргумент."
 
-#: ../../library/getopt.rst:26
+#: ../../library/getopt.rst:31
 msgid "This module provides two functions and an exception:"
 msgstr "Цей модуль забезпечує дві функції та виняток:"
 
-#: ../../library/getopt.rst:32
+#: ../../library/getopt.rst:37
 msgid ""
 "Parses command line options and parameter list.  *args* is the argument list"
 " to be parsed, without the leading reference to the running program. "
 "Typically, this means ``sys.argv[1:]``. *shortopts* is the string of option "
 "letters that the script wants to recognize, with options that require an "
 "argument followed by a colon (``':'``; i.e., the same format that Unix "
-":c:func:`getopt` uses)."
+":c:func:`!getopt` uses)."
 msgstr ""
-"Розбирає параметри командного рядка та список параметрів. *args* — це список"
-" аргументів, який потрібно проаналізувати, без початкового посилання на "
-"запущену програму. Зазвичай це означає ``sys.argv[1:]``. *shortopts* — це "
-"рядок літер параметрів, які сценарій хоче розпізнати, з параметрами, які "
-"вимагають аргументу, після якого йде двокрапка (``':'``; тобто той самий "
-"формат, що і Unix :c:func:`getopt` використовує)."
 
-#: ../../library/getopt.rst:40
+#: ../../library/getopt.rst:45
 msgid ""
-"Unlike GNU :c:func:`getopt`, after a non-option argument, all further "
+"Unlike GNU :c:func:`!getopt`, after a non-option argument, all further "
 "arguments are considered also non-options. This is similar to the way non-"
 "GNU Unix systems work."
 msgstr ""
-"На відміну від GNU :c:func:`getopt`, після аргументу, що не є опцією, усі "
-"подальші аргументи також вважаються не опціями. Це схоже на те, як працюють "
-"не-GNU Unix системи."
 
-#: ../../library/getopt.rst:44
+#: ../../library/getopt.rst:49
 msgid ""
 "*longopts*, if specified, must be a list of strings with the names of the "
 "long options which should be supported.  The leading ``'--'`` characters "
@@ -113,7 +99,7 @@ msgstr ""
 "опція ``--fo`` відповідатиме ``--foo``, але ``--f`` не збігатиметься "
 "однозначно, тому буде викликано :exc:`GetoptError`."
 
-#: ../../library/getopt.rst:55
+#: ../../library/getopt.rst:60
 msgid ""
 "The return value consists of two elements: the first is a list of ``(option,"
 " value)`` pairs; the second is the list of program arguments left after the "
@@ -136,7 +122,7 @@ msgstr ""
 "вони були знайдені, таким чином допускаючи багатократне повторення. Довгі та"
 " короткі варіанти можуть змішуватися."
 
-#: ../../library/getopt.rst:68
+#: ../../library/getopt.rst:73
 msgid ""
 "This function works like :func:`getopt`, except that GNU style scanning mode"
 " is used by default. This means that option and non-option arguments may be "
@@ -148,51 +134,41 @@ msgstr ""
 "варіантів і неваріантів можуть змішуватися. Функція :func:`getopt` припиняє "
 "обробку опцій, щойно зустрічається аргумент, що не є опцією."
 
-#: ../../library/getopt.rst:73
+#: ../../library/getopt.rst:78
 msgid ""
 "If the first character of the option string is ``'+'``, or if the "
-"environment variable :envvar:`POSIXLY_CORRECT` is set, then option "
+"environment variable :envvar:`!POSIXLY_CORRECT` is set, then option "
 "processing stops as soon as a non-option argument is encountered."
 msgstr ""
-"Якщо першим символом рядка параметра є ``'+'`` або якщо встановлено змінну "
-"середовища :envvar:`POSIXLY_CORRECT`, тоді обробка параметра припиняється, "
-"як тільки буде виявлено аргумент, що не є параметром."
 
-#: ../../library/getopt.rst:80
+#: ../../library/getopt.rst:85
 msgid ""
 "This is raised when an unrecognized option is found in the argument list or "
 "when an option requiring an argument is given none. The argument to the "
 "exception is a string indicating the cause of the error.  For long options, "
 "an argument given to an option which does not require one will also cause "
-"this exception to be raised.  The attributes :attr:`msg` and :attr:`opt` "
+"this exception to be raised.  The attributes :attr:`!msg` and :attr:`!opt` "
 "give the error message and related option; if there is no specific option to"
-" which the exception relates, :attr:`opt` is an empty string."
+" which the exception relates, :attr:`!opt` is an empty string."
 msgstr ""
-"Це виникає, коли в списку аргументів знайдено нерозпізнаний параметр або "
-"якщо параметру, який вимагає аргументу, не вказано жодного. Аргументом "
-"винятку є рядок, що вказує на причину помилки. Для довгих опцій аргумент, "
-"наданий опції, яка його не вимагає, також призведе до виклику цього винятку."
-" Атрибути :attr:`msg` і :attr:`opt` дають повідомлення про помилку та "
-"відповідну опцію; якщо немає конкретної опції, до якої відноситься виняток, "
-":attr:`opt` є порожнім рядком."
 
-#: ../../library/getopt.rst:91
+#: ../../library/getopt.rst:96
 msgid "Alias for :exc:`GetoptError`; for backward compatibility."
 msgstr "Псевдонім для :exc:`GetoptError`; для зворотної сумісності."
 
-#: ../../library/getopt.rst:93
+#: ../../library/getopt.rst:98
 msgid "An example using only Unix style options:"
 msgstr "Приклад використання лише параметрів стилю Unix:"
 
-#: ../../library/getopt.rst:105
+#: ../../library/getopt.rst:110
 msgid "Using long option names is equally easy:"
 msgstr "Використовувати довгі назви параметрів так само легко:"
 
-#: ../../library/getopt.rst:118
+#: ../../library/getopt.rst:123
 msgid "In a script, typical usage is something like this::"
 msgstr "У сценарії типове використання приблизно таке::"
 
-#: ../../library/getopt.rst:147
+#: ../../library/getopt.rst:152
 msgid ""
 "Note that an equivalent command line interface could be produced with less "
 "code and more informative help and error messages by using the "
@@ -202,11 +178,11 @@ msgstr ""
 "меншим кодом і більш інформативною довідкою та повідомленнями про помилки за"
 " допомогою модуля :mod:`argparse`::"
 
-#: ../../library/getopt.rst:162
+#: ../../library/getopt.rst:167
 msgid "Module :mod:`argparse`"
 msgstr "Модуль :mod:`argparse`"
 
-#: ../../library/getopt.rst:163
+#: ../../library/getopt.rst:168
 msgid "Alternative command line option and argument parsing library."
 msgstr ""
 "Альтернативний параметр командного рядка та бібліотека аналізу аргументів."
