@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-11 02:33+0000\n"
+"POT-Creation-Date: 2024-05-17 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -719,21 +719,12 @@ msgid ""
 "corresponding attributes from the original function. The default values for "
 "these arguments are the module level constants ``WRAPPER_ASSIGNMENTS`` "
 "(which assigns to the wrapper function's ``__module__``, ``__name__``, "
-"``__qualname__``, ``__annotations__`` and ``__doc__``, the documentation "
-"string) and ``WRAPPER_UPDATES`` (which updates the wrapper function's "
-"``__dict__``, i.e. the instance dictionary)."
+"``__qualname__``, ``__annotations__``, ``__type_params__``, and ``__doc__``,"
+" the documentation string) and ``WRAPPER_UPDATES`` (which updates the "
+"wrapper function's ``__dict__``, i.e. the instance dictionary)."
 msgstr ""
-"Оновіть функцію *wrapper*, щоб виглядати як функція *wrapper*. Необов’язкові"
-" аргументи — це кортежі, які вказують, які атрибути вихідної функції "
-"призначаються безпосередньо відповідним атрибутам у функції-огортці та які "
-"атрибути функції-огортки оновлюються відповідними атрибутами з вихідної "
-"функції. Значеннями за замовчуванням для цих аргументів є константи рівня "
-"модуля ``WRAPPER_ASSIGNMENTS`` (які призначають функції-оболонки "
-"``__module__``, ``__name__``, ``__qualname__``, ``__annotations__`` і "
-"``__doc__``, рядок документації) і ``WRAPPER_UPDATES`` (який оновлює "
-"``__dict__`` функції-огортки, тобто словник екземпляра)."
 
-#: ../../library/functools.rst:653
+#: ../../library/functools.rst:654
 msgid ""
 "To allow access to the original function for introspection and other "
 "purposes (e.g. bypassing a caching decorator such as :func:`lru_cache`), "
@@ -745,7 +736,7 @@ msgstr ""
 "функція автоматично додає атрибут ``__wrapped__`` до оболонки, яка "
 "посилається на функцію, яку обгортають."
 
-#: ../../library/functools.rst:658
+#: ../../library/functools.rst:659
 msgid ""
 "The main intended use for this function is in :term:`decorator` functions "
 "which wrap the decorated function and return the wrapper. If the wrapper "
@@ -758,7 +749,7 @@ msgstr ""
 "не оновлена, метадані повернутої функції відображатимуть визначення "
 "оболонки, а не початкове визначення функції, що зазвичай не дуже корисно."
 
-#: ../../library/functools.rst:664
+#: ../../library/functools.rst:665
 msgid ""
 ":func:`update_wrapper` may be used with callables other than functions. Any "
 "attributes named in *assigned* or *updated* that are missing from the object"
@@ -773,14 +764,14 @@ msgstr ""
 "якщо в самій функції-обгортки відсутні будь-які атрибути, названі в "
 "*updated*."
 
-#: ../../library/functools.rst:670
+#: ../../library/functools.rst:671
 msgid ""
 "The ``__wrapped__`` attribute is now automatically added. The "
 "``__annotations__`` attribute is now copied by default. Missing attributes "
 "no longer trigger an :exc:`AttributeError`."
 msgstr ""
 
-#: ../../library/functools.rst:675
+#: ../../library/functools.rst:676
 msgid ""
 "The ``__wrapped__`` attribute now always refers to the wrapped function, "
 "even if that function defined a ``__wrapped__`` attribute. (see "
@@ -790,7 +781,11 @@ msgstr ""
 "навіть якщо ця функція визначила атрибут ``__wrapped__``. (див. "
 ":issue:`17482`)"
 
-#: ../../library/functools.rst:683
+#: ../../library/functools.rst:681
+msgid "The ``__type_params__`` attribute is now copied by default."
+msgstr ""
+
+#: ../../library/functools.rst:687
 msgid ""
 "This is a convenience function for invoking :func:`update_wrapper` as a "
 "function decorator when defining a wrapper function.  It is equivalent to "
@@ -802,7 +797,7 @@ msgstr ""
 "``partial(update_wrapper, wrapped=wrapped, assigned=призначено, "
 "updated=updated)``. Наприклад::"
 
-#: ../../library/functools.rst:709
+#: ../../library/functools.rst:713
 msgid ""
 "Without the use of this decorator factory, the name of the example function "
 "would have been ``'wrapper'``, and the docstring of the original "
@@ -812,11 +807,11 @@ msgstr ""
 "``'wrapper``, а рядок документації оригінального :func:`example` було б "
 "втрачено."
 
-#: ../../library/functools.rst:717
+#: ../../library/functools.rst:721
 msgid ":class:`partial` Objects"
 msgstr ":class:`partial` Об'єкти"
 
-#: ../../library/functools.rst:719
+#: ../../library/functools.rst:723
 msgid ""
 ":class:`partial` objects are callable objects created by :func:`partial`. "
 "They have three read-only attributes:"
@@ -824,7 +819,7 @@ msgstr ""
 ":class:`partial` об’єкти – це викликані об’єкти, створені :func:`partial`. "
 "Вони мають три атрибути лише для читання:"
 
-#: ../../library/functools.rst:725
+#: ../../library/functools.rst:729
 msgid ""
 "A callable object or function.  Calls to the :class:`partial` object will be"
 " forwarded to :attr:`func` with new arguments and keywords."
@@ -832,7 +827,7 @@ msgstr ""
 "Викликаний об’єкт або функція. Виклики об’єкта :class:`partial` будуть "
 "перенаправлені до :attr:`func` з новими аргументами та ключовими словами."
 
-#: ../../library/functools.rst:731
+#: ../../library/functools.rst:735
 msgid ""
 "The leftmost positional arguments that will be prepended to the positional "
 "arguments provided to a :class:`partial` object call."
@@ -840,7 +835,7 @@ msgstr ""
 "Крайні ліві позиційні аргументи, які будуть додані до позиційних аргументів,"
 " наданих до виклику об’єкта :class:`partial`."
 
-#: ../../library/functools.rst:737
+#: ../../library/functools.rst:741
 msgid ""
 "The keyword arguments that will be supplied when the :class:`partial` object"
 " is called."
@@ -848,7 +843,7 @@ msgstr ""
 "Ключові аргументи, які будуть надані під час виклику об’єкта "
 ":class:`partial`."
 
-#: ../../library/functools.rst:740
+#: ../../library/functools.rst:744
 msgid ""
 ":class:`partial` objects are like :class:`function` objects in that they are"
 " callable, weak referenceable, and can have attributes.  There are some "

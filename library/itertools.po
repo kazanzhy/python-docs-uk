@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-11 02:33+0000\n"
+"POT-Creation-Date: 2024-05-17 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:08+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -477,9 +477,10 @@ msgstr ""
 "ітерований вхід."
 
 #: ../../library/itertools.rst:118 ../../library/itertools.rst:194
-#: ../../library/itertools.rst:250 ../../library/itertools.rst:299
-#: ../../library/itertools.rst:499 ../../library/itertools.rst:528
-#: ../../library/itertools.rst:557 ../../library/itertools.rst:637
+#: ../../library/itertools.rst:248 ../../library/itertools.rst:297
+#: ../../library/itertools.rst:497 ../../library/itertools.rst:526
+#: ../../library/itertools.rst:555 ../../library/itertools.rst:635
+#: ../../library/itertools.rst:697
 msgid "Roughly equivalent to::"
 msgstr "Приблизно еквівалентно::"
 
@@ -543,7 +544,7 @@ msgstr ""
 "ітератори не будуть вичерпані. Використовується для обробки послідовних "
 "послідовностей як однієї послідовності. Приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:228
+#: ../../library/itertools.rst:227
 msgid ""
 "Alternate constructor for :func:`chain`.  Gets chained inputs from a single "
 "iterable argument that is evaluated lazily.  Roughly equivalent to::"
@@ -552,26 +553,26 @@ msgstr ""
 "з одного ітерованого аргументу, який обчислюється ліниво. Приблизно "
 "еквівалентно::"
 
-#: ../../library/itertools.rst:240
+#: ../../library/itertools.rst:238
 msgid "Return *r* length subsequences of elements from the input *iterable*."
 msgstr ""
 "Повертає *r* довжину підпослідовностей елементів із вхідного *iterable*."
 
-#: ../../library/itertools.rst:242 ../../library/itertools.rst:291
+#: ../../library/itertools.rst:240 ../../library/itertools.rst:289
 msgid ""
 "The combination tuples are emitted in lexicographic ordering according to "
 "the order of the input *iterable*. So, if the input *iterable* is sorted, "
 "the output tuples will be produced in sorted order."
 msgstr ""
 
-#: ../../library/itertools.rst:246
+#: ../../library/itertools.rst:244
 msgid ""
 "Elements are treated as unique based on their position, not on their value."
 "  So if the input elements are unique, there will be no repeated values in "
 "each combination."
 msgstr ""
 
-#: ../../library/itertools.rst:272
+#: ../../library/itertools.rst:270
 msgid ""
 "The code for :func:`combinations` can be also expressed as a subsequence of "
 ":func:`permutations` after filtering entries where the elements are not in "
@@ -581,7 +582,7 @@ msgstr ""
 ":func:`permutations` після фільтрації записів, де елементи не відсортовані "
 "(відповідно до їхньої позиції у вхідному пулі)::"
 
-#: ../../library/itertools.rst:283
+#: ../../library/itertools.rst:281
 msgid ""
 "The number of items returned is ``n! / r! / (n-r)!`` when ``0 <= r <= n`` or"
 " zero when ``r > n``."
@@ -589,7 +590,7 @@ msgstr ""
 "Кількість повернених елементів – ``n! / р! / (n-r)!`` коли ``0 <= r <= n`` "
 "or zero when ``r > n``."
 
-#: ../../library/itertools.rst:288
+#: ../../library/itertools.rst:286
 msgid ""
 "Return *r* length subsequences of elements from the input *iterable* "
 "allowing individual elements to be repeated more than once."
@@ -597,7 +598,7 @@ msgstr ""
 "Повертає *r* довжину підпослідовностей елементів із вхідного *iterable*, що "
 "дозволяє повторювати окремі елементи більше одного разу."
 
-#: ../../library/itertools.rst:295
+#: ../../library/itertools.rst:293
 msgid ""
 "Elements are treated as unique based on their position, not on their value."
 "  So if the input elements are unique, the generated combinations will also "
@@ -607,7 +608,7 @@ msgstr ""
 "Отже, якщо вхідні елементи унікальні, згенеровані комбінації також будуть "
 "унікальними."
 
-#: ../../library/itertools.rst:318
+#: ../../library/itertools.rst:316
 msgid ""
 "The code for :func:`combinations_with_replacement` can be also expressed as "
 "a subsequence of :func:`product` after filtering entries where the elements "
@@ -617,13 +618,13 @@ msgstr ""
 "підпослідовність :func:`product` після фільтрації записів, де елементи не "
 "відсортовані (відповідно до їхньої позиції у вхідному пулі):"
 
-#: ../../library/itertools.rst:329
+#: ../../library/itertools.rst:327
 msgid ""
 "The number of items returned is ``(n+r-1)! / r! / (n-1)!`` when ``n > 0``."
 msgstr ""
 "Кількість повернених елементів – ``(n+r-1)! / р! / (n-1)!`` коли ``n > 0``."
 
-#: ../../library/itertools.rst:336
+#: ../../library/itertools.rst:334
 msgid ""
 "Make an iterator that filters elements from *data* returning only those that"
 " have a corresponding element in *selectors* that evaluates to ``True``. "
@@ -635,7 +636,7 @@ msgstr ""
 "Зупиняється, коли ітерації *data* або *selectors* вичерпано. Приблизно "
 "еквівалентно::"
 
-#: ../../library/itertools.rst:350
+#: ../../library/itertools.rst:348
 msgid ""
 "Make an iterator that returns evenly spaced values starting with number "
 "*start*. Often used as an argument to :func:`map` to generate consecutive "
@@ -647,7 +648,7 @@ msgstr ""
 "послідовних точок даних. Також використовується з :func:`zip` для додавання "
 "порядкових номерів. Приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:362
+#: ../../library/itertools.rst:360
 msgid ""
 "When counting with floating point numbers, better accuracy can sometimes be "
 "achieved by substituting multiplicative code such as: ``(start + step * i "
@@ -657,11 +658,11 @@ msgstr ""
 "досягти шляхом заміни мультиплікативного коду, наприклад: ``(початок + крок "
 "* i для i в count())``."
 
-#: ../../library/itertools.rst:366
+#: ../../library/itertools.rst:364
 msgid "Added *step* argument and allowed non-integer arguments."
 msgstr "Додано аргумент *step* і дозволено нецілі аргументи."
 
-#: ../../library/itertools.rst:371
+#: ../../library/itertools.rst:369
 msgid ""
 "Make an iterator returning elements from the iterable and saving a copy of "
 "each. When the iterable is exhausted, return elements from the saved copy.  "
@@ -671,7 +672,7 @@ msgstr ""
 "кожного. Коли iterable вичерпано, поверніть елементи зі збереженої копії. "
 "Повторюється безкінечно. Приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:385
+#: ../../library/itertools.rst:383
 msgid ""
 "Note, this member of the toolkit may require significant auxiliary storage "
 "(depending on the length of the iterable)."
@@ -679,7 +680,7 @@ msgstr ""
 "Зверніть увагу, що цей член набору інструментів може потребувати значного "
 "допоміжного сховища (залежно від довжини ітерованого)."
 
-#: ../../library/itertools.rst:391
+#: ../../library/itertools.rst:389
 msgid ""
 "Make an iterator that drops elements from the iterable as long as the "
 "predicate is true; afterwards, returns every element.  Note, the iterator "
@@ -691,14 +692,14 @@ msgstr ""
 "*жодних* виходів, доки предикат не стане хибним, тому він може мати тривалий"
 " час запуску. Приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:408
+#: ../../library/itertools.rst:406
 msgid ""
 "Make an iterator that filters elements from iterable returning only those "
 "for which the predicate is false. If *predicate* is ``None``, return the "
 "items that are false. Roughly equivalent to::"
 msgstr ""
 
-#: ../../library/itertools.rst:423
+#: ../../library/itertools.rst:421
 msgid ""
 "Make an iterator that returns consecutive keys and groups from the "
 "*iterable*. The *key* is a function computing a key value for each element."
@@ -713,7 +714,7 @@ msgstr ""
 "правило, iterable вже має бути відсортований за тією самою ключовою "
 "функцією."
 
-#: ../../library/itertools.rst:429
+#: ../../library/itertools.rst:427
 msgid ""
 "The operation of :func:`groupby` is similar to the ``uniq`` filter in Unix."
 "  It generates a break or new group every time the value of the key function"
@@ -727,7 +728,7 @@ msgstr ""
 "ключової функції). Така поведінка відрізняється від GROUP BY SQL, яка "
 "агрегує загальні елементи незалежно від порядку введення."
 
-#: ../../library/itertools.rst:435
+#: ../../library/itertools.rst:433
 msgid ""
 "The returned group is itself an iterator that shares the underlying iterable"
 " with :func:`groupby`.  Because the source is shared, when the "
@@ -739,11 +740,11 @@ msgstr ""
 "розширено, попередня група більше не відображається. Отже, якщо ці дані "
 "знадобляться пізніше, їх слід зберегти як список::"
 
-#: ../../library/itertools.rst:447
+#: ../../library/itertools.rst:445
 msgid ":func:`groupby` is roughly equivalent to::"
 msgstr ":func:`groupby` приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:484
+#: ../../library/itertools.rst:482
 msgid ""
 "Make an iterator that returns selected elements from the iterable. If "
 "*start* is non-zero, then elements from the iterable are skipped until start"
@@ -753,7 +754,7 @@ msgid ""
 "all; otherwise, it stops at the specified position."
 msgstr ""
 
-#: ../../library/itertools.rst:491
+#: ../../library/itertools.rst:489
 msgid ""
 "If *start* is ``None``, then iteration starts at zero. If *step* is "
 "``None``, then the step defaults to one."
@@ -761,7 +762,7 @@ msgstr ""
 "Якщо *start* має значення ``None``, то ітерація починається з нуля. Якщо "
 "*крок* має значення ``None``, тоді крок за умовчанням дорівнює одиниці."
 
-#: ../../library/itertools.rst:494
+#: ../../library/itertools.rst:492
 msgid ""
 "Unlike regular slicing, :func:`islice` does not support negative values for "
 "*start*, *stop*, or *step*.  Can be used to extract related fields from data"
@@ -769,13 +770,13 @@ msgid ""
 "report may list a name field on every third line)."
 msgstr ""
 
-#: ../../library/itertools.rst:522
+#: ../../library/itertools.rst:520
 msgid "Return successive overlapping pairs taken from the input *iterable*."
 msgstr ""
 "Повертає послідовні пари, що перекриваються, взяті з вхідних даних "
 "*iterable*."
 
-#: ../../library/itertools.rst:524
+#: ../../library/itertools.rst:522
 msgid ""
 "The number of 2-tuples in the output iterator will be one fewer than the "
 "number of inputs.  It will be empty if the input iterable has fewer than two"
@@ -784,12 +785,12 @@ msgstr ""
 "Кількість 2-кортежів у вихідному ітераторі буде на один менше, ніж кількість"
 " входів. Він буде порожнім, якщо вхідний ітератор має менше двох значень."
 
-#: ../../library/itertools.rst:543
+#: ../../library/itertools.rst:541
 msgid ""
 "Return successive *r* length permutations of elements in the *iterable*."
 msgstr "Повертає послідовні зміни довжини *r* елементів у *iterable*."
 
-#: ../../library/itertools.rst:545
+#: ../../library/itertools.rst:543
 msgid ""
 "If *r* is not specified or is ``None``, then *r* defaults to the length of "
 "the *iterable* and all possible full-length permutations are generated."
@@ -798,21 +799,21 @@ msgstr ""
 "відповідає довжині *iterable* і генеруються всі можливі перестановки повної "
 "довжини."
 
-#: ../../library/itertools.rst:549
+#: ../../library/itertools.rst:547
 msgid ""
 "The permutation tuples are emitted in lexicographic order according to the "
 "order of the input *iterable*. So, if the input *iterable* is sorted, the "
 "output tuples will be produced in sorted order."
 msgstr ""
 
-#: ../../library/itertools.rst:553
+#: ../../library/itertools.rst:551
 msgid ""
 "Elements are treated as unique based on their position, not on their value."
 "  So if the input elements are unique, there will be no repeated values "
 "within a permutation."
 msgstr ""
 
-#: ../../library/itertools.rst:584
+#: ../../library/itertools.rst:582
 msgid ""
 "The code for :func:`permutations` can be also expressed as a subsequence of "
 ":func:`product`, filtered to exclude entries with repeated elements (those "
@@ -822,7 +823,7 @@ msgstr ""
 ":func:`product`, відфільтрована, щоб виключити записи з повторюваними "
 "елементами (ті, що знаходяться в одній позиції у вхідному пулі):"
 
-#: ../../library/itertools.rst:596
+#: ../../library/itertools.rst:594
 msgid ""
 "The number of items returned is ``n! / (n-r)!`` when ``0 <= r <= n`` or zero"
 " when ``r > n``."
@@ -830,11 +831,11 @@ msgstr ""
 "Кількість повернених елементів – ``n! / (n-r)!`` коли ``0 <= r <= n`` or "
 "zero when ``r > n``."
 
-#: ../../library/itertools.rst:601
+#: ../../library/itertools.rst:599
 msgid "Cartesian product of input iterables."
 msgstr "Декартовий добуток вхідних ітерацій."
 
-#: ../../library/itertools.rst:603
+#: ../../library/itertools.rst:601
 msgid ""
 "Roughly equivalent to nested for-loops in a generator expression. For "
 "example, ``product(A, B)`` returns the same as ``((x,y) for x in A for y in "
@@ -843,7 +844,7 @@ msgstr ""
 "Приблизно еквівалентно вкладеним циклам for у виразі генератора. Наприклад, "
 "``product(A, B)`` повертає те саме, що ``((x,y) для x в A для y у B)``."
 
-#: ../../library/itertools.rst:606
+#: ../../library/itertools.rst:604
 msgid ""
 "The nested loops cycle like an odometer with the rightmost element advancing"
 " on every iteration.  This pattern creates a lexicographic ordering so that "
@@ -855,7 +856,7 @@ msgstr ""
 "впорядкування, так що якщо ітеровані вхідні елементи відсортовані, кортежі "
 "продукту видаються в відсортованому порядку."
 
-#: ../../library/itertools.rst:611
+#: ../../library/itertools.rst:609
 msgid ""
 "To compute the product of an iterable with itself, specify the number of "
 "repetitions with the optional *repeat* keyword argument.  For example, "
@@ -865,7 +866,7 @@ msgstr ""
 "за допомогою необов’язкового аргументу *repeat*. Наприклад, ``product(A, "
 "repeat=4)`` означає те саме, що ``product(A, A, A, A)``."
 
-#: ../../library/itertools.rst:615
+#: ../../library/itertools.rst:613
 msgid ""
 "This function is roughly equivalent to the following code, except that the "
 "actual implementation does not build up intermediate results in memory::"
@@ -873,7 +874,7 @@ msgstr ""
 "Ця функція приблизно еквівалентна наступному коду, за винятком того, що "
 "фактична реалізація не накопичує проміжні результати в пам’яті:"
 
-#: ../../library/itertools.rst:628
+#: ../../library/itertools.rst:626
 msgid ""
 "Before :func:`product` runs, it completely consumes the input iterables, "
 "keeping pools of values in memory to generate the products.  Accordingly, it"
@@ -883,19 +884,19 @@ msgstr ""
 "зберігаючи пули значень у пам’яті для генерації продуктів. Відповідно, це "
 "корисно лише з обмеженими вхідними даними."
 
-#: ../../library/itertools.rst:634
+#: ../../library/itertools.rst:632
 msgid ""
 "Make an iterator that returns *object* over and over again. Runs "
 "indefinitely unless the *times* argument is specified."
 msgstr ""
 
-#: ../../library/itertools.rst:648
+#: ../../library/itertools.rst:646
 msgid ""
 "A common use for *repeat* is to supply a stream of constant values to *map* "
 "or *zip*:"
 msgstr ""
 
-#: ../../library/itertools.rst:658
+#: ../../library/itertools.rst:656
 msgid ""
 "Make an iterator that computes the function using arguments obtained from "
 "the iterable.  Used instead of :func:`map` when argument parameters are "
@@ -903,14 +904,14 @@ msgid ""
 "\"pre-zipped\")."
 msgstr ""
 
-#: ../../library/itertools.rst:663
+#: ../../library/itertools.rst:661
 msgid ""
 "The difference between :func:`map` and :func:`starmap` parallels the "
 "distinction between ``function(a,b)`` and ``function(*c)``. Roughly "
 "equivalent to::"
 msgstr ""
 
-#: ../../library/itertools.rst:675
+#: ../../library/itertools.rst:673
 msgid ""
 "Make an iterator that returns elements from the iterable as long as the "
 "predicate is true.  Roughly equivalent to::"
@@ -918,7 +919,7 @@ msgstr ""
 "Створіть ітератор, який повертає елементи з ітерованого, якщо предикат "
 "істинний. Приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:686
+#: ../../library/itertools.rst:684
 msgid ""
 "Note, the element that first fails the predicate condition is consumed from "
 "the input iterator and there is no way to access it. This could be an issue "
@@ -929,32 +930,25 @@ msgid ""
 " instead."
 msgstr ""
 
-#: ../../library/itertools.rst:697
+#: ../../library/itertools.rst:695
 msgid "Return *n* independent iterators from a single iterable."
 msgstr "Повертає *n* незалежних ітераторів з одного ітератора."
 
-#: ../../library/itertools.rst:699
-msgid ""
-"The following Python code helps explain what *tee* does (although the actual"
-" implementation is more complex and uses only a single underlying "
-":abbr:`FIFO (first-in, first-out)` queue)::"
-msgstr ""
-
-#: ../../library/itertools.rst:718
+#: ../../library/itertools.rst:714
 msgid ""
 "Once a :func:`tee` has been created, the original *iterable* should not be "
 "used anywhere else; otherwise, the *iterable* could get advanced without the"
 " tee objects being informed."
 msgstr ""
 
-#: ../../library/itertools.rst:722
+#: ../../library/itertools.rst:718
 msgid ""
 "``tee`` iterators are not threadsafe. A :exc:`RuntimeError` may be raised "
 "when simultaneously using iterators returned by the same :func:`tee` call, "
 "even if the original *iterable* is threadsafe."
 msgstr ""
 
-#: ../../library/itertools.rst:726
+#: ../../library/itertools.rst:722
 msgid ""
 "This itertool may require significant auxiliary storage (depending on how "
 "much temporary data needs to be stored). In general, if one iterator uses "
@@ -966,7 +960,7 @@ msgstr ""
 "якщо один ітератор використовує більшість або всі дані перед запуском іншого"
 " ітератора, швидше використовувати :func:`list` замість :func:`tee`."
 
-#: ../../library/itertools.rst:734
+#: ../../library/itertools.rst:730
 msgid ""
 "Make an iterator that aggregates elements from each of the iterables. If the"
 " iterables are of uneven length, missing values are filled-in with "
@@ -978,7 +972,7 @@ msgstr ""
 "*fillvalue*. Ітерація триває до тих пір, поки не буде вичерпано найдовшу "
 "ітерацію. Приблизно еквівалентно::"
 
-#: ../../library/itertools.rst:758
+#: ../../library/itertools.rst:754
 msgid ""
 "If one of the iterables is potentially infinite, then the "
 ":func:`zip_longest` function should be wrapped with something that limits "
@@ -990,11 +984,11 @@ msgstr ""
 "(наприклад, :func:`islice` або :func:`takewhile`). Якщо не вказано, "
 "*fillvalue* за замовчуванням має значення ``None``."
 
-#: ../../library/itertools.rst:767
+#: ../../library/itertools.rst:763
 msgid "Itertools Recipes"
 msgstr "Рецепти Itertools"
 
-#: ../../library/itertools.rst:769
+#: ../../library/itertools.rst:765
 msgid ""
 "This section shows recipes for creating an extended toolset using the "
 "existing itertools as building blocks."
@@ -1002,7 +996,7 @@ msgstr ""
 "У цьому розділі наведено рецепти для створення розширеного набору "
 "інструментів з використанням існуючих itertools як будівельних блоків."
 
-#: ../../library/itertools.rst:772
+#: ../../library/itertools.rst:768
 msgid ""
 "The primary purpose of the itertools recipes is educational.  The recipes "
 "show various ways of thinking about individual tools — for example, that "
@@ -1014,7 +1008,7 @@ msgid ""
 "``map()``, ``filter()``, ``reversed()``, and ``enumerate()``."
 msgstr ""
 
-#: ../../library/itertools.rst:781
+#: ../../library/itertools.rst:777
 msgid ""
 "A secondary purpose of the recipes is to serve as an incubator.  The "
 "``accumulate()``, ``compress()``, and ``pairwise()`` itertools started out "
@@ -1022,13 +1016,13 @@ msgid ""
 "``sieve()`` recipes are being tested to see whether they prove their worth."
 msgstr ""
 
-#: ../../library/itertools.rst:786
+#: ../../library/itertools.rst:782
 msgid ""
 "Substantially all of these recipes and many, many others can be installed "
 "from the :pypi:`more-itertools` project found on the Python Package Index::"
 msgstr ""
 
-#: ../../library/itertools.rst:792
+#: ../../library/itertools.rst:788
 msgid ""
 "Many of the recipes offer the same high performance as the underlying "
 "toolset. Superior memory performance is kept by processing elements one at a"
@@ -1040,6 +1034,6 @@ msgid ""
 "overhead."
 msgstr ""
 
-#: ../../library/itertools.rst:973
+#: ../../library/itertools.rst:964
 msgid "The following recipes have a more mathematical flavor:"
 msgstr ""
