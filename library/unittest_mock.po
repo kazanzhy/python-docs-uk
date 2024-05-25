@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-11 02:33+0000\n"
+"POT-Creation-Date: 2024-05-24 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -502,22 +502,16 @@ msgstr ""
 #: ../../library/unittest.mock.rst:415
 msgid ""
 "This can be useful where you want to make a series of assertions that reuse "
-"the same object. Note that :meth:`reset_mock` *doesn't* clear the return "
-"value, :attr:`side_effect` or any child attributes you have set using normal"
-" assignment by default. In case you want to reset *return_value* or "
-":attr:`side_effect`, then pass the corresponding parameter as ``True``. "
-"Child mocks and the return value mock (if any) are reset as well."
+"the same object. Note that :meth:`reset_mock` *doesn't* clear the "
+":attr:`return_value`, :attr:`side_effect` or any child attributes you have "
+"set using normal assignment by default. In case you want to reset "
+":attr:`return_value` or :attr:`side_effect`, then pass the corresponding "
+"parameter as ``True``. Child mocks and the return value mock (if any) are "
+"reset as well."
 msgstr ""
-"Це може бути корисним, якщо ви хочете зробити серію тверджень, які повторно "
-"використовують той самий об’єкт. Зауважте, що :meth:`reset_mock` *не* очищає"
-" повернуте значення, :attr:`side_effect` або будь-які дочірні атрибути, які "
-"ви встановили за умовчанням за допомогою звичайного призначення. Якщо ви "
-"хочете скинути *return_value* або :attr:`side_effect`, передайте відповідний"
-" параметр як ``True``. Дочірні імітації та макет повертаного значення (якщо "
-"є) також скидаються."
 
 #: ../../library/unittest.mock.rst:423
-msgid "*return_value*, and :attr:`side_effect` are keyword-only arguments."
+msgid "*return_value*, and *side_effect* are keyword-only arguments."
 msgstr ""
 
 #: ../../library/unittest.mock.rst:429
@@ -2993,54 +2987,21 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:2587
 msgid ""
-":class:`Mock` is a very powerful and flexible object, but it suffers from "
-"two flaws when used to mock out objects from a system under test. One of "
-"these flaws is specific to the :class:`Mock` api and the other is a more "
-"general problem with using mock objects."
+":class:`Mock` is a very powerful and flexible object, but it suffers from a "
+"flaw which is general to mocking. If you refactor some of your code, rename "
+"members and so on, any tests for code that is still using the *old api* but "
+"uses mocks instead of the real objects will still pass. This means your "
+"tests can all pass even though your code is broken."
 msgstr ""
-":class:`Mock` є дуже потужним і гнучким об'єктом, але він страждає від двох "
-"недоліків, коли використовується для імітації об'єктів із системи, що "
-"тестується. Одна з цих недоліків є специфічною для API :class:`Mock`, а інша"
-" є більш загальною проблемою використання фіктивних об’єктів."
 
-#: ../../library/unittest.mock.rst:2592
+#: ../../library/unittest.mock.rst:2595
 msgid ""
-"First the problem specific to :class:`Mock`. :class:`Mock` has two assert "
-"methods that are extremely handy: :meth:`~Mock.assert_called_with` and "
-":meth:`~Mock.assert_called_once_with`."
+"Before 3.5, tests with a typo in the word assert would silently pass when "
+"they should raise an error. You can still achieve this behavior by passing "
+"``unsafe=True`` to Mock."
 msgstr ""
-"Спочатку проблема, специфічна для :class:`Mock`. :class:`Mock` має два "
-"надзвичайно зручні методи підтвердження: :meth:`~Mock.assert_ called_with` і"
-" :meth:`~Mock.assert_ called_once_with`."
 
-#: ../../library/unittest.mock.rst:2605
-msgid ""
-"Because mocks auto-create attributes on demand, and allow you to call them "
-"with arbitrary arguments, if you misspell one of these assert methods then "
-"your assertion is gone:"
-msgstr ""
-"Оскільки висміює автоматичне створення атрибутів на вимогу та дозволяє "
-"викликати їх із довільними аргументами, якщо ви неправильно напишете один із"
-" цих методів assert, ваше твердження зникне:"
-
-#: ../../library/unittest.mock.rst:2615
-msgid "Your tests can pass silently and incorrectly because of the typo."
-msgstr "Ваші тести можуть проходити мовчки та неправильно через помилку."
-
-#: ../../library/unittest.mock.rst:2617
-msgid ""
-"The second issue is more general to mocking. If you refactor some of your "
-"code, rename members and so on, any tests for code that is still using the "
-"*old api* but uses mocks instead of the real objects will still pass. This "
-"means your tests can all pass even though your code is broken."
-msgstr ""
-"Друге питання стосується насмішок. Якщо ви переробите частину свого коду, "
-"перейменуєте члени тощо, будь-які тести для коду, який все ще використовує "
-"*старий api*, але використовує імітації замість реальних об’єктів, усе одно "
-"пройдуть. Це означає, що всі ваші тести можуть пройти, навіть якщо ваш код "
-"зламано."
-
-#: ../../library/unittest.mock.rst:2622
+#: ../../library/unittest.mock.rst:2598
 msgid ""
 "Note that this is another reason why you need integration tests as well as "
 "unit tests. Testing everything in isolation is all fine and dandy, but if "
@@ -3052,7 +3013,7 @@ msgstr ""
 "перевірятимете, як ваші пристрої \"з’єднані між собою\", все ще є багато "
 "місця для помилок, які могли виявити тести."
 
-#: ../../library/unittest.mock.rst:2627
+#: ../../library/unittest.mock.rst:2603
 msgid ""
 ":mod:`mock` already provides a feature to help with this, called speccing. "
 "If you use a class or instance as the :attr:`spec` for a mock then you can "
@@ -3063,7 +3024,7 @@ msgstr ""
 "макету, ви зможете отримати доступ лише до тих атрибутів макета, які існують"
 " у реальному класі:"
 
-#: ../../library/unittest.mock.rst:2638
+#: ../../library/unittest.mock.rst:2614
 msgid ""
 "The spec only applies to the mock itself, so we still have the same issue "
 "with any methods on the mock:"
@@ -3071,7 +3032,7 @@ msgstr ""
 "Специфікація стосується лише самого макету, тому ми все ще маємо ту саму "
 "проблему з будь-якими методами на макеті:"
 
-#: ../../library/unittest.mock.rst:2647
+#: ../../library/unittest.mock.rst:2623
 msgid ""
 "Auto-speccing solves this problem. You can either pass ``autospec=True`` to "
 ":func:`patch` / :func:`patch.object` or use the :func:`create_autospec` "
@@ -3092,11 +3053,11 @@ msgstr ""
 "або глибоко вкладеними об’єктами (як-от модулі, які імпортують модулі, які "
 "імпортують модулі) без значного зниження продуктивності."
 
-#: ../../library/unittest.mock.rst:2656
+#: ../../library/unittest.mock.rst:2632
 msgid "Here's an example of it in use::"
 msgstr "Ось приклад його використання::"
 
-#: ../../library/unittest.mock.rst:2666
+#: ../../library/unittest.mock.rst:2642
 msgid ""
 "You can see that :class:`request.Request` has a spec. "
 ":class:`request.Request` takes two arguments in the constructor (one of "
@@ -3106,7 +3067,7 @@ msgstr ""
 ":class:`request.Request` приймає два аргументи в конструкторі (один з яких "
 "*self*). Ось що станеться, якщо ми спробуємо викликати його неправильно:"
 
-#: ../../library/unittest.mock.rst:2675
+#: ../../library/unittest.mock.rst:2651
 msgid ""
 "The spec also applies to instantiated classes (i.e. the return value of "
 "specced mocks)::"
@@ -3114,7 +3075,7 @@ msgstr ""
 "Специфікація також стосується екземплярів класів (тобто значення, що "
 "повертається specced mocks):"
 
-#: ../../library/unittest.mock.rst:2682
+#: ../../library/unittest.mock.rst:2658
 msgid ""
 ":class:`Request` objects are not callable, so the return value of "
 "instantiating our mocked out :class:`request.Request` is a non-callable "
@@ -3126,7 +3087,7 @@ msgstr ""
 "можна викликати. Якщо специфікація на місці, будь-які друкарські помилки в "
 "наших твердженнях викличуть правильну помилку::"
 
-#: ../../library/unittest.mock.rst:2694
+#: ../../library/unittest.mock.rst:2670
 msgid ""
 "In many cases you will just be able to add ``autospec=True`` to your "
 "existing :func:`patch` calls and then be protected against bugs due to typos"
@@ -3136,7 +3097,7 @@ msgstr ""
 "викликів :func:`patch` і тоді захистити себе від помилок через помилки друку"
 " та зміни API."
 
-#: ../../library/unittest.mock.rst:2698
+#: ../../library/unittest.mock.rst:2674
 msgid ""
 "As well as using *autospec* through :func:`patch` there is a "
 ":func:`create_autospec` for creating autospecced mocks directly:"
@@ -3145,7 +3106,7 @@ msgstr ""
 ":func:`create_autospec` для безпосереднього створення автоспецованих "
 "макетів:"
 
-#: ../../library/unittest.mock.rst:2706
+#: ../../library/unittest.mock.rst:2682
 msgid ""
 "This isn't without caveats and limitations however, which is why it is not "
 "the default behaviour. In order to know what attributes are available on the"
@@ -3165,7 +3126,7 @@ msgstr ""
 "використовувати автоспец. З іншого боку, набагато краще проектувати ваші "
 "об’єкти так, щоб самоаналіз був безпечним [#]_."
 
-#: ../../library/unittest.mock.rst:2715
+#: ../../library/unittest.mock.rst:2691
 msgid ""
 "A more serious problem is that it is common for instance attributes to be "
 "created in the :meth:`~object.__init__` method and not to exist on the class"
@@ -3173,7 +3134,7 @@ msgid ""
 "restricts the api to visible attributes. ::"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2732
+#: ../../library/unittest.mock.rst:2708
 msgid ""
 "There are a few different ways of resolving this problem. The easiest, but "
 "not necessarily the least annoying, way is to simply set the required "
@@ -3187,7 +3148,7 @@ msgstr ""
 "отримати атрибути, яких немає в специфікації, це не заважає вам налаштувати "
 "їх::"
 
-#: ../../library/unittest.mock.rst:2743
+#: ../../library/unittest.mock.rst:2719
 msgid ""
 "There is a more aggressive version of both *spec* and *autospec* that *does*"
 " prevent you setting non-existent attributes. This is useful if you want to "
@@ -3199,7 +3160,7 @@ msgstr ""
 "також *встановлював* дійсні атрибути, але, очевидно, це запобігає цьому "
 "конкретному сценарію:"
 
-#: ../../library/unittest.mock.rst:2756
+#: ../../library/unittest.mock.rst:2732
 msgid ""
 "Probably the best way of solving the problem is to add class attributes as "
 "default values for instance members initialised in :meth:`~object.__init__`."
@@ -3208,7 +3169,7 @@ msgid ""
 "course) is faster too. e.g."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2767
+#: ../../library/unittest.mock.rst:2743
 msgid ""
 "This brings up another issue. It is relatively common to provide a default "
 "value of ``None`` for members that will later be an object of a different "
@@ -3227,7 +3188,7 @@ msgstr ""
 "членів, для яких встановлено ``None``. Це будуть просто звичайні макети "
 "(добре - MagicMocks):"
 
-#: ../../library/unittest.mock.rst:2782
+#: ../../library/unittest.mock.rst:2758
 msgid ""
 "If modifying your production classes to add defaults isn't to your liking "
 "then there are more options. One of these is simply to use an instance as "
@@ -3246,7 +3207,7 @@ msgstr ""
 ":func:`patch` підтримує це — ви можете просто передати альтернативний об’єкт"
 " як аргумент *autospec*::"
 
-#: ../../library/unittest.mock.rst:2803
+#: ../../library/unittest.mock.rst:2779
 msgid ""
 "This only applies to classes or already instantiated objects. Calling a "
 "mocked class to create a mock instance *does not* create a real instance. It"
@@ -3257,11 +3218,11 @@ msgstr ""
 "класу для створення фальшивого екземпляра *не* створює справжній екземпляр. "
 "Виконуються лише пошуки атрибутів разом із викликами :func:`dir`."
 
-#: ../../library/unittest.mock.rst:2808
+#: ../../library/unittest.mock.rst:2784
 msgid "Sealing mocks"
 msgstr "Герметизація макетів"
 
-#: ../../library/unittest.mock.rst:2817
+#: ../../library/unittest.mock.rst:2793
 msgid ""
 "Seal will disable the automatic creation of mocks when accessing an "
 "attribute of the mock being sealed or any of its attributes that are already"
@@ -3271,7 +3232,7 @@ msgstr ""
 "макету, який запечатується, або будь-якого з його атрибутів, які вже є "
 "макетами рекурсивно."
 
-#: ../../library/unittest.mock.rst:2820
+#: ../../library/unittest.mock.rst:2796
 msgid ""
 "If a mock instance with a name or a spec is assigned to an attribute it "
 "won't be considered in the sealing chain. This allows one to prevent seal "
@@ -3281,28 +3242,28 @@ msgstr ""
 "враховуватиметься в ланцюжку запечатування. Це дозволяє запобігти фіксації "
 "пломбою частини фіктивного об'єкта. ::"
 
-#: ../../library/unittest.mock.rst:2836
+#: ../../library/unittest.mock.rst:2812
 msgid ""
 "Order of precedence of :attr:`side_effect`, :attr:`return_value` and *wraps*"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2838
+#: ../../library/unittest.mock.rst:2814
 msgid "The order of their precedence is:"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2840
+#: ../../library/unittest.mock.rst:2816
 msgid ":attr:`~Mock.side_effect`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2841
+#: ../../library/unittest.mock.rst:2817
 msgid ":attr:`~Mock.return_value`"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2842
+#: ../../library/unittest.mock.rst:2818
 msgid "*wraps*"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2844
+#: ../../library/unittest.mock.rst:2820
 msgid ""
 "If all three are set, mock will return the value from "
 ":attr:`~Mock.side_effect`, ignoring :attr:`~Mock.return_value` and the "
@@ -3311,7 +3272,7 @@ msgid ""
 "first, the order of precedence remains unchanged."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2862
+#: ../../library/unittest.mock.rst:2838
 msgid ""
 "As ``None`` is the default value of :attr:`~Mock.side_effect`, if you "
 "reassign its value back to ``None``, the order of precedence will be checked"
@@ -3319,46 +3280,46 @@ msgid ""
 ":attr:`~Mock.side_effect`."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2871
+#: ../../library/unittest.mock.rst:2847
 msgid ""
 "If the value being returned by :attr:`~Mock.side_effect` is :data:`DEFAULT`,"
 " it is ignored and the order of precedence moves to the successor to obtain "
 "the value to return."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2880
+#: ../../library/unittest.mock.rst:2856
 msgid ""
 "When :class:`Mock` wraps an object, the default value of "
 ":attr:`~Mock.return_value` will be :data:`DEFAULT`."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2889
+#: ../../library/unittest.mock.rst:2865
 msgid ""
 "The order of precedence will ignore this value and it will move to the last "
 "successor which is the wrapped object."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2892
+#: ../../library/unittest.mock.rst:2868
 msgid ""
 "As the real call is being made to the wrapped object, creating an instance "
 "of this mock will return the real instance of the class. The positional "
 "arguments, if any, required by the wrapped object must be passed."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2910
+#: ../../library/unittest.mock.rst:2886
 msgid ""
 "But if you assign ``None`` to it, this will not be ignored as it is an "
 "explicit assignment. So, the order of precedence will not move to the "
 "wrapped object."
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2918
+#: ../../library/unittest.mock.rst:2894
 msgid ""
 "Even if you set all three at once when initializing the mock, the order of "
 "precedence remains the same:"
 msgstr ""
 
-#: ../../library/unittest.mock.rst:2935
+#: ../../library/unittest.mock.rst:2911
 msgid ""
 "If :attr:`~Mock.side_effect` is exhausted, the order of precedence will not "
 "cause a value to be obtained from the successors. Instead, ``StopIteration``"

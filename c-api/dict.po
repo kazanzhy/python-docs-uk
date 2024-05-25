@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-11 02:33+0000\n"
+"POT-Creation-Date: 2024-05-24 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 00:48+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -145,7 +145,7 @@ msgstr ""
 msgid "If the key is missing, set *\\*result* to ``NULL`` and return ``0``."
 msgstr ""
 
-#: ../../c-api/dict.rst:110 ../../c-api/dict.rst:206
+#: ../../c-api/dict.rst:110 ../../c-api/dict.rst:207
 msgid "On error, raise an exception and return ``-1``."
 msgstr ""
 
@@ -241,58 +241,58 @@ msgid ""
 "calling this function, then after it returns, you hold a strong reference to"
 " both *default_value* and *\\*result* (if it's not ``NULL``). These may "
 "refer to the same object: in that case you hold two separate references to "
-"it. .. versionadded:: 3.13"
+"it."
 msgstr ""
 
-#: ../../c-api/dict.rst:199
+#: ../../c-api/dict.rst:200
 msgid ""
 "Remove *key* from dictionary *p* and optionally return the removed value. Do"
 " not raise :exc:`KeyError` if the key missing."
 msgstr ""
 
-#: ../../c-api/dict.rst:202
+#: ../../c-api/dict.rst:203
 msgid ""
 "If the key is present, set *\\*result* to a new reference to the removed "
 "value if *result* is not ``NULL``, and return ``1``."
 msgstr ""
 
-#: ../../c-api/dict.rst:204
+#: ../../c-api/dict.rst:205
 msgid ""
 "If the key is missing, set *\\*result* to ``NULL`` if *result* is not "
 "``NULL``, and return ``0``."
 msgstr ""
 
-#: ../../c-api/dict.rst:208
+#: ../../c-api/dict.rst:209
 msgid ""
 "This is similar to :meth:`dict.pop`, but without the default value and not "
 "raising :exc:`KeyError` if the key missing."
 msgstr ""
 
-#: ../../c-api/dict.rst:216
+#: ../../c-api/dict.rst:217
 msgid ""
 "Similar to :c:func:`PyDict_Pop`, but *key* is specified as a :c:expr:`const "
 "char*` UTF-8 encoded bytes string, rather than a :c:expr:`PyObject*`."
 msgstr ""
 
-#: ../../c-api/dict.rst:225
+#: ../../c-api/dict.rst:226
 msgid ""
 "Return a :c:type:`PyListObject` containing all the items from the "
 "dictionary."
 msgstr "Повертає :c:type:`PyListObject`, що містить усі елементи зі словника."
 
-#: ../../c-api/dict.rst:230
+#: ../../c-api/dict.rst:231
 msgid ""
 "Return a :c:type:`PyListObject` containing all the keys from the dictionary."
 msgstr "Повертає :c:type:`PyListObject`, що містить усі ключі зі словника."
 
-#: ../../c-api/dict.rst:235
+#: ../../c-api/dict.rst:236
 msgid ""
 "Return a :c:type:`PyListObject` containing all the values from the "
 "dictionary *p*."
 msgstr ""
 "Повертає :c:type:`PyListObject`, що містить усі значення зі словника *p*."
 
-#: ../../c-api/dict.rst:243
+#: ../../c-api/dict.rst:244
 msgid ""
 "Return the number of items in the dictionary.  This is equivalent to "
 "``len(p)`` on a dictionary."
@@ -300,7 +300,7 @@ msgstr ""
 "Повернути кількість елементів у словнику. Це еквівалентно ``len(p)`` у "
 "словнику."
 
-#: ../../c-api/dict.rst:249
+#: ../../c-api/dict.rst:250
 msgid ""
 "Iterate over all key-value pairs in the dictionary *p*.  The "
 ":c:type:`Py_ssize_t` referred to by *ppos* must be initialized to ``0`` "
@@ -314,11 +314,11 @@ msgid ""
 "since the structure is sparse, the offsets are not consecutive."
 msgstr ""
 
-#: ../../c-api/dict.rst:260
+#: ../../c-api/dict.rst:261
 msgid "For example::"
 msgstr "Наприклад::"
 
-#: ../../c-api/dict.rst:270
+#: ../../c-api/dict.rst:271
 msgid ""
 "The dictionary *p* should not be mutated during iteration.  It is safe to "
 "modify the values of the keys as you iterate over the dictionary, but only "
@@ -328,7 +328,7 @@ msgstr ""
 "значення ключів під час перегляду словника, але лише до тих пір, поки набір "
 "ключів не зміниться. Наприклад::"
 
-#: ../../c-api/dict.rst:295
+#: ../../c-api/dict.rst:296
 msgid ""
 "Iterate over mapping object *b* adding key-value pairs to dictionary *a*. "
 "*b* may be a dictionary, or any object supporting :c:func:`PyMapping_Keys` "
@@ -345,7 +345,7 @@ msgstr ""
 "відповідного ключа. Повертає ``0`` у разі успіху або ``-1``, якщо було "
 "викликано виключення."
 
-#: ../../c-api/dict.rst:305
+#: ../../c-api/dict.rst:306
 msgid ""
 "This is the same as ``PyDict_Merge(a, b, 1)`` in C, and is similar to "
 "``a.update(b)`` in Python except that :c:func:`PyDict_Update` doesn't fall "
@@ -359,7 +359,7 @@ msgstr ""
 "атрибута \"ключі\". Повертає ``0`` у разі успіху або ``-1``, якщо було "
 "викликано виключення."
 
-#: ../../c-api/dict.rst:314
+#: ../../c-api/dict.rst:315
 msgid ""
 "Update or merge into dictionary *a*, from the key-value pairs in *seq2*. "
 "*seq2* must be an iterable object producing iterable objects of length 2, "
@@ -375,7 +375,7 @@ msgstr ""
 "``0`` в разі успіху або ``-1``, якщо було викликано виключення. "
 "Еквівалентний Python (за винятком значення, що повертається)::"
 
-#: ../../c-api/dict.rst:328
+#: ../../c-api/dict.rst:329
 msgid ""
 "Register *callback* as a dictionary watcher. Return a non-negative integer "
 "id which must be passed to future calls to :c:func:`PyDict_Watch`. In case "
@@ -383,21 +383,21 @@ msgid ""
 "exception."
 msgstr ""
 
-#: ../../c-api/dict.rst:337
+#: ../../c-api/dict.rst:338
 msgid ""
 "Clear watcher identified by *watcher_id* previously returned from "
 ":c:func:`PyDict_AddWatcher`. Return ``0`` on success, ``-1`` on error (e.g. "
 "if the given *watcher_id* was never registered.)"
 msgstr ""
 
-#: ../../c-api/dict.rst:345
+#: ../../c-api/dict.rst:346
 msgid ""
 "Mark dictionary *dict* as watched. The callback granted *watcher_id* by "
 ":c:func:`PyDict_AddWatcher` will be called when *dict* is modified or "
 "deallocated. Return ``0`` on success or ``-1`` on error."
 msgstr ""
 
-#: ../../c-api/dict.rst:353
+#: ../../c-api/dict.rst:354
 msgid ""
 "Mark dictionary *dict* as no longer watched. The callback granted "
 "*watcher_id* by :c:func:`PyDict_AddWatcher` will no longer be called when "
@@ -405,7 +405,7 @@ msgid ""
 "watched by this watcher. Return ``0`` on success or ``-1`` on error."
 msgstr ""
 
-#: ../../c-api/dict.rst:362
+#: ../../c-api/dict.rst:363
 msgid ""
 "Enumeration of possible dictionary watcher events: ``PyDict_EVENT_ADDED``, "
 "``PyDict_EVENT_MODIFIED``, ``PyDict_EVENT_DELETED``, "
@@ -413,11 +413,11 @@ msgid ""
 "``PyDict_EVENT_DEALLOCATED``."
 msgstr ""
 
-#: ../../c-api/dict.rst:370
+#: ../../c-api/dict.rst:371
 msgid "Type of a dict watcher callback function."
 msgstr ""
 
-#: ../../c-api/dict.rst:372
+#: ../../c-api/dict.rst:373
 msgid ""
 "If *event* is ``PyDict_EVENT_CLEARED`` or ``PyDict_EVENT_DEALLOCATED``, both"
 " *key* and *new_value* will be ``NULL``. If *event* is "
@@ -426,7 +426,7 @@ msgid ""
 " deleted from the dictionary and *new_value* will be ``NULL``."
 msgstr ""
 
-#: ../../c-api/dict.rst:378
+#: ../../c-api/dict.rst:379
 msgid ""
 "``PyDict_EVENT_CLONED`` occurs when *dict* was previously empty and another "
 "dict is merged into it. To maintain efficiency of this operation, per-key "
@@ -434,7 +434,7 @@ msgid ""
 "``PyDict_EVENT_CLONED`` is issued, and *key* will be the source dictionary."
 msgstr ""
 
-#: ../../c-api/dict.rst:384
+#: ../../c-api/dict.rst:385
 msgid ""
 "The callback may inspect but must not modify *dict*; doing so could have "
 "unpredictable effects, including infinite recursion. Do not trigger Python "
@@ -442,7 +442,7 @@ msgid ""
 "effect."
 msgstr ""
 
-#: ../../c-api/dict.rst:388
+#: ../../c-api/dict.rst:389
 msgid ""
 "If *event* is ``PyDict_EVENT_DEALLOCATED``, taking a new reference in the "
 "callback to the about-to-be-destroyed dictionary will resurrect it and "
@@ -451,20 +451,20 @@ msgid ""
 "again."
 msgstr ""
 
-#: ../../c-api/dict.rst:394
+#: ../../c-api/dict.rst:395
 msgid ""
 "Callbacks occur before the notified modification to *dict* takes place, so "
 "the prior state of *dict* can be inspected."
 msgstr ""
 
-#: ../../c-api/dict.rst:397
+#: ../../c-api/dict.rst:398
 msgid ""
 "If the callback sets an exception, it must return ``-1``; this exception "
 "will be printed as an unraisable exception using "
 ":c:func:`PyErr_WriteUnraisable`. Otherwise it should return ``0``."
 msgstr ""
 
-#: ../../c-api/dict.rst:401
+#: ../../c-api/dict.rst:402
 msgid ""
 "There may already be a pending exception set on entry to the callback. In "
 "this case, the callback should return ``0`` with the same exception still "
@@ -481,10 +481,10 @@ msgstr "об'єкт"
 msgid "dictionary"
 msgstr "словник"
 
-#: ../../c-api/dict.rst:241
+#: ../../c-api/dict.rst:242
 msgid "built-in function"
 msgstr ""
 
-#: ../../c-api/dict.rst:241
+#: ../../c-api/dict.rst:242
 msgid "len"
 msgstr ""
