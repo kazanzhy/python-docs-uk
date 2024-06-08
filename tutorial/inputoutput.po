@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 14:15+0000\n"
+"POT-Creation-Date: 2024-06-07 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -324,26 +324,23 @@ msgstr "Старе форматування рядка"
 #: ../../tutorial/inputoutput.rst:282
 msgid ""
 "The % operator (modulo) can also be used for string formatting. Given "
-"``'string' % values``, instances of ``%`` in ``string`` are replaced with "
-"zero or more elements of ``values``. This operation is commonly known as "
-"string interpolation. For example::"
+"``format % values`` (where *format* is a string), ``%`` conversion "
+"specifications in *format* are replaced with zero or more elements of "
+"*values*. This operation is commonly known as string interpolation. For "
+"example::"
 msgstr ""
-"Оператор % (по модулю) також можна використовувати для форматування рядків. "
-"З урахуванням % значень ``'string'`` екземпляри ``%`` в ``string`` "
-"замінюються нулем або більше елементами ``values``. Ця операція широко "
-"відома як інтерполяція рядків. Наприклад::"
 
-#: ../../tutorial/inputoutput.rst:291
+#: ../../tutorial/inputoutput.rst:293
 msgid ""
 "More information can be found in the :ref:`old-string-formatting` section."
 msgstr ""
 "Більше інформації можна знайти в розділі :ref:`old-string-formatting`."
 
-#: ../../tutorial/inputoutput.rst:297
+#: ../../tutorial/inputoutput.rst:299
 msgid "Reading and Writing Files"
 msgstr "Читання та запис файлів"
 
-#: ../../tutorial/inputoutput.rst:303
+#: ../../tutorial/inputoutput.rst:305
 msgid ""
 ":func:`open` returns a :term:`file object`, and is most commonly used with "
 "two positional arguments and one keyword argument: ``open(filename, mode, "
@@ -353,7 +350,7 @@ msgstr ""
 "використовується з двома позиційними аргументами та одним ключовим "
 "аргументом: ``open(filename, mode, encoding=None)``"
 
-#: ../../tutorial/inputoutput.rst:316
+#: ../../tutorial/inputoutput.rst:318
 msgid ""
 "The first argument is a string containing the filename.  The second argument"
 " is another string containing a few characters describing the way in which "
@@ -373,7 +370,7 @@ msgstr ""
 "запису. Аргумент *mode* необов’язковий; ``'r'`` передбачається, якщо його "
 "опустити."
 
-#: ../../tutorial/inputoutput.rst:325
+#: ../../tutorial/inputoutput.rst:327
 msgid ""
 "Normally, files are opened in :dfn:`text mode`, that means, you read and "
 "write strings from and to the file, which are encoded in a specific "
@@ -394,7 +391,7 @@ msgstr ""
 ":class:`bytes`. Ви не можете вказати *кодування* під час відкриття файлу в "
 "двійковому режимі."
 
-#: ../../tutorial/inputoutput.rst:335
+#: ../../tutorial/inputoutput.rst:337
 msgid ""
 "In text mode, the default when reading is to convert platform-specific line "
 "endings (``\\n`` on Unix, ``\\r\\n`` on Windows) to just ``\\n``.  When "
@@ -413,7 +410,7 @@ msgstr ""
 "дуже обережні, використовуйте двійковий режим під час читання та запису "
 "таких файлів."
 
-#: ../../tutorial/inputoutput.rst:343
+#: ../../tutorial/inputoutput.rst:345
 msgid ""
 "It is good practice to use the :keyword:`with` keyword when dealing with "
 "file objects.  The advantage is that the file is properly closed after its "
@@ -427,7 +424,7 @@ msgstr ""
 "Використання :keyword:`!with` також набагато коротше, ніж написання "
 "еквівалента :keyword:`try`\\ -\\ :keyword:`finally` блоків::"
 
-#: ../../tutorial/inputoutput.rst:356
+#: ../../tutorial/inputoutput.rst:358
 msgid ""
 "If you're not using the :keyword:`with` keyword, then you should call "
 "``f.close()`` to close the file and immediately free up any system resources"
@@ -437,7 +434,7 @@ msgstr ""
 "``f.close()``, щоб закрити файл і негайно звільнити всі системні ресурси, "
 "які він використовує."
 
-#: ../../tutorial/inputoutput.rst:361
+#: ../../tutorial/inputoutput.rst:363
 msgid ""
 "Calling ``f.write()`` without using the :keyword:`!with` keyword or calling "
 "``f.close()`` **might** result in the arguments of ``f.write()`` not being "
@@ -447,7 +444,7 @@ msgstr ""
 "виклик ``f.close()`` **може** привести до аргументів ``f.write()`` не "
 "повністю записується на диск, навіть якщо програма успішно завершує роботу."
 
-#: ../../tutorial/inputoutput.rst:369
+#: ../../tutorial/inputoutput.rst:371
 msgid ""
 "After a file object is closed, either by a :keyword:`with` statement or by "
 "calling ``f.close()``, attempts to use the file object will automatically "
@@ -457,11 +454,11 @@ msgstr ""
 ":keyword:`with` або виклику ``f.close()``, спроби використати файловий "
 "об’єкт автоматично зазнають невдачі. ::"
 
-#: ../../tutorial/inputoutput.rst:383
+#: ../../tutorial/inputoutput.rst:385
 msgid "Methods of File Objects"
 msgstr "Методи файлових об'єктів"
 
-#: ../../tutorial/inputoutput.rst:385
+#: ../../tutorial/inputoutput.rst:387
 msgid ""
 "The rest of the examples in this section will assume that a file object "
 "called ``f`` has already been created."
@@ -469,7 +466,7 @@ msgstr ""
 "У решті прикладів у цьому розділі буде припущено, що файловий об’єкт під "
 "назвою ``f`` уже створено."
 
-#: ../../tutorial/inputoutput.rst:388
+#: ../../tutorial/inputoutput.rst:390
 msgid ""
 "To read a file's contents, call ``f.read(size)``, which reads some quantity "
 "of data and returns it as a string (in text mode) or bytes object (in binary"
@@ -489,7 +486,7 @@ msgstr ""
 " символів (у текстовому режимі) або *size* байтів (у двійковому режимі). "
 "Якщо досягнуто кінця файлу, f.read() поверне порожній рядок (``''``). ::"
 
-#: ../../tutorial/inputoutput.rst:402
+#: ../../tutorial/inputoutput.rst:404
 msgid ""
 "``f.readline()`` reads a single line from the file; a newline character "
 "(``\\n``) is left at the end of the string, and is only omitted on the last "
@@ -505,7 +502,7 @@ msgstr ""
 " означає, що кінець файлу досягнуто, тоді як порожній рядок представлений "
 "``'\\n'``, рядок, що містить лише один новий рядок. ::"
 
-#: ../../tutorial/inputoutput.rst:416
+#: ../../tutorial/inputoutput.rst:418
 msgid ""
 "For reading lines from a file, you can loop over the file object. This is "
 "memory efficient, fast, and leads to simple code::"
@@ -513,7 +510,7 @@ msgstr ""
 "Щоб прочитати рядки з файлу, ви можете виконати цикл по об'єкту файлу. Це "
 "ефективне використання пам’яті, швидке та веде до простого коду::"
 
-#: ../../tutorial/inputoutput.rst:425
+#: ../../tutorial/inputoutput.rst:427
 msgid ""
 "If you want to read all the lines of a file in a list you can also use "
 "``list(f)`` or ``f.readlines()``."
@@ -521,7 +518,7 @@ msgstr ""
 "Якщо ви хочете прочитати всі рядки файлу у списку, ви також можете "
 "скористатися ``list(f)`` або ``f.readlines()``."
 
-#: ../../tutorial/inputoutput.rst:428
+#: ../../tutorial/inputoutput.rst:430
 msgid ""
 "``f.write(string)`` writes the contents of *string* to the file, returning "
 "the number of characters written. ::"
@@ -529,7 +526,7 @@ msgstr ""
 "``f.write(string)`` записує вміст *string* у файл, повертаючи кількість "
 "записаних символів. ::"
 
-#: ../../tutorial/inputoutput.rst:434
+#: ../../tutorial/inputoutput.rst:436
 msgid ""
 "Other types of objects need to be converted -- either to a string (in text "
 "mode) or a bytes object (in binary mode) -- before writing them::"
@@ -537,7 +534,7 @@ msgstr ""
 "Інші типи об’єктів потрібно перетворити — або на рядок (у текстовому "
 "режимі), або на об’єкт bytes (у двійковому режимі) — перед їх записом:"
 
-#: ../../tutorial/inputoutput.rst:442
+#: ../../tutorial/inputoutput.rst:444
 msgid ""
 "``f.tell()`` returns an integer giving the file object's current position in"
 " the file represented as number of bytes from the beginning of the file when"
@@ -547,7 +544,7 @@ msgstr ""
 "об’єкта у файлі, представлену як кількість байтів від початку файлу в "
 "двійковому режимі та непрозоре число в текстовому режимі."
 
-#: ../../tutorial/inputoutput.rst:446
+#: ../../tutorial/inputoutput.rst:448
 msgid ""
 "To change the file object's position, use ``f.seek(offset, whence)``.  The "
 "position is computed from adding *offset* to a reference point; the "
@@ -564,7 +561,7 @@ msgstr ""
 "використовує кінець файлу як контрольну точку. *whence* можна опустити і за "
 "умовчанням дорівнює 0, використовуючи початок файлу як контрольну точку. ::"
 
-#: ../../tutorial/inputoutput.rst:465
+#: ../../tutorial/inputoutput.rst:467
 msgid ""
 "In text files (those opened without a ``b`` in the mode string), only seeks "
 "relative to the beginning of the file are allowed (the exception being "
@@ -578,18 +575,18 @@ msgstr ""
 "які повертає ``f.tell()`` або нуль. Будь-яке інше значення *offset* "
 "призводить до невизначеної поведінки."
 
-#: ../../tutorial/inputoutput.rst:471
+#: ../../tutorial/inputoutput.rst:473
 msgid ""
 "File objects have some additional methods, such as :meth:`~io.IOBase.isatty`"
 " and :meth:`~io.IOBase.truncate` which are less frequently used; consult the"
 " Library Reference for a complete guide to file objects."
 msgstr ""
 
-#: ../../tutorial/inputoutput.rst:479
+#: ../../tutorial/inputoutput.rst:481
 msgid "Saving structured data with :mod:`json`"
 msgstr "Збереження структурованих даних за допомогою :mod:`json`"
 
-#: ../../tutorial/inputoutput.rst:483
+#: ../../tutorial/inputoutput.rst:485
 msgid ""
 "Strings can easily be written to and read from a file.  Numbers take a bit "
 "more effort, since the :meth:`~io.TextIOBase.read` method only returns "
@@ -599,7 +596,7 @@ msgid ""
 "parsing and serializing by hand becomes complicated."
 msgstr ""
 
-#: ../../tutorial/inputoutput.rst:490
+#: ../../tutorial/inputoutput.rst:492
 msgid ""
 "Rather than having users constantly writing and debugging code to save "
 "complicated data types to files, Python allows you to use the popular data "
@@ -613,7 +610,7 @@ msgid ""
 "machine."
 msgstr ""
 
-#: ../../tutorial/inputoutput.rst:501
+#: ../../tutorial/inputoutput.rst:503
 msgid ""
 "The JSON format is commonly used by modern applications to allow for data "
 "exchange.  Many programmers are already familiar with it, which makes it a "
@@ -623,7 +620,7 @@ msgstr ""
 "даними. Багато програмістів уже знайомі з ним, що робить його хорошим "
 "вибором для сумісності."
 
-#: ../../tutorial/inputoutput.rst:505
+#: ../../tutorial/inputoutput.rst:507
 msgid ""
 "If you have an object ``x``, you can view its JSON string representation "
 "with a simple line of code::"
@@ -631,7 +628,7 @@ msgstr ""
 "Якщо у вас є об’єкт ``x``, ви можете переглянути його представлення рядка "
 "JSON за допомогою простого рядка коду::"
 
-#: ../../tutorial/inputoutput.rst:513
+#: ../../tutorial/inputoutput.rst:515
 msgid ""
 "Another variant of the :func:`~json.dumps` function, called "
 ":func:`~json.dump`, simply serializes the object to a :term:`text file`.  So"
@@ -642,7 +639,7 @@ msgstr ""
 " ``f`` є об'єктом :term:`text file`, відкритим для запису, ми можемо зробити"
 " це:"
 
-#: ../../tutorial/inputoutput.rst:519
+#: ../../tutorial/inputoutput.rst:521
 msgid ""
 "To decode the object again, if ``f`` is a :term:`binary file` or :term:`text"
 " file` object which has been opened for reading::"
@@ -650,7 +647,7 @@ msgstr ""
 "Щоб знову декодувати об’єкт, якщо ``f`` є об’єктом :term:`binary file` або "
 ":term:`text file`, який було відкрито для читання::"
 
-#: ../../tutorial/inputoutput.rst:525
+#: ../../tutorial/inputoutput.rst:527
 msgid ""
 "JSON files must be encoded in UTF-8. Use ``encoding=\"utf-8\"`` when opening"
 " JSON file as a :term:`text file` for both of reading and writing."
@@ -659,7 +656,7 @@ msgstr ""
 "``encoding=\"utf-8\"``, коли відкриваєте файл JSON як :term:`text file` як "
 "для читання, так і для запису."
 
-#: ../../tutorial/inputoutput.rst:528
+#: ../../tutorial/inputoutput.rst:530
 msgid ""
 "This simple serialization technique can handle lists and dictionaries, but "
 "serializing arbitrary class instances in JSON requires a bit of extra "
@@ -670,11 +667,11 @@ msgstr ""
 " серіалізація довільних екземплярів класу в JSON потребує додаткових зусиль."
 " Посилання на модуль :mod:`json` містить пояснення цього."
 
-#: ../../tutorial/inputoutput.rst:534
+#: ../../tutorial/inputoutput.rst:536
 msgid ":mod:`pickle` - the pickle module"
 msgstr ":mod:`pickle` - модуль pickle"
 
-#: ../../tutorial/inputoutput.rst:536
+#: ../../tutorial/inputoutput.rst:538
 msgid ""
 "Contrary to :ref:`JSON <tut-json>`, *pickle* is a protocol which allows the "
 "serialization of arbitrarily complex Python objects.  As such, it is "
@@ -690,26 +687,26 @@ msgstr ""
 "pickle, що надходять із ненадійного джерела, може виконувати довільний код, "
 "якщо дані були створені кваліфікованим зловмисником."
 
-#: ../../tutorial/inputoutput.rst:299
+#: ../../tutorial/inputoutput.rst:301
 msgid "built-in function"
 msgstr ""
 
-#: ../../tutorial/inputoutput.rst:299
+#: ../../tutorial/inputoutput.rst:301
 msgid "open"
 msgstr "ВІДЧИНЕНО"
 
-#: ../../tutorial/inputoutput.rst:299
+#: ../../tutorial/inputoutput.rst:301
 msgid "object"
 msgstr "об'єкт"
 
-#: ../../tutorial/inputoutput.rst:299
+#: ../../tutorial/inputoutput.rst:301
 msgid "file"
 msgstr ""
 
-#: ../../tutorial/inputoutput.rst:481
+#: ../../tutorial/inputoutput.rst:483
 msgid "module"
 msgstr "модуль"
 
-#: ../../tutorial/inputoutput.rst:481
+#: ../../tutorial/inputoutput.rst:483
 msgid "json"
 msgstr "json"
