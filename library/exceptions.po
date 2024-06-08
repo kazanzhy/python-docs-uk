@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-24 14:15+0000\n"
+"POT-Creation-Date: 2024-06-07 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:05+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1438,12 +1438,13 @@ msgstr ""
 
 #: ../../library/exceptions.rst:992
 msgid ""
-"This method is used by :meth:`subgroup` and :meth:`split`. A subclass needs "
-"to override it in order to make :meth:`subgroup` and :meth:`split` return "
+"This method is used by :meth:`subgroup` and :meth:`split`, which are used in"
+" various contexts to break up an exception group. A subclass needs to "
+"override it in order to make :meth:`subgroup` and :meth:`split` return "
 "instances of the subclass rather than :exc:`ExceptionGroup`."
 msgstr ""
 
-#: ../../library/exceptions.rst:997
+#: ../../library/exceptions.rst:998
 msgid ""
 ":meth:`subgroup` and :meth:`split` copy the "
 ":attr:`~BaseException.__traceback__`, :attr:`~BaseException.__cause__`, "
@@ -1452,7 +1453,7 @@ msgid ""
 ":meth:`derive`, so these fields do not need to be updated by :meth:`derive`."
 msgstr ""
 
-#: ../../library/exceptions.rst:1030
+#: ../../library/exceptions.rst:1031
 msgid ""
 "Note that :exc:`BaseExceptionGroup` defines :meth:`~object.__new__`, so "
 "subclasses that need a different constructor signature need to override that"
@@ -1461,18 +1462,18 @@ msgid ""
 "group's message from it. ::"
 msgstr ""
 
-#: ../../library/exceptions.rst:1045
+#: ../../library/exceptions.rst:1046
 msgid ""
 "Like :exc:`ExceptionGroup`, any subclass of :exc:`BaseExceptionGroup` which "
 "is also a subclass of :exc:`Exception` can only wrap instances of "
 ":exc:`Exception`."
 msgstr ""
 
-#: ../../library/exceptions.rst:1053
+#: ../../library/exceptions.rst:1054
 msgid "Exception hierarchy"
 msgstr "Ієрархія винятків"
 
-#: ../../library/exceptions.rst:1055
+#: ../../library/exceptions.rst:1056
 msgid "The class hierarchy for built-in exceptions is:"
 msgstr "Ієрархія класів для вбудованих винятків така:"
 
