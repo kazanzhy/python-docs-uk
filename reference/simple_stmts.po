@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-07 14:15+0000\n"
+"POT-Creation-Date: 2024-06-20 06:40+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Taras Kuzyo <kuzyo.taras@gmail.com>, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -462,29 +462,24 @@ msgstr ""
 
 #: ../../reference/simple_stmts.rst:336
 msgid ""
-"For simple names as assignment targets, if in class or module scope, the "
-"annotations are evaluated and stored in a special class or module attribute "
-":attr:`__annotations__` that is a dictionary mapping from variable names "
-"(mangled if private) to evaluated annotations. This attribute is writable "
-"and is automatically created at the start of class or module body execution,"
-" if annotations are found statically."
+"The assignment target is considered \"simple\" if it consists of a single "
+"name that is not enclosed in parentheses. For simple assignment targets, if "
+"in class or module scope, the annotations are evaluated and stored in a "
+"special class or module attribute :attr:`__annotations__` that is a "
+"dictionary mapping from variable names (mangled if private) to evaluated "
+"annotations. This attribute is writable and is automatically created at the "
+"start of class or module body execution, if annotations are found "
+"statically."
 msgstr ""
-"Для простих імен як цілей призначення, якщо вони знаходяться в області класу"
-" або модуля, анотації оцінюються та зберігаються в спеціальному атрибуті "
-"класу або модуля :attr:`__annotations__`, який є словниковим відображенням "
-"імен змінних (спотворених, якщо приватні) до оцінюваних анотацій. Цей "
-"атрибут доступний для запису та автоматично створюється на початку виконання"
-" класу або тіла модуля, якщо анотації знайдено статично."
 
-#: ../../reference/simple_stmts.rst:344
+#: ../../reference/simple_stmts.rst:346
 msgid ""
-"For expressions as assignment targets, the annotations are evaluated if in "
-"class or module scope, but not stored."
+"If the assignment target is not simple (an attribute, subscript node, or "
+"parenthesized name), the annotation is evaluated if in class or module "
+"scope, but not stored."
 msgstr ""
-"Для виразів як цілей призначення анотації оцінюються, якщо вони знаходяться "
-"в області класу або модуля, але не зберігаються."
 
-#: ../../reference/simple_stmts.rst:347
+#: ../../reference/simple_stmts.rst:350
 msgid ""
 "If a name is annotated in a function scope, then this name is local for that"
 " scope. Annotations are never evaluated and stored in function scopes."
@@ -493,7 +488,7 @@ msgstr ""
 "цієї області. Анотації ніколи не оцінюються та зберігаються в областях "
 "функцій."
 
-#: ../../reference/simple_stmts.rst:350
+#: ../../reference/simple_stmts.rst:353
 msgid ""
 "If the right hand side is present, an annotated assignment performs the "
 "actual assignment before evaluating annotations (where applicable). If the "
@@ -502,11 +497,11 @@ msgid ""
 ":meth:`~object.__setitem__` or :meth:`~object.__setattr__` call."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:358
+#: ../../reference/simple_stmts.rst:361
 msgid ":pep:`526` - Syntax for Variable Annotations"
 msgstr ":pep:`526` - Синтаксис для анотацій змінних"
 
-#: ../../reference/simple_stmts.rst:359
+#: ../../reference/simple_stmts.rst:362
 msgid ""
 "The proposal that added syntax for annotating the types of variables "
 "(including class variables and instance variables), instead of expressing "
@@ -515,11 +510,11 @@ msgstr ""
 "Пропозиція, яка додала синтаксис для анотування типів змінних (включаючи "
 "змінні класу та змінні екземпляра), замість вираження їх через коментарі."
 
-#: ../../reference/simple_stmts.rst:363
+#: ../../reference/simple_stmts.rst:366
 msgid ":pep:`484` - Type hints"
 msgstr ":pep:`484` - Тип підказок"
 
-#: ../../reference/simple_stmts.rst:364
+#: ../../reference/simple_stmts.rst:367
 msgid ""
 "The proposal that added the :mod:`typing` module to provide a standard "
 "syntax for type annotations that can be used in static analysis tools and "
@@ -529,18 +524,18 @@ msgstr ""
 "синтаксис для анотацій типів, які можна використовувати в інструментах "
 "статичного аналізу та IDE."
 
-#: ../../reference/simple_stmts.rst:368
+#: ../../reference/simple_stmts.rst:371
 msgid ""
 "Now annotated assignments allow the same expressions in the right hand side "
 "as regular assignments. Previously, some expressions (like un-parenthesized "
 "tuple expressions) caused a syntax error."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:377
+#: ../../reference/simple_stmts.rst:380
 msgid "The :keyword:`!assert` statement"
 msgstr "Оператор :keyword:`!assert`"
 
-#: ../../reference/simple_stmts.rst:384
+#: ../../reference/simple_stmts.rst:387
 msgid ""
 "Assert statements are a convenient way to insert debugging assertions into a"
 " program:"
@@ -548,16 +543,16 @@ msgstr ""
 "Оператори Assert — це зручний спосіб вставити в програму твердження "
 "налагодження:"
 
-#: ../../reference/simple_stmts.rst:390
+#: ../../reference/simple_stmts.rst:393
 msgid "The simple form, ``assert expression``, is equivalent to ::"
 msgstr "Проста форма, ``assert expression``, еквівалентна ::"
 
-#: ../../reference/simple_stmts.rst:395
+#: ../../reference/simple_stmts.rst:398
 msgid ""
 "The extended form, ``assert expression1, expression2``, is equivalent to ::"
 msgstr "Розширена форма, ``assert expression1, expression2``, еквівалентна ::"
 
-#: ../../reference/simple_stmts.rst:404
+#: ../../reference/simple_stmts.rst:407
 msgid ""
 "These equivalences assume that :const:`__debug__` and :exc:`AssertionError` "
 "refer to the built-in variables with those names.  In the current "
@@ -578,7 +573,7 @@ msgstr ""
 "виконати, у повідомленні про помилку; він буде відображатися як частина "
 "трасування стека."
 
-#: ../../reference/simple_stmts.rst:413
+#: ../../reference/simple_stmts.rst:416
 msgid ""
 "Assignments to :const:`__debug__` are illegal.  The value for the built-in "
 "variable is determined when the interpreter starts."
@@ -586,11 +581,11 @@ msgstr ""
 "Присвоєння :const:`__debug__` є незаконним. Значення для вбудованої змінної "
 "визначається під час запуску інтерпретатора."
 
-#: ../../reference/simple_stmts.rst:420
+#: ../../reference/simple_stmts.rst:423
 msgid "The :keyword:`!pass` statement"
 msgstr "Оператор :keyword:`!pass`"
 
-#: ../../reference/simple_stmts.rst:430
+#: ../../reference/simple_stmts.rst:433
 msgid ""
 ":keyword:`pass` is a null operation --- when it is executed, nothing "
 "happens. It is useful as a placeholder when a statement is required "
@@ -600,11 +595,11 @@ msgstr ""
 "відбувається. Це корисно як заповнювач, коли оператор потрібний синтаксично,"
 " але не потрібно виконувати код, наприклад::"
 
-#: ../../reference/simple_stmts.rst:442
+#: ../../reference/simple_stmts.rst:445
 msgid "The :keyword:`!del` statement"
 msgstr "Оператор :keyword:`!del`"
 
-#: ../../reference/simple_stmts.rst:452
+#: ../../reference/simple_stmts.rst:455
 msgid ""
 "Deletion is recursively defined very similar to the way assignment is "
 "defined. Rather than spelling it out in full details, here are some hints."
@@ -612,13 +607,13 @@ msgstr ""
 "Видалення рекурсивно визначається дуже подібно до того, як визначається "
 "призначення. Замість того, щоб викладати все детально, ось кілька підказок."
 
-#: ../../reference/simple_stmts.rst:455
+#: ../../reference/simple_stmts.rst:458
 msgid ""
 "Deletion of a target list recursively deletes each target, from left to "
 "right."
 msgstr "Видалення списку цілей рекурсивно видаляє кожну ціль зліва направо."
 
-#: ../../reference/simple_stmts.rst:461
+#: ../../reference/simple_stmts.rst:464
 msgid ""
 "Deletion of a name removes the binding of that name from the local or global"
 " namespace, depending on whether the name occurs in a :keyword:`global` "
@@ -630,7 +625,7 @@ msgstr ""
 ":keyword:`global` у тому самому блоці коду. Якщо ім’я не зв’язане, буде "
 "викликано виняток :exc:`NameError`."
 
-#: ../../reference/simple_stmts.rst:468
+#: ../../reference/simple_stmts.rst:471
 msgid ""
 "Deletion of attribute references, subscriptions and slicings is passed to "
 "the primary object involved; deletion of a slicing is in general equivalent "
@@ -642,7 +637,7 @@ msgstr ""
 "присвоєнню порожньому фрагменту потрібного типу (але навіть це визначається "
 "об’єктом фрагмента)."
 
-#: ../../reference/simple_stmts.rst:473
+#: ../../reference/simple_stmts.rst:476
 msgid ""
 "Previously it was illegal to delete a name from the local namespace if it "
 "occurs as a free variable in a nested block."
@@ -650,11 +645,11 @@ msgstr ""
 "Раніше було заборонено видаляти ім’я з локального простору імен, якщо воно "
 "зустрічається як вільна змінна у вкладеному блоці."
 
-#: ../../reference/simple_stmts.rst:481
+#: ../../reference/simple_stmts.rst:484
 msgid "The :keyword:`!return` statement"
 msgstr "Оператор :keyword:`!return`"
 
-#: ../../reference/simple_stmts.rst:491
+#: ../../reference/simple_stmts.rst:494
 msgid ""
 ":keyword:`return` may only occur syntactically nested in a function "
 "definition, not within a nested class definition."
@@ -662,7 +657,7 @@ msgstr ""
 ":keyword:`return` може бути лише синтаксично вкладеним у визначення функції,"
 " а не у визначенні вкладеного класу."
 
-#: ../../reference/simple_stmts.rst:494
+#: ../../reference/simple_stmts.rst:497
 msgid ""
 "If an expression list is present, it is evaluated, else ``None`` is "
 "substituted."
@@ -670,7 +665,7 @@ msgstr ""
 "Якщо присутній список виразів, він обчислюється, інакше замінюється "
 "``None``."
 
-#: ../../reference/simple_stmts.rst:496
+#: ../../reference/simple_stmts.rst:499
 msgid ""
 ":keyword:`return` leaves the current function call with the expression list "
 "(or ``None``) as return value."
@@ -678,7 +673,7 @@ msgstr ""
 ":keyword:`return` залишає поточний виклик функції зі списком виразів (або "
 "``None``) як значення повернення."
 
-#: ../../reference/simple_stmts.rst:501
+#: ../../reference/simple_stmts.rst:504
 msgid ""
 "When :keyword:`return` passes control out of a :keyword:`try` statement with"
 " a :keyword:`finally` clause, that :keyword:`!finally` clause is executed "
@@ -688,7 +683,7 @@ msgstr ""
 "пропозицією :keyword:`finally`, ця пропозиція :keyword:`!finally` "
 "виконується перед фактичним виходом із функції."
 
-#: ../../reference/simple_stmts.rst:505
+#: ../../reference/simple_stmts.rst:508
 msgid ""
 "In a generator function, the :keyword:`return` statement indicates that the "
 "generator is done and will cause :exc:`StopIteration` to be raised. The "
@@ -700,7 +695,7 @@ msgstr ""
 "наявності) використовується як аргумент для створення :exc:`StopIteration` і"
 " стає атрибутом :attr:`StopIteration.value`."
 
-#: ../../reference/simple_stmts.rst:510
+#: ../../reference/simple_stmts.rst:513
 msgid ""
 "In an asynchronous generator function, an empty :keyword:`return` statement "
 "indicates that the asynchronous generator is done and will cause "
@@ -712,11 +707,11 @@ msgstr ""
 ":exc:`StopAsyncIteration`. Непорожній оператор :keyword:`!return` є "
 "синтаксичною помилкою у функції асинхронного генератора."
 
-#: ../../reference/simple_stmts.rst:518
+#: ../../reference/simple_stmts.rst:521
 msgid "The :keyword:`!yield` statement"
 msgstr "Оператор :keyword:`!yield`"
 
-#: ../../reference/simple_stmts.rst:530
+#: ../../reference/simple_stmts.rst:533
 msgid ""
 "A :keyword:`yield` statement is semantically equivalent to a :ref:`yield "
 "expression <yieldexpr>`. The yield statement can be used to omit the "
@@ -728,11 +723,11 @@ msgstr ""
 "в іншому випадку були б потрібні в еквівалентному операторі виразу yield. "
 "Наприклад, оператори yield::"
 
-#: ../../reference/simple_stmts.rst:538
+#: ../../reference/simple_stmts.rst:541
 msgid "are equivalent to the yield expression statements ::"
 msgstr "еквівалентні операторам виразу yield ::"
 
-#: ../../reference/simple_stmts.rst:543
+#: ../../reference/simple_stmts.rst:546
 msgid ""
 "Yield expressions and statements are only used when defining a "
 ":term:`generator` function, and are only used in the body of the generator "
@@ -744,7 +739,7 @@ msgstr ""
 "визначенні функції достатньо, щоб це визначення створювало функцію-генератор"
 " замість звичайної функції."
 
-#: ../../reference/simple_stmts.rst:548
+#: ../../reference/simple_stmts.rst:551
 msgid ""
 "For full details of :keyword:`yield` semantics, refer to the "
 ":ref:`yieldexpr` section."
@@ -752,11 +747,11 @@ msgstr ""
 "Щоб отримати повну інформацію про семантику :keyword:`yield`, зверніться до "
 "розділу :ref:`yieldexpr`."
 
-#: ../../reference/simple_stmts.rst:554
+#: ../../reference/simple_stmts.rst:557
 msgid "The :keyword:`!raise` statement"
 msgstr "Оператор :keyword:`!raise`"
 
-#: ../../reference/simple_stmts.rst:565
+#: ../../reference/simple_stmts.rst:568
 msgid ""
 "If no expressions are present, :keyword:`raise` re-raises the exception that"
 " is currently being handled, which is also known as the *active exception*. "
@@ -768,7 +763,7 @@ msgstr ""
 "активного винятку, виникає виняток :exc:`RuntimeError`, який вказує на те, "
 "що це помилка."
 
-#: ../../reference/simple_stmts.rst:570
+#: ../../reference/simple_stmts.rst:573
 msgid ""
 "Otherwise, :keyword:`raise` evaluates the first expression as the exception "
 "object.  It must be either a subclass or an instance of "
@@ -780,7 +775,7 @@ msgstr ""
 " екземпляр винятку буде отримано за потреби шляхом створення екземпляра "
 "класу без аргументів."
 
-#: ../../reference/simple_stmts.rst:575
+#: ../../reference/simple_stmts.rst:578
 msgid ""
 "The :dfn:`type` of the exception is the exception instance's class, the "
 ":dfn:`value` is the instance itself."
@@ -788,7 +783,7 @@ msgstr ""
 ":dfn:`type` винятку — це клас екземпляра винятку, :dfn:`value` — це сам "
 "екземпляр."
 
-#: ../../reference/simple_stmts.rst:580
+#: ../../reference/simple_stmts.rst:583
 msgid ""
 "A traceback object is normally created automatically when an exception is "
 "raised and attached to it as the :attr:`~BaseException.__traceback__` "
@@ -798,7 +793,7 @@ msgid ""
 "argument), like so::"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:592
+#: ../../reference/simple_stmts.rst:595
 msgid ""
 "The ``from`` clause is used for exception chaining: if given, the second "
 "*expression* must be another exception class or instance. If the second "
@@ -810,7 +805,7 @@ msgid ""
 "exception is not handled, both exceptions will be printed:"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:621
+#: ../../reference/simple_stmts.rst:624
 msgid ""
 "A similar mechanism works implicitly if a new exception is raised when an "
 "exception is already being handled.  An exception may be handled when an "
@@ -819,13 +814,13 @@ msgid ""
 "exception's :attr:`~BaseException.__context__` attribute:"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:647
+#: ../../reference/simple_stmts.rst:650
 msgid ""
 "Exception chaining can be explicitly suppressed by specifying :const:`None` "
 "in the ``from`` clause:"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:661
+#: ../../reference/simple_stmts.rst:664
 msgid ""
 "Additional information on exceptions can be found in section "
 ":ref:`exceptions`, and information about handling exceptions is in section "
@@ -834,17 +829,17 @@ msgstr ""
 "Додаткову інформацію про винятки можна знайти в розділі :ref:`exceptions`, а"
 " інформацію про обробку винятків — у розділі :ref:`try`."
 
-#: ../../reference/simple_stmts.rst:664
+#: ../../reference/simple_stmts.rst:667
 msgid ":const:`None` is now permitted as ``Y`` in ``raise X from Y``."
 msgstr ":const:`None` тепер дозволено як ``Y`` у ``raise X from Y``."
 
-#: ../../reference/simple_stmts.rst:667
+#: ../../reference/simple_stmts.rst:670
 msgid ""
 "Added the :attr:`~BaseException.__suppress_context__` attribute to suppress "
 "automatic display of the exception context."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:670
+#: ../../reference/simple_stmts.rst:673
 msgid ""
 "If the traceback of the active exception is modified in an :keyword:`except`"
 " clause, a subsequent ``raise`` statement re-raises the exception with the "
@@ -852,11 +847,11 @@ msgid ""
 "traceback it had when it was caught."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:679
+#: ../../reference/simple_stmts.rst:682
 msgid "The :keyword:`!break` statement"
 msgstr "Оператор :keyword:`!break`"
 
-#: ../../reference/simple_stmts.rst:690
+#: ../../reference/simple_stmts.rst:693
 msgid ""
 ":keyword:`break` may only occur syntactically nested in a :keyword:`for` or "
 ":keyword:`while` loop, but not nested in a function or class definition "
@@ -866,7 +861,7 @@ msgstr ""
 " або :keyword:`while`, але не вкладеним у визначення функції чи класу в "
 "цьому циклі."
 
-#: ../../reference/simple_stmts.rst:697
+#: ../../reference/simple_stmts.rst:700
 msgid ""
 "It terminates the nearest enclosing loop, skipping the optional "
 ":keyword:`!else` clause if the loop has one."
@@ -874,7 +869,7 @@ msgstr ""
 "Він завершує найближчий охоплюючий цикл, пропускаючи необов’язкову "
 "пропозицію :keyword:`!else`, якщо вона є в циклі."
 
-#: ../../reference/simple_stmts.rst:700
+#: ../../reference/simple_stmts.rst:703
 msgid ""
 "If a :keyword:`for` loop is terminated by :keyword:`break`, the loop control"
 " target keeps its current value."
@@ -882,7 +877,7 @@ msgstr ""
 "Якщо цикл :keyword:`for` завершується :keyword:`break`, мета керування "
 "циклом зберігає своє поточне значення."
 
-#: ../../reference/simple_stmts.rst:705
+#: ../../reference/simple_stmts.rst:708
 msgid ""
 "When :keyword:`break` passes control out of a :keyword:`try` statement with "
 "a :keyword:`finally` clause, that :keyword:`!finally` clause is executed "
@@ -892,11 +887,11 @@ msgstr ""
 "пропозицією :keyword:`finally`, ця пропозиція :keyword:`!finally` "
 "виконується перед тим, як фактично вийти з циклу."
 
-#: ../../reference/simple_stmts.rst:713
+#: ../../reference/simple_stmts.rst:716
 msgid "The :keyword:`!continue` statement"
 msgstr "Оператор :keyword:`!continue`"
 
-#: ../../reference/simple_stmts.rst:725
+#: ../../reference/simple_stmts.rst:728
 msgid ""
 ":keyword:`continue` may only occur syntactically nested in a :keyword:`for` "
 "or :keyword:`while` loop, but not nested in a function or class definition "
@@ -908,7 +903,7 @@ msgstr ""
 "чи класу в цьому циклі. Він продовжується наступним циклом найближчого "
 "охоплюючого циклу."
 
-#: ../../reference/simple_stmts.rst:729
+#: ../../reference/simple_stmts.rst:732
 msgid ""
 "When :keyword:`continue` passes control out of a :keyword:`try` statement "
 "with a :keyword:`finally` clause, that :keyword:`!finally` clause is "
@@ -918,11 +913,11 @@ msgstr ""
 "пропозицією :keyword:`finally`, ця пропозиція :keyword:`!finally` "
 "виконується перед тим, як справді розпочнеться наступний цикл циклу."
 
-#: ../../reference/simple_stmts.rst:738
+#: ../../reference/simple_stmts.rst:741
 msgid "The :keyword:`!import` statement"
 msgstr "Оператор :keyword:`!import`"
 
-#: ../../reference/simple_stmts.rst:759
+#: ../../reference/simple_stmts.rst:762
 msgid ""
 "The basic import statement (no :keyword:`from` clause) is executed in two "
 "steps:"
@@ -930,11 +925,11 @@ msgstr ""
 "Базовий оператор імпорту (без пропозиції :keyword:`from`) виконується у два "
 "кроки:"
 
-#: ../../reference/simple_stmts.rst:762
+#: ../../reference/simple_stmts.rst:765
 msgid "find a module, loading and initializing it if necessary"
 msgstr "знайти модуль, завантаживши та ініціалізувавши його, якщо необхідно"
 
-#: ../../reference/simple_stmts.rst:763
+#: ../../reference/simple_stmts.rst:766
 msgid ""
 "define a name or names in the local namespace for the scope where the "
 ":keyword:`import` statement occurs."
@@ -942,7 +937,7 @@ msgstr ""
 "визначте ім’я або імена в локальному просторі імен для області, де виникає "
 "оператор :keyword:`import`."
 
-#: ../../reference/simple_stmts.rst:766
+#: ../../reference/simple_stmts.rst:769
 msgid ""
 "When the statement contains multiple clauses (separated by commas) the two "
 "steps are carried out separately for each clause, just as though the clauses"
@@ -952,7 +947,7 @@ msgstr ""
 "виконуються окремо для кожного пункту, так само, як якщо б пункти були "
 "розділені на окремі оператори імпорту."
 
-#: ../../reference/simple_stmts.rst:771
+#: ../../reference/simple_stmts.rst:774
 msgid ""
 "The details of the first step, finding and loading modules, are described in"
 " greater detail in the section on the :ref:`import system <importsystem>`, "
@@ -963,7 +958,7 @@ msgid ""
 "module, which includes execution of the module's code."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:779
+#: ../../reference/simple_stmts.rst:782
 msgid ""
 "If the requested module is retrieved successfully, it will be made available"
 " in the local namespace in one of three ways:"
@@ -971,7 +966,7 @@ msgstr ""
 "Якщо запитуваний модуль успішно отримано, він стане доступним у локальному "
 "просторі імен одним із трьох способів:"
 
-#: ../../reference/simple_stmts.rst:784
+#: ../../reference/simple_stmts.rst:787
 msgid ""
 "If the module name is followed by :keyword:`!as`, then the name following "
 ":keyword:`!as` is bound directly to the imported module."
@@ -979,7 +974,7 @@ msgstr ""
 "Якщо ім’я модуля супроводжується :keyword:`!as`, тоді ім’я після "
 ":keyword:`!as` прив’язується безпосередньо до імпортованого модуля."
 
-#: ../../reference/simple_stmts.rst:786
+#: ../../reference/simple_stmts.rst:789
 msgid ""
 "If no other name is specified, and the module being imported is a top level "
 "module, the module's name is bound in the local namespace as a reference to "
@@ -989,7 +984,7 @@ msgstr ""
 "ім’я модуля зв’язується в локальному просторі імен як посилання на "
 "імпортований модуль"
 
-#: ../../reference/simple_stmts.rst:789
+#: ../../reference/simple_stmts.rst:792
 msgid ""
 "If the module being imported is *not* a top level module, then the name of "
 "the top level package that contains the module is bound in the local "
@@ -1002,11 +997,11 @@ msgstr ""
 "потрібно отримати, використовуючи його повне кваліфіковане ім’я, а не "
 "безпосередньо"
 
-#: ../../reference/simple_stmts.rst:799
+#: ../../reference/simple_stmts.rst:802
 msgid "The :keyword:`from` form uses a slightly more complex process:"
 msgstr "Форма :keyword:`from` використовує дещо складніший процес:"
 
-#: ../../reference/simple_stmts.rst:801
+#: ../../reference/simple_stmts.rst:804
 msgid ""
 "find the module specified in the :keyword:`from` clause, loading and "
 "initializing it if necessary;"
@@ -1014,16 +1009,16 @@ msgstr ""
 "знайти модуль, указаний у пункті :keyword:`from`, завантажуючи та "
 "ініціалізуючи його, якщо необхідно;"
 
-#: ../../reference/simple_stmts.rst:803
+#: ../../reference/simple_stmts.rst:806
 msgid ""
 "for each of the identifiers specified in the :keyword:`import` clauses:"
 msgstr "для кожного з ідентифікаторів, указаних у пунктах :keyword:`import`:"
 
-#: ../../reference/simple_stmts.rst:805
+#: ../../reference/simple_stmts.rst:808
 msgid "check if the imported module has an attribute by that name"
 msgstr "перевірте, чи імпортований модуль має атрибут із таким іменем"
 
-#: ../../reference/simple_stmts.rst:806
+#: ../../reference/simple_stmts.rst:809
 msgid ""
 "if not, attempt to import a submodule with that name and then check the "
 "imported module again for that attribute"
@@ -1031,11 +1026,11 @@ msgstr ""
 "якщо ні, спробуйте імпортувати підмодуль із такою назвою, а потім знову "
 "перевірте імпортований модуль на наявність цього атрибута"
 
-#: ../../reference/simple_stmts.rst:808
+#: ../../reference/simple_stmts.rst:811
 msgid "if the attribute is not found, :exc:`ImportError` is raised."
 msgstr "якщо атрибут не знайдено, виникає :exc:`ImportError`."
 
-#: ../../reference/simple_stmts.rst:809
+#: ../../reference/simple_stmts.rst:812
 msgid ""
 "otherwise, a reference to that value is stored in the local namespace, using"
 " the name in the :keyword:`!as` clause if it is present, otherwise using the"
@@ -1045,11 +1040,11 @@ msgstr ""
 "використовуючи ім’я в реченні :keyword:`!as`, якщо воно присутнє, інакше "
 "використовується ім’я атрибута"
 
-#: ../../reference/simple_stmts.rst:813
+#: ../../reference/simple_stmts.rst:816
 msgid "Examples::"
 msgstr "Приклади::"
 
-#: ../../reference/simple_stmts.rst:823
+#: ../../reference/simple_stmts.rst:826
 msgid ""
 "If the list of identifiers is replaced by a star (``'*'``), all public names"
 " defined in the module are bound in the local namespace for the scope where "
@@ -1059,7 +1054,7 @@ msgstr ""
 "загальнодоступні імена, визначені в модулі, прив’язуються до локального "
 "простору імен для області, де виникає оператор :keyword:`import`."
 
-#: ../../reference/simple_stmts.rst:829
+#: ../../reference/simple_stmts.rst:832
 msgid ""
 "The *public names* defined by a module are determined by checking the "
 "module's namespace for a variable named ``__all__``; if defined, it must be "
@@ -1083,7 +1078,7 @@ msgstr ""
 "частиною API (наприклад, бібліотечних модулів, які були імпортовані та "
 "використані в модулі)."
 
-#: ../../reference/simple_stmts.rst:839
+#: ../../reference/simple_stmts.rst:842
 msgid ""
 "The wild card form of import --- ``from module import *`` --- is only "
 "allowed at the module level.  Attempting to use it in class or function "
@@ -1093,7 +1088,7 @@ msgstr ""
 "дозволена лише на рівні модуля. Спроба використати його у визначеннях класу "
 "чи функції викличе :exc:`SyntaxError`."
 
-#: ../../reference/simple_stmts.rst:846
+#: ../../reference/simple_stmts.rst:849
 msgid ""
 "When specifying what module to import you do not have to specify the "
 "absolute name of the module. When a module or package is contained within "
@@ -1122,7 +1117,7 @@ msgstr ""
 "import mod`` з ``pkg.subpkg1``, ви імпортуєте ``pkg.subpkg2.mod``. "
 "Специфікація відносного імпорту міститься в розділі :ref:`relativeimports`."
 
-#: ../../reference/simple_stmts.rst:860
+#: ../../reference/simple_stmts.rst:863
 msgid ""
 ":func:`importlib.import_module` is provided to support applications that "
 "determine dynamically the modules to be loaded."
@@ -1130,7 +1125,7 @@ msgstr ""
 ":func:`importlib.import_module` надається для підтримки програм, які "
 "динамічно визначають модулі для завантаження."
 
-#: ../../reference/simple_stmts.rst:863
+#: ../../reference/simple_stmts.rst:866
 msgid ""
 "Raises an :ref:`auditing event <auditing>` ``import`` with arguments "
 "``module``, ``filename``, ``sys.path``, ``sys.meta_path``, "
@@ -1139,11 +1134,11 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``import`` з аргументами ``module``,"
 " ``filename``, ``sys.path``, ``sys.meta_path``, ``sys.path_hooks``."
 
-#: ../../reference/simple_stmts.rst:868
+#: ../../reference/simple_stmts.rst:871
 msgid "Future statements"
 msgstr "Майбутні заяви"
 
-#: ../../reference/simple_stmts.rst:874
+#: ../../reference/simple_stmts.rst:877
 msgid ""
 "A :dfn:`future statement` is a directive to the compiler that a particular "
 "module should be compiled using syntax or semantics that will be available "
@@ -1154,7 +1149,7 @@ msgstr ""
 "доступні у визначеному майбутньому випуску Python, де ця функція стане "
 "стандартною."
 
-#: ../../reference/simple_stmts.rst:878
+#: ../../reference/simple_stmts.rst:881
 msgid ""
 "The future statement is intended to ease migration to future versions of "
 "Python that introduce incompatible changes to the language.  It allows use "
@@ -1166,7 +1161,7 @@ msgstr ""
 " функції окремо для кожного модуля до випуску, у якому ця функція стане "
 "стандартною."
 
-#: ../../reference/simple_stmts.rst:890
+#: ../../reference/simple_stmts.rst:893
 msgid ""
 "A future statement must appear near the top of the module.  The only lines "
 "that can appear before a future statement are:"
@@ -1174,23 +1169,23 @@ msgstr ""
 "У верхній частині модуля має бути майбутня заява. Єдині рядки, які можуть "
 "відображатися перед майбутнім оператором:"
 
-#: ../../reference/simple_stmts.rst:893
+#: ../../reference/simple_stmts.rst:896
 msgid "the module docstring (if any),"
 msgstr "рядок документації модуля (якщо є),"
 
-#: ../../reference/simple_stmts.rst:894
+#: ../../reference/simple_stmts.rst:897
 msgid "comments,"
 msgstr "коментарі,"
 
-#: ../../reference/simple_stmts.rst:895
+#: ../../reference/simple_stmts.rst:898
 msgid "blank lines, and"
 msgstr "порожні рядки та"
 
-#: ../../reference/simple_stmts.rst:896
+#: ../../reference/simple_stmts.rst:899
 msgid "other future statements."
 msgstr "інші майбутні заяви."
 
-#: ../../reference/simple_stmts.rst:898
+#: ../../reference/simple_stmts.rst:901
 msgid ""
 "The only feature that requires using the future statement is ``annotations``"
 " (see :pep:`563`)."
@@ -1198,7 +1193,7 @@ msgstr ""
 "Єдина функція, яка вимагає використання оператора future, це ``анотації`` "
 "(див. :pep:`563`)."
 
-#: ../../reference/simple_stmts.rst:901
+#: ../../reference/simple_stmts.rst:904
 msgid ""
 "All historical features enabled by the future statement are still recognized"
 " by Python 3.  The list includes ``absolute_import``, ``division``, "
@@ -1213,7 +1208,7 @@ msgstr ""
 "``nested_scopes`` і ``with_statement``. Усі вони зайві, оскільки завжди "
 "ввімкнені та зберігаються лише для зворотної сумісності."
 
-#: ../../reference/simple_stmts.rst:908
+#: ../../reference/simple_stmts.rst:911
 msgid ""
 "A future statement is recognized and treated specially at compile time: "
 "Changes to the semantics of core constructs are often implemented by "
@@ -1229,7 +1224,7 @@ msgstr ""
 "в цьому випадку компілятору може знадобитися розібрати модуль по-іншому. "
 "Такі рішення не можуть бути відкладені до часу виконання."
 
-#: ../../reference/simple_stmts.rst:915
+#: ../../reference/simple_stmts.rst:918
 msgid ""
 "For any given release, the compiler knows which feature names have been "
 "defined, and raises a compile-time error if a future statement contains a "
@@ -1239,7 +1234,7 @@ msgstr ""
 "визначені, і викликає помилку під час компіляції, якщо майбутній оператор "
 "містить функцію, яка йому невідома."
 
-#: ../../reference/simple_stmts.rst:919
+#: ../../reference/simple_stmts.rst:922
 msgid ""
 "The direct runtime semantics are the same as for any import statement: there"
 " is a standard module :mod:`__future__`, described later, and it will be "
@@ -1249,7 +1244,7 @@ msgstr ""
 "імпорту: є стандартний модуль :mod:`__future__`, описаний пізніше, і його "
 "буде імпортовано звичайним способом під час виконання оператора майбутнього."
 
-#: ../../reference/simple_stmts.rst:923
+#: ../../reference/simple_stmts.rst:926
 msgid ""
 "The interesting runtime semantics depend on the specific feature enabled by "
 "the future statement."
@@ -1257,11 +1252,11 @@ msgstr ""
 "Цікава семантика часу виконання залежить від конкретної функції, увімкненої "
 "майбутнім оператором."
 
-#: ../../reference/simple_stmts.rst:926
+#: ../../reference/simple_stmts.rst:929
 msgid "Note that there is nothing special about the statement::"
 msgstr "Зауважте, що в заяві немає нічого особливого::"
 
-#: ../../reference/simple_stmts.rst:930
+#: ../../reference/simple_stmts.rst:933
 msgid ""
 "That is not a future statement; it's an ordinary import statement with no "
 "special semantics or syntax restrictions."
@@ -1269,7 +1264,7 @@ msgstr ""
 "Це не заява про майбутнє; це звичайний оператор імпорту без спеціальних "
 "семантичних або синтаксичних обмежень."
 
-#: ../../reference/simple_stmts.rst:933
+#: ../../reference/simple_stmts.rst:936
 msgid ""
 "Code compiled by calls to the built-in functions :func:`exec` and "
 ":func:`compile` that occur in a module :mod:`!M` containing a future "
@@ -1278,7 +1273,7 @@ msgid ""
 ":func:`compile` --- see the documentation of that function for details."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:939
+#: ../../reference/simple_stmts.rst:942
 msgid ""
 "A future statement typed at an interactive interpreter prompt will take "
 "effect for the rest of the interpreter session.  If an interpreter is "
@@ -1292,19 +1287,19 @@ msgstr ""
 "сценарій містить майбутній оператор, він діятиме в інтерактивному сеансі, "
 "розпочатому після виконання сценарію."
 
-#: ../../reference/simple_stmts.rst:947
+#: ../../reference/simple_stmts.rst:950
 msgid ":pep:`236` - Back to the __future__"
 msgstr ":pep:`236` - Назад у __future__"
 
-#: ../../reference/simple_stmts.rst:948
+#: ../../reference/simple_stmts.rst:951
 msgid "The original proposal for the __future__ mechanism."
 msgstr "Оригінальна пропозиція щодо механізму __future__."
 
-#: ../../reference/simple_stmts.rst:954
+#: ../../reference/simple_stmts.rst:957
 msgid "The :keyword:`!global` statement"
 msgstr "Оператор :keyword:`!global`"
 
-#: ../../reference/simple_stmts.rst:964
+#: ../../reference/simple_stmts.rst:967
 msgid ""
 "The :keyword:`global` statement is a declaration which holds for the entire "
 "current code block.  It means that the listed identifiers are to be "
@@ -1318,7 +1313,7 @@ msgstr ""
 "без :keyword:`!global`, хоча вільні змінні можуть посилатися на глобальні, "
 "не будучи оголошеними глобальними."
 
-#: ../../reference/simple_stmts.rst:970
+#: ../../reference/simple_stmts.rst:973
 msgid ""
 "Names listed in a :keyword:`global` statement must not be used in the same "
 "code block textually preceding that :keyword:`!global` statement."
@@ -1326,7 +1321,7 @@ msgstr ""
 "Імена, перелічені в операторі :keyword:`global`, не можна використовувати в "
 "тому самому блоці коду, що текстово передує оператору :keyword:`!global`."
 
-#: ../../reference/simple_stmts.rst:973
+#: ../../reference/simple_stmts.rst:976
 msgid ""
 "Names listed in a :keyword:`global` statement must not be defined as formal "
 "parameters, or as targets in :keyword:`with` statements or :keyword:`except`"
@@ -1339,7 +1334,7 @@ msgstr ""
 ":keyword:`class`, визначення функції, оператор :keyword:`import` або "
 "анотація змінної."
 
-#: ../../reference/simple_stmts.rst:980
+#: ../../reference/simple_stmts.rst:983
 msgid ""
 "The current implementation does not enforce some of these restrictions, but "
 "programs should not abuse this freedom, as future implementations may "
@@ -1349,7 +1344,7 @@ msgstr ""
 "програми не повинні зловживати цією свободою, оскільки майбутні реалізації "
 "можуть посилити їх дотримання або мовчки змінити значення програми."
 
-#: ../../reference/simple_stmts.rst:989
+#: ../../reference/simple_stmts.rst:992
 msgid ""
 "**Programmer's note:** :keyword:`global` is a directive to the parser.  It "
 "applies only to code parsed at the same time as the :keyword:`!global` "
@@ -1368,11 +1363,11 @@ msgstr ""
 "таких на рядок не впливають оператори :keyword:`!global` у коді, що містить "
 "виклик функції. Те саме стосується функцій :func:`eval` і :func:`compile`."
 
-#: ../../reference/simple_stmts.rst:1001
+#: ../../reference/simple_stmts.rst:1004
 msgid "The :keyword:`!nonlocal` statement"
 msgstr "Оператор :keyword:`!nonlocal`"
 
-#: ../../reference/simple_stmts.rst:1009
+#: ../../reference/simple_stmts.rst:1012
 msgid ""
 "When the definition of a function or class is nested (enclosed) within the "
 "definitions of other functions, its nonlocal scopes are the local scopes of "
@@ -1384,53 +1379,53 @@ msgid ""
 " :exc:`SyntaxError` is raised."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1018
+#: ../../reference/simple_stmts.rst:1021
 msgid ""
 "The nonlocal statement applies to the entire scope of a function or class "
 "body. A :exc:`SyntaxError` is raised if a variable is used or assigned to "
 "prior to its nonlocal declaration in the scope."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1024
+#: ../../reference/simple_stmts.rst:1027
 msgid ":pep:`3104` - Access to Names in Outer Scopes"
 msgstr ":pep:`3104` - Доступ до імен у зовнішніх областях"
 
-#: ../../reference/simple_stmts.rst:1025
+#: ../../reference/simple_stmts.rst:1028
 msgid "The specification for the :keyword:`nonlocal` statement."
 msgstr "Специфікація оператора :keyword:`nonlocal`."
 
-#: ../../reference/simple_stmts.rst:1027
+#: ../../reference/simple_stmts.rst:1030
 msgid ""
 "**Programmer's note:** :keyword:`nonlocal` is a directive to the parser and "
 "applies only to code parsed along with it.  See the note for the "
 ":keyword:`global` statement."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1035
+#: ../../reference/simple_stmts.rst:1038
 msgid "The :keyword:`!type` statement"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1042
+#: ../../reference/simple_stmts.rst:1045
 msgid ""
 "The :keyword:`!type` statement declares a type alias, which is an instance "
 "of :class:`typing.TypeAliasType`."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1045
+#: ../../reference/simple_stmts.rst:1048
 msgid "For example, the following statement creates a type alias::"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1049
+#: ../../reference/simple_stmts.rst:1052
 msgid "This code is roughly equivalent to::"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1055
+#: ../../reference/simple_stmts.rst:1058
 msgid ""
 "``annotation-def`` indicates an :ref:`annotation scope <annotation-scopes>`,"
 " which behaves mostly like a function, but with several small differences."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1058
+#: ../../reference/simple_stmts.rst:1061
 msgid ""
 "The value of the type alias is evaluated in the annotation scope. It is not "
 "evaluated when the type alias is created, but only when the value is "
@@ -1439,21 +1434,21 @@ msgid ""
 "are not yet defined."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1064
+#: ../../reference/simple_stmts.rst:1067
 msgid ""
 "Type aliases may be made generic by adding a :ref:`type parameter list "
 "<type-params>` after the name. See :ref:`generic-type-aliases` for more."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1067
+#: ../../reference/simple_stmts.rst:1070
 msgid ":keyword:`!type` is a :ref:`soft keyword <soft-keywords>`."
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1073
+#: ../../reference/simple_stmts.rst:1076
 msgid ":pep:`695` - Type Parameter Syntax"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1074
+#: ../../reference/simple_stmts.rst:1077
 msgid ""
 "Introduced the :keyword:`!type` statement and syntax for generic classes and"
 " functions."
@@ -1465,14 +1460,14 @@ msgstr ""
 
 #: ../../reference/simple_stmts.rst:8 ../../reference/simple_stmts.rst:39
 #: ../../reference/simple_stmts.rst:75 ../../reference/simple_stmts.rst:263
-#: ../../reference/simple_stmts.rst:322 ../../reference/simple_stmts.rst:379
-#: ../../reference/simple_stmts.rst:422 ../../reference/simple_stmts.rst:444
-#: ../../reference/simple_stmts.rst:457 ../../reference/simple_stmts.rst:483
-#: ../../reference/simple_stmts.rst:520 ../../reference/simple_stmts.rst:556
-#: ../../reference/simple_stmts.rst:681 ../../reference/simple_stmts.rst:715
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:870
-#: ../../reference/simple_stmts.rst:956 ../../reference/simple_stmts.rst:1003
-#: ../../reference/simple_stmts.rst:1037
+#: ../../reference/simple_stmts.rst:322 ../../reference/simple_stmts.rst:382
+#: ../../reference/simple_stmts.rst:425 ../../reference/simple_stmts.rst:447
+#: ../../reference/simple_stmts.rst:460 ../../reference/simple_stmts.rst:486
+#: ../../reference/simple_stmts.rst:523 ../../reference/simple_stmts.rst:559
+#: ../../reference/simple_stmts.rst:684 ../../reference/simple_stmts.rst:718
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:873
+#: ../../reference/simple_stmts.rst:959 ../../reference/simple_stmts.rst:1006
+#: ../../reference/simple_stmts.rst:1040
 msgid "statement"
 msgstr "заява"
 
@@ -1482,11 +1477,11 @@ msgstr "вираз"
 
 #: ../../reference/simple_stmts.rst:39 ../../reference/simple_stmts.rst:42
 #: ../../reference/simple_stmts.rst:105 ../../reference/simple_stmts.rst:116
-#: ../../reference/simple_stmts.rst:196 ../../reference/simple_stmts.rst:444
+#: ../../reference/simple_stmts.rst:196 ../../reference/simple_stmts.rst:447
 msgid "list"
 msgstr "список"
 
-#: ../../reference/simple_stmts.rst:56 ../../reference/simple_stmts.rst:984
+#: ../../reference/simple_stmts.rst:56 ../../reference/simple_stmts.rst:987
 msgid "built-in function"
 msgstr ""
 
@@ -1496,7 +1491,7 @@ msgstr "репр"
 
 #: ../../reference/simple_stmts.rst:56 ../../reference/simple_stmts.rst:75
 #: ../../reference/simple_stmts.rst:187 ../../reference/simple_stmts.rst:196
-#: ../../reference/simple_stmts.rst:207 ../../reference/simple_stmts.rst:578
+#: ../../reference/simple_stmts.rst:207 ../../reference/simple_stmts.rst:581
 msgid "object"
 msgstr "об'єкт"
 
@@ -1551,14 +1546,14 @@ msgstr ""
 msgid "assignment"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:75 ../../reference/simple_stmts.rst:740
-#: ../../reference/simple_stmts.rst:795 ../../reference/simple_stmts.rst:956
+#: ../../reference/simple_stmts.rst:75 ../../reference/simple_stmts.rst:743
+#: ../../reference/simple_stmts.rst:798 ../../reference/simple_stmts.rst:959
 msgid "binding"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:75 ../../reference/simple_stmts.rst:457
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:795
-#: ../../reference/simple_stmts.rst:956
+#: ../../reference/simple_stmts.rst:75 ../../reference/simple_stmts.rst:460
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:798
+#: ../../reference/simple_stmts.rst:959
 msgid "name"
 msgstr "name"
 
@@ -1571,18 +1566,18 @@ msgid "mutable"
 msgstr "мінливий"
 
 #: ../../reference/simple_stmts.rst:75 ../../reference/simple_stmts.rst:159
-#: ../../reference/simple_stmts.rst:466
+#: ../../reference/simple_stmts.rst:469
 msgid "attribute"
 msgstr "атрибут"
 
 #: ../../reference/simple_stmts.rst:105 ../../reference/simple_stmts.rst:116
-#: ../../reference/simple_stmts.rst:444 ../../reference/simple_stmts.rst:694
+#: ../../reference/simple_stmts.rst:447 ../../reference/simple_stmts.rst:697
 msgid "target"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:116 ../../reference/simple_stmts.rst:379
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:956
-#: ../../reference/simple_stmts.rst:1003
+#: ../../reference/simple_stmts.rst:116 ../../reference/simple_stmts.rst:382
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:959
+#: ../../reference/simple_stmts.rst:1006
 msgid ", (comma)"
 msgstr ""
 
@@ -1590,7 +1585,7 @@ msgstr ""
 msgid "in target list"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:116 ../../reference/simple_stmts.rst:821
+#: ../../reference/simple_stmts.rst:116 ../../reference/simple_stmts.rst:824
 msgid "* (asterisk)"
 msgstr ""
 
@@ -1706,232 +1701,232 @@ msgstr ""
 msgid "annotated variable"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:379
+#: ../../reference/simple_stmts.rst:382
 msgid "assert"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:379
+#: ../../reference/simple_stmts.rst:382
 msgid "debugging"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:379
+#: ../../reference/simple_stmts.rst:382
 msgid "assertions"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:379
+#: ../../reference/simple_stmts.rst:382
 msgid "expression list"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:400
+#: ../../reference/simple_stmts.rst:403
 msgid "__debug__"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:400 ../../reference/simple_stmts.rst:520
-#: ../../reference/simple_stmts.rst:556 ../../reference/simple_stmts.rst:588
-#: ../../reference/simple_stmts.rst:740
+#: ../../reference/simple_stmts.rst:403 ../../reference/simple_stmts.rst:523
+#: ../../reference/simple_stmts.rst:559 ../../reference/simple_stmts.rst:591
+#: ../../reference/simple_stmts.rst:743
 msgid "exception"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:400
+#: ../../reference/simple_stmts.rst:403
 msgid "AssertionError"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:422
+#: ../../reference/simple_stmts.rst:425
 msgid "pass"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:422
+#: ../../reference/simple_stmts.rst:425
 msgid "null"
 msgstr "нуль"
 
-#: ../../reference/simple_stmts.rst:422
+#: ../../reference/simple_stmts.rst:425
 msgid "operation"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:444
+#: ../../reference/simple_stmts.rst:447
 msgid "del"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:444 ../../reference/simple_stmts.rst:466
+#: ../../reference/simple_stmts.rst:447 ../../reference/simple_stmts.rst:469
 msgid "deletion"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:457 ../../reference/simple_stmts.rst:956
+#: ../../reference/simple_stmts.rst:460 ../../reference/simple_stmts.rst:959
 msgid "global"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:457
+#: ../../reference/simple_stmts.rst:460
 msgid "unbinding"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:483
+#: ../../reference/simple_stmts.rst:486
 msgid "return"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:483 ../../reference/simple_stmts.rst:520
+#: ../../reference/simple_stmts.rst:486 ../../reference/simple_stmts.rst:523
 msgid "function"
 msgstr "функція"
 
-#: ../../reference/simple_stmts.rst:483
+#: ../../reference/simple_stmts.rst:486
 msgid "definition"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:483
+#: ../../reference/simple_stmts.rst:486
 msgid "class"
 msgstr "клас"
 
-#: ../../reference/simple_stmts.rst:499 ../../reference/simple_stmts.rst:694
-#: ../../reference/simple_stmts.rst:703 ../../reference/simple_stmts.rst:715
-#: ../../reference/simple_stmts.rst:740
+#: ../../reference/simple_stmts.rst:502 ../../reference/simple_stmts.rst:697
+#: ../../reference/simple_stmts.rst:706 ../../reference/simple_stmts.rst:718
+#: ../../reference/simple_stmts.rst:743
 msgid "keyword"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:499 ../../reference/simple_stmts.rst:703
-#: ../../reference/simple_stmts.rst:715
+#: ../../reference/simple_stmts.rst:502 ../../reference/simple_stmts.rst:706
+#: ../../reference/simple_stmts.rst:718
 msgid "finally"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:520
+#: ../../reference/simple_stmts.rst:523
 msgid "yield"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:520
+#: ../../reference/simple_stmts.rst:523
 msgid "generator"
 msgstr "generator"
 
-#: ../../reference/simple_stmts.rst:520
+#: ../../reference/simple_stmts.rst:523
 msgid "iterator"
 msgstr "ітератор"
 
-#: ../../reference/simple_stmts.rst:520
+#: ../../reference/simple_stmts.rst:523
 msgid "StopIteration"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:556
+#: ../../reference/simple_stmts.rst:559
 msgid "raise"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:556
+#: ../../reference/simple_stmts.rst:559
 msgid "raising"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:556
+#: ../../reference/simple_stmts.rst:559
 msgid "__traceback__ (exception attribute)"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:578
+#: ../../reference/simple_stmts.rst:581
 msgid "traceback"
 msgstr "traceback"
 
-#: ../../reference/simple_stmts.rst:588
+#: ../../reference/simple_stmts.rst:591
 msgid "chaining"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:588
+#: ../../reference/simple_stmts.rst:591
 msgid "__cause__ (exception attribute)"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:588
+#: ../../reference/simple_stmts.rst:591
 msgid "__context__ (exception attribute)"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:681
+#: ../../reference/simple_stmts.rst:684
 msgid "break"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:681 ../../reference/simple_stmts.rst:715
+#: ../../reference/simple_stmts.rst:684 ../../reference/simple_stmts.rst:718
 msgid "for"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:681 ../../reference/simple_stmts.rst:715
+#: ../../reference/simple_stmts.rst:684 ../../reference/simple_stmts.rst:718
 msgid "while"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:681 ../../reference/simple_stmts.rst:715
+#: ../../reference/simple_stmts.rst:684 ../../reference/simple_stmts.rst:718
 msgid "loop"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:694
+#: ../../reference/simple_stmts.rst:697
 msgid "else"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:694
+#: ../../reference/simple_stmts.rst:697
 msgid "loop control"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:715
+#: ../../reference/simple_stmts.rst:718
 msgid "continue"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:843
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:846
 msgid "import"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:740
+#: ../../reference/simple_stmts.rst:743
 msgid "module"
 msgstr "модуль"
 
-#: ../../reference/simple_stmts.rst:740
+#: ../../reference/simple_stmts.rst:743
 msgid "importing"
 msgstr "імпортування"
 
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:795
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:798
 msgid "from"
 msgstr "від"
 
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:782
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:785
 msgid "as"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:740
+#: ../../reference/simple_stmts.rst:743
 msgid "ImportError"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:740 ../../reference/simple_stmts.rst:782
-#: ../../reference/simple_stmts.rst:795 ../../reference/simple_stmts.rst:821
+#: ../../reference/simple_stmts.rst:743 ../../reference/simple_stmts.rst:785
+#: ../../reference/simple_stmts.rst:798 ../../reference/simple_stmts.rst:824
 msgid "import statement"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:827
+#: ../../reference/simple_stmts.rst:830
 msgid "__all__ (optional module attribute)"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:843
+#: ../../reference/simple_stmts.rst:846
 msgid "relative"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:870
+#: ../../reference/simple_stmts.rst:873
 msgid "future"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:870
+#: ../../reference/simple_stmts.rst:873
 msgid "__future__"
 msgstr "__future__"
 
-#: ../../reference/simple_stmts.rst:870
+#: ../../reference/simple_stmts.rst:873
 msgid "future statement"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:956 ../../reference/simple_stmts.rst:1003
+#: ../../reference/simple_stmts.rst:959 ../../reference/simple_stmts.rst:1006
 msgid "identifier list"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:984
+#: ../../reference/simple_stmts.rst:987
 msgid "exec"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:984
+#: ../../reference/simple_stmts.rst:987
 msgid "eval"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:984
+#: ../../reference/simple_stmts.rst:987
 msgid "compile"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1003
+#: ../../reference/simple_stmts.rst:1006
 msgid "nonlocal"
 msgstr ""
 
-#: ../../reference/simple_stmts.rst:1037
+#: ../../reference/simple_stmts.rst:1040
 msgid "type"
 msgstr "тип"
