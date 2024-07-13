@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-28 14:15+0000\n"
+"POT-Creation-Date: 2024-07-12 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -72,10 +72,12 @@ msgstr ""
 "Параметр може бути ``NULL``."
 
 #: ../../c-api/cell.rst:42
-msgid "Return the contents of the cell *cell*."
-msgstr "Повернути вміст комірки *cell*."
+msgid ""
+"Return the contents of the cell *cell*, which can be ``NULL``. If *cell* is "
+"not a cell object, returns ``NULL`` with an exception set."
+msgstr ""
 
-#: ../../c-api/cell.rst:47
+#: ../../c-api/cell.rst:48
 msgid ""
 "Return the contents of the cell *cell*, but without checking that *cell* is "
 "non-``NULL`` and a cell object."
@@ -83,19 +85,20 @@ msgstr ""
 "Повертає вміст комірки *cell*, але без перевірки того, що *cell* не є "
 "``NULL`` і є об’єктом комірки."
 
-#: ../../c-api/cell.rst:53
+#: ../../c-api/cell.rst:54
 msgid ""
 "Set the contents of the cell object *cell* to *value*.  This releases the "
 "reference to any current content of the cell. *value* may be ``NULL``.  "
-"*cell* must be non-``NULL``; if it is not a cell object, ``-1`` will be "
-"returned.  On success, ``0`` will be returned."
+"*cell* must be non-``NULL``."
 msgstr ""
-"Встановіть для вмісту об’єкта комірки *cell* значення *value*. Це звільняє "
-"посилання на будь-який поточний вміст комірки. *значення* може бути "
-"``NULL``. *комірка* не має бути ``NULL``; якщо це не об’єкт комірки, буде "
-"повернено ``-1``. У разі успіху буде повернено ``0``."
 
-#: ../../c-api/cell.rst:61
+#: ../../c-api/cell.rst:58
+msgid ""
+"On success, return ``0``. If *cell* is not a cell object, set an exception "
+"and return ``-1``."
+msgstr ""
+
+#: ../../c-api/cell.rst:64
 msgid ""
 "Sets the value of the cell object *cell* to *value*.  No reference counts "
 "are adjusted, and no checks are made for safety; *cell* must be non-``NULL``"
