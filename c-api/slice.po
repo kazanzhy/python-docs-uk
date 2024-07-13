@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-05 14:16+0000\n"
+"POT-Creation-Date: 2024-07-12 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 00:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -46,16 +46,16 @@ msgid ""
 "Return a new slice object with the given values.  The *start*, *stop*, and "
 "*step* parameters are used as the values of the slice object attributes of "
 "the same names.  Any of the values may be ``NULL``, in which case the "
-"``None`` will be used for the corresponding attribute.  Return ``NULL`` if "
-"the new object could not be allocated."
+"``None`` will be used for the corresponding attribute."
 msgstr ""
-"Повертає новий об’єкт фрагмента із заданими значеннями. Параметри *start*, "
-"*stop* і *step* використовуються як значення однойменних атрибутів об’єкта "
-"зрізу. Будь-яке зі значень може бути ``NULL``, у цьому випадку ``None`` буде"
-" використано для відповідного атрибута. Повертає ``NULL``, якщо новий об’єкт"
-" не може бути виділений."
 
-#: ../../c-api/slice.rst:32
+#: ../../c-api/slice.rst:28
+msgid ""
+"Return ``NULL`` with an exception set if the new object could not be "
+"allocated."
+msgstr ""
+
+#: ../../c-api/slice.rst:34
 msgid ""
 "Retrieve the start, stop and step indices from the slice object *slice*, "
 "assuming a sequence of length *length*. Treats indices greater than *length*"
@@ -65,23 +65,23 @@ msgstr ""
 "припускаючи послідовність довжини *length*. Розглядає індекси, більші за "
 "*length*, як помилки."
 
-#: ../../c-api/slice.rst:36
+#: ../../c-api/slice.rst:38
 msgid ""
 "Returns ``0`` on success and ``-1`` on error with no exception set (unless "
 "one of the indices was not ``None`` and failed to be converted to an "
 "integer, in which case ``-1`` is returned with an exception set)."
 msgstr ""
 
-#: ../../c-api/slice.rst:40
+#: ../../c-api/slice.rst:42
 msgid "You probably do not want to use this function."
 msgstr "Ймовірно, ви не хочете використовувати цю функцію."
 
-#: ../../c-api/slice.rst:42 ../../c-api/slice.rst:73
+#: ../../c-api/slice.rst:44 ../../c-api/slice.rst:75
 msgid ""
 "The parameter type for the *slice* parameter was ``PySliceObject*`` before."
 msgstr "Раніше тип параметра для параметра *slice* був ``PySliceObject*``."
 
-#: ../../c-api/slice.rst:49
+#: ../../c-api/slice.rst:51
 msgid ""
 "Usable replacement for :c:func:`PySlice_GetIndices`.  Retrieve the start, "
 "stop, and step indices from the slice object *slice* assuming a sequence of "
@@ -94,13 +94,11 @@ msgstr ""
 "довжини *length*, і зберегти довжину фрагмента в *slicelength*. Індекси поза"
 " межами обрізаються таким чином, що відповідає обробці звичайних фрагментів."
 
-#: ../../c-api/slice.rst:55
-msgid "Returns ``0`` on success and ``-1`` on error with exception set."
+#: ../../c-api/slice.rst:57
+msgid "Return ``0`` on success and ``-1`` on error with an exception set."
 msgstr ""
-"Повертає ``0`` у разі успіху та ``-1`` у разі помилки з установленим "
-"винятком."
 
-#: ../../c-api/slice.rst:58
+#: ../../c-api/slice.rst:60
 msgid ""
 "This function is considered not safe for resizable sequences. Its invocation"
 " should be replaced by a combination of :c:func:`PySlice_Unpack` and "
@@ -110,11 +108,11 @@ msgstr ""
 "виклик слід замінити комбінацією :c:func:`PySlice_Unpack` і "
 ":c:func:`PySlice_AdjustIndices`, де:"
 
-#: ../../c-api/slice.rst:66
+#: ../../c-api/slice.rst:68
 msgid "is replaced by ::"
 msgstr "замінюється на ::"
 
-#: ../../c-api/slice.rst:77
+#: ../../c-api/slice.rst:79
 msgid ""
 "If ``Py_LIMITED_API`` is not set or set to the value between ``0x03050400`` "
 "and ``0x03060000`` (not including) or ``0x03060100`` or higher "
@@ -128,7 +126,7 @@ msgstr ""
 ":c:func:`!PySlice_Unpack` і :c:func:`!PySlice_AdjustIndices`. Аргументи "
 "*start*, *stop* і *step* обчислюються більше одного разу."
 
-#: ../../c-api/slice.rst:84
+#: ../../c-api/slice.rst:86
 msgid ""
 "If ``Py_LIMITED_API`` is set to the value less than ``0x03050400`` or "
 "between ``0x03060000`` and ``0x03060100`` (not including) "
@@ -138,7 +136,7 @@ msgstr ""
 "або між ``0x03060000`` і ``0x03060100`` (не включаючи) "
 ":c:func:`!PySlice_GetIndicesEx` є застарілою функцією."
 
-#: ../../c-api/slice.rst:92
+#: ../../c-api/slice.rst:94
 msgid ""
 "Extract the start, stop and step data members from a slice object as C "
 "integers.  Silently reduce values larger than ``PY_SSIZE_T_MAX`` to "
@@ -152,11 +150,11 @@ msgstr ""
 " за ``PY_SSIZE_T_MIN``, до ``PY_SSIZE_T_MIN``, і миттєве збільшення значень "
 "кроку, менших за ``-PY_SSIZE_T_MAX`` до ``-PY_SSIZE_T_MAX``."
 
-#: ../../c-api/slice.rst:98
-msgid "Return ``-1`` on error, ``0`` on success."
-msgstr "Повертає ``-1`` у разі помилки, ``0`` у разі успіху."
+#: ../../c-api/slice.rst:100
+msgid "Return ``-1`` with an exception set on error, ``0`` on success."
+msgstr ""
 
-#: ../../c-api/slice.rst:105
+#: ../../c-api/slice.rst:107
 msgid ""
 "Adjust start/end slice indices assuming a sequence of the specified length. "
 "Out of bounds indices are clipped in a manner consistent with the handling "
@@ -166,22 +164,22 @@ msgstr ""
 "зазначеної довжини. Індекси поза межами обрізаються таким чином, що "
 "відповідає обробці звичайних фрагментів."
 
-#: ../../c-api/slice.rst:109
+#: ../../c-api/slice.rst:111
 msgid ""
 "Return the length of the slice.  Always successful.  Doesn't call Python "
 "code."
 msgstr "Повернути довжину зрізу. Завжди успішний. Не викликає код Python."
 
-#: ../../c-api/slice.rst:116
+#: ../../c-api/slice.rst:118
 msgid "Ellipsis Object"
 msgstr "Еліпсис"
 
-#: ../../c-api/slice.rst:121
+#: ../../c-api/slice.rst:123
 msgid ""
 "The Python ``Ellipsis`` object.  This object has no methods.  Like "
 ":c:data:`Py_None`, it is an :term:`immortal` singleton object."
 msgstr ""
 
-#: ../../c-api/slice.rst:124
+#: ../../c-api/slice.rst:126
 msgid ":c:data:`Py_Ellipsis` is immortal."
 msgstr ""
