@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 14:16+0000\n"
+"POT-Creation-Date: 2024-07-26 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -749,6 +749,15 @@ msgstr ""
 
 #: ../../library/statistics.rst:488
 msgid ""
+"Only hashable inputs are supported.  To handle type :class:`set`, consider "
+"casting to :class:`frozenset`.  To handle type :class:`list`, consider "
+"casting to :class:`tuple`.  For mixed or nested inputs, consider using this "
+"slower quadratic algorithm that only depends on equality tests: ``max(data, "
+"key=data.count)``."
+msgstr ""
+
+#: ../../library/statistics.rst:494
+msgid ""
 "Now handles multimodal datasets by returning the first mode encountered. "
 "Formerly, it raised :exc:`StatisticsError` when more than one mode was "
 "found."
@@ -757,7 +766,7 @@ msgstr ""
 "режим. Раніше він викликав :exc:`StatisticsError`, коли було знайдено більше"
 " ніж один режим."
 
-#: ../../library/statistics.rst:496
+#: ../../library/statistics.rst:502
 msgid ""
 "Return a list of the most frequently occurring values in the order they were"
 " first encountered in the *data*.  Will return more than one result if there"
@@ -768,7 +777,7 @@ msgstr ""
 "результату, якщо існує кілька режимів, або порожній список, якщо *дані* "
 "порожні:"
 
-#: ../../library/statistics.rst:512
+#: ../../library/statistics.rst:518
 msgid ""
 "Return the population standard deviation (the square root of the population "
 "variance).  See :func:`pvariance` for arguments and other details."
@@ -777,7 +786,7 @@ msgstr ""
 "сукупності). Перегляньте :func:`pvariance` для отримання аргументів та інших"
 " деталей."
 
-#: ../../library/statistics.rst:523
+#: ../../library/statistics.rst:529
 msgid ""
 "Return the population variance of *data*, a non-empty sequence or iterable "
 "of real-valued numbers.  Variance, or second moment about the mean, is a "
@@ -791,7 +800,7 @@ msgstr ""
 "дані розкидані; невелика дисперсія вказує на те, що вона згрупована близько "
 "середнього значення."
 
-#: ../../library/statistics.rst:529
+#: ../../library/statistics.rst:535
 msgid ""
 "If the optional second argument *mu* is given, it should be the *population*"
 " mean of the *data*.  It can also be used to compute the second moment "
@@ -799,7 +808,7 @@ msgid ""
 "default), the arithmetic mean is automatically calculated."
 msgstr ""
 
-#: ../../library/statistics.rst:534
+#: ../../library/statistics.rst:540
 msgid ""
 "Use this function to calculate the variance from the entire population.  To "
 "estimate the variance from a sample, the :func:`variance` function is "
@@ -809,16 +818,16 @@ msgstr ""
 " оцінити дисперсію за вибіркою, функція :func:`variance` зазвичай є кращим "
 "вибором."
 
-#: ../../library/statistics.rst:538
+#: ../../library/statistics.rst:544
 msgid "Raises :exc:`StatisticsError` if *data* is empty."
 msgstr "Викликає :exc:`StatisticsError`, якщо *data* порожні."
 
-#: ../../library/statistics.rst:540 ../../library/statistics.rst:610
-#: ../../library/statistics.rst:719
+#: ../../library/statistics.rst:546 ../../library/statistics.rst:616
+#: ../../library/statistics.rst:725
 msgid "Examples:"
 msgstr "приклади:"
 
-#: ../../library/statistics.rst:548
+#: ../../library/statistics.rst:554
 msgid ""
 "If you have already calculated the mean of your data, you can pass it as the"
 " optional second argument *mu* to avoid recalculation:"
@@ -826,11 +835,11 @@ msgstr ""
 "Якщо ви вже обчислили середнє значення своїх даних, ви можете передати його "
 "як необов’язковий другий аргумент *mu*, щоб уникнути перерахунку:"
 
-#: ../../library/statistics.rst:557
+#: ../../library/statistics.rst:563
 msgid "Decimals and Fractions are supported:"
 msgstr "Підтримуються десяткові знаки та дроби:"
 
-#: ../../library/statistics.rst:571
+#: ../../library/statistics.rst:577
 msgid ""
 "When called with the entire population, this gives the population variance "
 "σ².  When called on a sample instead, this is the biased sample variance s²,"
@@ -840,7 +849,7 @@ msgstr ""
 "цього викликати вибірку, це є дисперсія зміщеної вибірки s², також відома як"
 " дисперсія з N ступенями свободи."
 
-#: ../../library/statistics.rst:575
+#: ../../library/statistics.rst:581
 msgid ""
 "If you somehow know the true population mean μ, you may use this function to"
 " calculate the variance of a sample, giving the known population mean as the"
@@ -854,7 +863,7 @@ msgstr ""
 "даних є випадковою вибіркою сукупності, результатом буде неупереджена оцінка"
 " дисперсії генеральної сукупності."
 
-#: ../../library/statistics.rst:584
+#: ../../library/statistics.rst:590
 msgid ""
 "Return the sample standard deviation (the square root of the sample "
 "variance).  See :func:`variance` for arguments and other details."
@@ -863,7 +872,7 @@ msgstr ""
 "вибірки). Перегляньте :func:`variance` для отримання аргументів та інших "
 "деталей."
 
-#: ../../library/statistics.rst:595
+#: ../../library/statistics.rst:601
 msgid ""
 "Return the sample variance of *data*, an iterable of at least two real-"
 "valued numbers.  Variance, or second moment about the mean, is a measure of "
@@ -877,14 +886,14 @@ msgstr ""
 "розкидані; невелика дисперсія вказує на те, що вона щільно згрупована "
 "навколо середнього значення."
 
-#: ../../library/statistics.rst:601
+#: ../../library/statistics.rst:607
 msgid ""
 "If the optional second argument *xbar* is given, it should be the *sample* "
 "mean of *data*.  If it is missing or ``None`` (the default), the mean is "
 "automatically calculated."
 msgstr ""
 
-#: ../../library/statistics.rst:605
+#: ../../library/statistics.rst:611
 msgid ""
 "Use this function when your data is a sample from a population. To calculate"
 " the variance from the entire population, see :func:`pvariance`."
@@ -893,17 +902,17 @@ msgstr ""
 "сукупності. Щоб обчислити дисперсію для всієї сукупності, перегляньте "
 ":func:`pvariance`."
 
-#: ../../library/statistics.rst:608
+#: ../../library/statistics.rst:614
 msgid "Raises :exc:`StatisticsError` if *data* has fewer than two values."
 msgstr "Викликає :exc:`StatisticsError`, якщо *data* має менше двох значень."
 
-#: ../../library/statistics.rst:618
+#: ../../library/statistics.rst:624
 msgid ""
 "If you have already calculated the sample mean of your data, you can pass it"
 " as the optional second argument *xbar* to avoid recalculation:"
 msgstr ""
 
-#: ../../library/statistics.rst:627
+#: ../../library/statistics.rst:633
 msgid ""
 "This function does not attempt to verify that you have passed the actual "
 "mean as *xbar*.  Using arbitrary values for *xbar* can lead to invalid or "
@@ -913,11 +922,11 @@ msgstr ""
 "*xbar*. Використання довільних значень для *xbar* може призвести до "
 "недійсних або неможливих результатів."
 
-#: ../../library/statistics.rst:631
+#: ../../library/statistics.rst:637
 msgid "Decimal and Fraction values are supported:"
 msgstr "Підтримуються десяткові та дробові значення:"
 
-#: ../../library/statistics.rst:645
+#: ../../library/statistics.rst:651
 msgid ""
 "This is the sample variance s² with Bessel's correction, also known as "
 "variance with N-1 degrees of freedom.  Provided that the data points are "
@@ -929,7 +938,7 @@ msgstr ""
 "(наприклад, незалежними та однаково розподіленими), результат має бути "
 "неупередженою оцінкою справжньої дисперсії сукупності."
 
-#: ../../library/statistics.rst:650
+#: ../../library/statistics.rst:656
 msgid ""
 "If you somehow know the actual population mean μ you should pass it to the "
 ":func:`pvariance` function as the *mu* parameter to get the variance of a "
@@ -939,7 +948,7 @@ msgstr ""
 "передати його функції :func:`pvariance` як параметр *mu*, щоб отримати "
 "дисперсію вибірки."
 
-#: ../../library/statistics.rst:656
+#: ../../library/statistics.rst:662
 msgid ""
 "Divide *data* into *n* continuous intervals with equal probability. Returns "
 "a list of ``n - 1`` cut points separating the intervals."
@@ -947,7 +956,7 @@ msgstr ""
 "Розділіть *дані* на *n* безперервних інтервалів з рівною ймовірністю. "
 "Повертає список ``n - 1`` точок розрізу, що розділяють інтервали."
 
-#: ../../library/statistics.rst:659
+#: ../../library/statistics.rst:665
 msgid ""
 "Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles.  Set "
 "*n* to 100 for percentiles which gives the 99 cuts points that separate "
@@ -959,14 +968,14 @@ msgstr ""
 " які розділяють *дані* на 100 груп однакового розміру. Викликає "
 ":exc:`StatisticsError`, якщо *n* не менше 1."
 
-#: ../../library/statistics.rst:664
+#: ../../library/statistics.rst:670
 msgid ""
 "The *data* can be any iterable containing sample data.  For meaningful "
 "results, the number of data points in *data* should be larger than *n*. "
 "Raises :exc:`StatisticsError` if there is not at least one data point."
 msgstr ""
 
-#: ../../library/statistics.rst:668
+#: ../../library/statistics.rst:674
 msgid ""
 "The cut points are linearly interpolated from the two nearest data points.  "
 "For example, if a cut point falls one-third of the distance between two "
@@ -976,7 +985,7 @@ msgstr ""
 "Наприклад, якщо точка зрізу падає на одну третину відстані між двома "
 "значеннями вибірки, ``100`` і ``112``, точка зрізу буде оцінена як ``104``."
 
-#: ../../library/statistics.rst:673
+#: ../../library/statistics.rst:679
 msgid ""
 "The *method* for computing quantiles can be varied depending on whether the "
 "*data* includes or excludes the lowest and highest possible values from the "
@@ -986,7 +995,7 @@ msgstr ""
 "*дані* включають чи виключають найнижчі та найвищі можливі значення з "
 "сукупності."
 
-#: ../../library/statistics.rst:677
+#: ../../library/statistics.rst:683
 msgid ""
 "The default *method* is \"exclusive\" and is used for data sampled from a "
 "population that can have more extreme values than found in the samples.  The"
@@ -1002,7 +1011,7 @@ msgstr ""
 "значень вибірки, метод сортує їх і призначає наступні процентилі: 10%, 20%, "
 "30%, 40%, 50%, 60%, 70%, 80%, 90%."
 
-#: ../../library/statistics.rst:684
+#: ../../library/statistics.rst:690
 msgid ""
 "Setting the *method* to \"inclusive\" is used for describing population data"
 " or for samples that are known to include the most extreme values from the "
@@ -1022,14 +1031,14 @@ msgstr ""
 "вибірки, метод сортує їх і призначає наступні процентилі: 0%, 10%, 20%, 30%,"
 " 40%, 50%, 60%, 70%, 80%, 90%, 100%."
 
-#: ../../library/statistics.rst:706
+#: ../../library/statistics.rst:712
 msgid ""
 "No longer raises an exception for an input with only a single data point. "
 "This allows quantile estimates to be built up one sample point at a time "
 "becoming gradually more refined with each new data point."
 msgstr ""
 
-#: ../../library/statistics.rst:713
+#: ../../library/statistics.rst:719
 msgid ""
 "Return the sample covariance of two inputs *x* and *y*. Covariance is a "
 "measure of the joint variability of two inputs."
@@ -1037,7 +1046,7 @@ msgstr ""
 "Повертає зразкову коваріацію двох вхідних даних *x* і *y*. Коваріація є "
 "мірою спільної мінливості двох вхідних даних."
 
-#: ../../library/statistics.rst:716
+#: ../../library/statistics.rst:722
 msgid ""
 "Both inputs must be of the same length (no less than two), otherwise "
 ":exc:`StatisticsError` is raised."
@@ -1045,7 +1054,7 @@ msgstr ""
 "Обидва входи мають бути однакової довжини (не менше двох), інакше виникає "
 ":exc:`StatisticsError`."
 
-#: ../../library/statistics.rst:737
+#: ../../library/statistics.rst:743
 msgid ""
 "Return the `Pearson's correlation coefficient "
 "<https://en.wikipedia.org/wiki/Pearson_correlation_coefficient>`_ for two "
@@ -1053,7 +1062,7 @@ msgid ""
 "+1. It measures the strength and direction of a linear relationship."
 msgstr ""
 
-#: ../../library/statistics.rst:743
+#: ../../library/statistics.rst:749
 msgid ""
 "If *method* is \"ranked\", computes `Spearman's rank correlation coefficient"
 " <https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient>`_"
@@ -1062,14 +1071,14 @@ msgid ""
 "strength of a monotonic relationship."
 msgstr ""
 
-#: ../../library/statistics.rst:749
+#: ../../library/statistics.rst:755
 msgid ""
 "Spearman's correlation coefficient is appropriate for ordinal data or for "
 "continuous data that doesn't meet the linear proportion requirement for "
 "Pearson's correlation coefficient."
 msgstr ""
 
-#: ../../library/statistics.rst:753
+#: ../../library/statistics.rst:759
 msgid ""
 "Both inputs must be of the same length (no less than two), and need not to "
 "be constant, otherwise :exc:`StatisticsError` is raised."
@@ -1077,17 +1086,17 @@ msgstr ""
 "Обидва вхідні дані мають бути однакової довжини (не менше двох) і не повинні"
 " бути постійними, інакше виникає :exc:`StatisticsError`."
 
-#: ../../library/statistics.rst:756
+#: ../../library/statistics.rst:762
 msgid ""
 "Example with `Kepler's laws of planetary motion "
 "<https://en.wikipedia.org/wiki/Kepler's_laws_of_planetary_motion>`_:"
 msgstr ""
 
-#: ../../library/statistics.rst:783
+#: ../../library/statistics.rst:789
 msgid "Added support for Spearman's rank correlation coefficient."
 msgstr ""
 
-#: ../../library/statistics.rst:788
+#: ../../library/statistics.rst:794
 msgid ""
 "Return the slope and intercept of `simple linear regression "
 "<https://en.wikipedia.org/wiki/Simple_linear_regression>`_ parameters "
@@ -1101,11 +1110,11 @@ msgstr ""
 "описує зв’язок між незалежною змінною *x* і залежною змінною *y* в термінах "
 "цієї лінійної функції:"
 
-#: ../../library/statistics.rst:794
+#: ../../library/statistics.rst:800
 msgid "*y = slope \\* x + intercept + noise*"
 msgstr "*y = нахил \\* x + перехоплення + шум*"
 
-#: ../../library/statistics.rst:796
+#: ../../library/statistics.rst:802
 msgid ""
 "where ``slope`` and ``intercept`` are the regression parameters that are "
 "estimated, and ``noise`` represents the variability of the data that was not"
@@ -1116,7 +1125,7 @@ msgstr ""
 " представляє мінливість даних, яка не була пояснена лінійною регресією (він "
 "дорівнює різниці між прогнозованим і фактичні значення залежної змінної)."
 
-#: ../../library/statistics.rst:802
+#: ../../library/statistics.rst:808
 msgid ""
 "Both inputs must be of the same length (no less than two), and the "
 "independent variable *x* cannot be constant; otherwise a "
@@ -1125,7 +1134,7 @@ msgstr ""
 "Обидва входи повинні мати однакову довжину (не менше двох), а незалежна "
 "змінна *x* не може бути постійною; інакше виникає :exc:`StatisticsError`."
 
-#: ../../library/statistics.rst:806
+#: ../../library/statistics.rst:812
 msgid ""
 "For example, we can use the `release dates of the Monty Python films "
 "<https://en.wikipedia.org/wiki/Monty_Python#Films>`_ to predict the "
@@ -1137,7 +1146,7 @@ msgstr ""
 "загальну кількість фільмів Монті Пайтона, які були б створені до 2019 року, "
 "якщо припустити, що вони тримали темп."
 
-#: ../../library/statistics.rst:820
+#: ../../library/statistics.rst:826
 msgid ""
 "If *proportional* is true, the independent variable *x* and the dependent "
 "variable *y* are assumed to be directly proportional. The data is fit to a "
@@ -1145,38 +1154,38 @@ msgid ""
 "the underlying linear function simplifies to:"
 msgstr ""
 
-#: ../../library/statistics.rst:826
+#: ../../library/statistics.rst:832
 msgid "*y = slope \\* x + noise*"
 msgstr ""
 
-#: ../../library/statistics.rst:828
+#: ../../library/statistics.rst:834
 msgid ""
 "Continuing the example from :func:`correlation`, we look to see how well a "
 "model based on major planets can predict the orbital distances for dwarf "
 "planets:"
 msgstr ""
 
-#: ../../library/statistics.rst:848
+#: ../../library/statistics.rst:854
 msgid "Added support for *proportional*."
 msgstr ""
 
-#: ../../library/statistics.rst:852
+#: ../../library/statistics.rst:858
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../library/statistics.rst:854
+#: ../../library/statistics.rst:860
 msgid "A single exception is defined:"
 msgstr "Визначено єдиний виняток:"
 
-#: ../../library/statistics.rst:858
+#: ../../library/statistics.rst:864
 msgid "Subclass of :exc:`ValueError` for statistics-related exceptions."
 msgstr "Підклас :exc:`ValueError` для винятків, пов’язаних зі статистикою."
 
-#: ../../library/statistics.rst:862
+#: ../../library/statistics.rst:868
 msgid ":class:`NormalDist` objects"
 msgstr ":class:`NormalDist` об’єкти"
 
-#: ../../library/statistics.rst:864
+#: ../../library/statistics.rst:870
 msgid ""
 ":class:`NormalDist` is a tool for creating and manipulating normal "
 "distributions of a `random variable "
@@ -1190,7 +1199,7 @@ msgstr ""
 "розглядає середнє значення та стандартне відхилення вимірювань даних як "
 "єдине ціле."
 
-#: ../../library/statistics.rst:870
+#: ../../library/statistics.rst:876
 msgid ""
 "Normal distributions arise from the `Central Limit Theorem "
 "<https://en.wikipedia.org/wiki/Central_limit_theorem>`_ and have a wide "
@@ -1200,7 +1209,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Central_limit_theorem>`_ і мають широкий "
 "спектр застосувань у статистиці."
 
-#: ../../library/statistics.rst:876
+#: ../../library/statistics.rst:882
 msgid ""
 "Returns a new *NormalDist* object where *mu* represents the `arithmetic mean"
 " <https://en.wikipedia.org/wiki/Arithmetic_mean>`_ and *sigma* represents "
@@ -1211,11 +1220,11 @@ msgstr ""
 " <https://en.wikipedia.org/wiki/Arithmetic_mean>`_, а *sigma* являє собою "
 "`стандартне відхилення <https://en.wikipedia.org/wiki/Standard_deviation>`_."
 
-#: ../../library/statistics.rst:881
+#: ../../library/statistics.rst:887
 msgid "If *sigma* is negative, raises :exc:`StatisticsError`."
 msgstr "Якщо *сигма* від'ємна, викликає :exc:`StatisticsError`."
 
-#: ../../library/statistics.rst:885
+#: ../../library/statistics.rst:891
 msgid ""
 "A read-only property for the `arithmetic mean "
 "<https://en.wikipedia.org/wiki/Arithmetic_mean>`_ of a normal distribution."
@@ -1223,7 +1232,7 @@ msgstr ""
 "Властивість лише для читання для `середнього арифметичного "
 "<https://en.wikipedia.org/wiki/Arithmetic_mean>`_ нормального розподілу."
 
-#: ../../library/statistics.rst:891
+#: ../../library/statistics.rst:897
 msgid ""
 "A read-only property for the `median "
 "<https://en.wikipedia.org/wiki/Median>`_ of a normal distribution."
@@ -1231,7 +1240,7 @@ msgstr ""
 "Властивість лише для читання для `медіани "
 "<https://en.wikipedia.org/wiki/Median>`_ нормального розподілу."
 
-#: ../../library/statistics.rst:897
+#: ../../library/statistics.rst:903
 msgid ""
 "A read-only property for the `mode "
 "<https://en.wikipedia.org/wiki/Mode_(statistics)>`_ of a normal "
@@ -1240,7 +1249,7 @@ msgstr ""
 "Властивість лише для читання для `mode "
 "<https://en.wikipedia.org/wiki/Mode_(statistics)>`_ нормального розподілу."
 
-#: ../../library/statistics.rst:903
+#: ../../library/statistics.rst:909
 msgid ""
 "A read-only property for the `standard deviation "
 "<https://en.wikipedia.org/wiki/Standard_deviation>`_ of a normal "
@@ -1249,7 +1258,7 @@ msgstr ""
 "Властивість лише для читання для `стандартного відхилення "
 "<https://en.wikipedia.org/wiki/Standard_deviation>`_ нормального розподілу."
 
-#: ../../library/statistics.rst:909
+#: ../../library/statistics.rst:915
 msgid ""
 "A read-only property for the `variance "
 "<https://en.wikipedia.org/wiki/Variance>`_ of a normal distribution. Equal "
@@ -1259,7 +1268,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Variance>`_ нормального розподілу. Дорівнює "
 "квадрату стандартного відхилення."
 
-#: ../../library/statistics.rst:915
+#: ../../library/statistics.rst:921
 msgid ""
 "Makes a normal distribution instance with *mu* and *sigma* parameters "
 "estimated from the *data* using :func:`fmean` and :func:`stdev`."
@@ -1267,7 +1276,7 @@ msgstr ""
 "Створює звичайний екземпляр розподілу з параметрами *mu* і *sigma*, "
 "оціненими з *data* за допомогою :func:`fmean` і :func:`stdev`."
 
-#: ../../library/statistics.rst:918
+#: ../../library/statistics.rst:924
 msgid ""
 "The *data* can be any :term:`iterable` and should consist of values that can"
 " be converted to type :class:`float`.  If *data* does not contain at least "
@@ -1281,7 +1290,7 @@ msgstr ""
 "центрального значення потрібна принаймні одна точка, а для оцінки дисперсії "
 "— принаймні дві точки."
 
-#: ../../library/statistics.rst:926
+#: ../../library/statistics.rst:932
 msgid ""
 "Generates *n* random samples for a given mean and standard deviation. "
 "Returns a :class:`list` of :class:`float` values."
@@ -1289,7 +1298,7 @@ msgstr ""
 "Генерує *n* випадкових вибірок для заданого середнього значення та "
 "стандартного відхилення. Повертає :class:`list` значень :class:`float`."
 
-#: ../../library/statistics.rst:929
+#: ../../library/statistics.rst:935
 msgid ""
 "If *seed* is given, creates a new instance of the underlying random number "
 "generator.  This is useful for creating reproducible results, even in a "
@@ -1299,13 +1308,13 @@ msgstr ""
 "випадкових чисел. Це корисно для створення відтворюваних результатів, навіть"
 " у багатопоточному контексті."
 
-#: ../../library/statistics.rst:935
+#: ../../library/statistics.rst:941
 msgid ""
 "Switched to a faster algorithm.  To reproduce samples from previous "
 "versions, use :func:`random.seed` and :func:`random.gauss`."
 msgstr ""
 
-#: ../../library/statistics.rst:940
+#: ../../library/statistics.rst:946
 msgid ""
 "Using a `probability density function (pdf) "
 "<https://en.wikipedia.org/wiki/Probability_density_function>`_, compute the "
@@ -1319,7 +1328,7 @@ msgstr ""
 "значення *x*. Математично, це межа відношення ``P(x <= X < x+dx) / dx``, "
 "коли *dx* наближається до нуля."
 
-#: ../../library/statistics.rst:946
+#: ../../library/statistics.rst:952
 msgid ""
 "The relative likelihood is computed as the probability of a sample occurring"
 " in a narrow range divided by the width of the range (hence the word "
@@ -1327,7 +1336,7 @@ msgid ""
 "can be greater than ``1.0``."
 msgstr ""
 
-#: ../../library/statistics.rst:953
+#: ../../library/statistics.rst:959
 msgid ""
 "Using a `cumulative distribution function (cdf) "
 "<https://en.wikipedia.org/wiki/Cumulative_distribution_function>`_, compute "
@@ -1339,7 +1348,7 @@ msgstr ""
 "обчисліть імовірність того, що випадкова змінна *X* буде меншою або дорівнює"
 " *x*. Математично це пишеться як ``P(X <= x)``."
 
-#: ../../library/statistics.rst:960
+#: ../../library/statistics.rst:966
 msgid ""
 "Compute the inverse cumulative distribution function, also known as the "
 "`quantile function <https://en.wikipedia.org/wiki/Quantile_function>`_ or "
@@ -1349,7 +1358,7 @@ msgid ""
 " <= x) = p``."
 msgstr ""
 
-#: ../../library/statistics.rst:966
+#: ../../library/statistics.rst:972
 msgid ""
 "Finds the value *x* of the random variable *X* such that the probability of "
 "the variable being less than or equal to that value equals the given "
@@ -1359,7 +1368,7 @@ msgstr ""
 "змінна буде меншою або дорівнює цьому значенню, дорівнює заданій ймовірності"
 " *p*."
 
-#: ../../library/statistics.rst:972
+#: ../../library/statistics.rst:978
 msgid ""
 "Measures the agreement between two normal probability distributions. Returns"
 " a value between 0.0 and 1.0 giving `the overlapping area for the two "
@@ -1369,7 +1378,7 @@ msgstr ""
 "Повертає значення від 0,0 до 1,0, що дає `область перекриття для двох "
 "функцій щільності ймовірності <https://www.rasch.org/rmt/rmt101r.htm>`_."
 
-#: ../../library/statistics.rst:979
+#: ../../library/statistics.rst:985
 msgid ""
 "Divide the normal distribution into *n* continuous intervals with equal "
 "probability.  Returns a list of (n - 1) cut points separating the intervals."
@@ -1377,7 +1386,7 @@ msgstr ""
 "Розділіть нормальний розподіл на *n* безперервних інтервалів з рівною "
 "ймовірністю. Повертає список (n - 1) точок розрізу, що розділяють інтервали."
 
-#: ../../library/statistics.rst:983
+#: ../../library/statistics.rst:989
 msgid ""
 "Set *n* to 4 for quartiles (the default).  Set *n* to 10 for deciles. Set "
 "*n* to 100 for percentiles which gives the 99 cuts points that separate the "
@@ -1388,7 +1397,7 @@ msgstr ""
 "розсічення, які поділяють нормальний розподіл на 100 груп однакового "
 "розміру."
 
-#: ../../library/statistics.rst:989
+#: ../../library/statistics.rst:995
 msgid ""
 "Compute the `Standard Score <https://www.statisticshowto.com/probability-"
 "and-statistics/z-score/>`_ describing *x* in terms of the number of standard"
@@ -1400,7 +1409,7 @@ msgstr ""
 "відхилень вище або нижче середнього нормального розподілу: ``(x - середнє) /"
 " стандартне відхилення``."
 
-#: ../../library/statistics.rst:997
+#: ../../library/statistics.rst:1003
 msgid ""
 "Instances of :class:`NormalDist` support addition, subtraction, "
 "multiplication and division by a constant.  These operations are used for "
@@ -1410,7 +1419,7 @@ msgstr ""
 "та ділення на константу. Ці операції використовуються для перекладу та "
 "масштабування. Наприклад:"
 
-#: ../../library/statistics.rst:1007
+#: ../../library/statistics.rst:1013
 msgid ""
 "Dividing a constant by an instance of :class:`NormalDist` is not supported "
 "because the result wouldn't be normally distributed."
@@ -1418,7 +1427,7 @@ msgstr ""
 "Ділення константи на екземпляр :class:`NormalDist` не підтримується, "
 "оскільки результат не розподілятиметься нормально."
 
-#: ../../library/statistics.rst:1010
+#: ../../library/statistics.rst:1016
 msgid ""
 "Since normal distributions arise from additive effects of independent "
 "variables, it is possible to `add and subtract two independent normally "
@@ -1432,19 +1441,19 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Sum_of_normally_distributed_random_variables>`_,"
 " представлені як екземпляри :class:`NormalDist`. Наприклад:"
 
-#: ../../library/statistics.rst:1030
+#: ../../library/statistics.rst:1036
 msgid "Examples and Recipes"
 msgstr "Приклади та рецепти"
 
-#: ../../library/statistics.rst:1034
+#: ../../library/statistics.rst:1040
 msgid "Classic probability problems"
 msgstr ""
 
-#: ../../library/statistics.rst:1036
+#: ../../library/statistics.rst:1042
 msgid ":class:`NormalDist` readily solves classic probability problems."
 msgstr ":class:`NormalDist` легко вирішує класичні ймовірнісні проблеми."
 
-#: ../../library/statistics.rst:1038
+#: ../../library/statistics.rst:1044
 msgid ""
 "For example, given `historical data for SAT exams "
 "<https://nces.ed.gov/programs/digest/d17/tables/dt17_226.40.asp>`_ showing "
@@ -1458,7 +1467,7 @@ msgstr ""
 "стандартним відхиленням 195, визначте відсоток студентів із тестовими балами"
 " між 1100 і 1200 після округлення до найближчого цілого номер:"
 
-#: ../../library/statistics.rst:1051
+#: ../../library/statistics.rst:1057
 msgid ""
 "Find the `quartiles <https://en.wikipedia.org/wiki/Quartile>`_ and `deciles "
 "<https://en.wikipedia.org/wiki/Decile>`_ for the SAT scores:"
@@ -1466,29 +1475,29 @@ msgstr ""
 "Знайдіть `квартилі <https://en.wikipedia.org/wiki/Quartile>`_ і `децилі "
 "<https://en.wikipedia.org/wiki/Decile>`_ для результатів SAT:"
 
-#: ../../library/statistics.rst:1063
+#: ../../library/statistics.rst:1069
 msgid "Monte Carlo inputs for simulations"
 msgstr ""
 
-#: ../../library/statistics.rst:1065
+#: ../../library/statistics.rst:1071
 msgid ""
 "To estimate the distribution for a model that isn't easy to solve "
 "analytically, :class:`NormalDist` can generate input samples for a `Monte "
 "Carlo simulation <https://en.wikipedia.org/wiki/Monte_Carlo_method>`_:"
 msgstr ""
 
-#: ../../library/statistics.rst:1082
+#: ../../library/statistics.rst:1088
 msgid "Approximating binomial distributions"
 msgstr ""
 
-#: ../../library/statistics.rst:1084
+#: ../../library/statistics.rst:1090
 msgid ""
 "Normal distributions can be used to approximate `Binomial distributions "
 "<https://mathworld.wolfram.com/BinomialDistribution.html>`_ when the sample "
 "size is large and when the probability of a successful trial is near 50%."
 msgstr ""
 
-#: ../../library/statistics.rst:1089
+#: ../../library/statistics.rst:1095
 msgid ""
 "For example, an open source conference has 750 attendees and two rooms with "
 "a 500 person capacity.  There is a talk about Python and another about Ruby."
@@ -1502,15 +1511,15 @@ msgstr ""
 "переваги населення не змінилися, яка ймовірність того, що кімната Python "
 "залишиться в межах своїх можливостей?"
 
-#: ../../library/statistics.rst:1120
+#: ../../library/statistics.rst:1126
 msgid "Naive bayesian classifier"
 msgstr ""
 
-#: ../../library/statistics.rst:1122
+#: ../../library/statistics.rst:1128
 msgid "Normal distributions commonly arise in machine learning problems."
 msgstr "Нормальний розподіл зазвичай виникає в задачах машинного навчання."
 
-#: ../../library/statistics.rst:1124
+#: ../../library/statistics.rst:1130
 msgid ""
 "Wikipedia has a `nice example of a Naive Bayesian Classifier "
 "<https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Person_classification>`_."
@@ -1518,7 +1527,7 @@ msgid ""
 " distributed features including height, weight, and foot size."
 msgstr ""
 
-#: ../../library/statistics.rst:1129
+#: ../../library/statistics.rst:1135
 msgid ""
 "We're given a training dataset with measurements for eight people.  The "
 "measurements are assumed to be normally distributed, so we summarize the "
@@ -1528,7 +1537,7 @@ msgstr ""
 "Припускається, що вимірювання мають нормальний розподіл, тому ми "
 "підсумовуємо дані за допомогою :class:`NormalDist`:"
 
-#: ../../library/statistics.rst:1142
+#: ../../library/statistics.rst:1148
 msgid ""
 "Next, we encounter a new person whose feature measurements are known but "
 "whose gender is unknown:"
@@ -1536,7 +1545,7 @@ msgstr ""
 "Далі ми зустрічаємо нову людину, характеристики якої відомі, але стать "
 "невідома:"
 
-#: ../../library/statistics.rst:1151
+#: ../../library/statistics.rst:1157
 msgid ""
 "Starting with a 50% `prior probability "
 "<https://en.wikipedia.org/wiki/Prior_probability>`_ of being male or female,"
@@ -1548,7 +1557,7 @@ msgstr ""
 "жінкою, ми обчислюємо апостеріор як попередній час добуток ймовірностей для "
 "вимірювань ознаки з урахуванням статі:"
 
-#: ../../library/statistics.rst:1166
+#: ../../library/statistics.rst:1172
 msgid ""
 "The final prediction goes to the largest posterior. This is known as the "
 "`maximum a posteriori "
