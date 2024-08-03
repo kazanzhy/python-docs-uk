@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 14:15+0000\n"
+"POT-Creation-Date: 2024-08-02 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:03+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1835,11 +1835,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1585
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.dlopen`` with argument "
-"``name``."
+"Loading a library through any of these objects raises an auditing event "
+"ctypes.dlopen with string argument name, the name used to load the library."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.dlopen`` з аргументом "
-"``name``."
 
 #: ../../library/ctypes.rst:1587
 msgid ""
@@ -1853,11 +1851,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1591
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.dlsym`` with arguments "
-"``library``, ``name``."
+"Accessing a function on a loaded library raises an auditing event "
+"ctypes.dlsym with arguments library (the library object) and name (the "
+"symbol's name as a string or integer)."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing> ``ctypes.dlsym`` з аргументами "
-"``library``, ``name``."
 
 #: ../../library/ctypes.rst:1593
 msgid ""
@@ -1871,11 +1868,10 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1597
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.dlsym/handle`` with "
-"arguments ``handle``, ``name``."
+"In cases when only the library handle is available rather than the object, "
+"accessing a function raises an auditing event ctypes.dlsym/handle with "
+"arguments handle (the raw library handle) and name."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing> `` ``ctypes.dlsym/handle`` з "
-"аргументами ``handle``, ``name``."
 
 #: ../../library/ctypes.rst:1599
 msgid ""
@@ -2026,8 +2022,11 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1688
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.set_exception`` with "
-"argument ``code``."
+"On Windows, when a foreign function call raises a system exception (for "
+"example, due to an access violation), it will be captured and replaced with "
+"a suitable Python exception. Further, an auditing event ctypes.set_exception"
+" with argument code will be raised, allowing an audit hook to replace the "
+"exception with its own."
 msgstr ""
 
 #: ../../library/ctypes.rst:1690
@@ -2041,11 +2040,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1696
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.call_function`` with "
-"arguments ``func_pointer``, ``arguments``."
+"Some ways to invoke foreign function calls may raise an auditing event "
+"ctypes.call_function with arguments function pointer and arguments."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing> `` ``ctypes.call_function`` з "
-"аргументами ``func_pointer``, ``arguments``."
 
 #: ../../library/ctypes.rst:1698
 msgid ""
@@ -2304,12 +2301,8 @@ msgstr ""
 "типу ctypes."
 
 #: ../../library/ctypes.rst:1891
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.addressof`` with "
-"argument ``obj``."
+msgid "Raises an auditing event ctypes.addressof with argument obj."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.addressof`` з аргументом "
-"``obj``."
 
 #: ../../library/ctypes.rst:1896
 msgid ""
@@ -2388,11 +2381,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1935
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.create_string_buffer`` "
-"with arguments ``init``, ``size``."
+"Raises an auditing event ctypes.create_string_buffer with arguments init, "
+"size."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.create_string_buffer`` з "
-"аргументами ``init``, ``size``."
 
 #: ../../library/ctypes.rst:1940
 msgid ""
@@ -2425,11 +2416,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:1952
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.create_unicode_buffer`` "
-"with arguments ``init``, ``size``."
+"Raises an auditing event ctypes.create_unicode_buffer with arguments init, "
+"size."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.create_unicode_buffer`` з "
-"аргументами ``init``, ``size``."
 
 #: ../../library/ctypes.rst:1957
 msgid ""
@@ -2510,11 +2499,8 @@ msgstr ""
 ":data:`errno` у потоці виклику."
 
 #: ../../library/ctypes.rst:2010
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.get_errno`` with no "
-"arguments."
+msgid "Raises an auditing event ctypes.get_errno with no arguments."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.get_errno`` без аргументів."
 
 #: ../../library/ctypes.rst:2014
 msgid ""
@@ -2523,12 +2509,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/ctypes.rst:2017
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.get_last_error`` with no"
-" arguments."
+msgid "Raises an auditing event ctypes.get_last_error with no arguments."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.get_last_error`` без "
-"аргументів."
 
 #: ../../library/ctypes.rst:2021
 msgid ""
@@ -2592,12 +2574,8 @@ msgstr ""
 "значення."
 
 #: ../../library/ctypes.rst:2062
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.set_errno`` with "
-"argument ``errno``."
+msgid "Raises an auditing event ctypes.set_errno with argument errno."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.set_errno`` з аргументом "
-"``errno``."
 
 #: ../../library/ctypes.rst:2067
 msgid ""
@@ -2607,12 +2585,8 @@ msgid ""
 msgstr ""
 
 #: ../../library/ctypes.rst:2071
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.set_last_error`` with "
-"argument ``error``."
+msgid "Raises an auditing event ctypes.set_last_error with argument error."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.set_last_error`` з "
-"аргументом ``помилка``."
 
 #: ../../library/ctypes.rst:2076
 msgid ""
@@ -2629,9 +2603,7 @@ msgid ""
 msgstr ""
 
 #: ../../library/ctypes.rst:2086
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.string_at`` with "
-"arguments ``ptr``, ``size``."
+msgid "Raises an auditing event ctypes.string_at with arguments ptr, size."
 msgstr ""
 
 #: ../../library/ctypes.rst:2091
@@ -2657,9 +2629,7 @@ msgid ""
 msgstr ""
 
 #: ../../library/ctypes.rst:2109
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.wstring_at`` with "
-"arguments ``ptr``, ``size``."
+msgid "Raises an auditing event ctypes.wstring_at with arguments ptr, size."
 msgstr ""
 
 #: ../../library/ctypes.rst:2115
@@ -2706,11 +2676,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2138 ../../library/ctypes.rst:2148
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.cdata/buffer`` with "
-"arguments ``pointer``, ``size``, ``offset``."
+"Raises an auditing event ctypes.cdata/buffer with arguments pointer, size, "
+"offset."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.cdata/buffer`` з "
-"аргументами ``pointer``, ``size``, ``offset``."
 
 #: ../../library/ctypes.rst:2142
 msgid ""
@@ -2734,11 +2702,9 @@ msgstr ""
 
 #: ../../library/ctypes.rst:2155
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``ctypes.cdata`` with argument "
-"``address``."
+"This method, and others that indirectly call this method, raises an auditing"
+" event ctypes.cdata with argument address."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``ctypes.cdata`` з аргументом "
-"``адреса``."
 
 #: ../../library/ctypes.rst:2157
 msgid ""
@@ -3320,11 +3286,23 @@ msgstr ""
 "Конструктори підкласу масиву приймають позиційні аргументи, які "
 "використовуються для ініціалізації елементів у порядку."
 
-#: ../../library/ctypes.rst:2627
+#: ../../library/ctypes.rst:2626
+msgid ""
+"Create an array. Equivalent to ``type * length``, where *type* is a "
+":mod:`ctypes` data type and *length* an integer."
+msgstr ""
+
+#: ../../library/ctypes.rst:2630
+msgid ""
+"This function is :term:`soft deprecated` in favor of multiplication. There "
+"are no plans to remove it."
+msgstr ""
+
+#: ../../library/ctypes.rst:2636
 msgid "Private, abstract base class for pointers."
 msgstr "Приватний, абстрактний базовий клас для вказівників."
 
-#: ../../library/ctypes.rst:2629
+#: ../../library/ctypes.rst:2638
 msgid ""
 "Concrete pointer types are created by calling :func:`POINTER` with the type "
 "that will be pointed to; this is done automatically by :func:`pointer`."
@@ -3333,7 +3311,7 @@ msgstr ""
 "типом, на який буде вказувати; це робиться автоматично за допомогою "
 ":func:`pointer`."
 
-#: ../../library/ctypes.rst:2633
+#: ../../library/ctypes.rst:2642
 msgid ""
 "If a pointer points to an array, its elements can be read and written using "
 "standard subscript and slice accesses.  Pointer objects have no size, so "
@@ -3348,11 +3326,11 @@ msgstr ""
 "межами діапазону, ймовірно, впадуть із порушенням доступу (якщо вам "
 "пощастить)."
 
-#: ../../library/ctypes.rst:2643
+#: ../../library/ctypes.rst:2652
 msgid "Specifies the type pointed to."
 msgstr "Визначає тип, на який вказується."
 
-#: ../../library/ctypes.rst:2647
+#: ../../library/ctypes.rst:2656
 msgid ""
 "Returns the object to which to pointer points.  Assigning to this attribute "
 "changes the pointer to point to the assigned object."
