@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-19 14:16+0000\n"
+"POT-Creation-Date: 2024-08-02 14:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1112,13 +1112,11 @@ msgstr ""
 msgid "The newly created socket is :ref:`non-inheritable <fd_inheritance>`."
 msgstr "Новостворений сокет :ref:`не успадковується <fd_inheritance>`."
 
-#: ../../library/socket.rst:746
+#: ../../library/socket.rst:736
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.__new__`` with arguments"
-" ``self``, ``family``, ``type``, ``protocol``."
+"Raises an auditing event socket.__new__ with arguments self, family, type, "
+"protocol."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.__new__`` з аргументами "
-"``self``, ``family``, ``type``, ``protocol``."
 
 #: ../../library/socket.rst:738
 msgid "The AF_CAN family was added. The AF_RDS family was added."
@@ -1402,13 +1400,11 @@ msgid ""
 "method."
 msgstr ""
 
-#: ../../library/socket.rst:957
+#: ../../library/socket.rst:947
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.getaddrinfo`` with "
-"arguments ``host``, ``port``, ``family``, ``type``, ``protocol``."
+"Raises an auditing event socket.getaddrinfo with arguments host, port, "
+"family, type, protocol."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.getaddrinfo`` з аргументами"
-" ``хост``, ``порт``, ``сімейство``, ``тип``, ``протокол``."
 
 #: ../../library/socket.rst:949
 msgid ""
@@ -1467,13 +1463,9 @@ msgstr ""
 "IPv6, а :func:`getaddrinfo` слід використовувати замість цього для підтримки"
 " подвійного стеку IPv4/v6."
 
-#: ../../library/socket.rst:995 ../../library/socket.rst:1011
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.gethostbyname`` with "
-"argument ``hostname``."
+#: ../../library/socket.rst:985 ../../library/socket.rst:1001
+msgid "Raises an auditing event socket.gethostbyname with argument hostname."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.gethostbyname`` з "
-"аргументом ``hostname``."
 
 #: ../../library/socket.rst:992
 msgid ""
@@ -1495,13 +1487,9 @@ msgstr ""
 "Повертає рядок, що містить ім’я хоста машини, на якій зараз виконується "
 "інтерпретатор Python."
 
-#: ../../library/socket.rst:1021
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.gethostname`` with no "
-"arguments."
+#: ../../library/socket.rst:1011
+msgid "Raises an auditing event socket.gethostname with no arguments."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.gethostname`` без "
-"аргументів."
 
 #: ../../library/socket.rst:1013
 msgid ""
@@ -1522,13 +1510,10 @@ msgid ""
 ":func:`gethostbyaddr` supports both IPv4 and IPv6."
 msgstr ""
 
-#: ../../library/socket.rst:1039
+#: ../../library/socket.rst:1029
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.gethostbyaddr`` with "
-"argument ``ip_address``."
+"Raises an auditing event socket.gethostbyaddr with argument ip_address."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.gethostbyaddr`` з "
-"аргументом ``ip_address``."
 
 #: ../../library/socket.rst:1036
 msgid ""
@@ -1556,13 +1541,9 @@ msgstr ""
 "Для отримання додаткової інформації про *прапори* ви можете звернутися до "
 ":manpage:`getnameinfo(3)`."
 
-#: ../../library/socket.rst:1056
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.getnameinfo`` with "
-"argument ``sockaddr``."
+#: ../../library/socket.rst:1046
+msgid "Raises an auditing event socket.getnameinfo with argument sockaddr."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.getnameinfo`` з аргументом "
-"``sockaddr``."
 
 #: ../../library/socket.rst:1053
 msgid ""
@@ -1584,13 +1565,11 @@ msgstr ""
 "цієї служби. Додаткова назва протоколу, якщо її вказано, має бути ``'tcp'`` "
 "або ``'udp'``, інакше будь-який протокол збігатиметься."
 
-#: ../../library/socket.rst:1078
+#: ../../library/socket.rst:1068
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.getservbyname`` with "
-"arguments ``servicename``, ``protocolname``."
+"Raises an auditing event socket.getservbyname with arguments servicename, "
+"protocolname."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.getservbyname`` з "
-"аргументами ``servicename``, ``protocolname``."
 
 #: ../../library/socket.rst:1075
 msgid ""
@@ -1602,13 +1581,11 @@ msgstr ""
 " служби. Додаткова назва протоколу, якщо її вказано, має бути ``'tcp'`` або "
 "``'udp'``, інакше будь-який протокол збігатиметься."
 
-#: ../../library/socket.rst:1089
+#: ../../library/socket.rst:1079
 msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.getservbyport`` with "
-"arguments ``port``, ``protocolname``."
+"Raises an auditing event socket.getservbyport with arguments port, "
+"protocolname."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.getservbyport`` з "
-"аргументами ``port``, ``protocolname``."
 
 #: ../../library/socket.rst:1086
 msgid ""
@@ -1858,13 +1835,9 @@ msgstr ""
 "Встановіть ім’я хоста машини на *name*. Це викличе :exc:`OSError`, якщо у "
 "вас недостатньо прав."
 
-#: ../../library/socket.rst:1276
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.sethostname`` with "
-"argument ``name``."
+#: ../../library/socket.rst:1266
+msgid "Raises an auditing event socket.sethostname with argument name."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.sethostname`` з аргументом "
-"``name``."
 
 #: ../../library/socket.rst:1268 ../../library/socket.rst:1708
 #: ../../library/socket.rst:1752
@@ -2026,13 +1999,9 @@ msgstr ""
 "Прив’яжіть сокет до *адреси*. Розетка ще не повинна бути прив’язаною. "
 "(Формат *адреси* залежить від групи адрес --- див. вище.)"
 
-#: ../../library/socket.rst:1413
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.bind`` with arguments "
-"``self``, ``address``."
+#: ../../library/socket.rst:1403
+msgid "Raises an auditing event socket.bind with arguments self, address."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.bind`` з аргументами "
-"``self``, ``address``."
 
 #: ../../library/socket.rst:1410
 msgid ""
@@ -2101,13 +2070,9 @@ msgstr ""
 "з’єднання переривається сигналом (або винятком, викликаним обробником "
 "сигналу)."
 
-#: ../../library/socket.rst:1454 ../../library/socket.rst:1474
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.connect`` with arguments"
-" ``self``, ``address``."
+#: ../../library/socket.rst:1444 ../../library/socket.rst:1464
+msgid "Raises an auditing event socket.connect with arguments self, address."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.connect`` з аргументами "
-"``self``, ``address``."
 
 #: ../../library/socket.rst:1446
 msgid ""
@@ -2585,13 +2550,9 @@ msgstr ""
 " надісланих байтів. (Формат *адреси* залежить від групи адрес --- див. "
 "вище.)"
 
-#: ../../library/socket.rst:1831
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.sendto`` with arguments "
-"``self``, ``address``."
+#: ../../library/socket.rst:1821
+msgid "Raises an auditing event socket.sendto with arguments self, address."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.sendto`` з аргументами "
-"``self``, ``address``."
 
 #: ../../library/socket.rst:1831
 msgid ""
@@ -2639,13 +2600,9 @@ msgstr ""
 ":const:`AF_UNIX` у системах, які підтримують механізм :const:`SCM_RIGHTS`. "
 "Дивіться також :meth:`recvmsg`. ::"
 
-#: ../../library/socket.rst:1874
-msgid ""
-"Raises an :ref:`auditing event <auditing>` ``socket.sendmsg`` with arguments"
-" ``self``, ``address``."
+#: ../../library/socket.rst:1864
+msgid "Raises an auditing event socket.sendmsg with arguments self, address."
 msgstr ""
-"Викликає :ref:`подію аудиту <auditing>` ``socket.sendmsg`` з аргументами "
-"``self``, ``address``."
 
 #: ../../library/socket.rst:1875
 msgid ""

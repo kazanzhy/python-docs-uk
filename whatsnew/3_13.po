@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-29 04:06+0000\n"
+"POT-Creation-Date: 2024-08-02 14:15+0000\n"
 "PO-Revision-Date: 2024-05-11 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -2218,9 +2218,10 @@ msgstr ""
 
 #: ../../whatsnew/3.13.rst:1484
 msgid ""
-":mod:`ctypes`: Deprecate undocumented :func:`!ctypes.SetPointerType` and "
-":func:`!ctypes.ARRAY` functions. Replace ``ctypes.ARRAY(item_type, size)`` "
-"with ``item_type * size``. (Contributed by Victor Stinner in :gh:`105733`.)"
+":mod:`ctypes`: Deprecate undocumented :func:`!ctypes.SetPointerType` "
+"function. :term:`Soft-deprecate <soft deprecated>` the :func:`ctypes.ARRAY` "
+"function in favor of multiplication. (Contributed by Victor Stinner in "
+":gh:`105733`.)"
 msgstr ""
 
 #: ../../whatsnew/3.13.rst:1489
@@ -2446,7 +2447,7 @@ msgid ""
 " in :gh:`105096`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2241
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:2
 #: ../../deprecations/pending-removal-in-3.14.rst:2
 msgid "Pending Removal in Python 3.14"
 msgstr ""
@@ -2661,7 +2662,7 @@ msgid ""
 ":gh:`88168`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2285
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:2
 #: ../../deprecations/pending-removal-in-3.15.rst:2
 msgid "Pending Removal in Python 3.15"
 msgstr ""
@@ -2742,7 +2743,7 @@ msgid ""
 "lack of interest. (Contributed by Bénédikt Tran in :gh:`119698`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2306
+#: ../../deprecations/c-api-pending-removal-in-future.rst:2
 #: ../../deprecations/pending-removal-in-future.rst:2
 msgid "Pending Removal in Future Versions"
 msgstr ""
@@ -3990,11 +3991,17 @@ msgid ""
 "be used instead. (Contributed by Serhiy Storchaka in :gh:`86493`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2200
+#: ../../whatsnew/3.13.rst:2199
+msgid ""
+"Remove undocumented ``PY_TIMEOUT_MAX`` constant from the limited C API. "
+"(Contributed by Victor Stinner in :gh:`110014`.)"
+msgstr ""
+
+#: ../../whatsnew/3.13.rst:2203
 msgid "Deprecated C APIs"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2202
+#: ../../whatsnew/3.13.rst:2205
 msgid ""
 "Deprecate the old ``Py_UNICODE`` and ``PY_UNICODE_TYPE`` types: use directly"
 " the :c:type:`wchar_t` type instead. Since Python 3.3, ``Py_UNICODE`` and "
@@ -4002,56 +4009,62 @@ msgid ""
 "Victor Stinner in :gh:`105156`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2207
+#: ../../whatsnew/3.13.rst:2210
 msgid "Deprecate old Python initialization functions:"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2209 ../../whatsnew/3.13.rst:2295
+#: ../../whatsnew/3.13.rst:2212
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:12
 msgid ""
 ":c:func:`PySys_ResetWarnOptions`: clear :data:`sys.warnoptions` and "
 ":data:`!warnings.filters` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2211 ../../whatsnew/3.13.rst:2297
+#: ../../whatsnew/3.13.rst:2214
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:14
 msgid ":c:func:`Py_GetExecPrefix`: get :data:`sys.exec_prefix` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2212 ../../whatsnew/3.13.rst:2298
+#: ../../whatsnew/3.13.rst:2215
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:15
 msgid ":c:func:`Py_GetPath`: get :data:`sys.path` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2213 ../../whatsnew/3.13.rst:2299
+#: ../../whatsnew/3.13.rst:2216
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:16
 msgid ":c:func:`Py_GetPrefix`: get :data:`sys.prefix` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2214 ../../whatsnew/3.13.rst:2300
+#: ../../whatsnew/3.13.rst:2217
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:17
 msgid ":c:func:`Py_GetProgramFullPath`: get :data:`sys.executable` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2215 ../../whatsnew/3.13.rst:2301
+#: ../../whatsnew/3.13.rst:2218
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:18
 msgid ":c:func:`Py_GetProgramName`: get :data:`sys.executable` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2216 ../../whatsnew/3.13.rst:2302
+#: ../../whatsnew/3.13.rst:2219
 msgid ""
 ":c:func:`Py_GetPythonHome`: get :c:member:`PyConfig.home` or "
 ":envvar:`PYTHONHOME` environment variable instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2219
+#: ../../whatsnew/3.13.rst:2222
 msgid ""
 "Functions scheduled for removal in Python 3.15. (Contributed by Victor "
 "Stinner in :gh:`105145`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2222
+#: ../../whatsnew/3.13.rst:2225
 msgid ""
 "Deprecate the :c:func:`PyImport_ImportModuleNoBlock` function which is just "
 "an alias to :c:func:`PyImport_ImportModule` since Python 3.3. Scheduled for "
 "removal in Python 3.15. (Contributed by Victor Stinner in :gh:`105396`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2227
+#: ../../whatsnew/3.13.rst:2230
 msgid ""
 "Deprecate the :c:func:`PyWeakref_GetObject` and "
 ":c:func:`PyWeakref_GET_OBJECT` functions, which return a :term:`borrowed "
@@ -4062,7 +4075,7 @@ msgid ""
 "Stinner in :gh:`105927`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2235
+#: ../../whatsnew/3.13.rst:2238
 msgid ""
 "Deprecate the :c:func:`PyEval_GetBuiltins`, :c:func:`PyEval_GetGlobals`, and"
 " :c:func:`PyEval_GetLocals` functions, which return a :term:`borrowed "
@@ -4070,287 +4083,325 @@ msgid ""
 "recommended replacements. (Soft deprecated as part of :pep:`667`.)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2243
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:4
 msgid ""
-"Creating immutable types (:c:macro:`Py_TPFLAGS_IMMUTABLETYPE`) with mutable "
-"bases using the C API."
+"The ``ma_version_tag`` field in :c:type:`PyDictObject` for extension modules"
+" (:pep:`699`; :gh:`101193`)."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2246
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:7
 msgid ""
-"Functions to configure the Python initialization, deprecated in Python 3.11:"
+"Creating :c:data:`immutable types <Py_TPFLAGS_IMMUTABLETYPE>` with mutable "
+"bases (:gh:`95388`)."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2248
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:10
+msgid ""
+"Functions to configure Python's initialization, deprecated in Python 3.11:"
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:12
 msgid "``PySys_SetArgvEx()``: set :c:member:`PyConfig.argv` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2249
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:13
 msgid "``PySys_SetArgv()``: set :c:member:`PyConfig.argv` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2250
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:14
 msgid ""
 "``Py_SetProgramName()``: set :c:member:`PyConfig.program_name` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2251
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:15
 msgid "``Py_SetPythonHome()``: set :c:member:`PyConfig.home` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2253 ../../whatsnew/3.13.rst:2281
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:17
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:45
 msgid ""
 "The :c:func:`Py_InitializeFromConfig` API should be used with "
 ":c:type:`PyConfig` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2256
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:20
 msgid "Global configuration variables:"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2258
-msgid ":c:var:`Py_DebugFlag`: use :c:member:`PyConfig.parser_debug`"
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:22
+msgid ":c:var:`Py_DebugFlag`: use :c:member:`PyConfig.parser_debug` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2259
-msgid ":c:var:`Py_VerboseFlag`: use :c:member:`PyConfig.verbose`"
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:23
+msgid ":c:var:`Py_VerboseFlag`: use :c:member:`PyConfig.verbose` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2260
-msgid ":c:var:`Py_QuietFlag`: use :c:member:`PyConfig.quiet`"
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:24
+msgid ":c:var:`Py_QuietFlag`: use :c:member:`PyConfig.quiet` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2261
-msgid ":c:var:`Py_InteractiveFlag`: use :c:member:`PyConfig.interactive`"
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2262
-msgid ":c:var:`Py_InspectFlag`: use :c:member:`PyConfig.inspect`"
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2263
-msgid ":c:var:`Py_OptimizeFlag`: use :c:member:`PyConfig.optimization_level`"
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2264
-msgid ":c:var:`Py_NoSiteFlag`: use :c:member:`PyConfig.site_import`"
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2265
-msgid ":c:var:`Py_BytesWarningFlag`: use :c:member:`PyConfig.bytes_warning`"
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2266
-msgid ":c:var:`Py_FrozenFlag`: use :c:member:`PyConfig.pathconfig_warnings`"
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2267
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:25
 msgid ""
-":c:var:`Py_IgnoreEnvironmentFlag`: use :c:member:`PyConfig.use_environment`"
+":c:var:`Py_InteractiveFlag`: use :c:member:`PyConfig.interactive` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2268
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:26
+msgid ":c:var:`Py_InspectFlag`: use :c:member:`PyConfig.inspect` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:27
 msgid ""
-":c:var:`Py_DontWriteBytecodeFlag`: use :c:member:`PyConfig.write_bytecode`"
+":c:var:`Py_OptimizeFlag`: use :c:member:`PyConfig.optimization_level` "
+"instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2269
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:28
+msgid ":c:var:`Py_NoSiteFlag`: use :c:member:`PyConfig.site_import` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:29
+msgid ""
+":c:var:`Py_BytesWarningFlag`: use :c:member:`PyConfig.bytes_warning` "
+"instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:30
+msgid ""
+":c:var:`Py_FrozenFlag`: use :c:member:`PyConfig.pathconfig_warnings` "
+"instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:31
+msgid ""
+":c:var:`Py_IgnoreEnvironmentFlag`: use :c:member:`PyConfig.use_environment` "
+"instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:32
+msgid ""
+":c:var:`Py_DontWriteBytecodeFlag`: use :c:member:`PyConfig.write_bytecode` "
+"instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:33
 msgid ""
 ":c:var:`Py_NoUserSiteDirectory`: use "
-":c:member:`PyConfig.user_site_directory`"
+":c:member:`PyConfig.user_site_directory` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2270
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:34
 msgid ""
-":c:var:`Py_UnbufferedStdioFlag`: use :c:member:`PyConfig.buffered_stdio`"
+":c:var:`Py_UnbufferedStdioFlag`: use :c:member:`PyConfig.buffered_stdio` "
+"instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2271
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:35
 msgid ""
 ":c:var:`Py_HashRandomizationFlag`: use :c:member:`PyConfig.use_hash_seed` "
-"and :c:member:`PyConfig.hash_seed`"
+"and :c:member:`PyConfig.hash_seed` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2273
-msgid ":c:var:`Py_IsolatedFlag`: use :c:member:`PyConfig.isolated`"
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:37
+msgid ":c:var:`Py_IsolatedFlag`: use :c:member:`PyConfig.isolated` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2274
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:38
 msgid ""
 ":c:var:`Py_LegacyWindowsFSEncodingFlag`: use "
-":c:member:`PyPreConfig.legacy_windows_fs_encoding`"
+":c:member:`PyPreConfig.legacy_windows_fs_encoding` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2275
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:39
 msgid ""
 ":c:var:`Py_LegacyWindowsStdioFlag`: use "
-":c:member:`PyConfig.legacy_windows_stdio`"
+":c:member:`PyConfig.legacy_windows_stdio` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2276
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:40
 msgid ""
 ":c:var:`!Py_FileSystemDefaultEncoding`: use "
-":c:member:`PyConfig.filesystem_encoding`"
+":c:member:`PyConfig.filesystem_encoding` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2277
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:41
 msgid ""
 ":c:var:`!Py_HasFileSystemDefaultEncoding`: use "
-":c:member:`PyConfig.filesystem_encoding`"
+":c:member:`PyConfig.filesystem_encoding` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2278
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:42
 msgid ""
 ":c:var:`!Py_FileSystemDefaultEncodeErrors`: use "
-":c:member:`PyConfig.filesystem_errors`"
+":c:member:`PyConfig.filesystem_errors` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2279
+#: ../../deprecations/c-api-pending-removal-in-3.14.rst:43
 msgid ""
-":c:var:`!Py_UTF8Mode`: use :c:member:`PyPreConfig.utf8_mode` (see "
+":c:var:`!Py_UTF8Mode`: use :c:member:`PyPreConfig.utf8_mode` instead. (see "
 ":c:func:`Py_PreInitialize`)"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2287
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:4
 msgid "The bundled copy of ``libmpdecimal``."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2288
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:5
 msgid ""
-":c:func:`PyImport_ImportModuleNoBlock`: use :c:func:`PyImport_ImportModule`."
+":c:func:`PyImport_ImportModuleNoBlock`: use :c:func:`PyImport_ImportModule` "
+"instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2289
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:6
 msgid ""
 ":c:func:`PyWeakref_GET_OBJECT`: use :c:func:`PyWeakref_GetRef` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2290
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:7
 msgid ":c:func:`PyWeakref_GetObject`: use :c:func:`PyWeakref_GetRef` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2291
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:8
 msgid ":c:type:`!Py_UNICODE_WIDE` type: use :c:type:`wchar_t` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2292
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:9
 msgid ":c:type:`Py_UNICODE` type: use :c:type:`wchar_t` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2293
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:10
 msgid "Python initialization functions:"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2308
+#: ../../deprecations/c-api-pending-removal-in-3.15.rst:19
 msgid ""
-"The following APIs were deprecated in earlier Python versions and will be "
-"removed, although there is currently no date scheduled for their removal."
+":c:func:`Py_GetPythonHome`: get :c:member:`PyConfig.home` or the "
+":envvar:`PYTHONHOME` environment variable instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2311
-msgid ":c:macro:`Py_TPFLAGS_HAVE_FINALIZE`: no needed since Python 3.8."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2312
-msgid ":c:func:`PyErr_Fetch`: use :c:func:`PyErr_GetRaisedException`."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2313
+#: ../../deprecations/c-api-pending-removal-in-future.rst:4
 msgid ""
-":c:func:`PyErr_NormalizeException`: use :c:func:`PyErr_GetRaisedException`."
+"The following APIs are deprecated and will be removed, although there is "
+"currently no date scheduled for their removal."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2314
-msgid ":c:func:`PyErr_Restore`: use :c:func:`PyErr_SetRaisedException`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:7
+msgid ":c:macro:`Py_TPFLAGS_HAVE_FINALIZE`: unneeded since Python 3.8."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2315
+#: ../../deprecations/c-api-pending-removal-in-future.rst:8
+msgid ":c:func:`PyErr_Fetch`: use :c:func:`PyErr_GetRaisedException` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:9
 msgid ""
-":c:func:`PyModule_GetFilename`: use :c:func:`PyModule_GetFilenameObject`."
+":c:func:`PyErr_NormalizeException`: use :c:func:`PyErr_GetRaisedException` "
+"instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2316
-msgid ":c:func:`PyOS_AfterFork`: use :c:func:`PyOS_AfterFork_Child()`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:10
+msgid ""
+":c:func:`PyErr_Restore`: use :c:func:`PyErr_SetRaisedException` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2317
-msgid ":c:func:`PySlice_GetIndicesEx`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:11
+msgid ""
+":c:func:`PyModule_GetFilename`: use :c:func:`PyModule_GetFilenameObject` "
+"instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2318
-msgid ":c:func:`!PyUnicode_AsDecodedObject`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:12
+msgid ":c:func:`PyOS_AfterFork`: use :c:func:`PyOS_AfterFork_Child` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2319
-msgid ":c:func:`!PyUnicode_AsDecodedUnicode`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:13
+msgid ""
+":c:func:`PySlice_GetIndicesEx`: use :c:func:`PySlice_Unpack` and "
+":c:func:`PySlice_AdjustIndices` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2320
-msgid ":c:func:`!PyUnicode_AsEncodedObject`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:14
+msgid ""
+":c:func:`!PyUnicode_AsDecodedObject`: use :c:func:`PyCodec_Decode` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2321
-msgid ":c:func:`!PyUnicode_AsEncodedUnicode`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:15
+msgid ""
+":c:func:`!PyUnicode_AsDecodedUnicode`: use :c:func:`PyCodec_Decode` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2322
-msgid ":c:func:`PyUnicode_READY`: not needed since Python 3.12."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:16
+msgid ""
+":c:func:`!PyUnicode_AsEncodedObject`: use :c:func:`PyCodec_Encode` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2323
-msgid ":c:func:`!_PyErr_ChainExceptions`."
+#: ../../deprecations/c-api-pending-removal-in-future.rst:17
+msgid ""
+":c:func:`!PyUnicode_AsEncodedUnicode`: use :c:func:`PyCodec_Encode` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2324
+#: ../../deprecations/c-api-pending-removal-in-future.rst:18
+msgid ":c:func:`PyUnicode_READY`: unneeded since Python 3.12"
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:19
+msgid ""
+":c:func:`!PyErr_Display`: use :c:func:`PyErr_DisplayException` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:20
+msgid ""
+":c:func:`!_PyErr_ChainExceptions`: use ``_PyErr_ChainExceptions1`` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:21
 msgid ""
 ":c:member:`!PyBytesObject.ob_shash` member: call :c:func:`PyObject_Hash` "
 "instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2326
+#: ../../deprecations/c-api-pending-removal-in-future.rst:23
 msgid ":c:member:`!PyDictObject.ma_version_tag` member."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2327
-msgid "TLS API:"
+#: ../../deprecations/c-api-pending-removal-in-future.rst:24
+msgid "Thread Local Storage (TLS) API:"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2329
-msgid ":c:func:`PyThread_create_key`: use :c:func:`PyThread_tss_alloc`."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2330
-msgid ":c:func:`PyThread_delete_key`: use :c:func:`PyThread_tss_free`."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2331
-msgid ":c:func:`PyThread_set_key_value`: use :c:func:`PyThread_tss_set`."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2332
-msgid ":c:func:`PyThread_get_key_value`: use :c:func:`PyThread_tss_get`."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2333
+#: ../../deprecations/c-api-pending-removal-in-future.rst:26
 msgid ""
-":c:func:`PyThread_delete_key_value`: use :c:func:`PyThread_tss_delete`."
+":c:func:`PyThread_create_key`: use :c:func:`PyThread_tss_alloc` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2334
-msgid ":c:func:`PyThread_ReInitTLS`: no longer needed."
-msgstr ""
-
-#: ../../whatsnew/3.13.rst:2336
+#: ../../deprecations/c-api-pending-removal-in-future.rst:27
 msgid ""
-"Remove undocumented ``PY_TIMEOUT_MAX`` constant from the limited C API. "
-"(Contributed by Victor Stinner in :gh:`110014`.)"
+":c:func:`PyThread_delete_key`: use :c:func:`PyThread_tss_free` instead."
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2341
+#: ../../deprecations/c-api-pending-removal-in-future.rst:28
+msgid ""
+":c:func:`PyThread_set_key_value`: use :c:func:`PyThread_tss_set` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:29
+msgid ""
+":c:func:`PyThread_get_key_value`: use :c:func:`PyThread_tss_get` instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:30
+msgid ""
+":c:func:`PyThread_delete_key_value`: use :c:func:`PyThread_tss_delete` "
+"instead."
+msgstr ""
+
+#: ../../deprecations/c-api-pending-removal-in-future.rst:31
+msgid ":c:func:`PyThread_ReInitTLS`: unneeded since Python 3.7."
+msgstr ""
+
+#: ../../whatsnew/3.13.rst:2252
 msgid "Regression Test Changes"
 msgstr ""
 
-#: ../../whatsnew/3.13.rst:2343
+#: ../../whatsnew/3.13.rst:2254
 msgid ""
 "Python built with :file:`configure` :option:`--with-pydebug` now supports a "
 ":option:`-X presite=package.module <-X>` command-line option. If used, it "
