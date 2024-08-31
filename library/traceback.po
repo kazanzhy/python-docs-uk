@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-30 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -84,18 +84,26 @@ msgid ""
 "output."
 msgstr ""
 
-#: ../../library/traceback.rst:45 ../../library/traceback.rst:110
+#: ../../library/traceback.rst:47
+msgid ""
+"The meaning of the *limit* parameter is different than the meaning of "
+":const:`sys.tracebacklimit`. A negative *limit* value corresponds to a "
+"positive value of :const:`!sys.tracebacklimit`, whereas the behaviour of a "
+"positive *limit* value cannot be achieved with :const:`!sys.tracebacklimit`."
+msgstr ""
+
+#: ../../library/traceback.rst:53 ../../library/traceback.rst:118
 msgid "Added negative *limit* support."
 msgstr "Додано підтримку негативного *ліміту*."
 
-#: ../../library/traceback.rst:52
+#: ../../library/traceback.rst:60
 msgid ""
 "Print exception information and stack trace entries from :ref:`traceback "
 "object <traceback-objects>` *tb* to *file*. This differs from "
 ":func:`print_tb` in the following ways:"
 msgstr ""
 
-#: ../../library/traceback.rst:57
+#: ../../library/traceback.rst:65
 msgid ""
 "if *tb* is not ``None``, it prints a header ``Traceback (most recent call "
 "last):``"
@@ -103,11 +111,11 @@ msgstr ""
 "якщо *tb* не є ``None``, він друкує заголовок ``Traceback (останній останній"
 " виклик):``"
 
-#: ../../library/traceback.rst:60
+#: ../../library/traceback.rst:68
 msgid "it prints the exception type and *value* after the stack trace"
 msgstr "він друкує тип винятку та *значення* після трасування стека"
 
-#: ../../library/traceback.rst:64
+#: ../../library/traceback.rst:72
 msgid ""
 "if *type(value)* is :exc:`SyntaxError` and *value* has the appropriate "
 "format, it prints the line where the syntax error occurred with a caret "
@@ -117,7 +125,7 @@ msgstr ""
 "формат, він друкує рядок, у якому сталася синтаксична помилка, із кареткою, "
 "що вказує на приблизну позицію помилки."
 
-#: ../../library/traceback.rst:68
+#: ../../library/traceback.rst:76
 msgid ""
 "Since Python 3.10, instead of passing *value* and *tb*, an exception object "
 "can be passed as the first argument. If *value* and *tb* are provided, the "
@@ -127,7 +135,7 @@ msgstr ""
 "можна передати як перший аргумент. Якщо надано *value* і *tb*, перший "
 "аргумент ігнорується, щоб забезпечити зворотну сумісність."
 
-#: ../../library/traceback.rst:72
+#: ../../library/traceback.rst:80
 msgid ""
 "The optional *limit* argument has the same meaning as for :func:`print_tb`. "
 "If *chain* is true (the default), then chained exceptions (the "
@@ -136,30 +144,30 @@ msgid ""
 "itself does when printing an unhandled exception."
 msgstr ""
 
-#: ../../library/traceback.rst:79 ../../library/traceback.rst:183
+#: ../../library/traceback.rst:87 ../../library/traceback.rst:191
 msgid "The *etype* argument is ignored and inferred from the type of *value*."
 msgstr "Аргумент *etype* ігнорується та виводиться з типу *value*."
 
-#: ../../library/traceback.rst:82 ../../library/traceback.rst:163
+#: ../../library/traceback.rst:90 ../../library/traceback.rst:171
 msgid ""
 "The *etype* parameter has been renamed to *exc* and is now positional-only."
 msgstr ""
 "Параметр *etype* було перейменовано на *exc* і тепер є лише позиційним."
 
-#: ../../library/traceback.rst:89
+#: ../../library/traceback.rst:97
 msgid ""
 "This is a shorthand for ``print_exception(sys.exception(), limit, file, "
 "chain)``."
 msgstr ""
 
-#: ../../library/traceback.rst:95
+#: ../../library/traceback.rst:103
 msgid ""
 "This is a shorthand for ``print_exception(sys.last_exc, limit, file, "
 "chain)``.  In general it will work only after an exception has reached an "
 "interactive prompt (see :data:`sys.last_exc`)."
 msgstr ""
 
-#: ../../library/traceback.rst:102
+#: ../../library/traceback.rst:110
 msgid ""
 "Print up to *limit* stack trace entries (starting from the invocation point)"
 " if *limit* is positive.  Otherwise, print the last ``abs(limit)`` entries."
@@ -169,7 +177,7 @@ msgid ""
 "for :func:`print_tb`."
 msgstr ""
 
-#: ../../library/traceback.rst:116
+#: ../../library/traceback.rst:124
 msgid ""
 "Return a :class:`StackSummary` object representing a list of \"pre-"
 "processed\" stack trace entries extracted from the :ref:`traceback object "
@@ -182,7 +190,7 @@ msgid ""
 "information that is usually printed for a stack trace."
 msgstr ""
 
-#: ../../library/traceback.rst:129
+#: ../../library/traceback.rst:137
 msgid ""
 "Extract the raw traceback from the current :ref:`stack frame <frame-"
 "objects>`.  The return value has the same format as for :func:`extract_tb`."
@@ -190,7 +198,7 @@ msgid ""
 ":func:`print_stack`."
 msgstr ""
 
-#: ../../library/traceback.rst:137
+#: ../../library/traceback.rst:145
 msgid ""
 "Given a list of tuples or :class:`FrameSummary` objects as returned by "
 ":func:`extract_tb` or :func:`extract_stack`, return a list of strings ready "
@@ -206,7 +214,7 @@ msgstr ""
 "символом нового рядка; рядки також можуть містити внутрішні символи нового "
 "рядка для тих елементів, вихідний текстовий рядок яких не ``None``."
 
-#: ../../library/traceback.rst:147
+#: ../../library/traceback.rst:155
 msgid ""
 "Format the exception part of a traceback using an exception value such as "
 "given by :data:`sys.last_value`.  The return value is a list of strings, "
@@ -217,7 +225,7 @@ msgid ""
 "contains the exception's :attr:`notes <BaseException.__notes__>`."
 msgstr ""
 
-#: ../../library/traceback.rst:155
+#: ../../library/traceback.rst:163
 msgid ""
 "Since Python 3.10, instead of passing *value*, an exception object can be "
 "passed as the first argument.  If *value* is provided, the first argument is"
@@ -227,24 +235,24 @@ msgstr ""
 "можна передати об’єкт винятку. Якщо вказано *значення*, перший аргумент "
 "ігнорується, щоб забезпечити зворотну сумісність."
 
-#: ../../library/traceback.rst:159 ../../library/traceback.rst:386
+#: ../../library/traceback.rst:167 ../../library/traceback.rst:394
 msgid ""
 "When *show_group* is ``True``, and the exception is an instance of "
 ":exc:`BaseExceptionGroup`, the nested exceptions are included as well, "
 "recursively, with indentation relative to their nesting depth."
 msgstr ""
 
-#: ../../library/traceback.rst:167
+#: ../../library/traceback.rst:175
 msgid ""
 "The returned list now includes any :attr:`notes <BaseException.__notes__>` "
 "attached to the exception."
 msgstr ""
 
-#: ../../library/traceback.rst:171
+#: ../../library/traceback.rst:179
 msgid "*show_group* parameter was added."
 msgstr ""
 
-#: ../../library/traceback.rst:177
+#: ../../library/traceback.rst:185
 msgid ""
 "Format a stack trace and the exception information.  The arguments  have the"
 " same meaning as the corresponding arguments to :func:`print_exception`.  "
@@ -258,7 +266,7 @@ msgstr ""
 "рядка, а деякі містять внутрішні нові рядки. Коли ці рядки об’єднуються та "
 "друкуються, друкується точно такий же текст, як і :func:`print_exception`."
 
-#: ../../library/traceback.rst:186
+#: ../../library/traceback.rst:194
 msgid ""
 "This function's behavior and signature were modified to match "
 ":func:`print_exception`."
@@ -266,29 +274,29 @@ msgstr ""
 "Поведінку та підпис цієї функції було змінено відповідно до "
 ":func:`print_exception`."
 
-#: ../../library/traceback.rst:193
+#: ../../library/traceback.rst:201
 msgid ""
 "This is like ``print_exc(limit)`` but returns a string instead of printing "
 "to a file."
 msgstr ""
 "Це схоже на ``print_exc(limit)``, але повертає рядок замість друку у файл."
 
-#: ../../library/traceback.rst:199
+#: ../../library/traceback.rst:207
 msgid "A shorthand for ``format_list(extract_tb(tb, limit))``."
 msgstr "Скорочення для ``format_list(extract_tb(tb, limit))``."
 
-#: ../../library/traceback.rst:204
+#: ../../library/traceback.rst:212
 msgid "A shorthand for ``format_list(extract_stack(f, limit))``."
 msgstr "Скорочення для ``format_list(extract_stack(f, limit))``."
 
-#: ../../library/traceback.rst:208
+#: ../../library/traceback.rst:216
 msgid ""
 "Clears the local variables of all the stack frames in a :ref:`traceback "
 "<traceback-objects>` *tb* by calling the :meth:`~frame.clear` method of each"
 " :ref:`frame object <frame-objects>`."
 msgstr ""
 
-#: ../../library/traceback.rst:217
+#: ../../library/traceback.rst:225
 msgid ""
 "Walk a stack following :attr:`f.f_back <frame.f_back>` from the given frame,"
 " yielding the frame and line number for each frame. If *f* is ``None``, the "
@@ -296,28 +304,28 @@ msgid ""
 ":meth:`StackSummary.extract`."
 msgstr ""
 
-#: ../../library/traceback.rst:226
+#: ../../library/traceback.rst:234
 msgid ""
 "Walk a traceback following :attr:`~traceback.tb_next` yielding the frame and"
 " line number for each frame. This helper is used with "
 ":meth:`StackSummary.extract`."
 msgstr ""
 
-#: ../../library/traceback.rst:232
+#: ../../library/traceback.rst:240
 msgid "The module also defines the following classes:"
 msgstr "Модуль також визначає такі класи:"
 
-#: ../../library/traceback.rst:235
+#: ../../library/traceback.rst:243
 msgid ":class:`!TracebackException` Objects"
 msgstr ""
 
-#: ../../library/traceback.rst:239
+#: ../../library/traceback.rst:247
 msgid ""
 ":class:`!TracebackException` objects are created from actual exceptions to "
 "capture data for later printing in a lightweight fashion."
 msgstr ""
 
-#: ../../library/traceback.rst:244 ../../library/traceback.rst:351
+#: ../../library/traceback.rst:252 ../../library/traceback.rst:359
 msgid ""
 "Capture an exception for later rendering. *limit*, *lookup_lines* and "
 "*capture_locals* are as for the :class:`StackSummary` class."
@@ -325,7 +333,7 @@ msgstr ""
 "Зафіксуйте виняток для подальшого рендерингу. *limit*, *lookup_lines* і "
 "*capture_locals* такі ж, як і для класу :class:`StackSummary`."
 
-#: ../../library/traceback.rst:247
+#: ../../library/traceback.rst:255
 msgid ""
 "If *compact* is true, only data that is required by "
 ":class:`!TracebackException`'s :meth:`format` method is saved in the class "
@@ -333,14 +341,14 @@ msgid ""
 "if :attr:`__cause__` is ``None`` and :attr:`__suppress_context__` is false."
 msgstr ""
 
-#: ../../library/traceback.rst:253 ../../library/traceback.rst:354
+#: ../../library/traceback.rst:261 ../../library/traceback.rst:362
 msgid ""
 "Note that when locals are captured, they are also shown in the traceback."
 msgstr ""
 "Зауважте, що коли місцеві жителі захоплені, вони також відображаються в "
 "трасуванні."
 
-#: ../../library/traceback.rst:255
+#: ../../library/traceback.rst:263
 msgid ""
 "*max_group_width* and *max_group_depth* control the formatting of exception "
 "groups (see :exc:`BaseExceptionGroup`). The depth refers to the nesting "
@@ -349,107 +357,107 @@ msgid ""
 "limit is exceeded."
 msgstr ""
 
-#: ../../library/traceback.rst:261
+#: ../../library/traceback.rst:269
 msgid "Added the *compact* parameter."
 msgstr "Додано параметр *compact*."
 
-#: ../../library/traceback.rst:264
+#: ../../library/traceback.rst:272
 msgid "Added the *max_group_width* and *max_group_depth* parameters."
 msgstr ""
 
-#: ../../library/traceback.rst:269
+#: ../../library/traceback.rst:277
 msgid ""
 "A :class:`!TracebackException` of the original "
 ":attr:`~BaseException.__cause__`."
 msgstr ""
 
-#: ../../library/traceback.rst:274
+#: ../../library/traceback.rst:282
 msgid ""
 "A :class:`!TracebackException` of the original "
 ":attr:`~BaseException.__context__`."
 msgstr ""
 
-#: ../../library/traceback.rst:279
+#: ../../library/traceback.rst:287
 msgid ""
 "If ``self`` represents an :exc:`ExceptionGroup`, this field holds a list of "
 ":class:`!TracebackException` instances representing the nested exceptions. "
 "Otherwise it is ``None``."
 msgstr ""
 
-#: ../../library/traceback.rst:287
+#: ../../library/traceback.rst:295
 msgid ""
 "The :attr:`~BaseException.__suppress_context__` value from the original "
 "exception."
 msgstr ""
 
-#: ../../library/traceback.rst:292
+#: ../../library/traceback.rst:300
 msgid ""
 "The :attr:`~BaseException.__notes__` value from the original exception, or "
 "``None`` if the exception does not have any notes. If it is not ``None`` is "
 "it formatted in the traceback after the exception string."
 msgstr ""
 
-#: ../../library/traceback.rst:301
+#: ../../library/traceback.rst:309
 msgid "A :class:`StackSummary` representing the traceback."
 msgstr ":class:`StackSummary`, що представляє відстеження."
 
-#: ../../library/traceback.rst:305
+#: ../../library/traceback.rst:313
 msgid "The class of the original traceback."
 msgstr "Клас оригінального трасування."
 
-#: ../../library/traceback.rst:311
+#: ../../library/traceback.rst:319
 msgid "String display of the class of the original exception."
 msgstr ""
 
-#: ../../library/traceback.rst:317
+#: ../../library/traceback.rst:325
 msgid "For syntax errors - the file name where the error occurred."
 msgstr "Для синтаксичних помилок - ім'я файлу, де сталася помилка."
 
-#: ../../library/traceback.rst:321
+#: ../../library/traceback.rst:329
 msgid "For syntax errors - the line number where the error occurred."
 msgstr "Для синтаксичних помилок - номер рядка, де сталася помилка."
 
-#: ../../library/traceback.rst:325
+#: ../../library/traceback.rst:333
 msgid ""
 "For syntax errors - the end line number where the error occurred. Can be "
 "``None`` if not present."
 msgstr ""
 
-#: ../../library/traceback.rst:332
+#: ../../library/traceback.rst:340
 msgid "For syntax errors - the text where the error occurred."
 msgstr "Для синтаксичних помилок - текст, де сталася помилка."
 
-#: ../../library/traceback.rst:336
+#: ../../library/traceback.rst:344
 msgid "For syntax errors - the offset into the text where the error occurred."
 msgstr "Для синтаксичних помилок - зміщення в тексті, де сталася помилка."
 
-#: ../../library/traceback.rst:340
+#: ../../library/traceback.rst:348
 msgid ""
 "For syntax errors - the end offset into the text where the error occurred. "
 "Can be ``None`` if not present."
 msgstr ""
 
-#: ../../library/traceback.rst:347
+#: ../../library/traceback.rst:355
 msgid "For syntax errors - the compiler error message."
 msgstr "Для синтаксичних помилок - повідомлення про помилку компілятора."
 
-#: ../../library/traceback.rst:358
+#: ../../library/traceback.rst:366
 msgid ""
 "Print to *file* (default ``sys.stderr``) the exception information returned "
 "by :meth:`format`."
 msgstr ""
 
-#: ../../library/traceback.rst:365
+#: ../../library/traceback.rst:373
 msgid "Format the exception."
 msgstr "Відформатувати виняток."
 
-#: ../../library/traceback.rst:367
+#: ../../library/traceback.rst:375
 msgid ""
 "If *chain* is not ``True``, :attr:`__cause__` and :attr:`__context__` will "
 "not be formatted."
 msgstr ""
 
-#: ../../library/traceback.rst:370
+#: ../../library/traceback.rst:378
 msgid ""
 "The return value is a generator of strings, each ending in a newline and "
 "some containing internal newlines. :func:`~traceback.print_exception` is a "
@@ -460,17 +468,17 @@ msgstr ""
 ":func:`~traceback.print_exception` є обгорткою цього методу, яка просто "
 "друкує рядки у файл."
 
-#: ../../library/traceback.rst:376
+#: ../../library/traceback.rst:384
 msgid "Format the exception part of the traceback."
 msgstr "Відформатуйте частину винятку зворотного відстеження."
 
-#: ../../library/traceback.rst:378
+#: ../../library/traceback.rst:386
 msgid "The return value is a generator of strings, each ending in a newline."
 msgstr ""
 "Повернене значення є генератором рядків, кожен із яких закінчується символом"
 " нового рядка."
 
-#: ../../library/traceback.rst:380
+#: ../../library/traceback.rst:388
 msgid ""
 "When *show_group* is ``False``, the generator emits the exception's message "
 "followed by its notes (if it has any). The exception message is normally a "
@@ -479,32 +487,32 @@ msgid ""
 "the syntax error occurred."
 msgstr ""
 
-#: ../../library/traceback.rst:390
+#: ../../library/traceback.rst:398
 msgid ""
 "The exception's :attr:`notes <BaseException.__notes__>` are now included in "
 "the output."
 msgstr ""
 
-#: ../../library/traceback.rst:394
+#: ../../library/traceback.rst:402
 msgid "Added the *show_group* parameter."
 msgstr ""
 
-#: ../../library/traceback.rst:399
+#: ../../library/traceback.rst:407
 msgid ":class:`!StackSummary` Objects"
 msgstr ""
 
-#: ../../library/traceback.rst:403
+#: ../../library/traceback.rst:411
 msgid ""
 ":class:`!StackSummary` objects represent a call stack ready for formatting."
 msgstr ""
 
-#: ../../library/traceback.rst:409
+#: ../../library/traceback.rst:417
 msgid ""
 "Construct a :class:`!StackSummary` object from a frame generator (such as is"
 " returned by :func:`~traceback.walk_stack` or :func:`~traceback.walk_tb`)."
 msgstr ""
 
-#: ../../library/traceback.rst:413
+#: ../../library/traceback.rst:421
 msgid ""
 "If *limit* is supplied, only this many frames are taken from *frame_gen*. If"
 " *lookup_lines* is ``False``, the returned :class:`FrameSummary` objects "
@@ -514,13 +522,13 @@ msgid ""
 " :class:`!FrameSummary` are captured as object representations."
 msgstr ""
 
-#: ../../library/traceback.rst:421
+#: ../../library/traceback.rst:429
 msgid ""
 "Exceptions raised from :func:`repr` on a local variable (when "
 "*capture_locals* is ``True``) are no longer propagated to the caller."
 msgstr ""
 
-#: ../../library/traceback.rst:427
+#: ../../library/traceback.rst:435
 msgid ""
 "Construct a :class:`!StackSummary` object from a supplied list of "
 ":class:`FrameSummary` objects or old-style list of tuples.  Each tuple "
@@ -528,7 +536,7 @@ msgid ""
 "elements."
 msgstr ""
 
-#: ../../library/traceback.rst:434
+#: ../../library/traceback.rst:442
 msgid ""
 "Returns a list of strings ready for printing.  Each string in the resulting "
 "list corresponds to a single :ref:`frame <frame-objects>` from the stack. "
@@ -536,7 +544,7 @@ msgid ""
 "well, for those items with source text lines."
 msgstr ""
 
-#: ../../library/traceback.rst:440
+#: ../../library/traceback.rst:448
 msgid ""
 "For long sequences of the same frame and line, the first few repetitions are"
 " shown, followed by a summary line stating the exact number of further "
@@ -546,11 +554,11 @@ msgstr ""
 "кілька повторів, за якими йде підсумковий рядок із зазначенням точної "
 "кількості подальших повторень."
 
-#: ../../library/traceback.rst:444
+#: ../../library/traceback.rst:452
 msgid "Long sequences of repeated frames are now abbreviated."
 msgstr "Довгі послідовності повторюваних кадрів тепер скорочуються."
 
-#: ../../library/traceback.rst:449
+#: ../../library/traceback.rst:457
 msgid ""
 "Returns a string for printing one of the :ref:`frames <frame-objects>` "
 "involved in the stack. This method is called for each :class:`FrameSummary` "
@@ -558,17 +566,17 @@ msgid ""
 " the frame is omitted from the output."
 msgstr ""
 
-#: ../../library/traceback.rst:459
+#: ../../library/traceback.rst:467
 msgid ":class:`!FrameSummary` Objects"
 msgstr ""
 
-#: ../../library/traceback.rst:463
+#: ../../library/traceback.rst:471
 msgid ""
 "A :class:`!FrameSummary` object represents a single :ref:`frame <frame-"
 "objects>` in a :ref:`traceback <traceback-objects>`."
 msgstr ""
 
-#: ../../library/traceback.rst:468
+#: ../../library/traceback.rst:476
 msgid ""
 "Represents a single :ref:`frame <frame-objects>` in the :ref:`traceback "
 "<traceback-objects>` or stack that is being formatted or printed. It may "
@@ -582,39 +590,39 @@ msgid ""
 "later display."
 msgstr ""
 
-#: ../../library/traceback.rst:479
+#: ../../library/traceback.rst:487
 msgid ":class:`!FrameSummary` instances have the following attributes:"
 msgstr ""
 
-#: ../../library/traceback.rst:483
+#: ../../library/traceback.rst:491
 msgid ""
 "The filename of the source code for this frame. Equivalent to accessing "
 ":attr:`f.f_code.co_filename <codeobject.co_filename>` on a :ref:`frame "
 "object <frame-objects>` *f*."
 msgstr ""
 
-#: ../../library/traceback.rst:489
+#: ../../library/traceback.rst:497
 msgid "The line number of the source code for this frame."
 msgstr ""
 
-#: ../../library/traceback.rst:493
+#: ../../library/traceback.rst:501
 msgid ""
 "Equivalent to accessing :attr:`f.f_code.co_name <codeobject.co_name>` on a "
 ":ref:`frame object <frame-objects>` *f*."
 msgstr ""
 
-#: ../../library/traceback.rst:498
+#: ../../library/traceback.rst:506
 msgid ""
 "A string representing the source code for this frame, with leading and "
 "trailing whitespace stripped. If the source is not available, it is "
 "``None``."
 msgstr ""
 
-#: ../../library/traceback.rst:505
+#: ../../library/traceback.rst:513
 msgid "Traceback Examples"
 msgstr "Приклади відстеження"
 
-#: ../../library/traceback.rst:507
+#: ../../library/traceback.rst:515
 msgid ""
 "This simple example implements a basic read-eval-print loop, similar to (but"
 " less useful than) the standard Python interactive interpreter loop.  For a "
@@ -626,7 +634,7 @@ msgstr ""
 "Python. Для більш повної реалізації циклу інтерпретатора зверніться до "
 "модуля :mod:`code`. ::"
 
-#: ../../library/traceback.rst:529
+#: ../../library/traceback.rst:537
 msgid ""
 "The following example demonstrates the different ways to print and format "
 "the exception and traceback:"
@@ -634,18 +642,18 @@ msgstr ""
 "У наступному прикладі демонструються різні способи друку та форматування "
 "винятку та зворотного відстеження:"
 
-#: ../../library/traceback.rst:564
+#: ../../library/traceback.rst:572
 msgid "The output for the example would look similar to this:"
 msgstr "Вихід для прикладу виглядатиме приблизно так:"
 
-#: ../../library/traceback.rst:611
+#: ../../library/traceback.rst:619
 msgid ""
 "The following example shows the different ways to print and format the "
 "stack::"
 msgstr ""
 "У наступному прикладі показано різні способи друку та форматування стосу:"
 
-#: ../../library/traceback.rst:637
+#: ../../library/traceback.rst:645
 msgid "This last example demonstrates the final few formatting functions:"
 msgstr "Цей останній приклад демонструє кілька останніх функцій форматування:"
 
@@ -657,10 +665,10 @@ msgstr "об'єкт"
 msgid "traceback"
 msgstr "traceback"
 
-#: ../../library/traceback.rst:62
+#: ../../library/traceback.rst:70
 msgid "^ (caret)"
 msgstr ""
 
-#: ../../library/traceback.rst:62
+#: ../../library/traceback.rst:70
 msgid "marker"
 msgstr ""
