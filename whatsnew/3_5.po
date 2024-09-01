@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -308,6 +308,12 @@ msgstr ""
 "Функції співпрограми оголошено за допомогою нового синтаксису "
 ":keyword:`async def`::"
 
+#: ../../whatsnew/3.5.rst:178
+msgid ""
+">>> async def coro():\n"
+"...     return 'spam'"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:181
 msgid ""
 "Inside a coroutine function, the new :keyword:`await` expression can be used"
@@ -335,6 +341,32 @@ msgstr ""
 "Приклад елементарного клієнта HTTP, написаного з використанням нового "
 "синтаксису:"
 
+#: ../../whatsnew/3.5.rst:191
+msgid ""
+"import asyncio\n"
+"\n"
+"async def http_get(domain):\n"
+"    reader, writer = await asyncio.open_connection(domain, 80)\n"
+"\n"
+"    writer.write(b'\\r\\n'.join([\n"
+"        b'GET / HTTP/1.1',\n"
+"        b'Host: %b' % domain.encode('latin-1'),\n"
+"        b'Connection: close',\n"
+"        b'', b''\n"
+"    ]))\n"
+"\n"
+"    async for line in reader:\n"
+"        print('>>>', line)\n"
+"\n"
+"    writer.close()\n"
+"\n"
+"loop = asyncio.get_event_loop()\n"
+"try:\n"
+"    loop.run_until_complete(http_get('example.com'))\n"
+"finally:\n"
+"    loop.close()"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:215
 msgid ""
 "Similarly to asynchronous iteration, there is a new syntax for asynchronous "
@@ -343,9 +375,39 @@ msgstr ""
 "Подібно до асинхронної ітерації, існує новий синтаксис для менеджерів "
 "асинхронного контексту. Наступний сценарій::"
 
+#: ../../whatsnew/3.5.rst:218
+msgid ""
+"import asyncio\n"
+"\n"
+"async def coro(name, lock):\n"
+"    print('coro {}: waiting for lock'.format(name))\n"
+"    async with lock:\n"
+"        print('coro {}: holding the lock'.format(name))\n"
+"        await asyncio.sleep(1)\n"
+"        print('coro {}: releasing the lock'.format(name))\n"
+"\n"
+"loop = asyncio.get_event_loop()\n"
+"lock = asyncio.Lock()\n"
+"coros = asyncio.gather(coro(1, lock), coro(2, lock))\n"
+"try:\n"
+"    loop.run_until_complete(coros)\n"
+"finally:\n"
+"    loop.close()"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:235
 msgid "will output::"
 msgstr "виведе::"
+
+#: ../../whatsnew/3.5.rst:237
+msgid ""
+"coro 2: waiting for lock\n"
+"coro 2: holding the lock\n"
+"coro 1: waiting for lock\n"
+"coro 2: releasing the lock\n"
+"coro 1: holding the lock\n"
+"coro 1: releasing the lock"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:244
 msgid ""
@@ -416,13 +478,41 @@ msgstr ""
 "Матричне множення є досить поширеною операцією в багатьох галузях "
 "математики, науки, техніки, а додавання ``@`` дозволяє писати чистіший код::"
 
+#: ../../whatsnew/3.5.rst:285
+msgid "S = (H @ beta - r).T @ inv(H @ V @ H.T) @ (H @ beta - r)"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:287
 msgid "instead of::"
 msgstr "замість::"
 
+#: ../../whatsnew/3.5.rst:289
+msgid ""
+"S = dot((dot(H, beta) - r).T,\n"
+"        dot(inv(dot(dot(H, V), H.T)), dot(H, beta) - r))"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:292
 msgid "NumPy 1.10 has support for the new operator::"
 msgstr "NumPy 1.10 підтримує новий оператор:"
+
+#: ../../whatsnew/3.5.rst:294
+msgid ""
+">>> import numpy\n"
+"\n"
+">>> x = numpy.ones(3)\n"
+">>> x\n"
+"array([ 1., 1., 1.])\n"
+"\n"
+">>> m = numpy.eye(3)\n"
+">>> m\n"
+"array([[ 1., 0., 0.],\n"
+"       [ 0., 1., 0.],\n"
+"       [ 0., 0., 1.]])\n"
+"\n"
+">>> x @ m\n"
+"array([ 1., 1., 1.])"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:312
 msgid ":pep:`465` -- A dedicated infix operator for matrix multiplication"
@@ -448,6 +538,19 @@ msgstr ""
 "використовувати довільну кількість розпакувань у :ref:`викликах функцій "
 "<calls>`::"
 
+#: ../../whatsnew/3.5.rst:325
+msgid ""
+">>> print(*[1], *[2], 3, *[4, 5])\n"
+"1 2 3 4 5\n"
+"\n"
+">>> def fn(a, b, c, d):\n"
+"...     print(a, b, c, d)\n"
+"...\n"
+"\n"
+">>> fn(**{'a': 1, 'c': 3}, **{'b': 2, 'd': 4})\n"
+"1 2 3 4"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:335
 msgid ""
 "Similarly, tuple, list, set, and dictionary displays allow multiple "
@@ -455,6 +558,21 @@ msgid ""
 msgstr ""
 "Так само відображення кортежів, списків, наборів і словників дозволяють "
 "багаторазове розпакування (див. :ref:`exprlists` і :ref:`dict`)::"
+
+#: ../../whatsnew/3.5.rst:338
+msgid ""
+">>> *range(4), 4\n"
+"(0, 1, 2, 3, 4)\n"
+"\n"
+">>> [*range(4), 4]\n"
+"[0, 1, 2, 3, 4]\n"
+"\n"
+">>> {*range(4), 4, *(5, 6, 7)}\n"
+"{0, 1, 2, 3, 4, 5, 6, 7}\n"
+"\n"
+">>> {'x': 1, **{'y': 2}}\n"
+"{'x': 1, 'y': 2}"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:352
 msgid ":pep:`448` -- Additional Unpacking Generalizations"
@@ -500,6 +618,15 @@ msgstr ""
 msgid "Examples::"
 msgstr "Приклади::"
 
+#: ../../whatsnew/3.5.rst:375
+msgid ""
+">>> b'Hello %b!' % b'World'\n"
+"b'Hello World!'\n"
+"\n"
+">>> b'x=%i y=%f' % (1, 2.5)\n"
+"b'x=1 y=2.500000'"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:381
 msgid ""
 "Unicode is not allowed for ``%b``, but it is accepted by ``%a`` (equivalent "
@@ -507,6 +634,17 @@ msgid ""
 msgstr ""
 "Юнікод не дозволяється для ``%b``, але він приймається ``%a`` (еквівалент "
 "``repr(obj).encode('ascii', 'backslashreplace')``::"
+
+#: ../../whatsnew/3.5.rst:384
+msgid ""
+">>> b'Hello %b!' % 'World'\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: %b requires bytes, or an object that implements __bytes__, not 'str'\n"
+"\n"
+">>> b'price: %a' % '10€'\n"
+"b\"price: '10\\\\u20ac'\""
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:392
 msgid ""
@@ -568,6 +706,12 @@ msgid ""
 msgstr ""
 "Наприклад, ось проста функція, чий аргумент і тип повернення оголошено в "
 "анотаціях::"
+
+#: ../../whatsnew/3.5.rst:422
+msgid ""
+"def greeting(name: str) -> str:\n"
+"    return 'Hello ' + name"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:425
 msgid ""
@@ -655,6 +799,13 @@ msgstr ""
 "починаються з ``'.'``. Виклик :meth:`entry.is_file() <os.DirEntry.is_file>` "
 "зазвичай не виконує додаткових системних викликів:"
 
+#: ../../whatsnew/3.5.rst:466
+msgid ""
+"for entry in os.scandir(path):\n"
+"    if not entry.name.startswith('.') and entry.is_file():\n"
+"        print(entry.name)"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:472
 msgid ""
 ":pep:`471` -- os.scandir() function -- a better and faster directory "
@@ -702,9 +853,23 @@ msgstr ""
 "додає велику кількість шаблонів, що робить код майже нечитабельним. "
 "Порівняти::"
 
+#: ../../whatsnew/3.5.rst:494
+msgid "print(\"Hello World\")"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:496
 msgid "and::"
 msgstr "і::"
+
+#: ../../whatsnew/3.5.rst:498
+msgid ""
+"while True:\n"
+"    try:\n"
+"        print(\"Hello World\")\n"
+"        break\n"
+"    except InterruptedError:\n"
+"        continue"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:505
 msgid ""
@@ -857,6 +1022,26 @@ msgstr ""
 "Це зворотно несумісна зміна, тому, щоб увімкнути нову поведінку, потрібен "
 "імпорт :term:`__future__`::"
 
+#: ../../whatsnew/3.5.rst:578
+msgid ""
+">>> from __future__ import generator_stop\n"
+"\n"
+">>> def gen():\n"
+"...     next(iter([]))\n"
+"...     yield\n"
+"...\n"
+">>> next(gen())\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 2, in gen\n"
+"StopIteration\n"
+"\n"
+"The above exception was the direct cause of the following exception:\n"
+"\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"RuntimeError: generator raised StopIteration"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:595
 msgid ""
 "Without a ``__future__`` import, a :exc:`PendingDeprecationWarning` will be "
@@ -899,6 +1084,17 @@ msgstr ""
 "максимально дозволена різниця між аргументами ``isclose`` відносно більшого "
 "абсолютного значення::"
 
+#: ../../whatsnew/3.5.rst:617
+msgid ""
+">>> import math\n"
+">>> a = 5.0\n"
+">>> b = 4.99998\n"
+">>> math.isclose(a, b, rel_tol=1e-5)\n"
+"True\n"
+">>> math.isclose(a, b, rel_tol=1e-6)\n"
+"False"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:625
 msgid ""
 "It is also possible to compare two values using absolute tolerance, which "
@@ -906,6 +1102,17 @@ msgid ""
 msgstr ""
 "Також можна порівняти два значення, використовуючи абсолютний допуск, який "
 "має бути невід’ємним значенням:"
+
+#: ../../whatsnew/3.5.rst:628
+msgid ""
+">>> import math\n"
+">>> a = 5.0\n"
+">>> b = 4.99998\n"
+">>> math.isclose(a, b, abs_tol=0.00003)\n"
+"True\n"
+">>> math.isclose(a, b, abs_tol=0.00001)\n"
+"False"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:638
 msgid ":pep:`485` -- A function for testing approximate equality"
@@ -1110,6 +1317,12 @@ msgid ""
 msgstr ""
 "З новим модулем об’єднати вашу програму так само просто, як помістити всі "
 "файли, включно з файлом ``__main__.py``, у каталог ``myapp`` і запустити:"
+
+#: ../../whatsnew/3.5.rst:747
+msgid ""
+"$ python -m zipapp myapp\n"
+"$ python myapp.pyz"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:752
 msgid ""
@@ -1451,6 +1664,14 @@ msgstr ""
 "Рядки документів, створені :func:`~collections.namedtuple`, тепер можна "
 "оновлювати:"
 
+#: ../../whatsnew/3.5.rst:923
+msgid ""
+"Point = namedtuple('Point', ['x', 'y'])\n"
+"Point.__doc__ += ': Cartesian coordinate'\n"
+"Point.x.__doc__ = 'abscissa'\n"
+"Point.y.__doc__ = 'ordinate'"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:928
 msgid "(Contributed by Berker Peksag in :issue:`24064`.)"
 msgstr "(Надано Berker Peksag у :issue:`24064`.)"
@@ -1601,6 +1822,25 @@ msgstr ""
 msgid "Example::"
 msgstr "Приклад::"
 
+#: ../../whatsnew/3.5.rst:1000
+msgid ""
+">>> import configparser\n"
+">>> conv = {}\n"
+">>> conv['list'] = lambda v: [e.strip() for e in v.split() if e.strip()]\n"
+">>> cfg = configparser.ConfigParser(converters=conv)\n"
+">>> cfg.read_string(\"\"\"\n"
+"... [s]\n"
+"... list = a b c d e f g\n"
+"... \"\"\")\n"
+">>> cfg.get('s', 'list')\n"
+"'a b c d e f g'\n"
+">>> cfg.getlist('s', 'list')\n"
+"['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
+">>> section = cfg['s']\n"
+">>> section.getlist('list')\n"
+"['a', 'b', 'c', 'd', 'e', 'f', 'g']"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1016
 msgid "(Contributed by Łukasz Langa in :issue:`18159`.)"
 msgstr "(Надав Łukasz Langa в :issue:`18159`.)"
@@ -1620,6 +1860,17 @@ msgstr ""
 " :func:`~contextlib.redirect_stdout`) спрощує роботу сценаріїв утиліт з "
 "негнучкими API, які записують свій вихід до :data:`sys.stderr` і не надає "
 "жодних опцій для його перенаправлення::"
+
+#: ../../whatsnew/3.5.rst:1027
+msgid ""
+">>> import contextlib, io, logging\n"
+">>> f = io.StringIO()\n"
+">>> with contextlib.redirect_stderr(f):\n"
+"...     logging.warning('warning')\n"
+"...\n"
+">>> f.getvalue()\n"
+"'WARNING:root:warning\\n'"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1035
 msgid "(Contributed by Berker Peksag in :issue:`22389`.)"
@@ -1796,6 +2047,15 @@ msgstr ""
 "Викликаний :class:`~enum.Enum` має новий параметр *start* для визначення "
 "початкової кількості значень переліку, якщо надано лише *імена*::"
 
+#: ../../whatsnew/3.5.rst:1128
+msgid ""
+">>> Animal = enum.Enum('Animal', 'cat dog', start=10)\n"
+">>> Animal.cat\n"
+"<Animal.cat: 10>\n"
+">>> Animal.dog\n"
+"<Animal.dog: 11>"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1134
 msgid "(Contributed by Ethan Furman in :issue:`21706`.)"
 msgstr "(Надав Ітан Фурман у :issue:`21706`.)"
@@ -1874,6 +2134,17 @@ msgstr ""
 "слова *key*, а новий додатковий аргумент ключового слова *reverse* можна "
 "використовувати для зворотного порівняння елементів::"
 
+#: ../../whatsnew/3.5.rst:1181
+msgid ""
+">>> import heapq\n"
+">>> a = ['9', '777', '55555']\n"
+">>> b = ['88', '6666']\n"
+">>> list(heapq.merge(a, b, key=len))\n"
+"['9', '88', '777', '6666', '55555']\n"
+">>> list(heapq.merge(reversed(a), reversed(b), key=len, reverse=True))\n"
+"['55555', '6666', '777', '88', '9']"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1189
 msgid "(Contributed by Raymond Hettinger in :issue:`13742`.)"
 msgstr "(Надав Реймонд Геттінгер у :issue:`13742`.)"
@@ -1912,6 +2183,18 @@ msgstr ""
 " неочікувано закривається. Крім того, якщо виникає :exc:`ConnectionError` "
 "(підкласом якого є ``RemoteDisconnected``), клієнтський сокет тепер "
 "автоматично закривається та підключатиметься за наступним запитом::"
+
+#: ../../whatsnew/3.5.rst:1210
+msgid ""
+"import http.client\n"
+"conn = http.client.HTTPConnection('www.python.org')\n"
+"for retries in range(3):\n"
+"    try:\n"
+"        conn.request('GET', '/')\n"
+"        resp = conn.getresponse()\n"
+"    except http.client.RemoteDisconnected:\n"
+"        pass"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1219
 msgid "(Contributed by Martin Panter in :issue:`3566`.)"
@@ -2058,6 +2341,15 @@ msgstr ""
 "<inspect.BoundArguments.apply_defaults>` забезпечує спосіб встановлення "
 "значень за замовчуванням для відсутніх аргументів:"
 
+#: ../../whatsnew/3.5.rst:1293
+msgid ""
+">>> def foo(a, b='ham', *args): pass\n"
+">>> ba = inspect.signature(foo).bind('spam')\n"
+">>> ba.apply_defaults()\n"
+">>> ba.arguments\n"
+"OrderedDict([('a', 'spam'), ('b', 'ham'), ('args', ())])"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1299
 msgid "(Contributed by Yury Selivanov in :issue:`24190`.)"
 msgstr "(Надав Юрій Селіванов у :issue:`24190`.)"
@@ -2146,6 +2438,15 @@ msgstr ""
 ":class:`~ipaddress.IPv6Network` тепер приймають аргумент кортежу ``(адреса, "
 "маска мережі)``, щоб легко створювати мережеві об’єкти з існуючих адрес:"
 
+#: ../../whatsnew/3.5.rst:1342
+msgid ""
+">>> import ipaddress\n"
+">>> ipaddress.IPv4Network(('127.0.0.0', 8))\n"
+"IPv4Network('127.0.0.0/8')\n"
+">>> ipaddress.IPv4Network(('127.0.0.0', '255.0.0.0'))\n"
+"IPv4Network('127.0.0.0/8')"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1348
 msgid "(Contributed by Peter Moody and Antoine Pitrou in :issue:`16531`.)"
 msgstr "(Надано Пітером Муді та Антуаном Пітру в :issue:`16531`.)"
@@ -2159,6 +2460,17 @@ msgstr ""
 "Новий атрибут :attr:`~ipaddress.IPv4Network.reverse_pointer` для класів "
 ":class:`~ipaddress.IPv4Network` і :class:`~ipaddress.IPv6Network` повертає "
 "назву зворотного запису DNS PTR::"
+
+#: ../../whatsnew/3.5.rst:1354
+msgid ""
+">>> import ipaddress\n"
+">>> addr = ipaddress.IPv4Address('127.0.0.1')\n"
+">>> addr.reverse_pointer\n"
+"'1.0.0.127.in-addr.arpa'\n"
+">>> addr6 = ipaddress.IPv6Address('::1')\n"
+">>> addr6.reverse_pointer\n"
+"'1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa'"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1362
 msgid "(Contributed by Leon Weber in :issue:`20480`.)"
@@ -2222,6 +2534,19 @@ msgstr ""
 "перетворення рядка в нормалізований рядок чисел, враховуючи параметри "
 "``LC_NUMERIC``:"
 
+#: ../../whatsnew/3.5.rst:1394
+msgid ""
+">>> import locale\n"
+">>> locale.setlocale(locale.LC_NUMERIC, 'de_DE.UTF-8')\n"
+"'de_DE.UTF-8'\n"
+">>> locale.delocalize('1.234,56')\n"
+"'1234.56'\n"
+">>> locale.setlocale(locale.LC_NUMERIC, 'en_US.UTF-8')\n"
+"'en_US.UTF-8'\n"
+">>> locale.delocalize('1,234.56')\n"
+"'1234.56'"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1404
 msgid "(Contributed by Cédric Krier in :issue:`13918`.)"
 msgstr "(Надав Седрик Крієр у :issue:`13918`.)"
@@ -2242,6 +2567,16 @@ msgstr ""
 ":meth:`~logging.Logger.critical`, :meth:`~logging.Logger.debug` тощо), тепер"
 " приймають випадки винятків як аргумент *exc_info* на додаток до логічних "
 "значень і кортежів винятків::"
+
+#: ../../whatsnew/3.5.rst:1416
+msgid ""
+">>> import logging\n"
+">>> try:\n"
+"...     1/0\n"
+"... except ZeroDivisionError as ex:\n"
+"...     logging.error('exception', exc_info=ex)\n"
+"ERROR:root:exception"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1423
 msgid "(Contributed by Yury Selivanov in :issue:`20537`.)"
@@ -2430,6 +2765,15 @@ msgstr ""
 "загальний підшлях кожного переданого шляху. На відміну від функції "
 ":func:`os.path.commonprefix`, вона завжди повертає дійсний шлях::"
 
+#: ../../whatsnew/3.5.rst:1512
+msgid ""
+">>> os.path.commonprefix(['/usr/lib', '/usr/local/lib'])\n"
+"'/usr/l'\n"
+"\n"
+">>> os.path.commonpath(['/usr/lib', '/usr/local/lib'])\n"
+"'/usr'"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1518
 msgid "(Contributed by Rafik Draoui and Serhiy Storchaka in :issue:`10395`.)"
 msgstr "(Надано Рафіком Драуї та Сергієм Сторчакою в :issue:`10395`.)"
@@ -2448,6 +2792,15 @@ msgstr ""
 "використовувати, щоб перевірити, чи шлях вказує на той самий файл, що й "
 "інший шлях, який може бути іншим об’єктом :class:`~pathlib.Path` або рядком "
 "::"
+
+#: ../../whatsnew/3.5.rst:1528
+msgid ""
+">>> import pathlib\n"
+">>> p1 = pathlib.Path('/etc/hosts')\n"
+">>> p2 = pathlib.Path('/etc/../etc/hosts')\n"
+">>> p1.samefile(p2)\n"
+"True"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1534
 msgid "(Contributed by Vajrasky Kok and Antoine Pitrou in :issue:`19775`.)"
@@ -2505,6 +2858,14 @@ msgid ""
 msgstr ""
 "Наступний фрагмент коду створить або перепише існуючий файл ``~/spam42``::"
 
+#: ../../whatsnew/3.5.rst:1558
+msgid ""
+">>> import pathlib\n"
+">>> p = pathlib.Path('~/spam42')\n"
+">>> p.expanduser().write_text('ham')\n"
+"3"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1563
 msgid "(Contributed by Christopher Welborn in :issue:`20218`.)"
 msgstr "(Надав Крістофер Велборн у :issue:`20218`.)"
@@ -2551,6 +2912,16 @@ msgstr ""
 "Посилання та умовні посилання на групи з фіксованою довжиною тепер дозволені"
 " в ретроспективних твердженнях::"
 
+#: ../../whatsnew/3.5.rst:1589
+msgid ""
+">>> import re\n"
+">>> pat = re.compile(r'(a|b).(?<=\\1)c')\n"
+">>> pat.match('aac')\n"
+"<_sre.SRE_Match object; span=(0, 3), match='aac'>\n"
+">>> pat.match('bbc')\n"
+"<_sre.SRE_Match object; span=(0, 3), match='bbc'>"
+msgstr ""
+
 #: ../../whatsnew/3.5.rst:1596
 msgid "(Contributed by Serhiy Storchaka in :issue:`9179`.)"
 msgstr "(Надав Сергій Сторчака в :issue:`9179`.)"
@@ -2584,6 +2955,17 @@ msgstr ""
 ":attr:`~re.error.pattern`, :attr:`~re.error.pos`, :attr:`~re.error.lineno` і"
 " :attr:`~re.error.colno`, які надають кращу контекстну інформацію про "
 "помилку::"
+
+#: ../../whatsnew/3.5.rst:1611
+msgid ""
+">>> re.compile(\"\"\"\n"
+"...     (?x)\n"
+"...     .++\n"
+"... \"\"\")\n"
+"Traceback (most recent call last):\n"
+"   ...\n"
+"sre_constants.error: multiple repeat at position 16 (line 3, column 7)"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1619
 msgid "(Contributed by Serhiy Storchaka in :issue:`22578`.)"
@@ -3007,6 +3389,21 @@ msgstr ""
 " до виклику підпроцесів у коді Python, якому не потрібно підтримувати "
 "сумісність із попередніми версіями Python. (Надав Томас Клюйвер у "
 ":issue:`23342`.)"
+
+#: ../../whatsnew/3.5.rst:1850
+msgid ""
+">>> subprocess.run([\"ls\", \"-l\"])  # doesn't capture output\n"
+"CompletedProcess(args=['ls', '-l'], returncode=0)\n"
+"\n"
+">>> subprocess.run(\"exit 1\", shell=True, check=True)\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"subprocess.CalledProcessError: Command 'exit 1' returned non-zero exit status 1\n"
+"\n"
+">>> subprocess.run([\"ls\", \"-l\", \"/dev/null\"], stdout=subprocess.PIPE)\n"
+"CompletedProcess(args=['ls', '-l', '/dev/null'], returncode=0,\n"
+"stdout=b'crw-rw-rw- 1 root root 1, 3 Jan 23 16:23 /dev/null\\n')"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:1864
 msgid "sys"
@@ -4079,6 +4476,12 @@ msgid ""
 "following syntax::"
 msgstr ""
 "Через помилку попередні версії Python помилково приймали такий синтаксис:"
+
+#: ../../whatsnew/3.5.rst:2389
+msgid ""
+"f(1 for x in [1], *args)\n"
+"f(1 for x in [1], **kwargs)"
+msgstr ""
 
 #: ../../whatsnew/3.5.rst:2392
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -215,6 +215,30 @@ msgstr ""
 msgid "Here is a short script to test three string methods::"
 msgstr "Ось короткий скрипт для перевірки трьох методів рядків:"
 
+#: ../../library/unittest.rst:91
+msgid ""
+"import unittest\n"
+"\n"
+"class TestStringMethods(unittest.TestCase):\n"
+"\n"
+"    def test_upper(self):\n"
+"        self.assertEqual('foo'.upper(), 'FOO')\n"
+"\n"
+"    def test_isupper(self):\n"
+"        self.assertTrue('FOO'.isupper())\n"
+"        self.assertFalse('Foo'.isupper())\n"
+"\n"
+"    def test_split(self):\n"
+"        s = 'hello world'\n"
+"        self.assertEqual(s.split(), ['hello', 'world'])\n"
+"        # check that s.split fails when the separator is not a string\n"
+"        with self.assertRaises(TypeError):\n"
+"            s.split(2)\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    unittest.main()"
+msgstr ""
+
 #: ../../library/unittest.rst:113
 msgid ""
 "A testcase is created by subclassing :class:`unittest.TestCase`.  The three "
@@ -266,6 +290,15 @@ msgstr ""
 "командного рядка наведений вище сценарій створює вихідні дані, які "
 "виглядають так:"
 
+#: ../../library/unittest.rst:133
+msgid ""
+"...\n"
+"----------------------------------------------------------------------\n"
+"Ran 3 tests in 0.000s\n"
+"\n"
+"OK"
+msgstr ""
+
 #: ../../library/unittest.rst:139
 msgid ""
 "Passing the ``-v`` option to your test script will instruct "
@@ -275,6 +308,18 @@ msgstr ""
 "Передача параметра ``-v`` у ваш тестовий сценарій вказує "
 ":func:`unittest.main` увімкнути вищий рівень докладності та створить такий "
 "вихід:"
+
+#: ../../library/unittest.rst:142
+msgid ""
+"test_isupper (__main__.TestStringMethods.test_isupper) ... ok\n"
+"test_split (__main__.TestStringMethods.test_split) ... ok\n"
+"test_upper (__main__.TestStringMethods.test_upper) ... ok\n"
+"\n"
+"----------------------------------------------------------------------\n"
+"Ran 3 tests in 0.001s\n"
+"\n"
+"OK"
+msgstr ""
 
 #: ../../library/unittest.rst:151
 msgid ""
@@ -304,6 +349,13 @@ msgstr ""
 "Модуль unittest можна використовувати з командного рядка для запуску тестів "
 "із модулів, класів або навіть окремих методів тестування:"
 
+#: ../../library/unittest.rst:168
+msgid ""
+"python -m unittest test_module1 test_module2\n"
+"python -m unittest test_module.TestClass\n"
+"python -m unittest test_module.TestClass.test_method"
+msgstr ""
+
 #: ../../library/unittest.rst:172
 msgid ""
 "You can pass in a list with any combination of module names, and fully "
@@ -315,6 +367,10 @@ msgstr ""
 #: ../../library/unittest.rst:175
 msgid "Test modules can be specified by file path as well::"
 msgstr "Тестові модулі також можна вказати шляхом до файлу:"
+
+#: ../../library/unittest.rst:177
+msgid "python -m unittest tests/test_something.py"
+msgstr ""
 
 #: ../../library/unittest.rst:179
 msgid ""
@@ -338,15 +394,27 @@ msgstr ""
 "Ви можете запустити тести з більшою деталізацією (вищою детальністю), "
 "передавши прапор -v::"
 
+#: ../../library/unittest.rst:187
+msgid "python -m unittest -v test_module"
+msgstr ""
+
 #: ../../library/unittest.rst:189
 msgid ""
 "When executed without arguments :ref:`unittest-test-discovery` is started::"
 msgstr ""
 "При виконанні без аргументів :ref:`unittest-test-discovery` запускається::"
 
+#: ../../library/unittest.rst:191
+msgid "python -m unittest"
+msgstr ""
+
 #: ../../library/unittest.rst:193
 msgid "For a list of all the command-line options::"
 msgstr "Список усіх параметрів командного рядка:"
+
+#: ../../library/unittest.rst:195
+msgid "python -m unittest -h"
+msgstr ""
 
 #: ../../library/unittest.rst:197
 msgid ""
@@ -489,6 +557,12 @@ msgstr ""
 "можна використовувати з командного рядка. Основне використання командного "
 "рядка:"
 
+#: ../../library/unittest.rst:282
+msgid ""
+"cd project_directory\n"
+"python -m unittest discover"
+msgstr ""
+
 #: ../../library/unittest.rst:287
 msgid ""
 "As a shortcut, ``python -m unittest`` is the equivalent of ``python -m "
@@ -530,6 +604,12 @@ msgstr ""
 "Параметри :option:`-s`, :option:`-p` і :option:`-t` можна передати як "
 "позиційні аргументи в такому порядку. Наступні два командні рядки "
 "еквівалентні:"
+
+#: ../../library/unittest.rst:315
+msgid ""
+"python -m unittest discover -s project_directory -p \"*_test.py\"\n"
+"python -m unittest discover project_directory \"*_test.py\""
+msgstr ""
 
 #: ../../library/unittest.rst:318
 msgid ""
@@ -609,6 +689,17 @@ msgid ""
 "target directory explicitly. For example::"
 msgstr ""
 
+#: ../../library/unittest.rst:358
+msgid ""
+"# proj/  <-- current directory\n"
+"#   namespace/\n"
+"#     mypkg/\n"
+"#       __init__.py\n"
+"#       test_mypkg.py\n"
+"\n"
+"python -m unittest discover -s namespace.mypkg -t ."
+msgstr ""
+
 #: ../../library/unittest.rst:370
 msgid "Organizing test code"
 msgstr "Організація тестового коду"
@@ -648,6 +739,16 @@ msgstr ""
 " метод, назва якого починається з ``test``), щоб виконати певний код "
 "тестування:"
 
+#: ../../library/unittest.rst:386
+msgid ""
+"import unittest\n"
+"\n"
+"class DefaultWidgetSizeTestCase(unittest.TestCase):\n"
+"    def test_default_widget_size(self):\n"
+"        widget = Widget('The widget')\n"
+"        self.assertEqual(widget.size(), (50, 50))"
+msgstr ""
+
 #: ../../library/unittest.rst:393
 msgid ""
 "Note that in order to test something, we use one of the :ref:`assert\\* "
@@ -668,6 +769,24 @@ msgstr ""
 "ми можемо виключити код налаштування, реалізувавши метод під назвою "
 ":meth:`~TestCase.setUp`, який система тестування автоматично викличе для "
 "кожного тесту, який ми виконуємо:"
+
+#: ../../library/unittest.rst:404
+msgid ""
+"import unittest\n"
+"\n"
+"class WidgetTestCase(unittest.TestCase):\n"
+"    def setUp(self):\n"
+"        self.widget = Widget('The widget')\n"
+"\n"
+"    def test_default_widget_size(self):\n"
+"        self.assertEqual(self.widget.size(), (50,50),\n"
+"                         'incorrect default size')\n"
+"\n"
+"    def test_widget_resize(self):\n"
+"        self.widget.resize(100,150)\n"
+"        self.assertEqual(self.widget.size(), (100,150),\n"
+"                         'wrong size after resize')"
+msgstr ""
 
 #: ../../library/unittest.rst:420
 msgid ""
@@ -694,6 +813,18 @@ msgid ""
 msgstr ""
 "Подібним чином ми можемо надати метод :meth:`~TestCase.tearDown`, який "
 "наводить порядок після виконання тестового методу:"
+
+#: ../../library/unittest.rst:431
+msgid ""
+"import unittest\n"
+"\n"
+"class WidgetTestCase(unittest.TestCase):\n"
+"    def setUp(self):\n"
+"        self.widget = Widget('The widget')\n"
+"\n"
+"    def tearDown(self):\n"
+"        self.widget.dispose()"
+msgstr ""
 
 #: ../../library/unittest.rst:440
 msgid ""
@@ -740,6 +871,19 @@ msgid ""
 msgstr ""
 "Однак, якщо ви хочете налаштувати збірку свого набору тестів, ви можете "
 "зробити це самостійно:"
+
+#: ../../library/unittest.rst:459
+msgid ""
+"def suite():\n"
+"    suite = unittest.TestSuite()\n"
+"    suite.addTest(WidgetTestCase('test_default_widget_size'))\n"
+"    suite.addTest(WidgetTestCase('test_widget_resize'))\n"
+"    return suite\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    runner = unittest.TextTestRunner()\n"
+"    runner.run(suite())"
+msgstr ""
 
 #: ../../library/unittest.rst:469
 msgid ""
@@ -822,6 +966,14 @@ msgstr ""
 msgid "Given the following test function::"
 msgstr "Дано таку тестову функцію:"
 
+#: ../../library/unittest.rst:506
+msgid ""
+"def testSomething():\n"
+"    something = makeSomething()\n"
+"    assert something.name is not None\n"
+"    # ..."
+msgstr ""
+
 #: ../../library/unittest.rst:511
 msgid ""
 "one can create an equivalent test case instance as follows, with optional "
@@ -829,6 +981,13 @@ msgid ""
 msgstr ""
 "можна створити еквівалентний екземпляр тестового сценарію наступним чином із"
 " додатковими методами налаштування та демонтажу:"
+
+#: ../../library/unittest.rst:514
+msgid ""
+"testcase = unittest.FunctionTestCase(testSomething,\n"
+"                                     setUp=makeSomethingDB,\n"
+"                                     tearDown=deleteSomethingDB)"
+msgstr ""
 
 #: ../../library/unittest.rst:520
 msgid ""
@@ -888,13 +1047,60 @@ msgstr ""
 msgid "Basic skipping looks like this::"
 msgstr "Базовий пропуск виглядає так::"
 
+#: ../../library/unittest.rst:549
+msgid ""
+"class MyTestCase(unittest.TestCase):\n"
+"\n"
+"    @unittest.skip(\"demonstrating skipping\")\n"
+"    def test_nothing(self):\n"
+"        self.fail(\"shouldn't happen\")\n"
+"\n"
+"    @unittest.skipIf(mylib.__version__ < (1, 3),\n"
+"                     \"not supported in this library version\")\n"
+"    def test_format(self):\n"
+"        # Tests that work for only a certain version of the library.\n"
+"        pass\n"
+"\n"
+"    @unittest.skipUnless(sys.platform.startswith(\"win\"), \"requires Windows\")\n"
+"    def test_windows_support(self):\n"
+"        # windows specific testing code\n"
+"        pass\n"
+"\n"
+"    def test_maybe_skipped(self):\n"
+"        if not external_resource_available():\n"
+"            self.skipTest(\"external resource not available\")\n"
+"        # test code that depends on the external resource\n"
+"        pass"
+msgstr ""
+
 #: ../../library/unittest.rst:572
 msgid "This is the output of running the example above in verbose mode::"
 msgstr "Це результат виконання наведеного вище прикладу в докладному режимі:"
 
+#: ../../library/unittest.rst:574
+msgid ""
+"test_format (__main__.MyTestCase.test_format) ... skipped 'not supported in this library version'\n"
+"test_nothing (__main__.MyTestCase.test_nothing) ... skipped 'demonstrating skipping'\n"
+"test_maybe_skipped (__main__.MyTestCase.test_maybe_skipped) ... skipped 'external resource not available'\n"
+"test_windows_support (__main__.MyTestCase.test_windows_support) ... skipped 'requires Windows'\n"
+"\n"
+"----------------------------------------------------------------------\n"
+"Ran 4 tests in 0.005s\n"
+"\n"
+"OK (skipped=4)"
+msgstr ""
+
 #: ../../library/unittest.rst:584
 msgid "Classes can be skipped just like methods::"
 msgstr "Класи можна пропускати, як і методи:"
+
+#: ../../library/unittest.rst:586
+msgid ""
+"@unittest.skip(\"showing class skipping\")\n"
+"class MySkippedTestCase(unittest.TestCase):\n"
+"    def test_not_run(self):\n"
+"        pass"
+msgstr ""
 
 #: ../../library/unittest.rst:591
 msgid ""
@@ -909,6 +1115,14 @@ msgid "Expected failures use the :func:`expectedFailure` decorator. ::"
 msgstr ""
 "Очікувані помилки використовують декоратор :func:`expectedFailure`. ::"
 
+#: ../../library/unittest.rst:596
+msgid ""
+"class ExpectedFailureTestCase(unittest.TestCase):\n"
+"    @unittest.expectedFailure\n"
+"    def test_fail(self):\n"
+"        self.assertEqual(1, 0, \"broken\")"
+msgstr ""
+
 #: ../../library/unittest.rst:601
 msgid ""
 "It's easy to roll your own skipping decorators by making a decorator that "
@@ -919,6 +1133,14 @@ msgstr ""
 "викликає :func:`skip` у тесті, коли хоче, щоб його було пропущено. Цей "
 "декоратор пропускає перевірку, якщо переданий об’єкт не має певного "
 "атрибута::"
+
+#: ../../library/unittest.rst:605
+msgid ""
+"def skipUnlessHasattr(obj, attr):\n"
+"    if hasattr(obj, attr):\n"
+"        return lambda func: func\n"
+"    return unittest.skip(\"{!r} doesn't have {!r}\".format(obj, attr))"
+msgstr ""
 
 #: ../../library/unittest.rst:610
 msgid ""
@@ -998,9 +1220,55 @@ msgstr ""
 msgid "For example, the following test::"
 msgstr "Наприклад, такий тест:"
 
+#: ../../library/unittest.rst:657
+msgid ""
+"class NumbersTest(unittest.TestCase):\n"
+"\n"
+"    def test_even(self):\n"
+"        \"\"\"\n"
+"        Test that numbers between 0 and 5 are all even.\n"
+"        \"\"\"\n"
+"        for i in range(0, 6):\n"
+"            with self.subTest(i=i):\n"
+"                self.assertEqual(i % 2, 0)"
+msgstr ""
+
 #: ../../library/unittest.rst:667
 msgid "will produce the following output::"
 msgstr "виведе наступний вихід:"
+
+#: ../../library/unittest.rst:669
+msgid ""
+"======================================================================\n"
+"FAIL: test_even (__main__.NumbersTest.test_even) (i=1)\n"
+"Test that numbers between 0 and 5 are all even.\n"
+"----------------------------------------------------------------------\n"
+"Traceback (most recent call last):\n"
+"  File \"subtests.py\", line 11, in test_even\n"
+"    self.assertEqual(i % 2, 0)\n"
+"    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+"AssertionError: 1 != 0\n"
+"\n"
+"======================================================================\n"
+"FAIL: test_even (__main__.NumbersTest.test_even) (i=3)\n"
+"Test that numbers between 0 and 5 are all even.\n"
+"----------------------------------------------------------------------\n"
+"Traceback (most recent call last):\n"
+"  File \"subtests.py\", line 11, in test_even\n"
+"    self.assertEqual(i % 2, 0)\n"
+"    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+"AssertionError: 1 != 0\n"
+"\n"
+"======================================================================\n"
+"FAIL: test_even (__main__.NumbersTest.test_even) (i=5)\n"
+"Test that numbers between 0 and 5 are all even.\n"
+"----------------------------------------------------------------------\n"
+"Traceback (most recent call last):\n"
+"  File \"subtests.py\", line 11, in test_even\n"
+"    self.assertEqual(i % 2, 0)\n"
+"    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n"
+"AssertionError: 1 != 0"
+msgstr ""
 
 #: ../../library/unittest.rst:699
 msgid ""
@@ -1011,6 +1279,17 @@ msgstr ""
 "Без використання підтесту виконання зупинилося б після першої помилки, а "
 "помилку було б важче діагностувати, оскільки значення ``i`` не відображалося"
 " б::"
+
+#: ../../library/unittest.rst:703
+msgid ""
+"======================================================================\n"
+"FAIL: test_even (__main__.NumbersTest.test_even)\n"
+"----------------------------------------------------------------------\n"
+"Traceback (most recent call last):\n"
+"  File \"subtests.py\", line 32, in test_even\n"
+"    self.assertEqual(i % 2, 0)\n"
+"AssertionError: 1 != 0"
+msgstr ""
 
 #: ../../library/unittest.rst:715
 msgid "Classes and functions"
@@ -1121,6 +1400,13 @@ msgstr ""
 "``setUpClass`` викликається з класом як єдиним аргументом і має бути "
 "оформлений як :func:`classmethod`::"
 
+#: ../../library/unittest.rst:778
+msgid ""
+"@classmethod\n"
+"def setUpClass(cls):\n"
+"    ..."
+msgstr ""
+
 #: ../../library/unittest.rst:782 ../../library/unittest.rst:797
 msgid "See `Class and Module Fixtures`_ for more details."
 msgstr "Додаткову інформацію див. у розділі `Class and Module Fixtures`_."
@@ -1134,6 +1420,13 @@ msgstr ""
 "Метод класу, який викликається після виконання тестів в окремому класі. "
 "``tearDownClass`` викликається з класом як єдиним аргументом і має бути "
 "оформлений як :meth:`classmethod`::"
+
+#: ../../library/unittest.rst:793
+msgid ""
+"@classmethod\n"
+"def tearDownClass(cls):\n"
+"    ..."
+msgstr ""
 
 #: ../../library/unittest.rst:804
 msgid ""
@@ -1551,6 +1844,12 @@ msgstr ""
 "диспетчер контексту, щоб тестований код можна було записати вбудовано, а не "
 "як функцію::"
 
+#: ../../library/unittest.rst:1009
+msgid ""
+"with self.assertRaises(SomeException):\n"
+"    do_something()"
+msgstr ""
+
 #: ../../library/unittest.rst:1012
 msgid ""
 "When used as a context manager, :meth:`assertRaises` accepts the additional "
@@ -1568,6 +1867,15 @@ msgstr ""
 "Менеджер контексту збереже спійманий об’єкт винятку в своєму атрибуті "
 ":attr:`exception`. Це може бути корисним, якщо планується виконати додаткові"
 " перевірки викликаного винятку:"
+
+#: ../../library/unittest.rst:1019
+msgid ""
+"with self.assertRaises(SomeException) as cm:\n"
+"    do_something()\n"
+"\n"
+"the_exception = cm.exception\n"
+"self.assertEqual(the_exception.error_code, 3)"
+msgstr ""
 
 #: ../../library/unittest.rst:1025
 msgid "Added the ability to use :meth:`assertRaises` as a context manager."
@@ -1598,9 +1906,21 @@ msgstr ""
 "регулярного виразу або рядком, що містить регулярний вираз, придатний для "
 "використання :func:`re.search`. Приклади::"
 
+#: ../../library/unittest.rst:1043
+msgid ""
+"self.assertRaisesRegex(ValueError, \"invalid literal for.*XYZ'$\",\n"
+"                       int, 'XYZ')"
+msgstr ""
+
 #: ../../library/unittest.rst:1046 ../../library/unittest.rst:1114
 msgid "or::"
 msgstr "або::"
+
+#: ../../library/unittest.rst:1048
+msgid ""
+"with self.assertRaisesRegex(ValueError, 'literal'):\n"
+"   int('XYZ')"
+msgstr ""
 
 #: ../../library/unittest.rst:1051
 msgid "Added under the name ``assertRaisesRegexp``."
@@ -1635,6 +1955,12 @@ msgstr ""
 "поверніть диспетчер контексту, щоб тестований код можна було записати "
 "вбудовано, а не як функцію::"
 
+#: ../../library/unittest.rst:1075
+msgid ""
+"with self.assertWarns(SomeWarning):\n"
+"    do_something()"
+msgstr ""
+
 #: ../../library/unittest.rst:1078
 msgid ""
 "When used as a context manager, :meth:`assertWarns` accepts the additional "
@@ -1655,6 +1981,15 @@ msgstr ""
 ":attr:`filename` і :attr:`lineno`. Це може бути корисним, якщо планується "
 "виконати додаткові перевірки виявленого попередження:"
 
+#: ../../library/unittest.rst:1087
+msgid ""
+"with self.assertWarns(SomeWarning) as cm:\n"
+"    do_something()\n"
+"\n"
+"self.assertIn('myfile.py', cm.filename)\n"
+"self.assertEqual(320, cm.lineno)"
+msgstr ""
+
 #: ../../library/unittest.rst:1093
 msgid ""
 "This method works regardless of the warning filters in place when it is "
@@ -1673,6 +2008,19 @@ msgstr ""
 "повідомленні викликаного попередження. *regex* може бути об’єктом "
 "регулярного виразу або рядком, що містить регулярний вираз, придатний для "
 "використання :func:`re.search`. Приклад::"
+
+#: ../../library/unittest.rst:1110
+msgid ""
+"self.assertWarnsRegex(DeprecationWarning,\n"
+"                      r'legacy_function\\(\\) is deprecated',\n"
+"                      legacy_function, 'XYZ')"
+msgstr ""
+
+#: ../../library/unittest.rst:1116
+msgid ""
+"with self.assertWarnsRegex(RuntimeWarning, 'unsafe frobnicating'):\n"
+"    frobnicate('/etc/passwd')"
+msgstr ""
 
 #: ../../library/unittest.rst:1126
 msgid ""
@@ -1736,6 +2084,15 @@ msgstr ""
 #: ../../library/unittest.rst:1156
 msgid "Example::"
 msgstr "Приклад::"
+
+#: ../../library/unittest.rst:1158
+msgid ""
+"with self.assertLogs('foo', level='INFO') as cm:\n"
+"    logging.getLogger('foo').info('first message')\n"
+"    logging.getLogger('foo.bar').error('second message')\n"
+"self.assertEqual(cm.output, ['INFO:foo:first message',\n"
+"                             'ERROR:foo.bar:second message'])"
+msgstr ""
 
 #: ../../library/unittest.rst:1168
 msgid ""
@@ -1890,6 +2247,12 @@ msgid ""
 msgstr ""
 "Перевірте, що *first* відповідно >, >=, < або <= ніж *second* залежно від "
 "назви методу. Якщо ні, тест не пройде:"
+
+#: ../../library/unittest.rst:1248
+msgid ""
+">>> self.assertGreaterEqual(3, 4)\n"
+"AssertionError: \"3\" unexpectedly not greater than or equal to \"4\""
+msgstr ""
 
 #: ../../library/unittest.rst:1257
 msgid ""
@@ -2455,6 +2818,43 @@ msgstr ""
 #: ../../library/unittest.rst:1626
 msgid "An example illustrating the order::"
 msgstr "Приклад, що ілюструє порядок::"
+
+#: ../../library/unittest.rst:1628
+msgid ""
+"from unittest import IsolatedAsyncioTestCase\n"
+"\n"
+"events = []\n"
+"\n"
+"\n"
+"class Test(IsolatedAsyncioTestCase):\n"
+"\n"
+"\n"
+"    def setUp(self):\n"
+"        events.append(\"setUp\")\n"
+"\n"
+"    async def asyncSetUp(self):\n"
+"        self._async_connection = await AsyncConnection()\n"
+"        events.append(\"asyncSetUp\")\n"
+"\n"
+"    async def test_response(self):\n"
+"        events.append(\"test_response\")\n"
+"        response = await self._async_connection.get(\"https://example.com\")\n"
+"        self.assertEqual(response.status_code, 200)\n"
+"        self.addAsyncCleanup(self.on_cleanup)\n"
+"\n"
+"    def tearDown(self):\n"
+"        events.append(\"tearDown\")\n"
+"\n"
+"    async def asyncTearDown(self):\n"
+"        await self._async_connection.close()\n"
+"        events.append(\"asyncTearDown\")\n"
+"\n"
+"    async def on_cleanup(self):\n"
+"        events.append(\"cleanup\")\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    unittest.main()"
+msgstr ""
 
 #: ../../library/unittest.rst:1662
 msgid ""
@@ -3396,6 +3796,10 @@ msgstr ""
 "замовчуванням :class:`TextTestResult`, якщо не надано ``resultclass``. Клас "
 "результату створюється з такими аргументами:"
 
+#: ../../library/unittest.rst:2257
+msgid "stream, descriptions, verbosity"
+msgstr ""
+
 #: ../../library/unittest.rst:2261
 msgid ""
 "This method is the main public interface to the ``TextTestRunner``. This "
@@ -3420,6 +3824,12 @@ msgstr ""
 " виконання. Найпростішим використанням цієї функції є додавання такого рядка"
 " в кінці тестового сценарію::"
 
+#: ../../library/unittest.rst:2277
+msgid ""
+"if __name__ == '__main__':\n"
+"    unittest.main()"
+msgstr ""
+
 #: ../../library/unittest.rst:2280
 msgid ""
 "You can run tests with more detailed information by passing in the verbosity"
@@ -3427,6 +3837,12 @@ msgid ""
 msgstr ""
 "Ви можете запустити тести з більш детальною інформацією, передавши аргумент "
 "verbosity::"
+
+#: ../../library/unittest.rst:2283
+msgid ""
+"if __name__ == '__main__':\n"
+"    unittest.main(verbosity=2)"
+msgstr ""
 
 #: ../../library/unittest.rst:2286
 msgid ""
@@ -3475,6 +3891,12 @@ msgstr ""
 "``main`` підтримує використання з інтерактивного інтерпретатора шляхом "
 "передачі аргументу ``exit=False``. Це відображає результат у стандартному "
 "виводі без виклику :func:`sys.exit`::"
+
+#: ../../library/unittest.rst:2307
+msgid ""
+">>> from unittest import main\n"
+">>> main(module='test_module', exit=False)"
+msgstr ""
 
 #: ../../library/unittest.rst:2310
 msgid ""
@@ -3546,6 +3968,10 @@ msgstr ""
 "Якщо тестовий модуль визначає ``load_tests``, він буде викликаний "
 ":meth:`TestLoader.loadTestsFromModule` з такими аргументами::"
 
+#: ../../library/unittest.rst:2347 ../../library/unittest.rst:2379
+msgid "load_tests(loader, standard_tests, pattern)"
+msgstr ""
+
 #: ../../library/unittest.rst:2349
 msgid ""
 "where *pattern* is passed straight through from ``loadTestsFromModule``.  It"
@@ -3579,6 +4005,18 @@ msgid ""
 msgstr ""
 "Типова функція ``load_tests``, яка завантажує тести з певного набору класів "
 ":class:`TestCase`, може виглядати так:"
+
+#: ../../library/unittest.rst:2363
+msgid ""
+"test_cases = (TestCase1, TestCase2, TestCase3)\n"
+"\n"
+"def load_tests(loader, tests, pattern):\n"
+"    suite = TestSuite()\n"
+"    for test_class in test_cases:\n"
+"        tests = loader.loadTestsFromTestCase(test_class)\n"
+"        suite.addTests(tests)\n"
+"    return suite"
+msgstr ""
 
 #: ../../library/unittest.rst:2372
 msgid ""
@@ -3614,6 +4052,16 @@ msgstr ""
 "Оскільки шаблон передається в ``load_tests``, пакунок може продовжувати (і "
 "потенційно змінювати) пошук тестів. Функція ``load_tests`` 'нічого не "
 "робити' для тестового пакета виглядатиме так:"
+
+#: ../../library/unittest.rst:2389
+msgid ""
+"def load_tests(loader, standard_tests, pattern):\n"
+"    # top level directory cached on loader instance\n"
+"    this_dir = os.path.dirname(__file__)\n"
+"    package_tests = loader.discover(start_dir=this_dir, pattern=pattern)\n"
+"    standard_tests.addTests(package_tests)\n"
+"    return standard_tests"
+msgstr ""
 
 #: ../../library/unittest.rst:2396
 msgid ""
@@ -3716,6 +4164,20 @@ msgstr "setUpClass і tearDownClass"
 msgid "These must be implemented as class methods::"
 msgstr "Вони повинні бути реалізовані як методи класу:"
 
+#: ../../library/unittest.rst:2444
+msgid ""
+"import unittest\n"
+"\n"
+"class Test(unittest.TestCase):\n"
+"    @classmethod\n"
+"    def setUpClass(cls):\n"
+"        cls._connection = createExpensiveConnectionObject()\n"
+"\n"
+"    @classmethod\n"
+"    def tearDownClass(cls):\n"
+"        cls._connection.destroy()"
+msgstr ""
+
 #: ../../library/unittest.rst:2455
 msgid ""
 "If you want the ``setUpClass`` and ``tearDownClass`` on base classes called "
@@ -3745,6 +4207,15 @@ msgstr "setUpModule і tearDownModule"
 #: ../../library/unittest.rst:2469
 msgid "These should be implemented as functions::"
 msgstr "Вони повинні бути реалізовані як функції:"
+
+#: ../../library/unittest.rst:2471
+msgid ""
+"def setUpModule():\n"
+"    createConnection()\n"
+"\n"
+"def tearDownModule():\n"
+"    closeConnection()"
+msgstr ""
 
 #: ../../library/unittest.rst:2477
 msgid ""
@@ -3833,18 +4304,12 @@ msgstr "Обробка сигналів"
 #: ../../library/unittest.rst:2531
 msgid ""
 "The :option:`-c/--catch <unittest -c>` command-line option to unittest, "
-"along with the ``catchbreak`` parameter to :func:`unittest.main()`, provide "
+"along with the ``catchbreak`` parameter to :func:`unittest.main`, provide "
 "more friendly handling of control-C during a test run. With catch break "
 "behavior enabled control-C will allow the currently running test to "
 "complete, and the test run will then end and report all the results so far. "
 "A second control-c will raise a :exc:`KeyboardInterrupt` in the usual way."
 msgstr ""
-"Параметр командного рядка :option:`-c/--catch <unittest -c>` для unittest "
-"разом із параметром ``catchbreak`` для :func:`unittest.main()` забезпечують "
-"більш зручну обробку control-C під час пробний запуск. Якщо ввімкнути "
-"поведінку catch break, Control-C дозволить завершити поточний тест, після "
-"чого тестовий запуск завершиться та повідомить усі результати. Другий "
-"control-c викличе :exc:`KeyboardInterrupt` у звичайний спосіб."
 
 #: ../../library/unittest.rst:2538
 msgid ""
@@ -3924,3 +4389,10 @@ msgstr ""
 "При виклику без аргументів ця функція видаляє обробник control-c, якщо він "
 "був встановлений. Цю функцію також можна використовувати як декоратор тесту "
 "для тимчасового видалення обробника під час виконання тесту:"
+
+#: ../../library/unittest.rst:2581
+msgid ""
+"@unittest.removeHandler\n"
+"def test_signal_handling(self):\n"
+"    ..."
+msgstr ""

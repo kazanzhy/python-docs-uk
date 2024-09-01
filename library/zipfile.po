@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:18+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -323,6 +323,12 @@ msgstr ""
 ":keyword:`with`. У цьому прикладі *myzip* закривається після завершення "
 "набору операторів :keyword:`!with` --- навіть якщо виникає виняток:"
 
+#: ../../library/zipfile.rst:205
+msgid ""
+"with ZipFile('spam.zip', 'w') as myzip:\n"
+"    myzip.write('eggs.txt')"
+msgstr ""
+
 #: ../../library/zipfile.rst:210
 msgid ""
 "*metadata_encoding* is an instance-wide setting for the ZipFile. It is not "
@@ -434,6 +440,13 @@ msgid ""
 msgstr ""
 ":meth:`~ZipFile.open` також є контекстним менеджером і тому підтримує "
 "оператор :keyword:`with`::"
+
+#: ../../library/zipfile.rst:288
+msgid ""
+"with ZipFile('spam.zip') as myzip:\n"
+"    with myzip.open('eggs.txt') as myfile:\n"
+"        print(myfile.read())"
+msgstr ""
 
 #: ../../library/zipfile.rst:292
 msgid ""
@@ -943,6 +956,13 @@ msgstr ""
 "Повертає новий об’єкт Path із об’єднаними аргументами *other*. Наступні "
 "еквівалентні:"
 
+#: ../../library/zipfile.rst:646
+msgid ""
+">>> Path(...).joinpath('child').joinpath('grandchild')\n"
+">>> Path(...).joinpath('child', 'grandchild')\n"
+">>> Path(...) / 'child' / 'grandchild'"
+msgstr ""
+
 #: ../../library/zipfile.rst:650
 msgid ""
 "Prior to 3.10, ``joinpath`` was undocumented and accepted exactly one "
@@ -1046,9 +1066,28 @@ msgstr ""
 "каталогах ``test``, або починаються з рядка ``test_``, ми можемо використати"
 " *filterfunc*, щоб виключити їх:"
 
+#: ../../library/zipfile.rst:710
+msgid ""
+">>> zf = PyZipFile('myprog.zip')\n"
+">>> def notests(s):\n"
+"...     fn = os.path.basename(s)\n"
+"...     return (not (fn == 'test' or fn.startswith('test_')))\n"
+"...\n"
+">>> zf.writepy('myprog', filterfunc=notests)"
+msgstr ""
+
 #: ../../library/zipfile.rst:717
 msgid "The :meth:`writepy` method makes archives with file names like this::"
 msgstr "Метод :meth:`writepy` створює архіви з такими назвами файлів:"
+
+#: ../../library/zipfile.rst:720
+msgid ""
+"string.pyc                   # Top level name\n"
+"test/__init__.pyc            # Package directory\n"
+"test/testall.pyc             # Module test.testall\n"
+"test/bogus/__init__.pyc      # Subpackage directory\n"
+"test/bogus/myfile.pyc        # Submodule test.bogus.myfile"
+msgstr ""
 
 #: ../../library/zipfile.rst:726
 msgid "Added the *filterfunc* parameter."
@@ -1287,9 +1326,17 @@ msgstr ""
 "Якщо ви хочете створити новий ZIP-архів, укажіть його назву після параметра "
 ":option:`-c`, а потім перелічіть імена файлів, які потрібно включити:"
 
+#: ../../library/zipfile.rst:906
+msgid "$ python -m zipfile -c monty.zip spam.txt eggs.txt"
+msgstr ""
+
 #: ../../library/zipfile.rst:910
 msgid "Passing a directory is also acceptable:"
 msgstr "Передача каталогу також прийнятна:"
+
+#: ../../library/zipfile.rst:912
+msgid "$ python -m zipfile -c monty.zip life-of-brian_1979/"
+msgstr ""
 
 #: ../../library/zipfile.rst:916
 msgid ""
@@ -1299,11 +1346,19 @@ msgstr ""
 "Якщо ви хочете розпакувати ZIP-архів у вказаний каталог, скористайтеся "
 "параметром :option:`-e`:"
 
+#: ../../library/zipfile.rst:919
+msgid "$ python -m zipfile -e monty.zip target-dir/"
+msgstr ""
+
 #: ../../library/zipfile.rst:923
 msgid "For a list of the files in a ZIP archive, use the :option:`-l` option:"
 msgstr ""
 "Щоб отримати список файлів у ZIP-архіві, використовуйте параметр "
 ":option:`-l`:"
+
+#: ../../library/zipfile.rst:925
+msgid "$ python -m zipfile -l monty.zip"
+msgstr ""
 
 #: ../../library/zipfile.rst:931
 msgid "Command-line options"

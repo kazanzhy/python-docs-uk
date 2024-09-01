@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:15+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -76,6 +76,10 @@ msgstr ""
 "Переносить окремий абзац у *текст* і повертає один рядок, що містить "
 "перенесений абзац. :func:`fill` є скороченням для ::"
 
+#: ../../library/textwrap.rst:48
+msgid "\"\\n\".join(wrap(text, ...))"
+msgstr ""
+
 #: ../../library/textwrap.rst:50
 msgid ""
 "In particular, :func:`fill` accepts exactly the same keyword arguments as "
@@ -94,6 +98,16 @@ msgid ""
 "single spaces).  If the result fits in the *width*, it is returned. "
 "Otherwise, enough words are dropped from the end so that the remaining words"
 " plus the *placeholder* fit within *width*::"
+msgstr ""
+
+#: ../../library/textwrap.rst:65
+msgid ""
+">>> textwrap.shorten(\"Hello  world!\", width=12)\n"
+"'Hello world!'\n"
+">>> textwrap.shorten(\"Hello  world!\", width=11)\n"
+"'Hello [...]'\n"
+">>> textwrap.shorten(\"Hello world\", width=10, placeholder=\"...\")\n"
+"'Hello...'"
 msgstr ""
 
 #: ../../library/textwrap.rst:72
@@ -148,6 +162,18 @@ msgstr ""
 msgid "For example::"
 msgstr "Наприклад::"
 
+#: ../../library/textwrap.rst:96
+msgid ""
+"def test():\n"
+"    # end first line with \\ to avoid the empty line!\n"
+"    s = '''\\\n"
+"    hello\n"
+"      world\n"
+"    '''\n"
+"    print(repr(s))          # prints '    hello\\n      world\\n    '\n"
+"    print(repr(dedent(s)))  # prints 'hello\\n  world\\n'"
+msgstr ""
+
 #: ../../library/textwrap.rst:108
 msgid "Add *prefix* to the beginning of selected lines in *text*."
 msgstr "Додати *префікс* до початку виділених рядків у *тексті*."
@@ -164,6 +190,13 @@ msgstr ""
 "За замовчуванням *префікс* додається до всіх рядків, які не складаються лише"
 " з пробілів (включаючи будь-які закінчення рядків)."
 
+#: ../../library/textwrap.rst:117
+msgid ""
+">>> s = 'hello\\n\\n \\nworld'\n"
+">>> indent(s, '  ')\n"
+"'  hello\\n\\n \\n  world'"
+msgstr ""
+
 #: ../../library/textwrap.rst:121
 msgid ""
 "The optional *predicate* argument can be used to control which lines are "
@@ -173,6 +206,15 @@ msgstr ""
 "Необов'язковий аргумент *предикат* може використовуватися для контролю того,"
 " які рядки мають відступ. Наприклад, можна легко додати *префікс* навіть до "
 "порожніх рядків із пробілами::"
+
+#: ../../library/textwrap.rst:125
+msgid ""
+">>> print(indent(s, '+ ', lambda line: True))\n"
+"+ hello\n"
+"+\n"
+"+\n"
+"+ world"
+msgstr ""
 
 #: ../../library/textwrap.rst:134
 msgid ""
@@ -208,9 +250,19 @@ msgstr ""
 "аргументів. Кожен аргумент ключового слова відповідає атрибуту екземпляра, "
 "тому, наприклад, ::"
 
+#: ../../library/textwrap.rst:150
+msgid "wrapper = TextWrapper(initial_indent=\"* \")"
+msgstr ""
+
 #: ../../library/textwrap.rst:152
 msgid "is the same as  ::"
 msgstr "те саме, що ::"
+
+#: ../../library/textwrap.rst:154
+msgid ""
+"wrapper = TextWrapper()\n"
+"wrapper.initial_indent = \"* \""
+msgstr ""
 
 #: ../../library/textwrap.rst:157
 msgid ""
@@ -334,9 +386,17 @@ msgid ""
 "to detect the difference between \"Dr.\" in ::"
 msgstr ""
 
+#: ../../library/textwrap.rst:244
+msgid "[...] Dr. Frankenstein's monster [...]"
+msgstr ""
+
 #: ../../library/textwrap.rst:246
 msgid "and \"Spot.\" in ::"
 msgstr "і \"Пляма\". в ::"
+
+#: ../../library/textwrap.rst:248
+msgid "[...] See Spot. See Spot run [...]"
+msgstr ""
 
 #: ../../library/textwrap.rst:250
 msgid ":attr:`fix_sentence_endings` is false by default."

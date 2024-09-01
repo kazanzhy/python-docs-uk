@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:53+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -129,6 +129,14 @@ msgstr ""
 "Адреси також можна створювати безпосередньо з цілих чисел. Припускається, що"
 " значення, які вміщуються в 32 біти, є адресами IPv4:"
 
+#: ../../howto/ipaddress.rst:64
+msgid ""
+">>> ipaddress.ip_address(3221225985)\n"
+"IPv4Address('192.0.2.1')\n"
+">>> ipaddress.ip_address(42540766411282592856903984951653826561)\n"
+"IPv6Address('2001:db8::1')"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:69
 msgid ""
 "To force the use of IPv4 or IPv6 addresses, the relevant classes can be "
@@ -138,6 +146,16 @@ msgstr ""
 "Щоб примусово використовувати адреси IPv4 або IPv6, відповідні класи можна "
 "викликати безпосередньо. Це особливо корисно для примусового створення адрес"
 " IPv6 для малих цілих чисел:"
+
+#: ../../howto/ipaddress.rst:73
+msgid ""
+">>> ipaddress.ip_address(1)\n"
+"IPv4Address('0.0.0.1')\n"
+">>> ipaddress.IPv4Address(1)\n"
+"IPv4Address('0.0.0.1')\n"
+">>> ipaddress.IPv6Address(1)\n"
+"IPv6Address('::1')"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:82
 msgid "Defining Networks"
@@ -170,6 +188,14 @@ msgstr ""
 "Що стосується адрес, передбачена заводська функція, яка автоматично визначає"
 " правильну версію IP:"
 
+#: ../../howto/ipaddress.rst:96
+msgid ""
+">>> ipaddress.ip_network('192.0.2.0/24')\n"
+"IPv4Network('192.0.2.0/24')\n"
+">>> ipaddress.ip_network('2001:db8::0/96')\n"
+"IPv6Network('2001:db8::/96')"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:101
 msgid ""
 "Network objects cannot have any host bits set.  The practical effect of this"
@@ -196,6 +222,16 @@ msgstr ""
 "натомість привели до нуля, прапорець ``strict=False`` можна передати "
 "конструктору:"
 
+#: ../../howto/ipaddress.rst:112
+msgid ""
+">>> ipaddress.ip_network('192.0.2.1/24')\n"
+"Traceback (most recent call last):\n"
+"   ...\n"
+"ValueError: 192.0.2.1/24 has host bits set\n"
+">>> ipaddress.ip_network('192.0.2.1/24', strict=False)\n"
+"IPv4Network('192.0.2.0/24')"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:119
 msgid ""
 "While the string form offers significantly more flexibility, networks can "
@@ -207,6 +243,14 @@ msgstr ""
 "визначати цілими числами, як і адреси хостів. У цьому випадку вважається, що"
 " мережа містить лише одну адресу, визначену цілим числом, тому мережевий "
 "префікс включає всю мережеву адресу::"
+
+#: ../../howto/ipaddress.rst:124
+msgid ""
+">>> ipaddress.ip_network(3221225984)\n"
+"IPv4Network('192.0.2.0/32')\n"
+">>> ipaddress.ip_network(42540766411282592856903984951653826560)\n"
+"IPv6Network('2001:db8::/128')"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:129
 msgid ""
@@ -271,17 +315,62 @@ msgstr ""
 msgid "Extracting the IP version::"
 msgstr "Витяг версії IP::"
 
+#: ../../howto/ipaddress.rst:165
+msgid ""
+">>> addr4 = ipaddress.ip_address('192.0.2.1')\n"
+">>> addr6 = ipaddress.ip_address('2001:db8::1')\n"
+">>> addr6.version\n"
+"6\n"
+">>> addr4.version\n"
+"4"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:172
 msgid "Obtaining the network from an interface::"
 msgstr "Отримання мережі через інтерфейс::"
+
+#: ../../howto/ipaddress.rst:174
+msgid ""
+">>> host4 = ipaddress.ip_interface('192.0.2.1/24')\n"
+">>> host4.network\n"
+"IPv4Network('192.0.2.0/24')\n"
+">>> host6 = ipaddress.ip_interface('2001:db8::1/96')\n"
+">>> host6.network\n"
+"IPv6Network('2001:db8::/96')"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:181
 msgid "Finding out how many individual addresses are in a network::"
 msgstr "Дізнатися кількість окремих адрес у мережі:"
 
+#: ../../howto/ipaddress.rst:183
+msgid ""
+">>> net4 = ipaddress.ip_network('192.0.2.0/24')\n"
+">>> net4.num_addresses\n"
+"256\n"
+">>> net6 = ipaddress.ip_network('2001:db8::0/96')\n"
+">>> net6.num_addresses\n"
+"4294967296"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:190
 msgid "Iterating through the \"usable\" addresses on a network::"
 msgstr "Перебір \"придатних\" адрес у мережі:"
+
+#: ../../howto/ipaddress.rst:192
+msgid ""
+">>> net4 = ipaddress.ip_network('192.0.2.0/24')\n"
+">>> for x in net4.hosts():\n"
+"...     print(x)  \n"
+"192.0.2.1\n"
+"192.0.2.2\n"
+"192.0.2.3\n"
+"192.0.2.4\n"
+"...\n"
+"192.0.2.252\n"
+"192.0.2.253\n"
+"192.0.2.254"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:205
 msgid ""
@@ -294,6 +383,18 @@ msgstr ""
 #: ../../howto/ipaddress.rst:220
 msgid "Exploding or compressing the address::"
 msgstr "Розкладання або стиснення адреси:"
+
+#: ../../howto/ipaddress.rst:222
+msgid ""
+">>> addr6.exploded\n"
+"'2001:0db8:0000:0000:0000:0000:0000:0001'\n"
+">>> addr6.compressed\n"
+"'2001:db8::1'\n"
+">>> net6.exploded\n"
+"'2001:0db8:0000:0000:0000:0000:0000:0000/96'\n"
+">>> net6.compressed\n"
+"'2001:db8::/96'"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:231
 msgid ""
@@ -319,6 +420,18 @@ msgstr ""
 "Іноді корисно розглядати мережі як списки. Це означає, що їх можна "
 "індексувати таким чином:"
 
+#: ../../howto/ipaddress.rst:243
+msgid ""
+">>> net4[1]\n"
+"IPv4Address('192.0.2.1')\n"
+">>> net4[-1]\n"
+"IPv4Address('192.0.2.255')\n"
+">>> net6[1]\n"
+"IPv6Address('2001:db8::1')\n"
+">>> net6[-1]\n"
+"IPv6Address('2001:db8::ffff:ffff')"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:253
 msgid ""
 "It also means that network objects lend themselves to using the list "
@@ -327,10 +440,25 @@ msgstr ""
 "Це також означає, що мережеві об’єкти піддаються використанню синтаксису "
 "перевірки членства в списку таким чином:"
 
+#: ../../howto/ipaddress.rst:256
+msgid ""
+"if address in network:\n"
+"    # do something"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:259
 msgid "Containment testing is done efficiently based on the network prefix::"
 msgstr ""
 "Тестування обмеження виконується ефективно на основі мережевого префікса::"
+
+#: ../../howto/ipaddress.rst:261
+msgid ""
+">>> addr4 = ipaddress.ip_address('192.0.2.1')\n"
+">>> addr4 in ipaddress.ip_network('192.0.2.0/24')\n"
+"True\n"
+">>> addr4 in ipaddress.ip_network('192.0.3.0/24')\n"
+"False"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:269
 msgid "Comparisons"
@@ -343,6 +471,12 @@ msgid ""
 msgstr ""
 ":mod:`ipaddress` надає кілька простих, сподіваюся, інтуїтивно зрозумілих "
 "способів порівняння об’єктів, де це має сенс:"
+
+#: ../../howto/ipaddress.rst:274
+msgid ""
+">>> ipaddress.ip_address('192.0.2.1') < ipaddress.ip_address('192.0.2.2')\n"
+"True"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:277
 msgid ""
@@ -365,6 +499,15 @@ msgstr ""
 "Інші модулі, які використовують IP-адреси (такі як :mod:`socket`), зазвичай "
 "не приймають об’єкти з цього модуля безпосередньо. Замість цього вони "
 "повинні бути приведені до цілого числа або рядка, який прийме інший модуль:"
+
+#: ../../howto/ipaddress.rst:288
+msgid ""
+">>> addr4 = ipaddress.ip_address('192.0.2.1')\n"
+">>> str(addr4)\n"
+"'192.0.2.1'\n"
+">>> int(addr4)\n"
+"3221225985"
+msgstr ""
 
 #: ../../howto/ipaddress.rst:296
 msgid "Getting more detail when instance creation fails"
@@ -409,6 +552,27 @@ msgstr ""
 "Повідомлення про помилки значно більш детальні при безпосередньому "
 "використанні конструкторів класів. Наприклад::"
 
+#: ../../howto/ipaddress.rst:314
+msgid ""
+">>> ipaddress.ip_address(\"192.168.0.256\")\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ValueError: '192.168.0.256' does not appear to be an IPv4 or IPv6 address\n"
+">>> ipaddress.IPv4Address(\"192.168.0.256\")\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ipaddress.AddressValueError: Octet 256 (> 255) not permitted in '192.168.0.256'\n"
+"\n"
+">>> ipaddress.ip_network(\"192.168.0.1/64\")\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ValueError: '192.168.0.1/64' does not appear to be an IPv4 or IPv6 network\n"
+">>> ipaddress.IPv4Network(\"192.168.0.1/64\")\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ipaddress.NetmaskValueError: '64' is not a valid netmask"
+msgstr ""
+
 #: ../../howto/ipaddress.rst:332
 msgid ""
 "However, both of the module specific exceptions have :exc:`ValueError` as "
@@ -418,3 +582,11 @@ msgstr ""
 "Однак обидва винятки, специфічні для модуля, мають :exc:`ValueError` як "
 "батьківський клас, тому, якщо вас не хвилює певний тип помилки, ви все одно "
 "можете написати наступний код:"
+
+#: ../../howto/ipaddress.rst:336
+msgid ""
+"try:\n"
+"    network = ipaddress.IPv4Network(address)\n"
+"except ValueError:\n"
+"    print('address/netmask is invalid for IPv4:', address)"
+msgstr ""
