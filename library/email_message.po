@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:05+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -330,6 +330,12 @@ msgstr ""
 "Зіставлення виконується без урахування регістру, а *ім’я* не містить "
 "двокрапки в кінці. Використовується для оператора ``in``. Наприклад::"
 
+#: ../../library/email.message.rst:185
+msgid ""
+"if 'message-id' in myMessage:\n"
+"   print('Message-ID:', myMessage['message-id'])"
+msgstr ""
+
 #: ../../library/email.message.rst:191
 msgid ""
 "Return the value of the named header field.  *name* does not include the "
@@ -378,6 +384,12 @@ msgstr ""
 "Зауважте, що це *не* перезаписує та не видаляє будь-який існуючий заголовок "
 "із такою ж назвою. Якщо ви хочете переконатися, що новий заголовок є єдиним "
 "у повідомленні з назвою поля *name*, спочатку видаліть це поле, наприклад::"
+
+#: ../../library/email.message.rst:213
+msgid ""
+"del msg['subject']\n"
+"msg['subject'] = 'Python roolz!'"
+msgstr ""
 
 #: ../../library/email.message.rst:216
 msgid ""
@@ -488,13 +500,28 @@ msgstr ""
 msgid "Here is an example::"
 msgstr "Ось приклад::"
 
+#: ../../library/email.message.rst:289
+msgid ""
+"msg.add_header('Content-Disposition', 'attachment', filename='bud.gif')"
+msgstr ""
+
 #: ../../library/email.message.rst:291
 msgid "This will add a header that looks like ::"
 msgstr "Це додасть заголовок, який виглядає так::"
 
+#: ../../library/email.message.rst:293
+msgid "Content-Disposition: attachment; filename=\"bud.gif\""
+msgstr ""
+
 #: ../../library/email.message.rst:295
 msgid "An example of the extended interface with non-ASCII characters::"
 msgstr "Приклад розширеного інтерфейсу з не-ASCII символами::"
+
+#: ../../library/email.message.rst:297
+msgid ""
+"msg.add_header('Content-Disposition', 'attachment',\n"
+"               filename=('iso-8859-1', '', 'Fußballer.ppt'))"
+msgstr ""
 
 #: ../../library/email.message.rst:303
 msgid ""
@@ -796,6 +823,19 @@ msgstr ""
 "Ось приклад, який друкує тип MIME кожної частини структури повідомлення, що "
 "складається з кількох частин:"
 
+#: ../../library/email.message.rst:491
+msgid ""
+">>> for part in msg.walk():\n"
+"...     print(part.get_content_type())\n"
+"multipart/report\n"
+"text/plain\n"
+"message/delivery-status\n"
+"text/plain\n"
+"text/plain\n"
+"message/rfc822\n"
+"text/plain"
+msgstr ""
+
 #: ../../library/email.message.rst:503
 msgid ""
 "``walk`` iterates over the subparts of any part where :meth:`is_multipart` "
@@ -807,6 +847,29 @@ msgstr ""
 "повертає ``True``, навіть якщо ``msg.get_content_maintype() == 'multipart'``"
 " може повернути ``False``. Ми можемо побачити це в нашому прикладі, "
 "використовуючи допоміжну функцію налагодження ``_structure``:"
+
+#: ../../library/email.message.rst:509
+msgid ""
+">>> from email.iterators import _structure\n"
+">>> for part in msg.walk():\n"
+"...     print(part.get_content_maintype() == 'multipart',\n"
+"...           part.is_multipart())\n"
+"True True\n"
+"False False\n"
+"False True\n"
+"False False\n"
+"False False\n"
+"False True\n"
+"False False\n"
+">>> _structure(msg)\n"
+"multipart/report\n"
+"    text/plain\n"
+"    message/delivery-status\n"
+"        text/plain\n"
+"        text/plain\n"
+"    message/rfc822\n"
+"        text/plain"
+msgstr ""
 
 #: ../../library/email.message.rst:531
 msgid ""

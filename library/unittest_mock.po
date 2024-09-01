@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -132,6 +132,22 @@ msgstr ""
 "Декоратор/менеджер контексту :func:`patch` дозволяє легко імітувати класи чи"
 " об’єкти в тестованому модулі. Вказаний вами об’єкт буде замінено макетом "
 "(або іншим об’єктом) під час тесту та відновлено після завершення тесту:"
+
+#: ../../library/unittest.mock.rst:101
+msgid ""
+">>> from unittest.mock import patch\n"
+">>> @patch('module.ClassName2')\n"
+"... @patch('module.ClassName1')\n"
+"... def test(MockClass1, MockClass2):\n"
+"...     module.ClassName1()\n"
+"...     module.ClassName2()\n"
+"...     assert MockClass1 is module.ClassName1\n"
+"...     assert MockClass2 is module.ClassName2\n"
+"...     assert MockClass1.called\n"
+"...     assert MockClass2.called\n"
+"...\n"
+">>> test()"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:116
 msgid ""
@@ -872,6 +888,17 @@ msgstr ""
 "чином, він може відповідати фактичним аргументам виклику незалежно від того,"
 " чи були вони передані позиційно чи за назвою::"
 
+#: ../../library/unittest.mock.rst:807
+msgid ""
+">>> def f(a, b, c): pass\n"
+"...\n"
+">>> mock = Mock(spec=f)\n"
+">>> mock(1, 2, c=3)\n"
+"<Mock name='mock()' id='140161580456576'>\n"
+">>> mock.assert_called_with(1, 2, 3)\n"
+">>> mock.assert_called_with(a=1, b=2, c=3)"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:815
 msgid ""
 "This applies to :meth:`~Mock.assert_called_with`, "
@@ -906,6 +933,27 @@ msgstr ""
 "Отримання екземпляра :class:`PropertyMock` з об’єкта викликає макет без "
 "аргументів. Його встановлення викликає макет із встановленим значенням. ::"
 
+#: ../../library/unittest.mock.rst:834
+msgid ""
+">>> class Foo:\n"
+"...     @property\n"
+"...     def foo(self):\n"
+"...         return 'something'\n"
+"...     @foo.setter\n"
+"...     def foo(self, value):\n"
+"...         pass\n"
+"...\n"
+">>> with patch('__main__.Foo.foo', new_callable=PropertyMock) as mock_foo:\n"
+"...     mock_foo.return_value = 'mockity-mock'\n"
+"...     this_foo = Foo()\n"
+"...     print(this_foo.foo)\n"
+"...     this_foo.foo = 6\n"
+"...\n"
+"mockity-mock\n"
+">>> mock_foo.mock_calls\n"
+"[call(), call(6)]"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:852
 msgid ""
 "Because of the way mock attributes are stored you can't directly attach a "
@@ -916,11 +964,30 @@ msgstr ""
 "прикріпити :class:`PropertyMock` до макетного об’єкта. Замість цього ви "
 "можете прикріпити його до об’єкта макетного типу::"
 
+#: ../../library/unittest.mock.rst:856
+msgid ""
+">>> m = MagicMock()\n"
+">>> p = PropertyMock(return_value=3)\n"
+">>> type(m).foo = p\n"
+">>> m.foo\n"
+"3\n"
+">>> p.assert_called_once_with()"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:865
 msgid ""
 "If an :exc:`AttributeError` is raised by :class:`PropertyMock`, it will be "
 "interpreted as a missing descriptor and :meth:`~object.__getattr__` will be "
 "called on the parent mock::"
+msgstr ""
+
+#: ../../library/unittest.mock.rst:869
+msgid ""
+">>> m = MagicMock()\n"
+">>> no_attribute = PropertyMock(side_effect=AttributeError)\n"
+">>> type(m).my_property = no_attribute\n"
+">>> m.my_property\n"
+"<MagicMock name='mock.my_property' id='140165240345424'>"
 msgstr ""
 
 #: ../../library/unittest.mock.rst:875
@@ -1234,6 +1301,20 @@ msgstr ""
 "Якщо будь-які члени iterable є винятками, вони будуть викликані замість "
 "повернення::"
 
+#: ../../library/unittest.mock.rst:1267
+msgid ""
+">>> iterable = (33, ValueError, 66)\n"
+">>> m = MagicMock(side_effect=iterable)\n"
+">>> m()\n"
+"33\n"
+">>> m()\n"
+"Traceback (most recent call last):\n"
+" ...\n"
+"ValueError\n"
+">>> m()\n"
+"66"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1282
 msgid "Deleting Attributes"
 msgstr "Видалення атрибутів"
@@ -1282,6 +1363,14 @@ msgstr ""
 "його під час створення. Є дві альтернативи. Одним із варіантів є "
 "використання :meth:`~Mock.configure_mock`::"
 
+#: ../../library/unittest.mock.rst:1315
+msgid ""
+">>> mock = MagicMock()\n"
+">>> mock.configure_mock(name='my_name')\n"
+">>> mock.name\n"
+"'my_name'"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1320
 msgid ""
 "A simpler option is to simply set the \"name\" attribute after mock "
@@ -1289,6 +1378,12 @@ msgid ""
 msgstr ""
 "Простішим варіантом є просто встановити атрибут \"name\" після створення "
 "макета::"
+
+#: ../../library/unittest.mock.rst:1322
+msgid ""
+">>> mock = MagicMock()\n"
+">>> mock.name = \"foo\""
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1327
 msgid "Attaching Mocks as Attributes"
@@ -1329,6 +1424,22 @@ msgstr ""
 "Макети, створені для вас :func:`patch`, автоматично отримують імена. Щоб "
 "приєднати імена до батьківського елемента, ви використовуєте метод "
 ":meth:`~Mock.attach_mock`::"
+
+#: ../../library/unittest.mock.rst:1362
+msgid ""
+">>> thing1 = object()\n"
+">>> thing2 = object()\n"
+">>> parent = MagicMock()\n"
+">>> with patch('__main__.thing1', return_value=None) as child1:\n"
+"...     with patch('__main__.thing2', return_value=None) as child2:\n"
+"...         parent.attach_mock(child1, 'child1')\n"
+"...         parent.attach_mock(child2, 'child2')\n"
+"...         child1('one')\n"
+"...         child2('two')\n"
+"...\n"
+">>> parent.mock_calls\n"
+"[call.child1('one'), call.child2('two')]"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1376
 msgid ""
@@ -1556,6 +1667,16 @@ msgstr ""
 ":func:`patch` як декоратор функції, створює макет для вас і передає його в "
 "декоровану функцію::"
 
+#: ../../library/unittest.mock.rst:1480
+msgid ""
+">>> @patch('__main__.SomeClass')\n"
+"... def function(normal_argument, mock_class):\n"
+"...     print(mock_class is SomeClass)\n"
+"...\n"
+">>> function(None)\n"
+"True"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1487
 msgid ""
 "Patching a class replaces the class with a :class:`MagicMock` *instance*. If"
@@ -1585,6 +1706,20 @@ msgstr ""
 "виправленому класі, ви повинні зробити це в :attr:`return_value`. "
 "Наприклад::"
 
+#: ../../library/unittest.mock.rst:1498
+msgid ""
+">>> class Class:\n"
+"...     def method(self):\n"
+"...         pass\n"
+"...\n"
+">>> with patch('__main__.Class') as MockClass:\n"
+"...     instance = MockClass.return_value\n"
+"...     instance.method.return_value = 'foo'\n"
+"...     assert Class() is instance\n"
+"...     assert Class().method() == 'foo'\n"
+"..."
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1509
 msgid ""
 "If you use *spec* or *spec_set* and :func:`patch` is replacing a *class*, "
@@ -1593,6 +1728,16 @@ msgstr ""
 "Якщо ви використовуєте *spec* або *spec_set* і :func:`patch` замінює *клас*,"
 " тоді значення, що повертається створеним макетом, матиме ту саму "
 "специфікацію. ::"
+
+#: ../../library/unittest.mock.rst:1512
+msgid ""
+">>> Original = Class\n"
+">>> patcher = patch('__main__.Class', spec=True)\n"
+">>> MockClass = patcher.start()\n"
+">>> instance = MockClass()\n"
+">>> assert isinstance(instance, Original)\n"
+">>> patcher.stop()"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1519
 msgid ""
@@ -1604,6 +1749,18 @@ msgstr ""
 "альтернативний типовому :class:`MagicMock` для створеного макету. Наприклад,"
 " якщо ви хочете використовувати :class:`NonCallableMock`:"
 
+#: ../../library/unittest.mock.rst:1523
+msgid ""
+">>> thing = object()\n"
+">>> with patch('__main__.thing', new_callable=NonCallableMock) as mock_thing:\n"
+"...     assert thing is mock_thing\n"
+"...     thing()\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"TypeError: 'NonCallableMock' object is not callable"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1532
 msgid ""
 "Another use case might be to replace an object with an :class:`io.StringIO` "
@@ -1611,6 +1768,20 @@ msgid ""
 msgstr ""
 "Іншим варіантом використання може бути заміна об’єкта екземпляром "
 ":class:`io.StringIO`::"
+
+#: ../../library/unittest.mock.rst:1534
+msgid ""
+">>> from io import StringIO\n"
+">>> def foo():\n"
+"...     print('Something')\n"
+"...\n"
+">>> @patch('sys.stdout', new_callable=StringIO)\n"
+"... def test(mock_stdout):\n"
+"...     foo()\n"
+"...     assert mock_stdout.getvalue() == 'Something\\n'\n"
+"...\n"
+">>> test()"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1545
 msgid ""
@@ -1623,6 +1794,16 @@ msgstr ""
 "зробити, це налаштувати макет. Частину цієї конфігурації можна виконати під "
 "час виклику patch. Будь-які довільні ключові слова, які ви передаєте у "
 "виклик, використовуватимуться для встановлення атрибутів створеного mock::"
+
+#: ../../library/unittest.mock.rst:1550
+msgid ""
+">>> patcher = patch('__main__.thing', first='one', second='two')\n"
+">>> mock_thing = patcher.start()\n"
+">>> mock_thing.first\n"
+"'one'\n"
+">>> mock_thing.second\n"
+"'two'"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1557
 msgid ""
@@ -1638,6 +1819,19 @@ msgstr ""
 "передачі як аргументи ключового слова, але словник із ними як ключами все "
 "одно можна розгорнути у виклик :func:`patch` за допомогою ``**``::"
 
+#: ../../library/unittest.mock.rst:1563
+msgid ""
+">>> config = {'method.return_value': 3, 'other.side_effect': KeyError}\n"
+">>> patcher = patch('__main__.thing', **config)\n"
+">>> mock_thing = patcher.start()\n"
+">>> mock_thing.method()\n"
+"3\n"
+">>> mock_thing.other()\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"KeyError"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1573
 msgid ""
 "By default, attempting to patch a function in a module (or a method or an "
@@ -1647,6 +1841,18 @@ msgstr ""
 "За замовчуванням спроба виправити функцію в модулі (або метод чи атрибут у "
 "класі), який не існує, закінчиться помилкою з :exc:`AttributeError`::"
 
+#: ../../library/unittest.mock.rst:1576
+msgid ""
+">>> @patch('sys.non_existing_attribute', 42)\n"
+"... def test():\n"
+"...     assert sys.non_existing_attribute == 42\n"
+"...\n"
+">>> test()\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"AttributeError: <module 'sys' (built-in)> does not have the attribute 'non_existing_attribute'"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1585
 msgid ""
 "but adding ``create=True`` in the call to :func:`patch` will make the "
@@ -1654,6 +1860,15 @@ msgid ""
 msgstr ""
 "але додавання ``create=True`` до виклику :func:`patch` змусить попередній "
 "приклад працювати належним чином::"
+
+#: ../../library/unittest.mock.rst:1588
+msgid ""
+">>> @patch('sys.non_existing_attribute', 42, create=True)\n"
+"... def test(mock_stdout):\n"
+"...     assert sys.non_existing_attribute == 42\n"
+"...\n"
+">>> test()"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1596
 msgid ""
@@ -1857,6 +2072,12 @@ msgstr ""
 "виправити (або як об’єкт, або рядок для отримання об’єкта шляхом імпорту), а"
 " також ключові аргументи для патчів::"
 
+#: ../../library/unittest.mock.rst:1759
+msgid ""
+"with patch.multiple(settings, FIRST_PATCH='one', SECOND_PATCH='two'):\n"
+"    ..."
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1762
 msgid ""
 "Use :data:`DEFAULT` as the value if you want :func:`patch.multiple` to "
@@ -1902,6 +2123,19 @@ msgstr ""
 ":func:`patch.multiple` як декоратор, тоді створені макети передаються в "
 "декоровану функцію за ключовим словом. ::"
 
+#: ../../library/unittest.mock.rst:1779
+msgid ""
+">>> thing = object()\n"
+">>> other = object()\n"
+"\n"
+">>> @patch.multiple('__main__', thing=DEFAULT, other=DEFAULT)\n"
+"... def test_function(thing, other):\n"
+"...     assert isinstance(thing, MagicMock)\n"
+"...     assert isinstance(other, MagicMock)\n"
+"...\n"
+">>> test_function()"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1789
 msgid ""
 ":func:`patch.multiple` can be nested with other ``patch`` decorators, but "
@@ -1912,6 +2146,18 @@ msgstr ""
 "розміщувати аргументи, передані ключовим словом *після* будь-яких "
 "стандартних аргументів, створених :func:`patch`::"
 
+#: ../../library/unittest.mock.rst:1792
+msgid ""
+">>> @patch('sys.exit')\n"
+"... @patch.multiple('__main__', thing=DEFAULT, other=DEFAULT)\n"
+"... def test_function(mock_exit, other, thing):\n"
+"...     assert 'other' in repr(other)\n"
+"...     assert 'thing' in repr(thing)\n"
+"...     assert 'exit' in repr(mock_exit)\n"
+"...\n"
+">>> test_function()"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1801
 msgid ""
 "If :func:`patch.multiple` is used as a context manager, the value returned "
@@ -1921,6 +2167,16 @@ msgstr ""
 "Якщо :func:`patch.multiple` використовується як менеджер контексту, "
 "значення, яке повертає менеджер контексту, є словником, у якому створені "
 "макети вказуються за назвою::"
+
+#: ../../library/unittest.mock.rst:1804
+msgid ""
+">>> with patch.multiple('__main__', thing=DEFAULT, other=DEFAULT) as values:\n"
+"...     assert 'other' in repr(values['other'])\n"
+"...     assert 'thing' in repr(values['thing'])\n"
+"...     assert values['thing'] is thing\n"
+"...     assert values['other'] is other\n"
+"..."
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1815
 msgid "patch methods: start and stop"
@@ -1956,6 +2212,19 @@ msgstr ""
 "Якщо ви використовуєте :func:`patch` для створення макету, його буде "
 "повернено викликом ``patcher.start``. ::"
 
+#: ../../library/unittest.mock.rst:1828
+msgid ""
+">>> patcher = patch('package.module.ClassName')\n"
+">>> from package import module\n"
+">>> original = module.ClassName\n"
+">>> new_mock = patcher.start()\n"
+">>> assert module.ClassName is not original\n"
+">>> assert module.ClassName is new_mock\n"
+">>> patcher.stop()\n"
+">>> assert module.ClassName is original\n"
+">>> assert module.ClassName is not new_mock"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1839
 msgid ""
 "A typical use case for this might be for doing multiple patches in the "
@@ -1963,6 +2232,26 @@ msgid ""
 msgstr ""
 "Типовим випадком використання для цього може бути виконання кількох патчів у"
 " методі ``setUp`` :class:`TestCase`::"
+
+#: ../../library/unittest.mock.rst:1842
+msgid ""
+">>> class MyTest(unittest.TestCase):\n"
+"...     def setUp(self):\n"
+"...         self.patcher1 = patch('package.module.Class1')\n"
+"...         self.patcher2 = patch('package.module.Class2')\n"
+"...         self.MockClass1 = self.patcher1.start()\n"
+"...         self.MockClass2 = self.patcher2.start()\n"
+"...\n"
+"...     def tearDown(self):\n"
+"...         self.patcher1.stop()\n"
+"...         self.patcher2.stop()\n"
+"...\n"
+"...     def test_something(self):\n"
+"...         assert package.module.Class1 is self.MockClass1\n"
+"...         assert package.module.Class2 is self.MockClass2\n"
+"...\n"
+">>> MyTest('test_something').run()"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1861
 msgid ""
@@ -1975,6 +2264,19 @@ msgstr ""
 "\"скасовано\", викликавши ``stop``. Це може бути складніше, ніж ви могли б "
 "подумати, оскільки якщо в ``setUp`` виникає виняток, ``tearDown`` не "
 "викликається. :meth:`unittest.TestCase.addCleanup` полегшує це::"
+
+#: ../../library/unittest.mock.rst:1866
+msgid ""
+">>> class MyTest(unittest.TestCase):\n"
+"...     def setUp(self):\n"
+"...         patcher = patch('package.module.Class')\n"
+"...         self.MockClass = patcher.start()\n"
+"...         self.addCleanup(patcher.stop)\n"
+"...\n"
+"...     def test_something(self):\n"
+"...         assert package.module.Class is self.MockClass\n"
+"..."
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1876
 msgid ""
@@ -2008,6 +2310,17 @@ msgstr ""
 "Ви можете виправляти будь-які вбудовані компоненти в модулі. Наступні "
 "приклади патчів вбудовані в :func:`ord`::"
 
+#: ../../library/unittest.mock.rst:1894
+msgid ""
+">>> @patch('__main__.ord')\n"
+"... def test(mock_ord):\n"
+"...     mock_ord.return_value = 101\n"
+"...     print(ord('c'))\n"
+"...\n"
+">>> test()\n"
+"101"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1906
 msgid "TEST_PREFIX"
 msgstr "TEST_PREFIX"
@@ -2033,6 +2346,27 @@ msgid ""
 msgstr ""
 "Можливо, ви хочете використовувати інший префікс для своїх тестів. Ви можете"
 " повідомити патчерів про інший префікс, встановивши ``patch.TEST_PREFIX``::"
+
+#: ../../library/unittest.mock.rst:1916
+msgid ""
+">>> patch.TEST_PREFIX = 'foo'\n"
+">>> value = 3\n"
+">>>\n"
+">>> @patch('__main__.value', 'not three')\n"
+"... class Thing:\n"
+"...     def foo_one(self):\n"
+"...         print(value)\n"
+"...     def foo_two(self):\n"
+"...         print(value)\n"
+"...\n"
+">>>\n"
+">>> Thing().foo_one()\n"
+"not three\n"
+">>> Thing().foo_two()\n"
+"not three\n"
+">>> value\n"
+"3"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:1936
 msgid "Nesting Patch Decorators"
@@ -2093,6 +2427,16 @@ msgid ""
 msgstr ""
 "Уявіть, що у нас є проект, який ми хочемо перевірити з такою структурою:"
 
+#: ../../library/unittest.mock.rst:1978
+msgid ""
+"a.py\n"
+"    -> Defines SomeClass\n"
+"\n"
+"b.py\n"
+"    -> from a import SomeClass\n"
+"    -> some_function instantiates SomeClass"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1985
 msgid ""
 "Now we want to test ``some_function`` but we want to mock out ``SomeClass`` "
@@ -2120,6 +2464,10 @@ msgstr ""
 "шукають). У цьому випадку ``some_function`` фактично шукатиме ``SomeClass`` "
 "у модулі b, куди ми його імпортували. Виправлення має виглядати:"
 
+#: ../../library/unittest.mock.rst:1996
+msgid "@patch('b.SomeClass')"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:1998
 msgid ""
 "However, consider the alternative scenario where instead of ``from a import "
@@ -2133,6 +2481,10 @@ msgstr ""
 "``a.SomeClass``. Обидві ці форми імпорту поширені. У цьому випадку клас, "
 "який ми хочемо виправити, шукається в модулі, тому ми повинні замість цього "
 "виправити ``a.SomeClass``::"
+
+#: ../../library/unittest.mock.rst:2003
+msgid "@patch('a.SomeClass')"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2007
 msgid "Patching Descriptors and Proxy Objects"
@@ -2474,6 +2826,18 @@ msgid ""
 "They do the default equality comparison on identity, using the "
 ":attr:`~Mock.side_effect` attribute, unless you change their return value to"
 " return something else::"
+msgstr ""
+
+#: ../../library/unittest.mock.rst:2194
+msgid ""
+">>> MagicMock() == 3\n"
+"False\n"
+">>> MagicMock() != 3\n"
+"True\n"
+">>> mock = MagicMock()\n"
+">>> mock.__eq__.return_value = True\n"
+">>> mock == 3\n"
+"True"
 msgstr ""
 
 #: ../../library/unittest.mock.rst:2203
@@ -2828,6 +3192,15 @@ msgid ""
 "be used in test assertions::"
 msgstr ""
 
+#: ../../library/unittest.mock.rst:2445
+msgid ""
+"class TestStringMethods(unittest.TestCase):\n"
+"\n"
+"    def test_split(self):\n"
+"        s = 'hello world'\n"
+"        self.assertEqual(s.split(), ['hello', ANY])"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2453
 msgid "FILTER_DIR"
 msgstr "FILTER_DIR"
@@ -2855,6 +3228,27 @@ msgstr ""
 "*autospec*, звичайно), тоді відображаються всі атрибути з оригіналу, навіть "
 "якщо до них ще не було доступу:"
 
+#: ../../library/unittest.mock.rst:2469
+msgid ""
+">>> dir(Mock())\n"
+"['assert_any_call',\n"
+" 'assert_called',\n"
+" 'assert_called_once',\n"
+" 'assert_called_once_with',\n"
+" 'assert_called_with',\n"
+" 'assert_has_calls',\n"
+" 'assert_not_called',\n"
+" 'attach_mock',\n"
+" ...\n"
+">>> from urllib import request\n"
+">>> dir(Mock(spec=request))\n"
+"['AbstractBasicAuthHandler',\n"
+" 'AbstractDigestAuthHandler',\n"
+" 'AbstractHTTPHandler',\n"
+" 'BaseHandler',\n"
+" ..."
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2490
 msgid ""
 "Many of the not-very-useful (private to :class:`Mock` rather than the thing "
@@ -2868,6 +3262,21 @@ msgstr ""
 "було відфільтровано з результату виклику :func:`dir` на :class:`Mock`. Якщо "
 "вам не подобається така поведінка, ви можете вимкнути її, встановивши "
 "перемикач рівня модуля :data:`FILTER_DIR`:"
+
+#: ../../library/unittest.mock.rst:2496
+msgid ""
+">>> from unittest import mock\n"
+">>> mock.FILTER_DIR = False\n"
+">>> dir(mock.Mock())\n"
+"['_NonCallableMock__get_return_value',\n"
+" '_NonCallableMock__get_side_effect',\n"
+" '_NonCallableMock__return_value_doc',\n"
+" '_NonCallableMock__set_return_value',\n"
+" '_NonCallableMock__set_side_effect',\n"
+" '__call__',\n"
+" '__class__',\n"
+" ..."
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2511
 msgid ""
@@ -2951,6 +3360,12 @@ msgstr ""
 "переконатися, що ваші дескриптори файлів закриті належним чином, і стає "
 "поширеним::"
 
+#: ../../library/unittest.mock.rst:2553
+msgid ""
+"with open('/some/path', 'w') as f:\n"
+"    f.write('something')"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2556
 msgid ""
 "The issue is that even if you mock out the call to :func:`open` it is the "
@@ -2966,9 +3381,36 @@ msgstr ""
 "Знущання над контекстними менеджерами за допомогою :class:`MagicMock` є "
 "досить поширеним і досить складним, щоб допоміжна функція була корисною. ::"
 
+#: ../../library/unittest.mock.rst:2563
+msgid ""
+">>> m = mock_open()\n"
+">>> with patch('__main__.open', m):\n"
+"...     with open('foo', 'w') as h:\n"
+"...         h.write('some stuff')\n"
+"...\n"
+">>> m.mock_calls\n"
+"[call('foo', 'w'),\n"
+" call().__enter__(),\n"
+" call().write('some stuff'),\n"
+" call().__exit__(None, None, None)]\n"
+">>> m.assert_called_once_with('foo', 'w')\n"
+">>> handle = m()\n"
+">>> handle.write.assert_called_once_with('some stuff')"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2577
 msgid "And for reading files::"
 msgstr "І для читання файлів::"
+
+#: ../../library/unittest.mock.rst:2579
+msgid ""
+">>> with patch('__main__.open', mock_open(read_data='bibble')) as m:\n"
+"...     with open('foo') as h:\n"
+"...         result = h.read()\n"
+"...\n"
+">>> m.assert_called_once_with('foo')\n"
+">>> assert result == 'bibble'"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2590
 msgid "Autospeccing"
@@ -3043,6 +3485,13 @@ msgstr ""
 "Специфікація стосується лише самого макету, тому ми все ще маємо ту саму "
 "проблему з будь-якими методами на макеті:"
 
+#: ../../library/unittest.mock.rst:2631
+msgid ""
+">>> mock.has_data()\n"
+"<mock.Mock object at 0x...>\n"
+">>> mock.has_data.assret_called_with()  # Intentional typo!"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2637
 msgid ""
 "Auto-speccing solves this problem. You can either pass ``autospec=True`` to "
@@ -3068,6 +3517,17 @@ msgstr ""
 msgid "Here's an example of it in use::"
 msgstr "Ось приклад його використання::"
 
+#: ../../library/unittest.mock.rst:2648
+msgid ""
+">>> from urllib import request\n"
+">>> patcher = patch('__main__.request', autospec=True)\n"
+">>> mock_request = patcher.start()\n"
+">>> request is mock_request\n"
+"True\n"
+">>> mock_request.Request\n"
+"<MagicMock name='request.Request' spec='Request' id='...'>"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2656
 msgid ""
 "You can see that :class:`request.Request` has a spec. "
@@ -3078,6 +3538,14 @@ msgstr ""
 ":class:`request.Request` приймає два аргументи в конструкторі (один з яких "
 "*self*). Ось що станеться, якщо ми спробуємо викликати його неправильно:"
 
+#: ../../library/unittest.mock.rst:2660
+msgid ""
+">>> req = request.Request()\n"
+"Traceback (most recent call last):\n"
+" ...\n"
+"TypeError: <lambda>() takes at least 2 arguments (1 given)"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2665
 msgid ""
 "The spec also applies to instantiated classes (i.e. the return value of "
@@ -3085,6 +3553,13 @@ msgid ""
 msgstr ""
 "Специфікація також стосується екземплярів класів (тобто значення, що "
 "повертається specced mocks):"
+
+#: ../../library/unittest.mock.rst:2668
+msgid ""
+">>> req = request.Request('foo')\n"
+">>> req\n"
+"<NonCallableMagicMock name='request.Request()' spec='Request' id='...'>"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2672
 msgid ""
@@ -3097,6 +3572,17 @@ msgstr ""
 "при створенні екземпляра нашого :class:`request.Request` є макетом, який не "
 "можна викликати. Якщо специфікація на місці, будь-які друкарські помилки в "
 "наших твердженнях викличуть правильну помилку::"
+
+#: ../../library/unittest.mock.rst:2676
+msgid ""
+">>> req.add_header('spam', 'eggs')\n"
+"<MagicMock name='request.Request().add_header()' id='...'>\n"
+">>> req.add_header.assret_called_with  # Intentional typo!\n"
+"Traceback (most recent call last):\n"
+" ...\n"
+"AttributeError: Mock object has no attribute 'assret_called_with'\n"
+">>> req.add_header.assert_called_with('spam', 'eggs')"
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2684
 msgid ""
@@ -3145,6 +3631,21 @@ msgid ""
 "restricts the api to visible attributes. ::"
 msgstr ""
 
+#: ../../library/unittest.mock.rst:2710
+msgid ""
+">>> class Something:\n"
+"...   def __init__(self):\n"
+"...     self.a = 33\n"
+"...\n"
+">>> with patch('__main__.Something', autospec=True):\n"
+"...   thing = Something()\n"
+"...   thing.a\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"AttributeError: Mock object has no attribute 'a'"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2722
 msgid ""
 "There are a few different ways of resolving this problem. The easiest, but "
@@ -3158,6 +3659,14 @@ msgstr ""
 "атрибути на макет після створення. Просто тому, що *autospec* не дозволяє "
 "отримати атрибути, яких немає в специфікації, це не заважає вам налаштувати "
 "їх::"
+
+#: ../../library/unittest.mock.rst:2728
+msgid ""
+">>> with patch('__main__.Something', autospec=True):\n"
+"...   thing = Something()\n"
+"...   thing.a = 33\n"
+"..."
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2733
 msgid ""
@@ -3178,6 +3687,12 @@ msgid ""
 " Note that if you are only setting default attributes in :meth:`!__init__` "
 "then providing them via class attributes (shared between instances of "
 "course) is faster too. e.g."
+msgstr ""
+
+#: ../../library/unittest.mock.rst:2752
+msgid ""
+"class Something:\n"
+"    a = 33"
 msgstr ""
 
 #: ../../library/unittest.mock.rst:2757
@@ -3218,6 +3733,21 @@ msgstr ""
 ":func:`patch` підтримує це — ви можете просто передати альтернативний об’єкт"
 " як аргумент *autospec*::"
 
+#: ../../library/unittest.mock.rst:2780
+msgid ""
+">>> class Something:\n"
+"...   def __init__(self):\n"
+"...     self.a = 33\n"
+"...\n"
+">>> class SomethingForTest(Something):\n"
+"...   a = 33\n"
+"...\n"
+">>> p = patch('__main__.Something', autospec=SomethingForTest)\n"
+">>> mock = p.start()\n"
+">>> mock.a\n"
+"<NonCallableMagicMock name='Something.a' spec='int' id='...'>"
+msgstr ""
+
 #: ../../library/unittest.mock.rst:2793
 msgid ""
 "This only applies to classes or already instantiated objects. Calling a "
@@ -3252,6 +3782,17 @@ msgstr ""
 "Якщо атрибуту присвоєно макет екземпляра з іменем або специфікацією, він не "
 "враховуватиметься в ланцюжку запечатування. Це дозволяє запобігти фіксації "
 "пломбою частини фіктивного об'єкта. ::"
+
+#: ../../library/unittest.mock.rst:2814
+msgid ""
+">>> mock = Mock()\n"
+">>> mock.submock.attribute1 = 2\n"
+">>> mock.not_submock = mock.Mock(name=\"sample_name\")\n"
+">>> seal(mock)\n"
+">>> mock.new_attribute  # This will raise AttributeError.\n"
+">>> mock.submock.attribute2  # This will raise AttributeError.\n"
+">>> mock.not_submock.attribute2  # This won't raise."
+msgstr ""
 
 #: ../../library/unittest.mock.rst:2826
 msgid ""

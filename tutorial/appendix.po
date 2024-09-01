@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Olga Tomakhina, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -106,6 +106,10 @@ msgstr ""
 "У BSD Unix системах скрипти Python можна зробити безпосередньо виконуваними,"
 " як скрипти оболонки, додавши рядок ::"
 
+#: ../../tutorial/appendix.rst:65
+msgid "#!/usr/bin/env python3"
+msgstr ""
+
 #: ../../tutorial/appendix.rst:67
 msgid ""
 "(assuming that the interpreter is on the user's :envvar:`PATH`) at the "
@@ -129,6 +133,10 @@ msgid ""
 msgstr ""
 "Скрипту можна надати режим виконання або дозвіл за допомогою команди "
 ":program:`chmod`."
+
+#: ../../tutorial/appendix.rst:77
+msgid "$ chmod +x myscript.py"
+msgstr ""
 
 #: ../../tutorial/appendix.rst:81
 msgid ""
@@ -194,6 +202,16 @@ msgstr ""
 "('.pythonrc.py').read())``. Якщо ви хочете використовувати файл запуску в "
 "сценарії, ви повинні зробити це явно в сценарії::"
 
+#: ../../tutorial/appendix.rst:113
+msgid ""
+"import os\n"
+"filename = os.environ.get('PYTHONSTARTUP')\n"
+"if filename and os.path.isfile(filename):\n"
+"    with open(filename) as fobj:\n"
+"        startup_file = fobj.read()\n"
+"    exec(startup_file)"
+msgstr ""
+
 #: ../../tutorial/appendix.rst:124
 msgid "The Customization Modules"
 msgstr "Модулі налаштування"
@@ -204,6 +222,13 @@ msgid ""
 "and :index:`usercustomize`.  To see how it works, you need first to find the"
 " location of your user site-packages directory.  Start Python and run this "
 "code::"
+msgstr ""
+
+#: ../../tutorial/appendix.rst:130
+msgid ""
+">>> import site\n"
+">>> site.getusersitepackages()\n"
+"'/home/user/.local/lib/python3.x/site-packages'"
 msgstr ""
 
 #: ../../tutorial/appendix.rst:134

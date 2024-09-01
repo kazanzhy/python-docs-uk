@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:17+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -471,6 +471,10 @@ msgstr ""
 "Окремі фільтри попереджень задаються як послідовність полів, розділених "
 "двокрапками:"
 
+#: ../../library/warnings.rst:196
+msgid "action:message:category:module:line"
+msgstr ""
+
 #: ../../library/warnings.rst:198
 msgid ""
 "The meaning of each of these fields is as described in :ref:`warning-"
@@ -497,6 +501,17 @@ msgstr ""
 "попереджень, попереджень у певній категорії або попереджень, викликаних "
 "окремими модулями чи пакетами. Деякі приклади::"
 
+#: ../../library/warnings.rst:209
+msgid ""
+"default                      # Show all warnings (even those ignored by default)\n"
+"ignore                       # Ignore all warnings\n"
+"error                        # Convert all warnings to errors\n"
+"error::ResourceWarning       # Treat ResourceWarning messages as errors\n"
+"default::DeprecationWarning  # Show DeprecationWarning messages\n"
+"ignore,default:::mymodule    # Only report warnings triggered by \"mymodule\"\n"
+"error:::mymodule             # Convert warnings to errors in \"mymodule\""
+msgstr ""
+
 #: ../../library/warnings.rst:221
 msgid "Default Warning Filter"
 msgstr "Фільтр попереджень за умовчанням"
@@ -518,6 +533,15 @@ msgid ""
 msgstr ""
 "У регулярних збірках випусків стандартний фільтр попереджень містить такі "
 "записи (у порядку пріоритету):"
+
+#: ../../library/warnings.rst:230
+msgid ""
+"default::DeprecationWarning:__main__\n"
+"ignore::DeprecationWarning\n"
+"ignore::PendingDeprecationWarning\n"
+"ignore::ImportWarning\n"
+"ignore::ResourceWarning"
+msgstr ""
 
 #: ../../library/warnings.rst:236
 msgid ""
@@ -573,6 +597,15 @@ msgstr ""
 "фільтра інтерпретатору, можна використовувати як маркер, щоб вказати, чи "
 "потрібно вимкнути попередження:"
 
+#: ../../library/warnings.rst:263
+msgid ""
+"import sys\n"
+"\n"
+"if not sys.warnoptions:\n"
+"    import warnings\n"
+"    warnings.simplefilter(\"ignore\")"
+msgstr ""
+
 #: ../../library/warnings.rst:269
 msgid ""
 "Developers of test runners for Python code are advised to instead ensure "
@@ -582,6 +615,16 @@ msgstr ""
 "Розробникам програм для виконання тестів для коду Python рекомендується "
 "натомість переконатися, що *всі* попередження відображаються за "
 "замовчуванням для коду, що тестується, використовуючи такий код::"
+
+#: ../../library/warnings.rst:273
+msgid ""
+"import sys\n"
+"\n"
+"if not sys.warnoptions:\n"
+"    import os, warnings\n"
+"    warnings.simplefilter(\"default\") # Change the filter in this process\n"
+"    os.environ[\"PYTHONWARNINGS\"] = \"default\" # Also affect subprocesses"
+msgstr ""
 
 #: ../../library/warnings.rst:280
 msgid ""
@@ -595,6 +638,13 @@ msgstr ""
 "що повідомлення :exc:`DeprecationWarning` відображаються за замовчуванням, "
 "використовуючи такий код (де ``user_ns`` це модуль, який використовується "
 "для виконання коду, введеного інтерактивно)::"
+
+#: ../../library/warnings.rst:285
+msgid ""
+"import warnings\n"
+"warnings.filterwarnings(\"default\", category=DeprecationWarning,\n"
+"                                   module=user_ns.get(\"__name__\"))"
+msgstr ""
 
 #: ../../library/warnings.rst:293
 msgid "Temporarily Suppressing Warnings"
@@ -612,6 +662,18 @@ msgstr ""
 "попередження було явно налаштовано за допомогою командного рядка), тоді "
 "можна придушити попередження за допомогою контекстний менеджер "
 ":class:`catch_warnings`::"
+
+#: ../../library/warnings.rst:300
+msgid ""
+"import warnings\n"
+"\n"
+"def fxn():\n"
+"    warnings.warn(\"deprecated\", DeprecationWarning)\n"
+"\n"
+"with warnings.catch_warnings():\n"
+"    warnings.simplefilter(\"ignore\")\n"
+"    fxn()"
+msgstr ""
 
 #: ../../library/warnings.rst:309
 msgid ""
@@ -646,6 +708,24 @@ msgstr ""
 "змінити фільтр попереджень, щоб полегшити ваше тестування. Наприклад, "
 "виконайте такі дії, щоб зафіксувати всі викликані попередження для "
 "перевірки:"
+
+#: ../../library/warnings.rst:328
+msgid ""
+"import warnings\n"
+"\n"
+"def fxn():\n"
+"    warnings.warn(\"deprecated\", DeprecationWarning)\n"
+"\n"
+"with warnings.catch_warnings(record=True) as w:\n"
+"    # Cause all warnings to always be triggered.\n"
+"    warnings.simplefilter(\"always\")\n"
+"    # Trigger a warning.\n"
+"    fxn()\n"
+"    # Verify some things\n"
+"    assert len(w) == 1\n"
+"    assert issubclass(w[-1].category, DeprecationWarning)\n"
+"    assert \"deprecated\" in str(w[-1].message)"
+msgstr ""
 
 #: ../../library/warnings.rst:343
 msgid ""
@@ -786,6 +866,12 @@ msgstr ""
 " *stacklevel* може використовуватися функціями-обгортками, написаними на "
 "Python, наприклад:"
 
+#: ../../library/warnings.rst:410
+msgid ""
+"def deprecated_api(message):\n"
+"    warnings.warn(message, DeprecationWarning, stacklevel=2)"
+msgstr ""
+
 #: ../../library/warnings.rst:413
 msgid ""
 "This makes the warning refer to ``deprecated_api``'s caller, rather than to "
@@ -803,6 +889,23 @@ msgid ""
 "prefixes are supplied, stacklevel is implicitly overridden to be ``max(2, "
 "stacklevel)``. To cause a warning to be attributed to the caller from "
 "outside of the current package you might write::"
+msgstr ""
+
+#: ../../library/warnings.rst:426
+msgid ""
+"# example/lower.py\n"
+"_warn_skips = (os.path.dirname(__file__),)\n"
+"\n"
+"def one_way(r_luxury_yacht=None, t_wobbler_mangrove=None):\n"
+"    if r_luxury_yacht:\n"
+"        warnings.warn(\"Please migrate to t_wobbler_mangrove=.\",\n"
+"                      skip_file_prefixes=_warn_skips)\n"
+"\n"
+"# example/higher.py\n"
+"from . import lower\n"
+"\n"
+"def another_way(**kw):\n"
+"    lower.one_way(**kw)"
 msgstr ""
 
 #: ../../library/warnings.rst:440
@@ -958,6 +1061,26 @@ msgstr ""
 #: ../../library/warnings.rst:534
 msgid "Usage::"
 msgstr "Використання::"
+
+#: ../../library/warnings.rst:536
+msgid ""
+"from warnings import deprecated\n"
+"from typing import overload\n"
+"\n"
+"@deprecated(\"Use B instead\")\n"
+"class A:\n"
+"    pass\n"
+"\n"
+"@deprecated(\"Use g instead\")\n"
+"def f():\n"
+"    pass\n"
+"\n"
+"@overload\n"
+"@deprecated(\"int support is deprecated\")\n"
+"def g(x: int) -> int: ...\n"
+"@overload\n"
+"def g(x: str) -> int: ..."
+msgstr ""
 
 #: ../../library/warnings.rst:553
 msgid ""

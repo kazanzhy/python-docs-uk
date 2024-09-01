@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -192,6 +192,16 @@ msgid ""
 ":meth:`~email.generator.Generator.flatten` method directly.  For example::"
 msgstr ""
 
+#: ../../library/email.compat32-message.rst:91
+msgid ""
+"from io import StringIO\n"
+"from email.generator import Generator\n"
+"fp = StringIO()\n"
+"g = Generator(fp, mangle_from_=True, maxheaderlen=60)\n"
+"g.flatten(msg)\n"
+"text = fp.getvalue()"
+msgstr ""
+
 #: ../../library/email.compat32-message.rst:98
 msgid ""
 "If the message object contains binary data that is not encoded according to "
@@ -242,6 +252,16 @@ msgid ""
 ":class:`~email.generator.BytesGenerator` instance and use its "
 ":meth:`~email.generator.BytesGenerator.flatten` method directly. For "
 "example::"
+msgstr ""
+
+#: ../../library/email.compat32-message.rst:134
+msgid ""
+"from io import BytesIO\n"
+"from email.generator import BytesGenerator\n"
+"fp = BytesIO()\n"
+"g = BytesGenerator(fp, mangle_from_=True, maxheaderlen=60)\n"
+"g.flatten(msg)\n"
+"text = fp.getvalue()"
 msgstr ""
 
 #: ../../library/email.compat32-message.rst:146
@@ -561,6 +581,12 @@ msgstr ""
 "Зіставлення виконується без урахування регістру, і *ім’я* не повинно містити"
 " двокрапку в кінці. Використовується для оператора ``in``, наприклад::"
 
+#: ../../library/email.compat32-message.rst:316
+msgid ""
+"if 'message-id' in myMessage:\n"
+"   print('Message-ID:', myMessage['message-id'])"
+msgstr ""
+
 #: ../../library/email.compat32-message.rst:322
 msgid ""
 "Return the value of the named header field.  *name* should not include the "
@@ -602,6 +628,12 @@ msgstr ""
 "із такою самою назвою. Якщо ви хочете переконатися, що новий заголовок є "
 "єдиним у повідомленні з назвою поля *name*, спочатку видаліть це поле, "
 "наприклад::"
+
+#: ../../library/email.compat32-message.rst:341
+msgid ""
+"del msg['subject']\n"
+"msg['subject'] = 'Python roolz!'"
+msgstr ""
 
 #: ../../library/email.compat32-message.rst:347
 msgid ""
@@ -695,17 +727,36 @@ msgstr ""
 msgid "Here's an example::"
 msgstr "Ось приклад::"
 
+#: ../../library/email.compat32-message.rst:407
+msgid ""
+"msg.add_header('Content-Disposition', 'attachment', filename='bud.gif')"
+msgstr ""
+
 #: ../../library/email.compat32-message.rst:409
 msgid "This will add a header that looks like ::"
 msgstr "Це додасть заголовок, який виглядає так::"
+
+#: ../../library/email.compat32-message.rst:411
+msgid "Content-Disposition: attachment; filename=\"bud.gif\""
+msgstr ""
 
 #: ../../library/email.compat32-message.rst:413
 msgid "An example with non-ASCII characters::"
 msgstr "Приклад із символами, відмінними від ASCII:"
 
+#: ../../library/email.compat32-message.rst:415
+msgid ""
+"msg.add_header('Content-Disposition', 'attachment',\n"
+"               filename=('iso-8859-1', '', 'Fußballer.ppt'))"
+msgstr ""
+
 #: ../../library/email.compat32-message.rst:418
 msgid "Which produces ::"
 msgstr "Що виробляє ::"
+
+#: ../../library/email.compat32-message.rst:420
+msgid "Content-Disposition: attachment; filename*=\"iso-8859-1''Fu%DFballer.ppt\""
+msgstr ""
 
 #: ../../library/email.compat32-message.rst:425
 msgid ""
@@ -878,6 +929,12 @@ msgstr ""
 "повертається з :meth:`get_param`. Це поверне відповідним чином декодований "
 "рядок Unicode, якщо значення є кортежем, або оригінальний рядок без лапок, "
 "якщо це не так. Наприклад::"
+
+#: ../../library/email.compat32-message.rst:519
+msgid ""
+"rawparam = msg.get_param('foo')\n"
+"param = email.utils.collapse_rfc2231_value(rawparam)"
+msgstr ""
 
 #: ../../library/email.compat32-message.rst:522
 msgid ""
@@ -1126,6 +1183,19 @@ msgstr ""
 "Ось приклад, який друкує тип MIME кожної частини структури повідомлення, що "
 "складається з кількох частин:"
 
+#: ../../library/email.compat32-message.rst:674
+msgid ""
+">>> for part in msg.walk():\n"
+"...     print(part.get_content_type())\n"
+"multipart/report\n"
+"text/plain\n"
+"message/delivery-status\n"
+"text/plain\n"
+"text/plain\n"
+"message/rfc822\n"
+"text/plain"
+msgstr ""
+
 #: ../../library/email.compat32-message.rst:686
 msgid ""
 "``walk`` iterates over the subparts of any part where :meth:`is_multipart` "
@@ -1137,6 +1207,28 @@ msgstr ""
 "повертає ``True``, навіть якщо ``msg.get_content_maintype() == 'multipart'``"
 " може повернути ``False``. Ми можемо побачити це в нашому прикладі, "
 "використовуючи допоміжну функцію налагодження ``_structure``:"
+
+#: ../../library/email.compat32-message.rst:692
+msgid ""
+">>> for part in msg.walk():\n"
+"...     print(part.get_content_maintype() == 'multipart',\n"
+"...           part.is_multipart())\n"
+"True True\n"
+"False False\n"
+"False True\n"
+"False False\n"
+"False False\n"
+"False True\n"
+"False False\n"
+">>> _structure(msg)\n"
+"multipart/report\n"
+"    text/plain\n"
+"    message/delivery-status\n"
+"        text/plain\n"
+"        text/plain\n"
+"    message/rfc822\n"
+"        text/plain"
+msgstr ""
 
 #: ../../library/email.compat32-message.rst:713
 msgid ""

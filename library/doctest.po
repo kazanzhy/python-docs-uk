@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -71,6 +71,64 @@ msgstr ""
 msgid "Here's a complete but small example module::"
 msgstr "Ось повний, але невеликий приклад модуля::"
 
+#: ../../library/doctest.rst:33
+msgid ""
+"\"\"\"\n"
+"This is the \"example\" module.\n"
+"\n"
+"The example module supplies one function, factorial().  For example,\n"
+"\n"
+">>> factorial(5)\n"
+"120\n"
+"\"\"\"\n"
+"\n"
+"def factorial(n):\n"
+"    \"\"\"Return the factorial of n, an exact integer >= 0.\n"
+"\n"
+"    >>> [factorial(n) for n in range(6)]\n"
+"    [1, 1, 2, 6, 24, 120]\n"
+"    >>> factorial(30)\n"
+"    265252859812191058636308480000000\n"
+"    >>> factorial(-1)\n"
+"    Traceback (most recent call last):\n"
+"        ...\n"
+"    ValueError: n must be >= 0\n"
+"\n"
+"    Factorials of floats are OK, but the float must be an exact integer:\n"
+"    >>> factorial(30.1)\n"
+"    Traceback (most recent call last):\n"
+"        ...\n"
+"    ValueError: n must be exact integer\n"
+"    >>> factorial(30.0)\n"
+"    265252859812191058636308480000000\n"
+"\n"
+"    It must also not be ridiculously large:\n"
+"    >>> factorial(1e100)\n"
+"    Traceback (most recent call last):\n"
+"        ...\n"
+"    OverflowError: n too large\n"
+"    \"\"\"\n"
+"\n"
+"    import math\n"
+"    if not n >= 0:\n"
+"        raise ValueError(\"n must be >= 0\")\n"
+"    if math.floor(n) != n:\n"
+"        raise ValueError(\"n must be exact integer\")\n"
+"    if n+1 == n:  # catch a value like 1e300\n"
+"        raise OverflowError(\"n too large\")\n"
+"    result = 1\n"
+"    factor = 2\n"
+"    while factor <= n:\n"
+"        result *= factor\n"
+"        factor += 1\n"
+"    return result\n"
+"\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    import doctest\n"
+"    doctest.testmod()"
+msgstr ""
+
 #: ../../library/doctest.rst:88
 msgid ""
 "If you run :file:`example.py` directly from the command line, :mod:`doctest`"
@@ -78,6 +136,12 @@ msgid ""
 msgstr ""
 "Якщо ви запустите :file:`example.py` безпосередньо з командного рядка, "
 ":mod:`doctest` спрацює так:"
+
+#: ../../library/doctest.rst:91
+msgid ""
+"$ python example.py\n"
+"$"
+msgstr ""
 
 #: ../../library/doctest.rst:96
 msgid ""
@@ -89,9 +153,42 @@ msgstr ""
 "Передайте сценарію ``-v``, і :mod:`doctest` надрукує докладний журнал того, "
 "що він намагається, і наприкінці виведе підсумок:"
 
+#: ../../library/doctest.rst:100
+msgid ""
+"$ python example.py -v\n"
+"Trying:\n"
+"    factorial(5)\n"
+"Expecting:\n"
+"    120\n"
+"ok\n"
+"Trying:\n"
+"    [factorial(n) for n in range(6)]\n"
+"Expecting:\n"
+"    [1, 1, 2, 6, 24, 120]\n"
+"ok"
+msgstr ""
+
 #: ../../library/doctest.rst:114
 msgid "And so on, eventually ending with:"
 msgstr "І так далі, зрештою закінчуючи:"
+
+#: ../../library/doctest.rst:116
+msgid ""
+"Trying:\n"
+"    factorial(1e100)\n"
+"Expecting:\n"
+"    Traceback (most recent call last):\n"
+"        ...\n"
+"    OverflowError: n too large\n"
+"ok\n"
+"2 items passed all tests:\n"
+"   1 test in __main__\n"
+"   6 tests in __main__.factorial\n"
+"7 tests in 2 items.\n"
+"7 passed.\n"
+"Test passed.\n"
+"$"
+msgstr ""
 
 #: ../../library/doctest.rst:133
 msgid ""
@@ -112,6 +209,13 @@ msgid ""
 "continue to do it) is to end each module :mod:`!M` with::"
 msgstr ""
 
+#: ../../library/doctest.rst:148
+msgid ""
+"if __name__ == \"__main__\":\n"
+"    import doctest\n"
+"    doctest.testmod()"
+msgstr ""
+
 #: ../../library/doctest.rst:152
 msgid ":mod:`!doctest` then examines docstrings in module :mod:`!M`."
 msgstr ""
@@ -123,6 +227,10 @@ msgid ""
 msgstr ""
 "Запуск модуля як сценарію призводить до виконання та перевірки прикладів у "
 "рядках документів:"
+
+#: ../../library/doctest.rst:157
+msgid "python M.py"
+msgstr ""
 
 #: ../../library/doctest.rst:159
 msgid ""
@@ -139,6 +247,10 @@ msgstr ""
 #: ../../library/doctest.rst:164
 msgid "Run it with the ``-v`` switch instead::"
 msgstr "Натомість запустіть його з перемикачем ``-v``::"
+
+#: ../../library/doctest.rst:166
+msgid "python M.py -v"
+msgstr ""
 
 #: ../../library/doctest.rst:168
 msgid ""
@@ -170,6 +282,10 @@ msgstr ""
 "наказати інтерпретатору Python запустити модуль doctest безпосередньо зі "
 "стандартної бібліотеки та передати ім’я модуля (імена) у командному рядку:"
 
+#: ../../library/doctest.rst:180
+msgid "python -m doctest -v example.py"
+msgstr ""
+
 #: ../../library/doctest.rst:182
 msgid ""
 "This will import :file:`example.py` as a standalone module and run "
@@ -200,6 +316,12 @@ msgstr ""
 "Іншим простим застосуванням doctest є тестування інтерактивних прикладів у "
 "текстовому файлі. Це можна зробити за допомогою функції :func:`testfile`::"
 
+#: ../../library/doctest.rst:197
+msgid ""
+"import doctest\n"
+"doctest.testfile(\"example.txt\")"
+msgstr ""
+
 #: ../../library/doctest.rst:200
 msgid ""
 "That short script executes and verifies any interactive Python examples "
@@ -212,6 +334,25 @@ msgstr ""
 "так, ніби це один гігантський рядок документа; файл не повинен містити "
 "програму Python! Наприклад, можливо, :file:`example.txt` містить таке:"
 
+#: ../../library/doctest.rst:205
+msgid ""
+"The ``example`` module\n"
+"======================\n"
+"\n"
+"Using ``factorial``\n"
+"-------------------\n"
+"\n"
+"This is an example text file in reStructuredText format.  First import\n"
+"``factorial`` from the ``example`` module:\n"
+"\n"
+"    >>> from example import factorial\n"
+"\n"
+"Now use it:\n"
+"\n"
+"    >>> factorial(6)\n"
+"    120"
+msgstr ""
+
 #: ../../library/doctest.rst:223
 msgid ""
 "Running ``doctest.testfile(\"example.txt\")`` then finds the error in this "
@@ -219,6 +360,17 @@ msgid ""
 msgstr ""
 "Запуск ``doctest.testfile(\"example.txt\")`` потім знаходить помилку в цій "
 "документації::"
+
+#: ../../library/doctest.rst:226
+msgid ""
+"File \"./example.txt\", line 14, in example.txt\n"
+"Failed example:\n"
+"    factorial(6)\n"
+"Expected:\n"
+"    120\n"
+"Got:\n"
+"    720"
+msgstr ""
 
 #: ../../library/doctest.rst:234
 msgid ""
@@ -262,6 +414,10 @@ msgstr ""
 "Існує також ярлик командного рядка для запуску :func:`testfile`. Ви можете "
 "наказати інтерпретатору Python запустити модуль doctest безпосередньо зі "
 "стандартної бібліотеки та передати імена файлів у командному рядку:"
+
+#: ../../library/doctest.rst:251
+msgid "python -m doctest -v example.txt"
+msgstr ""
 
 #: ../../library/doctest.rst:253
 msgid ""
@@ -331,6 +487,19 @@ msgid ""
 "For example, place this block of code at the top of :file:`example.py`:"
 msgstr ""
 
+#: ../../library/doctest.rst:291
+msgid ""
+"__test__ = {\n"
+"    'numbers': \"\"\"\n"
+">>> factorial(6)\n"
+"720\n"
+"\n"
+">>> [factorial(n) for n in range(6)]\n"
+"[1, 1, 2, 6, 24, 120]\n"
+"\"\"\"\n"
+"}"
+msgstr ""
+
 #: ../../library/doctest.rst:303
 msgid ""
 "The value of ``example.__test__[\"numbers\"]`` will be treated as a "
@@ -361,6 +530,25 @@ msgstr ""
 "У більшості випадків копіювання та вставлення сеансу інтерактивної консолі "
 "працює добре, але doctest не намагається зробити точну емуляцію будь-якої "
 "конкретної оболонки Python."
+
+#: ../../library/doctest.rst:323
+msgid ""
+">>> # comments are ignored\n"
+">>> x = 12\n"
+">>> x\n"
+"12\n"
+">>> if x == 13:\n"
+"...     print(\"yes\")\n"
+"... else:\n"
+"...     print(\"no\")\n"
+"...     print(\"NO\")\n"
+"...     print(\"NO!!!\")\n"
+"...\n"
+"no\n"
+"NO\n"
+"NO!!!\n"
+">>>"
+msgstr ""
 
 #: ../../library/doctest.rst:343
 msgid ""
@@ -434,6 +622,15 @@ msgstr ""
 "використовувати необроблений рядок документації, який збереже ваші зворотні "
 "косі риски точно так, як ви їх вводите::"
 
+#: ../../library/doctest.rst:373
+msgid ""
+">>> def f(x):\n"
+"...     r'''Backslashes in a raw docstring: m\\n'''\n"
+"...\n"
+">>> print(f.__doc__)\n"
+"Backslashes in a raw docstring: m\\n"
+msgstr ""
+
 #: ../../library/doctest.rst:379
 msgid ""
 "Otherwise, the backslash will be interpreted as part of the string. For "
@@ -446,9 +643,26 @@ msgstr ""
 "того, ви можете подвоїти кожну зворотну косу риску у версії doctest (і не "
 "використовувати необроблений рядок)::"
 
+#: ../../library/doctest.rst:383
+msgid ""
+">>> def f(x):\n"
+"...     '''Backslashes in a raw docstring: m\\\\n'''\n"
+"...\n"
+">>> print(f.__doc__)\n"
+"Backslashes in a raw docstring: m\\n"
+msgstr ""
+
 #: ../../library/doctest.rst:389
 msgid "The starting column doesn't matter::"
 msgstr "Початковий стовпець не має значення::"
+
+#: ../../library/doctest.rst:391
+msgid ""
+">>> assert \"Easy!\"\n"
+"      >>> import math\n"
+"          >>> math.floor(1.9)\n"
+"          1"
+msgstr ""
 
 #: ../../library/doctest.rst:396
 msgid ""
@@ -505,6 +719,14 @@ msgstr ""
 msgid "Simple example::"
 msgstr "Простий приклад::"
 
+#: ../../library/doctest.rst:430
+msgid ""
+">>> [1, 2, 3].remove(42)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"ValueError: list.remove(x): x not in list"
+msgstr ""
+
 #: ../../library/doctest.rst:435
 msgid ""
 "That doctest succeeds if :exc:`ValueError` is raised, with the "
@@ -522,6 +744,12 @@ msgstr ""
 "Очікуваний вихід для винятку повинен починатися із заголовка трасування, "
 "який може бути будь-яким із наступних двох рядків із таким самим відступом, "
 "як і перший рядок прикладу:"
+
+#: ../../library/doctest.rst:442
+msgid ""
+"Traceback (most recent call last):\n"
+"Traceback (innermost last):"
+msgstr ""
 
 #: ../../library/doctest.rst:445
 msgid ""
@@ -544,6 +772,16 @@ msgstr ""
 "винятку та деталі. Зазвичай це останній рядок трасування, але він може "
 "охоплювати кілька рядків, якщо виняток містить багаторядкові деталі::"
 
+#: ../../library/doctest.rst:454
+msgid ""
+">>> raise ValueError('multi\\n    line\\ndetail')\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"ValueError: multi\n"
+"    line\n"
+"detail"
+msgstr ""
+
 #: ../../library/doctest.rst:461
 msgid ""
 "The last three lines (starting with :exc:`ValueError`) are compared against "
@@ -560,6 +798,16 @@ msgid ""
 msgstr ""
 "Найкраща практика — опустити стек трасування, якщо це не додає прикладу "
 "значну цінність документації. Отже, останній приклад, ймовірно, кращий як::"
+
+#: ../../library/doctest.rst:467
+msgid ""
+">>> raise ValueError('multi\\n    line\\ndetail')\n"
+"Traceback (most recent call last):\n"
+"    ...\n"
+"ValueError: multi\n"
+"    line\n"
+"detail"
+msgstr ""
 
 #: ../../library/doctest.rst:474
 msgid ""
@@ -642,6 +890,15 @@ msgid ""
 "markers and tildes::"
 msgstr ""
 
+#: ../../library/doctest.rst:510
+msgid ""
+">>> 1 + None\n"
+"  File \"<stdin>\", line 1\n"
+"    1 + None\n"
+"    ~~^~~~~~\n"
+"TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'"
+msgstr ""
+
 #: ../../library/doctest.rst:516
 msgid ""
 "Since the lines showing the position of the error come before the exception "
@@ -652,6 +909,15 @@ msgstr ""
 "Оскільки рядки, що показують положення помилки, стоять перед типом винятку "
 "та деталями, вони не перевіряються doctest. Наприклад, наступний тест буде "
 "пройдено, навіть якщо він розмістить маркер ``^`` у неправильному місці:"
+
+#: ../../library/doctest.rst:520
+msgid ""
+">>> 1 + None\n"
+"  File \"<stdin>\", line 1\n"
+"    1 + None\n"
+"    ^~~~~~~~\n"
+"TypeError: unsupported operand type(s) for +: 'int' and 'NoneType'"
+msgstr ""
 
 #: ../../library/doctest.rst:531
 msgid "Option Flags"
@@ -769,6 +1035,21 @@ msgid ""
 "name included before the exception class, which can vary between "
 "implementations and versions of Python and the code/libraries in use. Hence,"
 " all three of these variations will work with the flag specified:"
+msgstr ""
+
+#: ../../library/doctest.rst:601
+msgid ""
+">>> raise Exception('message')\n"
+"Traceback (most recent call last):\n"
+"Exception: message\n"
+"\n"
+">>> raise Exception('message')\n"
+"Traceback (most recent call last):\n"
+"builtins.Exception: message\n"
+"\n"
+">>> raise Exception('message')\n"
+"Traceback (most recent call last):\n"
+"__main__.Exception: message"
 msgstr ""
 
 #: ../../library/doctest.rst:615
@@ -917,6 +1198,10 @@ msgstr ""
 "створення нових параметрів, які підтримуються вашими підкласами. "
 ":func:`register_optionflag` завжди слід викликати за допомогою такої ідіоми:"
 
+#: ../../library/doctest.rst:704
+msgid "MY_FLAG = register_optionflag('MY_FLAG')"
+msgstr ""
+
 #: ../../library/doctest.rst:714
 msgid "Directives"
 msgstr "Директиви"
@@ -954,6 +1239,13 @@ msgstr ""
 msgid "For example, this test passes:"
 msgstr "Наприклад, цей тест проходить:"
 
+#: ../../library/doctest.rst:736
+msgid ""
+">>> print(list(range(20)))  # doctest: +NORMALIZE_WHITESPACE\n"
+"[0,   1,  2,  3,  4,  5,  6,  7,  8,  9,\n"
+"10,  11, 12, 13, 14, 15, 16, 17, 18, 19]"
+msgstr ""
+
 #: ../../library/doctest.rst:743
 msgid ""
 "Without the directive it would fail, both because the actual output doesn't "
@@ -966,6 +1258,12 @@ msgstr ""
 "вивід містить один рядок. Цей тест також проходить, і для цього також "
 "потрібна директива:"
 
+#: ../../library/doctest.rst:748
+msgid ""
+">>> print(list(range(20)))  # doctest: +ELLIPSIS\n"
+"[0, 1, ..., 18, 19]"
+msgstr ""
+
 #: ../../library/doctest.rst:754
 msgid ""
 "Multiple directives can be used on a single physical line, separated by "
@@ -974,6 +1272,12 @@ msgstr ""
 "В одному фізичному рядку можна використовувати кілька директив, розділених "
 "комами:"
 
+#: ../../library/doctest.rst:757
+msgid ""
+">>> print(list(range(20)))  # doctest: +ELLIPSIS, +NORMALIZE_WHITESPACE\n"
+"[0,    1, ...,   18,    19]"
+msgstr ""
+
 #: ../../library/doctest.rst:763
 msgid ""
 "If multiple directive comments are used for a single example, then they are "
@@ -981,6 +1285,13 @@ msgid ""
 msgstr ""
 "Якщо для одного прикладу використовується кілька коментарів директиви, вони "
 "об’єднуються:"
+
+#: ../../library/doctest.rst:766
+msgid ""
+">>> print(list(range(20)))  # doctest: +ELLIPSIS\n"
+"...                         # doctest: +NORMALIZE_WHITESPACE\n"
+"[0,    1, ...,   18,    19]"
+msgstr ""
 
 #: ../../library/doctest.rst:773
 msgid ""
@@ -992,6 +1303,13 @@ msgstr ""
 "рядки ``...``, які містять лише директиви. Це може бути корисно, коли "
 "приклад надто довгий, щоб директива могла зручно розміститися в одному "
 "рядку:"
+
+#: ../../library/doctest.rst:777
+msgid ""
+">>> print(list(range(5)) + list(range(10, 20)) + list(range(30, 40)))\n"
+"... # doctest: +ELLIPSIS\n"
+"[0, ..., 4, 10, ..., 19, 30, ..., 39]"
+msgstr ""
 
 #: ../../library/doctest.rst:784
 msgid ""
@@ -1029,13 +1347,32 @@ msgstr ""
 "гарантує, що елемент буде надруковано в будь-якому певному порядку, тому "
 "такий тест::"
 
+#: ../../library/doctest.rst:802
+msgid ""
+">>> foo()\n"
+"{\"spam\", \"eggs\"}"
+msgstr ""
+
 #: ../../library/doctest.rst:805
 msgid "is vulnerable!  One workaround is to do ::"
 msgstr "вразливий! Одним з обхідних шляхів є:"
 
+#: ../../library/doctest.rst:807
+msgid ""
+">>> foo() == {\"spam\", \"eggs\"}\n"
+"True"
+msgstr ""
+
 #: ../../library/doctest.rst:810
 msgid "instead.  Another is to do ::"
 msgstr "замість цього. Інше - зробити ::"
+
+#: ../../library/doctest.rst:812
+msgid ""
+">>> d = sorted(foo())\n"
+">>> d\n"
+"['eggs', 'spam']"
+msgstr ""
 
 #: ../../library/doctest.rst:816
 msgid "There are others, but you get the idea."
@@ -1046,11 +1383,26 @@ msgid "Another bad idea is to print things that embed an object address, like"
 msgstr ""
 "Ще одна погана ідея — друкувати речі, які містять адресу об’єкта, наприклад"
 
+#: ../../library/doctest.rst:820
+msgid ""
+">>> id(1.0)  # certain to fail some of the time  \n"
+"7948648\n"
+">>> class C: pass\n"
+">>> C()  # the default repr() for instances embeds an address   \n"
+"<C object at 0x00AC18F0>"
+msgstr ""
+
 #: ../../library/doctest.rst:828
 msgid ""
 "The :const:`ELLIPSIS` directive gives a nice approach for the last example:"
 msgstr ""
 "Директива :const:`ELLIPSIS` дає гарний підхід для останнього прикладу:"
+
+#: ../../library/doctest.rst:830
+msgid ""
+">>> C()  # doctest: +ELLIPSIS\n"
+"<C object at 0x...>"
+msgstr ""
 
 #: ../../library/doctest.rst:836
 msgid ""
@@ -1063,6 +1415,16 @@ msgstr ""
 "для форматування з плаваючою комою, і бібліотеки C тут сильно відрізняються "
 "за якістю. ::"
 
+#: ../../library/doctest.rst:840
+msgid ""
+">>> 1./7  # risky\n"
+"0.14285714285714285\n"
+">>> print(1./7) # safer\n"
+"0.142857142857\n"
+">>> print(round(1./7, 6)) # much safer\n"
+"0.142857"
+msgstr ""
+
 #: ../../library/doctest.rst:847
 msgid ""
 "Numbers of the form ``I/2.**J`` are safe across all platforms, and I often "
@@ -1070,6 +1432,12 @@ msgid ""
 msgstr ""
 "Числа у формі ``I/2.**J`` безпечні на всіх платформах, і я часто створюю "
 "приклади doctest для отримання чисел такої форми::"
+
+#: ../../library/doctest.rst:850
+msgid ""
+">>> 3./4  # utterly safe\n"
+"0.75"
+msgstr ""
 
 #: ../../library/doctest.rst:853
 msgid ""
@@ -1395,6 +1763,17 @@ msgid ""
 "files containing doctests.  To integrate with :mod:`unittest` test "
 "discovery, include a :ref:`load_tests <load_tests-protocol>` function in "
 "your test module::"
+msgstr ""
+
+#: ../../library/doctest.rst:1003
+msgid ""
+"import unittest\n"
+"import doctest\n"
+"import my_module_with_doctests\n"
+"\n"
+"def load_tests(loader, tests, ignore):\n"
+"    tests.addTests(doctest.DocTestSuite(my_module_with_doctests))\n"
+"    return tests"
 msgstr ""
 
 #: ../../library/doctest.rst:1011
@@ -1775,6 +2154,18 @@ msgid ""
 "The relationships among these processing classes are summarized in the "
 "following diagram::"
 msgstr "Відносини між цими класами обробки підсумовано на наступній діаграмі:"
+
+#: ../../library/doctest.rst:1207
+msgid ""
+"                            list of:\n"
+"+------+                   +---------+\n"
+"|module| --DocTestFinder-> | DocTest | --DocTestRunner-> results\n"
+"+------+    |        ^     +---------+     |       ^    (printed)\n"
+"            |        |     | Example |     |       |\n"
+"            v        |     |   ...   |     v       |\n"
+"           DocTestParser   | Example |   OutputChecker\n"
+"                           +---------+"
+msgstr ""
 
 #: ../../library/doctest.rst:1220
 msgid "DocTest Objects"
@@ -2479,9 +2870,55 @@ msgstr ""
 "можете перевірити поточні значення змінних і так далі. Наприклад, "
 "припустимо, що :file:`a.py` містить лише цей модуль docstring::"
 
+#: ../../library/doctest.rst:1657
+msgid ""
+"\"\"\"\n"
+">>> def f(x):\n"
+"...     g(x*2)\n"
+">>> def g(x):\n"
+"...     print(x+3)\n"
+"...     import pdb; pdb.set_trace()\n"
+">>> f(3)\n"
+"9\n"
+"\"\"\""
+msgstr ""
+
 #: ../../library/doctest.rst:1667
 msgid "Then an interactive Python session may look like this::"
 msgstr "Тоді інтерактивний сеанс Python може виглядати так:"
+
+#: ../../library/doctest.rst:1669
+msgid ""
+">>> import a, doctest\n"
+">>> doctest.testmod(a)\n"
+"--Return--\n"
+"> <doctest a[1]>(3)g()->None\n"
+"-> import pdb; pdb.set_trace()\n"
+"(Pdb) list\n"
+"  1     def g(x):\n"
+"  2         print(x+3)\n"
+"  3  ->     import pdb; pdb.set_trace()\n"
+"[EOF]\n"
+"(Pdb) p x\n"
+"6\n"
+"(Pdb) step\n"
+"--Return--\n"
+"> <doctest a[0]>(2)f()->None\n"
+"-> g(x*2)\n"
+"(Pdb) list\n"
+"  1     def f(x):\n"
+"  2  ->     g(x*2)\n"
+"[EOF]\n"
+"(Pdb) p x\n"
+"3\n"
+"(Pdb) step\n"
+"--Return--\n"
+"> <doctest a[2]>(1)?()->None\n"
+"-> f(3)\n"
+"(Pdb) cont\n"
+"(0, 3)\n"
+">>>"
+msgstr ""
 
 #: ../../library/doctest.rst:1700
 msgid ""
@@ -2507,9 +2944,33 @@ msgstr ""
 "код, а все інше перетворюється на коментарі Python. Згенерований сценарій "
 "повертається як рядок. Наприклад, ::"
 
+#: ../../library/doctest.rst:1713
+msgid ""
+"import doctest\n"
+"print(doctest.script_from_examples(r\"\"\"\n"
+"    Set x and y to 1 and 2.\n"
+"    >>> x, y = 1, 2\n"
+"\n"
+"    Print their sum:\n"
+"    >>> print(x+y)\n"
+"    3\n"
+"\"\"\"))"
+msgstr ""
+
 #: ../../library/doctest.rst:1723
 msgid "displays::"
 msgstr "дисплеї::"
+
+#: ../../library/doctest.rst:1725
+msgid ""
+"# Set x and y to 1 and 2.\n"
+"x, y = 1, 2\n"
+"#\n"
+"# Print their sum:\n"
+"print(x+y)\n"
+"# Expected:\n"
+"## 3"
+msgstr ""
 
 #: ../../library/doctest.rst:1733
 msgid ""
@@ -2533,6 +2994,12 @@ msgid ""
 " is a string, containing the object's docstring converted to a Python "
 "script, as described for :func:`script_from_examples` above.  For example, "
 "if module :file:`a.py` contains a top-level function :func:`!f`, then ::"
+msgstr ""
+
+#: ../../library/doctest.rst:1749
+msgid ""
+"import a, doctest\n"
+"print(doctest.testsource(a, \"a.f\"))"
 msgstr ""
 
 #: ../../library/doctest.rst:1752
@@ -2854,6 +3321,24 @@ msgstr ""
 "тестів. Коли тест виходить невдалим, ви можете організувати повторний запуск"
 " лише невдалого документу, поки ви вирішуєте проблему. Ось мінімальний "
 "приклад такого тесту:"
+
+#: ../../library/doctest.rst:1925
+msgid ""
+"if __name__ == '__main__':\n"
+"    import doctest\n"
+"    flags = doctest.REPORT_NDIFF|doctest.FAIL_FAST\n"
+"    if len(sys.argv) > 1:\n"
+"        name = sys.argv[1]\n"
+"        if name in globals():\n"
+"            obj = globals()[name]\n"
+"        else:\n"
+"            obj = __test__[name]\n"
+"        doctest.run_docstring_examples(obj, globals(), name=name,\n"
+"                                       optionflags=flags)\n"
+"    else:\n"
+"        fail, total = doctest.testmod(optionflags=flags)\n"
+"        print(f\"{fail} failures out of {total} tests\")"
+msgstr ""
 
 #: ../../library/doctest.rst:1942
 msgid "Footnotes"

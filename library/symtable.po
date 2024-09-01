@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:14+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -322,6 +322,13 @@ msgstr ""
 msgid "For example::"
 msgstr "Наприклад::"
 
+#: ../../library/symtable.rst:278
+msgid ""
+">>> table = symtable.symtable(\"def some_func(): pass\", \"string\", \"exec\")\n"
+">>> table.lookup(\"some_func\").is_namespace()\n"
+"True"
+msgstr ""
+
 #: ../../library/symtable.rst:282
 msgid ""
 "Note that a single name can be bound to multiple objects.  If the result is "
@@ -350,6 +357,10 @@ msgstr "Використання командного рядка"
 msgid ""
 "The :mod:`symtable` module can be executed as a script from the command "
 "line."
+msgstr ""
+
+#: ../../library/symtable.rst:305
+msgid "python -m symtable [infile...]"
 msgstr ""
 
 #: ../../library/symtable.rst:309

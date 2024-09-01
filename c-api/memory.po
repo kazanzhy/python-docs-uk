@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -104,6 +104,19 @@ msgstr ""
 "реалізують різні алгоритми та працюють із різними купами. Однак можна "
 "безпечно виділяти та звільняти блоки пам’яті за допомогою розподільника "
 "бібліотеки C для окремих цілей, як показано в наступному прикладі:"
+
+#: ../../c-api/memory.rst:58
+msgid ""
+"PyObject *res;\n"
+"char *buf = (char *) malloc(BUFSIZ); /* for I/O */\n"
+"\n"
+"if (buf == NULL)\n"
+"    return PyErr_NoMemory();\n"
+"...Do some I/O operation involving buf...\n"
+"res = PyBytes_FromString(buf);\n"
+"free(buf); /* malloc'ed */\n"
+"return res;"
+msgstr ""
 
 #: ../../c-api/memory.rst:68
 msgid ""
@@ -1300,9 +1313,35 @@ msgstr ""
 "буфер введення/виведення виділяється з купи Python за допомогою першого "
 "набору функцій::"
 
+#: ../../c-api/memory.rst:718
+msgid ""
+"PyObject *res;\n"
+"char *buf = (char *) PyMem_Malloc(BUFSIZ); /* for I/O */\n"
+"\n"
+"if (buf == NULL)\n"
+"    return PyErr_NoMemory();\n"
+"/* ...Do some I/O operation involving buf... */\n"
+"res = PyBytes_FromString(buf);\n"
+"PyMem_Free(buf); /* allocated with PyMem_Malloc */\n"
+"return res;"
+msgstr ""
+
 #: ../../c-api/memory.rst:728
 msgid "The same code using the type-oriented function set::"
 msgstr "Той самий код із використанням типу орієнтованого набору функцій::"
+
+#: ../../c-api/memory.rst:730
+msgid ""
+"PyObject *res;\n"
+"char *buf = PyMem_New(char, BUFSIZ); /* for I/O */\n"
+"\n"
+"if (buf == NULL)\n"
+"    return PyErr_NoMemory();\n"
+"/* ...Do some I/O operation involving buf... */\n"
+"res = PyBytes_FromString(buf);\n"
+"PyMem_Del(buf); /* allocated with PyMem_New */\n"
+"return res;"
+msgstr ""
 
 #: ../../c-api/memory.rst:740
 msgid ""
@@ -1320,6 +1359,17 @@ msgstr ""
 "послідовність містить дві помилки, одна з яких позначена як *фатальна*, "
 "оскільки вона змішує два різних розподільника, що працюють на різних купах. "
 "::"
+
+#: ../../c-api/memory.rst:747
+msgid ""
+"char *buf1 = PyMem_New(char, BUFSIZ);\n"
+"char *buf2 = (char *) malloc(BUFSIZ);\n"
+"char *buf3 = (char *) PyMem_Malloc(BUFSIZ);\n"
+"...\n"
+"PyMem_Del(buf3);  /* Wrong -- should be PyMem_Free() */\n"
+"free(buf2);       /* Right -- allocated via malloc() */\n"
+"free(buf1);       /* Fatal -- should be PyMem_Del()  */"
+msgstr ""
 
 #: ../../c-api/memory.rst:755
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -97,14 +97,31 @@ msgstr "На FreeBSD і OpenBSD"
 msgid "FreeBSD users, to add the package use::"
 msgstr "Користувачі FreeBSD, щоб додати пакет, використовуйте::"
 
+#: ../../using/unix.rst:44
+msgid "pkg install python3"
+msgstr ""
+
 #: ../../using/unix.rst:46
 msgid "OpenBSD users, to add the package use::"
 msgstr "Користувачі OpenBSD, щоб додати пакет, використовуйте::"
+
+#: ../../using/unix.rst:48
+msgid ""
+"pkg_add -r python\n"
+"\n"
+"pkg_add ftp://ftp.openbsd.org/pub/OpenBSD/4.2/packages/<insert your architecture here>/python-<version>.tgz"
+msgstr ""
 
 #: ../../using/unix.rst:52
 msgid "For example i386 users get the 2.5.1 version of Python using::"
 msgstr ""
 "Наприклад, користувачі i386 отримують версію Python 2.5.1 за допомогою:"
+
+#: ../../using/unix.rst:54
+msgid ""
+"pkg_add "
+"ftp://ftp.openbsd.org/pub/OpenBSD/4.2/packages/i386/python-2.5.1p2.tgz"
+msgstr ""
 
 #: ../../using/unix.rst:60
 msgid "Building Python"
@@ -122,6 +139,13 @@ msgstr ""
 #: ../../using/unix.rst:68
 msgid "The build process consists of the usual commands::"
 msgstr "Процес збирання складається зі звичайних команд:"
+
+#: ../../using/unix.rst:70
+msgid ""
+"./configure\n"
+"make\n"
+"make install"
+msgstr ""
 
 #: ../../using/unix.rst:74
 msgid ""
@@ -218,6 +242,10 @@ msgstr ""
 "Щоб легко використовувати сценарії Python в Unix, вам потрібно зробити їх "
 "виконуваними, напр. з"
 
+#: ../../using/unix.rst:116
+msgid "$ chmod +x script"
+msgstr ""
+
 #: ../../using/unix.rst:120
 msgid ""
 "and put an appropriate Shebang line at the top of the script.  A good choice"
@@ -225,6 +253,10 @@ msgid ""
 msgstr ""
 "і помістіть відповідний рядок Shebang у верхній частині сценарію. Зазвичай "
 "хороший вибір:"
+
+#: ../../using/unix.rst:123
+msgid "#!/usr/bin/env python3"
+msgstr ""
 
 #: ../../using/unix.rst:125
 msgid ""
@@ -262,6 +294,12 @@ msgstr ""
 "``/etc/ssl``, або ``/etc/pki/tls``. Каталог також має містити файл "
 "``cert.pem`` та/або каталог ``certs``."
 
+#: ../../using/unix.rst:142
+msgid ""
+"$ find /etc/ -name openssl.cnf -printf \"%h\\n\"\n"
+"/etc/ssl"
+msgstr ""
+
 #: ../../using/unix.rst:147
 msgid ""
 "Download, build, and install OpenSSL. Make sure you use ``install_sw`` and "
@@ -272,10 +310,36 @@ msgstr ""
 "використовуєте ``install_sw``, а не ``install``. Ціль ``install_sw`` не "
 "перевизначає ``openssl.cnf``."
 
+#: ../../using/unix.rst:151
+msgid ""
+"$ curl -O https://www.openssl.org/source/openssl-VERSION.tar.gz\n"
+"$ tar xzf openssl-VERSION\n"
+"$ pushd openssl-VERSION\n"
+"$ ./config \\\n"
+"    --prefix=/usr/local/custom-openssl \\\n"
+"    --libdir=lib \\\n"
+"    --openssldir=/etc/ssl\n"
+"$ make -j1 depend\n"
+"$ make -j8\n"
+"$ make install_sw\n"
+"$ popd"
+msgstr ""
+
 #: ../../using/unix.rst:165
 msgid ""
 "Build Python with custom OpenSSL (see the configure ``--with-openssl`` and "
 "``--with-openssl-rpath`` options)"
+msgstr ""
+
+#: ../../using/unix.rst:168
+msgid ""
+"$ pushd python-3.x.x\n"
+"$ ./configure -C \\\n"
+"    --with-openssl=/usr/local/custom-openssl \\\n"
+"    --with-openssl-rpath=auto \\\n"
+"    --prefix=/usr/local/python-3.x.x\n"
+"$ make -j8\n"
+"$ make altinstall"
 msgstr ""
 
 #: ../../using/unix.rst:180

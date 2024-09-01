@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -428,6 +428,12 @@ msgstr ""
 "Оператор ':keyword:`with`' — це структура потоку керування, основна "
 "структура якої:"
 
+#: ../../whatsnew/2.6.rst:266
+msgid ""
+"with expression [as variable]:\n"
+"    with-block"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:269
 msgid ""
 "The expression is evaluated, and it should result in an object that supports"
@@ -460,6 +466,14 @@ msgstr ""
 "контекстом і можуть використовуватися з оператором ':keyword:`with`'. Одним "
 "із прикладів є файлові об’єкти:"
 
+#: ../../whatsnew/2.6.rst:285
+msgid ""
+"with open('/etc/passwd', 'r') as f:\n"
+"    for line in f:\n"
+"        print line\n"
+"        ... more processing code ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:290
 msgid ""
 "After this statement has executed, the file object in *f* will have been "
@@ -484,6 +498,14 @@ msgstr ""
 "Блокування та змінні умови модуля :mod:`threading` також підтримують "
 "оператор ':keyword:`with`'::"
 
+#: ../../whatsnew/2.6.rst:302
+msgid ""
+"lock = threading.Lock()\n"
+"with lock:\n"
+"    # Critical section of code\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:307
 msgid ""
 "The lock is acquired before the block is executed and always released once  "
@@ -501,6 +523,20 @@ msgstr ""
 "Функція :func:`localcontext` у модулі :mod:`decimal` дозволяє легко "
 "зберігати та відновлювати поточний десятковий контекст, який інкапсулює "
 "бажану точність і характеристики округлення для обчислень::"
+
+#: ../../whatsnew/2.6.rst:314
+msgid ""
+"from decimal import Decimal, Context, localcontext\n"
+"\n"
+"# Displays with default precision of 28 digits\n"
+"v = Decimal('578')\n"
+"print v.sqrt()\n"
+"\n"
+"with localcontext(Context(prec=16)):\n"
+"    # All code in this block uses a precision of 16 digits.\n"
+"    # The original context is restored on exiting the block.\n"
+"    print v.sqrt()"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:329
 msgid "Writing Context Managers"
@@ -591,6 +627,15 @@ msgstr ""
 "Припустімо, що є об’єкт, що представляє з’єднання з базою даних. Нашою метою"
 " буде дозволити користувачеві писати такий код:"
 
+#: ../../whatsnew/2.6.rst:373
+msgid ""
+"db_connection = DatabaseConnection()\n"
+"with db_connection as cursor:\n"
+"    cursor.execute('insert into ...')\n"
+"    cursor.execute('delete from ...')\n"
+"    # ... more operations ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:379
 msgid ""
 "The transaction should be committed if the code in the block runs flawlessly"
@@ -601,6 +646,18 @@ msgstr ""
 "відкотити, якщо є виняткова ситуація. Ось базовий інтерфейс для "
 ":class:`DatabaseConnection`, який я припускаю:"
 
+#: ../../whatsnew/2.6.rst:383
+msgid ""
+"class DatabaseConnection:\n"
+"    # Database interface\n"
+"    def cursor(self):\n"
+"        \"Returns a cursor object and starts a new transaction\"\n"
+"    def commit(self):\n"
+"        \"Commits current transaction\"\n"
+"    def rollback(self):\n"
+"        \"Rolls back current transaction\""
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:392
 msgid ""
 "The :meth:`~object.__enter__` method is pretty easy, having only to start a "
@@ -608,6 +665,16 @@ msgid ""
 "a useful result, so the method will return it.  The user can then add ``as "
 "cursor`` to their ':keyword:`with`' statement to bind the cursor to a "
 "variable name. ::"
+msgstr ""
+
+#: ../../whatsnew/2.6.rst:397
+msgid ""
+"class DatabaseConnection:\n"
+"    ...\n"
+"    def __enter__(self):\n"
+"        # Code to start a new transaction\n"
+"        cursor = self.cursor()\n"
+"        return cursor"
 msgstr ""
 
 #: ../../whatsnew/2.6.rst:404
@@ -629,6 +696,20 @@ msgstr ""
 "повертаючи значення за замовчуванням ``None``. ``None`` є хибним, тому "
 "виняток буде знову створено автоматично. Якщо ви бажаєте, ви можете бути "
 "більш чіткими та додати оператор :keyword:`return` у позначене місце. ::"
+
+#: ../../whatsnew/2.6.rst:414
+msgid ""
+"class DatabaseConnection:\n"
+"    ...\n"
+"    def __exit__(self, type, value, tb):\n"
+"        if tb is None:\n"
+"            # No exception, so commit\n"
+"            self.commit()\n"
+"        else:\n"
+"            # Exception occurred, so rollback.\n"
+"            self.rollback()\n"
+"            # return False"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:429
 msgid "The contextlib module"
@@ -664,6 +745,26 @@ msgstr ""
 "Використовуючи цей декоратор, наш приклад бази даних із попереднього розділу"
 " можна записати так:"
 
+#: ../../whatsnew/2.6.rst:446
+msgid ""
+"from contextlib import contextmanager\n"
+"\n"
+"@contextmanager\n"
+"def db_transaction(connection):\n"
+"    cursor = connection.cursor()\n"
+"    try:\n"
+"        yield cursor\n"
+"    except:\n"
+"        connection.rollback()\n"
+"        raise\n"
+"    else:\n"
+"        connection.commit()\n"
+"\n"
+"db = DatabaseConnection()\n"
+"with db_transaction(db) as cursor:\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:463
 msgid ""
 "The :mod:`contextlib` module also has a ``nested(mgr1, mgr2, ...)`` function"
@@ -677,6 +778,13 @@ msgstr ""
 " ':keyword:`with`' заяви. У цьому прикладі один оператор ':keyword:`!with`' "
 "запускає транзакцію бази даних і отримує блокування потоку::"
 
+#: ../../whatsnew/2.6.rst:468
+msgid ""
+"lock = threading.Lock()\n"
+"with nested (db_transaction(db), lock) as (cursor, locked):\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:472
 msgid ""
 "Finally, the :func:`closing` function returns its argument so that it can be"
@@ -686,6 +794,16 @@ msgstr ""
 "Нарешті, функція :func:`closing` повертає свій аргумент, щоб його можна було"
 " прив’язати до змінної, і викликає метод ``.close()`` аргументу в кінці "
 "блоку. ::"
+
+#: ../../whatsnew/2.6.rst:476
+msgid ""
+"import urllib, sys\n"
+"from contextlib import closing\n"
+"\n"
+"with closing(urllib.urlopen('http://www.yahoo.com')) as f:\n"
+"    for line in f:\n"
+"        sys.stdout.write(line)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:486
 msgid ":pep:`343` - The \"with\" statement"
@@ -861,6 +979,39 @@ msgstr ""
 "виконує обчислення, написана дивним чином, тому вона займає значно більше "
 "часу, коли вхідний аргумент кратний 4."
 
+#: ../../whatsnew/2.6.rst:584
+msgid ""
+"import time\n"
+"from multiprocessing import Process, Queue\n"
+"\n"
+"\n"
+"def factorial(queue, N):\n"
+"    \"Compute a factorial.\"\n"
+"    # If N is a multiple of 4, this function will take much longer.\n"
+"    if (N % 4) == 0:\n"
+"        time.sleep(.05 * N/4)\n"
+"\n"
+"    # Calculate the result\n"
+"    fact = 1L\n"
+"    for i in range(1, N+1):\n"
+"        fact = fact * i\n"
+"\n"
+"    # Put the result on the queue\n"
+"    queue.put(fact)\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    queue = Queue()\n"
+"\n"
+"    N = 5\n"
+"\n"
+"    p = Process(target=factorial, args=(queue, N))\n"
+"    p.start()\n"
+"    p.join()\n"
+"\n"
+"    result = queue.get()\n"
+"    print 'Factorial', N, '=', result"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:614
 msgid ""
 "A :class:`~queue.Queue` is used to communicate the result of the factorial. "
@@ -895,9 +1046,32 @@ msgstr ""
 ":class:`Pool` для розподілу запитів між 5 робочими процесами та отримання "
 "списку результатів::"
 
+#: ../../whatsnew/2.6.rst:630
+msgid ""
+"from multiprocessing import Pool\n"
+"\n"
+"def factorial(N, dictionary):\n"
+"    \"Compute a factorial.\"\n"
+"    ...\n"
+"p = Pool(5)\n"
+"result = p.map(factorial, range(1, 1000, 10))\n"
+"for v in result:\n"
+"    print v"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:640
 msgid "This produces the following output::"
 msgstr "Це дає такий вихід:"
+
+#: ../../whatsnew/2.6.rst:642
+msgid ""
+"1\n"
+"39916800\n"
+"51090942171709440000\n"
+"8222838654177922817725562880000000\n"
+"33452526613163807108170062053440751665152000000000\n"
+"..."
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:649
 msgid ""
@@ -921,9 +1095,54 @@ msgstr ""
 ":meth:`Lock`, :meth:`RLock` і :meth:`Semaphore` для створення спільних "
 "блокувань.)"
 
+#: ../../whatsnew/2.6.rst:661
+msgid ""
+"import time\n"
+"from multiprocessing import Pool, Manager\n"
+"\n"
+"def factorial(N, dictionary):\n"
+"    \"Compute a factorial.\"\n"
+"    # Calculate the result\n"
+"    fact = 1L\n"
+"    for i in range(1, N+1):\n"
+"        fact = fact * i\n"
+"\n"
+"    # Store result in dictionary\n"
+"    dictionary[N] = fact\n"
+"\n"
+"if __name__ == '__main__':\n"
+"    p = Pool(5)\n"
+"    mgr = Manager()\n"
+"    d = mgr.dict()         # Create shared dictionary\n"
+"\n"
+"    # Run tasks using the pool\n"
+"    for N in range(1, 1000, 10):\n"
+"        p.apply_async(factorial, (N, d))\n"
+"\n"
+"    # Mark pool as closed -- no more tasks can be added.\n"
+"    p.close()\n"
+"\n"
+"    # Wait for tasks to exit\n"
+"    p.join()\n"
+"\n"
+"    # Output results\n"
+"    for k, v in sorted(d.items()):\n"
+"        print k, v"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:693
 msgid "This will produce the output::"
 msgstr "Це дасть результат::"
+
+#: ../../whatsnew/2.6.rst:695
+msgid ""
+"1 1\n"
+"11 39916800\n"
+"21 51090942171709440000\n"
+"31 8222838654177922817725562880000000\n"
+"41 33452526613163807108170062053440751665152000000000\n"
+"51 15511187532873822802242430164693032110632597200169861120000..."
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:704
 msgid "The documentation for the :mod:`multiprocessing` module."
@@ -960,9 +1179,27 @@ msgid ""
 "characters::"
 msgstr ""
 
+#: ../../whatsnew/2.6.rst:726
+msgid ""
+">>> # Substitute positional argument 0 into the string.\n"
+">>> \"User ID: {0}\".format(\"root\")\n"
+"'User ID: root'\n"
+">>> # Use the named keyword arguments\n"
+">>> \"User ID: {uid}   Last seen: {last_login}\".format(\n"
+"...    uid=\"root\",\n"
+"...    last_login = \"5 Mar 2008 07:20\")\n"
+"'User ID: root   Last seen: 5 Mar 2008 07:20'"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:735
 msgid "Curly brackets can be escaped by doubling them::"
 msgstr "Фігурні дужки можна екранувати, подвоюючи їх:"
+
+#: ../../whatsnew/2.6.rst:737
+msgid ""
+">>> \"Empty dict: {{}}\".format()\n"
+"\"Empty dict: {}\""
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:740
 msgid ""
@@ -974,6 +1211,19 @@ msgstr ""
 "такі як {0}, {1 тощо, або назви ключових аргументів. Ви також можете надати "
 "складені назви полів, які зчитують атрибути або мають доступ до ключів "
 "словника:"
+
+#: ../../whatsnew/2.6.rst:744
+msgid ""
+">>> import sys\n"
+">>> print 'Platform: {0.platform}\\nPython version: {0.version}'.format(sys)\n"
+"Platform: darwin\n"
+"Python version: 2.6a1+ (trunk:61261M, Mar  5 2008, 20:29:41)\n"
+"[GCC 4.0.1 (Apple Computer, Inc. build 5367)]'\n"
+"\n"
+">>> import mimetypes\n"
+">>> 'Content-type: {0[.mp4]}'.format(mimetypes.types_map)\n"
+"'Content-type: video/mp4'"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:754
 msgid ""
@@ -999,10 +1249,34 @@ msgstr ""
 "Використовуване точне форматування також можна контролювати, додавши "
 "двокрапку, за якою йде специфікатор формату. Наприклад::"
 
+#: ../../whatsnew/2.6.rst:764
+msgid ""
+">>> # Field 0: left justify, pad to 15 characters\n"
+">>> # Field 1: right justify, pad to 6 characters\n"
+">>> fmt = '{0:15} ${1:>6}'\n"
+">>> fmt.format('Registration', 35)\n"
+"'Registration    $    35'\n"
+">>> fmt.format('Tutorial', 50)\n"
+"'Tutorial        $    50'\n"
+">>> fmt.format('Banquet', 125)\n"
+"'Banquet         $   125'"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:774
 msgid "Format specifiers can reference other fields through nesting::"
 msgstr ""
 "Специфікатори формату можуть посилатися на інші поля через вкладення::"
+
+#: ../../whatsnew/2.6.rst:776
+msgid ""
+">>> fmt = '{0:{1}}'\n"
+">>> width = 15\n"
+">>> fmt.format('Invoice #1234', width)\n"
+"'Invoice #1234  '\n"
+">>> width = 35\n"
+">>> fmt.format('Invoice #1234', width)\n"
+"'Invoice #1234                      '"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:784
 msgid "The alignment of a field within the desired width can be specified:"
@@ -1057,6 +1331,14 @@ msgstr ""
 "Специфікатори формату також можуть містити тип представлення, який керує "
 "форматуванням значення. Наприклад, числа з плаваючою комою можна "
 "відформатувати як загальне число або в експоненціальній системі:"
+
+#: ../../whatsnew/2.6.rst:799
+msgid ""
+">>> '{0:g}'.format(3.75)\n"
+"'3.75'\n"
+">>> '{0:e}'.format(3.75)\n"
+"'3.750000e+00'"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:804
 msgid ""
@@ -1172,6 +1454,15 @@ msgstr ""
 "Класи та типи можуть визначати метод :meth:`__format__` для керування їх "
 "форматуванням. Він отримує єдиний аргумент, специфікатор формату::"
 
+#: ../../whatsnew/2.6.rst:830
+msgid ""
+"def __format__(self, format_spec):\n"
+"    if isinstance(format_spec, unicode):\n"
+"        return unicode(str(self))\n"
+"    else:\n"
+"        return str(self)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:836
 msgid ""
 "There's also a :func:`format` builtin that will format a single value.  It "
@@ -1179,6 +1470,12 @@ msgid ""
 msgstr ""
 "Існує також вбудований :func:`format`, який форматує одне значення. Він "
 "викликає метод типу :meth:`__format__` із наданим специфікатором::"
+
+#: ../../whatsnew/2.6.rst:840
+msgid ""
+">>> format(75.6564, '.2f')\n"
+"'75.66'"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:846
 msgid ":ref:`formatstrings`"
@@ -1219,9 +1516,19 @@ msgstr ""
 "мови, дозволяючи замість цього використовувати функціональну форму. "
 "Наприклад::"
 
+#: ../../whatsnew/2.6.rst:866
+msgid ""
+">>> from __future__ import print_function\n"
+">>> print('# of entries', len(dictionary), file=sys.stderr)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:869
 msgid "The signature of the new function is::"
 msgstr "Сигнатура нової функції:"
+
+#: ../../whatsnew/2.6.rst:871
+msgid "def print(*args, sep=' ', end='\\n', file=None)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:874
 msgid "The parameters are:"
@@ -1267,6 +1574,14 @@ msgstr ""
 "Однією з помилок, яку іноді роблять програмісти Python, є написання "
 "наступного коду:"
 
+#: ../../whatsnew/2.6.rst:897
+msgid ""
+"try:\n"
+"    ...\n"
+"except TypeError, ValueError:  # Wrong!\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:902
 msgid ""
 "The author is probably trying to catch both :exc:`TypeError` and "
@@ -1281,6 +1596,14 @@ msgstr ""
 ":exc:`TypeError` і прив’яже отриманий об’єкт винятку до локальної назви "
 "``\"ValueError\"``. Виняток :exc:`ValueError` не буде перехоплено взагалі. "
 "Правильний код визначає кортеж винятків::"
+
+#: ../../whatsnew/2.6.rst:909
+msgid ""
+"try:\n"
+"    ...\n"
+"except (TypeError, ValueError):\n"
+"    ..."
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:914
 msgid ""
@@ -1301,6 +1624,14 @@ msgstr ""
 "Python 3.0 робить це однозначним, замінюючи кому словом \"як\". Щоб "
 "перехопити виняток і зберегти об’єкт винятку в змінній ``exc``, ви повинні "
 "написати::"
+
+#: ../../whatsnew/2.6.rst:922
+msgid ""
+"try:\n"
+"    ...\n"
+"except TypeError as exc:\n"
+"    ..."
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:927
 msgid ""
@@ -1382,6 +1713,16 @@ msgstr ""
 " рядками Unicode. Це означає, що керуючі послідовності ``\\u`` можна "
 "використовувати для включення символів Unicode:"
 
+#: ../../whatsnew/2.6.rst:970
+msgid ""
+"from __future__ import unicode_literals\n"
+"\n"
+"s = ('\\u751f\\u3080\\u304e\\u3000\\u751f\\u3054'\n"
+"     '\\u3081\\u3000\\u751f\\u305f\\u307e\\u3054')\n"
+"\n"
+"print len(s)               # 12 Unicode characters"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:977
 msgid ""
 "At the C level, Python 3.0 will rename the existing 8-bit string type, "
@@ -1400,6 +1741,20 @@ msgstr ""
 "Екземпляри типу :class:`bytes` незмінні, як і рядки. Новий тип "
 ":class:`bytearray` зберігає змінну послідовність байтів::"
 
+#: ../../whatsnew/2.6.rst:988
+msgid ""
+">>> bytearray([65, 66, 67])\n"
+"bytearray(b'ABC')\n"
+">>> b = bytearray(u'\\u21ef\\u3244', 'utf-8')\n"
+">>> b\n"
+"bytearray(b'\\xe2\\x87\\xaf\\xe3\\x89\\x84')\n"
+">>> b[0] = '\\xe3'\n"
+">>> b\n"
+"bytearray(b'\\xe3\\x87\\xaf\\xe3\\x89\\x84')\n"
+">>> unicode(str(b), 'utf-8')\n"
+"u'\\u31ef \\u3244'"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:999
 msgid ""
 "Byte arrays support most of the methods of string types, such as "
@@ -1411,6 +1766,15 @@ msgstr ""
 ":meth:`startswith`/:meth:`endswith`, :meth:`find`/:meth:`rfind`, а також "
 "деякі методи списків, наприклад як :meth:`append`, :meth:`pop` і "
 ":meth:`reverse`."
+
+#: ../../whatsnew/2.6.rst:1006
+msgid ""
+">>> b = bytearray('ABC')\n"
+">>> b.append('d')\n"
+">>> b.append(ord('e'))\n"
+">>> b\n"
+"bytearray(b'ABCde')"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1012
 msgid ""
@@ -1738,6 +2102,14 @@ msgstr ""
 "Ви можете вивести власні класи з конкретного ABC, щоб вказати, що вони "
 "підтримують цей інтерфейс ABC:"
 
+#: ../../whatsnew/2.6.rst:1190
+msgid ""
+"import collections\n"
+"\n"
+"class Storage(collections.MutableMapping):\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1196
 msgid ""
 "Alternatively, you could write the class without deriving from the desired "
@@ -1746,6 +2118,16 @@ msgid ""
 msgstr ""
 "Крім того, ви можете написати клас, не виходячи з бажаного ABC, а замість "
 "цього зареєструвати клас, викликавши метод :meth:`register` ABC::"
+
+#: ../../whatsnew/2.6.rst:1200
+msgid ""
+"import collections\n"
+"\n"
+"class Storage:\n"
+"    ...\n"
+"\n"
+"collections.MutableMapping.register(Storage)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1207
 msgid ""
@@ -1760,6 +2142,14 @@ msgstr ""
 "існуючий тип або клас, або якщо ви хочете оголосити, що якийсь сторонній "
 "клас реалізує ABC. Наприклад, якщо ви визначили :class:`PrintableType` ABC, "
 "це законно:"
+
+#: ../../whatsnew/2.6.rst:1214
+msgid ""
+"# Register Python's types\n"
+"PrintableType.register(int)\n"
+"PrintableType.register(float)\n"
+"PrintableType.register(str)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1219
 msgid ""
@@ -1777,6 +2167,13 @@ msgid ""
 "write::"
 msgstr ""
 "Щоб перевірити, чи підтримує об’єкт певний інтерфейс, тепер можна написати::"
+
+#: ../../whatsnew/2.6.rst:1226
+msgid ""
+"def func(d):\n"
+"    if not isinstance(d, collections.MutableMapping):\n"
+"        raise ValueError(\"Mapping object expected, not %r\" % d)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1230
 msgid ""
@@ -1801,6 +2198,26 @@ msgid ""
 msgstr ""
 "Ви можете написати власні азбуки, використовуючи ``abc.ABCMeta`` як метаклас"
 " у визначенні класу:"
+
+#: ../../whatsnew/2.6.rst:1240
+msgid ""
+"from abc import ABCMeta, abstractmethod\n"
+"\n"
+"class Drawable():\n"
+"    __metaclass__ = ABCMeta\n"
+"\n"
+"    @abstractmethod\n"
+"    def draw(self, x, y, scale=1.0):\n"
+"        pass\n"
+"\n"
+"    def draw_doubled(self, x, y):\n"
+"        self.draw(x, y, scale=2.0)\n"
+"\n"
+"\n"
+"class Square(Drawable):\n"
+"    def draw(self, x, y, scale):\n"
+"        ..."
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1258
 msgid ""
@@ -1832,6 +2249,18 @@ msgstr ""
 " класів, які не визначають метод. Зауважте, що виняток виникає лише тоді, "
 "коли ви фактично намагаєтеся створити екземпляр підкласу без методу::"
 
+#: ../../whatsnew/2.6.rst:1272
+msgid ""
+">>> class Circle(Drawable):\n"
+"...     pass\n"
+"...\n"
+">>> c = Circle()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: Can't instantiate abstract class Circle with abstract methods draw\n"
+">>>"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1281
 msgid ""
 "Abstract data attributes can be declared using the ``@abstractproperty`` "
@@ -1839,6 +2268,16 @@ msgid ""
 msgstr ""
 "Атрибути абстрактних даних можна оголосити за допомогою декоратора "
 "``@abstractproperty``::"
+
+#: ../../whatsnew/2.6.rst:1284
+msgid ""
+"from abc import abstractproperty\n"
+"...\n"
+"\n"
+"@abstractproperty\n"
+"def readonly(self):\n"
+"   return self._x"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1291
 msgid "Subclasses must then define a :meth:`readonly` property."
@@ -1879,6 +2318,14 @@ msgstr ""
 "Python 2.6 не припиняє підтримку початкового 0, що сигналізує про вісімкове "
 "число, але додає підтримку \"0o\" і \"0b\"::"
 
+#: ../../whatsnew/2.6.rst:1315
+msgid ""
+">>> 0o21, 2*8 + 1\n"
+"(17, 17)\n"
+">>> 0b101111\n"
+"47"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1320
 msgid ""
 "The :func:`oct` builtin still returns numbers prefixed with a leading zero, "
@@ -1888,6 +2335,16 @@ msgstr ""
 "Вбудована функція :func:`oct` все ще повертає числа з префіксом нуля на "
 "початку, а нова вбудована функція :func:`bin` повертає двійкове "
 "представлення числа::"
+
+#: ../../whatsnew/2.6.rst:1324
+msgid ""
+">>> oct(42)\n"
+"'052'\n"
+">>> future_builtins.oct(42)\n"
+"'0o52'\n"
+">>> bin(173)\n"
+"'0b10101101'"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1331
 msgid ""
@@ -1900,6 +2357,18 @@ msgstr ""
 "\"0o\" і \"0b\", коли надсилається запит base-8 або base-2 або коли аргумент"
 " *base* дорівнює нулю (сигналізуючи про те, що використовувану базу слід "
 "визначати з рядка)::"
+
+#: ../../whatsnew/2.6.rst:1336
+msgid ""
+">>> int ('0o52', 0)\n"
+"42\n"
+">>> int('1101', 2)\n"
+"13\n"
+">>> int('0b1101', 2)\n"
+"13\n"
+">>> int('0b1101', 0)\n"
+"13"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1348
 msgid ":pep:`3127` - Integer Literal Support and Syntax"
@@ -1919,9 +2388,25 @@ msgid ""
 "write::"
 msgstr "Декоратори були розширені з функцій до класів. Тепер можна писати::"
 
+#: ../../whatsnew/2.6.rst:1362
+msgid ""
+"@foo\n"
+"@bar\n"
+"class A:\n"
+"  pass"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1367
 msgid "This is equivalent to::"
 msgstr "Це еквівалентно::"
+
+#: ../../whatsnew/2.6.rst:1369
+msgid ""
+"class A:\n"
+"  pass\n"
+"\n"
+"A = foo(bar(A))"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1376
 msgid ":pep:`3129` - Class Decorators"
@@ -2069,6 +2554,19 @@ msgstr ""
 "Конструктор :class:`Fraction` приймає два значення :class:`Integral`, які "
 "будуть чисельником і знаменником отриманого дробу. ::"
 
+#: ../../whatsnew/2.6.rst:1445
+msgid ""
+">>> from fractions import Fraction\n"
+">>> a = Fraction(2, 3)\n"
+">>> b = Fraction(2, 5)\n"
+">>> float(a), float(b)\n"
+"(0.66666666666666663, 0.40000000000000002)\n"
+">>> a+b\n"
+"Fraction(16, 15)\n"
+">>> a/b\n"
+"Fraction(5, 3)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1455
 msgid ""
 "For converting floating-point numbers to rationals, the float type now has "
@@ -2078,6 +2576,16 @@ msgstr ""
 "Для перетворення чисел з плаваючою комою на раціональні числа тип float "
 "тепер має метод :meth:`as_integer_ratio()`, який повертає чисельник і "
 "знаменник для дробу, який має однакове значення з плаваючою комою:"
+
+#: ../../whatsnew/2.6.rst:1460
+msgid ""
+">>> (2.5) .as_integer_ratio()\n"
+"(5, 2)\n"
+">>> (3.1415) .as_integer_ratio()\n"
+"(7074029114692207L, 2251799813685248L)\n"
+">>> (1./3) .as_integer_ratio()\n"
+"(6004799503160661L, 18014398509481984L)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1467
 msgid ""
@@ -2148,6 +2656,18 @@ msgstr ""
 "аргументів вам більше не потрібно використовувати словник Python; будь-яке "
 "відображення тепер працюватиме::"
 
+#: ../../whatsnew/2.6.rst:1502
+msgid ""
+">>> def f(**kw):\n"
+"...    print sorted(kw)\n"
+"...\n"
+">>> ud=UserDict.UserDict()\n"
+">>> ud['a'] = 1\n"
+">>> ud['b'] = 'string'\n"
+">>> f(**ud)\n"
+"['a', 'b']"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1511
 msgid "(Contributed by Alexander Belopolsky; :issue:`1686487`.)"
 msgstr "(Надав Олександр Бєлопольський; :issue:`1686487`.)"
@@ -2159,6 +2679,15 @@ msgid ""
 msgstr ""
 "Також стало законним надавати аргументи ключового слова після аргументу "
 "``*args`` для виклику функції. ::"
+
+#: ../../whatsnew/2.6.rst:1516
+msgid ""
+">>> def f(*args, **kw):\n"
+"...     print args, kw\n"
+"...\n"
+">>> f(1,2,3, *(4,5,6), keyword=13)\n"
+"(1, 2, 3, 4, 5, 6) {'keyword': 13}"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1522
 msgid ""
@@ -2189,6 +2718,15 @@ msgstr ""
 "Кортежі тепер мають методи :meth:`index` і :meth:`count`, що відповідають "
 "методам :meth:`index` і :meth:`count` типу списку:"
 
+#: ../../whatsnew/2.6.rst:1534
+msgid ""
+">>> t = (0,1,2,3,4,0,1,2)\n"
+">>> t.index(3)\n"
+"3\n"
+">>> t.count(0)\n"
+"2"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1540
 msgid "(Contributed by Raymond Hettinger)"
 msgstr "(Надав Реймонд Геттінгер)"
@@ -2217,6 +2755,31 @@ msgstr ""
 " функції отримання, налаштування або видалення до існуючої властивості. Ви б"
 " використали їх так::"
 
+#: ../../whatsnew/2.6.rst:1554
+msgid ""
+"class C(object):\n"
+"    @property\n"
+"    def x(self):\n"
+"        return self._x\n"
+"\n"
+"    @x.setter\n"
+"    def x(self, value):\n"
+"        self._x = value\n"
+"\n"
+"    @x.deleter\n"
+"    def x(self):\n"
+"        del self._x\n"
+"\n"
+"class D(C):\n"
+"    @C.x.getter\n"
+"    def x(self):\n"
+"        return self._x * 2\n"
+"\n"
+"    @x.setter\n"
+"    def x(self, value):\n"
+"        self._x = value / 2"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1576
 msgid ""
 "Several methods of the built-in set types now accept multiple iterables: "
@@ -2226,6 +2789,15 @@ msgstr ""
 "Кілька методів вбудованих типів наборів тепер приймають кілька ітерацій: "
 ":meth:`intersection`, :meth:`intersection_update`, :meth:`union`, "
 ":meth:`update`, :meth:`difference` і :meth:`difference_update`."
+
+#: ../../whatsnew/2.6.rst:1584
+msgid ""
+">>> s=set('1234567890')\n"
+">>> s.intersection('abc123', 'cdf246')  # Intersection between all inputs\n"
+"set(['2'])\n"
+">>> s.difference('246', '789')\n"
+"set(['1', '0', '3', '5'])"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1590 ../../whatsnew/2.6.rst:1875
 #: ../../whatsnew/2.6.rst:1896
@@ -2270,6 +2842,18 @@ msgstr ""
 "округлення через перетворення між десятковим і двійковим. Поплавки мають "
 "метод :meth:`hex`, який повертає представлення рядка, а метод "
 "``float.fromhex()`` перетворює рядок назад у число::"
+
+#: ../../whatsnew/2.6.rst:1610
+msgid ""
+">>> a = 3.75\n"
+">>> a.hex()\n"
+"'0x1.e000000000000p+1'\n"
+">>> float.fromhex('0x1.e000000000000p+1')\n"
+"3.75\n"
+">>> b=1./3\n"
+">>> b.hex()\n"
+"'0x1.5555555555555p-2'"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1619
 msgid ""
@@ -2734,6 +3318,27 @@ msgid ""
 "tuple whose fields are accessible by name as well as index.  For example::"
 msgstr ""
 
+#: ../../whatsnew/2.6.rst:1852
+msgid ""
+">>> var_type = collections.namedtuple('variable',\n"
+"...             'id name type size')\n"
+">>> # Names are separated by spaces or commas.\n"
+">>> # 'id, name, type, size' would also work.\n"
+">>> var_type._fields\n"
+"('id', 'name', 'type', 'size')\n"
+"\n"
+">>> var = var_type(1, 'frequency', 'int', 4)\n"
+">>> print var[0], var.id    # Equivalent\n"
+"1 1\n"
+">>> print var[2], var.type  # Equivalent\n"
+"int int\n"
+">>> var._asdict()\n"
+"{'size': 4, 'type': 'int', 'id': 1, 'name': 'frequency'}\n"
+">>> v2 = var._replace(name='amplitude')\n"
+">>> v2\n"
+"variable(id=1, name='amplitude', type='int', size=4)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1870
 msgid ""
 "Several places in the standard library that returned tuples have been "
@@ -2754,6 +3359,20 @@ msgstr ""
 "розмір дек буде обмежено не більше ніж *maxlen* елементів. Додавання більшої"
 " кількості предметів до повного ряду спричиняє відкидання старих предметів."
 
+#: ../../whatsnew/2.6.rst:1885
+msgid ""
+">>> from collections import deque\n"
+">>> dq=deque(maxlen=3)\n"
+">>> dq\n"
+"deque([], maxlen=3)\n"
+">>> dq.append(1); dq.append(2); dq.append(3)\n"
+">>> dq\n"
+"deque([1, 2, 3], maxlen=3)\n"
+">>> dq.append(4)\n"
+">>> dq\n"
+"deque([2, 3, 4], maxlen=3)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1898
 msgid ""
 "The :mod:`Cookie <http.cookies>` module's :class:`~http.cookies.Morsel` "
@@ -2772,6 +3391,13 @@ msgstr ""
 "Новий метод вікна в модулі :mod:`curses`, :meth:`chgat`, змінює атрибути "
 "відображення для певної кількості символів в одному рядку. (Надав Фабіан "
 "Кройц.)"
+
+#: ../../whatsnew/2.6.rst:1909
+msgid ""
+"# Boldface text starting at y=0,x=21\n"
+"# and affecting the rest of the line.\n"
+"stdscr.chgat(0, 21, curses.A_BOLD)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:1913
 msgid ""
@@ -2802,6 +3428,16 @@ msgid ""
 "Decimal Specification <https://speleotrove.com/decimal/decarith.html>`__.  "
 "New features include some methods for some basic mathematical functions such"
 " as :meth:`exp` and :meth:`log10`::"
+msgstr ""
+
+#: ../../whatsnew/2.6.rst:1928
+msgid ""
+">>> Decimal(1).exp()\n"
+"Decimal(\"2.718281828459045235360287471\")\n"
+">>> Decimal(\"2.7182818\").ln()\n"
+"Decimal(\"0.9999999895305022877376682436\")\n"
+">>> Decimal(1000).log10()\n"
+"Decimal(\"3\")"
 msgstr ""
 
 #: ../../whatsnew/2.6.rst:1935
@@ -2895,6 +3531,12 @@ msgstr ""
 "повертає новий генератор, який повертає вміст усіх ітератори, також у "
 "відсортованому порядку. Наприклад::"
 
+#: ../../whatsnew/2.6.rst:1975
+msgid ""
+">>> list(heapq.merge([1, 3, 5, 9], [2, 8, 16]))\n"
+"[1, 2, 3, 5, 8, 9, 16]"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:1978
 msgid ""
 "Another new function, ``heappushpop(heap, item)``, pushes *item* onto "
@@ -2960,6 +3602,12 @@ msgstr ""
 " елементів; якщо деякі з ітерацій коротші за інші, відсутні значення "
 "встановлюються як *fillvalue*. Наприклад::"
 
+#: ../../whatsnew/2.6.rst:2010
+msgid ""
+">>> tuple(itertools.izip_longest([1,2,3], [1,2,3,4,5]))\n"
+"((1, 1), (2, 2), (3, 3), (None, 4), (None, 5))"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2013
 msgid ""
 "``product(iter1, iter2, ..., [repeat=N])`` returns the Cartesian product of "
@@ -2969,6 +3617,14 @@ msgstr ""
 "``product(iter1, iter2, ..., [repeat=N])`` повертає декартовий добуток "
 "наданих ітераторів, набір кортежів, що містить усі можливі комбінації "
 "елементів, що повертаються з кожного ітератора. ::"
+
+#: ../../whatsnew/2.6.rst:2017
+msgid ""
+">>> list(itertools.product([1,2,3], [4,5,6]))\n"
+"[(1, 4), (1, 5), (1, 6),\n"
+" (2, 4), (2, 5), (2, 6),\n"
+" (3, 4), (3, 5), (3, 6)]"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2022
 msgid ""
@@ -2980,9 +3636,25 @@ msgstr ""
 " продукту iterable або набору iterables із собою, повторюваних *N* разів. З "
 "одним ітерованим аргументом повертаються *N*-кортежі::"
 
+#: ../../whatsnew/2.6.rst:2027
+msgid ""
+">>> list(itertools.product([1,2], repeat=3))\n"
+"[(1, 1, 1), (1, 1, 2), (1, 2, 1), (1, 2, 2),\n"
+" (2, 1, 1), (2, 1, 2), (2, 2, 1), (2, 2, 2)]"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2031
 msgid "With two iterables, *2N*-tuples are returned. ::"
 msgstr "З двома ітераціями повертаються *2N*-кортежі. ::"
+
+#: ../../whatsnew/2.6.rst:2033
+msgid ""
+">>> list(itertools.product([1,2], [3,4], repeat=2))\n"
+"[(1, 3, 1, 3), (1, 3, 1, 4), (1, 3, 2, 3), (1, 3, 2, 4),\n"
+" (1, 4, 1, 3), (1, 4, 1, 4), (1, 4, 2, 3), (1, 4, 2, 4),\n"
+" (2, 3, 1, 3), (2, 3, 1, 4), (2, 3, 2, 3), (2, 3, 2, 4),\n"
+" (2, 4, 1, 3), (2, 4, 1, 4), (2, 4, 2, 3), (2, 4, 2, 4)]"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2039
 msgid ""
@@ -2991,6 +3663,17 @@ msgid ""
 msgstr ""
 "``combinations(iterable, r)`` повертає підпослідовності довжиною *r* з "
 "елементів *iterable*. ::"
+
+#: ../../whatsnew/2.6.rst:2042
+msgid ""
+">>> list(itertools.combinations('123', 2))\n"
+"[('1', '2'), ('1', '3'), ('2', '3')]\n"
+">>> list(itertools.combinations('123', 3))\n"
+"[('1', '2', '3')]\n"
+">>> list(itertools.combinations('1234', 3))\n"
+"[('1', '2', '3'), ('1', '2', '4'),\n"
+" ('1', '3', '4'), ('2', '3', '4')]"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2050
 msgid ""
@@ -3001,6 +3684,15 @@ msgstr ""
 "``permutations(iter[, r])`` повертає всі перестановки довжиною *r* елементів"
 " iterable. Якщо *r* не вказано, за замовчуванням використовуватиметься "
 "кількість елементів, створених iterable. ::"
+
+#: ../../whatsnew/2.6.rst:2054
+msgid ""
+">>> list(itertools.permutations([1,2,3,4], 2))\n"
+"[(1, 2), (1, 3), (1, 4),\n"
+" (2, 1), (2, 3), (2, 4),\n"
+" (3, 1), (3, 2), (3, 4),\n"
+" (4, 1), (4, 2), (4, 3)]"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2060
 msgid ""
@@ -3016,6 +3708,12 @@ msgstr ""
 "``itertools.chain.from_iterable(iterable)`` приймає один ітератор, який має "
 "повертати інші ітератори. :func:`chain` потім поверне всі елементи першого "
 "ітератора, потім усі елементи другого і так далі. ::"
+
+#: ../../whatsnew/2.6.rst:2067
+msgid ""
+">>> list(itertools.chain.from_iterable([[1,2,3], [4,5,6]]))\n"
+"[1, 2, 3, 4, 5, 6]"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2070
 msgid "(All contributed by Raymond Hettinger.)"
@@ -3166,6 +3864,14 @@ msgstr ""
 "ім’я та необов’язковий набір аргументів, повертаючи виклик, який викликає "
 "названу функцію за будь-якими переданими їй аргументами. Наприклад::"
 
+#: ../../whatsnew/2.6.rst:2140
+msgid ""
+">>> # Equivalent to lambda s: s.replace('old', 'new')\n"
+">>> replacer = operator.methodcaller('replace', 'old', 'new')\n"
+">>> replacer('old wine in old bottles')\n"
+"'new wine in new bottles'"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2145
 msgid ""
 "(Contributed by Georg Brandl, after a suggestion by Gregory Petrosyan.)"
@@ -3178,6 +3884,16 @@ msgid ""
 msgstr ""
 "Функція :func:`attrgetter` тепер приймає імена з крапками та виконує "
 "відповідні пошуки атрибутів:"
+
+#: ../../whatsnew/2.6.rst:2150
+msgid ""
+">>> inst_name = operator.attrgetter(\n"
+"...        '__class__.__name__')\n"
+">>> inst_name('')\n"
+"'str'\n"
+">>> inst_name(help)\n"
+"'_Helper'"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2157
 msgid "(Contributed by Georg Brandl, after a suggestion by Barry Warsaw.)"
@@ -3327,6 +4043,20 @@ msgstr ""
 "До модуля :mod:`pkgutil` додано функцію :func:`get_data`, яка повертає вміст"
 " файлів ресурсів, що входять до встановленого пакета Python. Наприклад::"
 
+#: ../../whatsnew/2.6.rst:2225
+msgid ""
+">>> import pkgutil\n"
+">>> print pkgutil.get_data('test', 'exception_hierarchy.txt')\n"
+"BaseException\n"
+" +-- SystemExit\n"
+" +-- KeyboardInterrupt\n"
+" +-- GeneratorExit\n"
+" +-- Exception\n"
+"      +-- StopIteration\n"
+"      +-- StandardError\n"
+" ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2236
 msgid "(Contributed by Paul Moore; :issue:`2439`.)"
 msgstr "(Надав Пол Мур; :issue:`2439`.)"
@@ -3468,6 +4198,12 @@ msgstr ""
 "шаблонів. У наступному прикладі копіюється дерево каталогів, але "
 "пропускаються каталоги :file:`.svn` і резервні файли Emacs, імена яких "
 "закінчуються на '~'::"
+
+#: ../../whatsnew/2.6.rst:2307
+msgid ""
+"shutil.copytree('Doc/library', '/tmp/library',\n"
+"                ignore=shutil.ignore_patterns('*~', '.svn'))"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2310
 msgid "(Contributed by Tarek Ziadé; :issue:`2663`.)"
@@ -3718,6 +4454,12 @@ msgstr ""
 "Типовим форматом є GNU tar; вкажіть параметр ``format``, щоб відкрити файл в"
 " іншому форматі::"
 
+#: ../../whatsnew/2.6.rst:2441
+msgid ""
+"tar = tarfile.open(\"output.tar\", \"w\",\n"
+"                   format=tarfile.PAX_FORMAT)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2444
 msgid ""
 "The new ``encoding`` and ``errors`` parameters specify an encoding and an "
@@ -3813,6 +4555,14 @@ msgstr ""
 "проігнорує вказаний список винятків. Наприклад, тест мережі може ігнорувати "
 "певні збої під час підключення до зовнішнього веб-сайту:"
 
+#: ../../whatsnew/2.6.rst:2493
+msgid ""
+"with test_support.TransientResource(IOError,\n"
+"                                errno=errno.ETIMEDOUT):\n"
+"    f = urllib.urlopen('https://sf.net')\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2498
 msgid ""
 "Finally, :func:`check_warnings` resets the :mod:`warning` module's warning "
@@ -3823,6 +4573,15 @@ msgstr ""
 ":mod:`warning` і повертає об’єкт, який записуватиме всі викликані "
 "попередження (:issue:`3781`)::"
 
+#: ../../whatsnew/2.6.rst:2502
+msgid ""
+"with test_support.check_warnings() as wrec:\n"
+"    warnings.simplefilter(\"always\")\n"
+"    # ... code that triggers a warning ...\n"
+"    assert str(wrec.message) == \"function is outdated\"\n"
+"    assert len(wrec.warnings) == 1, \"Multiple warnings raised\""
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2508
 msgid "(Contributed by Brett Cannon.)"
 msgstr "(Надав Бретт Кеннон.)"
@@ -3832,6 +4591,23 @@ msgid ""
 "The :mod:`textwrap` module can now preserve existing whitespace at the "
 "beginnings and ends of the newly created lines by specifying "
 "``drop_whitespace=False`` as an argument::"
+msgstr ""
+
+#: ../../whatsnew/2.6.rst:2515
+msgid ""
+">>> S = \"\"\"This  sentence  has a bunch   of\n"
+"...   extra   whitespace.\"\"\"\n"
+">>> print textwrap.fill(S, width=15)\n"
+"This  sentence\n"
+"has a bunch\n"
+"of    extra\n"
+"whitespace.\n"
+">>> print textwrap.fill(S, drop_whitespace=False, width=15)\n"
+"This  sentence\n"
+"  has a bunch\n"
+"   of    extra\n"
+"   whitespace.\n"
+">>>"
 msgstr ""
 
 #: ../../whatsnew/2.6.rst:2529
@@ -3965,6 +4741,16 @@ msgid ""
 "example::"
 msgstr ""
 
+#: ../../whatsnew/2.6.rst:2585
+msgid ""
+">>> u = urllib2.urlopen(\"http://slow.example.com\",\n"
+"                        timeout=3)\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"urllib2.URLError: <urlopen error timed out>\n"
+">>>"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2592
 msgid "(Added by Facundo Batista.)"
 msgstr "(Додав Факундо Батіста.)"
@@ -4052,6 +4838,18 @@ msgstr ""
 " і :meth:`extractall`, які розпаковують один або всі файли в архіві до "
 "поточного каталогу, або у вказаний каталог::"
 
+#: ../../whatsnew/2.6.rst:2639
+msgid ""
+"z = zipfile.ZipFile('python-251.zip')\n"
+"\n"
+"# Unpack a single file, writing it relative\n"
+"# to the /tmp directory.\n"
+"z.extract('Python/sysmodule.c', '/tmp')\n"
+"\n"
+"# Unpack all the files in the archive.\n"
+"z.extractall()"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2648
 msgid "(Contributed by Alan McIntyre; :issue:`467924`.)"
 msgstr "(Надав Алан Макінтайр; :issue:`467924`.)"
@@ -4101,9 +4899,56 @@ msgstr ""
 "Функція :func:`parse` приймає вираз і повертає AST. Функція :func:`dump` "
 "виводить представлення дерева, придатне для налагодження:"
 
+#: ../../whatsnew/2.6.rst:2675
+msgid ""
+"import ast\n"
+"\n"
+"t = ast.parse(\"\"\"\n"
+"d = {}\n"
+"for i in 'abcdefghijklm':\n"
+"    d[i + i] = ord(i) - ord('a') + 1\n"
+"print d\n"
+"\"\"\")\n"
+"print ast.dump(t)"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2685
 msgid "This outputs a deeply nested tree::"
 msgstr "Це виводить глибоко вкладене дерево::"
+
+#: ../../whatsnew/2.6.rst:2687
+msgid ""
+"Module(body=[\n"
+"  Assign(targets=[\n"
+"    Name(id='d', ctx=Store())\n"
+"   ], value=Dict(keys=[], values=[]))\n"
+"  For(target=Name(id='i', ctx=Store()),\n"
+"      iter=Str(s='abcdefghijklm'), body=[\n"
+"    Assign(targets=[\n"
+"      Subscript(value=\n"
+"        Name(id='d', ctx=Load()),\n"
+"          slice=\n"
+"          Index(value=\n"
+"            BinOp(left=Name(id='i', ctx=Load()), op=Add(),\n"
+"             right=Name(id='i', ctx=Load()))), ctx=Store())\n"
+"     ], value=\n"
+"     BinOp(left=\n"
+"      BinOp(left=\n"
+"       Call(func=\n"
+"        Name(id='ord', ctx=Load()), args=[\n"
+"          Name(id='i', ctx=Load())\n"
+"         ], keywords=[], starargs=None, kwargs=None),\n"
+"       op=Sub(), right=Call(func=\n"
+"        Name(id='ord', ctx=Load()), args=[\n"
+"          Str(s='a')\n"
+"         ], keywords=[], starargs=None, kwargs=None)),\n"
+"       op=Add(), right=Num(n=1)))\n"
+"    ], orelse=[])\n"
+"   Print(dest=None, values=[\n"
+"     Name(id='d', ctx=Load())\n"
+"   ], nl=True)\n"
+" ])"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2718
 msgid ""
@@ -4121,6 +4966,17 @@ msgstr ""
 "потрібно оцінити вираз, але ви не можете прийняти загрозу безпеці "
 "використання виклику :func:`eval`, :func:`literal_eval` впорається з цим "
 "безпечно:"
+
+#: ../../whatsnew/2.6.rst:2726
+msgid ""
+">>> literal = '(\"a\", \"b\", {2:4, 3:8, 1:2})'\n"
+">>> print ast.literal_eval(literal)\n"
+"('a', 'b', {1: 2, 2: 4, 3: 8})\n"
+">>> print ast.literal_eval('\"a\" + \"b\"')\n"
+"Traceback (most recent call last):\n"
+"  ...\n"
+"ValueError: malformed string"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2734
 msgid ""
@@ -4206,6 +5062,17 @@ msgstr ""
 ":mod:`json` підтримує декодування та кодування більшості вбудованих типів "
 "Python. У наступному прикладі кодується та декодується словник:"
 
+#: ../../whatsnew/2.6.rst:2780
+msgid ""
+">>> import json\n"
+">>> data = {\"spam\": \"foo\", \"parrot\": 42}\n"
+">>> in_json = json.dumps(data) # Encode the data\n"
+">>> in_json\n"
+"'{\"parrot\": 42, \"spam\": \"foo\"}'\n"
+">>> json.loads(in_json) # Decode into a Python object\n"
+"{\"spam\": \"foo\", \"parrot\": 42}"
+msgstr ""
+
 #: ../../whatsnew/2.6.rst:2788
 msgid ""
 "It's also possible to write your own decoders and encoders to support more "
@@ -4250,6 +5117,31 @@ msgstr ""
 #: ../../whatsnew/2.6.rst:2810
 msgid "Using the module is simple::"
 msgstr "Користуватися модулем просто::"
+
+#: ../../whatsnew/2.6.rst:2812
+msgid ""
+"import sys\n"
+"import plistlib\n"
+"import datetime\n"
+"\n"
+"# Create data structure\n"
+"data_struct = dict(lastAccessed=datetime.datetime.now(),\n"
+"                   version=1,\n"
+"                   categories=('Personal','Shared','Private'))\n"
+"\n"
+"# Create string containing XML.\n"
+"plist_str = plistlib.writePlistToString(data_struct)\n"
+"new_struct = plistlib.readPlistFromString(plist_str)\n"
+"print data_struct\n"
+"print new_struct\n"
+"\n"
+"# Write data structure to a file and read it back.\n"
+"plistlib.writePlist(data_struct, '/tmp/customizations.plist')\n"
+"new_struct = plistlib.readPlist('/tmp/customizations.plist')\n"
+"\n"
+"# read/writePlist accepts file-like objects as well as paths.\n"
+"plistlib.writePlist(data_struct, sys.stdout)"
+msgstr ""
 
 #: ../../whatsnew/2.6.rst:2837
 msgid "ctypes Enhancements"

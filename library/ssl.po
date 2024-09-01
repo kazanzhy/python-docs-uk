@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -153,13 +153,51 @@ msgstr ""
 "Приклад клієнтського сокета з контекстом за замовчуванням і подвійним стеком"
 " IPv4/IPv6::"
 
+#: ../../library/ssl.rst:86
+msgid ""
+"import socket\n"
+"import ssl\n"
+"\n"
+"hostname = 'www.python.org'\n"
+"context = ssl.create_default_context()\n"
+"\n"
+"with socket.create_connection((hostname, 443)) as sock:\n"
+"    with context.wrap_socket(sock, server_hostname=hostname) as ssock:\n"
+"        print(ssock.version())"
+msgstr ""
+
 #: ../../library/ssl.rst:97
 msgid "Client socket example with custom context and IPv4::"
 msgstr "Приклад клієнтського сокета з власним контекстом і IPv4::"
 
+#: ../../library/ssl.rst:99
+msgid ""
+"hostname = 'www.python.org'\n"
+"# PROTOCOL_TLS_CLIENT requires valid cert chain and hostname\n"
+"context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n"
+"context.load_verify_locations('path/to/cabundle.pem')\n"
+"\n"
+"with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:\n"
+"    with context.wrap_socket(sock, server_hostname=hostname) as ssock:\n"
+"        print(ssock.version())"
+msgstr ""
+
 #: ../../library/ssl.rst:109
 msgid "Server socket example listening on localhost IPv4::"
 msgstr "Приклад серверного сокета, який прослуховує локальний хост IPv4::"
+
+#: ../../library/ssl.rst:111
+msgid ""
+"context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)\n"
+"context.load_cert_chain('/path/to/certchain.pem', '/path/to/private.key')\n"
+"\n"
+"with socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0) as sock:\n"
+"    sock.bind(('127.0.0.1', 8443))\n"
+"    sock.listen(5)\n"
+"    with context.wrap_socket(sock, server_side=True) as ssock:\n"
+"        conn, addr = ssock.accept()\n"
+"        ..."
+msgstr ""
 
 #: ../../library/ssl.rst:123
 msgid "Context creation"
@@ -267,12 +305,24 @@ msgstr ""
 "продовжувати використовувати цю функцію, але все ще дозволяєте підключення "
 "SSL 3.0, ви можете повторно ввімкнути їх за допомогою::"
 
+#: ../../library/ssl.rst:178
+msgid ""
+"ctx = ssl.create_default_context(Purpose.CLIENT_AUTH)\n"
+"ctx.options &= ~ssl.OP_NO_SSLv3"
+msgstr ""
+
 #: ../../library/ssl.rst:182
 msgid ""
 "This context enables :data:`VERIFY_X509_STRICT` by default, which may reject"
 " pre-:rfc:`5280` or malformed certificates that the underlying OpenSSL "
 "implementation otherwise would accept. While disabling this is not "
 "recommended, you can do so using::"
+msgstr ""
+
+#: ../../library/ssl.rst:187
+msgid ""
+"ctx = ssl.create_default_context()\n"
+"ctx.verify_flags &= ~ssl.VERIFY_X509_STRICT"
 msgstr ""
 
 #: ../../library/ssl.rst:194
@@ -500,6 +550,17 @@ msgstr ""
 msgid "Here's an example:"
 msgstr "Ось приклад:"
 
+#: ../../library/ssl.rst:367
+msgid ""
+">>> import ssl\n"
+">>> timestamp = ssl.cert_time_to_seconds(\"Jan  5 09:34:43 2018 GMT\")\n"
+">>> timestamp  \n"
+"1515144883\n"
+">>> from datetime import datetime\n"
+">>> print(datetime.utcfromtimestamp(timestamp))  \n"
+"2018-01-05 09:34:43"
+msgstr ""
+
 #: ../../library/ssl.rst:377
 msgid "\"notBefore\" or \"notAfter\" dates must use GMT (:rfc:`5280`)."
 msgstr "Дати \"notBefore\" або \"notAfter\" мають використовувати GMT (:rfc:`5280`)."
@@ -636,6 +697,13 @@ msgstr ""
 #: ../../library/ssl.rst:1898
 msgid "Example::"
 msgstr "Приклад::"
+
+#: ../../library/ssl.rst:450
+msgid ""
+">>> ssl.enum_certificates(\"CA\")\n"
+"[(b'data...', 'x509_asn', {'1.3.6.1.5.5.7.3.1', '1.3.6.1.5.5.7.3.2'}),\n"
+" (b'data...', 'x509_asn', True)]"
+msgstr ""
 
 #: ../../library/ssl.rst:454 ../../library/ssl.rst:469
 msgid ":ref:`Availability <availability>`: Windows."
@@ -1215,6 +1283,12 @@ msgstr ""
 msgid "The version string of the OpenSSL library loaded by the interpreter::"
 msgstr "Рядок версії бібліотеки OpenSSL, завантажений інтерпретатором::"
 
+#: ../../library/ssl.rst:948
+msgid ""
+">>> ssl.OPENSSL_VERSION\n"
+"'OpenSSL 1.0.2k  26 Jan 2017'"
+msgstr ""
+
 #: ../../library/ssl.rst:955
 msgid ""
 "A tuple of five integers representing version information about the OpenSSL "
@@ -1223,10 +1297,24 @@ msgstr ""
 "Кортеж із п’яти цілих чисел, що представляє інформацію про версію бібліотеки"
 " OpenSSL::"
 
+#: ../../library/ssl.rst:958
+msgid ""
+">>> ssl.OPENSSL_VERSION_INFO\n"
+"(1, 0, 2, 11, 15)"
+msgstr ""
+
 #: ../../library/ssl.rst:965
 msgid "The raw version number of the OpenSSL library, as a single integer::"
 msgstr ""
 "Необроблений номер версії бібліотеки OpenSSL у вигляді одного цілого числа::"
+
+#: ../../library/ssl.rst:967
+msgid ""
+">>> ssl.OPENSSL_VERSION_NUMBER\n"
+"268443839\n"
+">>> hex(ssl.OPENSSL_VERSION_NUMBER)\n"
+"'0x100020bf'"
+msgstr ""
 
 #: ../../library/ssl.rst:978
 msgid ""
@@ -1629,6 +1717,28 @@ msgstr ""
 "відносних розрізняючих імен (RDN), наведених у структурі даних сертифіката "
 "для відповідних полів, і кожен RDN є послідовністю пар ім’я-значення. Ось "
 "реальний приклад:"
+
+#: ../../library/ssl.rst:1194
+msgid ""
+"{'issuer': ((('countryName', 'IL'),),\n"
+"            (('organizationName', 'StartCom Ltd.'),),\n"
+"            (('organizationalUnitName',\n"
+"              'Secure Digital Certificate Signing'),),\n"
+"            (('commonName',\n"
+"              'StartCom Class 2 Primary Intermediate Server CA'),)),\n"
+" 'notAfter': 'Nov 22 08:15:19 2013 GMT',\n"
+" 'notBefore': 'Nov 21 03:09:52 2011 GMT',\n"
+" 'serialNumber': '95F0',\n"
+" 'subject': ((('description', '571208-SLe257oHY9fVQ07Z'),),\n"
+"             (('countryName', 'US'),),\n"
+"             (('stateOrProvinceName', 'California'),),\n"
+"             (('localityName', 'San Francisco'),),\n"
+"             (('organizationName', 'Electronic Frontier Foundation, Inc.'),),\n"
+"             (('commonName', '*.eff.org'),),\n"
+"             (('emailAddress', 'hostmaster@eff.org'),)),\n"
+" 'subjectAltName': (('DNS', '*.eff.org'), ('DNS', 'eff.org')),\n"
+" 'version': 3}"
+msgstr ""
 
 #: ../../library/ssl.rst:1213
 msgid ""
@@ -2129,6 +2239,12 @@ msgid "Example for a context with one CA cert and one other cert::"
 msgstr ""
 "Приклад для контексту з одним сертифікатом CA та одним іншим сертифікатом::"
 
+#: ../../library/ssl.rst:1499
+msgid ""
+">>> context.cert_store_stats()\n"
+"{'crl': 0, 'x509_ca': 1, 'x509': 2}"
+msgstr ""
+
 #: ../../library/ssl.rst:1507
 msgid ""
 "Load a private key and the corresponding certificate.  The *certfile* string"
@@ -2301,6 +2417,37 @@ msgid ""
 msgstr ""
 "Отримайте список увімкнених шифрів. Список розташований у порядку пріоритету"
 " шифру. Перегляньте :meth:`SSLContext.set_ciphers`."
+
+#: ../../library/ssl.rst:1601
+msgid ""
+">>> ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)\n"
+">>> ctx.set_ciphers('ECDHE+AESGCM:!ECDSA')\n"
+">>> ctx.get_ciphers()\n"
+"[{'aead': True,\n"
+"  'alg_bits': 256,\n"
+"  'auth': 'auth-rsa',\n"
+"  'description': 'ECDHE-RSA-AES256-GCM-SHA384 TLSv1.2 Kx=ECDH     Au=RSA  '\n"
+"                 'Enc=AESGCM(256) Mac=AEAD',\n"
+"  'digest': None,\n"
+"  'id': 50380848,\n"
+"  'kea': 'kx-ecdhe',\n"
+"  'name': 'ECDHE-RSA-AES256-GCM-SHA384',\n"
+"  'protocol': 'TLSv1.2',\n"
+"  'strength_bits': 256,\n"
+"  'symmetric': 'aes-256-gcm'},\n"
+" {'aead': True,\n"
+"  'alg_bits': 128,\n"
+"  'auth': 'auth-rsa',\n"
+"  'description': 'ECDHE-RSA-AES128-GCM-SHA256 TLSv1.2 Kx=ECDH     Au=RSA  '\n"
+"                 'Enc=AESGCM(128) Mac=AEAD',\n"
+"  'digest': None,\n"
+"  'id': 50380847,\n"
+"  'kea': 'kx-ecdhe',\n"
+"  'name': 'ECDHE-RSA-AES128-GCM-SHA256',\n"
+"  'protocol': 'TLSv1.2',\n"
+"  'strength_bits': 128,\n"
+"  'symmetric': 'aes-128-gcm'}]"
+msgstr ""
 
 #: ../../library/ssl.rst:1633
 msgid ""
@@ -2737,6 +2884,13 @@ msgid ""
 "misses in the session cache since the context was created::"
 msgstr ""
 
+#: ../../library/ssl.rst:1881
+msgid ""
+">>> stats = context.session_stats()\n"
+">>> stats['hits'], stats['misses']\n"
+"(0, 0)"
+msgstr ""
+
 #: ../../library/ssl.rst:1887
 msgid ""
 "Whether to match the peer cert's hostname in :meth:`SSLSocket.do_handshake`."
@@ -2760,6 +2914,20 @@ msgstr ""
 "ввімкнено перевірку імені хоста. Протокол :data:`PROTOCOL_TLS_CLIENT` умикає"
 " перевірку імені хоста за умовчанням. Для інших протоколів перевірка імені "
 "хоста повинна бути включена явно."
+
+#: ../../library/ssl.rst:1900
+msgid ""
+"import socket, ssl\n"
+"\n"
+"context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)\n"
+"context.verify_mode = ssl.CERT_REQUIRED\n"
+"context.check_hostname = True\n"
+"context.load_default_certs()\n"
+"\n"
+"s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n"
+"ssl_sock = context.wrap_socket(s, server_hostname='www.verisign.com')\n"
+"ssl_sock.connect(('www.verisign.com', 443))"
+msgstr ""
 
 #: ../../library/ssl.rst:1915
 msgid ""
@@ -3003,6 +3171,27 @@ msgstr ""
 msgid "Example usage::"
 msgstr "Приклад використання::"
 
+#: ../../library/ssl.rst:2077
+msgid ""
+"context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n"
+"context.check_hostname = False\n"
+"context.verify_mode = ssl.CERT_NONE\n"
+"context.maximum_version = ssl.TLSVersion.TLSv1_2\n"
+"context.set_ciphers('PSK')\n"
+"\n"
+"# A simple lambda:\n"
+"psk = bytes.fromhex('c0ffee')\n"
+"context.set_psk_client_callback(lambda hint: (None, psk))\n"
+"\n"
+"# A table using the hint from the server:\n"
+"psk_table = { 'ServerId_1': bytes.fromhex('c0ffee'),\n"
+"              'ServerId_2': bytes.fromhex('facade')\n"
+"}\n"
+"def callback(hint):\n"
+"    return 'ClientId_1', psk_table.get(hint, b'')\n"
+"context.set_psk_client_callback(callback)"
+msgstr ""
+
 #: ../../library/ssl.rst:2095 ../../library/ssl.rst:2140
 msgid ""
 "This method will raise :exc:`NotImplementedError` if :data:`HAS_PSK` is "
@@ -3035,6 +3224,25 @@ msgstr ""
 msgid ""
 "When using TLS 1.3 the ``identity_hint`` parameter is not sent to the "
 "client."
+msgstr ""
+
+#: ../../library/ssl.rst:2124
+msgid ""
+"context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)\n"
+"context.maximum_version = ssl.TLSVersion.TLSv1_2\n"
+"context.set_ciphers('PSK')\n"
+"\n"
+"# A simple lambda:\n"
+"psk = bytes.fromhex('c0ffee')\n"
+"context.set_psk_server_callback(lambda identity: psk)\n"
+"\n"
+"# A table using the identity of the client:\n"
+"psk_table = { 'ClientId_1': bytes.fromhex('c0ffee'),\n"
+"              'ClientId_2': bytes.fromhex('facade')\n"
+"}\n"
+"def callback(identity):\n"
+"    return psk_table.get(identity, b'')\n"
+"context.set_psk_server_callback(callback, 'ServerId_1')"
 msgstr ""
 
 #: ../../library/ssl.rst:2152
@@ -3115,6 +3323,13 @@ msgstr ""
 "відформатовані як \"PEM\" (див. :rfc:`1422`), який є формою, закодованою на "
 "базі 64, оберненою рядком верхнього та нижнього колонтитулів::"
 
+#: ../../library/ssl.rst:2186
+msgid ""
+"-----BEGIN CERTIFICATE-----\n"
+"... (certificate in base64 PEM encoding) ...\n"
+"-----END CERTIFICATE-----"
+msgstr ""
+
 #: ../../library/ssl.rst:2191
 msgid "Certificate chains"
 msgstr "Ланцюжки сертифікатів"
@@ -3146,6 +3361,19 @@ msgstr ""
 "нашого сервера до сертифіката центру сертифікації, який підписав наш "
 "сертифікат сервера, до кореневого сертифіката агентства, яке видало "
 "сертифікат центру сертифікації:"
+
+#: ../../library/ssl.rst:2206
+msgid ""
+"-----BEGIN CERTIFICATE-----\n"
+"... (certificate for your server)...\n"
+"-----END CERTIFICATE-----\n"
+"-----BEGIN CERTIFICATE-----\n"
+"... (the certificate for the CA)...\n"
+"-----END CERTIFICATE-----\n"
+"-----BEGIN CERTIFICATE-----\n"
+"... (the root certificate for the CA's issuer)...\n"
+"-----END CERTIFICATE-----"
+msgstr ""
 
 #: ../../library/ssl.rst:2217
 msgid "CA certificates"
@@ -3183,6 +3411,16 @@ msgid ""
 "should come before the first certificate in the certificate chain::"
 msgstr ""
 
+#: ../../library/ssl.rst:2236
+msgid ""
+"-----BEGIN RSA PRIVATE KEY-----\n"
+"... (private key in base64 encoding) ...\n"
+"-----END RSA PRIVATE KEY-----\n"
+"-----BEGIN CERTIFICATE-----\n"
+"... (certificate in base64 PEM encoding) ...\n"
+"-----END CERTIFICATE-----"
+msgstr ""
+
 #: ../../library/ssl.rst:2244
 msgid "Self-signed certificates"
 msgstr "Самопідписані сертифікати"
@@ -3202,6 +3440,31 @@ msgstr ""
 "сертифікат в центрі сертифікації. Іншою поширеною практикою є створення "
 "самопідписаного сертифіката. Найпростіший спосіб зробити це за допомогою "
 "пакета OpenSSL, використовуючи щось на зразок наступного:"
+
+#: ../../library/ssl.rst:2253
+msgid ""
+"% openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout cert.pem\n"
+"Generating a 1024 bit RSA private key\n"
+".......++++++\n"
+".............................++++++\n"
+"writing new private key to 'cert.pem'\n"
+"-----\n"
+"You are about to be asked to enter information that will be incorporated\n"
+"into your certificate request.\n"
+"What you are about to enter is what is called a Distinguished Name or a DN.\n"
+"There are quite a few fields but you can leave some blank\n"
+"For some fields there will be a default value,\n"
+"If you enter '.', the field will be left blank.\n"
+"-----\n"
+"Country Name (2 letter code) [AU]:US\n"
+"State or Province Name (full name) [Some-State]:MyState\n"
+"Locality Name (eg, city) []:Some City\n"
+"Organization Name (eg, company) [Internet Widgits Pty Ltd]:My Organization, Inc.\n"
+"Organizational Unit Name (eg, section) []:My Group\n"
+"Common Name (eg, YOUR name) []:myserver.mygroup.myorganization.com\n"
+"Email Address []:ops@myserver.mygroup.myorganization.com\n"
+"%"
+msgstr ""
 
 #: ../../library/ssl.rst:2275
 msgid ""
@@ -3229,6 +3492,16 @@ msgstr ""
 "Щоб перевірити наявність підтримки SSL у встановленому Python, код "
 "користувача має використовувати таку ідіому:"
 
+#: ../../library/ssl.rst:2289
+msgid ""
+"try:\n"
+"    import ssl\n"
+"except ImportError:\n"
+"    pass\n"
+"else:\n"
+"    ...  # do something that requires SSL support"
+msgstr ""
+
 #: ../../library/ssl.rst:2297
 msgid "Client-side operation"
 msgstr "Робота на стороні клієнта"
@@ -3242,6 +3515,10 @@ msgstr ""
 "безпеки для клієнтських сокетів, включаючи автоматичну перевірку "
 "сертифіката:"
 
+#: ../../library/ssl.rst:2302
+msgid ">>> context = ssl.create_default_context()"
+msgstr ""
+
 #: ../../library/ssl.rst:2304
 msgid ""
 "If you prefer to tune security settings yourself, you might create a context"
@@ -3250,6 +3527,12 @@ msgstr ""
 "Якщо ви бажаєте налаштувати параметри безпеки самостійно, ви можете створити"
 " контекст з нуля (але пам’ятайте, що ви можете неправильно встановити "
 "параметри):"
+
+#: ../../library/ssl.rst:2308
+msgid ""
+">>> context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n"
+">>> context.load_verify_locations(\"/etc/ssl/certs/ca-bundle.crt\")"
+msgstr ""
 
 #: ../../library/ssl.rst:2311
 msgid ""
@@ -3288,9 +3571,20 @@ msgstr ""
 "із сертифікатів ЦС, перевіряє підпис на коректність і перевіряє інші "
 "властивості, такі як дійсність та ідентичність імені хоста::"
 
+#: ../../library/ssl.rst:2326
+msgid ""
+">>> conn = context.wrap_socket(socket.socket(socket.AF_INET),\n"
+"...                            server_hostname=\"www.python.org\")\n"
+">>> conn.connect((\"www.python.org\", 443))"
+msgstr ""
+
 #: ../../library/ssl.rst:2330
 msgid "You may then fetch the certificate::"
 msgstr "Потім ви можете отримати сертифікат:"
+
+#: ../../library/ssl.rst:2332
+msgid ">>> cert = conn.getpeercert()"
+msgstr ""
 
 #: ../../library/ssl.rst:2334
 msgid ""
@@ -3300,6 +3594,49 @@ msgstr ""
 "Візуальна перевірка показує, що сертифікат ідентифікує потрібну службу "
 "(тобто хост HTTPS ``www.python.org``):"
 
+#: ../../library/ssl.rst:2337
+msgid ""
+">>> pprint.pprint(cert)\n"
+"{'OCSP': ('http://ocsp.digicert.com',),\n"
+" 'caIssuers': ('http://cacerts.digicert.com/DigiCertSHA2ExtendedValidationServerCA.crt',),\n"
+" 'crlDistributionPoints': ('http://crl3.digicert.com/sha2-ev-server-g1.crl',\n"
+"                           'http://crl4.digicert.com/sha2-ev-server-g1.crl'),\n"
+" 'issuer': ((('countryName', 'US'),),\n"
+"            (('organizationName', 'DigiCert Inc'),),\n"
+"            (('organizationalUnitName', 'www.digicert.com'),),\n"
+"            (('commonName', 'DigiCert SHA2 Extended Validation Server CA'),)),\n"
+" 'notAfter': 'Sep  9 12:00:00 2016 GMT',\n"
+" 'notBefore': 'Sep  5 00:00:00 2014 GMT',\n"
+" 'serialNumber': '01BB6F00122B177F36CAB49CEA8B6B26',\n"
+" 'subject': ((('businessCategory', 'Private Organization'),),\n"
+"             (('1.3.6.1.4.1.311.60.2.1.3', 'US'),),\n"
+"             (('1.3.6.1.4.1.311.60.2.1.2', 'Delaware'),),\n"
+"             (('serialNumber', '3359300'),),\n"
+"             (('streetAddress', '16 Allen Rd'),),\n"
+"             (('postalCode', '03894-4801'),),\n"
+"             (('countryName', 'US'),),\n"
+"             (('stateOrProvinceName', 'NH'),),\n"
+"             (('localityName', 'Wolfeboro'),),\n"
+"             (('organizationName', 'Python Software Foundation'),),\n"
+"             (('commonName', 'www.python.org'),)),\n"
+" 'subjectAltName': (('DNS', 'www.python.org'),\n"
+"                    ('DNS', 'python.org'),\n"
+"                    ('DNS', 'pypi.org'),\n"
+"                    ('DNS', 'docs.python.org'),\n"
+"                    ('DNS', 'testpypi.org'),\n"
+"                    ('DNS', 'bugs.python.org'),\n"
+"                    ('DNS', 'wiki.python.org'),\n"
+"                    ('DNS', 'hg.python.org'),\n"
+"                    ('DNS', 'mail.python.org'),\n"
+"                    ('DNS', 'packaging.python.org'),\n"
+"                    ('DNS', 'pythonhosted.org'),\n"
+"                    ('DNS', 'www.pythonhosted.org'),\n"
+"                    ('DNS', 'test.pythonhosted.org'),\n"
+"                    ('DNS', 'us.pycon.org'),\n"
+"                    ('DNS', 'id.python.org')),\n"
+" 'version': 3}"
+msgstr ""
+
 #: ../../library/ssl.rst:2377
 msgid ""
 "Now the SSL channel is established and the certificate verified, you can "
@@ -3307,6 +3644,29 @@ msgid ""
 msgstr ""
 "Тепер SSL-канал встановлено та сертифікат перевірено, ви можете продовжити "
 "спілкування з сервером:"
+
+#: ../../library/ssl.rst:2380
+msgid ""
+">>> conn.sendall(b\"HEAD / HTTP/1.0\\r\\nHost: linuxfr.org\\r\\n\\r\\n\")\n"
+">>> pprint.pprint(conn.recv(1024).split(b\"\\r\\n\"))\n"
+"[b'HTTP/1.1 200 OK',\n"
+" b'Date: Sat, 18 Oct 2014 18:27:20 GMT',\n"
+" b'Server: nginx',\n"
+" b'Content-Type: text/html; charset=utf-8',\n"
+" b'X-Frame-Options: SAMEORIGIN',\n"
+" b'Content-Length: 45679',\n"
+" b'Accept-Ranges: bytes',\n"
+" b'Via: 1.1 varnish',\n"
+" b'Age: 2188',\n"
+" b'X-Served-By: cache-lcy1134-LCY',\n"
+" b'X-Cache: HIT',\n"
+" b'X-Cache-Hits: 11',\n"
+" b'Vary: Cookie',\n"
+" b'Strict-Transport-Security: max-age=63072000; includeSubDomains',\n"
+" b'Connection: close',\n"
+" b'',\n"
+" b'']"
+msgstr ""
 
 #: ../../library/ssl.rst:2404
 msgid "Server-side operation"
@@ -3326,6 +3686,18 @@ msgstr ""
 "відкриєте сокет, прив’яжете його до порту, викличете на ньому :meth:`listen`"
 " і почнете чекати підключення клієнтів::"
 
+#: ../../library/ssl.rst:2412
+msgid ""
+"import socket, ssl\n"
+"\n"
+"context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)\n"
+"context.load_cert_chain(certfile=\"mycertfile\", keyfile=\"mykeyfile\")\n"
+"\n"
+"bindsocket = socket.socket()\n"
+"bindsocket.bind(('myaddr.example.com', 10023))\n"
+"bindsocket.listen(5)"
+msgstr ""
+
 #: ../../library/ssl.rst:2421
 msgid ""
 "When a client connects, you'll call :meth:`accept` on the socket to get the "
@@ -3338,6 +3710,18 @@ msgstr ""
 ":meth:`SSLContext.wrap_socket`, щоб створити серверний сокет SSL для "
 "зв'язок::"
 
+#: ../../library/ssl.rst:2425
+msgid ""
+"while True:\n"
+"    newsocket, fromaddr = bindsocket.accept()\n"
+"    connstream = context.wrap_socket(newsocket, server_side=True)\n"
+"    try:\n"
+"        deal_with_client(connstream)\n"
+"    finally:\n"
+"        connstream.shutdown(socket.SHUT_RDWR)\n"
+"        connstream.close()"
+msgstr ""
+
 #: ../../library/ssl.rst:2434
 msgid ""
 "Then you'll read data from the ``connstream`` and do something with it till "
@@ -3345,6 +3729,20 @@ msgid ""
 msgstr ""
 "Потім ви будете читати дані з ``connstream`` і щось робити з ними, поки не "
 "закінчите роботу з клієнтом (або клієнт не закінчить роботу з вами):"
+
+#: ../../library/ssl.rst:2437
+msgid ""
+"def deal_with_client(connstream):\n"
+"    data = connstream.recv(1024)\n"
+"    # empty data means the client is finished with us\n"
+"    while data:\n"
+"        if not do_something(connstream, data):\n"
+"            # we'll assume do_something returns False\n"
+"            # when we're finished with client\n"
+"            break\n"
+"        data = connstream.recv(1024)\n"
+"    # finished with client"
+msgstr ""
 
 #: ../../library/ssl.rst:2448
 msgid ""
@@ -3449,6 +3847,18 @@ msgstr ""
 ":meth:`SSLSocket.do_handshake` потрібно повторити, поки він не повернеться "
 "успішно. Ось короткий опис використання :func:`~select.select` для "
 "очікування готовності сокета::"
+
+#: ../../library/ssl.rst:2499
+msgid ""
+"while True:\n"
+"    try:\n"
+"        sock.do_handshake()\n"
+"        break\n"
+"    except ssl.SSLWantReadError:\n"
+"        select.select([sock], [], [])\n"
+"    except ssl.SSLWantWriteError:\n"
+"        select.select([], [sock], [])"
+msgstr ""
 
 #: ../../library/ssl.rst:2510
 msgid ""
@@ -3823,6 +4233,15 @@ msgstr ""
 "Наприклад, ось як можна використовувати клас :class:`smtplib.SMTP` для "
 "створення надійного безпечного з’єднання з сервером SMTP:"
 
+#: ../../library/ssl.rst:2691
+msgid ""
+">>> import ssl, smtplib\n"
+">>> smtp = smtplib.SMTP(\"mail.python.org\", port=587)\n"
+">>> context = ssl.create_default_context()\n"
+">>> smtp.starttls(context=context)\n"
+"(220, b'2.0.0 Ready to start TLS')"
+msgstr ""
+
 #: ../../library/ssl.rst:2697
 msgid ""
 "If a client certificate is needed for the connection, it can be added with "
@@ -3903,6 +4322,13 @@ msgstr ""
 "рекомендується використовувати :const:`PROTOCOL_TLS_CLIENT` або "
 ":const:`PROTOCOL_TLS_SERVER` як версію протоколу. SSLv2 і SSLv3 вимкнено за "
 "замовчуванням."
+
+#: ../../library/ssl.rst:2743
+msgid ""
+">>> client_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)\n"
+">>> client_context.minimum_version = ssl.TLSVersion.TLSv1_3\n"
+">>> client_context.maximum_version = ssl.TLSVersion.TLSv1_3"
+msgstr ""
 
 #: ../../library/ssl.rst:2748
 msgid ""
