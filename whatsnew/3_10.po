@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -157,11 +157,47 @@ msgstr ""
 "можливо за допомогою операторів імпорту. Наприклад, тепер дійсні всі ці "
 "приклади:"
 
+#: ../../whatsnew/3.10.rst:105
+msgid ""
+"with (CtxManager() as example):\n"
+"    ...\n"
+"\n"
+"with (\n"
+"    CtxManager1(),\n"
+"    CtxManager2()\n"
+"):\n"
+"    ...\n"
+"\n"
+"with (CtxManager1() as example,\n"
+"      CtxManager2()):\n"
+"    ...\n"
+"\n"
+"with (CtxManager1(),\n"
+"      CtxManager2() as example):\n"
+"    ...\n"
+"\n"
+"with (\n"
+"    CtxManager1() as example1,\n"
+"    CtxManager2() as example2\n"
+"):\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:130
 msgid ""
 "it is also possible to use a trailing comma at the end of the enclosed "
 "group:"
 msgstr "також можна використовувати кінцеву кому в кінці закритої групи:"
+
+#: ../../whatsnew/3.10.rst:133
+msgid ""
+"with (\n"
+"    CtxManager1() as example1,\n"
+"    CtxManager2() as example2,\n"
+"    CtxManager3() as example3,\n"
+"):\n"
+"    ..."
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:142
 msgid ""
@@ -201,6 +237,13 @@ msgstr ""
 "деяке неправильне розташування. Наприклад, розглянемо такий код (зверніть "
 "увагу на незакритий '{'):"
 
+#: ../../whatsnew/3.10.rst:160
+msgid ""
+"expected = {9: 1, 18: 2, 19: 2, 27: 3, 28: 3, 29: 3, 36: 4, 37: 4,\n"
+"            38: 4, 39: 4, 45: 5, 46: 5, 47: 5, 48: 5, 49: 5, 54: 6,\n"
+"some_other_code = foo()"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:166
 msgid ""
 "Previous versions of the interpreter reported confusing places as the "
@@ -209,9 +252,25 @@ msgstr ""
 "Попередні версії інтерпретатора повідомляли про незрозумілі місця як "
 "розташування синтаксичної помилки:"
 
+#: ../../whatsnew/3.10.rst:169
+msgid ""
+"File \"example.py\", line 3\n"
+"    some_other_code = foo()\n"
+"                    ^\n"
+"SyntaxError: invalid syntax"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:176
 msgid "but in Python 3.10 a more informative error is emitted:"
 msgstr "але в Python 3.10 видається більш інформативна помилка:"
+
+#: ../../whatsnew/3.10.rst:178
+msgid ""
+"File \"example.py\", line 1\n"
+"    expected = {9: 1, 18: 2, 19: 2, 27: 3, 28: 3, 29: 3, 36: 4, 37: 4,\n"
+"               ^\n"
+"SyntaxError: '{' was never closed"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:186
 msgid ""
@@ -248,9 +307,27 @@ msgstr ""
 "синтаксичну помилку, а не лише місце виявлення проблеми. Таким чином, "
 "замість відображення (до Python 3.10):"
 
+#: ../../whatsnew/3.10.rst:199
+msgid ""
+">>> foo(x, z for z in range(10), t, w)\n"
+"  File \"<stdin>\", line 1\n"
+"    foo(x, z for z in range(10), t, w)\n"
+"           ^\n"
+"SyntaxError: Generator expression must be parenthesized"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:207
 msgid "now Python 3.10 will display the exception as:"
 msgstr "тепер Python 3.10 відображатиме виняток як:"
+
+#: ../../whatsnew/3.10.rst:209
+msgid ""
+">>> foo(x, z for z in range(10), t, w)\n"
+"  File \"<stdin>\", line 1\n"
+"    foo(x, z for z in range(10), t, w)\n"
+"           ^^^^^^^^^^^^^^^^^^^^\n"
+"SyntaxError: Generator expression must be parenthesized"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:217
 msgid "This improvement was contributed by Pablo Galindo in :issue:`43914`."
@@ -269,6 +346,15 @@ msgstr ""
 msgid "Missing ``:`` before blocks:"
 msgstr "Відсутній ``:`` перед блоками:"
 
+#: ../../whatsnew/3.10.rst:224
+msgid ""
+">>> if rocket.position > event_horizon\n"
+"  File \"<stdin>\", line 1\n"
+"    if rocket.position > event_horizon\n"
+"                                      ^\n"
+"SyntaxError: expected ':'"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:232
 msgid "(Contributed by Pablo Galindo in :issue:`42997`.)"
 msgstr ""
@@ -276,6 +362,15 @@ msgstr ""
 #: ../../whatsnew/3.10.rst:234
 msgid "Unparenthesised tuples in comprehensions targets:"
 msgstr "Кортежі без дужок у цілях розуміння:"
+
+#: ../../whatsnew/3.10.rst:236
+msgid ""
+">>> {x,y for x,y in zip('abcd', '1234')}\n"
+"  File \"<stdin>\", line 1\n"
+"    {x,y for x,y in zip('abcd', '1234')}\n"
+"     ^\n"
+"SyntaxError: did you forget parentheses around the comprehension target?"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:244
 msgid "(Contributed by Pablo Galindo in :issue:`43017`.)"
@@ -285,6 +380,18 @@ msgstr ""
 msgid "Missing commas in collection literals and between expressions:"
 msgstr "Відсутні коми в літералах колекції та між виразами:"
 
+#: ../../whatsnew/3.10.rst:248
+msgid ""
+">>> items = {\n"
+"... x: 1,\n"
+"... y: 2\n"
+"... z: 3,\n"
+"  File \"<stdin>\", line 3\n"
+"    y: 2\n"
+"       ^\n"
+"SyntaxError: invalid syntax. Perhaps you forgot a comma?"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:259
 msgid "(Contributed by Pablo Galindo in :issue:`43822`.)"
 msgstr ""
@@ -292,6 +399,17 @@ msgstr ""
 #: ../../whatsnew/3.10.rst:261
 msgid "Multiple Exception types without parentheses:"
 msgstr "Кілька типів винятків без дужок:"
+
+#: ../../whatsnew/3.10.rst:263
+msgid ""
+">>> try:\n"
+"...     build_dyson_sphere()\n"
+"... except NotEnoughScienceError, NotEnoughResourcesError:\n"
+"  File \"<stdin>\", line 3\n"
+"    except NotEnoughScienceError, NotEnoughResourcesError:\n"
+"           ^\n"
+"SyntaxError: multiple exception types must be parenthesized"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:273
 msgid "(Contributed by Pablo Galindo in :issue:`43149`.)"
@@ -301,6 +419,25 @@ msgstr ""
 msgid "Missing ``:`` and values in dictionary literals:"
 msgstr "Відсутні ``:`` і значення в літералах словника:"
 
+#: ../../whatsnew/3.10.rst:277
+msgid ""
+">>> values = {\n"
+"... x: 1,\n"
+"... y: 2,\n"
+"... z:\n"
+"... }\n"
+"  File \"<stdin>\", line 4\n"
+"    z:\n"
+"     ^\n"
+"SyntaxError: expression expected after dictionary key and ':'\n"
+"\n"
+">>> values = {x:1, y:2, z w:3}\n"
+"  File \"<stdin>\", line 1\n"
+"    values = {x:1, y:2, z w:3}\n"
+"                        ^\n"
+"SyntaxError: ':' expected after dictionary key"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:295
 msgid "(Contributed by Pablo Galindo in :issue:`43823`.)"
 msgstr ""
@@ -308,6 +445,17 @@ msgstr ""
 #: ../../whatsnew/3.10.rst:297
 msgid "``try`` blocks without ``except`` or ``finally`` blocks:"
 msgstr "блоки ``try`` без блоків ``except`` або ``finally``:"
+
+#: ../../whatsnew/3.10.rst:299
+msgid ""
+">>> try:\n"
+"...     x = 2\n"
+"... something = 3\n"
+"  File \"<stdin>\", line 3\n"
+"    something  = 3\n"
+"    ^^^^^^^^^\n"
+"SyntaxError: expected 'except' or 'finally' block"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:309
 msgid "(Contributed by Pablo Galindo in :issue:`44305`.)"
@@ -317,6 +465,15 @@ msgstr ""
 msgid "Usage of ``=`` instead of ``==`` in comparisons:"
 msgstr "Використання ``=`` замість ``==`` у порівняннях:"
 
+#: ../../whatsnew/3.10.rst:313
+msgid ""
+">>> if rocket.position = event_horizon:\n"
+"  File \"<stdin>\", line 1\n"
+"    if rocket.position = event_horizon:\n"
+"                       ^\n"
+"SyntaxError: cannot assign to attribute here. Maybe you meant '==' instead of '='?"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:321
 msgid "(Contributed by Pablo Galindo in :issue:`43797`.)"
 msgstr ""
@@ -324,6 +481,15 @@ msgstr ""
 #: ../../whatsnew/3.10.rst:323
 msgid "Usage of ``*`` in f-strings:"
 msgstr "Використання ``*`` у f-рядках:"
+
+#: ../../whatsnew/3.10.rst:325
+msgid ""
+">>> f\"Black holes {*all_black_holes} and revelations\"\n"
+"  File \"<stdin>\", line 1\n"
+"    (*all_black_holes)\n"
+"     ^\n"
+"SyntaxError: f-string: cannot use starred expression here"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:333
 msgid "(Contributed by Pablo Galindo in :issue:`41064`.)"
@@ -342,6 +508,17 @@ msgstr ""
 "Багато винятків :exc:`IndentationError` тепер мають більше контексту щодо "
 "того, який тип блоку очікував відступу, включаючи розташування оператора:"
 
+#: ../../whatsnew/3.10.rst:341
+msgid ""
+">>> def foo():\n"
+"...    if lel:\n"
+"...    x = 2\n"
+"  File \"<stdin>\", line 3\n"
+"    x = 2\n"
+"    ^\n"
+"IndentationError: expected an indented block after 'if' statement in line 2"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:353
 msgid "AttributeErrors"
 msgstr "AttributeErrors"
@@ -351,6 +528,14 @@ msgid ""
 "When printing :exc:`AttributeError`, :c:func:`!PyErr_Display` will offer "
 "suggestions of similar attribute names in the object that the exception was "
 "raised from:"
+msgstr ""
+
+#: ../../whatsnew/3.10.rst:359
+msgid ""
+">>> collections.namedtoplo\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"AttributeError: module 'collections' has no attribute 'namedtoplo'. Did you mean: namedtuple?"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:366 ../../whatsnew/3.10.rst:388
@@ -373,6 +558,15 @@ msgid ""
 "When printing :exc:`NameError` raised by the interpreter, "
 ":c:func:`!PyErr_Display` will offer suggestions of similar variable names in"
 " the function that the exception was raised from:"
+msgstr ""
+
+#: ../../whatsnew/3.10.rst:380
+msgid ""
+">>> schwarzschild_black_hole = None\n"
+">>> schwarschild_black_hole\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"NameError: name 'schwarschild_black_hole' is not defined. Did you mean: schwarzschild_black_hole?"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:391
@@ -439,6 +633,19 @@ msgstr "Синтаксис та операції"
 #: ../../whatsnew/3.10.rst:424
 msgid "The generic syntax of pattern matching is::"
 msgstr "Загальний синтаксис зіставлення шаблонів:"
+
+#: ../../whatsnew/3.10.rst:426
+msgid ""
+"match subject:\n"
+"    case <pattern_1>:\n"
+"        <action_1>\n"
+"    case <pattern_2>:\n"
+"        <action_2>\n"
+"    case <pattern_3>:\n"
+"        <action_3>\n"
+"    case _:\n"
+"        <action_wildcard>"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:436
 msgid ""
@@ -551,6 +758,20 @@ msgstr ""
 "представляють коди статусу запиту. Пов’язана дія з інцидентом виконується "
 "після збігу::"
 
+#: ../../whatsnew/3.10.rst:481
+msgid ""
+"def http_error(status):\n"
+"    match status:\n"
+"        case 400:\n"
+"            return \"Bad request\"\n"
+"        case 404:\n"
+"            return \"Not found\"\n"
+"        case 418:\n"
+"            return \"I'm a teapot\"\n"
+"        case _:\n"
+"            return \"Something's wrong with the internet\""
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:492
 msgid ""
 "If the above function is passed a ``status`` of 418, \"I'm a teapot\" is "
@@ -574,6 +795,12 @@ msgstr ""
 "Ви можете поєднати кілька літералів в одному шаблоні за допомогою ``|`` "
 "(\"або\")::"
 
+#: ../../whatsnew/3.10.rst:501
+msgid ""
+"case 401 | 403 | 404:\n"
+"    return \"Not allowed\""
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:505
 msgid "Behavior without the wildcard"
 msgstr "Поведінка без символу підстановки"
@@ -585,6 +812,18 @@ msgid ""
 msgstr ""
 "Якщо ми змінимо наведений вище приклад, видаливши останній блок case, "
 "приклад стане::"
+
+#: ../../whatsnew/3.10.rst:510
+msgid ""
+"def http_error(status):\n"
+"    match status:\n"
+"        case 400:\n"
+"            return \"Bad request\"\n"
+"        case 404:\n"
+"            return \"Not found\"\n"
+"        case 418:\n"
+"            return \"I'm a teapot\""
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:519
 msgid ""
@@ -609,6 +848,22 @@ msgstr ""
 "Патерни можуть виглядати як завдання розпакування, і шаблон може "
 "використовуватися для зв’язування змінних. У цьому прикладі точку даних "
 "можна розпакувати до її координати x і y:"
+
+#: ../../whatsnew/3.10.rst:530
+msgid ""
+"# point is an (x, y) tuple\n"
+"match point:\n"
+"    case (0, 0):\n"
+"        print(\"Origin\")\n"
+"    case (0, y):\n"
+"        print(f\"Y={y}\")\n"
+"    case (x, 0):\n"
+"        print(f\"X={x}\")\n"
+"    case (x, y):\n"
+"        print(f\"X={x}, Y={y}\")\n"
+"    case _:\n"
+"        raise ValueError(\"Not a point\")"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:543
 msgid ""
@@ -639,6 +894,26 @@ msgstr ""
 "схожий на конструктор. Цей шаблон має можливість захоплювати атрибути класу "
 "в змінні::"
 
+#: ../../whatsnew/3.10.rst:556
+msgid ""
+"class Point:\n"
+"    x: int\n"
+"    y: int\n"
+"\n"
+"def location(point):\n"
+"    match point:\n"
+"        case Point(x=0, y=0):\n"
+"            print(\"Origin is the point's location.\")\n"
+"        case Point(x=0, y=y):\n"
+"            print(f\"Y={y} and the point is on the y-axis.\")\n"
+"        case Point(x=x, y=0):\n"
+"            print(f\"X={x} and the point is on the x-axis.\")\n"
+"        case Point():\n"
+"            print(\"The point is located somewhere else on the plane.\")\n"
+"        case _:\n"
+"            print(\"Not a point\")"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:574
 msgid "Patterns with positional parameters"
 msgstr "Патерни з позиційними параметрами"
@@ -659,6 +934,14 @@ msgstr ""
 "нього встановлено значення (\"x\", \"y\"), усі наступні шаблони еквівалентні"
 " (і всі прив'язують атрибут ``y`` до змінної ``var``):"
 
+#: ../../whatsnew/3.10.rst:582
+msgid ""
+"Point(1, var)\n"
+"Point(1, y=var)\n"
+"Point(x=1, y=var)\n"
+"Point(y=var, x=1)"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:588
 msgid "Nested patterns"
 msgstr "Вкладені візерунки"
@@ -670,6 +953,21 @@ msgid ""
 msgstr ""
 "Візерунки можуть бути довільно вкладеними. Наприклад, якщо наші дані є "
 "коротким списком точок, їх можна зіставити так:"
+
+#: ../../whatsnew/3.10.rst:593
+msgid ""
+"match points:\n"
+"    case []:\n"
+"        print(\"No points in the list.\")\n"
+"    case [Point(0, 0)]:\n"
+"        print(\"The origin is the only point in the list.\")\n"
+"    case [Point(x, y)]:\n"
+"        print(f\"A single point {x}, {y} is in the list.\")\n"
+"    case [Point(0, y1), Point(0, y2)]:\n"
+"        print(f\"Two points on the Y axis at {y1}, {y2} are in the list.\")\n"
+"    case _:\n"
+"        print(\"Something else is found in the list.\")"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:606
 msgid "Complex patterns and the wildcard"
@@ -684,6 +982,15 @@ msgstr ""
 "До цього моменту приклади використовували лише ``_`` в останньому операторі "
 "case. Символ узагальнення можна використовувати в більш складних шаблонах, "
 "наприклад ``('помилка', код, _)``. Наприклад::"
+
+#: ../../whatsnew/3.10.rst:612
+msgid ""
+"match test_variable:\n"
+"    case ('warning', code, 40):\n"
+"        print(\"A warning has been received.\")\n"
+"    case ('error', code, _):\n"
+"        print(f\"An error {code} occurred.\")"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:618
 msgid ""
@@ -706,6 +1013,15 @@ msgstr ""
 "Ми можемо додати умову ``if`` до шаблону, відомого як \"guard\". Якщо guard "
 "false, ``match`` переходить до наступного блоку case. Зауважте, що "
 "захоплення значення відбувається до оцінки захисника:"
+
+#: ../../whatsnew/3.10.rst:628
+msgid ""
+"match point:\n"
+"    case Point(x, y) if x == y:\n"
+"        print(f\"The point is located on the diagonal Y=X at {x}.\")\n"
+"    case Point(x, y):\n"
+"        print(f\"Point is not on the diagonal.\")"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:635
 msgid "Other Key Features"
@@ -759,6 +1075,10 @@ msgid "Subpatterns may be captured using the ``as`` keyword::"
 msgstr ""
 "Підшаблони можуть бути захоплені за допомогою ключового слова ``as``::"
 
+#: ../../whatsnew/3.10.rst:657
+msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:659
 msgid ""
 "This binds x1, y1, x2, y2 like you would expect without the ``as`` clause, "
@@ -785,6 +1105,24 @@ msgstr ""
 " повинні бути розділені крапками, щоб запобігти інтерпретації константи як "
 "змінної захоплення:"
 
+#: ../../whatsnew/3.10.rst:669
+msgid ""
+"from enum import Enum\n"
+"class Color(Enum):\n"
+"    RED = 0\n"
+"    GREEN = 1\n"
+"    BLUE = 2\n"
+"\n"
+"color = Color.GREEN\n"
+"match color:\n"
+"    case Color.RED:\n"
+"        print(\"I see red!\")\n"
+"    case Color.GREEN:\n"
+"        print(\"Grass is green\")\n"
+"    case Color.BLUE:\n"
+"        print(\"I'm feeling the blues :(\")"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:684
 msgid ""
 "For the full specification see :pep:`634`.  Motivation and rationale are in "
@@ -803,6 +1141,13 @@ msgid ""
 "platform and locale dependent. Since UTF-8 is used on most Unix platforms, "
 "omitting ``encoding`` option when opening UTF-8 files (e.g. JSON, YAML, "
 "TOML, Markdown) is a very common bug. For example::"
+msgstr ""
+
+#: ../../whatsnew/3.10.rst:698
+msgid ""
+"# BUG: \"rb\" mode or encoding=\"utf-8\" should be used.\n"
+"with open(\"data.json\") as f:\n"
+"    data = json.load(f)"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:702
@@ -863,9 +1208,21 @@ msgstr ""
 "У попередніх версіях Python для застосування підказки типу для функцій, які "
 "приймають аргументи кількох типів, використовувався :data:`typing.Union`::"
 
+#: ../../whatsnew/3.10.rst:730
+msgid ""
+"def square(number: Union[int, float]) -> Union[int, float]:\n"
+"    return number ** 2"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:734
 msgid "Type hints can now be written in a more succinct manner::"
 msgstr "Підказки щодо типів тепер можна писати стисло:"
+
+#: ../../whatsnew/3.10.rst:736
+msgid ""
+"def square(number: int | float) -> int | float:\n"
+"    return number ** 2"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:740
 msgid ""
@@ -874,6 +1231,12 @@ msgid ""
 msgstr ""
 "Цей новий синтаксис також приймається як другий аргумент для "
 ":func:`isinstance` і :func:`issubclass`::"
+
+#: ../../whatsnew/3.10.rst:743
+msgid ""
+">>> isinstance(1, int | str)\n"
+"True"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:746
 msgid "See :ref:`types-union` and :pep:`604` for more details."
@@ -967,10 +1330,22 @@ msgstr ""
 "призначення, особливо коли були задіяні прямі посилання або недійсні типи. "
 "Порівняти::"
 
+#: ../../whatsnew/3.10.rst:785
+msgid ""
+"StrCache = 'Cache[str]'  # a type alias\n"
+"LOG_PREFIX = 'LOG[DEBUG]'  # a module constant"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:788
 msgid ""
 "Now the :mod:`typing` module has a special value :data:`~typing.TypeAlias` "
 "which lets you declare type aliases more explicitly::"
+msgstr ""
+
+#: ../../whatsnew/3.10.rst:791
+msgid ""
+"StrCache: TypeAlias = 'Cache[str]'  # a type alias\n"
+"LOG_PREFIX = 'LOG[DEBUG]'  # a module constant"
 msgstr ""
 
 #: ../../whatsnew/3.10.rst:794
@@ -1433,6 +1808,16 @@ msgstr ""
 msgid "You can say that every field is keyword-only:"
 msgstr "Можна сказати, що кожне поле є лише ключовим словом:"
 
+#: ../../whatsnew/3.10.rst:1010
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"@dataclass(kw_only=True)\n"
+"class Birthday:\n"
+"    name: str\n"
+"    birthday: datetime.date"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:1019
 msgid ""
 "Both ``name`` and ``birthday`` are keyword-only parameters to the generated "
@@ -1444,6 +1829,16 @@ msgstr ""
 #: ../../whatsnew/3.10.rst:1022
 msgid "You can specify keyword-only on a per-field basis:"
 msgstr "Ви можете вказати лише ключове слово для кожного поля:"
+
+#: ../../whatsnew/3.10.rst:1024
+msgid ""
+"from dataclasses import dataclass, field\n"
+"\n"
+"@dataclass\n"
+"class Birthday:\n"
+"    name: str\n"
+"    birthday: datetime.date = field(kw_only=True)"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1033
 msgid ""
@@ -1465,6 +1860,19 @@ msgid ""
 msgstr ""
 "Ви також можете вказати, що всі поля після маркера KW_ONLY є лише ключовими "
 "словами. Ймовірно, це буде найпоширенішим використанням:"
+
+#: ../../whatsnew/3.10.rst:1041
+msgid ""
+"from dataclasses import dataclass, KW_ONLY\n"
+"\n"
+"@dataclass\n"
+"class Point:\n"
+"    x: float\n"
+"    y: float\n"
+"    _: KW_ONLY\n"
+"    z: float = 0.0\n"
+"    t: float = 0.0"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1053
 msgid ""
@@ -1807,11 +2215,9 @@ msgstr "itertools"
 
 #: ../../whatsnew/3.10.rst:1236
 msgid ""
-"Add :func:`itertools.pairwise()`. (Contributed by Raymond Hettinger in "
+"Add :func:`itertools.pairwise`. (Contributed by Raymond Hettinger in "
 ":issue:`38200`.)"
 msgstr ""
-"Додайте :func:`itertools.pairwise()`. (Надав Реймонд Геттінгер у "
-":issue:`38200`.)"
 
 #: ../../whatsnew/3.10.rst:1240
 msgid "linecache"
@@ -1823,11 +2229,9 @@ msgstr "ос"
 
 #: ../../whatsnew/3.10.rst:1248
 msgid ""
-"Add :func:`os.cpu_count()` support for VxWorks RTOS. (Contributed by Peixing"
-" Xin in :issue:`41440`.)"
+"Add :func:`os.cpu_count` support for VxWorks RTOS. (Contributed by Peixing "
+"Xin in :issue:`41440`.)"
 msgstr ""
-"Додайте підтримку :func:`os.cpu_count()` для VxWorks RTOS. (Надано Peixing "
-"Xin у :issue:`41440`.)"
 
 #: ../../whatsnew/3.10.rst:1251
 msgid ""
@@ -1841,15 +2245,11 @@ msgstr ""
 
 #: ../../whatsnew/3.10.rst:1255
 msgid ""
-"Add :func:`os.splice()` that allows to move data between two file "
-"descriptors without copying between kernel address space and user address "
-"space, where one of the file descriptors must refer to a pipe. (Contributed "
-"by Pablo Galindo in :issue:`41625`.)"
+"Add :func:`os.splice` that allows to move data between two file descriptors "
+"without copying between kernel address space and user address space, where "
+"one of the file descriptors must refer to a pipe. (Contributed by Pablo "
+"Galindo in :issue:`41625`.)"
 msgstr ""
-"Додайте :func:`os.splice()`, який дозволяє переміщувати дані між двома "
-"файловими дескрипторами без копіювання між адресним простором ядра та "
-"адресним простором користувача, де один із файлових дескрипторів має "
-"посилатися на канал. (Надав Пабло Галіндо в :issue:`41625`.)"
 
 #: ../../whatsnew/3.10.rst:1260
 msgid ""
@@ -1915,7 +2315,7 @@ msgstr "платформа"
 
 #: ../../whatsnew/3.10.rst:1295
 msgid ""
-"Add :func:`platform.freedesktop_os_release()` to retrieve operation system "
+"Add :func:`platform.freedesktop_os_release` to retrieve operation system "
 "identification from `freedesktop.org os-release "
 "<https://www.freedesktop.org/software/systemd/man/os-release.html>`_ "
 "standard file. (Contributed by Christian Heimes in :issue:`28468`.)"
@@ -2268,6 +2668,16 @@ msgstr ""
 "порівняння рівності, якщо будь-який з їхніх параметрів не :term:`hashable`. "
 "Зауважте, що оголошення ``Literal`` з нехешованими параметрами не викличе "
 "помилку:"
+
+#: ../../whatsnew/3.10.rst:1472
+msgid ""
+">>> from typing import Literal\n"
+">>> Literal[{0}]\n"
+">>> Literal[{0}] == Literal[{False}]\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: unhashable type: 'set'"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1479
 msgid "(Contributed by Yurii Karabas in :issue:`42345`.)"
@@ -3054,9 +3464,21 @@ msgstr ""
 msgid "A coroutine that currently looks like this::"
 msgstr "Співпрограма, яка зараз виглядає так::"
 
+#: ../../whatsnew/3.10.rst:1915
+msgid ""
+"async def foo(loop):\n"
+"    await asyncio.sleep(1, loop=loop)"
+msgstr ""
+
 #: ../../whatsnew/3.10.rst:1918
 msgid "Should be replaced with this::"
 msgstr "Слід замінити на це::"
+
+#: ../../whatsnew/3.10.rst:1920
+msgid ""
+"async def foo():\n"
+"    await asyncio.sleep(1)"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1923
 msgid ""
@@ -3151,6 +3573,16 @@ msgstr ""
 ":c:func:`PyObject_CallMethod`, :c:func:`PyBytes_AsString` і "
 ":c:func:`Py_CompileString`, як показано нижче. (Оголошення та обробка "
 "помилок опущено.) ::"
+
+#: ../../whatsnew/3.10.rst:1966
+msgid ""
+"io_module = Import_ImportModule(\"io\");\n"
+"fileobject = PyObject_CallMethod(io_module, \"open\", \"ss\", filename, \"rb\");\n"
+"source_bytes_object = PyObject_CallMethod(fileobject, \"read\", \"\");\n"
+"result = PyObject_CallMethod(fileobject, \"close\", \"\");\n"
+"source_buf = PyBytes_AsString(source_bytes_object);\n"
+"code = Py_CompileString(source_buf, filename, Py_file_input);"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:1973
 msgid ""
@@ -3526,6 +3958,13 @@ msgstr ""
 "``Py_REFCNT(obj) = new_refcnt`` потрібно замінити на ``Py_SET_REFCNT(obj, "
 "new_refcnt)``: див. :c:func:`Py_SET_REFCNT()` (доступний з Python 3.9). Для "
 "зворотної сумісності можна використовувати цей макрос:"
+
+#: ../../whatsnew/3.10.rst:2160
+msgid ""
+"#if PY_VERSION_HEX < 0x030900A4\n"
+"#  define Py_SET_REFCNT(obj, refcnt) ((Py_REFCNT(obj) = (refcnt)), (void)0)\n"
+"#endif"
+msgstr ""
 
 #: ../../whatsnew/3.10.rst:2164
 msgid "(Contributed by Victor Stinner in :issue:`39573`.)"

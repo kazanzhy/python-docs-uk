@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -192,6 +192,10 @@ msgstr ""
 "Наступна команда встановить останню версію модуля та його залежності з "
 "індексу пакетів Python::"
 
+#: ../../installing/index.rst:84
+msgid "python -m pip install SomePackage"
+msgstr ""
+
 #: ../../installing/index.rst:88
 msgid ""
 "For POSIX users (including macOS and Linux users), the examples in this "
@@ -222,6 +226,12 @@ msgstr ""
 "будь-який інший спеціальний символ, який інтерпретується командною "
 "оболонкою, назву пакета та версію слід брати в подвійні лапки::"
 
+#: ../../installing/index.rst:100
+msgid ""
+"python -m pip install SomePackage==1.0.4    # specific version\n"
+"python -m pip install \"SomePackage>=1.0.4\"  # minimum version"
+msgstr ""
+
 #: ../../installing/index.rst:103
 msgid ""
 "Normally, if a suitable module is already installed, attempting to install "
@@ -231,6 +241,10 @@ msgstr ""
 "Зазвичай, якщо відповідний модуль уже встановлено, повторна спроба "
 "встановити його не матиме ефекту. Оновлення існуючих модулів має надаватися "
 "в явному вигляді:"
+
+#: ../../installing/index.rst:107
+msgid "python -m pip install --upgrade SomePackage"
+msgstr ""
 
 #: ../../installing/index.rst:109
 msgid ""
@@ -343,6 +357,14 @@ msgstr ""
 "У Linux, macOS та інших системах POSIX використовуйте версії команд Python у"
 " поєднанні з перемикачем ``-m``, щоб запустити відповідну копію ``pip``::"
 
+#: ../../installing/index.rst:171
+msgid ""
+"python2   -m pip install SomePackage  # default Python 2\n"
+"python2.7 -m pip install SomePackage  # specifically Python 2.7\n"
+"python3   -m pip install SomePackage  # default Python 3\n"
+"python3.4 -m pip install SomePackage  # specifically Python 3.4"
+msgstr ""
+
 #: ../../installing/index.rst:176
 msgid "Appropriately versioned ``pip`` commands may also be available."
 msgstr "Також можуть бути доступні команди ``pip`` з відповідними версіями."
@@ -354,6 +376,14 @@ msgid ""
 msgstr ""
 "У Windows використовуйте засіб запуску Python ``py`` у поєднанні з "
 "перемикачем ``-m``::"
+
+#: ../../installing/index.rst:181
+msgid ""
+"py -2   -m pip install SomePackage  # default Python 2\n"
+"py -2.7 -m pip install SomePackage  # specifically Python 2.7\n"
+"py -3   -m pip install SomePackage  # default Python 3\n"
+"py -3.4 -m pip install SomePackage  # specifically Python 3.4"
+msgstr ""
 
 #: ../../installing/index.rst:195
 msgid "Common installation issues"
@@ -397,6 +427,10 @@ msgid ""
 msgstr ""
 "Можливо, ``pip`` не встановлюється за замовчуванням. Одним з потенційних "
 "виправлень є:"
+
+#: ../../installing/index.rst:215
+msgid "python -m ensurepip --default-pip"
+msgstr ""
 
 #: ../../installing/index.rst:217
 msgid ""

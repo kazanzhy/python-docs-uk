@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -177,6 +177,18 @@ msgstr ""
 "``__annotations__`` класу може ненавмисно повернути анотації dict *base "
 "class*. Як приклад::"
 
+#: ../../howto/annotations.rst:89
+msgid ""
+"class Base:\n"
+"    a: int = 3\n"
+"    b: str = 'abc'\n"
+"\n"
+"class Derived(Base):\n"
+"    pass\n"
+"\n"
+"print(Derived.__annotations__)"
+msgstr ""
+
 #: ../../howto/annotations.rst:98
 msgid "This will print the annotations dict from ``Base``, not ``Derived``."
 msgstr "Це надрукує анотації dict з ``Base``, а не ``Derived``."
@@ -205,6 +217,14 @@ msgid ""
 msgstr ""
 "Ось приклад коду, який безпечно отримує доступ до атрибута "
 "``__annotations__`` довільного об’єкта в Python 3.9 і раніше:"
+
+#: ../../howto/annotations.rst:113
+msgid ""
+"if isinstance(o, type):\n"
+"    ann = o.__dict__.get('__annotations__', None)\n"
+"else:\n"
+"    ann = getattr(o, '__annotations__', None)"
+msgstr ""
 
 #: ../../howto/annotations.rst:118
 msgid ""
@@ -442,6 +462,14 @@ msgstr ""
 "Якщо Python створить для вас рядкові анотації (за допомогою ``from "
 "__future__ import annotations``), і ви вкажете рядок як анотацію, сам рядок "
 "буде взято в лапки. По суті, анотація взята в лапки *двічі.* Наприклад::"
+
+#: ../../howto/annotations.rst:227
+msgid ""
+"from __future__ import annotations\n"
+"def foo(a: \"str\"): pass\n"
+"\n"
+"print(foo.__annotations__)"
+msgstr ""
 
 #: ../../howto/annotations.rst:232
 msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -232,6 +232,12 @@ msgstr ":pep:`563`: *Відкладена оцінка анотацій*"
 msgid "Each statement in :file:`__future__.py` is of the form::"
 msgstr "Кожен оператор у :file:`__future__.py` має форму::"
 
+#: ../../library/__future__.rst:79
+msgid ""
+"FeatureName = _Feature(OptionalRelease, MandatoryRelease,\n"
+"                       CompilerFlag)"
+msgstr ""
+
 #: ../../library/__future__.rst:82
 msgid ""
 "where, normally, *OptionalRelease* is less than *MandatoryRelease*, and both"
@@ -239,6 +245,16 @@ msgid ""
 msgstr ""
 "де, як правило, *OptionalRelease* менше ніж *MandatoryRelease*, і обидва є "
 "5-кортежами тієї самої форми, що й :data:`sys.version_info`::"
+
+#: ../../library/__future__.rst:85
+msgid ""
+"(PY_MAJOR_VERSION, # the 2 in 2.1.0a3; an int\n"
+" PY_MINOR_VERSION, # the 1; an int\n"
+" PY_MICRO_VERSION, # the 0; an int\n"
+" PY_RELEASE_LEVEL, # \"alpha\", \"beta\", \"candidate\" or \"final\"; string\n"
+" PY_RELEASE_SERIAL # the 3; an int\n"
+")"
+msgstr ""
 
 #: ../../library/__future__.rst:94
 msgid ""

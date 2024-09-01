@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -282,6 +282,20 @@ msgstr ""
 "З точки зору зручності використання анотації тепер підтримують прямі "
 "посилання, що робить наступний синтаксис дійсним:"
 
+#: ../../whatsnew/3.7.rst:158
+msgid ""
+"class C:\n"
+"    @classmethod\n"
+"    def from_string(cls, source: str) -> C:\n"
+"        ...\n"
+"\n"
+"    def validate_b(self, obj: B) -> bool:\n"
+"        ...\n"
+"\n"
+"class B:\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/3.7.rst:169
 msgid ""
 "Since this change breaks compatibility, the new behavior needs to be enabled"
@@ -289,6 +303,10 @@ msgid ""
 msgstr ""
 "Оскільки ця зміна порушує сумісність, нову поведінку потрібно ввімкнути на "
 "основі кожного модуля в Python 3.7 за допомогою :mod:`__future__` import::"
+
+#: ../../whatsnew/3.7.rst:172
+msgid "from __future__ import annotations"
+msgstr ""
 
 #: ../../whatsnew/3.7.rst:174
 msgid "It will become the default in Python 3.10."
@@ -1056,6 +1074,18 @@ msgstr ""
 msgid "Example::"
 msgstr "Приклад::"
 
+#: ../../whatsnew/3.7.rst:582
+msgid ""
+"@dataclass\n"
+"class Point:\n"
+"    x: float\n"
+"    y: float\n"
+"    z: float = 0.0\n"
+"\n"
+"p = Point(1.5, 2.5)\n"
+"print(p)   # produces \"Point(x=1.5, y=2.5, z=0.0)\""
+msgstr ""
+
 #: ../../whatsnew/3.7.rst:593
 msgid ":pep:`557` -- Data Classes"
 msgstr ":pep:`557` -- Класи даних"
@@ -1291,6 +1321,16 @@ msgstr ""
 "Новий метод :meth:`Server.is_serving() <asyncio.Server.is_serving>` повертає"
 " ``True``, якщо сервер обслуговує. :class:`~asyncio.Server` об’єкти тепер є "
 "асинхронними контекстними менеджерами::"
+
+#: ../../whatsnew/3.7.rst:716
+msgid ""
+"srv = await loop.create_server(...)\n"
+"\n"
+"async with srv:\n"
+"    # some code\n"
+"\n"
+"# At this point, srv is closed and no longer accepts new connections."
+msgstr ""
 
 #: ../../whatsnew/3.7.rst:723
 msgid "(Contributed by Yury Selivanov in :issue:`32662`.)"
@@ -4242,6 +4282,14 @@ msgid ""
 msgstr ""
 "Через помилку попередні версії Python помилково приймали такий синтаксис:"
 
+#: ../../whatsnew/3.7.rst:2255
+msgid ""
+"f(1 for x in [1],)\n"
+"\n"
+"class C(1 for x in [1]):\n"
+"    pass"
+msgstr ""
+
 #: ../../whatsnew/3.7.rst:2260
 msgid ""
 "Python 3.7 now correctly raises a :exc:`SyntaxError`, as a generator "
@@ -4473,15 +4521,11 @@ msgstr ""
 
 #: ../../whatsnew/3.7.rst:2369
 msgid ""
-":func:`re.sub()` now replaces empty matches adjacent to a previous non-empty"
-" match.  For example ``re.sub('x*', '-', 'abxd')`` returns now ``'-a-b--"
-"d-'`` instead of ``'-a-b-d-'`` (the first minus between 'b' and 'd' replaces"
-" 'x', and the second minus replaces an empty string between 'x' and 'd')."
+":func:`re.sub` now replaces empty matches adjacent to a previous non-empty "
+"match.  For example ``re.sub('x*', '-', 'abxd')`` returns now ``'-a-b--d-'``"
+" instead of ``'-a-b-d-'`` (the first minus between 'b' and 'd' replaces 'x',"
+" and the second minus replaces an empty string between 'x' and 'd')."
 msgstr ""
-":func:`re.sub()` тепер замінює порожні збіги поруч із попереднім непорожнім "
-"збігом. Наприклад, ``re.sub('x*', '-', 'abxd')`` тепер повертає ``'-a-b--"
-"d-'`` замість ``'-a-b-d-'`` ( перший мінус між 'b' і 'd' замінює 'x', а "
-"другий мінус замінює порожній рядок між 'x' і 'd')."
 
 #: ../../whatsnew/3.7.rst:2375
 msgid ""

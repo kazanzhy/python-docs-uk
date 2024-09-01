@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -59,6 +59,10 @@ msgstr ""
 "оскільки ви побачите \"командний рядок\" Windows, який зазвичай виглядає "
 "так:"
 
+#: ../../faq/windows.rst:35
+msgid "C:\\>"
+msgstr ""
+
 #: ../../faq/windows.rst:39
 msgid ""
 "The letter may be different, and there might be other things after it, so "
@@ -66,6 +70,10 @@ msgid ""
 msgstr ""
 "Літера може бути іншою, і після неї можуть бути інші речі, тому ви можете "
 "так само легко побачити щось на зразок:"
+
+#: ../../faq/windows.rst:42
+msgid "D:\\YourName\\Projects\\Python>"
+msgstr ""
 
 #: ../../faq/windows.rst:46
 msgid ""
@@ -101,9 +109,20 @@ msgstr ""
 "\"py\" як інструкцію для запуску інтерпретатора. Якщо ви відкрили командне "
 "вікно, спробуйте ввести команду ``py`` і натиснути клавішу return:"
 
+#: ../../faq/windows.rst:60
+msgid "C:\\Users\\YourName> py"
+msgstr ""
+
 #: ../../faq/windows.rst:64
 msgid "You should then see something like:"
 msgstr "Тоді ви повинні побачити щось на зразок:"
+
+#: ../../faq/windows.rst:66
+msgid ""
+"Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32\n"
+"Type \"help\", \"copyright\", \"credits\" or \"license\" for more information.\n"
+">>>"
+msgstr ""
 
 #: ../../faq/windows.rst:72
 msgid ""
@@ -117,6 +136,14 @@ msgstr ""
 "можете інтерактивно вводити оператори або вирази Python і виконувати їх чи "
 "оцінювати, поки ви чекаєте. Це одна з найсильніших можливостей Python. "
 "Перевірте це, ввівши кілька виразів на ваш вибір і переглянувши результати:"
+
+#: ../../faq/windows.rst:77
+msgid ""
+">>> print(\"Hello\")\n"
+"Hello\n"
+">>> \"Hello\" * 3\n"
+"'HelloHelloHello'"
+msgstr ""
 
 #: ../../faq/windows.rst:84
 msgid ""
@@ -163,6 +190,10 @@ msgstr ""
 "рядок добре відкрито у вашому домашньому каталозі, тому ви бачите щось "
 "подібне до:"
 
+#: ../../faq/windows.rst:104
+msgid "C:\\Users\\YourName>"
+msgstr ""
+
 #: ../../faq/windows.rst:106
 msgid ""
 "So now you'll ask the ``py`` command to give your script to Python by typing"
@@ -170,6 +201,12 @@ msgid ""
 msgstr ""
 "Отже, тепер ви попросите команду ``py`` передати ваш сценарій Python, ввівши"
 " ``py``, а потім шлях до вашого сценарію::"
+
+#: ../../faq/windows.rst:110
+msgid ""
+"C:\\Users\\YourName> py Desktop\\hello.py\n"
+"hello"
+msgstr ""
 
 #: ../../faq/windows.rst:114
 msgid "How do I make Python scripts executable?"
@@ -374,6 +411,15 @@ msgstr ""
 "Коротше кажучи, ви можете використовувати наступний код для ініціалізації "
 "інтерпретатора Python за допомогою вашого модуля розширення."
 
+#: ../../faq/windows.rst:210
+msgid ""
+"#include <Python.h>\n"
+"...\n"
+"Py_Initialize();  // Initialize Python.\n"
+"initmyAppc();  // Initialize (import) the helper class.\n"
+"PyRun_SimpleString(\"import myApp\");  // Import the shadow class."
+msgstr ""
+
 #: ../../faq/windows.rst:218
 msgid ""
 "There are two problems with Python's C API which will become apparent if you"
@@ -399,6 +445,13 @@ msgstr ""
 "Проблема 2: SWIG генерує такий код під час генерації обгорток для функцій "
 "void:"
 
+#: ../../faq/windows.rst:229
+msgid ""
+"Py_INCREF(Py_None);\n"
+"_resultobj = Py_None;\n"
+"return _resultobj;"
+msgstr ""
+
 #: ../../faq/windows.rst:235
 msgid ""
 "Alas, Py_None is a macro that expands to a reference to a complex data "
@@ -409,6 +462,10 @@ msgstr ""
 "структуру даних під назвою _Py_NoneStruct усередині pythonNN.dll. Знову ж "
 "таки, цей код не працюватиме в середовищі з декількома компіляторами. "
 "Замініть такий код на:"
+
+#: ../../faq/windows.rst:239
+msgid "return Py_BuildValue(\"\");"
+msgstr ""
 
 #: ../../faq/windows.rst:243
 msgid ""

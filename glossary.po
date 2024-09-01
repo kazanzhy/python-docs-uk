@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -146,6 +146,12 @@ msgstr ""
 "перед яким ``**``. Наприклад, ``3`` і ``5`` є ключовими аргументами в "
 "наступних викликах :func:`complex`::"
 
+#: ../../glossary.rst:64
+msgid ""
+"complex(real=3, imag=5)\n"
+"complex(**{'real': 3, 'imag': 5})"
+msgstr ""
+
 #: ../../glossary.rst:67
 msgid ""
 ":dfn:`positional argument`: an argument that is not a keyword argument. "
@@ -157,6 +163,12 @@ msgstr ""
 "Позиційні аргументи можуть з’являтися на початку списку аргументів і/або "
 "передаватися як елементи :term:`iterable`, яким передує ``*``. Наприклад, "
 "``3`` і ``5`` є позиційними аргументами в наступних викликах:"
+
+#: ../../glossary.rst:73
+msgid ""
+"complex(3, 5)\n"
+"complex(*(3, 5))"
+msgstr ""
 
 #: ../../glossary.rst:76
 msgid ""
@@ -444,6 +456,10 @@ msgid ""
 " (see :term:`argument`), with the following syntax::"
 msgstr ""
 
+#: ../../glossary.rst:210
+msgid "callable(argument1, argument2, argumentN)"
+msgstr ""
+
 #: ../../glossary.rst:212
 msgid ""
 "A :term:`function`, and by extension a :term:`method`, is a callable. An "
@@ -637,6 +653,17 @@ msgid ""
 msgstr ""
 "Синтаксис декоратора є просто синтаксичним цукром, наступні два визначення "
 "функції семантично еквівалентні:"
+
+#: ../../glossary.rst:295
+msgid ""
+"def f(arg):\n"
+"    ...\n"
+"f = staticmethod(f)\n"
+"\n"
+"@staticmethod\n"
+"def f(arg):\n"
+"    ..."
+msgstr ""
 
 #: ../../glossary.rst:303
 msgid ""
@@ -998,6 +1025,12 @@ msgstr ""
 "hint>`: наприклад, ця функція має приймати два аргументи :class:`int` і "
 "також має повертати значення :class:`int`::"
 
+#: ../../glossary.rst:461
+msgid ""
+"def sum_two_numbers(a: int, b: int) -> int:\n"
+"   return a + b"
+msgstr ""
+
 #: ../../glossary.rst:464
 msgid "Function annotation syntax is explained in section :ref:`function`."
 msgstr "Синтаксис анотації функції пояснюється в розділі :ref:`function`."
@@ -1032,6 +1065,13 @@ msgstr ""
 " :mod:`__future__` документує можливі значення *feature*. Імпортувавши цей "
 "модуль та оцінивши його змінні, ви можете побачити, коли нова функція була "
 "вперше додана до мови та коли вона стане (або стала) типовою::"
+
+#: ../../glossary.rst:480
+msgid ""
+">>> import __future__\n"
+">>> __future__.division\n"
+"_Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)"
+msgstr ""
 
 #: ../../glossary.rst:483
 msgid "garbage collection"
@@ -1107,6 +1147,12 @@ msgid ""
 "normal expression followed by a :keyword:`!for` clause defining a loop "
 "variable, range, and an optional :keyword:`!if` clause.  The combined "
 "expression generates values for an enclosing function::"
+msgstr ""
+
+#: ../../glossary.rst:519
+msgid ""
+">>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81\n"
+"285"
 msgstr ""
 
 #: ../../glossary.rst:521
@@ -1811,6 +1857,16 @@ msgstr ""
 "повертаються :func:`time.localtime` і :func:`os.stat`. Інший приклад: "
 ":data:`sys.float_info`::"
 
+#: ../../glossary.rst:844
+msgid ""
+">>> sys.float_info[1]                   # indexed access\n"
+"1024\n"
+">>> sys.float_info.max_exp              # named field access\n"
+"1024\n"
+">>> isinstance(sys.float_info, tuple)   # kind of tuple\n"
+"True"
+msgstr ""
+
 #: ../../glossary.rst:851
 msgid ""
 "Some named tuples are built-in types (such as the above examples). "
@@ -1970,6 +2026,10 @@ msgstr ""
 "<argument>`. Це тип параметра за замовчуванням, наприклад *foo* і *bar* у "
 "наступному::"
 
+#: ../../glossary.rst:927
+msgid "def func(foo, bar=None): ..."
+msgstr ""
+
 #: ../../glossary.rst:931
 msgid ""
 ":dfn:`positional-only`: specifies an argument that can be supplied only by "
@@ -1981,6 +2041,10 @@ msgstr ""
 "позицією. Лише позиційні параметри можна визначити, включивши символ ``/`` у"
 " список параметрів визначення функції після них, наприклад *posonly1* і "
 "*posonly2* у наступному::"
+
+#: ../../glossary.rst:936
+msgid "def func(posonly1, posonly2, /, positional_or_keyword): ..."
+msgstr ""
 
 #: ../../glossary.rst:940
 msgid ""
@@ -1996,6 +2060,10 @@ msgstr ""
 "визначення функції перед ними, наприклад *kw_only1* і *kw_only2* у "
 "наступному:"
 
+#: ../../glossary.rst:946
+msgid "def func(arg, *, kw_only1, kw_only2): ..."
+msgstr ""
+
 #: ../../glossary.rst:948
 msgid ""
 ":dfn:`var-positional`: specifies that an arbitrary sequence of positional "
@@ -2008,6 +2076,10 @@ msgstr ""
 "позиційних аргументів (на додаток до будь-яких позиційних аргументів, уже "
 "прийнятих іншими параметрами). Такий параметр можна визначити, додавши перед"
 " назвою параметра ``*``, наприклад *args* у наступному::"
+
+#: ../../glossary.rst:954
+msgid "def func(*args, **kwargs): ..."
+msgstr ""
 
 #: ../../glossary.rst:956
 msgid ""
@@ -2253,9 +2325,21 @@ msgstr ""
 " не мають такого типу конструкції, тому люди, які не знайомі з Python, іноді"
 " замість цього використовують числовий лічильник::"
 
+#: ../../glossary.rst:1057
+msgid ""
+"for i in range(len(food)):\n"
+"    print(food[i])"
+msgstr ""
+
 #: ../../glossary.rst:1060
 msgid "As opposed to the cleaner, Pythonic method::"
 msgstr "На відміну від очищувача, метод Pythonic::"
+
+#: ../../glossary.rst:1062
+msgid ""
+"for piece in food:\n"
+"    print(piece)"
+msgstr ""
 
 #: ../../glossary.rst:1064
 msgid "qualified name"
@@ -2273,6 +2357,21 @@ msgstr ""
 ":pep:`3155`. Для функцій і класів верхнього рівня кваліфіковане ім’я "
 "збігається з ім’ям об’єкта::"
 
+#: ../../glossary.rst:1071
+msgid ""
+">>> class C:\n"
+"...     class D:\n"
+"...         def meth(self):\n"
+"...             pass\n"
+"...\n"
+">>> C.__qualname__\n"
+"'C'\n"
+">>> C.D.__qualname__\n"
+"'C.D'\n"
+">>> C.D.meth.__qualname__\n"
+"'C.D.meth'"
+msgstr ""
+
 #: ../../glossary.rst:1083
 msgid ""
 "When used to refer to modules, the *fully qualified name* means the entire "
@@ -2282,6 +2381,13 @@ msgstr ""
 "Коли використовується для позначення модулів, *повне ім’я* означає весь шлях"
 " до модуля, розділений крапками, включаючи будь-які батьківські пакети, "
 "напр. ``email.mime.text``::"
+
+#: ../../glossary.rst:1087
+msgid ""
+">>> import email.mime.text\n"
+">>> email.mime.text.__name__\n"
+"'email.mime.text'"
+msgstr ""
 
 #: ../../glossary.rst:1090
 msgid "reference count"
@@ -2620,9 +2726,24 @@ msgstr ""
 "Псевдоніми типів корисні для спрощення :term:`підказок типу <type hint>`. "
 "Наприклад::"
 
+#: ../../glossary.rst:1245
+msgid ""
+"def remove_gray_shades(\n"
+"        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
+"    pass"
+msgstr ""
+
 #: ../../glossary.rst:1249
 msgid "could be made more readable like this::"
 msgstr "можна зробити більш читабельним таким чином::"
+
+#: ../../glossary.rst:1251
+msgid ""
+"Color = tuple[int, int, int]\n"
+"\n"
+"def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
+"    pass"
+msgstr ""
 
 #: ../../glossary.rst:1256 ../../glossary.rst:1270
 msgid "See :mod:`typing` and :pep:`484`, which describe this functionality."
@@ -2688,6 +2809,12 @@ msgid ""
 msgstr ""
 "При анотуванні змінної або атрибута класу призначення є необов’язковим:"
 
+#: ../../glossary.rst:1284
+msgid ""
+"class C:\n"
+"    field: 'annotation'"
+msgstr ""
+
 #: ../../glossary.rst:1287
 msgid ""
 "Variable annotations are usually used for :term:`type hints <type hint>`: "
@@ -2696,6 +2823,10 @@ msgstr ""
 "Анотації змінних зазвичай використовуються для :term:`підказок типу <type "
 "hint>`: наприклад, очікується, що ця змінна прийматиме значення "
 ":class:`int`::"
+
+#: ../../glossary.rst:1291
+msgid "count: int = 0"
+msgstr ""
 
 #: ../../glossary.rst:1293
 msgid "Variable annotation syntax is explained in section :ref:`annassign`."

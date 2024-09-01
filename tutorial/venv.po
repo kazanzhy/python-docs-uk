@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -104,6 +104,10 @@ msgstr ""
 "розмістити, і запустіть модуль :mod:`venv` як сценарій із шляхом до "
 "каталогу::"
 
+#: ../../tutorial/venv.rst:47
+msgid "python -m venv tutorial-env"
+msgstr ""
+
 #: ../../tutorial/venv.rst:49
 msgid ""
 "This will create the ``tutorial-env`` directory if it doesn't exist, and "
@@ -136,9 +140,17 @@ msgstr "Створивши віртуальне середовище, ви мо�
 msgid "On Windows, run::"
 msgstr "У Windows запустіть::"
 
+#: ../../tutorial/venv.rst:63
+msgid "tutorial-env\\Scripts\\activate"
+msgstr ""
+
 #: ../../tutorial/venv.rst:65
 msgid "On Unix or MacOS, run::"
 msgstr "В Unix або MacOS запустіть:"
+
+#: ../../tutorial/venv.rst:67
+msgid "source tutorial-env/bin/activate"
+msgstr ""
 
 #: ../../tutorial/venv.rst:69
 msgid ""
@@ -163,8 +175,25 @@ msgstr ""
 "таким чином, що запуск ``python`` дасть вам цю конкретну версію та "
 "інсталяцію Python. Наприклад:"
 
+#: ../../tutorial/venv.rst:79
+msgid ""
+"$ source ~/envs/tutorial-env/bin/activate\n"
+"(tutorial-env) $ python\n"
+"Python 3.5.1 (default, May  6 2016, 10:59:36)\n"
+"  ...\n"
+">>> import sys\n"
+">>> sys.path\n"
+"['', '/usr/local/lib/python35.zip', ...,\n"
+"'~/envs/tutorial-env/lib/python3.5/site-packages']\n"
+">>>"
+msgstr ""
+
 #: ../../tutorial/venv.rst:91
 msgid "To deactivate a virtual environment, type::"
+msgstr ""
+
+#: ../../tutorial/venv.rst:93
+msgid "deactivate"
 msgstr ""
 
 #: ../../tutorial/venv.rst:95
@@ -199,6 +228,16 @@ msgid ""
 "name:"
 msgstr "Ви можете встановити останню версію пакета, вказавши назву пакета:"
 
+#: ../../tutorial/venv.rst:111
+msgid ""
+"(tutorial-env) $ python -m pip install novas\n"
+"Collecting novas\n"
+"  Downloading novas-3.1.1.3.tar.gz (136kB)\n"
+"Installing collected packages: novas\n"
+"  Running setup.py install for novas\n"
+"Successfully installed novas-3.1.1.3"
+msgstr ""
+
 #: ../../tutorial/venv.rst:120
 msgid ""
 "You can also install a specific version of a package by giving the package "
@@ -207,12 +246,32 @@ msgstr ""
 "Ви також можете встановити певну версію пакета, вказавши ім’я пакета, а "
 "потім ``==`` і номер версії:"
 
+#: ../../tutorial/venv.rst:123
+msgid ""
+"(tutorial-env) $ python -m pip install requests==2.6.0\n"
+"Collecting requests==2.6.0\n"
+"  Using cached requests-2.6.0-py2.py3-none-any.whl\n"
+"Installing collected packages: requests\n"
+"Successfully installed requests-2.6.0"
+msgstr ""
+
 #: ../../tutorial/venv.rst:131
 msgid ""
 "If you re-run this command, ``pip`` will notice that the requested version "
 "is already installed and do nothing.  You can supply a different version "
 "number to get that version, or you can run ``python -m pip install "
 "--upgrade`` to upgrade the package to the latest version:"
+msgstr ""
+
+#: ../../tutorial/venv.rst:136
+msgid ""
+"(tutorial-env) $ python -m pip install --upgrade requests\n"
+"Collecting requests\n"
+"Installing collected packages: requests\n"
+"  Found existing installation: requests 2.6.0\n"
+"    Uninstalling requests-2.6.0:\n"
+"      Successfully uninstalled requests-2.6.0\n"
+"Successfully installed requests-2.7.0"
 msgstr ""
 
 #: ../../tutorial/venv.rst:146
@@ -226,10 +285,36 @@ msgid ""
 "``python -m pip show`` will display information about a particular package:"
 msgstr ""
 
+#: ../../tutorial/venv.rst:151
+msgid ""
+"(tutorial-env) $ python -m pip show requests\n"
+"---\n"
+"Metadata-Version: 2.0\n"
+"Name: requests\n"
+"Version: 2.7.0\n"
+"Summary: Python HTTP for Humans.\n"
+"Home-page: http://python-requests.org\n"
+"Author: Kenneth Reitz\n"
+"Author-email: me@kennethreitz.com\n"
+"License: Apache 2.0\n"
+"Location: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\n"
+"Requires:"
+msgstr ""
+
 #: ../../tutorial/venv.rst:166
 msgid ""
 "``python -m pip list`` will display all of the packages installed in the "
 "virtual environment:"
+msgstr ""
+
+#: ../../tutorial/venv.rst:169
+msgid ""
+"(tutorial-env) $ python -m pip list\n"
+"novas (3.1.1.3)\n"
+"numpy (1.9.2)\n"
+"pip (7.0.3)\n"
+"requests (2.7.0)\n"
+"setuptools (16.0)"
 msgstr ""
 
 #: ../../tutorial/venv.rst:178
@@ -238,6 +323,15 @@ msgid ""
 "packages, but the output uses the format that ``python -m pip install`` "
 "expects. A common convention is to put this list in a ``requirements.txt`` "
 "file:"
+msgstr ""
+
+#: ../../tutorial/venv.rst:182
+msgid ""
+"(tutorial-env) $ python -m pip freeze > requirements.txt\n"
+"(tutorial-env) $ cat requirements.txt\n"
+"novas==3.1.1.3\n"
+"numpy==1.9.2\n"
+"requests==2.7.0"
 msgstr ""
 
 #: ../../tutorial/venv.rst:190
@@ -249,6 +343,20 @@ msgstr ""
 "Після цього ``requirements.txt`` можна закріпити для контролю версій і "
 "відправити як частину програми. Потім користувачі можуть інсталювати всі "
 "необхідні пакети за допомогою ``install -r``:"
+
+#: ../../tutorial/venv.rst:194
+msgid ""
+"(tutorial-env) $ python -m pip install -r requirements.txt\n"
+"Collecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n"
+"  ...\n"
+"Collecting numpy==1.9.2 (from -r requirements.txt (line 2))\n"
+"  ...\n"
+"Collecting requests==2.7.0 (from -r requirements.txt (line 3))\n"
+"  ...\n"
+"Installing collected packages: novas, numpy, requests\n"
+"  Running setup.py install for novas\n"
+"Successfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0"
+msgstr ""
 
 #: ../../tutorial/venv.rst:207
 msgid ""

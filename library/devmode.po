@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -61,6 +61,11 @@ msgid ""
 msgstr ""
 "Увімкнення режиму розробки Python подібне до наступної команди, але з "
 "додатковими ефектами, описаними нижче:"
+
+#: ../../library/devmode.rst:24
+msgid ""
+"PYTHONMALLOC=debug PYTHONASYNCIODEBUG=1 python -W default -X faulthandler"
+msgstr ""
 
 #: ../../library/devmode.rst:26
 msgid "Effects of the Python Development Mode:"
@@ -283,6 +288,20 @@ msgstr ""
 "Приклад сценарію підрахунку кількості рядків текстового файлу, вказаного в "
 "командному рядку:"
 
+#: ../../library/devmode.rst:116
+msgid ""
+"import sys\n"
+"\n"
+"def main():\n"
+"    fp = open(sys.argv[1])\n"
+"    nlines = len(fp.readlines())\n"
+"    print(nlines)\n"
+"    # The file is closed implicitly\n"
+"\n"
+"if __name__ == \"__main__\":\n"
+"    main()"
+msgstr ""
+
 #: ../../library/devmode.rst:127
 msgid ""
 "The script does not close the file explicitly. By default, Python does not "
@@ -290,6 +309,12 @@ msgid ""
 msgstr ""
 "Сценарій не закриває файл явно. За замовчуванням Python не видає жодних "
 "попереджень. Приклад використання README.txt, який містить 269 рядків:"
+
+#: ../../library/devmode.rst:130
+msgid ""
+"$ python script.py README.txt\n"
+"269"
+msgstr ""
 
 #: ../../library/devmode.rst:135
 msgid ""
@@ -299,6 +324,15 @@ msgstr ""
 "Увімкнення режиму розробки Python відображає попередження "
 ":exc:`ResourceWarning`:"
 
+#: ../../library/devmode.rst:137
+msgid ""
+"$ python -X dev script.py README.txt\n"
+"269\n"
+"script.py:10: ResourceWarning: unclosed file <_io.TextIOWrapper name='README.rst' mode='r' encoding='UTF-8'>\n"
+"  main()\n"
+"ResourceWarning: Enable tracemalloc to get the object allocation traceback"
+msgstr ""
+
 #: ../../library/devmode.rst:145
 msgid ""
 "In addition, enabling :mod:`tracemalloc` shows the line where the file was "
@@ -307,12 +341,34 @@ msgstr ""
 "Крім того, увімкнення :mod:`tracemalloc` показує рядок, де було відкрито "
 "файл:"
 
+#: ../../library/devmode.rst:148
+msgid ""
+"$ python -X dev -X tracemalloc=5 script.py README.rst\n"
+"269\n"
+"script.py:10: ResourceWarning: unclosed file <_io.TextIOWrapper name='README.rst' mode='r' encoding='UTF-8'>\n"
+"  main()\n"
+"Object allocated at (most recent call last):\n"
+"  File \"script.py\", lineno 10\n"
+"    main()\n"
+"  File \"script.py\", lineno 4\n"
+"    fp = open(sys.argv[1])"
+msgstr ""
+
 #: ../../library/devmode.rst:160
 msgid ""
 "The fix is to close explicitly the file. Example using a context manager::"
 msgstr ""
 "Виправлення полягає в тому, щоб явно закрити файл. Приклад використання "
 "контекстного менеджера::"
+
+#: ../../library/devmode.rst:162
+msgid ""
+"def main():\n"
+"    # Close the file explicitly when exiting the with block\n"
+"    with open(sys.argv[1]) as fp:\n"
+"        nlines = len(fp.readlines())\n"
+"    print(nlines)"
+msgstr ""
 
 #: ../../library/devmode.rst:168
 msgid ""
@@ -334,9 +390,29 @@ msgstr "Приклад помилки неправильного дескрип�
 msgid "Script displaying the first line of itself::"
 msgstr "Сценарій, що відображає перший рядок самого себе::"
 
+#: ../../library/devmode.rst:179
+msgid ""
+"import os\n"
+"\n"
+"def main():\n"
+"    fp = open(__file__)\n"
+"    firstline = fp.readline()\n"
+"    print(firstline.rstrip())\n"
+"    os.close(fp.fileno())\n"
+"    # The file is closed implicitly\n"
+"\n"
+"main()"
+msgstr ""
+
 #: ../../library/devmode.rst:190
 msgid "By default, Python does not emit any warning:"
 msgstr "За замовчуванням Python не видає жодного попередження:"
+
+#: ../../library/devmode.rst:192
+msgid ""
+"$ python script.py\n"
+"import os"
+msgstr ""
 
 #: ../../library/devmode.rst:197
 msgid ""
@@ -345,6 +421,20 @@ msgid ""
 msgstr ""
 "Режим розробки Python показує :exc:`ResourceWarning` і реєструє помилку "
 "\"Поганий дескриптор файлу\" під час завершення об’єкта файлу:"
+
+#: ../../library/devmode.rst:200
+msgid ""
+"$ python -X dev script.py\n"
+"import os\n"
+"script.py:10: ResourceWarning: unclosed file <_io.TextIOWrapper name='script.py' mode='r' encoding='UTF-8'>\n"
+"  main()\n"
+"ResourceWarning: Enable tracemalloc to get the object allocation traceback\n"
+"Exception ignored in: <_io.TextIOWrapper name='script.py' mode='r' encoding='UTF-8'>\n"
+"Traceback (most recent call last):\n"
+"  File \"script.py\", line 10, in <module>\n"
+"    main()\n"
+"OSError: [Errno 9] Bad file descriptor"
+msgstr ""
 
 #: ../../library/devmode.rst:213
 msgid ""

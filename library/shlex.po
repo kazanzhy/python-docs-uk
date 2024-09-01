@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -676,6 +676,21 @@ msgstr ""
 " командних рядків легше, ніж ви могли б інакше. Для ілюстрації ви можете "
 "побачити різницю в наступному фрагменті:"
 
+#: ../../library/shlex.rst:412
+msgid ""
+">>> import shlex\n"
+">>> text = \"a && b; c && d || e; f >'abc'; (def \\\"ghi\\\")\"\n"
+">>> s = shlex.shlex(text, posix=True)\n"
+">>> s.whitespace_split = True\n"
+">>> list(s)\n"
+"['a', '&&', 'b;', 'c', '&&', 'd', '||', 'e;', 'f', '>abc;', '(def', 'ghi)']\n"
+">>> s = shlex.shlex(text, posix=True, punctuation_chars=True)\n"
+">>> s.whitespace_split = True\n"
+">>> list(s)\n"
+"['a', '&&', 'b', ';', 'c', '&&', 'd', '||', 'e', ';', 'f', '>', 'abc', ';',\n"
+"'(', 'def', 'ghi', ')']"
+msgstr ""
+
 #: ../../library/shlex.rst:427
 msgid ""
 "Of course, tokens will be returned which are not valid for shells, and "
@@ -694,6 +709,14 @@ msgstr ""
 "можете передати рядок із певними символами, які використовуватимуться для "
 "визначення того, які символи становлять пунктуацію. Наприклад::"
 
+#: ../../library/shlex.rst:434
+msgid ""
+">>> import shlex\n"
+">>> s = shlex.shlex(\"a && b || c\", punctuation_chars=\"|\")\n"
+">>> list(s)\n"
+"['a', '&', '&', 'b', '||', 'c']"
+msgstr ""
+
 #: ../../library/shlex.rst:439
 msgid ""
 "When ``punctuation_chars`` is specified, the :attr:`~shlex.wordchars` "
@@ -705,6 +728,15 @@ msgstr ""
 "доповнюється символами ``~-./*?=``. Це пов’язано з тим, що ці символи можуть"
 " з’являтися в назвах файлів (включаючи символи підстановки) та аргументах "
 "командного рядка (наприклад, ``--color=auto``). Отже::"
+
+#: ../../library/shlex.rst:444
+msgid ""
+">>> import shlex\n"
+">>> s = shlex.shlex('~/a && b-c --color=auto || d *.py?',\n"
+"...                 punctuation_chars=True)\n"
+">>> list(s)\n"
+"['~/a', '&&', 'b-c', '--color=auto', '||', 'd', '*.py?']"
+msgstr ""
 
 #: ../../library/shlex.rst:450
 msgid ""

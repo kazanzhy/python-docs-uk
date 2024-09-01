@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1124,6 +1124,13 @@ msgid ""
 "string literals are also accepted by the regular expression parser::"
 msgstr ""
 
+#: ../../library/re.rst:675
+msgid ""
+"\\a      \\b      \\f      \\n\n"
+"\\N      \\r      \\t      \\u\n"
+"\\U      \\v      \\x      \\\\"
+msgstr ""
+
 #: ../../library/re.rst:679
 msgid ""
 "(Note that ``\\b`` is used to represent word boundaries, and means "
@@ -1315,6 +1322,12 @@ msgid ""
 "value::"
 msgstr ""
 
+#: ../../library/re.rst:822
+msgid ""
+"def myfunc(text, flag=re.NOFLAG):\n"
+"    return re.match(text, flag)"
+msgstr ""
+
 #: ../../library/re.rst:830
 msgid ""
 "Make the ``'.'`` special character match any character at all, including a "
@@ -1358,6 +1371,14 @@ msgstr ""
 "Це означає, що два наступних об’єкти регулярного виразу, які відповідають "
 "десятковому числу, функціонально однакові:"
 
+#: ../../library/re.rst:864
+msgid ""
+"a = re.compile(r\"\"\"\\d +  # the integral part\n"
+"                   \\.    # the decimal point\n"
+"                   \\d *  # some fractional digits\"\"\", re.X)\n"
+"b = re.compile(r\"\\d+\\.\\d*\")"
+msgstr ""
+
 #: ../../library/re.rst:869
 msgid "Corresponds to the inline flag ``(?x)``."
 msgstr "Відповідає вбудованому прапору ``(?x)``."
@@ -1392,9 +1413,19 @@ msgstr ""
 msgid "The sequence ::"
 msgstr "Послідовність ::"
 
+#: ../../library/re.rst:888
+msgid ""
+"prog = re.compile(pattern)\n"
+"result = prog.match(string)"
+msgstr ""
+
 #: ../../library/re.rst:891
 msgid "is equivalent to ::"
 msgstr "еквівалентно ::"
+
+#: ../../library/re.rst:893
+msgid "result = re.match(pattern, string)"
+msgstr ""
 
 #: ../../library/re.rst:895
 msgid ""
@@ -1472,6 +1503,18 @@ msgstr ""
 "відбувається не більше ніж *maxsplit*, а залишок рядка повертається як "
 "останній елемент списку. ::"
 
+#: ../../library/re.rst:958
+msgid ""
+">>> re.split(r'\\W+', 'Words, words, words.')\n"
+"['Words', 'words', 'words', '']\n"
+">>> re.split(r'(\\W+)', 'Words, words, words.')\n"
+"['Words', ', ', 'words', ', ', 'words', '.', '']\n"
+">>> re.split(r'\\W+', 'Words, words, words.', maxsplit=1)\n"
+"['Words', 'words, words.']\n"
+">>> re.split('[a-f]+', '0a3B9', flags=re.IGNORECASE)\n"
+"['0', '3', '9']"
+msgstr ""
+
 #: ../../library/re.rst:967
 msgid ""
 "If there are capturing groups in the separator and it matches at the start "
@@ -1480,6 +1523,12 @@ msgid ""
 msgstr ""
 "Якщо в розділювачі є групи захоплення, і він збігається на початку рядка, "
 "результат розпочнеться з порожнього рядка. Те саме стосується кінця рядка::"
+
+#: ../../library/re.rst:971
+msgid ""
+">>> re.split(r'(\\W+)', '...words, words...')\n"
+"['', '...', 'words', ', ', 'words', '...', '']"
+msgstr ""
 
 #: ../../library/re.rst:974
 msgid ""
@@ -1496,6 +1545,16 @@ msgid ""
 msgstr ""
 "Порожні збіги для шаблону розділяють рядок лише тоді, коли вони не суміжні з"
 " попереднім порожнім збігом."
+
+#: ../../library/re.rst:980
+msgid ""
+">>> re.split(r'\\b', 'Words, words, words.')\n"
+"['', 'Words', ', ', 'words', ', ', 'words', '.']\n"
+">>> re.split(r'\\W*', '...words...')\n"
+"['', '', 'w', 'o', 'r', 'd', 's', '', '']\n"
+">>> re.split(r'(\\W*)', '...words...')\n"
+"['', '...', '', '', 'w', '', 'o', '', 'r', '', 'd', '', 's', '...', '', '', '']"
+msgstr ""
 
 #: ../../library/re.rst:993 ../../library/re.rst:1101
 msgid "Added the optional flags argument."
@@ -1577,11 +1636,31 @@ msgstr ""
 "спокої. Зворотні посилання, такі як ``\\6``, замінюються підрядком, який "
 "відповідає групі 6 у шаблоні. Наприклад::"
 
+#: ../../library/re.rst:1059
+msgid ""
+">>> re.sub(r'def\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\s*\\(\\s*\\):',\n"
+"...        r'static PyObject*\\npy_\\1(void)\\n{',\n"
+"...        'def myfunc():')\n"
+"'static PyObject*\\npy_myfunc(void)\\n{'"
+msgstr ""
+
 #: ../../library/re.rst:1064
 msgid ""
 "If *repl* is a function, it is called for every non-overlapping occurrence "
 "of *pattern*.  The function takes a single :class:`~re.Match` argument, and "
 "returns the replacement string.  For example::"
+msgstr ""
+
+#: ../../library/re.rst:1068
+msgid ""
+">>> def dashrepl(matchobj):\n"
+"...     if matchobj.group(0) == '-': return ' '\n"
+"...     else: return '-'\n"
+"...\n"
+">>> re.sub('-{1,2}', dashrepl, 'pro----gram-files')\n"
+"'pro--gram files'\n"
+">>> re.sub(r'\\sAND\\s', ' & ', 'Baked Beans And Spam', flags=re.IGNORECASE)\n"
+"'Baked Beans & Spam'"
 msgstr ""
 
 #: ../../library/re.rst:1077
@@ -1675,6 +1754,20 @@ msgstr ""
 "зіставити довільний рядок літералу, який може містити метасимволи "
 "регулярного виразу. Наприклад::"
 
+#: ../../library/re.rst:1144
+msgid ""
+">>> print(re.escape('https://www.python.org'))\n"
+"https://www\\.python\\.org\n"
+"\n"
+">>> legal_chars = string.ascii_lowercase + string.digits + \"!#$%&'*+-.^_`|~:\"\n"
+">>> print('[%s]+' % re.escape(legal_chars))\n"
+"[abcdefghijklmnopqrstuvwxyz0123456789!\\#\\$%\\&'\\*\\+\\-\\.\\^_`\\|\\~:]+\n"
+"\n"
+">>> operators = ['+', '-', '*', '/', '**']\n"
+">>> print('|'.join(map(re.escape, sorted(operators, reverse=True))))\n"
+"/|\\-|\\+|\\*\\*|\\*"
+msgstr ""
+
 #: ../../library/re.rst:1155
 msgid ""
 "This function must not be used for the replacement string in :func:`sub` and"
@@ -1682,6 +1775,14 @@ msgid ""
 msgstr ""
 "Цю функцію не можна використовувати для рядка заміни в :func:`sub` і "
 ":func:`subn`, слід екранувати лише зворотні косі риски. Наприклад::"
+
+#: ../../library/re.rst:1158
+msgid ""
+">>> digits_re = r'\\d+'\n"
+">>> sample = '/usr/sbin/sendmail - 0 errors, 12 warnings'\n"
+">>> print(re.sub(digits_re, digits_re.replace('\\\\', r'\\\\'), sample))\n"
+"/usr/sbin/sendmail - \\d+ errors, \\d+ warnings"
+msgstr ""
 
 #: ../../library/re.rst:1163
 msgid "The ``'_'`` character is no longer escaped."
@@ -1799,6 +1900,14 @@ msgstr ""
 "скомпільованим об’єктом регулярного виразу, ``rx.search(string, 0, 50)`` "
 "еквівалентно ``rx.search(string[:50], 0)``. ::"
 
+#: ../../library/re.rst:1249
+msgid ""
+">>> pattern = re.compile(\"d\")\n"
+">>> pattern.search(\"dog\")     # Match at index 0\n"
+"<re.Match object; span=(0, 1), match='d'>\n"
+">>> pattern.search(\"dog\", 1)  # No match; search doesn't include the \"d\""
+msgstr ""
+
 #: ../../library/re.rst:1257
 msgid ""
 "If zero or more characters at the *beginning* of *string* match this regular"
@@ -1815,6 +1924,14 @@ msgstr ""
 "Необов’язкові параметри *pos* і *endpos* мають те саме значення, що й для "
 "методу :meth:`~Pattern.search`. ::"
 
+#: ../../library/re.rst:1265
+msgid ""
+">>> pattern = re.compile(\"o\")\n"
+">>> pattern.match(\"dog\")      # No match as \"o\" is not at the start of \"dog\".\n"
+">>> pattern.match(\"dog\", 1)   # Match as \"o\" is the 2nd character of \"dog\".\n"
+"<re.Match object; span=(1, 2), match='o'>"
+msgstr ""
+
 #: ../../library/re.rst:1270
 msgid ""
 "If you want to locate a match anywhere in *string*, use "
@@ -1828,6 +1945,15 @@ msgid ""
 "If the whole *string* matches this regular expression, return a "
 "corresponding :class:`~re.Match`.  Return ``None`` if the string does not "
 "match the pattern; note that this is different from a zero-length match."
+msgstr ""
+
+#: ../../library/re.rst:1283
+msgid ""
+">>> pattern = re.compile(\"o[gh]\")\n"
+">>> pattern.fullmatch(\"dog\")      # No match as \"o\" is not at the start of \"dog\".\n"
+">>> pattern.fullmatch(\"ogre\")     # No match as not the full string matches.\n"
+">>> pattern.fullmatch(\"doggie\", 1, 3)   # Matches within given limits.\n"
+"<re.Match object; span=(1, 3), match='og'>"
 msgstr ""
 
 #: ../../library/re.rst:1294
@@ -1912,6 +2038,13 @@ msgstr ""
 "відсутності збігу, ви можете перевірити, чи був збіг за допомогою простого "
 "оператора ``if``: :"
 
+#: ../../library/re.rst:1360
+msgid ""
+"match = re.search(pattern, string)\n"
+"if match:\n"
+"    process(match)"
+msgstr ""
+
 #: ../../library/re.rst:1366
 msgid "Match object returned by successful ``match``\\ es and ``search``\\ es."
 msgstr ""
@@ -1958,6 +2091,19 @@ msgstr ""
 "результатом є ``None``. Якщо група міститься в частині шаблону, яка "
 "збігалася кілька разів, повертається останній збіг. ::"
 
+#: ../../library/re.rst:1399
+msgid ""
+">>> m = re.match(r\"(\\w+) (\\w+)\", \"Isaac Newton, physicist\")\n"
+">>> m.group(0)       # The entire match\n"
+"'Isaac Newton'\n"
+">>> m.group(1)       # The first parenthesized subgroup.\n"
+"'Isaac'\n"
+">>> m.group(2)       # The second parenthesized subgroup.\n"
+"'Newton'\n"
+">>> m.group(1, 2)    # Multiple arguments give us a tuple.\n"
+"('Isaac', 'Newton')"
+msgstr ""
+
 #: ../../library/re.rst:1409
 msgid ""
 "If the regular expression uses the ``(?P<name>...)`` syntax, the *groupN* "
@@ -1974,14 +2120,38 @@ msgstr ""
 msgid "A moderately complicated example::"
 msgstr "Помірно складний приклад:"
 
+#: ../../library/re.rst:1416
+msgid ""
+">>> m = re.match(r\"(?P<first_name>\\w+) (?P<last_name>\\w+)\", \"Malcolm Reynolds\")\n"
+">>> m.group('first_name')\n"
+"'Malcolm'\n"
+">>> m.group('last_name')\n"
+"'Reynolds'"
+msgstr ""
+
 #: ../../library/re.rst:1422
 msgid "Named groups can also be referred to by their index::"
 msgstr "Іменовані групи також можна посилатися за їх індексом::"
+
+#: ../../library/re.rst:1424
+msgid ""
+">>> m.group(1)\n"
+"'Malcolm'\n"
+">>> m.group(2)\n"
+"'Reynolds'"
+msgstr ""
 
 #: ../../library/re.rst:1429
 msgid "If a group matches multiple times, only the last match is accessible::"
 msgstr ""
 "Якщо група збігається кілька разів, доступним буде лише останній збіг::"
+
+#: ../../library/re.rst:1431
+msgid ""
+">>> m = re.match(r\"(..)+\", \"a1b2c3\")  # Matches 3 times.\n"
+">>> m.group(1)                        # Returns only the last match.\n"
+"'c3'"
+msgstr ""
 
 #: ../../library/re.rst:1438
 msgid ""
@@ -1991,8 +2161,28 @@ msgstr ""
 "Це ідентично ``m.group(g)``. Це дозволяє легше отримати доступ до окремої "
 "групи з матчу::"
 
+#: ../../library/re.rst:1441
+msgid ""
+">>> m = re.match(r\"(\\w+) (\\w+)\", \"Isaac Newton, physicist\")\n"
+">>> m[0]       # The entire match\n"
+"'Isaac Newton'\n"
+">>> m[1]       # The first parenthesized subgroup.\n"
+"'Isaac'\n"
+">>> m[2]       # The second parenthesized subgroup.\n"
+"'Newton'"
+msgstr ""
+
 #: ../../library/re.rst:1449
 msgid "Named groups are supported as well::"
+msgstr ""
+
+#: ../../library/re.rst:1451
+msgid ""
+">>> m = re.match(r\"(?P<first_name>\\w+) (?P<last_name>\\w+)\", \"Isaac Newton\")\n"
+">>> m['first_name']\n"
+"'Isaac'\n"
+">>> m['last_name']\n"
+"'Newton'"
 msgstr ""
 
 #: ../../library/re.rst:1462
@@ -2009,6 +2199,13 @@ msgstr ""
 msgid "For example::"
 msgstr "Наприклад::"
 
+#: ../../library/re.rst:1468
+msgid ""
+">>> m = re.match(r\"(\\d+)\\.(\\d+)\", \"24.1632\")\n"
+">>> m.groups()\n"
+"('24', '1632')"
+msgstr ""
+
 #: ../../library/re.rst:1472
 msgid ""
 "If we make the decimal place and everything after it optional, not all "
@@ -2019,6 +2216,15 @@ msgstr ""
 "участь у матчі. Для цих груп за замовчуванням буде ``None``, якщо не вказано"
 " аргумент *default*::"
 
+#: ../../library/re.rst:1476
+msgid ""
+">>> m = re.match(r\"(\\d+)\\.?(\\d+)?\", \"24\")\n"
+">>> m.groups()      # Second group defaults to None.\n"
+"('24', None)\n"
+">>> m.groups('0')   # Now, the second group defaults to '0'.\n"
+"('24', '0')"
+msgstr ""
+
 #: ../../library/re.rst:1485
 msgid ""
 "Return a dictionary containing all the *named* subgroups of the match, keyed"
@@ -2028,6 +2234,13 @@ msgstr ""
 "Повертає словник, що містить усі *іменовані* підгрупи збігу, ключ яких "
 "містить назву підгрупи. Аргумент *default* використовується для груп, які не"
 " брали участі в матчі; за замовчуванням ``None``. Наприклад::"
+
+#: ../../library/re.rst:1489
+msgid ""
+">>> m = re.match(r\"(?P<first_name>\\w+) (?P<last_name>\\w+)\", \"Malcolm Reynolds\")\n"
+">>> m.groupdict()\n"
+"{'first_name': 'Malcolm', 'last_name': 'Reynolds'}"
+msgstr ""
 
 #: ../../library/re.rst:1497
 msgid ""
@@ -2042,6 +2255,10 @@ msgstr ""
 "підрядок). Повертає ``-1``, якщо *група* існує, але не брала участі в матчі."
 " Для об’єкта збігу *m* і групи *g*, яка внесла свій внесок у збіг, підрядок,"
 " який відповідає групі *g* (еквівалент ``m.group(g)``) є ::"
+
+#: ../../library/re.rst:1503
+msgid "m.string[m.start(g):m.end(g)]"
+msgstr ""
 
 #: ../../library/re.rst:1505
 msgid ""
@@ -2059,6 +2276,14 @@ msgstr ""
 #: ../../library/re.rst:1510
 msgid "An example that will remove *remove_this* from email addresses::"
 msgstr "Приклад видалення *remove_this* з електронних адрес::"
+
+#: ../../library/re.rst:1512
+msgid ""
+">>> email = \"tony@tiremove_thisger.net\"\n"
+">>> m = re.search(\"remove_this\", email)\n"
+">>> email[:m.start()] + email[m.end():]\n"
+"'tony@tiger.net'"
+msgstr ""
 
 #: ../../library/re.rst:1520
 msgid ""
@@ -2153,6 +2378,14 @@ msgstr ""
 "У цьому прикладі ми використаємо наступну допоміжну функцію, щоб відобразити"
 " об’єкти відповідності трохи витонченіше:"
 
+#: ../../library/re.rst:1582
+msgid ""
+"def displaymatch(match):\n"
+"    if match is None:\n"
+"        return None\n"
+"    return '<Match: %r, groups=%r>' % (match.group(), match.groups())"
+msgstr ""
+
 #: ../../library/re.rst:1587
 msgid ""
 "Suppose you are writing a poker program where a player's hand is represented"
@@ -2170,6 +2403,17 @@ msgid "To see if a given string is a valid hand, one could do the following::"
 msgstr ""
 "Щоб перевірити, чи даний рядок є правильною рукою, можна зробити наступне:"
 
+#: ../../library/re.rst:1594
+msgid ""
+">>> valid = re.compile(r\"^[a2-9tjqk]{5}$\")\n"
+">>> displaymatch(valid.match(\"akt5q\"))  # Valid.\n"
+"\"<Match: 'akt5q', groups=()>\"\n"
+">>> displaymatch(valid.match(\"akt5e\"))  # Invalid.\n"
+">>> displaymatch(valid.match(\"akt\"))    # Invalid.\n"
+">>> displaymatch(valid.match(\"727ak\"))  # Valid.\n"
+"\"<Match: '727ak', groups=()>\""
+msgstr ""
+
 #: ../../library/re.rst:1602
 msgid ""
 "That last hand, ``\"727ak\"``, contained a pair, or two of the same valued "
@@ -2180,6 +2424,16 @@ msgstr ""
 "значення. Щоб зіставити це з регулярним виразом, можна використовувати "
 "зворотні посилання як такі:"
 
+#: ../../library/re.rst:1605
+msgid ""
+">>> pair = re.compile(r\".*(.).*\\1\")\n"
+">>> displaymatch(pair.match(\"717ak\"))     # Pair of 7s.\n"
+"\"<Match: '717', groups=('7',)>\"\n"
+">>> displaymatch(pair.match(\"718ak\"))     # No pairs.\n"
+">>> displaymatch(pair.match(\"354aa\"))     # Pair of aces.\n"
+"\"<Match: '354aa', groups=('a',)>\""
+msgstr ""
+
 #: ../../library/re.rst:1612
 msgid ""
 "To find out what card the pair consists of, one could use the "
@@ -2187,6 +2441,23 @@ msgid ""
 msgstr ""
 "Щоб дізнатися, з якої карти складається пара, можна використати метод "
 ":meth:`~Match.group` об’єкта відповідності таким чином:"
+
+#: ../../library/re.rst:1615
+msgid ""
+">>> pair = re.compile(r\".*(.).*\\1\")\n"
+">>> pair.match(\"717ak\").group(1)\n"
+"'7'\n"
+"\n"
+"# Error because re.match() returns None, which doesn't have a group() method:\n"
+">>> pair.match(\"718ak\").group(1)\n"
+"Traceback (most recent call last):\n"
+"  File \"<pyshell#23>\", line 1, in <module>\n"
+"    re.match(r\".*(.).*\\1\", \"718ak\").group(1)\n"
+"AttributeError: 'NoneType' object has no attribute 'group'\n"
+"\n"
+">>> pair.match(\"354aa\").group(1)\n"
+"'a'"
+msgstr ""
 
 #: ../../library/re.rst:1631
 msgid "Simulating scanf()"
@@ -2281,13 +2552,25 @@ msgstr "``[-+]?(0[xX])?[\\dA-Fa-f]+``"
 msgid "To extract the filename and numbers from a string like ::"
 msgstr "Щоб витягти назву файлу та номери з рядка на зразок ::"
 
+#: ../../library/re.rst:1665
+msgid "/usr/sbin/sendmail - 0 errors, 4 warnings"
+msgstr ""
+
 #: ../../library/re.rst:1667
 msgid "you would use a :c:func:`!scanf` format like ::"
+msgstr ""
+
+#: ../../library/re.rst:1669
+msgid "%s - %d errors, %d warnings"
 msgstr ""
 
 #: ../../library/re.rst:1671
 msgid "The equivalent regular expression would be ::"
 msgstr "Еквівалентним регулярним виразом буде::"
+
+#: ../../library/re.rst:1673
+msgid "(\\S+) - (\\d+) errors, (\\d+) warnings"
+msgstr ""
 
 #: ../../library/re.rst:1679
 msgid "search() vs. match()"
@@ -2313,6 +2596,16 @@ msgstr ""
 msgid ":func:`re.fullmatch` checks for entire string to be a match"
 msgstr ""
 
+#: ../../library/re.rst:1693
+msgid ""
+">>> re.match(\"c\", \"abcdef\")    # No match\n"
+">>> re.search(\"c\", \"abcdef\")   # Match\n"
+"<re.Match object; span=(2, 3), match='c'>\n"
+">>> re.fullmatch(\"p.*n\", \"python\") # Match\n"
+"<re.Match object; span=(0, 6), match='python'>\n"
+">>> re.fullmatch(\"r.*n\", \"python\") # No match"
+msgstr ""
+
 #: ../../library/re.rst:1700
 msgid ""
 "Regular expressions beginning with ``'^'`` can be used with :func:`search` "
@@ -2320,6 +2613,14 @@ msgid ""
 msgstr ""
 "Регулярні вирази, що починаються з ``'^'``, можна використовувати з "
 ":func:`search`, щоб обмежити збіг на початку рядка::"
+
+#: ../../library/re.rst:1703
+msgid ""
+">>> re.match(\"c\", \"abcdef\")    # No match\n"
+">>> re.search(\"^c\", \"abcdef\")  # No match\n"
+">>> re.search(\"^a\", \"abcdef\")  # Match\n"
+"<re.Match object; span=(0, 1), match='a'>"
+msgstr ""
 
 #: ../../library/re.rst:1708
 msgid ""
@@ -2331,6 +2632,13 @@ msgstr ""
 "Однак зауважте, що в режимі :const:`MULTILINE` :func:`match` збігається лише"
 " на початку рядка, тоді як використання :func:`search` із регулярним "
 "виразом, що починається з ``'^'`` збігається на початок кожного рядка. ::"
+
+#: ../../library/re.rst:1712
+msgid ""
+">>> re.match(\"X\", \"A\\nB\\nX\", re.MULTILINE)  # No match\n"
+">>> re.search(\"^X\", \"A\\nB\\nX\", re.MULTILINE)  # Match\n"
+"<re.Match object; span=(4, 5), match='X'>"
+msgstr ""
 
 #: ../../library/re.rst:1718
 msgid "Making a Phonebook"
@@ -2356,6 +2664,17 @@ msgstr ""
 "По-перше, ось вхідні дані. Зазвичай він може надходити з файлу, тут ми "
 "використовуємо синтаксис рядка в потрійних лапках"
 
+#: ../../library/re.rst:1728
+msgid ""
+">>> text = \"\"\"Ross McFluff: 834.345.1254 155 Elm Street\n"
+"...\n"
+"... Ronald Heathmore: 892.345.3428 436 Finley Avenue\n"
+"... Frank Burger: 925.541.7625 662 South Dogwood Way\n"
+"...\n"
+"...\n"
+"... Heather Albrecht: 548.326.4584 919 Park Place\"\"\""
+msgstr ""
+
 #: ../../library/re.rst:1738
 msgid ""
 "The entries are separated by one or more newlines. Now we convert the string"
@@ -2364,6 +2683,16 @@ msgstr ""
 "Записи розділені одним або кількома символами нового рядка. Тепер ми "
 "перетворюємо рядок на список, у якому кожен непорожній рядок має окремий "
 "запис:"
+
+#: ../../library/re.rst:1741
+msgid ""
+">>> entries = re.split(\"\\n+\", text)\n"
+">>> entries\n"
+"['Ross McFluff: 834.345.1254 155 Elm Street',\n"
+"'Ronald Heathmore: 892.345.3428 436 Finley Avenue',\n"
+"'Frank Burger: 925.541.7625 662 South Dogwood Way',\n"
+"'Heather Albrecht: 548.326.4584 919 Park Place']"
+msgstr ""
 
 #: ../../library/re.rst:1751
 msgid ""
@@ -2375,6 +2704,15 @@ msgstr ""
 "телефону та адресою. Ми використовуємо параметр ``maxsplit`` :func:`split`, "
 "тому що в адресі є пробіли, наш шаблон поділу:"
 
+#: ../../library/re.rst:1755
+msgid ""
+">>> [re.split(\":? \", entry, maxsplit=3) for entry in entries]\n"
+"[['Ross', 'McFluff', '834.345.1254', '155 Elm Street'],\n"
+"['Ronald', 'Heathmore', '892.345.3428', '436 Finley Avenue'],\n"
+"['Frank', 'Burger', '925.541.7625', '662 South Dogwood Way'],\n"
+"['Heather', 'Albrecht', '548.326.4584', '919 Park Place']]"
+msgstr ""
+
 #: ../../library/re.rst:1764
 msgid ""
 "The ``:?`` pattern matches the colon after the last name, so that it does "
@@ -2384,6 +2722,15 @@ msgstr ""
 "Шаблон ``:?`` відповідає двокрапці після прізвища, щоб він не зустрічався в "
 "списку результатів. За допомогою ``maxsplit`` ``4`` ми можемо відокремити "
 "номер будинку від назви вулиці:"
+
+#: ../../library/re.rst:1768
+msgid ""
+">>> [re.split(\":? \", entry, maxsplit=4) for entry in entries]\n"
+"[['Ross', 'McFluff', '834.345.1254', '155', 'Elm Street'],\n"
+"['Ronald', 'Heathmore', '892.345.3428', '436', 'Finley Avenue'],\n"
+"['Frank', 'Burger', '925.541.7625', '662', 'South Dogwood Way'],\n"
+"['Heather', 'Albrecht', '548.326.4584', '919', 'Park Place']]"
+msgstr ""
 
 #: ../../library/re.rst:1779
 msgid "Text Munging"
@@ -2401,6 +2748,20 @@ msgstr ""
 "\"переміщення\" тексту або випадкового порядку всіх символів у кожному слові"
 " речення, за винятком першого та останнього символів::"
 
+#: ../../library/re.rst:1786
+msgid ""
+">>> def repl(m):\n"
+"...     inner_word = list(m.group(2))\n"
+"...     random.shuffle(inner_word)\n"
+"...     return m.group(1) + \"\".join(inner_word) + m.group(3)\n"
+"...\n"
+">>> text = \"Professor Abdolmalek, please report your absences promptly.\"\n"
+">>> re.sub(r\"(\\w)(\\w+)(\\w)\", repl, text)\n"
+"'Poefsrosr Aealmlobdk, pslaee reorpt your abnseces plmrptoy.'\n"
+">>> re.sub(r\"(\\w)(\\w+)(\\w)\", repl, text)\n"
+"'Pofsroser Aodlambelk, plasee reoprt yuor asnebces potlmrpy.'"
+msgstr ""
+
 #: ../../library/re.rst:1799
 msgid "Finding all Adverbs"
 msgstr "Знайти всі прислівники"
@@ -2416,6 +2777,13 @@ msgstr ""
 "це робить :func:`search`. Наприклад, якщо автор хоче знайти всі прислівники "
 "в якомусь тексті, він може використати :func:`findall` у такий спосіб:"
 
+#: ../../library/re.rst:1806
+msgid ""
+">>> text = \"He was carefully disguised but captured quickly by police.\"\n"
+">>> re.findall(r\"\\w+ly\\b\", text)\n"
+"['carefully', 'quickly']"
+msgstr ""
+
 #: ../../library/re.rst:1812
 msgid "Finding all Adverbs and their Positions"
 msgstr "Знайти всі прислівники та їх позиції"
@@ -2427,6 +2795,15 @@ msgid ""
 "objects instead of strings.  Continuing with the previous example, if a "
 "writer wanted to find all of the adverbs *and their positions* in some text,"
 " they would use :func:`finditer` in the following manner::"
+msgstr ""
+
+#: ../../library/re.rst:1820
+msgid ""
+">>> text = \"He was carefully disguised but captured quickly by police.\"\n"
+">>> for m in re.finditer(r\"\\w+ly\\b\", text):\n"
+"...     print('%02d-%02d: %s' % (m.start(), m.end(), m.group(0)))\n"
+"07-16: carefully\n"
+"40-47: quickly"
 msgstr ""
 
 #: ../../library/re.rst:1828
@@ -2445,6 +2822,14 @@ msgstr ""
 "повинен був би мати префікс іншим, щоб уникнути його. Наприклад, два "
 "наступних рядки коду функціонально ідентичні:"
 
+#: ../../library/re.rst:1835
+msgid ""
+">>> re.match(r\"\\W(.)\\1\\W\", \" ff \")\n"
+"<re.Match object; span=(0, 4), match=' ff '>\n"
+">>> re.match(\"\\\\W(.)\\\\1\\\\W\", \" ff \")\n"
+"<re.Match object; span=(0, 4), match=' ff '>"
+msgstr ""
+
 #: ../../library/re.rst:1840
 msgid ""
 "When one wants to match a literal backslash, it must be escaped in the "
@@ -2456,6 +2841,14 @@ msgstr ""
 " у регулярному виразі. У необробленому рядковому записі це означає "
 "``r\"\\\\\"``. Без нотації необробленого рядка потрібно використовувати "
 "``\"\\\\\\\\\"``, роблячи наступні рядки коду функціонально ідентичними::"
+
+#: ../../library/re.rst:1845
+msgid ""
+">>> re.match(r\"\\\\\", r\"\\\\\")\n"
+"<re.Match object; span=(0, 1), match='\\\\'>\n"
+">>> re.match(\"\\\\\\\\\", r\"\\\\\")\n"
+"<re.Match object; span=(0, 1), match='\\\\'>"
+msgstr ""
 
 #: ../../library/re.rst:1852
 msgid "Writing a Tokenizer"
@@ -2481,9 +2874,87 @@ msgstr ""
 "щоб об’єднати їх у єдиний основний регулярний вираз і виконати цикл "
 "послідовних збігів:"
 
+#: ../../library/re.rst:1862
+msgid ""
+"from typing import NamedTuple\n"
+"import re\n"
+"\n"
+"class Token(NamedTuple):\n"
+"    type: str\n"
+"    value: str\n"
+"    line: int\n"
+"    column: int\n"
+"\n"
+"def tokenize(code):\n"
+"    keywords = {'IF', 'THEN', 'ENDIF', 'FOR', 'NEXT', 'GOSUB', 'RETURN'}\n"
+"    token_specification = [\n"
+"        ('NUMBER',   r'\\d+(\\.\\d*)?'),  # Integer or decimal number\n"
+"        ('ASSIGN',   r':='),           # Assignment operator\n"
+"        ('END',      r';'),            # Statement terminator\n"
+"        ('ID',       r'[A-Za-z]+'),    # Identifiers\n"
+"        ('OP',       r'[+\\-*/]'),      # Arithmetic operators\n"
+"        ('NEWLINE',  r'\\n'),           # Line endings\n"
+"        ('SKIP',     r'[ \\t]+'),       # Skip over spaces and tabs\n"
+"        ('MISMATCH', r'.'),            # Any other character\n"
+"    ]\n"
+"    tok_regex = '|'.join('(?P<%s>%s)' % pair for pair in token_specification)\n"
+"    line_num = 1\n"
+"    line_start = 0\n"
+"    for mo in re.finditer(tok_regex, code):\n"
+"        kind = mo.lastgroup\n"
+"        value = mo.group()\n"
+"        column = mo.start() - line_start\n"
+"        if kind == 'NUMBER':\n"
+"            value = float(value) if '.' in value else int(value)\n"
+"        elif kind == 'ID' and value in keywords:\n"
+"            kind = value\n"
+"        elif kind == 'NEWLINE':\n"
+"            line_start = mo.end()\n"
+"            line_num += 1\n"
+"            continue\n"
+"        elif kind == 'SKIP':\n"
+"            continue\n"
+"        elif kind == 'MISMATCH':\n"
+"            raise RuntimeError(f'{value!r} unexpected on line {line_num}')\n"
+"        yield Token(kind, value, line_num, column)\n"
+"\n"
+"statements = '''\n"
+"    IF quantity THEN\n"
+"        total := total + price * quantity;\n"
+"        tax := price * 0.05;\n"
+"    ENDIF;\n"
+"'''\n"
+"\n"
+"for token in tokenize(statements):\n"
+"    print(token)"
+msgstr ""
+
 #: ../../library/re.rst:1914
 msgid "The tokenizer produces the following output::"
 msgstr "Токенізатор видає такий вихід:"
+
+#: ../../library/re.rst:1916
+msgid ""
+"Token(type='IF', value='IF', line=2, column=4)\n"
+"Token(type='ID', value='quantity', line=2, column=7)\n"
+"Token(type='THEN', value='THEN', line=2, column=16)\n"
+"Token(type='ID', value='total', line=3, column=8)\n"
+"Token(type='ASSIGN', value=':=', line=3, column=14)\n"
+"Token(type='ID', value='total', line=3, column=17)\n"
+"Token(type='OP', value='+', line=3, column=23)\n"
+"Token(type='ID', value='price', line=3, column=25)\n"
+"Token(type='OP', value='*', line=3, column=31)\n"
+"Token(type='ID', value='quantity', line=3, column=33)\n"
+"Token(type='END', value=';', line=3, column=41)\n"
+"Token(type='ID', value='tax', line=4, column=8)\n"
+"Token(type='ASSIGN', value=':=', line=4, column=12)\n"
+"Token(type='ID', value='price', line=4, column=15)\n"
+"Token(type='OP', value='*', line=4, column=21)\n"
+"Token(type='NUMBER', value=0.05, line=4, column=23)\n"
+"Token(type='END', value=';', line=4, column=27)\n"
+"Token(type='ENDIF', value='ENDIF', line=5, column=4)\n"
+"Token(type='END', value=';', line=5, column=9)"
+msgstr ""
 
 #: ../../library/re.rst:1937
 msgid ""
