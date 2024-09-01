@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-09 16:36+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 00:57+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -107,8 +107,30 @@ msgstr ""
 "Абстрактним прикладом може бути наступне, щоб забезпечити правильне "
 "керування ресурсами:"
 
+#: ../../library/contextlib.rst:57
+msgid ""
+"from contextlib import contextmanager\n"
+"\n"
+"@contextmanager\n"
+"def managed_resource(*args, **kwds):\n"
+"    # Code to acquire resource, e.g.:\n"
+"    resource = acquire_resource(*args, **kwds)\n"
+"    try:\n"
+"        yield resource\n"
+"    finally:\n"
+"        # Code to release resource, e.g.:\n"
+"        release_resource(resource)"
+msgstr ""
+
 #: ../../library/contextlib.rst:69
 msgid "The function can then be used like this::"
+msgstr ""
+
+#: ../../library/contextlib.rst:71
+msgid ""
+">>> with managed_resource(timeout=3600) as resource:\n"
+"...     # Resource is released at the end of this block,\n"
+"...     # even if code in the block raises an exception"
 msgstr ""
 
 #: ../../library/contextlib.rst:75
@@ -193,6 +215,23 @@ msgstr ""
 msgid "A simple example::"
 msgstr "Простий приклад::"
 
+#: ../../library/contextlib.rst:115
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def get_connection():\n"
+"    conn = await acquire_db_connection()\n"
+"    try:\n"
+"        yield conn\n"
+"    finally:\n"
+"        await release_db_connection(conn)\n"
+"\n"
+"async def get_all_users():\n"
+"    async with get_connection() as conn:\n"
+"        return conn.query('SELECT ...')"
+msgstr ""
+
 #: ../../library/contextlib.rst:131
 msgid ""
 "Context managers defined with :func:`asynccontextmanager` can be used either"
@@ -201,6 +240,24 @@ msgstr ""
 "Менеджери контексту, визначені за допомогою :func:`asynccontextmanager`, "
 "можна використовувати як декоратори або за допомогою операторів "
 ":keyword:`async with`::"
+
+#: ../../library/contextlib.rst:134
+msgid ""
+"import time\n"
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def timeit():\n"
+"    now = time.monotonic()\n"
+"    try:\n"
+"        yield\n"
+"    finally:\n"
+"        print(f'it took {time.monotonic() - now}s to run')\n"
+"\n"
+"@timeit()\n"
+"async def main():\n"
+"    # ... async code ..."
+msgstr ""
 
 #: ../../library/contextlib.rst:149
 msgid ""
@@ -231,9 +288,31 @@ msgstr ""
 "Повертає контекстний менеджер, який закриває *річ* після завершення блоку. "
 "Це в основному еквівалентно:"
 
+#: ../../library/contextlib.rst:164
+msgid ""
+"from contextlib import contextmanager\n"
+"\n"
+"@contextmanager\n"
+"def closing(thing):\n"
+"    try:\n"
+"        yield thing\n"
+"    finally:\n"
+"        thing.close()"
+msgstr ""
+
 #: ../../library/contextlib.rst:173
 msgid "And lets you write code like this::"
 msgstr "І дозволяє писати такий код::"
+
+#: ../../library/contextlib.rst:175
+msgid ""
+"from contextlib import closing\n"
+"from urllib.request import urlopen\n"
+"\n"
+"with closing(urlopen('https://www.python.org')) as page:\n"
+"    for line in page:\n"
+"        print(line)"
+msgstr ""
 
 #: ../../library/contextlib.rst:182
 msgid ""
@@ -261,6 +340,18 @@ msgstr ""
 "Повертає менеджер асинхронного контексту, який викликає метод ``aclose()`` "
 "*thing* після завершення блоку. Це в основному еквівалентно:"
 
+#: ../../library/contextlib.rst:199
+msgid ""
+"from contextlib import asynccontextmanager\n"
+"\n"
+"@asynccontextmanager\n"
+"async def aclosing(thing):\n"
+"    try:\n"
+"        yield thing\n"
+"    finally:\n"
+"        await thing.aclose()"
+msgstr ""
+
 #: ../../library/contextlib.rst:208
 msgid ""
 "Significantly, ``aclosing()`` supports deterministic cleanup of async "
@@ -270,6 +361,16 @@ msgstr ""
 "Важливо, що ``aclosing()`` підтримує детерміноване очищення асинхронних "
 "генераторів, коли вони виходять раніше через :keyword:`break` або виняток. "
 "Наприклад::"
+
+#: ../../library/contextlib.rst:212
+msgid ""
+"from contextlib import aclosing\n"
+"\n"
+"async with aclosing(my_generator()) as values:\n"
+"    async for value in values:\n"
+"        if value == 42:\n"
+"            break"
+msgstr ""
 
 #: ../../library/contextlib.rst:219
 msgid ""
@@ -293,9 +394,36 @@ msgstr ""
 "``__enter__``, але в іншому випадку нічого не робить. Він призначений для "
 "використання як резервний для додаткового контекстного менеджера, наприклад:"
 
+#: ../../library/contextlib.rst:235
+msgid ""
+"def myfunction(arg, ignore_exceptions=False):\n"
+"    if ignore_exceptions:\n"
+"        # Use suppress to ignore all exceptions.\n"
+"        cm = contextlib.suppress(Exception)\n"
+"    else:\n"
+"        # Do not ignore any exceptions, cm has no effect.\n"
+"        cm = contextlib.nullcontext()\n"
+"    with cm:\n"
+"        # Do something"
+msgstr ""
+
 #: ../../library/contextlib.rst:245
 msgid "An example using *enter_result*::"
 msgstr "Приклад використання *enter_result*::"
+
+#: ../../library/contextlib.rst:247
+msgid ""
+"def process_file(file_or_path):\n"
+"    if isinstance(file_or_path, str):\n"
+"        # If string, open file\n"
+"        cm = open(file_or_path)\n"
+"    else:\n"
+"        # Caller is responsible for closing file\n"
+"        cm = nullcontext(file_or_path)\n"
+"\n"
+"    with cm as file:\n"
+"        # Perform processing on the file"
+msgstr ""
 
 #: ../../library/contextlib.rst:258
 msgid ""
@@ -304,6 +432,20 @@ msgid ""
 msgstr ""
 "Його також можна використовувати як заміну для :ref:`асинхронних контекстних"
 " менеджерів <async-context-managers>`::"
+
+#: ../../library/contextlib.rst:261
+msgid ""
+"async def send_http(session=None):\n"
+"    if not session:\n"
+"        # If no http session, create it with aiohttp\n"
+"        cm = aiohttp.ClientSession()\n"
+"    else:\n"
+"        # Caller is responsible for closing the session\n"
+"        cm = nullcontext(session)\n"
+"\n"
+"    async with cm as session:\n"
+"        # Send http requests with session"
+msgstr ""
 
 #: ../../library/contextlib.rst:274
 msgid ":term:`asynchronous context manager` support was added."
@@ -336,9 +478,33 @@ msgstr ""
 msgid "For example::"
 msgstr "Наприклад::"
 
+#: ../../library/contextlib.rst:293
+msgid ""
+"from contextlib import suppress\n"
+"\n"
+"with suppress(FileNotFoundError):\n"
+"    os.remove('somefile.tmp')\n"
+"\n"
+"with suppress(FileNotFoundError):\n"
+"    os.remove('someotherfile.tmp')"
+msgstr ""
+
 #: ../../library/contextlib.rst:301
 msgid "This code is equivalent to::"
 msgstr "Цей код еквівалентний:"
+
+#: ../../library/contextlib.rst:303
+msgid ""
+"try:\n"
+"    os.remove('somefile.tmp')\n"
+"except FileNotFoundError:\n"
+"    pass\n"
+"\n"
+"try:\n"
+"    os.remove('someotherfile.tmp')\n"
+"except FileNotFoundError:\n"
+"    pass"
+msgstr ""
 
 #: ../../library/contextlib.rst:313 ../../library/contextlib.rst:362
 #: ../../library/contextlib.rst:372 ../../library/contextlib.rst:389
@@ -389,6 +555,13 @@ msgstr ""
 ":class:`io.StringIO`. Потік заміни повертається з методу ``__enter__`` і "
 "тому доступний як ціль оператора :keyword:`with`::"
 
+#: ../../library/contextlib.rst:341
+msgid ""
+"with redirect_stdout(io.StringIO()) as f:\n"
+"    help(pow)\n"
+"s = f.getvalue()"
+msgstr ""
+
 #: ../../library/contextlib.rst:345
 msgid ""
 "To send the output of :func:`help` to a file on disk, redirect the output to"
@@ -397,9 +570,22 @@ msgstr ""
 "Щоб надіслати вивід :func:`help` у файл на диску, перенаправте вивід у "
 "звичайний файл::"
 
+#: ../../library/contextlib.rst:348
+msgid ""
+"with open('help.txt', 'w') as f:\n"
+"    with redirect_stdout(f):\n"
+"        help(pow)"
+msgstr ""
+
 #: ../../library/contextlib.rst:352
 msgid "To send the output of :func:`help` to *sys.stderr*::"
 msgstr "Щоб надіслати результат :func:`help` до *sys.stderr*::"
+
+#: ../../library/contextlib.rst:354
+msgid ""
+"with redirect_stdout(sys.stderr):\n"
+"    help(pow)"
+msgstr ""
 
 #: ../../library/contextlib.rst:357
 msgid ""
@@ -467,8 +653,41 @@ msgstr ""
 msgid "Example of ``ContextDecorator``::"
 msgstr "Приклад ``ContextDecorator``::"
 
+#: ../../library/contextlib.rst:407
+msgid ""
+"from contextlib import ContextDecorator\n"
+"\n"
+"class mycontext(ContextDecorator):\n"
+"    def __enter__(self):\n"
+"        print('Starting')\n"
+"        return self\n"
+"\n"
+"    def __exit__(self, *exc):\n"
+"        print('Finishing')\n"
+"        return False"
+msgstr ""
+
 #: ../../library/contextlib.rst:418 ../../library/contextlib.rst:490
 msgid "The class can then be used like this::"
+msgstr ""
+
+#: ../../library/contextlib.rst:420
+msgid ""
+">>> @mycontext()\n"
+"... def function():\n"
+"...     print('The bit in the middle')\n"
+"...\n"
+">>> function()\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing\n"
+"\n"
+">>> with mycontext():\n"
+"...     print('The bit in the middle')\n"
+"...\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing"
 msgstr ""
 
 #: ../../library/contextlib.rst:436
@@ -479,9 +698,23 @@ msgstr ""
 "Ця зміна є просто синтаксичним цукром для будь-якої конструкції наступної "
 "форми::"
 
+#: ../../library/contextlib.rst:438
+msgid ""
+"def f():\n"
+"    with cm():\n"
+"        # Do stuff"
+msgstr ""
+
 #: ../../library/contextlib.rst:442
 msgid "``ContextDecorator`` lets you instead write::"
 msgstr "``ContextDecorator`` дозволяє замість цього писати::"
+
+#: ../../library/contextlib.rst:444
+msgid ""
+"@cm()\n"
+"def f():\n"
+"    # Do stuff"
+msgstr ""
 
 #: ../../library/contextlib.rst:448
 msgid ""
@@ -498,6 +731,18 @@ msgid ""
 msgstr ""
 "Існуючі контекстні менеджери, які вже мають базовий клас, можна розширити за"
 " допомогою ``ContextDecorator`` як класу mixin::"
+
+#: ../../library/contextlib.rst:454
+msgid ""
+"from contextlib import ContextDecorator\n"
+"\n"
+"class mycontext(ContextBaseClass, ContextDecorator):\n"
+"    def __enter__(self):\n"
+"        return self\n"
+"\n"
+"    def __exit__(self, *exc):\n"
+"        return False"
+msgstr ""
 
 #: ../../library/contextlib.rst:464
 msgid ""
@@ -522,6 +767,42 @@ msgstr ""
 msgid "Example of ``AsyncContextDecorator``::"
 msgstr "Приклад ``AsyncContextDecorator``::"
 
+#: ../../library/contextlib.rst:478
+msgid ""
+"from asyncio import run\n"
+"from contextlib import AsyncContextDecorator\n"
+"\n"
+"class mycontext(AsyncContextDecorator):\n"
+"    async def __aenter__(self):\n"
+"        print('Starting')\n"
+"        return self\n"
+"\n"
+"    async def __aexit__(self, *exc):\n"
+"        print('Finishing')\n"
+"        return False"
+msgstr ""
+
+#: ../../library/contextlib.rst:492
+msgid ""
+">>> @mycontext()\n"
+"... async def function():\n"
+"...     print('The bit in the middle')\n"
+"...\n"
+">>> run(function())\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing\n"
+"\n"
+">>> async def function():\n"
+"...    async with mycontext():\n"
+"...         print('The bit in the middle')\n"
+"...\n"
+">>> run(function())\n"
+"Starting\n"
+"The bit in the middle\n"
+"Finishing"
+msgstr ""
+
 #: ../../library/contextlib.rst:515
 msgid ""
 "A context manager that is designed to make it easy to programmatically "
@@ -539,6 +820,15 @@ msgid ""
 msgstr ""
 "Наприклад, набір файлів можна легко обробити в одному операторі with "
 "наступним чином:"
+
+#: ../../library/contextlib.rst:522
+msgid ""
+"with ExitStack() as stack:\n"
+"    files = [stack.enter_context(open(fname)) for fname in filenames]\n"
+"    # All opened files will automatically be closed at the end of\n"
+"    # the with statement, even if attempts to open files later\n"
+"    # in the list raise an exception"
+msgstr ""
 
 #: ../../library/contextlib.rst:528
 msgid ""
@@ -698,6 +988,18 @@ msgstr ""
 "Наприклад, групу файлів можна відкрити за допомогою операції \"все або "
 "нічого\" наступним чином:"
 
+#: ../../library/contextlib.rst:606
+msgid ""
+"with ExitStack() as stack:\n"
+"    files = [stack.enter_context(open(fname)) for fname in filenames]\n"
+"    # Hold onto the close method, but don't call it yet.\n"
+"    close_files = stack.pop_all().close\n"
+"    # If opening any file fails, all previously opened files will be\n"
+"    # closed automatically. If all files are opened successfully,\n"
+"    # they will remain open even after the with statement ends.\n"
+"    # close_files() can then be invoked explicitly to close them all."
+msgstr ""
+
 #: ../../library/contextlib.rst:617
 msgid ""
 "Immediately unwinds the callback stack, invoking callbacks in the reverse "
@@ -758,6 +1060,16 @@ msgstr ""
 msgid "Continuing the example for :func:`asynccontextmanager`::"
 msgstr "Продовжуємо приклад для :func:`asynccontextmanager`::"
 
+#: ../../library/contextlib.rst:656
+msgid ""
+"async with AsyncExitStack() as stack:\n"
+"    connections = [await stack.enter_async_context(get_connection())\n"
+"        for i in range(5)]\n"
+"    # All opened connections will automatically be released at the end of\n"
+"    # the async with statement, even if attempts to open a connection\n"
+"    # later in the list raise an exception."
+msgstr ""
+
 #: ../../library/contextlib.rst:666
 msgid "Examples and Recipes"
 msgstr "Приклади та рецепти"
@@ -790,6 +1102,17 @@ msgstr ""
 " введенням користувача (наприклад, відкриття вказаної користувачем колекції "
 "файлів), або через те, що деякі менеджери контексту є необов’язковими:"
 
+#: ../../library/contextlib.rst:682
+msgid ""
+"with ExitStack() as stack:\n"
+"    for resource in resources:\n"
+"        stack.enter_context(resource)\n"
+"    if need_special_resource():\n"
+"        special = acquire_special_resource()\n"
+"        stack.callback(release_special_resource, special)\n"
+"    # Perform operations that use the acquired resources"
+msgstr ""
+
 #: ../../library/contextlib.rst:690
 msgid ""
 "As shown, :class:`ExitStack` also makes it quite easy to use :keyword:`with`"
@@ -817,6 +1140,18 @@ msgstr ""
 "або методу ``__exit__`` контекстного менеджера. За допомогою "
 ":class:`ExitStack` кроки в протоколі керування контекстом можна трохи "
 "розділити, щоб дозволити це:"
+
+#: ../../library/contextlib.rst:704
+msgid ""
+"stack = ExitStack()\n"
+"try:\n"
+"    x = stack.enter_context(cm)\n"
+"except Exception:\n"
+"    # handle __enter__ exception\n"
+"else:\n"
+"    with stack:\n"
+"        # Handle normal case"
+msgstr ""
 
 #: ../../library/contextlib.rst:713
 msgid ""
@@ -857,6 +1192,43 @@ msgstr ""
 " отримання та звільнення ресурсів разом із додатковою функцією перевірки та "
 "відображає їх у протоколі керування контекстом::"
 
+#: ../../library/contextlib.rst:733
+msgid ""
+"from contextlib import contextmanager, AbstractContextManager, ExitStack\n"
+"\n"
+"class ResourceManager(AbstractContextManager):\n"
+"\n"
+"    def __init__(self, acquire_resource, release_resource, check_resource_ok=None):\n"
+"        self.acquire_resource = acquire_resource\n"
+"        self.release_resource = release_resource\n"
+"        if check_resource_ok is None:\n"
+"            def check_resource_ok(resource):\n"
+"                return True\n"
+"        self.check_resource_ok = check_resource_ok\n"
+"\n"
+"    @contextmanager\n"
+"    def _cleanup_on_error(self):\n"
+"        with ExitStack() as stack:\n"
+"            stack.push(self)\n"
+"            yield\n"
+"            # The validation check passed and didn't raise an exception\n"
+"            # Accordingly, we want to keep the resource, and pass it\n"
+"            # back to our caller\n"
+"            stack.pop_all()\n"
+"\n"
+"    def __enter__(self):\n"
+"        resource = self.acquire_resource()\n"
+"        with self._cleanup_on_error():\n"
+"            if not self.check_resource_ok(resource):\n"
+"                msg = \"Failed validation for {!r}\"\n"
+"                raise RuntimeError(msg.format(resource))\n"
+"        return resource\n"
+"\n"
+"    def __exit__(self, *exc_details):\n"
+"        # We don't need to duplicate any of our resource release logic\n"
+"        self.release_resource()"
+msgstr ""
+
 #: ../../library/contextlib.rst:769
 msgid "Replacing any use of ``try-finally`` and flag variables"
 msgstr "Заміна будь-якого використання змінних ``try-finally`` і прапорців"
@@ -872,6 +1244,18 @@ msgstr ""
 "прапором, яка вказує, чи має бути виконано тіло пропозиції ``finally``. У "
 "своїй найпростішій формі (з якою вже не можна впоратися лише за допомогою "
 "пропозиції ``except``), це виглядає приблизно так:"
+
+#: ../../library/contextlib.rst:776
+msgid ""
+"cleanup_needed = True\n"
+"try:\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        cleanup_needed = False\n"
+"finally:\n"
+"    if cleanup_needed:\n"
+"        cleanup_resources()"
+msgstr ""
 
 #: ../../library/contextlib.rst:785
 msgid ""
@@ -893,6 +1277,17 @@ msgstr ""
 "для виконання в кінці оператора ``with``, а потім вирішити пропустити "
 "виконання цього зворотного виклику::"
 
+#: ../../library/contextlib.rst:793
+msgid ""
+"from contextlib import ExitStack\n"
+"\n"
+"with ExitStack() as stack:\n"
+"    stack.callback(cleanup_resources)\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        stack.pop_all()"
+msgstr ""
+
 #: ../../library/contextlib.rst:801
 msgid ""
 "This allows the intended cleanup behaviour to be made explicit up front, "
@@ -907,6 +1302,24 @@ msgstr ""
 "Якщо певна програма часто використовує цей шаблон, його можна ще більше "
 "спростити за допомогою невеликого допоміжного класу:"
 
+#: ../../library/contextlib.rst:807
+msgid ""
+"from contextlib import ExitStack\n"
+"\n"
+"class Callback(ExitStack):\n"
+"    def __init__(self, callback, /, *args, **kwds):\n"
+"        super().__init__()\n"
+"        self.callback(callback, *args, **kwds)\n"
+"\n"
+"    def cancel(self):\n"
+"        self.pop_all()\n"
+"\n"
+"with Callback(cleanup_resources) as cb:\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        cb.cancel()"
+msgstr ""
+
 #: ../../library/contextlib.rst:822
 msgid ""
 "If the resource cleanup isn't already neatly bundled into a standalone "
@@ -916,6 +1329,19 @@ msgstr ""
 "Якщо очищення ресурсу ще не акуратно об’єднано в окрему функцію, то все ще "
 "можна використовувати форму декоратора :meth:`ExitStack.callback`, щоб "
 "оголосити очищення ресурсу заздалегідь::"
+
+#: ../../library/contextlib.rst:827
+msgid ""
+"from contextlib import ExitStack\n"
+"\n"
+"with ExitStack() as stack:\n"
+"    @stack.callback\n"
+"    def cleanup_resources():\n"
+"        ...\n"
+"    result = perform_operation()\n"
+"    if result:\n"
+"        stack.pop_all()"
+msgstr ""
 
 #: ../../library/contextlib.rst:837
 msgid ""
@@ -954,13 +1380,46 @@ msgstr ""
 "успадкування від :class:`ContextDecorator` надає обидві можливості в одному "
 "визначенні::"
 
+#: ../../library/contextlib.rst:854
+msgid ""
+"from contextlib import ContextDecorator\n"
+"import logging\n"
+"\n"
+"logging.basicConfig(level=logging.INFO)\n"
+"\n"
+"class track_entry_and_exit(ContextDecorator):\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"\n"
+"    def __enter__(self):\n"
+"        logging.info('Entering: %s', self.name)\n"
+"\n"
+"    def __exit__(self, exc_type, exc, exc_tb):\n"
+"        logging.info('Exiting: %s', self.name)"
+msgstr ""
+
 #: ../../library/contextlib.rst:869
 msgid "Instances of this class can be used as both a context manager::"
 msgstr "Екземпляри цього класу можна використовувати і як менеджер контексту:"
 
+#: ../../library/contextlib.rst:871
+msgid ""
+"with track_entry_and_exit('widget loader'):\n"
+"    print('Some time consuming activity goes here')\n"
+"    load_widget()"
+msgstr ""
+
 #: ../../library/contextlib.rst:875
 msgid "And also as a function decorator::"
 msgstr "А також як декоратор функцій::"
+
+#: ../../library/contextlib.rst:877
+msgid ""
+"@track_entry_and_exit('widget loader')\n"
+"def activity():\n"
+"    print('Some time consuming activity goes here')\n"
+"    load_widget()"
+msgstr ""
 
 #: ../../library/contextlib.rst:882
 msgid ""
@@ -1030,6 +1489,29 @@ msgstr ""
 "одноразовими менеджерами контексту, і вони скаржаться на те, що базовий "
 "генератор не працює, якщо буде зроблена спроба використати їх вдруге:"
 
+#: ../../library/contextlib.rst:916
+msgid ""
+">>> from contextlib import contextmanager\n"
+">>> @contextmanager\n"
+"... def singleuse():\n"
+"...     print(\"Before\")\n"
+"...     yield\n"
+"...     print(\"After\")\n"
+"...\n"
+">>> cm = singleuse()\n"
+">>> with cm:\n"
+"...     pass\n"
+"...\n"
+"Before\n"
+"After\n"
+">>> with cm:\n"
+"...     pass\n"
+"...\n"
+"Traceback (most recent call last):\n"
+"    ...\n"
+"RuntimeError: generator didn't yield"
+msgstr ""
+
 #: ../../library/contextlib.rst:940
 msgid "Reentrant context managers"
 msgstr "Реентерабельні контекстні менеджери"
@@ -1051,6 +1533,24 @@ msgid ""
 ":class:`threading.RLock` is an example of a reentrant context manager, as "
 "are :func:`suppress`, :func:`redirect_stdout`, and :func:`chdir`. Here's a "
 "very simple example of reentrant use::"
+msgstr ""
+
+#: ../../library/contextlib.rst:951
+msgid ""
+">>> from contextlib import redirect_stdout\n"
+">>> from io import StringIO\n"
+">>> stream = StringIO()\n"
+">>> write_to_stream = redirect_stdout(stream)\n"
+">>> with write_to_stream:\n"
+"...     print(\"This is written to the stream rather than stdout\")\n"
+"...     with write_to_stream:\n"
+"...         print(\"This is also written to the stream\")\n"
+"...\n"
+">>> print(\"This is written directly to stdout\")\n"
+"This is written directly to stdout\n"
+">>> print(stream.getvalue())\n"
+"This is written to the stream rather than stdout\n"
+"This is also written to the stream"
 msgstr ""
 
 #: ../../library/contextlib.rst:966
@@ -1117,6 +1617,35 @@ msgstr ""
 "зареєстровані наразі зворотні виклики, коли залишає будь-який оператор with,"
 " незалежно від того, де ці зворотні виклики було додано::"
 
+#: ../../library/contextlib.rst:997
+msgid ""
+">>> from contextlib import ExitStack\n"
+">>> stack = ExitStack()\n"
+">>> with stack:\n"
+"...     stack.callback(print, \"Callback: from first context\")\n"
+"...     print(\"Leaving first context\")\n"
+"...\n"
+"Leaving first context\n"
+"Callback: from first context\n"
+">>> with stack:\n"
+"...     stack.callback(print, \"Callback: from second context\")\n"
+"...     print(\"Leaving second context\")\n"
+"...\n"
+"Leaving second context\n"
+"Callback: from second context\n"
+">>> with stack:\n"
+"...     stack.callback(print, \"Callback: from outer context\")\n"
+"...     with stack:\n"
+"...         stack.callback(print, \"Callback: from inner context\")\n"
+"...         print(\"Leaving inner context\")\n"
+"...     print(\"Leaving outer context\")\n"
+"...\n"
+"Leaving inner context\n"
+"Callback: from inner context\n"
+"Callback: from outer context\n"
+"Leaving outer context"
+msgstr ""
+
 #: ../../library/contextlib.rst:1023
 msgid ""
 "As the output from the example shows, reusing a single stack object across "
@@ -1136,3 +1665,19 @@ msgid ""
 msgstr ""
 "Використання окремих екземплярів :class:`ExitStack` замість повторного "
 "використання одного екземпляра дозволяє уникнути цієї проблеми:"
+
+#: ../../library/contextlib.rst:1031
+msgid ""
+">>> from contextlib import ExitStack\n"
+">>> with ExitStack() as outer_stack:\n"
+"...     outer_stack.callback(print, \"Callback: from outer context\")\n"
+"...     with ExitStack() as inner_stack:\n"
+"...         inner_stack.callback(print, \"Callback: from inner context\")\n"
+"...         print(\"Leaving inner context\")\n"
+"...     print(\"Leaving outer context\")\n"
+"...\n"
+"Leaving inner context\n"
+"Callback: from inner context\n"
+"Leaving outer context\n"
+"Callback: from outer context"
+msgstr ""

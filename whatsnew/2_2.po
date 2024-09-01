@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -234,6 +234,14 @@ msgstr ""
 "всіх вбудованих типів, тож якщо жоден вбудований тип не підходить, ви можете"
 " просто створити підклас :class:`object`::"
 
+#: ../../whatsnew/2.2.rst:116
+msgid ""
+"class C(object):\n"
+"    def __init__ (self):\n"
+"        ...\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:121
 msgid ""
 "This means that :keyword:`class` statements that don't have any base classes"
@@ -255,11 +263,28 @@ msgstr ""
 ":func:`int`, :func:`float` і :func:`str`. У 2.2 вони більше не є функціями, "
 "а об’єктами типу, які під час виклику поводяться як фабрики. ::"
 
+#: ../../whatsnew/2.2.rst:131
+msgid ""
+">>> int\n"
+"<type 'int'>\n"
+">>> int('123')\n"
+"123"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:136
 msgid ""
 "To make the set of types complete, new type objects such as :func:`dict` and"
 " :func:`!file` have been added.  Here's a more interesting example, adding a"
 " :meth:`!lock` method to file objects::"
+msgstr ""
+
+#: ../../whatsnew/2.2.rst:140
+msgid ""
+"class LockableFile(file):\n"
+"    def lock (self, operation, length=0, start=0, whence=0):\n"
+"        import fcntl\n"
+"        return fcntl.lockf(self.fileno(), operation,\n"
+"                           length, start, whence)"
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:146
@@ -339,6 +364,12 @@ msgid ""
 msgstr ""
 "Наприклад, коли ви пишете ``obj.x``, кроки, які фактично виконує Python:"
 
+#: ../../whatsnew/2.2.rst:186
+msgid ""
+"descriptor = obj.__class__.x\n"
+"descriptor.__get__(obj)"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:189
 msgid ""
 "For methods, :meth:`!descriptor.__get__` returns a temporary object that's "
@@ -349,6 +380,18 @@ msgid ""
 "passed the instance, and therefore resemble regular functions.  Class "
 "methods are passed the class of the object, but not the object itself.  "
 "Static and class methods are defined like this::"
+msgstr ""
+
+#: ../../whatsnew/2.2.rst:198
+msgid ""
+"class C(object):\n"
+"    def f(arg1, arg2):\n"
+"        ...\n"
+"    f = staticmethod(f)\n"
+"\n"
+"    def g(cls, arg1, arg2):\n"
+"        ...\n"
+"    g = classmethod(g)"
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:207
@@ -375,6 +418,24 @@ msgstr ""
 "дозволив написати передумови та постумови методу в стилі Ейфеля. Клас, який "
 "використовує цю функцію, можна визначити так:"
 
+#: ../../whatsnew/2.2.rst:220
+msgid ""
+"from eiffel import eiffelmethod\n"
+"\n"
+"class C(object):\n"
+"    def f(self, arg1, arg2):\n"
+"        # The actual function\n"
+"        ...\n"
+"    def pre_f(self):\n"
+"        # Check preconditions\n"
+"        ...\n"
+"    def post_f(self):\n"
+"        # Check postconditions\n"
+"        ...\n"
+"\n"
+"    f = eiffelmethod(f, pre_f, post_f)"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:235
 msgid ""
 "Note that a person using the new :func:`!eiffelmethod` doesn't have to "
@@ -398,6 +459,23 @@ msgstr ""
 "Множинне успадкування також стало більш корисним завдяки зміні правил, за "
 "якими розпізнаються імена. Розглянемо цей набір класів (діаграма взята з "
 ":pep:`253` Гвідо ван Россума):"
+
+#: ../../whatsnew/2.2.rst:250
+msgid ""
+"      class A:\n"
+"        ^ ^  def save(self): ...\n"
+"       /   \\\n"
+"      /     \\\n"
+"     /       \\\n"
+"    /         \\\n"
+"class B     class C:\n"
+"    ^         ^  def save(self): ...\n"
+"     \\       /\n"
+"      \\     /\n"
+"       \\   /\n"
+"        \\ /\n"
+"      class D"
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:264
 msgid ""
@@ -451,6 +529,16 @@ msgid ""
 " actual class object).  This form will be used in methods to call a method "
 "in the superclass; for example, :class:`!D`'s :meth:`!save` method would "
 "look like this::"
+msgstr ""
+
+#: ../../whatsnew/2.2.rst:296
+msgid ""
+"class D (B,C):\n"
+"    def save (self):\n"
+"        # Call superclass .save()\n"
+"        super(D, self).save()\n"
+"        # Save D's private information here\n"
+"        ..."
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:303
@@ -519,6 +607,24 @@ msgid ""
 "settable, you could write::"
 msgstr ""
 
+#: ../../whatsnew/2.2.rst:342
+msgid ""
+"class C(object):\n"
+"    def get_size (self):\n"
+"        result = ... computation ...\n"
+"        return result\n"
+"    def set_size (self, size):\n"
+"        ... compute something based on the size\n"
+"        and set internal state appropriately ...\n"
+"\n"
+"    # Define a property.  The 'delete this attribute'\n"
+"    # method is defined as None, so the attribute\n"
+"    # can't be deleted.\n"
+"    size = property(get_size, set_size,\n"
+"                    None,\n"
+"                    \"Storage size of this instance\")"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:357
 msgid ""
 "That is certainly clearer and easier to write than a pair of "
@@ -546,6 +652,23 @@ msgstr ""
 "атрибут екземпляра, просто виконавши ``obj.new_attr=1``. Клас нового стилю "
 "може визначати атрибут класу під назвою :attr:`~object.__slots__`, щоб "
 "обмежити допустимі атрибути певним набором імен. Приклад прояснить це:"
+
+#: ../../whatsnew/2.2.rst:371
+msgid ""
+">>> class C(object):\n"
+"...     __slots__ = ('template', 'name')\n"
+"...\n"
+">>> obj = C()\n"
+">>> print obj.template\n"
+"None\n"
+">>> obj.template = 'Test'\n"
+">>> print obj.template\n"
+"Test\n"
+">>> obj.newattr = None\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in ?\n"
+"AttributeError: 'C' object has no attribute 'newattr'"
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:385
 msgid ""
@@ -631,6 +754,12 @@ msgid ""
 " this::"
 msgstr ""
 
+#: ../../whatsnew/2.2.rst:429
+msgid ""
+"def __getitem__(self, index):\n"
+"    return <next item>"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:432
 msgid ""
 ":meth:`~object.__getitem__` is more properly used to define an indexing "
@@ -679,6 +808,25 @@ msgstr ""
 "наступне значення. Якщо більше немає значень, які потрібно повернути, виклик"
 " :meth:`next` має викликати виняток :exc:`StopIteration`. ::"
 
+#: ../../whatsnew/2.2.rst:462
+msgid ""
+">>> L = [1,2,3]\n"
+">>> i = iter(L)\n"
+">>> print i\n"
+"<iterator object at 0x8116870>\n"
+">>> i.next()\n"
+"1\n"
+">>> i.next()\n"
+"2\n"
+">>> i.next()\n"
+"3\n"
+">>> i.next()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in ?\n"
+"StopIteration\n"
+">>>"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:478
 msgid ""
 "In 2.2, Python's :keyword:`for` statement no longer expects a sequence; it "
@@ -691,6 +839,15 @@ msgid ""
 "this::"
 msgstr ""
 
+#: ../../whatsnew/2.2.rst:486
+msgid ""
+">>> L = [1,2,3]\n"
+">>> i = iter(L)\n"
+">>> a,b,c = i\n"
+">>> a,b,c\n"
+"(1, 2, 3)"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:492
 msgid ""
 "Iterator support has been added to some of Python's basic types.   Calling "
@@ -699,6 +856,26 @@ msgid ""
 msgstr ""
 "До деяких базових типів Python додано підтримку ітераторів. Виклик "
 ":func:`iter` у словнику поверне ітератор, який перебирає його ключі:"
+
+#: ../../whatsnew/2.2.rst:495
+msgid ""
+">>> m = {'Jan': 1, 'Feb': 2, 'Mar': 3, 'Apr': 4, 'May': 5, 'Jun': 6,\n"
+"...      'Jul': 7, 'Aug': 8, 'Sep': 9, 'Oct': 10, 'Nov': 11, 'Dec': 12}\n"
+">>> for key in m: print key, m[key]\n"
+"...\n"
+"Mar 3\n"
+"Feb 2\n"
+"Aug 8\n"
+"Sep 9\n"
+"May 5\n"
+"Jun 6\n"
+"Jul 7\n"
+"Jan 1\n"
+"Apr 4\n"
+"Nov 11\n"
+"Dec 12\n"
+"Oct 10"
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:512
 msgid ""
@@ -719,6 +896,13 @@ msgstr ""
 "Файли також містять ітератор, який викликає метод :meth:`readline`, доки у "
 "файлі не залишиться рядків. Це означає, що тепер ви можете читати кожен "
 "рядок файлу за допомогою такого коду:"
+
+#: ../../whatsnew/2.2.rst:522
+msgid ""
+"for line in file:\n"
+"    # do something for each line\n"
+"    ..."
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:526
 msgid ""
@@ -780,6 +964,13 @@ msgstr ""
 msgid "Here's the simplest example of a generator function::"
 msgstr "Ось найпростіший приклад функції генератора:"
 
+#: ../../whatsnew/2.2.rst:558
+msgid ""
+"def generate_ints(N):\n"
+"    for i in range(N):\n"
+"        yield i"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:562
 msgid ""
 "A new keyword, :keyword:`yield`, was introduced for generators.  Any "
@@ -831,6 +1022,24 @@ msgstr ""
 msgid "Here's a sample usage of the :func:`!generate_ints` generator::"
 msgstr ""
 
+#: ../../whatsnew/2.2.rst:585
+msgid ""
+">>> gen = generate_ints(3)\n"
+">>> gen\n"
+"<generator object at 0x8117f90>\n"
+">>> gen.next()\n"
+"0\n"
+">>> gen.next()\n"
+"1\n"
+">>> gen.next()\n"
+"2\n"
+">>> gen.next()\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in ?\n"
+"  File \"<stdin>\", line 2, in generate_ints\n"
+"StopIteration"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:600
 msgid ""
 "You could equally write ``for i in generate_ints(5)``, or ``a,b,c = "
@@ -878,6 +1087,18 @@ msgstr ""
 "прикладів. Найпростіший реалізує рекурсивний обхід дерева за допомогою "
 "генераторів. ::"
 
+#: ../../whatsnew/2.2.rst:620
+msgid ""
+"# A recursive generator that generates Tree leaves in in-order.\n"
+"def inorder(t):\n"
+"    if t:\n"
+"        for x in inorder(t.left):\n"
+"            yield x\n"
+"        yield t.label\n"
+"        for x in inorder(t.right):\n"
+"            yield x"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:629
 msgid ""
 "Two other examples in :file:`Lib/test/test_generators.py` produce solutions "
@@ -899,6 +1120,12 @@ msgid ""
 "generator.  One example from \"An Overview of the Icon Programming "
 "Language\" at https://www2.cs.arizona.edu/icon/docs/ipd266.htm gives an idea"
 " of what this looks like::"
+msgstr ""
+
+#: ../../whatsnew/2.2.rst:641
+msgid ""
+"sentence := \"Store it in the neighboring harbor\"\n"
+"if (i := find(\"or\", sentence)) > 5 then write(i)"
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:644
@@ -977,6 +1204,14 @@ msgstr ""
 "попередження в Python 2.4, і, ймовірно, буде відмінено в Python 3.0.) Багато"
 " операцій, які раніше викликали помилку :exc:`OverflowError`, тепер "
 "повертатимуть довге ціле число як їхній результат. Наприклад::"
+
+#: ../../whatsnew/2.2.rst:689
+msgid ""
+">>> 1234567890123\n"
+"1234567890123L\n"
+">>> 2 ** 64\n"
+"18446744073709551616L"
+msgstr ""
 
 #: ../../whatsnew/2.2.rst:694
 msgid ""
@@ -1197,6 +1432,26 @@ msgstr ""
 "кодування, кодування MIME base64 і стиснення за допомогою модуля "
 ":mod:`zlib`::"
 
+#: ../../whatsnew/2.2.rst:805
+msgid ""
+">>> s = \"\"\"Here is a lengthy piece of redundant, overly verbose,\n"
+"... and repetitive text.\n"
+"... \"\"\"\n"
+">>> data = s.encode('zlib')\n"
+">>> data\n"
+"'x\\x9c\\r\\xc9\\xc1\\r\\x80 \\x10\\x04\\xc0?Ul...'\n"
+">>> data.decode('zlib')\n"
+"'Here is a lengthy piece of redundant, overly verbose,\\nand repetitive text.\\n'\n"
+">>> print s.encode('uu')\n"
+"begin 666 <data>\n"
+"M2&5R92!I<R!A(&QE;F=T:'D@<&EE8V4@;V8@<F5D=6YD86YT+\"!O=F5R;'D@\n"
+">=F5R8F]S92P*86YD(')E<&5T:71I=F4@=&5X=\"X*\n"
+"\n"
+"end\n"
+">>> \"sheesh\".encode('rot-13')\n"
+"'furrfu'"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:822
 msgid ""
 "To convert a class instance to Unicode, a :meth:`!__unicode__` method can be"
@@ -1255,6 +1510,16 @@ msgstr ""
 "дивувало людей, оскільки не відповідало їхнім інтуїтивним очікуванням. "
 "Наприклад, визначення вкладеної рекурсивної функції не працює:"
 
+#: ../../whatsnew/2.2.rst:855
+msgid ""
+"def f():\n"
+"    ...\n"
+"    def g(value):\n"
+"        ...\n"
+"        return g(value-1) + 1\n"
+"    ..."
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:862
 msgid ""
 "The function :func:`!g` will always raise a :exc:`NameError` exception, "
@@ -1265,6 +1530,15 @@ msgid ""
 " a problem in practice. In code which uses :keyword:`!lambda` you can often "
 "find local variables being copied by passing them as the default values of "
 "arguments. ::"
+msgstr ""
+
+#: ../../whatsnew/2.2.rst:870
+msgid ""
+"def find(self, name):\n"
+"    \"Return list of any entries equal to 'name'\"\n"
+"    L = filter(lambda x, name=name: x == name,\n"
+"               self.list_attribute)\n"
+"    return L"
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:876
@@ -1342,6 +1616,16 @@ msgstr ""
 msgid "To make the preceding explanation a bit clearer, here's an example::"
 msgstr "Щоб зробити попереднє пояснення трохи зрозумілішим, ось приклад::"
 
+#: ../../whatsnew/2.2.rst:909
+msgid ""
+"x = 1\n"
+"def f():\n"
+"    # The next line is a syntax error\n"
+"    exec 'x=2'\n"
+"    def g():\n"
+"        return x"
+msgstr ""
+
 #: ../../whatsnew/2.2.rst:916
 msgid ""
 "Line 4 containing the ``exec`` statement is a syntax error, since ``exec`` "
@@ -1379,6 +1663,26 @@ msgid ""
 "XML. For example, the following snippet retrieves a list of RSS channels "
 "from the O'Reilly Network, and then  lists the recent headlines for one "
 "channel::"
+msgstr ""
+
+#: ../../whatsnew/2.2.rst:942
+msgid ""
+"import xmlrpclib\n"
+"s = xmlrpclib.Server(\n"
+"      'http://www.oreillynet.com/meerkat/xml-rpc/server.php')\n"
+"channels = s.meerkat.getChannels()\n"
+"# channels is a list of dictionaries, like this:\n"
+"# [{'id': 4, 'title': 'Freshmeat Daily News'}\n"
+"#  {'id': 190, 'title': '32Bits Online'},\n"
+"#  {'id': 4549, 'title': '3DGamers'}, ... ]\n"
+"\n"
+"# Get the items for one channel\n"
+"items = s.meerkat.getItems( {'channel': 4} )\n"
+"\n"
+"# 'items' is another list of dictionaries, like this:\n"
+"# [{'link': 'http://freshmeat.net/releases/52719/',\n"
+"#   'description': 'A utility which converts HTML to XSL FO.',\n"
+"#   'title': 'html2fo 0.3 (Default)'}, ... ]"
 msgstr ""
 
 #: ../../whatsnew/2.2.rst:959

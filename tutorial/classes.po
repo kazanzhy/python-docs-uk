@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -374,9 +374,43 @@ msgstr ""
 "імен, і як :keyword:`global` і :keyword:`nonlocal` впливають на зв’язування "
 "змінних::"
 
+#: ../../tutorial/classes.rst:168
+msgid ""
+"def scope_test():\n"
+"    def do_local():\n"
+"        spam = \"local spam\"\n"
+"\n"
+"    def do_nonlocal():\n"
+"        nonlocal spam\n"
+"        spam = \"nonlocal spam\"\n"
+"\n"
+"    def do_global():\n"
+"        global spam\n"
+"        spam = \"global spam\"\n"
+"\n"
+"    spam = \"test spam\"\n"
+"    do_local()\n"
+"    print(\"After local assignment:\", spam)\n"
+"    do_nonlocal()\n"
+"    print(\"After nonlocal assignment:\", spam)\n"
+"    do_global()\n"
+"    print(\"After global assignment:\", spam)\n"
+"\n"
+"scope_test()\n"
+"print(\"In global scope:\", spam)"
+msgstr ""
+
 #: ../../tutorial/classes.rst:191
 msgid "The output of the example code is:"
 msgstr "Результат коду прикладу:"
+
+#: ../../tutorial/classes.rst:193
+msgid ""
+"After local assignment: test spam\n"
+"After nonlocal assignment: nonlocal spam\n"
+"After global assignment: nonlocal spam\n"
+"In global scope: global spam"
+msgstr ""
 
 #: ../../tutorial/classes.rst:200
 msgid ""
@@ -417,6 +451,16 @@ msgstr "Синтаксис визначення класу"
 #: ../../tutorial/classes.rst:223
 msgid "The simplest form of class definition looks like this::"
 msgstr "Найпростіша форма визначення класу виглядає так:"
+
+#: ../../tutorial/classes.rst:225
+msgid ""
+"class ClassName:\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+msgstr ""
 
 #: ../../tutorial/classes.rst:232
 msgid ""
@@ -491,6 +535,16 @@ msgstr ""
 "Дійсні імена атрибутів — це всі імена, які були в просторі імен класу під "
 "час створення об’єкта класу. Отже, якби визначення класу виглядало так::"
 
+#: ../../tutorial/classes.rst:269
+msgid ""
+"class MyClass:\n"
+"    \"\"\"A simple example class\"\"\"\n"
+"    i = 12345\n"
+"\n"
+"    def f(self):\n"
+"        return 'hello world'"
+msgstr ""
+
 #: ../../tutorial/classes.rst:276
 msgid ""
 "then ``MyClass.i`` and ``MyClass.f`` are valid attribute references, "
@@ -510,6 +564,10 @@ msgstr ""
 "класу є функцією без параметрів, яка повертає новий екземпляр класу. "
 "Наприклад (припускаючи вищезгаданий клас):"
 
+#: ../../tutorial/classes.rst:286 ../../tutorial/classes.rst:303
+msgid "x = MyClass()"
+msgstr ""
+
 #: ../../tutorial/classes.rst:288
 msgid ""
 "creates a new *instance* of the class and assigns this object to the local "
@@ -526,6 +584,12 @@ msgid ""
 ":meth:`~object.__init__`, like this::"
 msgstr ""
 
+#: ../../tutorial/classes.rst:296
+msgid ""
+"def __init__(self):\n"
+"    self.data = []"
+msgstr ""
+
 #: ../../tutorial/classes.rst:299
 msgid ""
 "When a class defines an :meth:`~object.__init__` method, class instantiation"
@@ -539,6 +603,18 @@ msgid ""
 "Of course, the :meth:`~object.__init__` method may have arguments for "
 "greater flexibility.  In that case, arguments given to the class "
 "instantiation operator are passed on to :meth:`!__init__`.  For example, ::"
+msgstr ""
+
+#: ../../tutorial/classes.rst:309
+msgid ""
+">>> class Complex:\n"
+"...     def __init__(self, realpart, imagpart):\n"
+"...         self.r = realpart\n"
+"...         self.i = imagpart\n"
+"...\n"
+">>> x = Complex(3.0, -4.5)\n"
+">>> x.r, x.i\n"
+"(3.0, -4.5)"
 msgstr ""
 
 #: ../../tutorial/classes.rst:322
@@ -563,6 +639,15 @@ msgid ""
 "example, if ``x`` is the instance of :class:`!MyClass` created above, the "
 "following piece of code will print the value ``16``, without leaving a "
 "trace::"
+msgstr ""
+
+#: ../../tutorial/classes.rst:334
+msgid ""
+"x.counter = 1\n"
+"while x.counter < 10:\n"
+"    x.counter = x.counter * 2\n"
+"print(x.counter)\n"
+"del x.counter"
 msgstr ""
 
 #: ../../tutorial/classes.rst:340
@@ -595,12 +680,23 @@ msgstr "Об’єкти методу"
 msgid "Usually, a method is called right after it is bound::"
 msgstr "Зазвичай метод викликається одразу після його зв’язування::"
 
+#: ../../tutorial/classes.rst:360
+msgid "x.f()"
+msgstr ""
+
 #: ../../tutorial/classes.rst:362
 msgid ""
 "In the :class:`!MyClass` example, this will return the string ``'hello "
 "world'``. However, it is not necessary to call a method right away: ``x.f`` "
 "is a method object, and can be stored away and called at a later time.  For "
 "example::"
+msgstr ""
+
+#: ../../tutorial/classes.rst:366
+msgid ""
+"xf = x.f\n"
+"while True:\n"
+"    print(xf())"
 msgstr ""
 
 #: ../../tutorial/classes.rst:370
@@ -659,6 +755,27 @@ msgstr ""
 "екземпляра, а змінні класу призначені для атрибутів і методів, спільних для "
 "всіх екземплярів класу::"
 
+#: ../../tutorial/classes.rst:404
+msgid ""
+"class Dog:\n"
+"\n"
+"    kind = 'canine'         # class variable shared by all instances\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name    # instance variable unique to each instance\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.kind                  # shared by all dogs\n"
+"'canine'\n"
+">>> e.kind                  # shared by all dogs\n"
+"'canine'\n"
+">>> d.name                  # unique to d\n"
+"'Fido'\n"
+">>> e.name                  # unique to e\n"
+"'Buddy'"
+msgstr ""
+
 #: ../../tutorial/classes.rst:422
 msgid ""
 "As discussed in :ref:`tut-object`, shared data can have possibly surprising "
@@ -673,10 +790,51 @@ msgstr ""
 "змінну класу, тому що лише один список буде спільний для всіх екземплярів "
 "*Dog*::"
 
+#: ../../tutorial/classes.rst:428
+msgid ""
+"class Dog:\n"
+"\n"
+"    tricks = []             # mistaken use of a class variable\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"\n"
+"    def add_trick(self, trick):\n"
+"        self.tricks.append(trick)\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.add_trick('roll over')\n"
+">>> e.add_trick('play dead')\n"
+">>> d.tricks                # unexpectedly shared by all dogs\n"
+"['roll over', 'play dead']"
+msgstr ""
+
 #: ../../tutorial/classes.rst:445
 msgid "Correct design of the class should use an instance variable instead::"
 msgstr ""
 "Правильний дизайн класу повинен використовувати замість змінної екземпляра::"
+
+#: ../../tutorial/classes.rst:447
+msgid ""
+"class Dog:\n"
+"\n"
+"    def __init__(self, name):\n"
+"        self.name = name\n"
+"        self.tricks = []    # creates a new empty list for each dog\n"
+"\n"
+"    def add_trick(self, trick):\n"
+"        self.tricks.append(trick)\n"
+"\n"
+">>> d = Dog('Fido')\n"
+">>> e = Dog('Buddy')\n"
+">>> d.add_trick('roll over')\n"
+">>> e.add_trick('play dead')\n"
+">>> d.tricks\n"
+"['roll over']\n"
+">>> e.tricks\n"
+"['play dead']"
+msgstr ""
 
 #: ../../tutorial/classes.rst:469
 msgid "Random Remarks"
@@ -689,6 +847,21 @@ msgid ""
 msgstr ""
 "Якщо однакове ім’я атрибута зустрічається як в екземплярі, так і в класі, "
 "пошук атрибутів визначає пріоритет екземпляру::"
+
+#: ../../tutorial/classes.rst:476
+msgid ""
+">>> class Warehouse:\n"
+"...    purpose = 'storage'\n"
+"...    region = 'west'\n"
+"...\n"
+">>> w1 = Warehouse()\n"
+">>> print(w1.purpose, w1.region)\n"
+"storage west\n"
+">>> w2 = Warehouse()\n"
+">>> w2.region = 'east'\n"
+">>> print(w2.purpose, w2.region)\n"
+"storage east"
+msgstr ""
 
 #: ../../tutorial/classes.rst:488
 msgid ""
@@ -762,6 +935,21 @@ msgstr ""
 "текстово укладено у визначення класу: присвоєння об’єкта функції локальній "
 "змінній у класі також є нормальним. Наприклад::"
 
+#: ../../tutorial/classes.rst:518
+msgid ""
+"# Function defined outside the class\n"
+"def f1(self, x, y):\n"
+"    return min(x, x+y)\n"
+"\n"
+"class C:\n"
+"    f = f1\n"
+"\n"
+"    def g(self):\n"
+"        return 'hello world'\n"
+"\n"
+"    h = g"
+msgstr ""
+
 #: ../../tutorial/classes.rst:530
 msgid ""
 "Now ``f``, ``g`` and ``h`` are all attributes of class :class:`!C` that "
@@ -777,6 +965,20 @@ msgid ""
 msgstr ""
 "Методи можуть викликати інші методи, використовуючи атрибути методу "
 "аргументу ``self``::"
+
+#: ../../tutorial/classes.rst:538
+msgid ""
+"class Bag:\n"
+"    def __init__(self):\n"
+"        self.data = []\n"
+"\n"
+"    def add(self, x):\n"
+"        self.data.append(x)\n"
+"\n"
+"    def addtwice(self, x):\n"
+"        self.add(x)\n"
+"        self.add(x)"
+msgstr ""
 
 #: ../../tutorial/classes.rst:549
 msgid ""
@@ -822,12 +1024,26 @@ msgstr ""
 "Звичайно, функція мови не була б гідною назви \"клас\" без підтримки "
 "успадкування. Синтаксис для визначення похідного класу виглядає так:"
 
+#: ../../tutorial/classes.rst:572
+msgid ""
+"class DerivedClassName(BaseClassName):\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+msgstr ""
+
 #: ../../tutorial/classes.rst:579
 msgid ""
 "The name :class:`!BaseClassName` must be defined in a namespace accessible "
 "from the scope containing the derived class definition.  In place of a base "
 "class name, other arbitrary expressions are also allowed.  This can be "
 "useful, for example, when the base class is defined in another module::"
+msgstr ""
+
+#: ../../tutorial/classes.rst:585
+msgid "class DerivedClassName(modname.BaseClassName):"
 msgstr ""
 
 #: ../../tutorial/classes.rst:587
@@ -929,6 +1145,16 @@ msgstr ""
 "Python також підтримує форму множинного успадкування. Визначення класу з "
 "кількома базовими класами виглядає так:"
 
+#: ../../tutorial/classes.rst:633
+msgid ""
+"class DerivedClassName(Base1, Base2, Base3):\n"
+"    <statement-1>\n"
+"    .\n"
+"    .\n"
+"    .\n"
+"    <statement-N>"
+msgstr ""
+
 #: ../../tutorial/classes.rst:640
 msgid ""
 "For most purposes, in the simplest cases, you can think of the search for "
@@ -1024,6 +1250,28 @@ msgstr ""
 "Викривлення імен корисне для того, щоб дозволити підкласам перевизначати "
 "методи, не порушуючи виклики внутрішньокласових методів. Наприклад::"
 
+#: ../../tutorial/classes.rst:699
+msgid ""
+"class Mapping:\n"
+"    def __init__(self, iterable):\n"
+"        self.items_list = []\n"
+"        self.__update(iterable)\n"
+"\n"
+"    def update(self, iterable):\n"
+"        for item in iterable:\n"
+"            self.items_list.append(item)\n"
+"\n"
+"    __update = update   # private copy of original update() method\n"
+"\n"
+"class MappingSubclass(Mapping):\n"
+"\n"
+"    def update(self, keys, values):\n"
+"        # provides new signature for update()\n"
+"        # but does not break __init__()\n"
+"        for item in zip(keys, values):\n"
+"            self.items_list.append(item)"
+msgstr ""
+
 #: ../../tutorial/classes.rst:718
 msgid ""
 "The above example would work even if ``MappingSubclass`` were to introduce a"
@@ -1073,6 +1321,26 @@ msgid ""
 "approach is to use :mod:`dataclasses` for this purpose::"
 msgstr ""
 
+#: ../../tutorial/classes.rst:744
+msgid ""
+"from dataclasses import dataclass\n"
+"\n"
+"@dataclass\n"
+"class Employee:\n"
+"    name: str\n"
+"    dept: str\n"
+"    salary: int"
+msgstr ""
+
+#: ../../tutorial/classes.rst:754
+msgid ""
+">>> john = Employee('john', 'computer lab', 1000)\n"
+">>> john.dept\n"
+"'computer lab'\n"
+">>> john.salary\n"
+"1000"
+msgstr ""
+
 #: ../../tutorial/classes.rst:760
 msgid ""
 "A piece of Python code that expects a particular abstract data type can "
@@ -1103,6 +1371,20 @@ msgstr ""
 "Наразі ви, мабуть, помітили, що більшість об’єктів-контейнерів можна "
 "зациклювати за допомогою оператора :keyword:`for`::"
 
+#: ../../tutorial/classes.rst:787
+msgid ""
+"for element in [1, 2, 3]:\n"
+"    print(element)\n"
+"for element in (1, 2, 3):\n"
+"    print(element)\n"
+"for key in {'one':1, 'two':2}:\n"
+"    print(key)\n"
+"for char in \"123\":\n"
+"    print(char)\n"
+"for line in open(\"myfile.txt\"):\n"
+"    print(line, end='')"
+msgstr ""
+
 #: ../../tutorial/classes.rst:798
 msgid ""
 "This style of access is clear, concise, and convenient.  The use of "
@@ -1125,6 +1407,25 @@ msgstr ""
 ":meth:`~iterator.__next__` за допомогою вбудованої функції :func:`next`; цей"
 " приклад показує, як це все працює:"
 
+#: ../../tutorial/classes.rst:807
+msgid ""
+">>> s = 'abc'\n"
+">>> it = iter(s)\n"
+">>> it\n"
+"<str_iterator object at 0x10c90e650>\n"
+">>> next(it)\n"
+"'a'\n"
+">>> next(it)\n"
+"'b'\n"
+">>> next(it)\n"
+"'c'\n"
+">>> next(it)\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"    next(it)\n"
+"StopIteration"
+msgstr ""
+
 #: ../../tutorial/classes.rst:823
 msgid ""
 "Having seen the mechanics behind the iterator protocol, it is easy to add "
@@ -1132,6 +1433,38 @@ msgid ""
 "method which returns an object with a :meth:`~iterator.__next__` method.  If"
 " the class defines :meth:`!__next__`, then :meth:`!__iter__` can just return"
 " ``self``::"
+msgstr ""
+
+#: ../../tutorial/classes.rst:828
+msgid ""
+"class Reverse:\n"
+"    \"\"\"Iterator for looping over a sequence backwards.\"\"\"\n"
+"    def __init__(self, data):\n"
+"        self.data = data\n"
+"        self.index = len(data)\n"
+"\n"
+"    def __iter__(self):\n"
+"        return self\n"
+"\n"
+"    def __next__(self):\n"
+"        if self.index == 0:\n"
+"            raise StopIteration\n"
+"        self.index = self.index - 1\n"
+"        return self.data[self.index]"
+msgstr ""
+
+#: ../../tutorial/classes.rst:845
+msgid ""
+">>> rev = Reverse('spam')\n"
+">>> iter(rev)\n"
+"<__main__.Reverse object at 0x00A1DB50>\n"
+">>> for char in rev:\n"
+"...     print(char)\n"
+"...\n"
+"m\n"
+"a\n"
+"p\n"
+"s"
 msgstr ""
 
 #: ../../tutorial/classes.rst:860
@@ -1154,6 +1487,24 @@ msgstr ""
 " зупинився (він запам’ятовує всі значення даних і який оператор був "
 "виконаний останнім). Приклад показує, що генератори можна тривіально легко "
 "створити:"
+
+#: ../../tutorial/classes.rst:869
+msgid ""
+"def reverse(data):\n"
+"    for index in range(len(data)-1, -1, -1):\n"
+"        yield data[index]"
+msgstr ""
+
+#: ../../tutorial/classes.rst:875
+msgid ""
+">>> for char in reverse('golf'):\n"
+"...     print(char)\n"
+"...\n"
+"f\n"
+"l\n"
+"o\n"
+"g"
+msgstr ""
 
 #: ../../tutorial/classes.rst:883
 msgid ""
@@ -1210,6 +1561,25 @@ msgstr ""
 #: ../../tutorial/classes.rst:911
 msgid "Examples::"
 msgstr "Приклади::"
+
+#: ../../tutorial/classes.rst:913
+msgid ""
+">>> sum(i*i for i in range(10))                 # sum of squares\n"
+"285\n"
+"\n"
+">>> xvec = [10, 20, 30]\n"
+">>> yvec = [7, 5, 3]\n"
+">>> sum(x*y for x,y in zip(xvec, yvec))         # dot product\n"
+"260\n"
+"\n"
+">>> unique_words = set(word for line in page  for word in line.split())\n"
+"\n"
+">>> valedictorian = max((student.gpa, student.name) for student in graduates)\n"
+"\n"
+">>> data = 'golf'\n"
+">>> list(data[i] for i in range(len(data)-1, -1, -1))\n"
+"['f', 'l', 'o', 'g']"
+msgstr ""
 
 #: ../../tutorial/classes.rst:932
 msgid "Footnotes"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:51+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -626,6 +626,10 @@ msgstr ""
 "замовчуванням, можна використати таку команду (з командного рядка з "
 "адміністраторами):"
 
+#: ../../using/windows.rst:239
+msgid "python-3.9.0.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0"
+msgstr ""
+
 #: ../../using/windows.rst:241
 msgid ""
 "To allow users to easily install a personal copy of Python without the test "
@@ -635,6 +639,12 @@ msgstr ""
 "Щоб дозволити користувачам легко інсталювати особисту копію Python без "
 "набору тестів, ви можете створити ярлик за допомогою такої команди. Це "
 "відобразить спрощену початкову сторінку та заборонить налаштування::"
+
+#: ../../using/windows.rst:245
+msgid ""
+"python-3.9.0.exe InstallAllUsers=0 Include_launcher=0 Include_test=0\n"
+"    SimpleInstall=1 SimpleInstallDescription=\"Just for me, no test suite.\""
+msgstr ""
 
 #: ../../using/windows.rst:248
 msgid ""
@@ -661,6 +671,17 @@ msgstr ""
 "перетворено на число, якщо це можливо. Значення, надані як текст елемента, "
 "завжди залишаються як рядки. Цей приклад файлу встановлює ті самі параметри,"
 " що й попередній приклад:"
+
+#: ../../using/windows.rst:258
+msgid ""
+"<Options>\n"
+"    <Option Name=\"InstallAllUsers\" Value=\"no\" />\n"
+"    <Option Name=\"Include_launcher\" Value=\"0\" />\n"
+"    <Option Name=\"Include_test\" Value=\"no\" />\n"
+"    <Option Name=\"SimpleInstall\" Value=\"yes\" />\n"
+"    <Option Name=\"SimpleInstallDescription\">Just for me, no test suite</Option>\n"
+"</Options>"
+msgstr ""
 
 #: ../../using/windows.rst:271
 msgid "Installing Without Downloading"
@@ -696,6 +717,10 @@ msgstr ""
 " файли. Не забудьте замінити ``python-3.9.0.exe`` замість справжньої назви "
 "вашого інсталятора та створити макети у власних каталогах, щоб уникнути "
 "зіткнень між файлами з однаковою назвою."
+
+#: ../../using/windows.rst:288
+msgid "python-3.9.0.exe /layout [optional target directory]"
+msgstr ""
 
 #: ../../using/windows.rst:290
 msgid ""
@@ -946,6 +971,14 @@ msgid ""
 ":func:`os.path.realpath`:"
 msgstr ""
 
+#: ../../using/windows.rst:420
+msgid ""
+">>> import os\n"
+">>> test_file = 'C:\\\\Users\\\\example\\\\AppData\\\\Local\\\\test.txt'\n"
+">>> os.path.realpath(test_file)\n"
+"'C:\\\\Users\\\\example\\\\AppData\\\\Local\\\\Packages\\\\PythonSoftwareFoundation.Python.3.8_qbz5n2kfra8p0\\\\LocalCache\\\\Local\\\\test.txt'"
+msgstr ""
+
 #: ../../using/windows.rst:427
 msgid "When writing to the Windows Registry, the following behaviors exist:"
 msgstr ""
@@ -1023,6 +1056,12 @@ msgstr ""
 "За допомогою інструменту встановлюється остання версія Python для "
 "64-розрядних або 32-розрядних машин за допомогою:"
 
+#: ../../using/windows.rst:461
+msgid ""
+"nuget.exe install python -ExcludeVersion -OutputDirectory .\n"
+"nuget.exe install pythonx86 -ExcludeVersion -OutputDirectory ."
+msgstr ""
+
 #: ../../using/windows.rst:464
 msgid ""
 "To select a particular version, add a ``-Version 3.x.y``. The output "
@@ -1037,6 +1076,17 @@ msgstr ""
 "підкаталог називається так само, як і пакунок, і без опції "
 "``-ExcludeVersion`` ця назва включатиме конкретну встановлену версію. "
 "Усередині підкаталогу є каталог ``tools``, який містить установку Python:"
+
+#: ../../using/windows.rst:471
+msgid ""
+"# Without -ExcludeVersion\n"
+"> .\\python.3.5.2\\tools\\python.exe -V\n"
+"Python 3.5.2\n"
+"\n"
+"# With -ExcludeVersion\n"
+"> .\\python\\tools\\python.exe -V\n"
+"Python 3.5.2"
+msgstr ""
 
 #: ../../using/windows.rst:481
 msgid ""
@@ -1367,6 +1417,13 @@ msgstr ""
 "Щоб тимчасово встановити змінні середовища, відкрийте командний рядок і "
 "скористайтеся командою :command:`set`:"
 
+#: ../../using/windows.rst:647
+msgid ""
+"C:\\>set PATH=C:\\Program Files\\Python 3.9;%PATH%\n"
+"C:\\>set PYTHONPATH=%PYTHONPATH%;C:\\My_python_lib\n"
+"C:\\>python"
+msgstr ""
+
 #: ../../using/windows.rst:653
 msgid ""
 "These changes will apply to any further commands executed in that console, "
@@ -1511,6 +1568,10 @@ msgstr ""
 "крапкою з комою від інших записів. Приклад змінної може виглядати так (за "
 "умови, що перші два записи вже існують):"
 
+#: ../../using/windows.rst:717
+msgid "C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\Program Files\\Python 3.9"
+msgstr ""
+
 #: ../../using/windows.rst:722
 msgid "UTF-8 mode"
 msgstr "Режим UTF-8"
@@ -1645,6 +1706,10 @@ msgstr ""
 "перевірити, чи доступна програма запуску, виконайте таку команду в "
 "командному рядку:"
 
+#: ../../using/windows.rst:789
+msgid "py"
+msgstr ""
+
 #: ../../using/windows.rst:791
 msgid ""
 "You should find that the latest version of Python you have installed is "
@@ -1665,6 +1730,10 @@ msgstr ""
 " помітили, що Python |version| було запущено - щоб запустити Python 3.7, "
 "спробуйте команду::"
 
+#: ../../using/windows.rst:799
+msgid "py -3.7"
+msgstr ""
+
 #: ../../using/windows.rst:801
 msgid ""
 "If you want the latest version of Python 2 you have installed, try the "
@@ -1672,14 +1741,28 @@ msgid ""
 msgstr ""
 "Якщо вам потрібна остання встановлена версія Python 2, спробуйте команду::"
 
+#: ../../using/windows.rst:804
+msgid "py -2"
+msgstr ""
+
 #: ../../using/windows.rst:806
 msgid ""
 "If you see the following error, you do not have the launcher installed::"
 msgstr "Якщо ви бачите таку помилку, у вас не встановлено програму запуску:"
 
+#: ../../using/windows.rst:808
+msgid ""
+"'py' is not recognized as an internal or external command,\n"
+"operable program or batch file."
+msgstr ""
+
 #: ../../using/windows.rst:811
 msgid "The command::"
 msgstr "Команда::"
+
+#: ../../using/windows.rst:813
+msgid "py --list"
+msgstr ""
 
 #: ../../using/windows.rst:815
 msgid "displays the currently installed version(s) of Python."
@@ -1699,6 +1782,18 @@ msgid ""
 "When using the ``-V:`` argument, specifying the Company will limit selection"
 " to runtimes from that provider, while specifying only the Tag will select "
 "from all providers. Note that omitting the slash implies a tag::"
+msgstr ""
+
+#: ../../using/windows.rst:827
+msgid ""
+"# Select any '3.*' tagged runtime\n"
+"py -V:3\n"
+"\n"
+"# Select any 'PythonCore' released runtime\n"
+"py -V:PythonCore/\n"
+"\n"
+"# Select PythonCore's latest Python 3 runtime\n"
+"py -V:PythonCore/3"
 msgstr ""
 
 #: ../../using/windows.rst:836
@@ -1749,9 +1844,20 @@ msgstr ""
 "Давайте створимо тестовий сценарій Python - створіть файл під назвою "
 "``hello.py`` з таким вмістом"
 
+#: ../../using/windows.rst:865
+msgid ""
+"#! python\n"
+"import sys\n"
+"sys.stdout.write(\"hello from Python %s\\n\" % (sys.version,))"
+msgstr ""
+
 #: ../../using/windows.rst:871
 msgid "From the directory in which hello.py lives, execute the command::"
 msgstr "З каталогу, в якому знаходиться hello.py, виконайте команду::"
+
+#: ../../using/windows.rst:873
+msgid "py hello.py"
+msgstr ""
 
 #: ../../using/windows.rst:875
 msgid ""
@@ -1760,6 +1866,10 @@ msgid ""
 msgstr ""
 "Слід помітити, що надруковано номер версії вашої останньої інсталяції Python"
 " 2.x. Тепер спробуйте змінити перший рядок на:"
+
+#: ../../using/windows.rst:878
+msgid "#! python3"
+msgstr ""
 
 #: ../../using/windows.rst:882
 msgid ""
@@ -1860,6 +1970,10 @@ msgstr "``python``"
 msgid "For example, if the first line of your script starts with"
 msgstr "Наприклад, якщо перший рядок вашого сценарію починається з"
 
+#: ../../using/windows.rst:926
+msgid "#! /usr/bin/python"
+msgstr ""
+
 #: ../../using/windows.rst:930
 msgid ""
 "The default Python or an active virtual environment will be located and "
@@ -1930,6 +2044,12 @@ msgid ""
 "part of the filename)."
 msgstr ""
 
+#: ../../using/windows.rst:981
+msgid ""
+"[commands]\n"
+"/bin/xpython=C:\\Program Files\\XPython\\python.exe"
+msgstr ""
+
 #: ../../using/windows.rst:986
 msgid ""
 "Any commands not found in the .INI file are treated as **Windows** "
@@ -1952,6 +2072,10 @@ msgid ""
 msgstr ""
 "Рядки shebang також можуть вказувати додаткові параметри, які передаються "
 "інтерпретатору Python. Наприклад, якщо у вас є лінія шибенг:"
+
+#: ../../using/windows.rst:1000
+msgid "#! /usr/bin/python -v"
+msgstr ""
 
 #: ../../using/windows.rst:1004
 msgid "Then Python will be started with the ``-v`` option"
@@ -2148,6 +2272,12 @@ msgstr "Наприклад:"
 msgid "Setting ``PY_PYTHON=3.7`` is equivalent to the INI file containing:"
 msgstr "Параметр ``PY_PYTHON=3.7`` еквівалентний файлу INI, який містить:"
 
+#: ../../using/windows.rst:1093
+msgid ""
+"[defaults]\n"
+"python=3.7"
+msgstr ""
+
 #: ../../using/windows.rst:1098
 msgid ""
 "Setting ``PY_PYTHON=3`` and ``PY_PYTHON3=3.7`` is equivalent to the INI file"
@@ -2155,6 +2285,13 @@ msgid ""
 msgstr ""
 "Параметри ``PY_PYTHON=3`` і ``PY_PYTHON3=3.7`` еквівалентні файлу INI, який "
 "містить:"
+
+#: ../../using/windows.rst:1101
+msgid ""
+"[defaults]\n"
+"python=3\n"
+"python3=3.7"
+msgstr ""
 
 #: ../../using/windows.rst:1108
 msgid "Diagnostics"

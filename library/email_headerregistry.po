@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-16 14:15+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:05+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -181,6 +181,10 @@ msgstr ""
 "щоб спеціалізований клас надавав :func:`classmethod` під назвою ``parse``. "
 "Цей метод називається наступним чином:"
 
+#: ../../library/email.headerregistry.rst:94
+msgid "parse(string, kwds)"
+msgstr ""
+
 #: ../../library/email.headerregistry.rst:96
 msgid ""
 "``kwds`` is a dictionary containing one pre-initialized key, ``defects``. "
@@ -214,6 +218,13 @@ msgstr ""
 "його метод ``init``. Спеціалізованому класу потрібно лише надати метод "
 "``init``, якщо він бажає встановити додаткові атрибути крім тих, що "
 "надаються самим ``BaseHeader``. Такий метод ``init`` має виглядати так:"
+
+#: ../../library/email.headerregistry.rst:110
+msgid ""
+"def init(self, /, *args, **kw):\n"
+"    self._myattr = kw.pop('myattr')\n"
+"    super().init(*args, **kw)"
+msgstr ""
 
 #: ../../library/email.headerregistry.rst:114
 msgid ""
@@ -302,6 +313,10 @@ msgstr ""
 "Значення ``decoded`` заголовка визначається форматуванням ``datetime`` "
 "відповідно до правил :rfc:`5322`; тобто встановлено::"
 
+#: ../../library/email.headerregistry.rst:163
+msgid "email.utils.format_datetime(self.datetime)"
+msgstr ""
+
 #: ../../library/email.headerregistry.rst:165
 msgid ""
 "When creating a ``DateHeader``, *value* may be :class:`~datetime.datetime` "
@@ -311,6 +326,10 @@ msgstr ""
 "Під час створення ``DateHeader`` *значення* може бути екземпляром "
 ":class:`~datetime.datetime`. Це означає, наприклад, що наступний код дійсний"
 " і виконує те, що можна очікувати:"
+
+#: ../../library/email.headerregistry.rst:169
+msgid "msg['Date'] = datetime(2011, 7, 15, 21)"
+msgstr ""
 
 #: ../../library/email.headerregistry.rst:171
 msgid ""
@@ -323,6 +342,10 @@ msgstr ""
 " а результуюче значення матиме часовий пояс ``-0000``. Набагато кориснішим є"
 " використання функції :func:`~email.utils.localtime` з модуля "
 ":mod:`~email.utils`::"
+
+#: ../../library/email.headerregistry.rst:176
+msgid "msg['Date'] = utils.localtime()"
+msgstr ""
 
 #: ../../library/email.headerregistry.rst:178
 msgid ""
@@ -715,9 +738,17 @@ msgstr ""
 "Клас, який використовується для представлення електронної адреси. Загальна "
 "форма адреси:"
 
+#: ../../library/email.headerregistry.rst:380
+msgid "[display_name] <username@domain>"
+msgstr ""
+
 #: ../../library/email.headerregistry.rst:382
 msgid "or::"
 msgstr "або::"
+
+#: ../../library/email.headerregistry.rst:384
+msgid "username@domain"
+msgstr ""
 
 #: ../../library/email.headerregistry.rst:386
 msgid ""
@@ -796,6 +827,10 @@ msgid ""
 msgstr ""
 "Клас, який використовується для представлення групи адрес. Загальна форма "
 "групи адрес:"
+
+#: ../../library/email.headerregistry.rst:432
+msgid "display_name: [address-list];"
+msgstr ""
 
 #: ../../library/email.headerregistry.rst:434
 msgid ""
