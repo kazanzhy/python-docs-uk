@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:11+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -47,6 +47,12 @@ msgid ""
 msgstr ""
 "Розширте шлях пошуку для модулів, які складають пакет. Цільове використання "
 "– розмістити наступний код у :file:`__init__.py`::"
+
+#: ../../library/pkgutil.rst:25
+msgid ""
+"from pkgutil import extend_path\n"
+"__path__ = extend_path(__path__, __name__)"
+msgstr ""
 
 #: ../../library/pkgutil.rst:28
 msgid ""
@@ -252,6 +258,15 @@ msgstr ""
 msgid "Examples::"
 msgstr "Приклади::"
 
+#: ../../library/pkgutil.rst:167
+msgid ""
+"# list all modules python can access\n"
+"walk_packages()\n"
+"\n"
+"# list all submodules of ctypes\n"
+"walk_packages(ctypes.__path__, ctypes.__name__ + '.')"
+msgstr ""
+
 #: ../../library/pkgutil.rst:187
 msgid "Get a resource from a package."
 msgstr "Отримати ресурс із пакету."
@@ -285,6 +300,12 @@ msgid ""
 msgstr ""
 "Для пакетів, розташованих у файловій системі, які вже були імпортовані, це "
 "приблизний еквівалент::"
+
+#: ../../library/pkgutil.rst:202
+msgid ""
+"d = os.path.dirname(sys.modules[package].__file__)\n"
+"data = open(os.path.join(d, resource), 'rb').read()"
+msgstr ""
 
 #: ../../library/pkgutil.rst:205
 msgid ""

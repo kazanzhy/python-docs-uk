@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-28 01:49+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -624,6 +624,15 @@ msgstr ""
 ":keyword:`async def` призводить до того, що функція співпрограми стає "
 "асинхронною функцією-генератором. Наприклад::"
 
+#: ../../reference/expressions.rst:466
+msgid ""
+"def gen():  # defines a generator function\n"
+"    yield 123\n"
+"\n"
+"async def agen(): # defines an asynchronous generator function\n"
+"    yield 123"
+msgstr ""
+
 #: ../../reference/expressions.rst:472
 msgid ""
 "Due to their side effects on the containing scope, ``yield`` expressions are"
@@ -931,6 +940,33 @@ msgid ""
 msgstr ""
 "Ось простий приклад, який демонструє поведінку генераторів і функцій "
 "генератора:"
+
+#: ../../reference/expressions.rst:652
+msgid ""
+">>> def echo(value=None):\n"
+"...     print(\"Execution starts when 'next()' is called for the first time.\")\n"
+"...     try:\n"
+"...         while True:\n"
+"...             try:\n"
+"...                 value = (yield value)\n"
+"...             except Exception as e:\n"
+"...                 value = e\n"
+"...     finally:\n"
+"...         print(\"Don't forget to clean up when 'close()' is called.\")\n"
+"...\n"
+">>> generator = echo(1)\n"
+">>> print(next(generator))\n"
+"Execution starts when 'next()' is called for the first time.\n"
+"1\n"
+">>> print(next(generator))\n"
+"None\n"
+">>> print(generator.send(2))\n"
+"2\n"
+">>> generator.throw(TypeError, \"spam\")\n"
+"TypeError('spam',)\n"
+">>> generator.close()\n"
+"Don't forget to clean up when 'close()' is called."
+msgstr ""
 
 #: ../../reference/expressions.rst:676
 msgid ""
@@ -1509,6 +1545,21 @@ msgstr ""
 "явних аргументів ключового слова, він обробляється *перед* аргументами "
 "ключового слова (та будь-якими аргументами ``**виразу`` – див. нижче). "
 "Тому::"
+
+#: ../../reference/expressions.rst:1095
+msgid ""
+">>> def f(a, b):\n"
+"...     print(a, b)\n"
+"...\n"
+">>> f(b=1, *(2,))\n"
+"2 1\n"
+">>> f(a=1, *(2,))\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"TypeError: f() got multiple values for keyword argument 'a'\n"
+">>> f(1, *(2,))\n"
+"1 2"
+msgstr ""
 
 #: ../../reference/expressions.rst:1107
 msgid ""
@@ -2557,9 +2608,21 @@ msgstr ""
 "Одним із поширених випадків використання є обробка зіставлених регулярних "
 "виразів:"
 
+#: ../../reference/expressions.rst:1820
+msgid ""
+"if matching := pattern.search(data):\n"
+"    do_something(matching)"
+msgstr ""
+
 #: ../../reference/expressions.rst:1825
 msgid "Or, when processing a file stream in chunks:"
 msgstr "Або при обробці потоку файлів у частинах:"
+
+#: ../../reference/expressions.rst:1827
+msgid ""
+"while chunk := file.read(9000):\n"
+"    process(chunk)"
+msgstr ""
 
 #: ../../reference/expressions.rst:1832
 msgid ""
@@ -2620,6 +2683,12 @@ msgstr ""
 "створення анонімних функцій. Вираз ``параметри лямбда: вираз`` дає об’єкт "
 "функції. Безіменний об’єкт поводиться як об’єкт-функція, визначений за "
 "допомогою:"
+
+#: ../../reference/expressions.rst:1888
+msgid ""
+"def <lambda>(parameters):\n"
+"    return expression"
+msgstr ""
 
 #: ../../reference/expressions.rst:1893
 msgid ""
@@ -2691,6 +2760,16 @@ msgid ""
 msgstr ""
 "У наступних рядках вирази обчислюватимуться в арифметичному порядку їх "
 "суфіксів:"
+
+#: ../../reference/expressions.rst:1955
+msgid ""
+"expr1, expr2, expr3, expr4\n"
+"(expr1, expr2, expr3, expr4)\n"
+"{expr1: expr2, expr3: expr4}\n"
+"expr1 + expr2 * (expr3 - expr4)\n"
+"expr1(expr2, expr3, *expr4, **expr5)\n"
+"expr3, expr4 = expr1, expr2"
+msgstr ""
 
 #: ../../reference/expressions.rst:1966
 msgid "Operator precedence"

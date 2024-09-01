@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-23 14:16+0000\n"
+"POT-Creation-Date: 2024-08-31 10:59+0000\n"
 "PO-Revision-Date: 2021-06-29 13:04+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -715,6 +715,22 @@ msgstr ""
 "Завдяки новим виняткам тепер можна уникнути звичайного використання "
 ":mod:`errno`. Наприклад, наступний код, написаний для Python 3.2::"
 
+#: ../../whatsnew/3.3.rst:366
+msgid ""
+"from errno import ENOENT, EACCES, EPERM\n"
+"\n"
+"try:\n"
+"    with open(\"document.txt\") as f:\n"
+"        content = f.read()\n"
+"except IOError as err:\n"
+"    if err.errno == ENOENT:\n"
+"        print(\"document.txt file is missing\")\n"
+"    elif err.errno in (EACCES, EPERM):\n"
+"        print(\"You are not allowed to read document.txt\")\n"
+"    else:\n"
+"        raise"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:379
 msgid ""
 "can now be written without the :mod:`errno` import and without manual "
@@ -722,6 +738,17 @@ msgid ""
 msgstr ""
 "тепер можна записати без імпорту :mod:`errno` і без ручної перевірки "
 "атрибутів винятків:"
+
+#: ../../whatsnew/3.3.rst:382
+msgid ""
+"try:\n"
+"    with open(\"document.txt\") as f:\n"
+"        content = f.read()\n"
+"except FileNotFoundError:\n"
+"    print(\"document.txt file is missing\")\n"
+"except PermissionError:\n"
+"    print(\"You are not allowed to read document.txt\")"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:392
 msgid ":pep:`3151` - Reworking the OS and IO Exception Hierarchy"
@@ -767,6 +794,16 @@ msgstr ""
 "Для простих ітераторів ``yield from iterable`` по суті є лише скороченою "
 "формою ``for item in iterable: yield item``::"
 
+#: ../../whatsnew/3.3.rst:417
+msgid ""
+">>> def g(x):\n"
+"...     yield from range(x, 0, -1)\n"
+"...     yield from range(x)\n"
+"...\n"
+">>> list(g(5))\n"
+"[5, 4, 3, 2, 1, 0, 1, 2, 3, 4]"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:424
 msgid ""
 "However, unlike an ordinary loop, ``yield from`` allows subgenerators to "
@@ -776,6 +813,36 @@ msgstr ""
 "Однак, на відміну від звичайного циклу, ``yield from`` дозволяє "
 "підгенераторам отримувати надіслані та викинуті значення безпосередньо з "
 "області виклику та повертати остаточне значення зовнішньому генератору:"
+
+#: ../../whatsnew/3.3.rst:428
+msgid ""
+">>> def accumulate():\n"
+"...     tally = 0\n"
+"...     while 1:\n"
+"...         next = yield\n"
+"...         if next is None:\n"
+"...             return tally\n"
+"...         tally += next\n"
+"...\n"
+">>> def gather_tallies(tallies):\n"
+"...     while 1:\n"
+"...         tally = yield from accumulate()\n"
+"...         tallies.append(tally)\n"
+"...\n"
+">>> tallies = []\n"
+">>> acc = gather_tallies(tallies)\n"
+">>> next(acc)  # Ensure the accumulator is ready to accept values\n"
+">>> for i in range(4):\n"
+"...     acc.send(i)\n"
+"...\n"
+">>> acc.send(None)  # Finish the first tally\n"
+">>> for i in range(5):\n"
+"...     acc.send(i)\n"
+"...\n"
+">>> acc.send(None)  # Finish the second tally\n"
+">>> tallies\n"
+"[6, 10]"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:455
 msgid ""
@@ -817,6 +884,24 @@ msgstr ""
 "зв’язаного виняткового контексту. Це дозволяє очистити повідомлення про "
 "помилки в програмах, які перетворюють типи винятків:"
 
+#: ../../whatsnew/3.3.rst:475
+msgid ""
+">>> class D:\n"
+"...     def __init__(self, extra):\n"
+"...         self._extra_attributes = extra\n"
+"...     def __getattr__(self, attr):\n"
+"...         try:\n"
+"...             return self._extra_attributes[attr]\n"
+"...         except KeyError:\n"
+"...             raise AttributeError(attr) from None\n"
+"...\n"
+">>> D({}).x\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"  File \"<stdin>\", line 8, in __getattr__\n"
+"AttributeError: x"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:490
 msgid ""
 "Without the ``from None`` suffix to suppress the cause, the original "
@@ -824,6 +909,30 @@ msgid ""
 msgstr ""
 "Без суфікса ``from None`` для придушення причини вихідний виняток "
 "відображатиметься за замовчуванням::"
+
+#: ../../whatsnew/3.3.rst:493
+msgid ""
+">>> class C:\n"
+"...     def __init__(self, extra):\n"
+"...         self._extra_attributes = extra\n"
+"...     def __getattr__(self, attr):\n"
+"...         try:\n"
+"...             return self._extra_attributes[attr]\n"
+"...         except KeyError:\n"
+"...             raise AttributeError(attr)\n"
+"...\n"
+">>> C({}).x\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 6, in __getattr__\n"
+"KeyError: 'x'\n"
+"\n"
+"During handling of the above exception, another exception occurred:\n"
+"\n"
+"Traceback (most recent call last):\n"
+"  File \"<stdin>\", line 1, in <module>\n"
+"  File \"<stdin>\", line 8, in __getattr__\n"
+"AttributeError: x"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:514
 msgid ""
@@ -834,6 +943,16 @@ msgstr ""
 "Жодна можливість налагодження не втрачається, оскільки вихідний контекст "
 "винятку залишається доступним, якщо це необхідно (наприклад, якщо проміжна "
 "бібліотека неправильно приховала цінні основні деталі):"
+
+#: ../../whatsnew/3.3.rst:518
+msgid ""
+">>> try:\n"
+"...     D({}).x\n"
+"... except AttributeError as exc:\n"
+"...     print(repr(exc.__context__))\n"
+"...\n"
+"KeyError('x',)"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:527
 msgid ":pep:`409` - Suppressing exception context"
@@ -899,13 +1018,55 @@ msgstr ""
 msgid "Example with (non-bound) methods::"
 msgstr "Приклад із (незв’язаними) методами::"
 
+#: ../../whatsnew/3.3.rst:560
+msgid ""
+">>> class C:\n"
+"...     def meth(self):\n"
+"...         pass\n"
+"...\n"
+">>> C.meth.__name__\n"
+"'meth'\n"
+">>> C.meth.__qualname__\n"
+"'C.meth'"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:569
 msgid "Example with nested classes::"
 msgstr "Приклад із вкладеними класами::"
 
+#: ../../whatsnew/3.3.rst:571
+msgid ""
+">>> class C:\n"
+"...     class D:\n"
+"...         def meth(self):\n"
+"...             pass\n"
+"...\n"
+">>> C.D.__name__\n"
+"'D'\n"
+">>> C.D.__qualname__\n"
+"'C.D'\n"
+">>> C.D.meth.__name__\n"
+"'meth'\n"
+">>> C.D.meth.__qualname__\n"
+"'C.D.meth'"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:585
 msgid "Example with nested functions::"
 msgstr "Приклад із вкладеними функціями::"
+
+#: ../../whatsnew/3.3.rst:587
+msgid ""
+">>> def outer():\n"
+"...     def inner():\n"
+"...         pass\n"
+"...     return inner\n"
+"...\n"
+">>> outer().__name__\n"
+"'inner'\n"
+">>> outer().__qualname__\n"
+"'outer.<locals>.inner'"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:597
 msgid ""
@@ -914,6 +1075,14 @@ msgid ""
 msgstr ""
 "Рядкове подання цих об’єктів також змінено, щоб включити нову, більш точну "
 "інформацію::"
+
+#: ../../whatsnew/3.3.rst:600
+msgid ""
+">>> str(C.D)\n"
+"\"<class '__main__.C.D'>\"\n"
+">>> str(C.D.meth)\n"
+"'<function C.D.meth at 0x7f46b9fe31e0>'"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:607
 msgid ":pep:`3155` - Qualified name for classes and functions"
@@ -1257,13 +1426,9 @@ msgstr "Деякі менші зміни, внесені до основної �
 #: ../../whatsnew/3.3.rst:781
 msgid ""
 "Added support for Unicode name aliases and named sequences. Both "
-":func:`unicodedata.lookup()` and ``'\\N{...}'`` now resolve name aliases, "
-"and :func:`unicodedata.lookup()` resolves named sequences too."
+":func:`unicodedata.lookup` and ``'\\N{...}'`` now resolve name aliases, and "
+":func:`unicodedata.lookup` resolves named sequences too."
 msgstr ""
-"Додано підтримку псевдонімів імен Unicode та іменованих послідовностей. І "
-":func:`unicodedata.lookup()`, і ``'\\N{...}''`` тепер розпізнають псевдоніми"
-" імен, а :func:`unicodedata.lookup()` також розпізнає іменовані "
-"послідовності."
 
 #: ../../whatsnew/3.3.rst:785
 msgid "(Contributed by Ezio Melotti in :issue:`12753`.)"
@@ -1467,6 +1632,19 @@ msgstr ""
 #: ../../whatsnew/3.3.rst:875
 msgid "Example of a segmentation fault on Linux:"
 msgstr "Приклад помилки сегментації в Linux:"
+
+#: ../../whatsnew/3.3.rst:877
+msgid ""
+"$ python -q -X faulthandler\n"
+">>> import ctypes\n"
+">>> ctypes.string_at(0)\n"
+"Fatal Python error: Segmentation fault\n"
+"\n"
+"Current thread 0x00007fb899f39700:\n"
+"  File \"/home/python/cpython/Lib/ctypes/__init__.py\", line 486 in string_at\n"
+"  File \"<stdin>\", line 1 in <module>\n"
+"Segmentation fault"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:891
 msgid "ipaddress"
@@ -1710,6 +1888,14 @@ msgid ""
 msgstr ""
 "Інкрементні кодеки CJK більше не скидаються під час кожного виклику методів "
 "encode(). Наприклад::"
+
+#: ../../whatsnew/3.3.rst:1005
+msgid ""
+">>> import codecs\n"
+">>> encoder = codecs.getincrementalencoder('hz')('strict')\n"
+">>> b''.join(encoder.encode(x) for x in '\\u52ff\\u65bd\\u65bc\\u4eba\\u3002 Bye.')\n"
+"b'~{NpJ)l6HK!#~} Bye.'"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:1010
 msgid ""
@@ -2230,6 +2416,10 @@ msgstr ""
 "зберігає значення за замовчуванням. Таким чином, ви можете створити "
 "політику, яка використовує символи рядка ``\\r\\n``, як це:"
 
+#: ../../whatsnew/3.3.rst:1239
+msgid "mypolicy = compat32.clone(linesep='\\r\\n')"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:1241
 msgid ""
 "Policies can be used to make the generation of messages in the format needed"
@@ -2336,6 +2526,28 @@ msgstr ""
 " які надають вам доступ до проаналізованих даних заголовка. Це означає, що "
 "тепер ви можете робити такі речі:"
 
+#: ../../whatsnew/3.3.rst:1291
+msgid ""
+">>> m = Message(policy=SMTP)\n"
+">>> m['To'] = 'Éric <foo@example.com>'\n"
+">>> m['to']\n"
+"'Éric <foo@example.com>'\n"
+">>> m['to'].addresses\n"
+"(Address(display_name='Éric', username='foo', domain='example.com'),)\n"
+">>> m['to'].addresses[0].username\n"
+"'foo'\n"
+">>> m['to'].addresses[0].display_name\n"
+"'Éric'\n"
+">>> m['Date'] = email.utils.localtime()\n"
+">>> m['Date'].datetime\n"
+"datetime.datetime(2012, 5, 25, 21, 39, 24, 465484, tzinfo=datetime.timezone(datetime.timedelta(-1, 72000), 'EDT'))\n"
+">>> m['Date']\n"
+"'Fri, 25 May 2012 21:44:27 -0400'\n"
+">>> print(m)\n"
+"To: =?utf-8?q?=C3=89ric?= <foo@example.com>\n"
+"Date: Fri, 25 May 2012 21:44:27 -0400"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:1310
 msgid ""
 "You will note that the unicode display name is automatically encoded as "
@@ -2354,9 +2566,27 @@ msgstr ""
 msgid "You can also create addresses from parts::"
 msgstr "Ви також можете створювати адреси з частин::"
 
+#: ../../whatsnew/3.3.rst:1318
+msgid ""
+">>> m['cc'] = [Group('pals', [Address('Bob', 'bob', 'example.com'),\n"
+"...                           Address('Sally', 'sally', 'example.com')]),\n"
+"...            Address('Bonzo', addr_spec='bonz@laugh.com')]\n"
+">>> print(m)\n"
+"To: =?utf-8?q?=C3=89ric?= <foo@example.com>\n"
+"Date: Fri, 25 May 2012 21:44:27 -0400\n"
+"cc: pals: Bob <bob@example.com>, Sally <sally@example.com>;, Bonzo <bonz@laugh.com>"
+msgstr ""
+
 #: ../../whatsnew/3.3.rst:1326
 msgid "Decoding to unicode is done automatically::"
 msgstr "Декодування в Юнікод виконується автоматично:"
+
+#: ../../whatsnew/3.3.rst:1328
+msgid ""
+">>> m2 = message_from_string(str(m))\n"
+">>> m2['to']\n"
+"'Éric <foo@example.com>'"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:1332
 msgid ""
@@ -2367,6 +2597,14 @@ msgstr ""
 "Коли ви аналізуєте повідомлення, ви можете використовувати атрибути "
 "``addresses`` і ``groups`` об’єктів заголовка для доступу до груп та окремих"
 " адрес::"
+
+#: ../../whatsnew/3.3.rst:1336
+msgid ""
+">>> m2['cc'].addresses\n"
+"(Address(display_name='Bob', username='bob', domain='example.com'), Address(display_name='Sally', username='sally', domain='example.com'), Address(display_name='Bonzo', username='bonz', domain='laugh.com'))\n"
+">>> m2['cc'].groups\n"
+"(Group(display_name='pals', addresses=(Address(display_name='Bob', username='bob', domain='example.com'), Address(display_name='Sally', username='sally', domain='example.com')), Group(display_name=None, addresses=(Address(display_name='Bonzo', username='bonz', domain='laugh.com'),))"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:1341
 msgid ""
@@ -2823,6 +3061,16 @@ msgid ""
 "The :class:`!nntplib.NNTP` class now supports the context management "
 "protocol to unconditionally consume :exc:`socket.error` exceptions and to "
 "close the NNTP connection when done::"
+msgstr ""
+
+#: ../../whatsnew/3.3.rst:1565
+msgid ""
+">>> from nntplib import NNTP\n"
+">>> with NNTP('news.gmane.org') as n:\n"
+"...     n.group('gmane.comp.python.committers')\n"
+"...\n"
+"('211 1755 1 1755 gmane.comp.python.committers', 1755, 1, 1755, 'gmane.comp.python.committers')\n"
+">>>"
 msgstr ""
 
 #: ../../whatsnew/3.3.rst:1572
@@ -3986,6 +4234,10 @@ msgstr ""
 "використовується :meth:`~urllib.request.Request.get_method`, щоб визначити, "
 "який метод HTTP слід використовувати. Наприклад, це надішле запит "
 "``'HEAD'``:"
+
+#: ../../whatsnew/3.3.rst:2108
+msgid ">>> urlopen(Request('https://www.python.org', method='HEAD'))"
+msgstr ""
 
 #: ../../whatsnew/3.3.rst:2110
 msgid "(:issue:`1673007`)"
