@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-31 10:59+0000\n"
+"POT-Creation-Date: 2024-09-06 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -225,15 +225,11 @@ msgstr "Запускайте цикл подій, доки не буде вик�
 
 #: ../../library/asyncio-eventloop.rst:129
 msgid ""
-"If :meth:`stop` is called before :meth:`run_forever()` is called, the loop "
+"If :meth:`stop` is called before :meth:`run_forever` is called, the loop "
 "will poll the I/O selector once with a timeout of zero, run all callbacks "
 "scheduled in response to I/O events (and those that were already scheduled),"
 " and then exit."
 msgstr ""
-"Якщо :meth:`stop` викликається перед викликом :meth:`run_forever()`, цикл "
-"опитує селектор вводу-виводу один раз із нульовим тайм-аутом, запускає всі "
-"зворотні виклики, заплановані у відповідь на події введення-виведення (і ті,"
-" які вже були заплановані), а потім вийдіть."
 
 #: ../../library/asyncio-eventloop.rst:134
 msgid ""
@@ -292,15 +288,10 @@ msgstr ""
 #: ../../library/asyncio-eventloop.rst:167
 msgid ""
 "Schedule all currently open :term:`asynchronous generator` objects to close "
-"with an :meth:`~agen.aclose()` call.  After calling this method, the event "
+"with an :meth:`~agen.aclose` call.  After calling this method, the event "
 "loop will issue a warning if a new asynchronous generator is iterated. This "
 "should be used to reliably finalize all scheduled asynchronous generators."
 msgstr ""
-"Заплануйте закриття всіх наразі відкритих об’єктів :term:`asynchronous "
-"generator` за допомогою виклику :meth:`~agen.aclose()`. Після виклику цього "
-"методу цикл подій видасть попередження, якщо повторюється новий асинхронний "
-"генератор. Це слід використовувати для надійного завершення всіх "
-"запланованих асинхронних генераторів."
 
 #: ../../library/asyncio-eventloop.rst:173
 msgid ""
@@ -2151,10 +2142,8 @@ msgstr "виняток."
 #: ../../library/asyncio-eventloop.rst:1403
 msgid ""
 "This method should not be overloaded in subclassed event loops.  For custom "
-"exception handling, use the :meth:`set_exception_handler()` method."
+"exception handling, use the :meth:`set_exception_handler` method."
 msgstr ""
-"Цей метод не слід перевантажувати в циклах подій підкласів. Для спеціальної "
-"обробки винятків використовуйте метод :meth:`set_exception_handler()`."
 
 #: ../../library/asyncio-eventloop.rst:1408
 msgid "Enabling debug mode"
@@ -2297,7 +2286,7 @@ msgstr ""
 #: ../../library/asyncio-eventloop.rst:1488
 msgid ""
 "an existing file descriptor (a positive integer), for example those created "
-"with :meth:`os.pipe()`"
+"with :meth:`os.pipe`"
 msgstr ""
 
 #: ../../library/asyncio-eventloop.rst:1489
