@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-31 10:59+0000\n"
+"POT-Creation-Date: 2024-09-06 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 01:08+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -254,7 +254,7 @@ msgstr ""
 "Модуль :mod:`json` завжди створює об’єкти :class:`str`, а не об’єкти "
 ":class:`bytes`. Тому ``fp.write()`` має підтримувати введення :class:`str`."
 
-#: ../../library/json.rst:165 ../../library/json.rst:444
+#: ../../library/json.rst:165 ../../library/json.rst:442
 msgid ""
 "If *ensure_ascii* is true (the default), the output is guaranteed to have "
 "all incoming non-ASCII characters escaped.  If *ensure_ascii* is false, "
@@ -285,7 +285,7 @@ msgstr ""
 "Якщо *allow_nan* має значення true, будуть використані їхні еквіваленти "
 "JavaScript (``NaN``, ``Infinity``, ``-Infinity``)."
 
-#: ../../library/json.rst:179 ../../library/json.rst:463
+#: ../../library/json.rst:179 ../../library/json.rst:461
 msgid ""
 "If *indent* is a non-negative integer or string, then JSON array elements "
 "and object members will be pretty-printed with that indent level.  An indent"
@@ -302,11 +302,11 @@ msgstr ""
 "є рядком (наприклад, ``\"\\t\"``), цей рядок використовується для відступу "
 "кожного рівня."
 
-#: ../../library/json.rst:186 ../../library/json.rst:470
+#: ../../library/json.rst:186 ../../library/json.rst:468
 msgid "Allow strings for *indent* in addition to integers."
 msgstr "Дозволити рядки для *відступу* на додаток до цілих чисел."
 
-#: ../../library/json.rst:189 ../../library/json.rst:473
+#: ../../library/json.rst:189 ../../library/json.rst:471
 msgid ""
 "If specified, *separators* should be an ``(item_separator, key_separator)`` "
 "tuple.  The default is ``(', ', ': ')`` if *indent* is ``None`` and ``(',', "
@@ -319,12 +319,12 @@ msgstr ""
 " компактне представлення JSON, ви повинні вказати ``(',', ':')``, щоб "
 "усунути пробіли."
 
-#: ../../library/json.rst:194 ../../library/json.rst:478
+#: ../../library/json.rst:194 ../../library/json.rst:476
 msgid "Use ``(',', ': ')`` as default if *indent* is not ``None``."
 msgstr ""
 "Використовуйте ``(',', ': ')`` за умовчанням, якщо *indent* не є ``None``."
 
-#: ../../library/json.rst:197 ../../library/json.rst:481
+#: ../../library/json.rst:197 ../../library/json.rst:479
 msgid ""
 "If specified, *default* should be a function that gets called for objects "
 "that can't otherwise be serialized.  It should return a JSON encodable "
@@ -351,7 +351,7 @@ msgid ""
 "it with the *cls* kwarg; otherwise :class:`JSONEncoder` is used."
 msgstr ""
 
-#: ../../library/json.rst:209 ../../library/json.rst:288
+#: ../../library/json.rst:209 ../../library/json.rst:287
 msgid ""
 "All optional parameters are now :ref:`keyword-only <keyword-"
 "only_parameter>`."
@@ -418,44 +418,29 @@ msgid ""
 "*object_pairs_hook* is an optional function that will be called with the "
 "result of any object literal decoded with an ordered list of pairs.  The "
 "return value of *object_pairs_hook* will be used instead of the "
-":class:`dict`.  This feature can be used to implement custom decoders. If "
+":class:`dict`.  This feature can be used to implement custom decoders.  If "
 "*object_hook* is also defined, the *object_pairs_hook* takes priority."
 msgstr ""
-"*object_pairs_hook* — це необов’язкова функція, яка буде викликана з "
-"результатом будь-якого об’єктного літералу, декодованого за допомогою "
-"впорядкованого списку пар. Повернене значення *object_pairs_hook* "
-"використовуватиметься замість :class:`dict`. Ця функція може бути "
-"використана для реалізації спеціальних декодерів. Якщо *object_hook* також "
-"визначено, *object_pairs_hook* має пріоритет."
 
-#: ../../library/json.rst:254 ../../library/json.rst:359
+#: ../../library/json.rst:254 ../../library/json.rst:358
 msgid "Added support for *object_pairs_hook*."
 msgstr "Додано підтримку *object_pairs_hook*."
 
-#: ../../library/json.rst:257 ../../library/json.rst:362
+#: ../../library/json.rst:257 ../../library/json.rst:361
 msgid ""
-"*parse_float*, if specified, will be called with the string of every JSON "
-"float to be decoded.  By default, this is equivalent to ``float(num_str)``. "
-"This can be used to use another datatype or parser for JSON floats (e.g. "
-":class:`decimal.Decimal`)."
+"*parse_float* is an optional function that will be called with the string of"
+" every JSON float to be decoded.  By default, this is equivalent to "
+"``float(num_str)``.  This can be used to use another datatype or parser for "
+"JSON floats (e.g. :class:`decimal.Decimal`)."
 msgstr ""
-"*parse_float*, якщо вказано, буде викликано з рядком кожного числа JSON з "
-"плаваючою точкою для декодування. За замовчуванням це еквівалентно "
-"``float(num_str)``. Це можна використовувати для використання іншого типу "
-"даних або синтаксичного аналізатора для JSON з плаваючою точкою (наприклад, "
-":class:`decimal.Decimal`)."
 
-#: ../../library/json.rst:262 ../../library/json.rst:367
+#: ../../library/json.rst:262 ../../library/json.rst:366
 msgid ""
-"*parse_int*, if specified, will be called with the string of every JSON int "
-"to be decoded.  By default, this is equivalent to ``int(num_str)``.  This "
-"can be used to use another datatype or parser for JSON integers (e.g. "
-":class:`float`)."
+"*parse_int* is an optional function that will be called with the string of "
+"every JSON int to be decoded.  By default, this is equivalent to "
+"``int(num_str)``.  This can be used to use another datatype or parser for "
+"JSON integers (e.g. :class:`float`)."
 msgstr ""
-"*parse_int*, якщо вказано, буде викликано з рядком кожного JSON int, який "
-"потрібно декодувати. За замовчуванням це еквівалентно ``int(num_str)``. Це "
-"можна використовувати для використання іншого типу даних або синтаксичного "
-"аналізатора для цілих чисел JSON (наприклад, :class:`float`)."
 
 #: ../../library/json.rst:267
 msgid ""
@@ -464,22 +449,19 @@ msgid ""
 "limitation <int_max_str_digits>` to help avoid denial of service attacks."
 msgstr ""
 
-#: ../../library/json.rst:273 ../../library/json.rst:372
+#: ../../library/json.rst:273 ../../library/json.rst:371
 msgid ""
-"*parse_constant*, if specified, will be called with one of the following "
-"strings: ``'-Infinity'``, ``'Infinity'``, ``'NaN'``. This can be used to "
-"raise an exception if invalid JSON numbers are encountered."
+"*parse_constant* is an optional function that will be called with one of the"
+" following strings: ``'-Infinity'``, ``'Infinity'``, ``'NaN'``.  This can be"
+" used to raise an exception if invalid JSON numbers are encountered."
 msgstr ""
-"*parse_constant*, якщо вказано, буде викликано з одним із таких рядків: "
-"``'-Infinity'``, ``'Infinity'``, ``'NaN'``. Це можна використати для "
-"створення винятку, якщо виявлено недійсні номери JSON."
 
-#: ../../library/json.rst:278
+#: ../../library/json.rst:277
 msgid ""
 "*parse_constant* doesn't get called on 'null', 'true', 'false' anymore."
 msgstr "*parse_constant* більше не викликається на 'null', 'true', 'false'."
 
-#: ../../library/json.rst:281
+#: ../../library/json.rst:280
 msgid ""
 "To use a custom :class:`JSONDecoder` subclass, specify it with the ``cls`` "
 "kwarg; otherwise :class:`JSONDecoder` is used.  Additional keyword arguments"
@@ -489,8 +471,8 @@ msgstr ""
 "за допомогою ``cls`` kwarg; інакше :class:`JSONDecoder` використовується. "
 "Додаткові ключові аргументи будуть передані конструктору класу."
 
-#: ../../library/json.rst:285 ../../library/json.rst:303
-#: ../../library/json.rst:382
+#: ../../library/json.rst:284 ../../library/json.rst:302
+#: ../../library/json.rst:380
 msgid ""
 "If the data being deserialized is not a valid JSON document, a "
 ":exc:`JSONDecodeError` will be raised."
@@ -498,7 +480,7 @@ msgstr ""
 "Якщо дані, які десеріалізуються, не є дійсним документом JSON, виникне "
 ":exc:`JSONDecodeError`."
 
-#: ../../library/json.rst:291
+#: ../../library/json.rst:290
 msgid ""
 "*fp* can now be a :term:`binary file`. The input encoding should be UTF-8, "
 "UTF-16 or UTF-32."
@@ -506,7 +488,7 @@ msgstr ""
 "*fp* тепер може бути :term:`binary file`. Вхідне кодування має бути UTF-8, "
 "UTF-16 або UTF-32."
 
-#: ../../library/json.rst:297
+#: ../../library/json.rst:296
 msgid ""
 "Deserialize *s* (a :class:`str`, :class:`bytes` or :class:`bytearray` "
 "instance containing a JSON document) to a Python object using this "
@@ -516,11 +498,11 @@ msgstr ""
 ":class:`bytearray`, що містить документ JSON) в об’єкт Python за допомогою "
 "цієї :ref:`таблиці перетворення <json-to-py-table>`."
 
-#: ../../library/json.rst:301
+#: ../../library/json.rst:300
 msgid "The other arguments have the same meaning as in :func:`load`."
 msgstr "Інші аргументи мають те саме значення, що й у :func:`load`."
 
-#: ../../library/json.rst:306
+#: ../../library/json.rst:305
 msgid ""
 "*s* can now be of type :class:`bytes` or :class:`bytearray`. The input "
 "encoding should be UTF-8, UTF-16 or UTF-32."
@@ -528,95 +510,95 @@ msgstr ""
 "*s* тепер може бути типу :class:`bytes` або :class:`bytearray`. Вхідне "
 "кодування має бути UTF-8, UTF-16 або UTF-32."
 
-#: ../../library/json.rst:310
+#: ../../library/json.rst:309
 msgid "The keyword argument *encoding* has been removed."
 msgstr "Аргумент ключового слова *кодування* видалено."
 
-#: ../../library/json.rst:315
+#: ../../library/json.rst:314
 msgid "Encoders and Decoders"
 msgstr "Кодери та декодери"
 
-#: ../../library/json.rst:319
+#: ../../library/json.rst:318
 msgid "Simple JSON decoder."
 msgstr "Простий декодер JSON."
 
-#: ../../library/json.rst:321
+#: ../../library/json.rst:320
 msgid "Performs the following translations in decoding by default:"
 msgstr "Виконує такі переклади в декодуванні за замовчуванням:"
 
-#: ../../library/json.rst:326 ../../library/json.rst:415
+#: ../../library/json.rst:325 ../../library/json.rst:413
 msgid "JSON"
 msgstr "JSON"
 
-#: ../../library/json.rst:326 ../../library/json.rst:415
+#: ../../library/json.rst:325 ../../library/json.rst:413
 msgid "Python"
 msgstr "Python"
 
-#: ../../library/json.rst:328 ../../library/json.rst:417
+#: ../../library/json.rst:327 ../../library/json.rst:415
 msgid "object"
 msgstr "об'єкт"
 
-#: ../../library/json.rst:328 ../../library/json.rst:417
+#: ../../library/json.rst:327 ../../library/json.rst:415
 msgid "dict"
 msgstr "дикт"
 
-#: ../../library/json.rst:330 ../../library/json.rst:419
+#: ../../library/json.rst:329 ../../library/json.rst:417
 msgid "array"
 msgstr "масив"
 
-#: ../../library/json.rst:330
+#: ../../library/json.rst:329
 msgid "list"
 msgstr "список"
 
-#: ../../library/json.rst:332 ../../library/json.rst:421
+#: ../../library/json.rst:331 ../../library/json.rst:419
 msgid "string"
 msgstr "рядок"
 
-#: ../../library/json.rst:332 ../../library/json.rst:421
+#: ../../library/json.rst:331 ../../library/json.rst:419
 msgid "str"
 msgstr "вул"
 
-#: ../../library/json.rst:334
+#: ../../library/json.rst:333
 msgid "number (int)"
 msgstr "число (ціле)"
 
-#: ../../library/json.rst:334
+#: ../../library/json.rst:333
 msgid "int"
 msgstr "внутр"
 
-#: ../../library/json.rst:336
+#: ../../library/json.rst:335
 msgid "number (real)"
 msgstr "число (дійсне)"
 
-#: ../../library/json.rst:336
+#: ../../library/json.rst:335
 msgid "float"
 msgstr "плавати"
 
-#: ../../library/json.rst:338 ../../library/json.rst:425
+#: ../../library/json.rst:337 ../../library/json.rst:423
 msgid "true"
 msgstr "правда"
 
-#: ../../library/json.rst:338 ../../library/json.rst:425
+#: ../../library/json.rst:337 ../../library/json.rst:423
 msgid "True"
 msgstr "правда"
 
-#: ../../library/json.rst:340 ../../library/json.rst:427
+#: ../../library/json.rst:339 ../../library/json.rst:425
 msgid "false"
 msgstr "помилковий"
 
-#: ../../library/json.rst:340 ../../library/json.rst:427
+#: ../../library/json.rst:339 ../../library/json.rst:425
 msgid "False"
 msgstr "помилковий"
 
-#: ../../library/json.rst:342 ../../library/json.rst:429
+#: ../../library/json.rst:341 ../../library/json.rst:427
 msgid "null"
 msgstr "нуль"
 
-#: ../../library/json.rst:342 ../../library/json.rst:429
+#: ../../library/json.rst:341 ../../library/json.rst:427
 msgid "None"
 msgstr "Жодного"
 
-#: ../../library/json.rst:345
+#: ../../library/json.rst:344
 msgid ""
 "It also understands ``NaN``, ``Infinity``, and ``-Infinity`` as their "
 "corresponding ``float`` values, which is outside the JSON spec."
@@ -624,29 +606,24 @@ msgstr ""
 "Він також розуміє ``NaN``, ``Infinity`` і ``-Infinity`` як їхні відповідні "
 "значення ``float``, що виходить за межі специфікації JSON."
 
-#: ../../library/json.rst:348
+#: ../../library/json.rst:347
 msgid ""
-"*object_hook*, if specified, will be called with the result of every JSON "
-"object decoded and its return value will be used in place of the given "
-":class:`dict`.  This can be used to provide custom deserializations (e.g. to"
-" support `JSON-RPC <https://www.jsonrpc.org>`_ class hinting)."
+"*object_hook* is an optional function that will be called with the result of"
+" every JSON object decoded and its return value will be used in place of the"
+" given :class:`dict`.  This can be used to provide custom deserializations "
+"(e.g. to support `JSON-RPC <https://www.jsonrpc.org>`_ class hinting)."
 msgstr ""
 
-#: ../../library/json.rst:353
+#: ../../library/json.rst:352
 msgid ""
-"*object_pairs_hook*, if specified will be called with the result of every "
-"JSON object decoded with an ordered list of pairs.  The return value of "
-"*object_pairs_hook* will be used instead of the :class:`dict`.  This feature"
-" can be used to implement custom decoders.  If *object_hook* is also "
-"defined, the *object_pairs_hook* takes priority."
+"*object_pairs_hook* is an optional function that will be called with the "
+"result of every JSON object decoded with an ordered list of pairs.  The "
+"return value of *object_pairs_hook* will be used instead of the "
+":class:`dict`.  This feature can be used to implement custom decoders.  If "
+"*object_hook* is also defined, the *object_pairs_hook* takes priority."
 msgstr ""
-"*object_pairs_hook*, якщо вказано, буде викликано з результатом кожного "
-"об’єкта JSON, декодованого за допомогою впорядкованого списку пар. Повернене"
-" значення *object_pairs_hook* використовуватиметься замість :class:`dict`. "
-"Ця функція може бути використана для реалізації спеціальних декодерів. Якщо "
-"*object_hook* також визначено, *object_pairs_hook* має пріоритет."
 
-#: ../../library/json.rst:377
+#: ../../library/json.rst:375
 msgid ""
 "If *strict* is false (``True`` is the default), then control characters will"
 " be allowed inside strings.  Control characters in this context are those "
@@ -658,12 +635,12 @@ msgstr ""
 "цьому контексті — це символи з кодами символів у діапазоні 0--31, включаючи "
 "``'\\t'`` (табуляція), ``'\\n'``, ``'\\r'`` і ``'\\0'``."
 
-#: ../../library/json.rst:385 ../../library/json.rst:486
+#: ../../library/json.rst:383 ../../library/json.rst:484
 msgid "All parameters are now :ref:`keyword-only <keyword-only_parameter>`."
 msgstr ""
 "Усі параметри тепер :ref:`лише для ключових слів <keyword-only_parameter>`."
 
-#: ../../library/json.rst:390
+#: ../../library/json.rst:388
 msgid ""
 "Return the Python representation of *s* (a :class:`str` instance containing "
 "a JSON document)."
@@ -671,7 +648,7 @@ msgstr ""
 "Повертає представлення Python *s* (екземпляр :class:`str`, що містить "
 "документ JSON)."
 
-#: ../../library/json.rst:393
+#: ../../library/json.rst:391
 msgid ""
 ":exc:`JSONDecodeError` will be raised if the given JSON document is not "
 "valid."
@@ -679,7 +656,7 @@ msgstr ""
 ":exc:`JSONDecodeError` буде викликано, якщо вказаний документ JSON "
 "недійсний."
 
-#: ../../library/json.rst:398
+#: ../../library/json.rst:396
 msgid ""
 "Decode a JSON document from *s* (a :class:`str` beginning with a JSON "
 "document) and return a 2-tuple of the Python representation and the index in"
@@ -689,7 +666,7 @@ msgstr ""
 "JSON) і повертайте 2-кортеж представлення Python та індекс у *s*, де "
 "документ закінчився."
 
-#: ../../library/json.rst:402
+#: ../../library/json.rst:400
 msgid ""
 "This can be used to decode a JSON document from a string that may have "
 "extraneous data at the end."
@@ -697,31 +674,31 @@ msgstr ""
 "Це можна використовувати для декодування документа JSON із рядка, який може "
 "містити сторонні дані в кінці."
 
-#: ../../library/json.rst:408
+#: ../../library/json.rst:406
 msgid "Extensible JSON encoder for Python data structures."
 msgstr "Розширюваний кодувальник JSON для структур даних Python."
 
-#: ../../library/json.rst:410
+#: ../../library/json.rst:408
 msgid "Supports the following objects and types by default:"
 msgstr "За замовчуванням підтримує такі об’єкти та типи:"
 
-#: ../../library/json.rst:419
+#: ../../library/json.rst:417
 msgid "list, tuple"
 msgstr "список, кортеж"
 
-#: ../../library/json.rst:423
+#: ../../library/json.rst:421
 msgid "int, float, int- & float-derived Enums"
 msgstr "int, float, int- & float-derived Enums"
 
-#: ../../library/json.rst:423
+#: ../../library/json.rst:421
 msgid "number"
 msgstr "номер"
 
-#: ../../library/json.rst:432
+#: ../../library/json.rst:430
 msgid "Added support for int- and float-derived Enum classes."
 msgstr "Додано підтримку класів Enum, похідних від int і float."
 
-#: ../../library/json.rst:435
+#: ../../library/json.rst:433
 msgid ""
 "To extend this to recognize other objects, subclass and implement a "
 ":meth:`~JSONEncoder.default` method with another method that returns a "
@@ -729,7 +706,7 @@ msgid ""
 "superclass implementation (to raise :exc:`TypeError`)."
 msgstr ""
 
-#: ../../library/json.rst:440
+#: ../../library/json.rst:438
 msgid ""
 "If *skipkeys* is false (the default), a :exc:`TypeError` will be raised when"
 " trying to encode keys that are not :class:`str`, :class:`int`, "
@@ -741,7 +718,7 @@ msgstr ""
 ":class:`int`, :class:`float` або ``Жодного``. Якщо *skipkeys* має значення "
 "true, такі елементи просто пропускаються."
 
-#: ../../library/json.rst:448
+#: ../../library/json.rst:446
 msgid ""
 "If *check_circular* is true (the default), then lists, dicts, and custom "
 "encoded objects will be checked for circular references during encoding to "
@@ -749,7 +726,7 @@ msgid ""
 "Otherwise, no such check takes place."
 msgstr ""
 
-#: ../../library/json.rst:453
+#: ../../library/json.rst:451
 msgid ""
 "If *allow_nan* is true (the default), then ``NaN``, ``Infinity``, and "
 "``-Infinity`` will be encoded as such.  This behavior is not JSON "
@@ -763,7 +740,7 @@ msgstr ""
 "декодерів на основі JavaScript. В іншому випадку це буде :exc:`ValueError` "
 "для кодування таких плаваючих значень."
 
-#: ../../library/json.rst:459
+#: ../../library/json.rst:457
 msgid ""
 "If *sort_keys* is true (default: ``False``), then the output of dictionaries"
 " will be sorted by key; this is useful for regression tests to ensure that "
@@ -774,7 +751,7 @@ msgstr ""
 "регресійних тестів, щоб гарантувати, що серіалізації JSON можна порівнювати "
 "щодня."
 
-#: ../../library/json.rst:492
+#: ../../library/json.rst:490
 msgid ""
 "Implement this method in a subclass such that it returns a serializable "
 "object for *o*, or calls the base implementation (to raise a "
@@ -783,13 +760,13 @@ msgstr ""
 "Реалізуйте цей метод у підкласі так, щоб він повертав серіалізований об’єкт "
 "для *o* або викликав базову реалізацію (щоб викликати :exc:`TypeError`)."
 
-#: ../../library/json.rst:496
+#: ../../library/json.rst:494
 msgid ""
 "For example, to support arbitrary iterators, you could implement "
 ":meth:`~JSONEncoder.default` like this::"
 msgstr ""
 
-#: ../../library/json.rst:499
+#: ../../library/json.rst:497
 msgid ""
 "def default(self, o):\n"
 "   try:\n"
@@ -802,20 +779,20 @@ msgid ""
 "   return super().default(o)"
 msgstr ""
 
-#: ../../library/json.rst:512
+#: ../../library/json.rst:510
 msgid ""
 "Return a JSON string representation of a Python data structure, *o*.  For "
 "example::"
 msgstr ""
 "Повертає рядкове представлення JSON структури даних Python, *o*. Наприклад::"
 
-#: ../../library/json.rst:515
+#: ../../library/json.rst:513
 msgid ""
 ">>> json.JSONEncoder().encode({\"foo\": [\"bar\", \"baz\"]})\n"
 "'{\"foo\": [\"bar\", \"baz\"]}'"
 msgstr ""
 
-#: ../../library/json.rst:521
+#: ../../library/json.rst:519
 msgid ""
 "Encode the given object, *o*, and yield each string representation as "
 "available.  For example::"
@@ -823,46 +800,46 @@ msgstr ""
 "Закодуйте вказаний об’єкт, *o*, і передайте кожне представлення рядка як "
 "доступне. Наприклад::"
 
-#: ../../library/json.rst:524
+#: ../../library/json.rst:522
 msgid ""
 "for chunk in json.JSONEncoder().iterencode(bigobject):\n"
 "    mysocket.write(chunk)"
 msgstr ""
 
-#: ../../library/json.rst:529
+#: ../../library/json.rst:527
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../library/json.rst:533
+#: ../../library/json.rst:531
 msgid ""
 "Subclass of :exc:`ValueError` with the following additional attributes:"
 msgstr "Підклас :exc:`ValueError` з такими додатковими атрибутами:"
 
-#: ../../library/json.rst:537
+#: ../../library/json.rst:535
 msgid "The unformatted error message."
 msgstr "Неформатне повідомлення про помилку."
 
-#: ../../library/json.rst:541
+#: ../../library/json.rst:539
 msgid "The JSON document being parsed."
 msgstr "Документ JSON аналізується."
 
-#: ../../library/json.rst:545
+#: ../../library/json.rst:543
 msgid "The start index of *doc* where parsing failed."
 msgstr "Початковий індекс *doc*, де синтаксичний аналіз не вдався."
 
-#: ../../library/json.rst:549
+#: ../../library/json.rst:547
 msgid "The line corresponding to *pos*."
 msgstr "Рядок, що відповідає *pos*."
 
-#: ../../library/json.rst:553
+#: ../../library/json.rst:551
 msgid "The column corresponding to *pos*."
 msgstr "Стовпець, що відповідає *pos*."
 
-#: ../../library/json.rst:559
+#: ../../library/json.rst:557
 msgid "Standard Compliance and Interoperability"
 msgstr "Відповідність стандартам і сумісність"
 
-#: ../../library/json.rst:561
+#: ../../library/json.rst:559
 msgid ""
 "The JSON format is specified by :rfc:`7159` and by `ECMA-404 "
 "<https://www.ecma-international.org/publications-and-"
@@ -877,7 +854,7 @@ msgstr ""
 " простоти підкласи :class:`JSONEncoder` і :class:`JSONDecoder`, а також інші"
 " параметри, окрім тих, що зазначені явно, не розглядаються."
 
-#: ../../library/json.rst:567
+#: ../../library/json.rst:565
 msgid ""
 "This module does not comply with the RFC in a strict fashion, implementing "
 "some extensions that are valid JavaScript but not valid JSON.  In "
@@ -886,11 +863,11 @@ msgstr ""
 "Цей модуль не повністю відповідає RFC, реалізуючи деякі розширення, які є "
 "дійсним JavaScript, але не дійсним JSON. Зокрема:"
 
-#: ../../library/json.rst:570
+#: ../../library/json.rst:568
 msgid "Infinite and NaN number values are accepted and output;"
 msgstr "Нескінченні та NaN числові значення приймаються та виводяться;"
 
-#: ../../library/json.rst:571
+#: ../../library/json.rst:569
 msgid ""
 "Repeated names within an object are accepted, and only the value of the last"
 " name-value pair is used."
@@ -898,7 +875,7 @@ msgstr ""
 "Повторювані імена в межах об’єкта приймаються, і використовується лише "
 "значення останньої пари ім’я-значення."
 
-#: ../../library/json.rst:574
+#: ../../library/json.rst:572
 msgid ""
 "Since the RFC permits RFC-compliant parsers to accept input texts that are "
 "not RFC-compliant, this module's deserializer is technically RFC-compliant "
@@ -908,11 +885,11 @@ msgstr ""
 " RFC-сумісними, десеріалізатор цього модуля є технічно RFC-сумісним за "
 "умовчанням."
 
-#: ../../library/json.rst:579
+#: ../../library/json.rst:577
 msgid "Character Encodings"
 msgstr "Кодування символів"
 
-#: ../../library/json.rst:581
+#: ../../library/json.rst:579
 msgid ""
 "The RFC requires that JSON be represented using either UTF-8, UTF-16, or "
 "UTF-32, with UTF-8 being the recommended default for maximum "
@@ -922,7 +899,7 @@ msgstr ""
 "UTF-32, причому UTF-8 є рекомендованим за замовчуванням для максимальної "
 "сумісності."
 
-#: ../../library/json.rst:584
+#: ../../library/json.rst:582
 msgid ""
 "As permitted, though not required, by the RFC, this module's serializer sets"
 " *ensure_ascii=True* by default, thus escaping the output so that the "
@@ -932,7 +909,7 @@ msgstr ""
 "встановлює *ensure_ascii=True* за замовчуванням, таким чином усуваючи "
 "вихідні дані, щоб кінцеві рядки містили лише символи ASCII."
 
-#: ../../library/json.rst:588
+#: ../../library/json.rst:586
 msgid ""
 "Other than the *ensure_ascii* parameter, this module is defined strictly in "
 "terms of conversion between Python objects and :class:`Unicode strings "
@@ -943,7 +920,7 @@ msgstr ""
 " перетворення між об’єктами Python і :class:`рядками Unicode <str>`, і, "
 "отже, іншим чином безпосередньо не вирішує проблему кодування символів."
 
-#: ../../library/json.rst:593
+#: ../../library/json.rst:591
 msgid ""
 "The RFC prohibits adding a byte order mark (BOM) to the start of a JSON "
 "text, and this module's serializer does not add a BOM to its output. The RFC"
@@ -957,7 +934,7 @@ msgstr ""
 "своїх вхідних даних. Десеріалізатор цього модуля викликає :exc:`ValueError`,"
 " коли присутня початкова специфікація."
 
-#: ../../library/json.rst:599
+#: ../../library/json.rst:597
 msgid ""
 "The RFC does not explicitly forbid JSON strings which contain byte sequences"
 " that don't correspond to valid Unicode characters (e.g. unpaired UTF-16 "
@@ -971,11 +948,11 @@ msgstr ""
 "замовчуванням цей модуль приймає та виводить (якщо є в оригінальному "
 ":class:`str`) кодові точки для таких послідовностей."
 
-#: ../../library/json.rst:607
+#: ../../library/json.rst:605
 msgid "Infinite and NaN Number Values"
 msgstr "Нескінченні значення чисел NaN"
 
-#: ../../library/json.rst:609
+#: ../../library/json.rst:607
 msgid ""
 "The RFC does not permit the representation of infinite or NaN number values."
 " Despite that, by default, this module accepts and outputs ``Infinity``, "
@@ -987,7 +964,7 @@ msgstr ""
 " і ``NaN`` так, якби вони були дійсними літеральними значеннями номерів "
 "JSON::"
 
-#: ../../library/json.rst:613
+#: ../../library/json.rst:611
 msgid ""
 ">>> # Neither of these calls raises an exception, but the results are not valid JSON\n"
 ">>> json.dumps(float('-inf'))\n"
@@ -1001,7 +978,7 @@ msgid ""
 "nan"
 msgstr ""
 
-#: ../../library/json.rst:624
+#: ../../library/json.rst:622
 msgid ""
 "In the serializer, the *allow_nan* parameter can be used to alter this "
 "behavior.  In the deserializer, the *parse_constant* parameter can be used "
@@ -1011,11 +988,11 @@ msgstr ""
 "поведінку. У десеріалізаторі можна використовувати параметр "
 "*parse_constant*, щоб змінити цю поведінку."
 
-#: ../../library/json.rst:630
+#: ../../library/json.rst:628
 msgid "Repeated Names Within an Object"
 msgstr "Повторювані імена в межах об’єкта"
 
-#: ../../library/json.rst:632
+#: ../../library/json.rst:630
 msgid ""
 "The RFC specifies that the names within a JSON object should be unique, but "
 "does not mandate how repeated names in JSON objects should be handled.  By "
@@ -1027,24 +1004,24 @@ msgstr ""
 "замовчуванням цей модуль не викликає винятку; замість цього він ігнорує все,"
 " окрім пари прізвище-значення для даного імені::"
 
-#: ../../library/json.rst:637
+#: ../../library/json.rst:635
 msgid ""
 ">>> weird_json = '{\"x\": 1, \"x\": 2, \"x\": 3}'\n"
 ">>> json.loads(weird_json)\n"
 "{'x': 3}"
 msgstr ""
 
-#: ../../library/json.rst:641
+#: ../../library/json.rst:639
 msgid "The *object_pairs_hook* parameter can be used to alter this behavior."
 msgstr ""
 "Параметр *object_pairs_hook* можна використовувати, щоб змінити цю "
 "поведінку."
 
-#: ../../library/json.rst:645
+#: ../../library/json.rst:643
 msgid "Top-level Non-Object, Non-Array Values"
 msgstr "Необ’єктні та немасивні значення верхнього рівня"
 
-#: ../../library/json.rst:647
+#: ../../library/json.rst:645
 msgid ""
 "The old version of JSON specified by the obsolete :rfc:`4627` required that "
 "the top-level value of a JSON text must be either a JSON object or array "
@@ -1060,7 +1037,7 @@ msgstr ""
 " не реалізував і ніколи не реалізував це обмеження ні в серіалізаторі, ні в "
 "десеріалізаторі."
 
-#: ../../library/json.rst:654
+#: ../../library/json.rst:652
 msgid ""
 "Regardless, for maximum interoperability, you may wish to voluntarily adhere"
 " to the restriction yourself."
@@ -1068,32 +1045,32 @@ msgstr ""
 "Незважаючи на це, для максимальної сумісності ви можете самостійно "
 "добровільно дотримуватися цього обмеження."
 
-#: ../../library/json.rst:659
+#: ../../library/json.rst:657
 msgid "Implementation Limitations"
 msgstr "Обмеження реалізації"
 
-#: ../../library/json.rst:661
+#: ../../library/json.rst:659
 msgid "Some JSON deserializer implementations may set limits on:"
 msgstr ""
 "Деякі реалізації десеріалізатора JSON можуть встановлювати обмеження на:"
 
-#: ../../library/json.rst:663
+#: ../../library/json.rst:661
 msgid "the size of accepted JSON texts"
 msgstr "розмір прийнятих текстів JSON"
 
-#: ../../library/json.rst:664
+#: ../../library/json.rst:662
 msgid "the maximum level of nesting of JSON objects and arrays"
 msgstr "максимальний рівень вкладеності об'єктів і масивів JSON"
 
-#: ../../library/json.rst:665
+#: ../../library/json.rst:663
 msgid "the range and precision of JSON numbers"
 msgstr "діапазон і точність чисел JSON"
 
-#: ../../library/json.rst:666
+#: ../../library/json.rst:664
 msgid "the content and maximum length of JSON strings"
 msgstr "вміст і максимальну довжину рядків JSON"
 
-#: ../../library/json.rst:668
+#: ../../library/json.rst:666
 msgid ""
 "This module does not impose any such limits beyond those of the relevant "
 "Python datatypes themselves or the Python interpreter itself."
@@ -1101,7 +1078,7 @@ msgstr ""
 "Цей модуль не накладає жодних таких обмежень, окрім обмежень відповідних "
 "типів даних Python або самого інтерпретатора Python."
 
-#: ../../library/json.rst:671
+#: ../../library/json.rst:669
 msgid ""
 "When serializing to JSON, beware any such limitations in applications that "
 "may consume your JSON.  In particular, it is common for JSON numbers to be "
@@ -1119,15 +1096,15 @@ msgstr ""
 "під час серіалізації екзотичних числових типів, таких як "
 ":class:`decimal.Decimal`."
 
-#: ../../library/json.rst:684
+#: ../../library/json.rst:682
 msgid "Command Line Interface"
 msgstr "Інтерфейс командного рядка"
 
-#: ../../library/json.rst:689
+#: ../../library/json.rst:687
 msgid "**Source code:** :source:`Lib/json/tool.py`"
 msgstr "**Вихідний код:** :source:`Lib/json/tool.py`"
 
-#: ../../library/json.rst:693
+#: ../../library/json.rst:691
 msgid ""
 "The :mod:`json.tool` module provides a simple command line interface to "
 "validate and pretty-print JSON objects."
@@ -1135,13 +1112,13 @@ msgstr ""
 "Модуль :mod:`json.tool` забезпечує простий інтерфейс командного рядка для "
 "перевірки та красивого друку об’єктів JSON."
 
-#: ../../library/json.rst:696
+#: ../../library/json.rst:694
 msgid ""
 "If the optional ``infile`` and ``outfile`` arguments are not specified, "
 ":data:`sys.stdin` and :data:`sys.stdout` will be used respectively:"
 msgstr ""
 
-#: ../../library/json.rst:699
+#: ../../library/json.rst:697
 msgid ""
 "$ echo '{\"json\": \"obj\"}' | python -m json.tool\n"
 "{\n"
@@ -1151,7 +1128,7 @@ msgid ""
 "Expecting property name enclosed in double quotes: line 1 column 2 (char 1)"
 msgstr ""
 
-#: ../../library/json.rst:708
+#: ../../library/json.rst:706
 msgid ""
 "The output is now in the same order as the input. Use the :option:`--sort-"
 "keys` option to sort the output of dictionaries alphabetically by key."
@@ -1160,15 +1137,15 @@ msgstr ""
 ":option:`--sort-keys`, щоб відсортувати вихідні дані словників за алфавітом "
 "за ключем."
 
-#: ../../library/json.rst:715
+#: ../../library/json.rst:713
 msgid "Command line options"
 msgstr "Параметри командного рядка"
 
-#: ../../library/json.rst:719
+#: ../../library/json.rst:717
 msgid "The JSON file to be validated or pretty-printed:"
 msgstr "Файл JSON, який потрібно перевірити або роздрукувати:"
 
-#: ../../library/json.rst:721
+#: ../../library/json.rst:719
 msgid ""
 "$ python -m json.tool mp_films.json\n"
 "[\n"
@@ -1183,21 +1160,21 @@ msgid ""
 "]"
 msgstr ""
 
-#: ../../library/json.rst:735
+#: ../../library/json.rst:733
 msgid "If *infile* is not specified, read from :data:`sys.stdin`."
 msgstr ""
 
-#: ../../library/json.rst:739
+#: ../../library/json.rst:737
 msgid ""
 "Write the output of the *infile* to the given *outfile*. Otherwise, write it"
 " to :data:`sys.stdout`."
 msgstr ""
 
-#: ../../library/json.rst:744
+#: ../../library/json.rst:742
 msgid "Sort the output of dictionaries alphabetically by key."
 msgstr "Сортувати вихідні дані словників за алфавітом за ключем."
 
-#: ../../library/json.rst:750
+#: ../../library/json.rst:748
 msgid ""
 "Disable escaping of non-ascii characters, see :func:`json.dumps` for more "
 "information."
@@ -1205,23 +1182,23 @@ msgstr ""
 "Вимкніть екранування символів, відмінних від ASCII, див. :func:`json.dumps` "
 "для отримання додаткової інформації."
 
-#: ../../library/json.rst:756
+#: ../../library/json.rst:754
 msgid "Parse every input line as separate JSON object."
 msgstr "Проаналізуйте кожен рядок введення як окремий об’єкт JSON."
 
-#: ../../library/json.rst:762
+#: ../../library/json.rst:760
 msgid "Mutually exclusive options for whitespace control."
 msgstr "Взаємовиключні параметри керування пробілами."
 
-#: ../../library/json.rst:768
+#: ../../library/json.rst:766
 msgid "Show the help message."
 msgstr "Показати довідкове повідомлення."
 
-#: ../../library/json.rst:772
+#: ../../library/json.rst:770
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/json.rst:773
+#: ../../library/json.rst:771
 msgid ""
 "As noted in `the errata for RFC 7159 <https://www.rfc-"
 "editor.org/errata_search.php?rfc=7159>`_, JSON permits literal U+2028 (LINE "
