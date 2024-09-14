@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-31 10:59+0000\n"
+"POT-Creation-Date: 2024-09-13 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -533,11 +533,17 @@ msgstr ""
 msgid "ABC for classes that provide the :meth:`~object.__call__` method."
 msgstr ""
 
-#: ../../library/collections.abc.rst:221
+#: ../../library/collections.abc.rst:219
+msgid ""
+"See :ref:`annotating-callables` for details on how to use :class:`!Callable`"
+" in type annotations."
+msgstr ""
+
+#: ../../library/collections.abc.rst:224
 msgid "ABC for classes that provide the :meth:`~container.__iter__` method."
 msgstr ""
 
-#: ../../library/collections.abc.rst:223
+#: ../../library/collections.abc.rst:226
 msgid ""
 "Checking ``isinstance(obj, Iterable)`` detects classes that are registered "
 "as :class:`Iterable` or that have an :meth:`~container.__iter__` method, but"
@@ -546,11 +552,11 @@ msgid ""
 "whether an object is :term:`iterable` is to call ``iter(obj)``."
 msgstr ""
 
-#: ../../library/collections.abc.rst:232
+#: ../../library/collections.abc.rst:235
 msgid "ABC for sized iterable container classes."
 msgstr "ABC для класів ітерованих контейнерів розміру."
 
-#: ../../library/collections.abc.rst:238
+#: ../../library/collections.abc.rst:241
 msgid ""
 "ABC for classes that provide the :meth:`~iterator.__iter__` and "
 ":meth:`~iterator.__next__` methods.  See also the definition of "
@@ -559,13 +565,13 @@ msgstr ""
 "ABC для класів, які забезпечують методи :meth:`~iterator.__iter__` і "
 ":meth:`~iterator.__next__`. Дивіться також визначення :term:`iterator`."
 
-#: ../../library/collections.abc.rst:244
+#: ../../library/collections.abc.rst:247
 msgid ""
 "ABC for iterable classes that also provide the :meth:`~object.__reversed__` "
 "method."
 msgstr ""
 
-#: ../../library/collections.abc.rst:251
+#: ../../library/collections.abc.rst:254
 msgid ""
 "ABC for :term:`generator` classes that implement the protocol defined in "
 ":pep:`342` that extends :term:`iterators <iterator>` with the "
@@ -573,13 +579,19 @@ msgid ""
 ":meth:`~generator.close` methods."
 msgstr ""
 
-#: ../../library/collections.abc.rst:262
+#: ../../library/collections.abc.rst:259
+msgid ""
+"See :ref:`annotating-generators-and-coroutines` for details on using "
+":class:`!Generator` in type annotations."
+msgstr ""
+
+#: ../../library/collections.abc.rst:268
 msgid "ABCs for read-only and mutable :term:`sequences <sequence>`."
 msgstr ""
 "Азбука для доступних лише для читання та змінних :term:`послідовностей "
 "<sequence>`."
 
-#: ../../library/collections.abc.rst:264
+#: ../../library/collections.abc.rst:270
 msgid ""
 "Implementation note: Some of the mixin methods, such as "
 ":meth:`~container.__iter__`, :meth:`~object.__reversed__` and :meth:`index`,"
@@ -591,40 +603,40 @@ msgid ""
 "overridden."
 msgstr ""
 
-#: ../../library/collections.abc.rst:273
+#: ../../library/collections.abc.rst:279
 msgid "The index() method added support for *stop* and *start* arguments."
 msgstr "Метод index() додав підтримку аргументів *stop* і *start*."
 
-#: ../../library/collections.abc.rst:277
+#: ../../library/collections.abc.rst:283
 msgid ""
 "The :class:`ByteString` ABC has been deprecated. For use in typing, prefer a"
 " union, like ``bytes | bytearray``, or :class:`collections.abc.Buffer`. For "
 "use as an ABC, prefer :class:`Sequence` or :class:`collections.abc.Buffer`."
 msgstr ""
 
-#: ../../library/collections.abc.rst:286
+#: ../../library/collections.abc.rst:292
 msgid "ABCs for read-only and mutable :ref:`sets <types-set>`."
 msgstr ""
 
-#: ../../library/collections.abc.rst:291
+#: ../../library/collections.abc.rst:297
 msgid "ABCs for read-only and mutable :term:`mappings <mapping>`."
 msgstr "Азбука лише для читання та змінних :term:`відображення <mapping>`."
 
-#: ../../library/collections.abc.rst:298
+#: ../../library/collections.abc.rst:304
 msgid ""
 "ABCs for mapping, items, keys, and values :term:`views <dictionary view>`."
 msgstr ""
 "Азбука зіставлення, елементів, ключів і значень :term:`views <dictionary "
 "view>`."
 
-#: ../../library/collections.abc.rst:302
+#: ../../library/collections.abc.rst:308
 msgid ""
 "ABC for :term:`awaitable` objects, which can be used in :keyword:`await` "
 "expressions.  Custom implementations must provide the "
 ":meth:`~object.__await__` method."
 msgstr ""
 
-#: ../../library/collections.abc.rst:306
+#: ../../library/collections.abc.rst:312
 msgid ""
 ":term:`Coroutine <coroutine>` objects and instances of the "
 ":class:`~collections.abc.Coroutine` ABC are all instances of this ABC."
@@ -632,7 +644,7 @@ msgstr ""
 ":term:`Coroutine <coroutine>` об’єкти та екземпляри "
 ":class:`~collections.abc.Coroutine` ABC є екземплярами цього ABC."
 
-#: ../../library/collections.abc.rst:310
+#: ../../library/collections.abc.rst:316
 msgid ""
 "In CPython, generator-based coroutines (:term:`generators <generator>` "
 "decorated with :func:`@types.coroutine <types.coroutine>`) are *awaitables*,"
@@ -641,7 +653,7 @@ msgid ""
 ":func:`inspect.isawaitable` to detect them."
 msgstr ""
 
-#: ../../library/collections.abc.rst:320
+#: ../../library/collections.abc.rst:326
 msgid ""
 "ABC for :term:`coroutine` compatible classes.  These implement the following"
 " methods, defined in :ref:`coroutine-objects`: :meth:`~coroutine.send`, "
@@ -650,7 +662,7 @@ msgid ""
 ":class:`Coroutine` instances are also instances of :class:`Awaitable`."
 msgstr ""
 
-#: ../../library/collections.abc.rst:328
+#: ../../library/collections.abc.rst:334
 msgid ""
 "In CPython, generator-based coroutines (:term:`generators <generator>` "
 "decorated with :func:`@types.coroutine <types.coroutine>`) are *awaitables*,"
@@ -659,13 +671,20 @@ msgid ""
 ":func:`inspect.isawaitable` to detect them."
 msgstr ""
 
-#: ../../library/collections.abc.rst:338
+#: ../../library/collections.abc.rst:340
+msgid ""
+"See :ref:`annotating-generators-and-coroutines` for details on using "
+":class:`!Coroutine` in type annotations. The variance and order of type "
+"parameters correspond to those of :class:`Generator`."
+msgstr ""
+
+#: ../../library/collections.abc.rst:349
 msgid ""
 "ABC for classes that provide an ``__aiter__`` method.  See also the "
 "definition of :term:`asynchronous iterable`."
 msgstr ""
 
-#: ../../library/collections.abc.rst:345
+#: ../../library/collections.abc.rst:356
 msgid ""
 "ABC for classes that provide ``__aiter__`` and ``__anext__`` methods.  See "
 "also the definition of :term:`asynchronous iterator`."
@@ -673,23 +692,29 @@ msgstr ""
 "ABC для класів, які надають методи ``__aiter__`` і ``__anext__``. Дивіться "
 "також визначення :term:`asynchronous iterator`."
 
-#: ../../library/collections.abc.rst:352
+#: ../../library/collections.abc.rst:363
 msgid ""
 "ABC for :term:`asynchronous generator` classes that implement the protocol "
 "defined in :pep:`525` and :pep:`492`."
 msgstr ""
 
-#: ../../library/collections.abc.rst:359
+#: ../../library/collections.abc.rst:366
+msgid ""
+"See :ref:`annotating-generators-and-coroutines` for details on using "
+":class:`!AsyncGenerator` in type annotations."
+msgstr ""
+
+#: ../../library/collections.abc.rst:373
 msgid ""
 "ABC for classes that provide the :meth:`~object.__buffer__` method, "
 "implementing the :ref:`buffer protocol <bufferobjects>`. See :pep:`688`."
 msgstr ""
 
-#: ../../library/collections.abc.rst:365
+#: ../../library/collections.abc.rst:379
 msgid "Examples and Recipes"
 msgstr "Приклади та рецепти"
 
-#: ../../library/collections.abc.rst:367
+#: ../../library/collections.abc.rst:381
 msgid ""
 "ABCs allow us to ask classes or instances if they provide particular "
 "functionality, for example::"
@@ -697,14 +722,14 @@ msgstr ""
 "ABC дозволяє нам запитувати класи чи екземпляри, чи надають вони певну "
 "функціональність, наприклад:"
 
-#: ../../library/collections.abc.rst:370
+#: ../../library/collections.abc.rst:384
 msgid ""
 "size = None\n"
 "if isinstance(myvar, collections.abc.Sized):\n"
 "    size = len(myvar)"
 msgstr ""
 
-#: ../../library/collections.abc.rst:374
+#: ../../library/collections.abc.rst:388
 msgid ""
 "Several of the ABCs are also useful as mixins that make it easier to develop"
 " classes supporting container APIs.  For example, to write a class "
@@ -715,7 +740,7 @@ msgid ""
 ":meth:`~frozenset.isdisjoint`::"
 msgstr ""
 
-#: ../../library/collections.abc.rst:381
+#: ../../library/collections.abc.rst:395
 msgid ""
 "class ListBasedSet(collections.abc.Set):\n"
 "    ''' Alternate set implementation favoring space over speed\n"
@@ -740,12 +765,12 @@ msgid ""
 "overlap = s1 & s2            # The __and__() method is supported automatically"
 msgstr ""
 
-#: ../../library/collections.abc.rst:403
+#: ../../library/collections.abc.rst:417
 msgid "Notes on using :class:`Set` and :class:`MutableSet` as a mixin:"
 msgstr ""
 "Примітки щодо використання :class:`Set` і :class:`MutableSet` як міксину:"
 
-#: ../../library/collections.abc.rst:406
+#: ../../library/collections.abc.rst:420
 msgid ""
 "Since some set operations create new sets, the default mixin methods need a "
 "way to create new instances from an :term:`iterable`. The class constructor "
@@ -758,14 +783,14 @@ msgid ""
 "an iterable argument."
 msgstr ""
 
-#: ../../library/collections.abc.rst:417
+#: ../../library/collections.abc.rst:431
 msgid ""
 "To override the comparisons (presumably for speed, as the semantics are "
 "fixed), redefine :meth:`~object.__le__` and :meth:`~object.__ge__`, then the"
 " other operations will automatically follow suit."
 msgstr ""
 
-#: ../../library/collections.abc.rst:423
+#: ../../library/collections.abc.rst:437
 msgid ""
 "The :class:`Set` mixin provides a :meth:`!_hash` method to compute a hash "
 "value for the set; however, :meth:`~object.__hash__` is not defined because "
@@ -774,7 +799,7 @@ msgid ""
 "define ``__hash__ = Set._hash``."
 msgstr ""
 
-#: ../../library/collections.abc.rst:431
+#: ../../library/collections.abc.rst:445
 msgid ""
 "`OrderedSet recipe <https://code.activestate.com/recipes/576694/>`_ for an "
 "example built on :class:`MutableSet`."
@@ -782,7 +807,7 @@ msgstr ""
 "`Рецепт OrderedSet <https://code.activestate.com/recipes/576694/>`_ для "
 "прикладу, побудованого на :class:`MutableSet`."
 
-#: ../../library/collections.abc.rst:434
+#: ../../library/collections.abc.rst:448
 msgid "For more about ABCs, see the :mod:`abc` module and :pep:`3119`."
 msgstr ""
 "Щоб дізнатися більше про ABC, перегляньте модуль :mod:`abc` і :pep:`3119`."
