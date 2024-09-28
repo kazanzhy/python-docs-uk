@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-20 14:17+0000\n"
+"POT-Creation-Date: 2024-09-27 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:09+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -381,7 +381,7 @@ msgstr ""
 "повідомлення будуть оброблені. В іншому випадку кореневий рівень буде "
 "використано як ефективний рівень."
 
-#: ../../library/logging.rst:211 ../../library/logging.rst:554
+#: ../../library/logging.rst:211 ../../library/logging.rst:555
 msgid "See :ref:`levels` for a list of levels."
 msgstr "Перегляньте :ref:`levels` список рівнів."
 
@@ -556,19 +556,13 @@ msgstr ""
 #: ../../library/logging.rst:306
 msgid ""
 "The fourth keyword argument is *extra* which can be used to pass a "
-"dictionary which is used to populate the __dict__ of the :class:`LogRecord` "
-"created for the logging event with user-defined attributes. These custom "
-"attributes can then be used as you like. For example, they could be "
-"incorporated into logged messages. For example::"
+"dictionary which is used to populate the :attr:`~object.__dict__` of the "
+":class:`LogRecord` created for the logging event with user-defined "
+"attributes. These custom attributes can then be used as you like. For "
+"example, they could be incorporated into logged messages. For example::"
 msgstr ""
-"Четвертий аргумент ключового слова — *extra*, який можна використовувати для"
-" передачі словника, який використовується для заповнення __dict__ "
-":class:`LogRecord`, створеного для події журналювання, атрибутами, "
-"визначеними користувачем. Потім ці настроювані атрибути можна "
-"використовувати як завгодно. Наприклад, їх можна включити до зареєстрованих "
-"повідомлень. Наприклад::"
 
-#: ../../library/logging.rst:312
+#: ../../library/logging.rst:313
 msgid ""
 "FORMAT = '%(asctime)s %(clientip)-15s %(user)-8s %(message)s'\n"
 "logging.basicConfig(format=FORMAT)\n"
@@ -577,24 +571,24 @@ msgid ""
 "logger.warning('Protocol problem: %s', 'connection reset', extra=d)"
 msgstr ""
 
-#: ../../library/logging.rst:318
+#: ../../library/logging.rst:319
 msgid "would print something like"
 msgstr "надрукував би щось подібне"
 
-#: ../../library/logging.rst:320
+#: ../../library/logging.rst:321
 msgid ""
 "2006-02-08 22:20:02,165 192.168.0.1 fbloggs  Protocol problem: connection "
 "reset"
 msgstr ""
 
-#: ../../library/logging.rst:324
+#: ../../library/logging.rst:325
 msgid ""
 "The keys in the dictionary passed in *extra* should not clash with the keys "
 "used by the logging system. (See the section on :ref:`logrecord-attributes` "
 "for more information on which keys are used by the logging system.)"
 msgstr ""
 
-#: ../../library/logging.rst:328
+#: ../../library/logging.rst:329
 msgid ""
 "If you choose to use these attributes in logged messages, you need to "
 "exercise some care. In the above example, for instance, the "
@@ -612,7 +606,7 @@ msgstr ""
 "форматування рядка. Тому в цьому випадку вам завжди потрібно передавати "
 "*додатковий* словник за допомогою цих ключів."
 
-#: ../../library/logging.rst:335
+#: ../../library/logging.rst:336
 msgid ""
 "While this might be annoying, this feature is intended for use in "
 "specialized circumstances, such as multi-threaded servers where the same "
@@ -630,7 +624,7 @@ msgstr ""
 "імовірно, що спеціалізовані :class:`Formatter`\\ s будуть використовуватися "
 "з певними :class:`Handler`\\ s."
 
-#: ../../library/logging.rst:342
+#: ../../library/logging.rst:343
 msgid ""
 "If no handler is attached to this logger (or any of its ancestors, taking "
 "into account the relevant :attr:`Logger.propagate` attributes), the message "
@@ -641,19 +635,19 @@ msgstr ""
 "повідомлення буде надіслано до обробника, встановленого на "
 ":attr:`lastResort`."
 
-#: ../../library/logging.rst:346
+#: ../../library/logging.rst:347
 msgid "The *stack_info* parameter was added."
 msgstr "Додано параметр *stack_info*."
 
-#: ../../library/logging.rst:349
+#: ../../library/logging.rst:350
 msgid "The *exc_info* parameter can now accept exception instances."
 msgstr "Параметр *exc_info* тепер може приймати винятки."
 
-#: ../../library/logging.rst:352
+#: ../../library/logging.rst:353
 msgid "The *stacklevel* parameter was added."
 msgstr "Додано параметр *stacklevel*."
 
-#: ../../library/logging.rst:358
+#: ../../library/logging.rst:359
 msgid ""
 "Logs a message with level :const:`INFO` on this logger. The arguments are "
 "interpreted as for :meth:`debug`."
@@ -661,7 +655,7 @@ msgstr ""
 "Записує повідомлення з рівнем :const:`INFO` у цьому реєстраторі. Аргументи "
 "інтерпретуються як для :meth:`debug`."
 
-#: ../../library/logging.rst:364
+#: ../../library/logging.rst:365
 msgid ""
 "Logs a message with level :const:`WARNING` on this logger. The arguments are"
 " interpreted as for :meth:`debug`."
@@ -669,7 +663,7 @@ msgstr ""
 "Записує повідомлення з рівнем :const:`WARNING` до цього реєстратора. "
 "Аргументи інтерпретуються як для :meth:`debug`."
 
-#: ../../library/logging.rst:367
+#: ../../library/logging.rst:368
 msgid ""
 "There is an obsolete method ``warn`` which is functionally identical to "
 "``warning``. As ``warn`` is deprecated, please do not use it - use "
@@ -679,7 +673,7 @@ msgstr ""
 "Оскільки ``попередження`` є застарілим, будь ласка, не використовуйте його -"
 " використовуйте замість нього ``попередження``."
 
-#: ../../library/logging.rst:373
+#: ../../library/logging.rst:374
 msgid ""
 "Logs a message with level :const:`ERROR` on this logger. The arguments are "
 "interpreted as for :meth:`debug`."
@@ -687,7 +681,7 @@ msgstr ""
 "Записує повідомлення з рівнем :const:`ERROR` у цьому реєстраторі. Аргументи "
 "інтерпретуються як для :meth:`debug`."
 
-#: ../../library/logging.rst:379
+#: ../../library/logging.rst:380
 msgid ""
 "Logs a message with level :const:`CRITICAL` on this logger. The arguments "
 "are interpreted as for :meth:`debug`."
@@ -695,7 +689,7 @@ msgstr ""
 "Записує повідомлення з рівнем :const:`CRITICAL` до цього реєстратора. "
 "Аргументи інтерпретуються як для :meth:`debug`."
 
-#: ../../library/logging.rst:385
+#: ../../library/logging.rst:386
 msgid ""
 "Logs a message with integer level *level* on this logger. The other "
 "arguments are interpreted as for :meth:`debug`."
@@ -703,7 +697,7 @@ msgstr ""
 "Записує повідомлення з цілочисельним рівнем *level* у цьому реєстраторі. "
 "Інші аргументи інтерпретуються як для :meth:`debug`."
 
-#: ../../library/logging.rst:391
+#: ../../library/logging.rst:392
 msgid ""
 "Logs a message with level :const:`ERROR` on this logger. The arguments are "
 "interpreted as for :meth:`debug`. Exception info is added to the logging "
@@ -713,15 +707,15 @@ msgstr ""
 " інтерпретуються як для :meth:`debug`. Інформація про винятки додається до "
 "повідомлення журналу. Цей метод слід викликати лише з обробника винятків."
 
-#: ../../library/logging.rst:398
+#: ../../library/logging.rst:399
 msgid "Adds the specified filter *filter* to this logger."
 msgstr "Додає вказаний фільтр *filter* до цього реєстратора."
 
-#: ../../library/logging.rst:403
+#: ../../library/logging.rst:404
 msgid "Removes the specified filter *filter* from this logger."
 msgstr "Видаляє вказаний фільтр *filter* з цього реєстратора."
 
-#: ../../library/logging.rst:408
+#: ../../library/logging.rst:409
 msgid ""
 "Apply this logger's filters to the record and return ``True`` if the record "
 "is to be processed. The filters are consulted in turn, until one of them "
@@ -735,15 +729,15 @@ msgstr ""
 " буде оброблено (передано обробникам). Якщо повертається хибне значення, "
 "подальша обробка запису не відбувається."
 
-#: ../../library/logging.rst:417
+#: ../../library/logging.rst:418
 msgid "Adds the specified handler *hdlr* to this logger."
 msgstr "Додає вказаний обробник *hdlr* до цього реєстратора."
 
-#: ../../library/logging.rst:422
+#: ../../library/logging.rst:423
 msgid "Removes the specified handler *hdlr* from this logger."
 msgstr "Видаляє вказаний обробник *hdlr* із цього реєстратора."
 
-#: ../../library/logging.rst:427
+#: ../../library/logging.rst:428
 msgid ""
 "Finds the caller's source filename and line number. Returns the filename, "
 "line number, function name and stack information as a 4-element tuple. The "
@@ -754,7 +748,7 @@ msgstr ""
 "4-елементного кортежу. Інформація про стек повертається як ``None``, якщо "
 "*stack_info* не має значення ``True``."
 
-#: ../../library/logging.rst:431
+#: ../../library/logging.rst:432
 msgid ""
 "The *stacklevel* parameter is passed from code calling the :meth:`debug` and"
 " other APIs. If greater than 1, the excess is used to skip stack frames "
@@ -770,7 +764,7 @@ msgstr ""
 "інформація в журналі подій стосувалася не допоміжного/оболонкового коду, а "
 "коду, який його викликає."
 
-#: ../../library/logging.rst:441
+#: ../../library/logging.rst:442
 msgid ""
 "Handles a record by passing it to all handlers associated with this logger "
 "and its ancestors (until a false value of *propagate* is found). This method"
@@ -784,7 +778,7 @@ msgstr ""
 "із сокета, а також тих, що створюються локально. Фільтрування на рівні "
 "реєстратора застосовується за допомогою :meth:`~Logger.filter`."
 
-#: ../../library/logging.rst:449
+#: ../../library/logging.rst:450
 msgid ""
 "This is a factory method which can be overridden in subclasses to create "
 "specialized :class:`LogRecord` instances."
@@ -792,7 +786,7 @@ msgstr ""
 "Це фабричний метод, який можна замінити в підкласах для створення "
 "спеціалізованих екземплярів :class:`LogRecord`."
 
-#: ../../library/logging.rst:454
+#: ../../library/logging.rst:455
 msgid ""
 "Checks to see if this logger has any handlers configured. This is done by "
 "looking for handlers in this logger and its parents in the logger hierarchy."
@@ -808,15 +802,15 @@ msgstr ""
 " 'propagate', встановленим на false - це буде останній реєстратор, який "
 "перевіряється на наявність обробників."
 
-#: ../../library/logging.rst:463
+#: ../../library/logging.rst:464
 msgid "Loggers can now be pickled and unpickled."
 msgstr "Лісоруби тепер можна маринувати та не пикувати."
 
-#: ../../library/logging.rst:469
+#: ../../library/logging.rst:470
 msgid "Logging Levels"
 msgstr "Рівні реєстрації"
 
-#: ../../library/logging.rst:471
+#: ../../library/logging.rst:472
 msgid ""
 "The numeric values of logging levels are given in the following table. These"
 " are primarily of interest if you want to define your own levels, and need "
@@ -830,63 +824,63 @@ msgstr ""
 "визначаєте рівень з тим самим числовим значенням, він перезаписує попередньо"
 " визначене значення; попередньо визначене ім'я втрачено."
 
-#: ../../library/logging.rst:478
+#: ../../library/logging.rst:479
 msgid "Level"
 msgstr "Рівень"
 
-#: ../../library/logging.rst:478
+#: ../../library/logging.rst:479
 msgid "Numeric value"
 msgstr "Числове значення"
 
-#: ../../library/logging.rst:478
+#: ../../library/logging.rst:479
 msgid "What it means / When to use it"
 msgstr ""
 
-#: ../../library/logging.rst:480
+#: ../../library/logging.rst:481
 msgid "0"
 msgstr "0"
 
-#: ../../library/logging.rst:480
+#: ../../library/logging.rst:481
 msgid ""
 "When set on a logger, indicates that ancestor loggers are to be consulted to"
 " determine the effective level. If that still resolves to :const:`!NOTSET`, "
 "then all events are logged. When set on a handler, all events are handled."
 msgstr ""
 
-#: ../../library/logging.rst:488
+#: ../../library/logging.rst:489
 msgid "10"
 msgstr "10"
 
-#: ../../library/logging.rst:488
+#: ../../library/logging.rst:489
 msgid ""
 "Detailed information, typically only of interest to a developer trying to "
 "diagnose a problem."
 msgstr ""
 
-#: ../../library/logging.rst:492
+#: ../../library/logging.rst:493
 msgid "20"
 msgstr "20"
 
-#: ../../library/logging.rst:492
+#: ../../library/logging.rst:493
 msgid "Confirmation that things are working as expected."
 msgstr "Підтвердження того, що все працює належним чином."
 
-#: ../../library/logging.rst:495
+#: ../../library/logging.rst:496
 msgid "30"
 msgstr "30"
 
-#: ../../library/logging.rst:495
+#: ../../library/logging.rst:496
 msgid ""
 "An indication that something unexpected happened, or that a problem might "
 "occur in the near future (e.g. 'disk space low'). The software is still "
 "working as expected."
 msgstr ""
 
-#: ../../library/logging.rst:502
+#: ../../library/logging.rst:503
 msgid "40"
 msgstr "40"
 
-#: ../../library/logging.rst:502
+#: ../../library/logging.rst:503
 msgid ""
 "Due to a more serious problem, the software has not been able to perform "
 "some function."
@@ -894,22 +888,22 @@ msgstr ""
 "Через більш серйозну проблему програмне забезпечення не може виконувати "
 "деякі функції."
 
-#: ../../library/logging.rst:506
+#: ../../library/logging.rst:507
 msgid "50"
 msgstr "50"
 
-#: ../../library/logging.rst:506
+#: ../../library/logging.rst:507
 msgid ""
 "A serious error, indicating that the program itself may be unable to "
 "continue running."
 msgstr ""
 "Серйозна помилка, яка вказує на те, що сама програма може не працювати далі."
 
-#: ../../library/logging.rst:515
+#: ../../library/logging.rst:516
 msgid "Handler Objects"
 msgstr "Об’єкти обробки"
 
-#: ../../library/logging.rst:517
+#: ../../library/logging.rst:518
 msgid ""
 "Handlers have the following attributes and methods. Note that "
 ":class:`Handler` is never instantiated directly; this class acts as a base "
@@ -917,7 +911,7 @@ msgid ""
 "subclasses needs to call :meth:`Handler.__init__`."
 msgstr ""
 
-#: ../../library/logging.rst:526
+#: ../../library/logging.rst:527
 msgid ""
 "Initializes the :class:`Handler` instance by setting its level, setting the "
 "list of filters to the empty list and creating a lock (using "
@@ -928,7 +922,7 @@ msgstr ""
 "допомогою :meth:`createLock`) для серіалізації доступу до механізму "
 "введення-виведення."
 
-#: ../../library/logging.rst:533
+#: ../../library/logging.rst:534
 msgid ""
 "Initializes a thread lock which can be used to serialize access to "
 "underlying I/O functionality which may not be threadsafe."
@@ -937,15 +931,15 @@ msgstr ""
 "доступу до основної функції введення-виведення, яка може бути небезпечною "
 "для потоків."
 
-#: ../../library/logging.rst:539
+#: ../../library/logging.rst:540
 msgid "Acquires the thread lock created with :meth:`createLock`."
 msgstr "Отримує блокування потоку, створене за допомогою :meth:`createLock`."
 
-#: ../../library/logging.rst:544
+#: ../../library/logging.rst:545
 msgid "Releases the thread lock acquired with :meth:`acquire`."
 msgstr "Звільняє блокування потоку, отримане за допомогою :meth:`acquire`."
 
-#: ../../library/logging.rst:549
+#: ../../library/logging.rst:550
 msgid ""
 "Sets the threshold for this handler to *level*. Logging messages which are "
 "less severe than *level* will be ignored. When a handler is created, the "
@@ -956,7 +950,7 @@ msgstr ""
 "створюється, рівень встановлюється на :const:`NOTSET` (що спричиняє обробку "
 "всіх повідомлень)."
 
-#: ../../library/logging.rst:556
+#: ../../library/logging.rst:557
 msgid ""
 "The *level* parameter now accepts a string representation of the level such "
 "as 'INFO' as an alternative to the integer constants such as :const:`INFO`."
@@ -964,19 +958,19 @@ msgstr ""
 "Параметр *level* тепер приймає рядкове представлення рівня, наприклад "
 "\"INFO\", як альтернативу цілим константам, таким як :const:`INFO`."
 
-#: ../../library/logging.rst:564
+#: ../../library/logging.rst:565
 msgid "Sets the :class:`Formatter` for this handler to *fmt*."
 msgstr "Встановлює :class:`Formatter` для цього обробника на *fmt*."
 
-#: ../../library/logging.rst:569
+#: ../../library/logging.rst:570
 msgid "Adds the specified filter *filter* to this handler."
 msgstr "Додає вказаний фільтр *filter* до цього обробника."
 
-#: ../../library/logging.rst:574
+#: ../../library/logging.rst:575
 msgid "Removes the specified filter *filter* from this handler."
 msgstr "Видаляє вказаний фільтр *filter* з цього обробника."
 
-#: ../../library/logging.rst:579
+#: ../../library/logging.rst:580
 msgid ""
 "Apply this handler's filters to the record and return ``True`` if the record"
 " is to be processed. The filters are consulted in turn, until one of them "
@@ -989,7 +983,7 @@ msgstr ""
 " поверне хибне значення. Якщо жоден із них не повертає хибне значення, запис"
 " буде видано. Якщо повертається хибне значення, обробник не видасть запис."
 
-#: ../../library/logging.rst:588
+#: ../../library/logging.rst:589
 msgid ""
 "Ensure all logging output has been flushed. This version does nothing and is"
 " intended to be implemented by subclasses."
@@ -997,7 +991,7 @@ msgstr ""
 "Переконайтеся, що всі вихідні дані журналу скинуто. Ця версія нічого не "
 "робить і призначена для реалізації підкласами."
 
-#: ../../library/logging.rst:594
+#: ../../library/logging.rst:595
 msgid ""
 "Tidy up any resources used by the handler. This version does no output but "
 "removes the handler from an internal list of handlers which is closed when "
@@ -1009,7 +1003,7 @@ msgstr ""
 "час виклику :func:`shutdown`. Підкласи повинні гарантувати, що це "
 "викликається з перевизначених методів :meth:`close`."
 
-#: ../../library/logging.rst:602
+#: ../../library/logging.rst:603
 msgid ""
 "Conditionally emits the specified logging record, depending on filters which"
 " may have been added to the handler. Wraps the actual emission of the record"
@@ -1019,7 +1013,7 @@ msgstr ""
 "додані до обробника. Обгортає фактичний випуск запису з "
 "отриманням/вивільненням блокування потоку вводу-виводу."
 
-#: ../../library/logging.rst:609
+#: ../../library/logging.rst:610
 msgid ""
 "This method should be called from handlers when an exception is encountered "
 "during an :meth:`emit` call. If the module-level attribute "
@@ -1032,7 +1026,7 @@ msgid ""
 "that is more useful during development)."
 msgstr ""
 
-#: ../../library/logging.rst:622
+#: ../../library/logging.rst:623
 msgid ""
 "Do formatting for a record - if a formatter is set, use it. Otherwise, use "
 "the default formatter for the module."
@@ -1041,7 +1035,7 @@ msgstr ""
 "використовуйте його. В іншому випадку використовуйте стандартний формататор "
 "для модуля."
 
-#: ../../library/logging.rst:628
+#: ../../library/logging.rst:629
 msgid ""
 "Do whatever it takes to actually log the specified logging record. This "
 "version is intended to be implemented by subclasses and so raises a "
@@ -1051,7 +1045,7 @@ msgstr ""
 "версія призначена для реалізації підкласами, тому викликає "
 ":exc:`NotImplementedError`."
 
-#: ../../library/logging.rst:632
+#: ../../library/logging.rst:633
 msgid ""
 "This method is called after a handler-level lock is acquired, which is "
 "released after this method returns. When you override this method, note that"
@@ -1060,13 +1054,13 @@ msgid ""
 "deadlock. Specifically:"
 msgstr ""
 
-#: ../../library/logging.rst:638
+#: ../../library/logging.rst:639
 msgid ""
 "Logging configuration APIs acquire the module-level lock, and then "
 "individual handler-level locks as those handlers are configured."
 msgstr ""
 
-#: ../../library/logging.rst:641
+#: ../../library/logging.rst:642
 msgid ""
 "Many logging APIs lock the module-level lock. If such an API is called from "
 "this method, it could cause a deadlock if a configuration call is made on "
@@ -1076,16 +1070,16 @@ msgid ""
 "method, the handler-level lock has already been acquired)."
 msgstr ""
 
-#: ../../library/logging.rst:648
+#: ../../library/logging.rst:649
 msgid ""
 "For a list of handlers included as standard, see :mod:`logging.handlers`."
 msgstr "Перелік стандартних обробників див. :mod:`logging.handlers`."
 
-#: ../../library/logging.rst:653
+#: ../../library/logging.rst:654
 msgid "Formatter Objects"
 msgstr "Об’єкти форматування"
 
-#: ../../library/logging.rst:659
+#: ../../library/logging.rst:660
 msgid ""
 "Responsible for converting a :class:`LogRecord` to an output string to be "
 "interpreted by a human or external system."
@@ -1095,7 +1089,7 @@ msgstr ""
 msgid "Parameters"
 msgstr "Параметри"
 
-#: ../../library/logging.rst:662
+#: ../../library/logging.rst:663
 msgid ""
 "A format string in the given *style* for the logged output as a whole. The "
 "possible mapping keys are drawn from the :class:`LogRecord` object's "
@@ -1103,14 +1097,14 @@ msgid ""
 "which is just the logged message."
 msgstr ""
 
-#: ../../library/logging.rst:670
+#: ../../library/logging.rst:671
 msgid ""
 "A format string in the given *style* for the date/time portion of the logged"
 " output. If not specified, the default described in :meth:`formatTime` is "
 "used."
 msgstr ""
 
-#: ../../library/logging.rst:675
+#: ../../library/logging.rst:676
 msgid ""
 "Can be one of ``'%'``, ``'{'`` or ``'$'`` and determines how the format "
 "string will be merged with its data: using one of :ref:`old-string-"
@@ -1121,32 +1115,32 @@ msgid ""
 " use ``{``- and ``$``-formatting for log messages."
 msgstr ""
 
-#: ../../library/logging.rst:685
+#: ../../library/logging.rst:686
 msgid ""
 "If ``True`` (the default), incorrect or mismatched *fmt* and *style* will "
 "raise a :exc:`ValueError`; for example, ``logging.Formatter('%(asctime)s - "
 "%(message)s', style='{')``."
 msgstr ""
 
-#: ../../library/logging.rst:690
+#: ../../library/logging.rst:691
 msgid ""
 "A dictionary with default values to use in custom fields. For example, "
 "``logging.Formatter('%(ip)s %(message)s', defaults={\"ip\": None})``"
 msgstr ""
 
-#: ../../library/logging.rst:695
+#: ../../library/logging.rst:696
 msgid "Added the *style* parameter."
 msgstr ""
 
-#: ../../library/logging.rst:698
+#: ../../library/logging.rst:699
 msgid "Added the *validate* parameter."
 msgstr ""
 
-#: ../../library/logging.rst:701
+#: ../../library/logging.rst:702
 msgid "Added the *defaults* parameter."
 msgstr ""
 
-#: ../../library/logging.rst:707
+#: ../../library/logging.rst:708
 msgid ""
 "The record's attribute dictionary is used as the operand to a string "
 "formatting operation. Returns the resulting string. Before formatting the "
@@ -1180,7 +1174,7 @@ msgstr ""
 "виконає своє форматування, щоб наступний засіб форматування для обробки "
 "події не використовував кешований значення, але перераховує його заново."
 
-#: ../../library/logging.rst:723
+#: ../../library/logging.rst:724
 msgid ""
 "If stack information is available, it's appended after the exception "
 "information, using :meth:`formatStack` to transform it if necessary."
@@ -1189,7 +1183,7 @@ msgstr ""
 "винятки, використовуючи :meth:`formatStack` для її перетворення, якщо "
 "необхідно."
 
-#: ../../library/logging.rst:729
+#: ../../library/logging.rst:730
 msgid ""
 "This method should be called from :meth:`format` by a formatter which wants "
 "to make use of a formatted time. This method can be overridden in formatters"
@@ -1210,7 +1204,7 @@ msgstr ""
 "інші літери відповідають :func:`time.strftime` документація. Прикладом часу "
 "в цьому форматі є ``2003-01-23 00:29:50,411``. Повертається отриманий рядок."
 
-#: ../../library/logging.rst:739
+#: ../../library/logging.rst:740
 msgid ""
 "This function uses a user-configurable function to convert the creation time"
 " to a tuple. By default, :func:`time.localtime` is used; to change this for "
@@ -1229,7 +1223,7 @@ msgstr ""
 "відображалися за GMT, установіть атрибут ``converter`` у класі "
 "``Formatter``."
 
-#: ../../library/logging.rst:747
+#: ../../library/logging.rst:748
 msgid ""
 "Previously, the default format was hard-coded as in this example: "
 "``2010-09-06 22:38:15,292`` where the part before the comma is handled by a "
@@ -1254,11 +1248,11 @@ msgstr ""
 " ``default_time_format`` (для рядка формату strptime) і "
 "``default_msec_format`` (для додавання значення в мілісекундах)."
 
-#: ../../library/logging.rst:760
+#: ../../library/logging.rst:761
 msgid "The ``default_msec_format`` can be ``None``."
 msgstr "``default_msec_format`` може бути ``None``."
 
-#: ../../library/logging.rst:765
+#: ../../library/logging.rst:766
 msgid ""
 "Formats the specified exception information (a standard exception tuple as "
 "returned by :func:`sys.exc_info`) as a string. This default implementation "
@@ -1270,7 +1264,7 @@ msgstr ""
 "використовує :func:`traceback.print_exception`. Повертається отриманий "
 "рядок."
 
-#: ../../library/logging.rst:772
+#: ../../library/logging.rst:773
 msgid ""
 "Formats the specified stack information (a string as returned by "
 ":func:`traceback.print_stack`, but with the last newline removed) as a "
@@ -1280,7 +1274,7 @@ msgstr ""
 ":func:`traceback.print_stack`, але з видаленням останнього нового рядка) як "
 "рядок. Ця реалізація за умовчанням лише повертає вхідне значення."
 
-#: ../../library/logging.rst:778
+#: ../../library/logging.rst:779
 msgid ""
 "A base formatter class suitable for subclassing when you want to format a "
 "number of records. You can pass a :class:`Formatter` instance which you want"
@@ -1289,7 +1283,7 @@ msgid ""
 "used as the line formatter."
 msgstr ""
 
-#: ../../library/logging.rst:786
+#: ../../library/logging.rst:787
 msgid ""
 "Return a header for a list of *records*. The base implementation just "
 "returns the empty string. You will need to override this method if you want "
@@ -1297,14 +1291,14 @@ msgid ""
 "separator line."
 msgstr ""
 
-#: ../../library/logging.rst:793
+#: ../../library/logging.rst:794
 msgid ""
 "Return a footer for a list of *records*. The base implementation just "
 "returns the empty string. You will need to override this method if you want "
 "specific behaviour, e.g. to show the count of records or a separator line."
 msgstr ""
 
-#: ../../library/logging.rst:800
+#: ../../library/logging.rst:801
 msgid ""
 "Return formatted text for a list of *records*. The base implementation just "
 "returns the empty string if there are no records; otherwise, it returns the "
@@ -1312,11 +1306,11 @@ msgid ""
 "and the footer."
 msgstr ""
 
-#: ../../library/logging.rst:808
+#: ../../library/logging.rst:809
 msgid "Filter Objects"
 msgstr "Фільтр об'єктів"
 
-#: ../../library/logging.rst:810
+#: ../../library/logging.rst:811
 msgid ""
 "``Filters`` can be used by ``Handlers`` and ``Loggers`` for more "
 "sophisticated filtering than is provided by levels. The base filter class "
@@ -1333,7 +1327,7 @@ msgstr ""
 " але не \"A.BB\", \"B.A.B\" тощо. Якщо ініціалізовано порожнім рядком, усі "
 "події передаються."
 
-#: ../../library/logging.rst:820
+#: ../../library/logging.rst:821
 msgid ""
 "Returns an instance of the :class:`Filter` class. If *name* is specified, it"
 " names a logger which, together with its children, will have its events "
@@ -1344,7 +1338,7 @@ msgstr ""
 "реєстратор, події якого разом із дочірніми елементами будуть дозволені через"
 " фільтр. Якщо *ім’я* є порожнім рядком, дозволяється кожна подія."
 
-#: ../../library/logging.rst:827
+#: ../../library/logging.rst:828
 msgid ""
 "Is the specified record to be logged? Returns false for no, true for yes. "
 "Filters can either modify log records in-place or return a completely "
@@ -1352,7 +1346,7 @@ msgid ""
 "future processing of the event."
 msgstr ""
 
-#: ../../library/logging.rst:832
+#: ../../library/logging.rst:833
 msgid ""
 "Note that filters attached to handlers are consulted before an event is "
 "emitted by the handler, whereas filters attached to loggers are consulted "
@@ -1370,7 +1364,7 @@ msgstr ""
 "налаштуваннями фільтра реєстратора, якщо фільтр також не застосовано до цих "
 "нащадків реєстраторів."
 
-#: ../../library/logging.rst:839
+#: ../../library/logging.rst:840
 msgid ""
 "You don't actually need to subclass ``Filter``: you can pass any instance "
 "which has a ``filter`` method with the same semantics."
@@ -1378,7 +1372,7 @@ msgstr ""
 "Насправді вам не потрібно створювати підклас ``Filter``: ви можете передати "
 "будь-який екземпляр, який має метод ``filter`` з тією самою семантикою."
 
-#: ../../library/logging.rst:842
+#: ../../library/logging.rst:843
 msgid ""
 "You don't need to create specialized ``Filter`` classes, or use other "
 "classes with a ``filter`` method: you can use a function (or other callable)"
@@ -1397,7 +1391,7 @@ msgstr ""
 "параметром. Повернене значення має відповідати тому, яке повертає "
 ":meth:`~Filter.filter`."
 
-#: ../../library/logging.rst:852
+#: ../../library/logging.rst:853
 msgid ""
 "You can now return a :class:`LogRecord` instance from filters to replace the"
 " log record rather than modifying it in place. This allows filters attached "
@@ -1405,7 +1399,7 @@ msgid ""
 " having side effects on other handlers."
 msgstr ""
 
-#: ../../library/logging.rst:858
+#: ../../library/logging.rst:859
 msgid ""
 "Although filters are used primarily to filter records based on more "
 "sophisticated criteria than levels, they get to see every record which is "
@@ -1425,11 +1419,11 @@ msgstr ""
 "Очевидно, змінювати LogRecord потрібно з певною обережністю, але це дозволяє"
 " вставляти контекстну інформацію в журнали (див. :ref:`filters-contextual`)."
 
-#: ../../library/logging.rst:871
+#: ../../library/logging.rst:872
 msgid "LogRecord Objects"
 msgstr "Об'єкти LogRecord"
 
-#: ../../library/logging.rst:873
+#: ../../library/logging.rst:874
 msgid ""
 ":class:`LogRecord` instances are created automatically by the "
 ":class:`Logger` every time something is logged, and can be created manually "
@@ -1440,17 +1434,17 @@ msgstr ""
 "щоразу, коли щось реєструється, і можуть бути створені вручну за допомогою "
 ":func:`makeLogRecord` (наприклад, з марінованої події, отриманої по мережі)."
 
-#: ../../library/logging.rst:881
+#: ../../library/logging.rst:882
 msgid "Contains all the information pertinent to the event being logged."
 msgstr "Містить всю інформацію, що стосується події, яка реєструється."
 
-#: ../../library/logging.rst:883
+#: ../../library/logging.rst:884
 msgid ""
 "The primary information is passed in *msg* and *args*, which are combined "
 "using ``msg % args`` to create the :attr:`!message` attribute of the record."
 msgstr ""
 
-#: ../../library/logging.rst:887
+#: ../../library/logging.rst:888
 msgid ""
 "The name of the logger used to log the event represented by this "
 ":class:`!LogRecord`. Note that the logger name in the :class:`!LogRecord` "
@@ -1458,7 +1452,7 @@ msgid ""
 "attached to a different (ancestor) logger."
 msgstr ""
 
-#: ../../library/logging.rst:895
+#: ../../library/logging.rst:896
 msgid ""
 "The :ref:`numeric level <levels>` of the logging event (such as ``10`` for "
 "``DEBUG``, ``20`` for ``INFO``, etc). Note that this is converted to *two* "
@@ -1466,23 +1460,23 @@ msgid ""
 ":attr:`!levelname` for the corresponding level name."
 msgstr ""
 
-#: ../../library/logging.rst:902
+#: ../../library/logging.rst:903
 msgid ""
 "The full string path of the source file where the logging call was made."
 msgstr ""
 
-#: ../../library/logging.rst:906
+#: ../../library/logging.rst:907
 msgid "The line number in the source file where the logging call was made."
 msgstr "Номер рядка у вихідному файлі, де було здійснено виклик журналювання."
 
-#: ../../library/logging.rst:910
+#: ../../library/logging.rst:911
 msgid ""
 "The event description message, which can be a %-format string with "
 "placeholders for variable data, or an arbitrary object (see :ref:`arbitrary-"
 "object-messages`)."
 msgstr ""
 
-#: ../../library/logging.rst:915
+#: ../../library/logging.rst:916
 msgid ""
 "Variable data to merge into the *msg* argument to obtain the event "
 "description."
@@ -1490,18 +1484,18 @@ msgstr ""
 "Змінні дані, які потрібно об’єднати в аргумент *msg*, щоб отримати опис "
 "події."
 
-#: ../../library/logging.rst:919
+#: ../../library/logging.rst:920
 msgid ""
 "An exception tuple with the current exception information, as returned by "
 ":func:`sys.exc_info`, or ``None`` if no exception information is available."
 msgstr ""
 
-#: ../../library/logging.rst:924
+#: ../../library/logging.rst:925
 msgid ""
 "The name of the function or method from which the logging call was invoked."
 msgstr "Ім'я функції або методу, з якого було викликано журналювання."
 
-#: ../../library/logging.rst:928
+#: ../../library/logging.rst:929
 msgid ""
 "A text string representing stack information from the base of the stack in "
 "the current thread, up to the logging call."
@@ -1509,7 +1503,7 @@ msgstr ""
 "Текстовий рядок, що представляє інформацію про стек від основи стека в "
 "поточному потоці до виклику журналювання."
 
-#: ../../library/logging.rst:935
+#: ../../library/logging.rst:936
 msgid ""
 "Returns the message for this :class:`LogRecord` instance after merging any "
 "user-supplied arguments with the message. If the user-supplied message "
@@ -1526,7 +1520,7 @@ msgstr ""
 "чий метод ``__str__`` може повертати фактичний рядок формату для "
 "використання."
 
-#: ../../library/logging.rst:942
+#: ../../library/logging.rst:943
 msgid ""
 "The creation of a :class:`LogRecord` has been made more configurable by "
 "providing a factory which is used to create the record. The factory can be "
@@ -1538,7 +1532,7 @@ msgstr ""
 "встановити за допомогою :func:`getLogRecordFactory` і "
 ":func:`setLogRecordFactory` (див. тут підпис фабрики)."
 
-#: ../../library/logging.rst:948
+#: ../../library/logging.rst:949
 msgid ""
 "This functionality can be used to inject your own values into a "
 ":class:`LogRecord` at creation time. You can use the following pattern::"
@@ -1547,7 +1541,7 @@ msgstr ""
 ":class:`LogRecord` під час створення. Ви можете використовувати наступний "
 "шаблон:"
 
-#: ../../library/logging.rst:951
+#: ../../library/logging.rst:952
 msgid ""
 "old_factory = logging.getLogRecordFactory()\n"
 "\n"
@@ -1559,7 +1553,7 @@ msgid ""
 "logging.setLogRecordFactory(record_factory)"
 msgstr ""
 
-#: ../../library/logging.rst:960
+#: ../../library/logging.rst:961
 msgid ""
 "With this pattern, multiple factories could be chained, and as long as they "
 "don't overwrite each other's attributes or unintentionally overwrite the "
@@ -1569,11 +1563,11 @@ msgstr ""
 "якщо вони не перезаписують атрибути одна одної або ненавмисно перезаписують "
 "стандартні атрибути, перелічені вище, не повинно бути сюрпризів."
 
-#: ../../library/logging.rst:969
+#: ../../library/logging.rst:970
 msgid "LogRecord attributes"
 msgstr "Атрибути LogRecord"
 
-#: ../../library/logging.rst:971
+#: ../../library/logging.rst:972
 msgid ""
 "The LogRecord has a number of attributes, most of which are derived from the"
 " parameters to the constructor. (Note that the names do not always "
@@ -1590,7 +1584,7 @@ msgstr ""
 "нижче таблиці наведено (в алфавітному порядку) назви атрибутів, їх значення "
 "та відповідний заповнювач у рядку формату %-style."
 
-#: ../../library/logging.rst:979
+#: ../../library/logging.rst:980
 msgid ""
 "If you are using {}-formatting (:func:`str.format`), you can use "
 "``{attrname}`` as the placeholder in the format string. If you are using "
@@ -1604,7 +1598,7 @@ msgstr ""
 "форму ``${attrname}``. В обох випадках, звичайно, замініть ``attrname`` "
 "фактичним ім'ям атрибута, який ви хочете використовувати."
 
-#: ../../library/logging.rst:985
+#: ../../library/logging.rst:986
 msgid ""
 "In the case of {}-formatting, you can specify formatting flags by placing "
 "them after the attribute name, separated from it with a colon. For example: "
@@ -1613,28 +1607,28 @@ msgid ""
 "on the options available to you."
 msgstr ""
 
-#: ../../library/logging.rst:992
+#: ../../library/logging.rst:993
 msgid "Attribute name"
 msgstr "Назва атрибута"
 
-#: ../../library/logging.rst:992 ../../library/logging.rst:1362
+#: ../../library/logging.rst:993 ../../library/logging.rst:1363
 msgid "Format"
 msgstr "Формат"
 
-#: ../../library/logging.rst:992 ../../library/logging.rst:1362
+#: ../../library/logging.rst:993 ../../library/logging.rst:1363
 msgid "Description"
 msgstr "опис"
 
-#: ../../library/logging.rst:0 ../../library/logging.rst:994
+#: ../../library/logging.rst:0 ../../library/logging.rst:995
 msgid "args"
 msgstr "арг"
 
-#: ../../library/logging.rst:994 ../../library/logging.rst:1008
-#: ../../library/logging.rst:1036 ../../library/logging.rst:1054
+#: ../../library/logging.rst:995 ../../library/logging.rst:1009
+#: ../../library/logging.rst:1037 ../../library/logging.rst:1055
 msgid "You shouldn't need to format this yourself."
 msgstr "Вам не потрібно форматувати це самостійно."
 
-#: ../../library/logging.rst:994
+#: ../../library/logging.rst:995
 msgid ""
 "The tuple of arguments merged into ``msg`` to produce ``message``, or a dict"
 " whose values are used for the merge (when there is only one argument, and "
@@ -1644,15 +1638,15 @@ msgstr ""
 "значення якого використовуються для злиття (якщо є лише один аргумент, і це "
 "словник)."
 
-#: ../../library/logging.rst:999
+#: ../../library/logging.rst:1000
 msgid "asctime"
 msgstr "asctime"
 
-#: ../../library/logging.rst:999
+#: ../../library/logging.rst:1000
 msgid "``%(asctime)s``"
 msgstr "``%(asctime)s``"
 
-#: ../../library/logging.rst:999
+#: ../../library/logging.rst:1000
 msgid ""
 "Human-readable time when the :class:`LogRecord` was created.  By default "
 "this is of the form '2003-07-08 16:49:45,896' (the numbers after the comma "
@@ -1662,25 +1656,25 @@ msgstr ""
 "має форму \"2003-07-08 16:49:45,896\" (числа після коми є частиною часу в "
 "мілісекундах)."
 
-#: ../../library/logging.rst:1005
+#: ../../library/logging.rst:1006
 msgid "created"
 msgstr "створений"
 
-#: ../../library/logging.rst:1005
+#: ../../library/logging.rst:1006
 msgid "``%(created)f``"
 msgstr "``%(created)f``"
 
-#: ../../library/logging.rst:1005
+#: ../../library/logging.rst:1006
 msgid ""
 "Time when the :class:`LogRecord` was created (as returned by "
 ":func:`time.time_ns` / 1e9)."
 msgstr ""
 
-#: ../../library/logging.rst:0 ../../library/logging.rst:1008
+#: ../../library/logging.rst:0 ../../library/logging.rst:1009
 msgid "exc_info"
 msgstr "exc_info"
 
-#: ../../library/logging.rst:1008
+#: ../../library/logging.rst:1009
 msgid ""
 "Exception tuple (à la ``sys.exc_info``) or, if no exception has occurred, "
 "``None``."
@@ -1688,39 +1682,39 @@ msgstr ""
 "Кортеж винятків (à la ``sys.exc_info``) або, якщо винятків не сталося, "
 "``None``."
 
-#: ../../library/logging.rst:1011
+#: ../../library/logging.rst:1012
 msgid "filename"
 msgstr "ім'я файлу"
 
-#: ../../library/logging.rst:1011
+#: ../../library/logging.rst:1012
 msgid "``%(filename)s``"
 msgstr "``%(filename)s``"
 
-#: ../../library/logging.rst:1011
+#: ../../library/logging.rst:1012
 msgid "Filename portion of ``pathname``."
 msgstr "Частина імені файлу ``шляху``."
 
-#: ../../library/logging.rst:1013
+#: ../../library/logging.rst:1014
 msgid "funcName"
 msgstr "ім'я функції"
 
-#: ../../library/logging.rst:1013
+#: ../../library/logging.rst:1014
 msgid "``%(funcName)s``"
 msgstr "``%(funcName)s``"
 
-#: ../../library/logging.rst:1013
+#: ../../library/logging.rst:1014
 msgid "Name of function containing the logging call."
 msgstr "Назва функції, яка містить виклик журналювання."
 
-#: ../../library/logging.rst:1015
+#: ../../library/logging.rst:1016
 msgid "levelname"
 msgstr "ім'я рівня"
 
-#: ../../library/logging.rst:1015
+#: ../../library/logging.rst:1016
 msgid "``%(levelname)s``"
 msgstr "``%(levelname)s``"
 
-#: ../../library/logging.rst:1015
+#: ../../library/logging.rst:1016
 msgid ""
 "Text logging level for the message (``'DEBUG'``, ``'INFO'``, ``'WARNING'``, "
 "``'ERROR'``, ``'CRITICAL'``)."
@@ -1728,15 +1722,15 @@ msgstr ""
 "Рівень реєстрації тексту для повідомлення (``'DEBUG'``, ``'INFO'``, "
 "``'WARNING'``, ``'ERROR'``, ``'CRITICAL'``)."
 
-#: ../../library/logging.rst:1019
+#: ../../library/logging.rst:1020
 msgid "levelno"
 msgstr "levelno"
 
-#: ../../library/logging.rst:1019
+#: ../../library/logging.rst:1020
 msgid "``%(levelno)s``"
 msgstr "``%(levelno)s``"
 
-#: ../../library/logging.rst:1019
+#: ../../library/logging.rst:1020
 msgid ""
 "Numeric logging level for the message (:const:`DEBUG`, :const:`INFO`, "
 ":const:`WARNING`, :const:`ERROR`, :const:`CRITICAL`)."
@@ -1744,28 +1738,28 @@ msgstr ""
 "Числовий рівень журналювання для повідомлення (:const:`DEBUG`, "
 ":const:`INFO`, :const:`WARNING`, :const:`ERROR`, :const:`CRITICAL`)."
 
-#: ../../library/logging.rst:1024
+#: ../../library/logging.rst:1025
 msgid "lineno"
 msgstr "lineno"
 
-#: ../../library/logging.rst:1024
+#: ../../library/logging.rst:1025
 msgid "``%(lineno)d``"
 msgstr "``%(lineno)d``"
 
-#: ../../library/logging.rst:1024
+#: ../../library/logging.rst:1025
 msgid "Source line number where the logging call was issued (if available)."
 msgstr ""
 "Номер вихідного рядка, де було здійснено виклик реєстрації (за наявності)."
 
-#: ../../library/logging.rst:1027
+#: ../../library/logging.rst:1028
 msgid "message"
 msgstr "повідомлення"
 
-#: ../../library/logging.rst:1027
+#: ../../library/logging.rst:1028
 msgid "``%(message)s``"
 msgstr "``%(message)s``"
 
-#: ../../library/logging.rst:1027
+#: ../../library/logging.rst:1028
 msgid ""
 "The logged message, computed as ``msg % args``. This is set when "
 ":meth:`Formatter.format` is invoked."
@@ -1773,36 +1767,36 @@ msgstr ""
 "Зареєстроване повідомлення, обчислене як ``msg % args``. Це встановлюється "
 "під час виклику :meth:`Formatter.format`."
 
-#: ../../library/logging.rst:1031
+#: ../../library/logging.rst:1032
 msgid "module"
 msgstr "модуль"
 
-#: ../../library/logging.rst:1031
+#: ../../library/logging.rst:1032
 msgid "``%(module)s``"
 msgstr "``%(module)s``"
 
-#: ../../library/logging.rst:1031
+#: ../../library/logging.rst:1032
 msgid "Module (name portion of ``filename``)."
 msgstr "Модуль (частина назви ``назви файлу``)."
 
-#: ../../library/logging.rst:1033
+#: ../../library/logging.rst:1034
 msgid "msecs"
 msgstr "мс"
 
-#: ../../library/logging.rst:1033
+#: ../../library/logging.rst:1034
 msgid "``%(msecs)d``"
 msgstr "``%(msecs)d``"
 
-#: ../../library/logging.rst:1033
+#: ../../library/logging.rst:1034
 msgid ""
 "Millisecond portion of the time when the :class:`LogRecord` was created."
 msgstr "Частина мілісекунд часу, коли було створено :class:`LogRecord`."
 
-#: ../../library/logging.rst:0 ../../library/logging.rst:1036
+#: ../../library/logging.rst:0 ../../library/logging.rst:1037
 msgid "msg"
 msgstr "повідомлення"
 
-#: ../../library/logging.rst:1036
+#: ../../library/logging.rst:1037
 msgid ""
 "The format string passed in the original logging call. Merged with ``args`` "
 "to produce ``message``, or an arbitrary object (see :ref:`arbitrary-object-"
@@ -1812,27 +1806,27 @@ msgstr ""
 "``args`` для отримання ``message`` або довільного об’єкта (див. "
 ":ref:`arbitrary-object-messages`)."
 
-#: ../../library/logging.rst:0 ../../library/logging.rst:1041
+#: ../../library/logging.rst:0 ../../library/logging.rst:1042
 msgid "name"
 msgstr "назва"
 
-#: ../../library/logging.rst:1041
+#: ../../library/logging.rst:1042
 msgid "``%(name)s``"
 msgstr "``%(name)s``"
 
-#: ../../library/logging.rst:1041
+#: ../../library/logging.rst:1042
 msgid "Name of the logger used to log the call."
 msgstr "Ім'я реєстратора, який використовувався для реєстрації виклику."
 
-#: ../../library/logging.rst:1043
+#: ../../library/logging.rst:1044
 msgid "pathname"
 msgstr "шлях"
 
-#: ../../library/logging.rst:1043
+#: ../../library/logging.rst:1044
 msgid "``%(pathname)s``"
 msgstr "``%(pathname)s``"
 
-#: ../../library/logging.rst:1043
+#: ../../library/logging.rst:1044
 msgid ""
 "Full pathname of the source file where the logging call was issued (if "
 "available)."
@@ -1840,39 +1834,39 @@ msgstr ""
 "Повний шлях до вихідного файлу, до якого було здійснено виклик журналювання "
 "(за наявності)."
 
-#: ../../library/logging.rst:1046
+#: ../../library/logging.rst:1047
 msgid "process"
 msgstr "процес"
 
-#: ../../library/logging.rst:1046
+#: ../../library/logging.rst:1047
 msgid "``%(process)d``"
 msgstr "``%(process)d``"
 
-#: ../../library/logging.rst:1046
+#: ../../library/logging.rst:1047
 msgid "Process ID (if available)."
 msgstr "ID процесу (за наявності)."
 
-#: ../../library/logging.rst:1048
+#: ../../library/logging.rst:1049
 msgid "processName"
 msgstr "назва процесу"
 
-#: ../../library/logging.rst:1048
+#: ../../library/logging.rst:1049
 msgid "``%(processName)s``"
 msgstr "``%(processName)s``"
 
-#: ../../library/logging.rst:1048
+#: ../../library/logging.rst:1049
 msgid "Process name (if available)."
 msgstr "Назва процесу (якщо є)."
 
-#: ../../library/logging.rst:1050
+#: ../../library/logging.rst:1051
 msgid "relativeCreated"
 msgstr "relativeCreated"
 
-#: ../../library/logging.rst:1050
+#: ../../library/logging.rst:1051
 msgid "``%(relativeCreated)d``"
 msgstr "``%(relativeCreated)d``"
 
-#: ../../library/logging.rst:1050
+#: ../../library/logging.rst:1051
 msgid ""
 "Time in milliseconds when the LogRecord was created, relative to the time "
 "the logging module was loaded."
@@ -1880,11 +1874,11 @@ msgstr ""
 "Час у мілісекундах, коли було створено LogRecord, відносно часу завантаження"
 " модуля журналювання."
 
-#: ../../library/logging.rst:1054
+#: ../../library/logging.rst:1055
 msgid "stack_info"
 msgstr "stack_info"
 
-#: ../../library/logging.rst:1054
+#: ../../library/logging.rst:1055
 msgid ""
 "Stack frame information (where available) from the bottom of the stack in "
 "the current thread, up to and including the stack frame of the logging call "
@@ -1894,55 +1888,55 @@ msgstr ""
 "потоці до та включно з кадром стека виклику журналювання, який призвів до "
 "створення цього запису."
 
-#: ../../library/logging.rst:1060
+#: ../../library/logging.rst:1061
 msgid "thread"
 msgstr "нитка"
 
-#: ../../library/logging.rst:1060
+#: ../../library/logging.rst:1061
 msgid "``%(thread)d``"
 msgstr "``%(thread)d``"
 
-#: ../../library/logging.rst:1060
+#: ../../library/logging.rst:1061
 msgid "Thread ID (if available)."
 msgstr "ID потоку (якщо є)."
 
-#: ../../library/logging.rst:1062
+#: ../../library/logging.rst:1063
 msgid "threadName"
 msgstr "ім'я потоку"
 
-#: ../../library/logging.rst:1062
+#: ../../library/logging.rst:1063
 msgid "``%(threadName)s``"
 msgstr "``%(threadName)s``"
 
-#: ../../library/logging.rst:1062
+#: ../../library/logging.rst:1063
 msgid "Thread name (if available)."
 msgstr "Назва теми (за наявності)."
 
-#: ../../library/logging.rst:1064
+#: ../../library/logging.rst:1065
 msgid "taskName"
 msgstr ""
 
-#: ../../library/logging.rst:1064
+#: ../../library/logging.rst:1065
 msgid "``%(taskName)s``"
 msgstr ""
 
-#: ../../library/logging.rst:1064
+#: ../../library/logging.rst:1065
 msgid ":class:`asyncio.Task` name (if available)."
 msgstr ""
 
-#: ../../library/logging.rst:1067
+#: ../../library/logging.rst:1068
 msgid "*processName* was added."
 msgstr "Додано *processName*."
 
-#: ../../library/logging.rst:1070
+#: ../../library/logging.rst:1071
 msgid "*taskName* was added."
 msgstr ""
 
-#: ../../library/logging.rst:1076
+#: ../../library/logging.rst:1077
 msgid "LoggerAdapter Objects"
 msgstr "Об’єкти LoggerAdapter"
 
-#: ../../library/logging.rst:1078
+#: ../../library/logging.rst:1079
 msgid ""
 ":class:`LoggerAdapter` instances are used to conveniently pass contextual "
 "information into logging calls. For a usage example, see the section on "
@@ -1953,7 +1947,7 @@ msgstr ""
 "дивіться розділ про :ref:`додавання контекстної інформації до вихідних даних"
 " журналу <context-info>`."
 
-#: ../../library/logging.rst:1084
+#: ../../library/logging.rst:1085
 msgid ""
 "Returns an instance of :class:`LoggerAdapter` initialized with an underlying"
 " :class:`Logger` instance, a dict-like object (*extra*), and a boolean "
@@ -1963,7 +1957,7 @@ msgid ""
 "and only use the one of the :class:`LoggerAdapter` instance"
 msgstr ""
 
-#: ../../library/logging.rst:1093
+#: ../../library/logging.rst:1094
 msgid ""
 "Modifies the message and/or keyword arguments passed to a logging call in "
 "order to insert contextual information. This implementation takes the object"
@@ -1977,15 +1971,15 @@ msgstr ""
 "\"extra\". Поверненим значенням є кортеж (*msg*, *kwargs*), який містить "
 "(можливо, змінені) версії переданих аргументів."
 
-#: ../../library/logging.rst:1101
-msgid "Delegates to the underlying :attr:`!manager`` on *logger*."
+#: ../../library/logging.rst:1102
+msgid "Delegates to the underlying :attr:`!manager` on *logger*."
 msgstr ""
 
-#: ../../library/logging.rst:1105
-msgid "Delegates to the underlying :meth:`!_log`` method on *logger*."
+#: ../../library/logging.rst:1106
+msgid "Delegates to the underlying :meth:`!_log` method on *logger*."
 msgstr ""
 
-#: ../../library/logging.rst:1107
+#: ../../library/logging.rst:1108
 msgid ""
 "In addition to the above, :class:`LoggerAdapter` supports the following "
 "methods of :class:`Logger`: :meth:`~Logger.debug`, :meth:`~Logger.info`, "
@@ -2005,7 +1999,7 @@ msgstr ""
 "аналоги в :class:`Logger`, тому ви можете використовувати обидва типи "
 "екземплярів як взаємозамінні."
 
-#: ../../library/logging.rst:1118
+#: ../../library/logging.rst:1119
 msgid ""
 "The :meth:`~Logger.isEnabledFor`, :meth:`~Logger.getEffectiveLevel`, "
 ":meth:`~Logger.setLevel` and :meth:`~Logger.hasHandlers` methods were added "
@@ -2015,21 +2009,21 @@ msgstr ""
 ":meth:`~Logger.setLevel` і :meth:`~Logger.hasHandlers` додано до "
 ":class:`LoggerAdapter` . Ці методи делегують базовому реєстратору."
 
-#: ../../library/logging.rst:1124
+#: ../../library/logging.rst:1125
 msgid ""
 "Attribute :attr:`!manager` and method :meth:`!_log` were added, which "
 "delegate to the underlying logger and allow adapters to be nested."
 msgstr ""
 
-#: ../../library/logging.rst:1129
+#: ../../library/logging.rst:1130
 msgid "The *merge_extra* argument was added."
 msgstr ""
 
-#: ../../library/logging.rst:1133
+#: ../../library/logging.rst:1134
 msgid "Thread Safety"
 msgstr "Безпека ниток"
 
-#: ../../library/logging.rst:1135
+#: ../../library/logging.rst:1136
 msgid ""
 "The logging module is intended to be thread-safe without any special work "
 "needing to be done by its clients. It achieves this though using threading "
@@ -2043,7 +2037,7 @@ msgstr ""
 "до спільних даних модуля, і кожен обробник також створює блокування для "
 "серіалізації доступу до базового введення-виведення."
 
-#: ../../library/logging.rst:1140
+#: ../../library/logging.rst:1141
 msgid ""
 "If you are implementing asynchronous signal handlers using the :mod:`signal`"
 " module, you may not be able to use logging from within such handlers. This "
@@ -2056,17 +2050,17 @@ msgstr ""
 ":mod:`threading` не завжди можна повторно входити, і тому їх не можна "
 "викликати з таких обробників сигналів."
 
-#: ../../library/logging.rst:1147
+#: ../../library/logging.rst:1148
 msgid "Module-Level Functions"
 msgstr "Функції рівня модуля"
 
-#: ../../library/logging.rst:1149
+#: ../../library/logging.rst:1150
 msgid ""
 "In addition to the classes described above, there are a number of module-"
 "level functions."
 msgstr "На додаток до класів, описаних вище, існує ряд функцій рівня модуля."
 
-#: ../../library/logging.rst:1155
+#: ../../library/logging.rst:1156
 msgid ""
 "Return a logger with the specified name or, if name is ``None``, return the "
 "root logger of the hierarchy. If specified, the name is typically a dot-"
@@ -2076,7 +2070,7 @@ msgid ""
 "for not doing that, as mentioned in :ref:`logger`."
 msgstr ""
 
-#: ../../library/logging.rst:1162
+#: ../../library/logging.rst:1163
 msgid ""
 "All calls to this function with a given name return the same logger "
 "instance. This means that logger instances never need to be passed between "
@@ -2086,7 +2080,7 @@ msgstr ""
 "журналу. Це означає, що екземпляри реєстратора ніколи не потрібно передавати"
 " між різними частинами програми."
 
-#: ../../library/logging.rst:1169
+#: ../../library/logging.rst:1170
 msgid ""
 "Return either the standard :class:`Logger` class, or the last class passed "
 "to :func:`setLoggerClass`. This function may be called from within a new "
@@ -2099,18 +2093,18 @@ msgstr ""
 "класу, щоб гарантувати, що встановлення налаштованого класу :class:`Logger` "
 "не скасує налаштування, уже застосовані іншим кодом. Наприклад::"
 
-#: ../../library/logging.rst:1174
+#: ../../library/logging.rst:1175
 msgid ""
 "class MyLogger(logging.getLoggerClass()):\n"
 "    # ... override behaviour here"
 msgstr ""
 
-#: ../../library/logging.rst:1180
+#: ../../library/logging.rst:1181
 msgid "Return a callable which is used to create a :class:`LogRecord`."
 msgstr ""
 "Повертає виклик, який використовується для створення :class:`LogRecord`."
 
-#: ../../library/logging.rst:1182
+#: ../../library/logging.rst:1183
 msgid ""
 "This function has been provided, along with :func:`setLogRecordFactory`, to "
 "allow developers more control over how the :class:`LogRecord` representing a"
@@ -2120,7 +2114,7 @@ msgstr ""
 "розробникам більше контролювати те, як створюється :class:`LogRecord`, що "
 "представляє подію журналювання."
 
-#: ../../library/logging.rst:1187
+#: ../../library/logging.rst:1188
 msgid ""
 "See :func:`setLogRecordFactory` for more information about the how the "
 "factory is called."
@@ -2128,21 +2122,21 @@ msgstr ""
 "Перегляньте :func:`setLogRecordFactory` для отримання додаткової інформації "
 "про те, як називається фабрика."
 
-#: ../../library/logging.rst:1192
+#: ../../library/logging.rst:1193
 msgid ""
 "This is a convenience function that calls :meth:`Logger.debug`, on the root "
 "logger. The handling of the arguments is in every way identical to what is "
 "described in that method."
 msgstr ""
 
-#: ../../library/logging.rst:1196
+#: ../../library/logging.rst:1197
 msgid ""
 "The only difference is that if the root logger has no handlers, then "
 ":func:`basicConfig` is called, prior to calling ``debug`` on the root "
 "logger."
 msgstr ""
 
-#: ../../library/logging.rst:1199
+#: ../../library/logging.rst:1200
 msgid ""
 "For very short scripts or quick demonstrations of ``logging`` facilities, "
 "``debug`` and the other module-level functions may be convenient. However, "
@@ -2152,19 +2146,19 @@ msgid ""
 " described at the beginnning of this documentation."
 msgstr ""
 
-#: ../../library/logging.rst:1209
+#: ../../library/logging.rst:1210
 msgid ""
 "Logs a message with level :const:`INFO` on the root logger. The arguments "
 "and behavior are otherwise the same as for :func:`debug`."
 msgstr ""
 
-#: ../../library/logging.rst:1215
+#: ../../library/logging.rst:1216
 msgid ""
 "Logs a message with level :const:`WARNING` on the root logger. The arguments"
 " and behavior are otherwise the same as for :func:`debug`."
 msgstr ""
 
-#: ../../library/logging.rst:1218
+#: ../../library/logging.rst:1219
 msgid ""
 "There is an obsolete function ``warn`` which is functionally identical to "
 "``warning``. As ``warn`` is deprecated, please do not use it - use "
@@ -2174,19 +2168,19 @@ msgstr ""
 "Оскільки ``попередження`` застаріло, будь ласка, не використовуйте його - "
 "використовуйте замість нього ``попередження``."
 
-#: ../../library/logging.rst:1225
+#: ../../library/logging.rst:1226
 msgid ""
 "Logs a message with level :const:`ERROR` on the root logger. The arguments "
 "and behavior are otherwise the same as for :func:`debug`."
 msgstr ""
 
-#: ../../library/logging.rst:1231
+#: ../../library/logging.rst:1232
 msgid ""
 "Logs a message with level :const:`CRITICAL` on the root logger. The "
 "arguments and behavior are otherwise the same as for :func:`debug`."
 msgstr ""
 
-#: ../../library/logging.rst:1237
+#: ../../library/logging.rst:1238
 msgid ""
 "Logs a message with level :const:`ERROR` on the root logger. The arguments "
 "and behavior are otherwise the same as for :func:`debug`. Exception info is "
@@ -2194,13 +2188,13 @@ msgid ""
 "exception handler."
 msgstr ""
 
-#: ../../library/logging.rst:1243
+#: ../../library/logging.rst:1244
 msgid ""
 "Logs a message with level *level* on the root logger. The arguments and "
 "behavior are otherwise the same as for :func:`debug`."
 msgstr ""
 
-#: ../../library/logging.rst:1248
+#: ../../library/logging.rst:1249
 msgid ""
 "Provides an overriding level *level* for all loggers which takes precedence "
 "over the logger's own level. When the need arises to temporarily throttle "
@@ -2224,7 +2218,7 @@ msgstr ""
 "фактично видаляє цей переважний рівень, так що вихід журналу знову залежить "
 "від ефективних рівнів окремих реєстраторів."
 
-#: ../../library/logging.rst:1259
+#: ../../library/logging.rst:1260
 msgid ""
 "Note that if you have defined any custom logging level higher than "
 "``CRITICAL`` (this is not recommended), you won't be able to rely on the "
@@ -2236,7 +2230,7 @@ msgstr ""
 "значення за замовчуванням для параметра *level*, але вам доведеться явно "
 "вказати відповідне значення."
 
-#: ../../library/logging.rst:1264
+#: ../../library/logging.rst:1265
 msgid ""
 "The *level* parameter was defaulted to level ``CRITICAL``. See "
 ":issue:`28524` for more information about this change."
@@ -2244,7 +2238,7 @@ msgstr ""
 "Параметр *level* за замовчуванням мав рівень ``КРИТИЧНИЙ``. Перегляньте "
 ":issue:`28524`, щоб дізнатися більше про цю зміну."
 
-#: ../../library/logging.rst:1270
+#: ../../library/logging.rst:1271
 msgid ""
 "Associates level *level* with text *levelName* in an internal dictionary, "
 "which is used to map numeric levels to a textual representation, for example"
@@ -2261,7 +2255,7 @@ msgstr ""
 "зареєстровані за допомогою цієї функції, рівні мають бути додатними цілими "
 "числами, і вони мають збільшуватися в порядку зростання серйозності."
 
-#: ../../library/logging.rst:1277
+#: ../../library/logging.rst:1278
 msgid ""
 "If you are thinking of defining your own levels, please see the section on "
 ":ref:`custom-levels`."
@@ -2269,19 +2263,19 @@ msgstr ""
 "Якщо ви плануєте визначити власні рівні, перегляньте розділ про "
 ":ref:`custom-levels`."
 
-#: ../../library/logging.rst:1282
+#: ../../library/logging.rst:1283
 msgid ""
 "Returns a mapping from level names to their corresponding logging levels. "
 "For example, the string \"CRITICAL\" maps to :const:`CRITICAL`. The returned"
 " mapping is copied from an internal mapping on each call to this function."
 msgstr ""
 
-#: ../../library/logging.rst:1290
+#: ../../library/logging.rst:1291
 msgid ""
 "Returns the textual or numeric representation of logging level *level*."
 msgstr "Повертає текстове або числове представлення рівня реєстрації *level*."
 
-#: ../../library/logging.rst:1292
+#: ../../library/logging.rst:1293
 msgid ""
 "If *level* is one of the predefined levels :const:`CRITICAL`, "
 ":const:`ERROR`, :const:`WARNING`, :const:`INFO` or :const:`DEBUG` then you "
@@ -2297,7 +2291,7 @@ msgstr ""
 "Якщо передано числове значення, що відповідає одному з визначених рівнів, "
 "повертається відповідне представлення рядка."
 
-#: ../../library/logging.rst:1299
+#: ../../library/logging.rst:1300
 msgid ""
 "The *level* parameter also accepts a string representation of the level such"
 " as 'INFO'. In such cases, this functions returns the corresponding numeric "
@@ -2307,7 +2301,7 @@ msgstr ""
 "\"INFO\". У таких випадках ця функція повертає відповідне числове значення "
 "рівня."
 
-#: ../../library/logging.rst:1303
+#: ../../library/logging.rst:1304
 msgid ""
 "If no matching numeric or string value is passed in, the string 'Level %s' %"
 " level is returned."
@@ -2315,7 +2309,7 @@ msgstr ""
 "Якщо відповідного числового або рядкового значення не передано, повертається"
 " рядок \"Рівень %s\" % рівня."
 
-#: ../../library/logging.rst:1306
+#: ../../library/logging.rst:1307
 msgid ""
 "Levels are internally integers (as they need to be compared in the logging "
 "logic). This function is used to convert between an integer level and the "
@@ -2329,7 +2323,7 @@ msgstr ""
 "виведенні журналу за допомогою специфікатора формату ``%(levelname)s`` (див."
 " :ref:`logrecord-attributes`), і навпаки."
 
-#: ../../library/logging.rst:1312
+#: ../../library/logging.rst:1313
 msgid ""
 "In Python versions earlier than 3.4, this function could also be passed a "
 "text level, and would return the corresponding numeric value of the level. "
@@ -2341,17 +2335,17 @@ msgstr ""
 "незадокументована поведінка вважалася помилкою та була видалена в Python "
 "3.4, але відновлена в 3.4.2 через збереження зворотної сумісності."
 
-#: ../../library/logging.rst:1320
+#: ../../library/logging.rst:1321
 msgid ""
 "Returns a handler with the specified *name*, or ``None`` if there is no "
 "handler with that name."
 msgstr ""
 
-#: ../../library/logging.rst:1327
+#: ../../library/logging.rst:1328
 msgid "Returns an immutable set of all known handler names."
 msgstr ""
 
-#: ../../library/logging.rst:1333
+#: ../../library/logging.rst:1334
 msgid ""
 "Creates and returns a new :class:`LogRecord` instance whose attributes are "
 "defined by *attrdict*. This function is useful for taking a pickled "
@@ -2363,7 +2357,7 @@ msgstr ""
 "словник атрибутів :class:`LogRecord`, надісланий через сокет, і відтворити "
 "його як екземпляр :class:`LogRecord` на кінці прийому."
 
-#: ../../library/logging.rst:1341
+#: ../../library/logging.rst:1342
 msgid ""
 "Does basic configuration for the logging system by creating a "
 ":class:`StreamHandler` with a default :class:`Formatter` and adding it to "
@@ -2378,7 +2372,7 @@ msgstr ""
 ":func:`basicConfig` автоматично, якщо не визначено обробників для кореневого"
 " реєстратора."
 
-#: ../../library/logging.rst:1347
+#: ../../library/logging.rst:1348
 msgid ""
 "This function does nothing if the root logger already has handlers "
 "configured, unless the keyword argument *force* is set to ``True``."
@@ -2387,7 +2381,7 @@ msgstr ""
 "обробники, якщо для ключового аргументу *force* не встановлено значення "
 "``True``."
 
-#: ../../library/logging.rst:1350
+#: ../../library/logging.rst:1351
 msgid ""
 "This function should be called from the main thread before other threads are"
 " started. In versions of Python prior to 2.7.1 and 3.2, if this function is "
@@ -2401,15 +2395,15 @@ msgstr ""
 "кореневого журналу більше одного разу, що призведе до неочікуваних "
 "результатів, таких як повідомлення дублюється в журналі."
 
-#: ../../library/logging.rst:1357
+#: ../../library/logging.rst:1358
 msgid "The following keyword arguments are supported."
 msgstr "Підтримуються наступні аргументи ключових слів."
 
-#: ../../library/logging.rst:1364
+#: ../../library/logging.rst:1365
 msgid "*filename*"
 msgstr "*назва файлу*"
 
-#: ../../library/logging.rst:1364
+#: ../../library/logging.rst:1365
 msgid ""
 "Specifies that a :class:`FileHandler` be created, using the specified "
 "filename, rather than a :class:`StreamHandler`."
@@ -2417,11 +2411,11 @@ msgstr ""
 "Вказує, що буде створено :class:`FileHandler`, використовуючи вказане ім’я "
 "файлу, а не :class:`StreamHandler`."
 
-#: ../../library/logging.rst:1368
+#: ../../library/logging.rst:1369
 msgid "*filemode*"
 msgstr "*файловий режим*"
 
-#: ../../library/logging.rst:1368
+#: ../../library/logging.rst:1369
 msgid ""
 "If *filename* is specified, open the file in this :ref:`mode <filemodes>`. "
 "Defaults to ``'a'``."
@@ -2429,11 +2423,11 @@ msgstr ""
 "Якщо вказано *ім’я файлу*, відкрийте файл у цьому :ref:`режимі <filemodes>`."
 " За замовчуванням ``'a''``."
 
-#: ../../library/logging.rst:1372
+#: ../../library/logging.rst:1373
 msgid "*format*"
 msgstr "*формат*"
 
-#: ../../library/logging.rst:1372
+#: ../../library/logging.rst:1373
 msgid ""
 "Use the specified format string for the handler. Defaults to attributes "
 "``levelname``, ``name`` and ``message`` separated by colons."
@@ -2441,21 +2435,21 @@ msgstr ""
 "Використовуйте вказаний рядок формату для обробника. За замовчуванням "
 "атрибути ``levelname``, ``name`` і ``message``, розділені двокрапками."
 
-#: ../../library/logging.rst:1377
+#: ../../library/logging.rst:1378
 msgid "*datefmt*"
 msgstr "*datefmt*"
 
-#: ../../library/logging.rst:1377
+#: ../../library/logging.rst:1378
 msgid ""
 "Use the specified date/time format, as accepted by :func:`time.strftime`."
 msgstr ""
 "Використовуйте вказаний формат дати/часу, прийнятний :func:`time.strftime`."
 
-#: ../../library/logging.rst:1380
+#: ../../library/logging.rst:1381
 msgid "*style*"
 msgstr "*стиль*"
 
-#: ../../library/logging.rst:1380
+#: ../../library/logging.rst:1381
 msgid ""
 "If *format* is specified, use this style for the format string. One of "
 "``'%'``, ``'{'`` or ``'$'`` for :ref:`printf-style <old-string-formatting>`,"
@@ -2467,20 +2461,20 @@ msgstr ""
 "formatting>`, :meth:`str.format` або :class:`string .Template` відповідно. "
 "За замовчуванням ``'%''``."
 
-#: ../../library/logging.rst:1388
+#: ../../library/logging.rst:1389
 msgid "*level*"
 msgstr "*рівень*"
 
-#: ../../library/logging.rst:1388
+#: ../../library/logging.rst:1389
 msgid "Set the root logger level to the specified :ref:`level <levels>`."
 msgstr ""
 "Встановіть рівень кореневого реєстратора на вказаний :ref:`level <levels>`."
 
-#: ../../library/logging.rst:1391
+#: ../../library/logging.rst:1392
 msgid "*stream*"
 msgstr "*потік*"
 
-#: ../../library/logging.rst:1391
+#: ../../library/logging.rst:1392
 msgid ""
 "Use the specified stream to initialize the :class:`StreamHandler`. Note that"
 " this argument is incompatible with *filename* - if both are present, a "
@@ -2490,11 +2484,11 @@ msgstr ""
 "Зауважте, що цей аргумент несумісний з *ім’ям файлу* – якщо присутні обидва,"
 " виникає помилка \"ValueError\"."
 
-#: ../../library/logging.rst:1397
+#: ../../library/logging.rst:1398
 msgid "*handlers*"
 msgstr "*обробники*"
 
-#: ../../library/logging.rst:1397
+#: ../../library/logging.rst:1398
 msgid ""
 "If specified, this should be an iterable of already created handlers to add "
 "to the root logger. Any handlers which don't already have a formatter set "
@@ -2508,11 +2502,11 @@ msgstr ""
 "Зауважте, що цей аргумент несумісний з *filename* або *stream* - якщо обидва"
 " присутні, виникає помилка ValueError."
 
-#: ../../library/logging.rst:1406
+#: ../../library/logging.rst:1407
 msgid "*force*"
 msgstr "*сила*"
 
-#: ../../library/logging.rst:1406
+#: ../../library/logging.rst:1407
 msgid ""
 "If this keyword argument is specified as true, any existing handlers "
 "attached to the root logger are removed and closed, before carrying out the "
@@ -2522,11 +2516,11 @@ msgstr ""
 "обробники, приєднані до кореневого реєстратора, видаляються та закриваються "
 "перед виконанням конфігурації, як зазначено іншими аргументами."
 
-#: ../../library/logging.rst:1412
+#: ../../library/logging.rst:1413
 msgid "*encoding*"
 msgstr "*кодування*"
 
-#: ../../library/logging.rst:1412
+#: ../../library/logging.rst:1413
 msgid ""
 "If this keyword argument is specified along with *filename*, its value is "
 "used when the :class:`FileHandler` is created, and thus used when opening "
@@ -2536,11 +2530,11 @@ msgstr ""
 " використовується під час створення :class:`FileHandler` і, таким чином, "
 "використовується під час відкриття вихідного файлу."
 
-#: ../../library/logging.rst:1417
+#: ../../library/logging.rst:1418
 msgid "*errors*"
 msgstr "*помилки*"
 
-#: ../../library/logging.rst:1417
+#: ../../library/logging.rst:1418
 msgid ""
 "If this keyword argument is specified along with *filename*, its value is "
 "used when the :class:`FileHandler` is created, and thus used when opening "
@@ -2556,11 +2550,11 @@ msgstr ""
 "``None``, воно буде передано як таке до :func:`open`, що означає, що воно "
 "розглядатиметься так само, як передача 'errors'."
 
-#: ../../library/logging.rst:1428
+#: ../../library/logging.rst:1429
 msgid "The *style* argument was added."
 msgstr "Додано аргумент *style*."
 
-#: ../../library/logging.rst:1431
+#: ../../library/logging.rst:1432
 msgid ""
 "The *handlers* argument was added. Additional checks were added to catch "
 "situations where incompatible arguments are specified (e.g. *handlers* "
@@ -2570,15 +2564,15 @@ msgstr ""
 "ситуацій, коли вказано несумісні аргументи (наприклад, *обробники* разом із "
 "*потоком* або *ім’ям файлу*, або *потік* разом із *ім’ям файлу*)."
 
-#: ../../library/logging.rst:1437
+#: ../../library/logging.rst:1438
 msgid "The *force* argument was added."
 msgstr "Додано аргумент *force*."
 
-#: ../../library/logging.rst:1440
+#: ../../library/logging.rst:1441
 msgid "The *encoding* and *errors* arguments were added."
 msgstr "Додано аргументи *encoding* і *errors*."
 
-#: ../../library/logging.rst:1445
+#: ../../library/logging.rst:1446
 msgid ""
 "Informs the logging system to perform an orderly shutdown by flushing and "
 "closing all handlers. This should be called at application exit and no "
@@ -2589,7 +2583,7 @@ msgstr ""
 "виходу з програми, і після цього виклику не слід використовувати систему "
 "журналювання."
 
-#: ../../library/logging.rst:1449
+#: ../../library/logging.rst:1450
 msgid ""
 "When the logging module is imported, it registers this function as an exit "
 "handler (see :mod:`atexit`), so normally there's no need to do that "
@@ -2598,7 +2592,7 @@ msgstr ""
 "Коли модуль журналювання імпортовано, він реєструє цю функцію як обробник "
 "виходу (див. :mod:`atexit`), тому зазвичай немає потреби робити це вручну."
 
-#: ../../library/logging.rst:1456
+#: ../../library/logging.rst:1457
 msgid ""
 "Tells the logging system to use the class *klass* when instantiating a "
 "logger. The class should define :meth:`!__init__` such that only a name "
@@ -2610,18 +2604,18 @@ msgid ""
 "API to get your loggers."
 msgstr ""
 
-#: ../../library/logging.rst:1467
+#: ../../library/logging.rst:1468
 msgid "Set a callable which is used to create a :class:`LogRecord`."
 msgstr ""
 "Встановіть виклик, який використовується для створення :class:`LogRecord`."
 
-#: ../../library/logging.rst:1469
+#: ../../library/logging.rst:1470
 msgid "The factory callable to be used to instantiate a log record."
 msgstr ""
 "Фабричний виклик, який буде використано для створення екземпляра запису "
 "журналу."
 
-#: ../../library/logging.rst:1471
+#: ../../library/logging.rst:1472
 msgid ""
 "This function has been provided, along with :func:`getLogRecordFactory`, to "
 "allow developers more control over how the :class:`LogRecord` representing a"
@@ -2631,11 +2625,11 @@ msgstr ""
 "розробникам більше контролювати те, як створюється :class:`LogRecord`, що "
 "представляє подію журналювання."
 
-#: ../../library/logging.rst:1476
+#: ../../library/logging.rst:1477
 msgid "The factory has the following signature:"
 msgstr "Завод має такий підпис:"
 
-#: ../../library/logging.rst:1478
+#: ../../library/logging.rst:1479
 msgid ""
 "``factory(name, level, fn, lno, msg, args, exc_info, func=None, sinfo=None, "
 "**kwargs)``"
@@ -2643,7 +2637,7 @@ msgstr ""
 "``factory(name, level, fn, lno, msg, args, exc_info, func=None, sinfo=None, "
 "**kwargs)``"
 
-#: ../../library/logging.rst:1480
+#: ../../library/logging.rst:1481
 msgid "The logger name."
 msgstr "Ім'я реєстратора."
 
@@ -2651,7 +2645,7 @@ msgstr "Ім'я реєстратора."
 msgid "level"
 msgstr "рівень"
 
-#: ../../library/logging.rst:1481
+#: ../../library/logging.rst:1482
 msgid "The logging level (numeric)."
 msgstr "Рівень журналювання (числовий)."
 
@@ -2659,7 +2653,7 @@ msgstr "Рівень журналювання (числовий)."
 msgid "fn"
 msgstr "фн"
 
-#: ../../library/logging.rst:1482
+#: ../../library/logging.rst:1483
 msgid "The full pathname of the file where the logging call was made."
 msgstr "Повний шлях до файлу, у якому було здійснено виклик журналювання."
 
@@ -2667,19 +2661,19 @@ msgstr "Повний шлях до файлу, у якому було здійс
 msgid "lno"
 msgstr "льно"
 
-#: ../../library/logging.rst:1483
+#: ../../library/logging.rst:1484
 msgid "The line number in the file where the logging call was made."
 msgstr "Номер рядка у файлі, де було здійснено виклик журналювання."
 
-#: ../../library/logging.rst:1484
+#: ../../library/logging.rst:1485
 msgid "The logging message."
 msgstr "Повідомлення реєстрації."
 
-#: ../../library/logging.rst:1485
+#: ../../library/logging.rst:1486
 msgid "The arguments for the logging message."
 msgstr "Аргументи для повідомлення журналу."
 
-#: ../../library/logging.rst:1486
+#: ../../library/logging.rst:1487
 msgid "An exception tuple, or ``None``."
 msgstr "Кортеж винятків або ``None``."
 
@@ -2687,7 +2681,7 @@ msgstr "Кортеж винятків або ``None``."
 msgid "func"
 msgstr "функц"
 
-#: ../../library/logging.rst:1487
+#: ../../library/logging.rst:1488
 msgid "The name of the function or method which invoked the logging call."
 msgstr "Ім'я функції або методу, які викликали журналювання."
 
@@ -2695,7 +2689,7 @@ msgstr "Ім'я функції або методу, які викликали ж
 msgid "sinfo"
 msgstr "sinfo"
 
-#: ../../library/logging.rst:1489
+#: ../../library/logging.rst:1490
 msgid ""
 "A stack traceback such as is provided by :func:`traceback.print_stack`, "
 "showing the call hierarchy."
@@ -2707,15 +2701,15 @@ msgstr ""
 msgid "kwargs"
 msgstr "kwargs"
 
-#: ../../library/logging.rst:1491
+#: ../../library/logging.rst:1492
 msgid "Additional keyword arguments."
 msgstr "Додаткові аргументи ключових слів."
 
-#: ../../library/logging.rst:1495
+#: ../../library/logging.rst:1496
 msgid "Module-Level Attributes"
 msgstr "Атрибути рівня модуля"
 
-#: ../../library/logging.rst:1499
+#: ../../library/logging.rst:1500
 msgid ""
 "A \"handler of last resort\" is available through this attribute. This is a "
 ":class:`StreamHandler` writing to ``sys.stderr`` with a level of "
@@ -2734,15 +2728,15 @@ msgstr ""
 "вам потрібна попередня поведінка, для lastResort можна встановити значення "
 "None."
 
-#: ../../library/logging.rst:1511
+#: ../../library/logging.rst:1512
 msgid "Used to see if exceptions during handling should be propagated."
 msgstr ""
 
-#: ../../library/logging.rst:1513
+#: ../../library/logging.rst:1514
 msgid "Default: ``True``."
 msgstr ""
 
-#: ../../library/logging.rst:1515
+#: ../../library/logging.rst:1516
 msgid ""
 "If :data:`raiseExceptions` is ``False``, exceptions get silently ignored. "
 "This is what is mostly wanted for a logging system - most users will not "
@@ -2750,11 +2744,11 @@ msgid ""
 "application errors."
 msgstr ""
 
-#: ../../library/logging.rst:1522
+#: ../../library/logging.rst:1523
 msgid "Integration with the warnings module"
 msgstr "Інтеграція з модулем попереджень"
 
-#: ../../library/logging.rst:1524
+#: ../../library/logging.rst:1525
 msgid ""
 "The :func:`captureWarnings` function can be used to integrate :mod:`logging`"
 " with the :mod:`warnings` module."
@@ -2762,14 +2756,14 @@ msgstr ""
 "Функцію :func:`captureWarnings` можна використовувати для інтеграції "
 ":mod:`logging` з модулем :mod:`warnings`."
 
-#: ../../library/logging.rst:1529
+#: ../../library/logging.rst:1530
 msgid ""
 "This function is used to turn the capture of warnings by logging on and off."
 msgstr ""
 "Ця функція використовується для ввімкнення та вимкнення захоплення "
 "попереджень під час входу."
 
-#: ../../library/logging.rst:1532
+#: ../../library/logging.rst:1533
 msgid ""
 "If *capture* is ``True``, warnings issued by the :mod:`warnings` module will"
 " be redirected to the logging system. Specifically, a warning will be "
@@ -2783,7 +2777,7 @@ msgstr ""
 ":func:`warnings.formatwarning`, а результуючий рядок буде зареєстровано в "
 "журналі під назвою ``'py.warnings`` з серйозністю :const:`WARNING`."
 
-#: ../../library/logging.rst:1537
+#: ../../library/logging.rst:1538
 msgid ""
 "If *capture* is ``False``, the redirection of warnings to the logging system"
 " will stop, and warnings will be redirected to their original destinations "
@@ -2794,27 +2788,27 @@ msgstr ""
 "початкових місць призначення (тобто тих, які діяли до виклику "
 "``captureWarnings(True)``)."
 
-#: ../../library/logging.rst:1544
+#: ../../library/logging.rst:1545
 msgid "Module :mod:`logging.config`"
 msgstr "Модуль :mod:`logging.config`"
 
-#: ../../library/logging.rst:1545
+#: ../../library/logging.rst:1546
 msgid "Configuration API for the logging module."
 msgstr "API конфігурації для модуля журналювання."
 
-#: ../../library/logging.rst:1547
+#: ../../library/logging.rst:1548
 msgid "Module :mod:`logging.handlers`"
 msgstr "Модуль :mod:`logging.handlers`"
 
-#: ../../library/logging.rst:1548
+#: ../../library/logging.rst:1549
 msgid "Useful handlers included with the logging module."
 msgstr "Корисні обробники, включені в модуль журналювання."
 
-#: ../../library/logging.rst:1550
+#: ../../library/logging.rst:1551
 msgid ":pep:`282` - A Logging System"
 msgstr ":pep:`282` - Система реєстрації"
 
-#: ../../library/logging.rst:1551
+#: ../../library/logging.rst:1552
 msgid ""
 "The proposal which described this feature for inclusion in the Python "
 "standard library."
@@ -2822,7 +2816,7 @@ msgstr ""
 "Пропозиція, яка описує цю функцію для включення в стандартну бібліотеку "
 "Python."
 
-#: ../../library/logging.rst:1554
+#: ../../library/logging.rst:1555
 msgid ""
 "`Original Python logging package <https://old.red-"
 "dove.com/python_logging.html>`_"
@@ -2830,7 +2824,7 @@ msgstr ""
 "`Оригінальний пакет журналювання Python <https://old.red-"
 "dove.com/python_logging.html>`_"
 
-#: ../../library/logging.rst:1555
+#: ../../library/logging.rst:1556
 msgid ""
 "This is the original source for the :mod:`logging` package.  The version of "
 "the package available from this site is suitable for use with Python 1.5.2, "
