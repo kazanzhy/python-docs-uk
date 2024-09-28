@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-20 14:17+0000\n"
+"POT-Creation-Date: 2024-09-27 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:52+0000\n"
 "Last-Translator: Vadim Kashirny, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -443,28 +443,23 @@ msgstr ""
 
 #: ../../faq/extending.rst:249
 msgid ""
-"Most packaged versions of Python don't include the "
-":file:`/usr/lib/python2.{x}/config/` directory, which contains various files"
-" required for compiling Python extensions."
+"Most packaged versions of Python omit some files required for compiling "
+"Python extensions."
 msgstr ""
-"Більшість упакованих версій Python не включають каталог "
-":file:`/usr/lib/python2.{x}/config/`, який містить різні файли, необхідні "
-"для компіляції розширень Python."
 
-#: ../../faq/extending.rst:253
-msgid "For Red Hat, install the python-devel RPM to get the necessary files."
+#: ../../faq/extending.rst:252
+msgid "For Red Hat, install the python3-devel RPM to get the necessary files."
 msgstr ""
-"Для Red Hat встановіть RPM python-devel, щоб отримати необхідні файли."
 
-#: ../../faq/extending.rst:255
-msgid "For Debian, run ``apt-get install python-dev``."
-msgstr "Для Debian запустіть ``apt-get install python-dev``."
+#: ../../faq/extending.rst:254
+msgid "For Debian, run ``apt-get install python3-dev``."
+msgstr ""
 
-#: ../../faq/extending.rst:258
+#: ../../faq/extending.rst:257
 msgid "How do I tell \"incomplete input\" from \"invalid input\"?"
 msgstr "Як відрізнити \"неповне введення\" від \"некоректного введення\"?"
 
-#: ../../faq/extending.rst:260
+#: ../../faq/extending.rst:259
 msgid ""
 "Sometimes you want to emulate the Python interactive interpreter's behavior,"
 " where it gives you a continuation prompt when the input is incomplete (e.g."
@@ -478,7 +473,7 @@ msgstr ""
 "лапки), але він дає вам повідомлення про синтаксичну помилку негайно, коли "
 "введення некректне."
 
-#: ../../faq/extending.rst:266
+#: ../../faq/extending.rst:265
 msgid ""
 "In Python you can use the :mod:`codeop` module, which approximates the "
 "parser's behavior sufficiently.  IDLE uses this, for example."
@@ -486,7 +481,7 @@ msgstr ""
 "У Python ви можете використовувати модуль :mod:`codeop`, який достатньо "
 "наближає поведінку аналізатора. IDLE використовує це, наприклад."
 
-#: ../../faq/extending.rst:269
+#: ../../faq/extending.rst:268
 msgid ""
 "The easiest way to do it in C is to call :c:func:`PyRun_InteractiveLoop` "
 "(perhaps in a separate thread) and let the Python interpreter handle the "
@@ -501,11 +496,11 @@ msgstr ""
 "вашу власну функцію введення. Перегляньте ``Modules/readline.c`` і "
 "``Parser/myreadline.c`` для отримання додаткових підказок."
 
-#: ../../faq/extending.rst:276
+#: ../../faq/extending.rst:275
 msgid "How do I find undefined g++ symbols __builtin_new or __pure_virtual?"
 msgstr "Як знайти невизначені символи g++ __builtin_new або __pure_virtual?"
 
-#: ../../faq/extending.rst:278
+#: ../../faq/extending.rst:277
 msgid ""
 "To dynamically load g++ extension modules, you must recompile Python, relink"
 " it using g++ (change LINKCC in the Python Modules Makefile), and link your "
@@ -517,7 +512,7 @@ msgstr ""
 "LINKCC у Makefile модулів Python) і пов'язати свій модуль розширення за "
 "допомогою g++ (наприклад, ``g++ -shared -o mymodule.so mymodule.o``)."
 
-#: ../../faq/extending.rst:284
+#: ../../faq/extending.rst:283
 msgid ""
 "Can I create an object class with some methods implemented in C and others "
 "in Python (e.g. through inheritance)?"
@@ -525,7 +520,7 @@ msgstr ""
 "Чи можу я створити клас об’єктів за допомогою деяких методів, реалізованих у"
 " C, а інших – у Python (наприклад, через успадкування)?"
 
-#: ../../faq/extending.rst:286
+#: ../../faq/extending.rst:285
 msgid ""
 "Yes, you can inherit from built-in classes such as :class:`int`, "
 ":class:`list`, :class:`dict`, etc."
@@ -533,7 +528,7 @@ msgstr ""
 "Так, ви можете успадкувати такі вбудовані класи, як :class:`int`, "
 ":class:`list`, :class:`dict` тощо."
 
-#: ../../faq/extending.rst:289
+#: ../../faq/extending.rst:288
 msgid ""
 "The Boost Python Library (BPL, "
 "https://www.boost.org/libs/python/doc/index.html) provides a way of doing "
