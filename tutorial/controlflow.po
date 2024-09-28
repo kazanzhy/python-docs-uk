@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-20 14:17+0000\n"
+"POT-Creation-Date: 2024-09-27 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -274,50 +274,90 @@ msgstr ""
 "обговоримо :func:`list`."
 
 #: ../../tutorial/controlflow.rst:164
-msgid ""
-":keyword:`!break` and :keyword:`!continue` Statements, and :keyword:`!else` "
-"Clauses on Loops"
+msgid ":keyword:`!break` and :keyword:`!continue` Statements"
 msgstr ""
-":keyword:`!break` і :keyword:`!continue` Інструкції та :keyword:`!else` "
-"пропозиції циклів"
 
 #: ../../tutorial/controlflow.rst:166
 msgid ""
 "The :keyword:`break` statement breaks out of the innermost enclosing "
-":keyword:`for` or :keyword:`while` loop."
+":keyword:`for` or :keyword:`while` loop::"
 msgstr ""
 
 #: ../../tutorial/controlflow.rst:169
 msgid ""
-"A :keyword:`!for` or :keyword:`!while` loop can include an :keyword:`!else` "
-"clause."
+">>> for n in range(2, 10):\n"
+"...     for x in range(2, n):\n"
+"...         if n % x == 0:\n"
+"...             print(f\"{n} equals {x} * {n//x}\")\n"
+"...             break\n"
+"...\n"
+"4 equals 2 * 2\n"
+"6 equals 2 * 3\n"
+"8 equals 2 * 4\n"
+"9 equals 3 * 3"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:171
+#: ../../tutorial/controlflow.rst:180
+msgid ""
+"The :keyword:`continue` statement continues with the next iteration of the "
+"loop::"
+msgstr ""
+
+#: ../../tutorial/controlflow.rst:183
+msgid ""
+">>> for num in range(2, 10):\n"
+"...     if num % 2 == 0:\n"
+"...         print(f\"Found an even number {num}\")\n"
+"...         continue\n"
+"...     print(f\"Found an odd number {num}\")\n"
+"...\n"
+"Found an even number 2\n"
+"Found an odd number 3\n"
+"Found an even number 4\n"
+"Found an odd number 5\n"
+"Found an even number 6\n"
+"Found an odd number 7\n"
+"Found an even number 8\n"
+"Found an odd number 9"
+msgstr ""
+
+#: ../../tutorial/controlflow.rst:201
+msgid ":keyword:`!else` Clauses on Loops"
+msgstr ""
+
+#: ../../tutorial/controlflow.rst:203
+msgid ""
+"In a :keyword:`!for` or :keyword:`!while` loop the :keyword:`!break` "
+"statement may be paired with an :keyword:`!else` clause.  If the loop "
+"finishes without executing the :keyword:`!break`, the :keyword:`!else` "
+"clause executes."
+msgstr ""
+
+#: ../../tutorial/controlflow.rst:207
 msgid ""
 "In a :keyword:`for` loop, the :keyword:`!else` clause is executed after the "
-"loop reaches its final iteration."
+"loop finishes its final iteration, that is, if no break occurred."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:174
+#: ../../tutorial/controlflow.rst:210
 msgid ""
 "In a :keyword:`while` loop, it's executed after the loop's condition becomes"
 " false."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:176
+#: ../../tutorial/controlflow.rst:212
 msgid ""
 "In either kind of loop, the :keyword:`!else` clause is **not** executed if "
 "the loop was terminated by a :keyword:`break`."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:179
+#: ../../tutorial/controlflow.rst:215
 msgid ""
 "This is exemplified in the following :keyword:`!for` loop, which searches "
 "for prime numbers::"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:182
+#: ../../tutorial/controlflow.rst:218
 msgid ""
 ">>> for n in range(2, 10):\n"
 "...     for x in range(2, n):\n"
@@ -338,61 +378,36 @@ msgid ""
 "9 equals 3 * 3"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:200
+#: ../../tutorial/controlflow.rst:236
 msgid ""
 "(Yes, this is the correct code.  Look closely: the ``else`` clause belongs "
-"to the :keyword:`for` loop, **not** the :keyword:`if` statement.)"
+"to the ``for`` loop, **not** the ``if`` statement.)"
 msgstr ""
-"(Так, це правильний код. Подивіться уважно: пропозиція ``else`` належить "
-"циклу :keyword:`for`, **не** оператору :keyword:`if`.)"
 
-#: ../../tutorial/controlflow.rst:203
+#: ../../tutorial/controlflow.rst:239
+msgid ""
+"One way to think of the else clause is to imagine it paired with the ``if`` "
+"inside the loop.  As the loop executes, it will run a sequence like "
+"if/if/if/else. The ``if`` is inside the loop, encountered a number of times."
+" If the condition is ever true, a ``break`` will happen. If the condition is"
+" never true, the ``else`` clause outside the loop will execute."
+msgstr ""
+
+#: ../../tutorial/controlflow.rst:245
 msgid ""
 "When used with a loop, the ``else`` clause has more in common with the "
 "``else`` clause of a :keyword:`try` statement than it does with that of "
-":keyword:`if` statements: a :keyword:`try` statement's ``else`` clause runs "
-"when no exception occurs, and a loop's ``else`` clause runs when no "
-"``break`` occurs. For more on the :keyword:`!try` statement and exceptions, "
-"see :ref:`tut-handling`."
-msgstr ""
-"При використанні з циклом пропозиція ``else`` має більше спільного з "
-"пропозицією ``else`` оператора :keyword:`try`, ніж з пропозицією "
-":keyword:`if`: a : Речення ``else`` інструкції за :keyword:`try` "
-"виконується, коли не відбувається винятків, а речення ``else`` циклу "
-"виконується, коли не відбувається ``розрив``. Щоб дізнатися більше про "
-"оператор :keyword:`!try` та винятки, перегляньте :ref:`tut-handling`."
-
-#: ../../tutorial/controlflow.rst:210
-msgid ""
-"The :keyword:`continue` statement, also borrowed from C, continues with the "
-"next iteration of the loop::"
-msgstr ""
-"Оператор :keyword:`continue`, також запозичений з C, продовжує наступну "
-"ітерацію циклу::"
-
-#: ../../tutorial/controlflow.rst:213
-msgid ""
-">>> for num in range(2, 10):\n"
-"...     if num % 2 == 0:\n"
-"...         print(\"Found an even number\", num)\n"
-"...         continue\n"
-"...     print(\"Found an odd number\", num)\n"
-"...\n"
-"Found an even number 2\n"
-"Found an odd number 3\n"
-"Found an even number 4\n"
-"Found an odd number 5\n"
-"Found an even number 6\n"
-"Found an odd number 7\n"
-"Found an even number 8\n"
-"Found an odd number 9"
+"``if`` statements: a ``try`` statement's ``else`` clause runs when no "
+"exception occurs, and a loop's ``else`` clause runs when no ``break`` "
+"occurs. For more on the ``try`` statement and exceptions, see :ref:`tut-"
+"handling`."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:231
+#: ../../tutorial/controlflow.rst:254
 msgid ":keyword:`!pass` Statements"
 msgstr ":keyword:`!pass` Інструкції"
 
-#: ../../tutorial/controlflow.rst:233
+#: ../../tutorial/controlflow.rst:256
 msgid ""
 "The :keyword:`pass` statement does nothing. It can be used when a statement "
 "is required syntactically but the program requires no action. For example::"
@@ -401,25 +416,25 @@ msgstr ""
 "оператор потрібен синтаксично, але програма не вимагає жодних дій. "
 "Наприклад::"
 
-#: ../../tutorial/controlflow.rst:236
+#: ../../tutorial/controlflow.rst:259
 msgid ""
 ">>> while True:\n"
 "...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)\n"
 "..."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:240
+#: ../../tutorial/controlflow.rst:263
 msgid "This is commonly used for creating minimal classes::"
 msgstr "Це зазвичай використовується для створення мінімальних класів:"
 
-#: ../../tutorial/controlflow.rst:242
+#: ../../tutorial/controlflow.rst:265
 msgid ""
 ">>> class MyEmptyClass:\n"
 "...     pass\n"
 "..."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:246
+#: ../../tutorial/controlflow.rst:269
 msgid ""
 "Another place :keyword:`pass` can be used is as a place-holder for a "
 "function or conditional body when you are working on new code, allowing you "
@@ -431,18 +446,18 @@ msgstr ""
 " продовжувати мислити на більш абстрактному рівні. :keyword:`!pass` мовчки "
 "ігнорується::"
 
-#: ../../tutorial/controlflow.rst:250
+#: ../../tutorial/controlflow.rst:273
 msgid ""
 ">>> def initlog(*args):\n"
 "...     pass   # Remember to implement this!\n"
 "..."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:258
+#: ../../tutorial/controlflow.rst:281
 msgid ":keyword:`!match` Statements"
 msgstr ":keyword:`!match` Інструкції"
 
-#: ../../tutorial/controlflow.rst:260
+#: ../../tutorial/controlflow.rst:283
 msgid ""
 "A :keyword:`match` statement takes an expression and compares its value to "
 "successive patterns given as one or more case blocks.  This is superficially"
@@ -453,14 +468,14 @@ msgid ""
 "value into variables."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:268
+#: ../../tutorial/controlflow.rst:291
 msgid ""
 "The simplest form compares a subject value against one or more literals::"
 msgstr ""
 "Найпростіша форма порівнює значення предмета з одним або кількома "
 "літералами::"
 
-#: ../../tutorial/controlflow.rst:270
+#: ../../tutorial/controlflow.rst:293
 msgid ""
 "def http_error(status):\n"
 "    match status:\n"
@@ -474,7 +489,7 @@ msgid ""
 "            return \"Something's wrong with the internet\""
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:281
+#: ../../tutorial/controlflow.rst:304
 msgid ""
 "Note the last block: the \"variable name\" ``_`` acts as a *wildcard* and "
 "never fails to match. If no case matches, none of the branches is executed."
@@ -483,20 +498,20 @@ msgstr ""
 "підстановки* і ніколи не збігається. Якщо жоден регістр не відповідає, жодна"
 " з гілок не виконується."
 
-#: ../../tutorial/controlflow.rst:284
+#: ../../tutorial/controlflow.rst:307
 msgid ""
 "You can combine several literals in a single pattern using ``|`` (\"or\")::"
 msgstr ""
 "Ви можете поєднати кілька літералів в одному шаблоні за допомогою ``|`` "
 "(\"або\")::"
 
-#: ../../tutorial/controlflow.rst:286
+#: ../../tutorial/controlflow.rst:309
 msgid ""
 "case 401 | 403 | 404:\n"
 "    return \"Not allowed\""
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:289
+#: ../../tutorial/controlflow.rst:312
 msgid ""
 "Patterns can look like unpacking assignments, and can be used to bind "
 "variables::"
@@ -504,7 +519,7 @@ msgstr ""
 "Патерни можуть виглядати як завдання розпакування, і їх можна "
 "використовувати для зв’язування змінних::"
 
-#: ../../tutorial/controlflow.rst:292
+#: ../../tutorial/controlflow.rst:315
 msgid ""
 "# point is an (x, y) tuple\n"
 "match point:\n"
@@ -520,7 +535,7 @@ msgid ""
 "        raise ValueError(\"Not a point\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:305
+#: ../../tutorial/controlflow.rst:328
 msgid ""
 "Study that one carefully!  The first pattern has two literals, and can be "
 "thought of as an extension of the literal pattern shown above.  But the next"
@@ -535,7 +550,7 @@ msgstr ""
 "(``точка``). Четвертий шаблон фіксує два значення, що робить його "
 "концептуально подібним до призначення розпакування ``(x, y) = point``."
 
-#: ../../tutorial/controlflow.rst:312
+#: ../../tutorial/controlflow.rst:335
 msgid ""
 "If you are using classes to structure your data you can use the class name "
 "followed by an argument list resembling a constructor, but with the ability "
@@ -545,7 +560,7 @@ msgstr ""
 "використовувати назву класу, за якою слідує список аргументів, схожий на "
 "конструктор, але з можливістю запису атрибутів у змінні::"
 
-#: ../../tutorial/controlflow.rst:316
+#: ../../tutorial/controlflow.rst:339
 msgid ""
 "class Point:\n"
 "    def __init__(self, x, y):\n"
@@ -566,7 +581,7 @@ msgid ""
 "            print(\"Not a point\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:334
+#: ../../tutorial/controlflow.rst:357
 msgid ""
 "You can use positional parameters with some builtin classes that provide an "
 "ordering for their attributes (e.g. dataclasses). You can also define a "
@@ -582,7 +597,7 @@ msgstr ""
 "нього встановлено значення (\"x\", \"y\"), усі наступні шаблони еквівалентні"
 " (і всі прив'язують атрибут ``y`` до змінної ``var``):"
 
-#: ../../tutorial/controlflow.rst:340
+#: ../../tutorial/controlflow.rst:363
 msgid ""
 "Point(1, var)\n"
 "Point(1, y=var)\n"
@@ -590,7 +605,7 @@ msgid ""
 "Point(y=var, x=1)"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:345
+#: ../../tutorial/controlflow.rst:368
 msgid ""
 "A recommended way to read patterns is to look at them as an extended form of"
 " what you would put on the left of an assignment, to understand which "
@@ -608,13 +623,13 @@ msgstr ""
 "(розпізнаються за \"(...)\" поруч із ними, як ``Точка`` вище) ніколи не "
 "призначаються."
 
-#: ../../tutorial/controlflow.rst:352
+#: ../../tutorial/controlflow.rst:375
 msgid ""
 "Patterns can be arbitrarily nested.  For example, if we have a short list of"
 " Points, with ``__match_args__`` added, we could match it like this::"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:355
+#: ../../tutorial/controlflow.rst:378
 msgid ""
 "class Point:\n"
 "    __match_args__ = ('x', 'y')\n"
@@ -635,7 +650,7 @@ msgid ""
 "        print(\"Something else\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:373
+#: ../../tutorial/controlflow.rst:396
 msgid ""
 "We can add an ``if`` clause to a pattern, known as a \"guard\".  If the "
 "guard is false, ``match`` goes on to try the next case block.  Note that "
@@ -645,7 +660,7 @@ msgstr ""
 "false, ``match`` переходить до наступного блоку case. Зауважте, що "
 "захоплення значення відбувається до оцінки захисника:"
 
-#: ../../tutorial/controlflow.rst:377
+#: ../../tutorial/controlflow.rst:400
 msgid ""
 "match point:\n"
 "    case Point(x, y) if x == y:\n"
@@ -654,11 +669,11 @@ msgid ""
 "        print(f\"Not on the diagonal\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:383
+#: ../../tutorial/controlflow.rst:406
 msgid "Several other key features of this statement:"
 msgstr "Кілька інших ключових особливостей цього твердження:"
 
-#: ../../tutorial/controlflow.rst:385
+#: ../../tutorial/controlflow.rst:408
 msgid ""
 "Like unpacking assignments, tuple and list patterns have exactly the same "
 "meaning and actually match arbitrary sequences.  An important exception is "
@@ -668,7 +683,7 @@ msgstr ""
 "значення та фактично відповідають довільним послідовностям. Важливим "
 "винятком є те, що вони не відповідають ітераторам або рядкам."
 
-#: ../../tutorial/controlflow.rst:389
+#: ../../tutorial/controlflow.rst:412
 msgid ""
 "Sequence patterns support extended unpacking: ``[x, y, *rest]`` and ``(x, y,"
 " *rest)`` work similar to unpacking assignments.  The name after ``*`` may "
@@ -680,7 +695,7 @@ msgstr ""
 "``*`` також може бути ``_``, тому ``(x, y, *_)`` відповідає послідовності "
 "принаймні двох елементів без зв’язування решти елементів."
 
-#: ../../tutorial/controlflow.rst:394
+#: ../../tutorial/controlflow.rst:417
 msgid ""
 "Mapping patterns: ``{\"bandwidth\": b, \"latency\": l}`` captures the "
 "``\"bandwidth\"`` and ``\"latency\"`` values from a dictionary.  Unlike "
@@ -692,16 +707,16 @@ msgstr ""
 "послідовності, додаткові ключі ігноруються. Також підтримується розпакування"
 " на зразок ``**rest``. (Але ``**_`` буде зайвим, тому це заборонено.)"
 
-#: ../../tutorial/controlflow.rst:399
+#: ../../tutorial/controlflow.rst:422
 msgid "Subpatterns may be captured using the ``as`` keyword::"
 msgstr ""
 "Підшаблони можуть бути захоплені за допомогою ключового слова ``as``::"
 
-#: ../../tutorial/controlflow.rst:401
+#: ../../tutorial/controlflow.rst:424
 msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:403
+#: ../../tutorial/controlflow.rst:426
 msgid ""
 "will capture the second element of the input as ``p2`` (as long as the input"
 " is a sequence of two points)"
@@ -709,7 +724,7 @@ msgstr ""
 "захопить другий елемент вхідних даних як ``p2`` (якщо вхідні дані є "
 "послідовністю з двох точок)"
 
-#: ../../tutorial/controlflow.rst:406
+#: ../../tutorial/controlflow.rst:429
 msgid ""
 "Most literals are compared by equality, however the singletons ``True``, "
 "``False`` and ``None`` are compared by identity."
@@ -717,7 +732,7 @@ msgstr ""
 "Більшість літералів порівнюються за рівністю, однак синглетони ``True``, "
 "``False`` і ``None`` порівнюються за тотожністю."
 
-#: ../../tutorial/controlflow.rst:409
+#: ../../tutorial/controlflow.rst:432
 msgid ""
 "Patterns may use named constants.  These must be dotted names to prevent "
 "them from being interpreted as capture variable::"
@@ -725,7 +740,7 @@ msgstr ""
 "Шаблони можуть використовувати іменовані константи. Ці імена мають бути "
 "розділені крапками, щоб запобігти їх інтерпретації як змінну захоплення::"
 
-#: ../../tutorial/controlflow.rst:412
+#: ../../tutorial/controlflow.rst:435
 msgid ""
 "from enum import Enum\n"
 "class Color(Enum):\n"
@@ -744,7 +759,7 @@ msgid ""
 "        print(\"I'm feeling the blues :(\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:428
+#: ../../tutorial/controlflow.rst:451
 msgid ""
 "For a more detailed explanation and additional examples, you can look into "
 ":pep:`636` which is written in a tutorial format."
@@ -752,18 +767,18 @@ msgstr ""
 "Для більш детального пояснення та додаткових прикладів ви можете переглянути"
 " :pep:`636`, який написаний у форматі підручника."
 
-#: ../../tutorial/controlflow.rst:434
+#: ../../tutorial/controlflow.rst:457
 msgid "Defining Functions"
 msgstr "Визначення функцій"
 
-#: ../../tutorial/controlflow.rst:436
+#: ../../tutorial/controlflow.rst:459
 msgid ""
 "We can create a function that writes the Fibonacci series to an arbitrary "
 "boundary::"
 msgstr ""
 "Ми можемо створити функцію, яка записує ряд Фібоначчі до довільної границі:"
 
-#: ../../tutorial/controlflow.rst:439
+#: ../../tutorial/controlflow.rst:462
 msgid ""
 ">>> def fib(n):    # write Fibonacci series up to n\n"
 "...     \"\"\"Print a Fibonacci series up to n.\"\"\"\n"
@@ -778,7 +793,7 @@ msgid ""
 "0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:456
+#: ../../tutorial/controlflow.rst:479
 msgid ""
 "The keyword :keyword:`def` introduces a function *definition*.  It must be "
 "followed by the function name and the parenthesized list of formal "
@@ -790,7 +805,7 @@ msgstr ""
 "утворюють тіло функції, починаються з наступного рядка та мають бути з "
 "відступом."
 
-#: ../../tutorial/controlflow.rst:461
+#: ../../tutorial/controlflow.rst:484
 msgid ""
 "The first statement of the function body can optionally be a string literal;"
 " this string literal is the function's documentation string, or "
@@ -808,7 +823,7 @@ msgstr ""
 "користувач міг інтерактивно переглядати код; добре включати рядки "
 "документації в код, який ви пишете, тож візьміть це за звичку."
 
-#: ../../tutorial/controlflow.rst:468
+#: ../../tutorial/controlflow.rst:491
 msgid ""
 "The *execution* of a function introduces a new symbol table used for the "
 "local variables of the function.  More precisely, all variable assignments "
@@ -832,7 +847,7 @@ msgstr ""
 ":keyword:`global`, або для змінних охоплюючих функцій, названих у "
 ":keyword:`nonlocal`), хоча на них можна посилатися."
 
-#: ../../tutorial/controlflow.rst:479
+#: ../../tutorial/controlflow.rst:502
 msgid ""
 "The actual parameters (arguments) to a function call are introduced in the "
 "local symbol table of the called function when it is called; thus, arguments"
@@ -848,7 +863,7 @@ msgstr ""
 "іншу функцію або рекурсивно викликає саму себе, для цього виклику "
 "створюється нова локальна таблиця символів."
 
-#: ../../tutorial/controlflow.rst:486
+#: ../../tutorial/controlflow.rst:509
 msgid ""
 "A function definition associates the function name with the function object "
 "in the current symbol table.  The interpreter recognizes the object pointed "
@@ -861,7 +876,7 @@ msgstr ""
 "самий об’єкт функції та також можуть використовуватися для доступу до "
 "функції::"
 
-#: ../../tutorial/controlflow.rst:491
+#: ../../tutorial/controlflow.rst:514
 msgid ""
 ">>> fib\n"
 "<function fib at 10042ed0>\n"
@@ -870,7 +885,7 @@ msgid ""
 "0 1 1 2 3 5 8 13 21 34 55 89"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:497
+#: ../../tutorial/controlflow.rst:520
 msgid ""
 "Coming from other languages, you might object that ``fib`` is not a function"
 " but a procedure since it doesn't return a value.  In fact, even functions "
@@ -888,14 +903,14 @@ msgstr ""
 "значення. Ви можете побачити це, якщо дійсно хочете використовувати "
 ":func:`print`::"
 
-#: ../../tutorial/controlflow.rst:504
+#: ../../tutorial/controlflow.rst:527
 msgid ""
 ">>> fib(0)\n"
 ">>> print(fib(0))\n"
 "None"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:508
+#: ../../tutorial/controlflow.rst:531
 msgid ""
 "It is simple to write a function that returns a list of the numbers of the "
 "Fibonacci series, instead of printing it::"
@@ -903,7 +918,7 @@ msgstr ""
 "Дуже просто написати функцію, яка повертає список чисел ряду Фібоначчі, "
 "замість того, щоб друкувати його:"
 
-#: ../../tutorial/controlflow.rst:511
+#: ../../tutorial/controlflow.rst:534
 msgid ""
 ">>> def fib2(n):  # return Fibonacci series up to n\n"
 "...     \"\"\"Return a list containing the Fibonacci series up to n.\"\"\"\n"
@@ -919,11 +934,11 @@ msgid ""
 "[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:524
+#: ../../tutorial/controlflow.rst:547
 msgid "This example, as usual, demonstrates some new Python features:"
 msgstr "Цей приклад, як завжди, демонструє деякі нові функції Python:"
 
-#: ../../tutorial/controlflow.rst:526
+#: ../../tutorial/controlflow.rst:549
 msgid ""
 "The :keyword:`return` statement returns with a value from a function. "
 ":keyword:`!return` without an expression argument returns ``None``. Falling "
@@ -933,7 +948,7 @@ msgstr ""
 "без аргументу-виразу повертає ``None``. Випадання кінця функції також "
 "повертає ``None``."
 
-#: ../../tutorial/controlflow.rst:530
+#: ../../tutorial/controlflow.rst:553
 msgid ""
 "The statement ``result.append(a)`` calls a *method* of the list object "
 "``result``.  A method is a function that 'belongs' to an object and is named"
@@ -948,11 +963,11 @@ msgid ""
 "efficient."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:545
+#: ../../tutorial/controlflow.rst:568
 msgid "More on Defining Functions"
 msgstr "Докладніше про визначення функцій"
 
-#: ../../tutorial/controlflow.rst:547
+#: ../../tutorial/controlflow.rst:570
 msgid ""
 "It is also possible to define functions with a variable number of arguments."
 " There are three forms, which can be combined."
@@ -960,11 +975,11 @@ msgstr ""
 "Також можна визначати функції зі змінною кількістю аргументів. Є три форми, "
 "які можна комбінувати."
 
-#: ../../tutorial/controlflow.rst:554
+#: ../../tutorial/controlflow.rst:577
 msgid "Default Argument Values"
 msgstr "Значення аргументів за замовчуванням"
 
-#: ../../tutorial/controlflow.rst:556
+#: ../../tutorial/controlflow.rst:579
 msgid ""
 "The most useful form is to specify a default value for one or more "
 "arguments. This creates a function that can be called with fewer arguments "
@@ -974,7 +989,7 @@ msgstr ""
 "кількох аргументів. Це створює функцію, яку можна викликати з меншою "
 "кількістю аргументів, ніж це дозволено. Наприклад::"
 
-#: ../../tutorial/controlflow.rst:560
+#: ../../tutorial/controlflow.rst:583
 msgid ""
 "def ask_ok(prompt, retries=4, reminder='Please try again!'):\n"
 "    while True:\n"
@@ -989,18 +1004,18 @@ msgid ""
 "        print(reminder)"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:572
+#: ../../tutorial/controlflow.rst:595
 msgid "This function can be called in several ways:"
 msgstr "Цю функцію можна викликати кількома способами:"
 
-#: ../../tutorial/controlflow.rst:574
+#: ../../tutorial/controlflow.rst:597
 msgid ""
 "giving only the mandatory argument: ``ask_ok('Do you really want to "
 "quit?')``"
 msgstr ""
 "вказуючи лише обов’язковий аргумент: ``ask_ok('Ви дійсно хочете вийти?')``"
 
-#: ../../tutorial/controlflow.rst:576
+#: ../../tutorial/controlflow.rst:599
 msgid ""
 "giving one of the optional arguments: ``ask_ok('OK to overwrite the file?', "
 "2)``"
@@ -1008,7 +1023,7 @@ msgstr ""
 "надання одного з необов’язкових аргументів: ``ask_ok('ОК перезаписати "
 "файл?', 2)``"
 
-#: ../../tutorial/controlflow.rst:578
+#: ../../tutorial/controlflow.rst:601
 msgid ""
 "or even giving all arguments: ``ask_ok('OK to overwrite the file?', 2, 'Come"
 " on, only yes or no!')``"
@@ -1016,7 +1031,7 @@ msgstr ""
 "або навіть надавши всі аргументи: ``ask_ok('Добре перезаписати файл?', 2, "
 "'Давай, тільки так чи ні!')``"
 
-#: ../../tutorial/controlflow.rst:581
+#: ../../tutorial/controlflow.rst:604
 msgid ""
 "This example also introduces the :keyword:`in` keyword. This tests whether "
 "or not a sequence contains a certain value."
@@ -1024,7 +1039,7 @@ msgstr ""
 "У цьому прикладі також представлено ключове слово :keyword:`in`. Це "
 "перевіряє, чи містить послідовність певне значення."
 
-#: ../../tutorial/controlflow.rst:584
+#: ../../tutorial/controlflow.rst:607
 msgid ""
 "The default values are evaluated at the point of function definition in the "
 "*defining* scope, so that ::"
@@ -1032,7 +1047,7 @@ msgstr ""
 "Значення за замовчуванням оцінюються в точці визначення функції в області "
 "*defining*, так що:"
 
-#: ../../tutorial/controlflow.rst:587
+#: ../../tutorial/controlflow.rst:610
 msgid ""
 "i = 5\n"
 "\n"
@@ -1043,11 +1058,11 @@ msgid ""
 "f()"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:595
+#: ../../tutorial/controlflow.rst:618
 msgid "will print ``5``."
 msgstr "надрукує ``5``."
 
-#: ../../tutorial/controlflow.rst:597
+#: ../../tutorial/controlflow.rst:620
 msgid ""
 "**Important warning:**  The default value is evaluated only once. This makes"
 " a difference when the default is a mutable object such as a list, "
@@ -1059,7 +1074,7 @@ msgstr ""
 " словник або екземпляри більшості класів. Наприклад, наступна функція "
 "накопичує аргументи, передані їй під час наступних викликів::"
 
-#: ../../tutorial/controlflow.rst:602
+#: ../../tutorial/controlflow.rst:625
 msgid ""
 "def f(a, L=[]):\n"
 "    L.append(a)\n"
@@ -1070,18 +1085,18 @@ msgid ""
 "print(f(3))"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:610
+#: ../../tutorial/controlflow.rst:633
 msgid "This will print ::"
 msgstr "Це надрукує ::"
 
-#: ../../tutorial/controlflow.rst:612
+#: ../../tutorial/controlflow.rst:635
 msgid ""
 "[1]\n"
 "[1, 2]\n"
 "[1, 2, 3]"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:616
+#: ../../tutorial/controlflow.rst:639
 msgid ""
 "If you don't want the default to be shared between subsequent calls, you can"
 " write the function like this instead::"
@@ -1089,7 +1104,7 @@ msgstr ""
 "Якщо ви не хочете, щоб значення за замовчуванням використовувалися для "
 "наступних викликів, ви можете написати функцію так:"
 
-#: ../../tutorial/controlflow.rst:619
+#: ../../tutorial/controlflow.rst:642
 msgid ""
 "def f(a, L=None):\n"
 "    if L is None:\n"
@@ -1098,11 +1113,11 @@ msgid ""
 "    return L"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:629
+#: ../../tutorial/controlflow.rst:652
 msgid "Keyword Arguments"
 msgstr "Аргументи ключових слів"
 
-#: ../../tutorial/controlflow.rst:631
+#: ../../tutorial/controlflow.rst:654
 msgid ""
 "Functions can also be called using :term:`keyword arguments <keyword "
 "argument>` of the form ``kwarg=value``.  For instance, the following "
@@ -1111,7 +1126,7 @@ msgstr ""
 "Функції також можна викликати за допомогою :term:`аргументів ключового слова"
 " <keyword argument>` у формі ``kwarg=значення``. Наприклад, така функція::"
 
-#: ../../tutorial/controlflow.rst:634
+#: ../../tutorial/controlflow.rst:657
 msgid ""
 "def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):\n"
 "    print(\"-- This parrot wouldn't\", action, end=' ')\n"
@@ -1120,7 +1135,7 @@ msgid ""
 "    print(\"-- It's\", state, \"!\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:640
+#: ../../tutorial/controlflow.rst:663
 msgid ""
 "accepts one required argument (``voltage``) and three optional arguments "
 "(``state``, ``action``, and ``type``).  This function can be called in any "
@@ -1130,7 +1145,7 @@ msgstr ""
 "аргументи (``стан``, ``дія`` і ``тип``). Цю функцію можна викликати будь-"
 "яким із наведених нижче способів:"
 
-#: ../../tutorial/controlflow.rst:644
+#: ../../tutorial/controlflow.rst:667
 msgid ""
 "parrot(1000)                                          # 1 positional argument\n"
 "parrot(voltage=1000)                                  # 1 keyword argument\n"
@@ -1140,11 +1155,11 @@ msgid ""
 "parrot('a thousand', state='pushing up the daisies')  # 1 positional, 1 keyword"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:651
+#: ../../tutorial/controlflow.rst:674
 msgid "but all the following calls would be invalid::"
 msgstr "але всі наступні виклики будуть недійсними::"
 
-#: ../../tutorial/controlflow.rst:653
+#: ../../tutorial/controlflow.rst:676
 msgid ""
 "parrot()                     # required argument missing\n"
 "parrot(voltage=5.0, 'dead')  # non-keyword argument after a keyword argument\n"
@@ -1152,7 +1167,7 @@ msgid ""
 "parrot(actor='John Cleese')  # unknown keyword argument"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:658
+#: ../../tutorial/controlflow.rst:681
 msgid ""
 "In a function call, keyword arguments must follow positional arguments. All "
 "the keyword arguments passed must match one of the arguments accepted by the"
@@ -1170,7 +1185,7 @@ msgstr ""
 " Жоден аргумент не може отримати значення більше одного разу. Ось приклад, "
 "який не працює через це обмеження::"
 
-#: ../../tutorial/controlflow.rst:666
+#: ../../tutorial/controlflow.rst:689
 msgid ""
 ">>> def function(a):\n"
 "...     pass\n"
@@ -1181,7 +1196,7 @@ msgid ""
 "TypeError: function() got multiple values for argument 'a'"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:674
+#: ../../tutorial/controlflow.rst:697
 msgid ""
 "When a final formal parameter of the form ``**name`` is present, it receives"
 " a dictionary (see :ref:`typesmapping`) containing all keyword arguments "
@@ -1199,7 +1214,7 @@ msgstr ""
 "аргументи поза формальним списком параметрів. (``*name`` має бути перед "
 "``**name``.) Наприклад, якщо ми визначимо таку функцію:"
 
-#: ../../tutorial/controlflow.rst:682
+#: ../../tutorial/controlflow.rst:705
 msgid ""
 "def cheeseshop(kind, *arguments, **keywords):\n"
 "    print(\"-- Do you have any\", kind, \"?\")\n"
@@ -1211,11 +1226,11 @@ msgid ""
 "        print(kw, \":\", keywords[kw])"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:691
+#: ../../tutorial/controlflow.rst:714
 msgid "It could be called like this::"
 msgstr "Це можна назвати так::"
 
-#: ../../tutorial/controlflow.rst:693
+#: ../../tutorial/controlflow.rst:716
 msgid ""
 "cheeseshop(\"Limburger\", \"It's very runny, sir.\",\n"
 "           \"It's really very, VERY runny, sir.\",\n"
@@ -1224,11 +1239,11 @@ msgid ""
 "           sketch=\"Cheese Shop Sketch\")"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:699
+#: ../../tutorial/controlflow.rst:722
 msgid "and of course it would print:"
 msgstr "і, звичайно, він буде друкувати:"
 
-#: ../../tutorial/controlflow.rst:701
+#: ../../tutorial/controlflow.rst:724
 msgid ""
 "-- Do you have any Limburger ?\n"
 "-- I'm sorry, we're all out of Limburger\n"
@@ -1240,7 +1255,7 @@ msgid ""
 "sketch : Cheese Shop Sketch"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:712
+#: ../../tutorial/controlflow.rst:735
 msgid ""
 "Note that the order in which the keyword arguments are printed is guaranteed"
 " to match the order in which they were provided in the function call."
@@ -1248,11 +1263,11 @@ msgstr ""
 "Зауважте, що порядок друку ключових аргументів гарантовано збігається з "
 "порядком, у якому вони були надані під час виклику функції."
 
-#: ../../tutorial/controlflow.rst:716
+#: ../../tutorial/controlflow.rst:739
 msgid "Special parameters"
 msgstr "Спеціальні параметри"
 
-#: ../../tutorial/controlflow.rst:718
+#: ../../tutorial/controlflow.rst:741
 msgid ""
 "By default, arguments may be passed to a Python function either by position "
 "or explicitly by keyword. For readability and performance, it makes sense to"
@@ -1266,11 +1281,11 @@ msgstr ""
 "дивитися лише на визначення функції, щоб визначити, чи передаються елементи "
 "за позицією, за позицією чи ключовим словом або за ключовим словом."
 
-#: ../../tutorial/controlflow.rst:724
+#: ../../tutorial/controlflow.rst:747
 msgid "A function definition may look like:"
 msgstr "Визначення функції може виглядати так:"
 
-#: ../../tutorial/controlflow.rst:726
+#: ../../tutorial/controlflow.rst:749
 msgid ""
 "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):\n"
 "      -----------    ----------     ----------\n"
@@ -1280,7 +1295,7 @@ msgid ""
 "         -- Positional only"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:735
+#: ../../tutorial/controlflow.rst:758
 msgid ""
 "where ``/`` and ``*`` are optional. If used, these symbols indicate the kind"
 " of parameter by how the arguments may be passed to the function: "
@@ -1292,11 +1307,11 @@ msgstr ""
 "функції: лише позиційні, позиційні чи ключові слова та лише ключові слова. "
 "Параметри ключових слів також називають іменованими параметрами."
 
-#: ../../tutorial/controlflow.rst:742
+#: ../../tutorial/controlflow.rst:765
 msgid "Positional-or-Keyword Arguments"
 msgstr "Позиційні або ключові аргументи"
 
-#: ../../tutorial/controlflow.rst:744
+#: ../../tutorial/controlflow.rst:767
 msgid ""
 "If ``/`` and ``*`` are not present in the function definition, arguments may"
 " be passed to a function by position or by keyword."
@@ -1304,11 +1319,11 @@ msgstr ""
 "Якщо ``/`` і ``*`` відсутні у визначенні функції, аргументи можуть бути "
 "передані функції за позицією або за ключовим словом."
 
-#: ../../tutorial/controlflow.rst:749
+#: ../../tutorial/controlflow.rst:772
 msgid "Positional-Only Parameters"
 msgstr "Лише позиційні параметри"
 
-#: ../../tutorial/controlflow.rst:751
+#: ../../tutorial/controlflow.rst:774
 msgid ""
 "Looking at this in a bit more detail, it is possible to mark certain "
 "parameters as *positional-only*. If *positional-only*, the parameters' order"
@@ -1325,7 +1340,7 @@ msgstr ""
 "логічного відокремлення лише позиційних параметрів від решти параметрів. "
 "Якщо у визначенні функції немає ``/``, немає позиційних параметрів."
 
-#: ../../tutorial/controlflow.rst:759
+#: ../../tutorial/controlflow.rst:782
 msgid ""
 "Parameters following the ``/`` may be *positional-or-keyword* or *keyword-"
 "only*."
@@ -1333,11 +1348,11 @@ msgstr ""
 "Параметри після ``/`` можуть бути *positional-or-keyword* або *keyword-"
 "only*."
 
-#: ../../tutorial/controlflow.rst:763
+#: ../../tutorial/controlflow.rst:786
 msgid "Keyword-Only Arguments"
 msgstr "Аргументи лише за ключовими словами"
 
-#: ../../tutorial/controlflow.rst:765
+#: ../../tutorial/controlflow.rst:788
 msgid ""
 "To mark parameters as *keyword-only*, indicating the parameters must be "
 "passed by keyword argument, place an ``*`` in the arguments list just before"
@@ -1347,11 +1362,11 @@ msgstr ""
 "повинні бути передані аргументом ключового слова, помістіть ``*`` у списку "
 "аргументів безпосередньо перед першим параметром *лише ключове*."
 
-#: ../../tutorial/controlflow.rst:771
+#: ../../tutorial/controlflow.rst:794
 msgid "Function Examples"
 msgstr "Приклади функцій"
 
-#: ../../tutorial/controlflow.rst:773
+#: ../../tutorial/controlflow.rst:796
 msgid ""
 "Consider the following example function definitions paying close attention "
 "to the markers ``/`` and ``*``::"
@@ -1359,7 +1374,7 @@ msgstr ""
 "Розглянемо наступні приклади визначення функцій, звертаючи особливу увагу на"
 " маркери ``/`` і ``*``::"
 
-#: ../../tutorial/controlflow.rst:776
+#: ../../tutorial/controlflow.rst:799
 msgid ""
 ">>> def standard_arg(arg):\n"
 "...     print(arg)\n"
@@ -1374,7 +1389,7 @@ msgid ""
 "...     print(pos_only, standard, kwd_only)"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:789
+#: ../../tutorial/controlflow.rst:812
 msgid ""
 "The first function definition, ``standard_arg``, the most familiar form, "
 "places no restrictions on the calling convention and arguments may be passed"
@@ -1384,7 +1399,7 @@ msgstr ""
 "обмежень на угоду про виклики, і аргументи можуть передаватися за позицією "
 "або ключовим словом::"
 
-#: ../../tutorial/controlflow.rst:793
+#: ../../tutorial/controlflow.rst:816
 msgid ""
 ">>> standard_arg(2)\n"
 "2\n"
@@ -1393,7 +1408,7 @@ msgid ""
 "2"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:799
+#: ../../tutorial/controlflow.rst:822
 msgid ""
 "The second function ``pos_only_arg`` is restricted to only use positional "
 "parameters as there is a ``/`` in the function definition::"
@@ -1401,7 +1416,7 @@ msgstr ""
 "Друга функція ``pos_only_arg`` обмежена використанням лише позиційних "
 "параметрів, оскільки у визначенні функції є ``/``::"
 
-#: ../../tutorial/controlflow.rst:802
+#: ../../tutorial/controlflow.rst:825
 msgid ""
 ">>> pos_only_arg(1)\n"
 "1\n"
@@ -1412,7 +1427,7 @@ msgid ""
 "TypeError: pos_only_arg() got some positional-only arguments passed as keyword arguments: 'arg'"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:810
+#: ../../tutorial/controlflow.rst:833
 msgid ""
 "The third function ``kwd_only_args`` only allows keyword arguments as "
 "indicated by a ``*`` in the function definition::"
@@ -1420,7 +1435,7 @@ msgstr ""
 "Третя функція ``kwd_only_args`` дозволяє лише ключові аргументи, як "
 "зазначено ``*`` у визначенні функції::"
 
-#: ../../tutorial/controlflow.rst:813
+#: ../../tutorial/controlflow.rst:836
 msgid ""
 ">>> kwd_only_arg(3)\n"
 "Traceback (most recent call last):\n"
@@ -1431,7 +1446,7 @@ msgid ""
 "3"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:821
+#: ../../tutorial/controlflow.rst:844
 msgid ""
 "And the last uses all three calling conventions in the same function "
 "definition::"
@@ -1439,7 +1454,7 @@ msgstr ""
 "І останній використовує всі три угоди про виклики в одному визначенні "
 "функції:"
 
-#: ../../tutorial/controlflow.rst:824
+#: ../../tutorial/controlflow.rst:847
 msgid ""
 ">>> combined_example(1, 2, 3)\n"
 "Traceback (most recent call last):\n"
@@ -1458,7 +1473,7 @@ msgid ""
 "TypeError: combined_example() got some positional-only arguments passed as keyword arguments: 'pos_only'"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:841
+#: ../../tutorial/controlflow.rst:864
 msgid ""
 "Finally, consider this function definition which has a potential collision "
 "between the positional argument ``name``  and ``**kwds`` which has ``name`` "
@@ -1467,13 +1482,13 @@ msgstr ""
 "Нарешті, розглянемо це визначення функції, яке має потенційну колізію між "
 "позиційним аргументом ``name`` і ``**kwds``, який має ``name`` як ключ::"
 
-#: ../../tutorial/controlflow.rst:843
+#: ../../tutorial/controlflow.rst:866
 msgid ""
 "def foo(name, **kwds):\n"
 "    return 'name' in kwds"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:846
+#: ../../tutorial/controlflow.rst:869
 msgid ""
 "There is no possible call that will make it return ``True`` as the keyword "
 "``'name'`` will always bind to the first parameter. For example::"
@@ -1482,7 +1497,7 @@ msgstr ""
 "ключове слово ``'name''`` завжди прив’язуватиметься до першого параметра. "
 "Наприклад::"
 
-#: ../../tutorial/controlflow.rst:849
+#: ../../tutorial/controlflow.rst:872
 msgid ""
 ">>> foo(1, **{'name': 2})\n"
 "Traceback (most recent call last):\n"
@@ -1491,7 +1506,7 @@ msgid ""
 ">>>"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:855
+#: ../../tutorial/controlflow.rst:878
 msgid ""
 "But using ``/`` (positional only arguments), it is possible since it allows "
 "``name`` as a positional argument and ``'name'`` as a key in the keyword "
@@ -1501,7 +1516,7 @@ msgstr ""
 "дозволяє ``name`` як позиційний аргумент і ``'name'`` як ключ в аргументах "
 "ключового слова::"
 
-#: ../../tutorial/controlflow.rst:857
+#: ../../tutorial/controlflow.rst:880
 msgid ""
 ">>> def foo(name, /, **kwds):\n"
 "...     return 'name' in kwds\n"
@@ -1510,7 +1525,7 @@ msgid ""
 "True"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:863
+#: ../../tutorial/controlflow.rst:886
 msgid ""
 "In other words, the names of positional-only parameters can be used in "
 "``**kwds`` without ambiguity."
@@ -1518,11 +1533,11 @@ msgstr ""
 "Іншими словами, назви лише позиційних параметрів можна використовувати в "
 "``**kwds`` без двозначності."
 
-#: ../../tutorial/controlflow.rst:868
+#: ../../tutorial/controlflow.rst:891
 msgid "Recap"
 msgstr "Підведення підсумків"
 
-#: ../../tutorial/controlflow.rst:870
+#: ../../tutorial/controlflow.rst:893
 msgid ""
 "The use case will determine which parameters to use in the function "
 "definition::"
@@ -1530,15 +1545,15 @@ msgstr ""
 "Варіант використання визначить, які параметри використовувати у визначенні "
 "функції:"
 
-#: ../../tutorial/controlflow.rst:872
+#: ../../tutorial/controlflow.rst:895
 msgid "def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:874
+#: ../../tutorial/controlflow.rst:897
 msgid "As guidance:"
 msgstr "Як керівництво:"
 
-#: ../../tutorial/controlflow.rst:876
+#: ../../tutorial/controlflow.rst:899
 msgid ""
 "Use positional-only if you want the name of the parameters to not be "
 "available to the user. This is useful when parameter names have no real "
@@ -1552,7 +1567,7 @@ msgstr ""
 "аргументів під час виклику функції або якщо вам потрібно взяти деякі "
 "позиційні параметри та довільні ключові слова."
 
-#: ../../tutorial/controlflow.rst:881
+#: ../../tutorial/controlflow.rst:904
 msgid ""
 "Use keyword-only when names have meaning and the function definition is more"
 " understandable by being explicit with names or you want to prevent users "
@@ -1562,7 +1577,7 @@ msgstr ""
 "визначення функції є більш зрозумілим через чіткі імена або ви хочете "
 "запобігти тому, щоб користувачі покладалися на позицію переданого аргументу."
 
-#: ../../tutorial/controlflow.rst:884
+#: ../../tutorial/controlflow.rst:907
 msgid ""
 "For an API, use positional-only to prevent breaking API changes if the "
 "parameter's name is modified in the future."
@@ -1570,11 +1585,11 @@ msgstr ""
 "Для API використовуйте тільки позиційний, щоб запобігти несправним змінам "
 "API, якщо назву параметра буде змінено в майбутньому."
 
-#: ../../tutorial/controlflow.rst:890
+#: ../../tutorial/controlflow.rst:913
 msgid "Arbitrary Argument Lists"
 msgstr "Списки довільних аргументів"
 
-#: ../../tutorial/controlflow.rst:895
+#: ../../tutorial/controlflow.rst:918
 msgid ""
 "Finally, the least frequently used option is to specify that a function can "
 "be called with an arbitrary number of arguments.  These arguments will be "
@@ -1586,13 +1601,13 @@ msgstr ""
 "загорнуті в кортеж (див. :ref:`tut-tuples`). Перед змінною кількістю "
 "аргументів може бути нуль або більше нормальних аргументів. ::"
 
-#: ../../tutorial/controlflow.rst:900
+#: ../../tutorial/controlflow.rst:923
 msgid ""
 "def write_multiple_items(file, separator, *args):\n"
 "    file.write(separator.join(args))"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:904
+#: ../../tutorial/controlflow.rst:927
 msgid ""
 "Normally, these *variadic* arguments will be last in the list of formal "
 "parameters, because they scoop up all remaining input arguments that are "
@@ -1606,7 +1621,7 @@ msgstr ""
 "параметра ``*args``, є аргументами \"тільки ключового слова\", тобто їх "
 "можна використовувати лише як ключові слова, а не як позиційні аргументи. ::"
 
-#: ../../tutorial/controlflow.rst:910
+#: ../../tutorial/controlflow.rst:933
 msgid ""
 ">>> def concat(*args, sep=\"/\"):\n"
 "...     return sep.join(args)\n"
@@ -1617,11 +1632,11 @@ msgid ""
 "'earth.mars.venus'"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:921
+#: ../../tutorial/controlflow.rst:944
 msgid "Unpacking Argument Lists"
 msgstr "Розпакування списків аргументів"
 
-#: ../../tutorial/controlflow.rst:923
+#: ../../tutorial/controlflow.rst:946
 msgid ""
 "The reverse situation occurs when the arguments are already in a list or "
 "tuple but need to be unpacked for a function call requiring separate "
@@ -1637,7 +1652,7 @@ msgstr ""
 "функції з оператором ``*``\\, щоб розпакувати аргументи зі списку або "
 "кортежу::"
 
-#: ../../tutorial/controlflow.rst:930
+#: ../../tutorial/controlflow.rst:953
 msgid ""
 ">>> list(range(3, 6))            # normal call with separate arguments\n"
 "[3, 4, 5]\n"
@@ -1646,7 +1661,7 @@ msgid ""
 "[3, 4, 5]"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:939
+#: ../../tutorial/controlflow.rst:962
 msgid ""
 "In the same fashion, dictionaries can deliver keyword arguments with the "
 "``**``\\ -operator::"
@@ -1654,7 +1669,7 @@ msgstr ""
 "Таким же чином словники можуть надавати аргументи ключових слів за допомогою"
 " оператора ``**``\\::"
 
-#: ../../tutorial/controlflow.rst:942
+#: ../../tutorial/controlflow.rst:965
 msgid ""
 ">>> def parrot(voltage, state='a stiff', action='voom'):\n"
 "...     print(\"-- This parrot wouldn't\", action, end=' ')\n"
@@ -1666,11 +1681,11 @@ msgid ""
 "-- This parrot wouldn't VOOM if you put four million volts through it. E's bleedin' demised !"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:955
+#: ../../tutorial/controlflow.rst:978
 msgid "Lambda Expressions"
 msgstr "Лямбда-вирази"
 
-#: ../../tutorial/controlflow.rst:957
+#: ../../tutorial/controlflow.rst:980
 msgid ""
 "Small anonymous functions can be created with the :keyword:`lambda` keyword."
 " This function returns the sum of its two arguments: ``lambda a, b: a+b``. "
@@ -1688,7 +1703,7 @@ msgstr ""
 "визначення вкладених функцій, лямбда-функції можуть посилатися на змінні з "
 "області видимості::"
 
-#: ../../tutorial/controlflow.rst:965
+#: ../../tutorial/controlflow.rst:988
 msgid ""
 ">>> def make_incrementor(n):\n"
 "...     return lambda x: x + n\n"
@@ -1700,7 +1715,7 @@ msgid ""
 "43"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:974
+#: ../../tutorial/controlflow.rst:997
 msgid ""
 "The above example uses a lambda expression to return a function.  Another "
 "use is to pass a small function as an argument::"
@@ -1708,7 +1723,7 @@ msgstr ""
 "У наведеному вище прикладі використовується лямбда-вираз для повернення "
 "функції. Інше використання - передача невеликої функції як аргумент::"
 
-#: ../../tutorial/controlflow.rst:977
+#: ../../tutorial/controlflow.rst:1000
 msgid ""
 ">>> pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]\n"
 ">>> pairs.sort(key=lambda pair: pair[1])\n"
@@ -1716,17 +1731,17 @@ msgid ""
 "[(4, 'four'), (1, 'one'), (3, 'three'), (2, 'two')]"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:986
+#: ../../tutorial/controlflow.rst:1009
 msgid "Documentation Strings"
 msgstr "Рядки документації"
 
-#: ../../tutorial/controlflow.rst:993
+#: ../../tutorial/controlflow.rst:1016
 msgid ""
 "Here are some conventions about the content and formatting of documentation "
 "strings."
 msgstr "Ось деякі умовності щодо вмісту та форматування рядків документації."
 
-#: ../../tutorial/controlflow.rst:996
+#: ../../tutorial/controlflow.rst:1019
 msgid ""
 "The first line should always be a short, concise summary of the object's "
 "purpose.  For brevity, it should not explicitly state the object's name or "
@@ -1740,7 +1755,7 @@ msgstr ""
 "дієсловом, що описує роботу функції). Цей рядок повинен починатися з великої"
 " літери і закінчуватися крапкою."
 
-#: ../../tutorial/controlflow.rst:1002
+#: ../../tutorial/controlflow.rst:1025
 msgid ""
 "If there are more lines in the documentation string, the second line should "
 "be blank, visually separating the summary from the rest of the description."
@@ -1752,7 +1767,7 @@ msgstr ""
 "одним або декількома абзацами, що описують умови виклику об’єкта, його "
 "побічні ефекти тощо."
 
-#: ../../tutorial/controlflow.rst:1007
+#: ../../tutorial/controlflow.rst:1030
 msgid ""
 "The Python parser does not strip indentation from multi-line string literals"
 " in Python, so tools that process documentation have to strip indentation if"
@@ -1778,11 +1793,11 @@ msgstr ""
 " пробіли мають бути видалені. Еквівалентність пробілів слід перевіряти після"
 " розширення табуляції (зазвичай до 8 пробілів)."
 
-#: ../../tutorial/controlflow.rst:1019
+#: ../../tutorial/controlflow.rst:1042
 msgid "Here is an example of a multi-line docstring::"
 msgstr "Ось приклад багаторядкового документального рядка::"
 
-#: ../../tutorial/controlflow.rst:1021
+#: ../../tutorial/controlflow.rst:1044
 msgid ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
@@ -1797,11 +1812,11 @@ msgid ""
 "    No, really, it doesn't do anything."
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1037
+#: ../../tutorial/controlflow.rst:1060
 msgid "Function Annotations"
 msgstr "Анотації до функцій"
 
-#: ../../tutorial/controlflow.rst:1045
+#: ../../tutorial/controlflow.rst:1068
 msgid ""
 ":ref:`Function annotations <function>` are completely optional metadata "
 "information about the types used by user-defined functions (see :pep:`3107` "
@@ -1811,7 +1826,7 @@ msgstr ""
 "метаданих про типи, які використовуються визначеними користувачем функціями "
 "(див. :pep:`3107` і :pep:`484` для отримання додаткової інформації)."
 
-#: ../../tutorial/controlflow.rst:1049
+#: ../../tutorial/controlflow.rst:1072
 msgid ""
 ":term:`Annotations <function annotation>` are stored in the "
 ":attr:`!__annotations__` attribute of the function as a dictionary and have "
@@ -1824,7 +1839,7 @@ msgid ""
 "return value annotated::"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1058
+#: ../../tutorial/controlflow.rst:1081
 msgid ""
 ">>> def f(ham: str, eggs: str = 'eggs') -> str:\n"
 "...     print(\"Annotations:\", f.__annotations__)\n"
@@ -1837,11 +1852,11 @@ msgid ""
 "'spam and eggs'"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1071
+#: ../../tutorial/controlflow.rst:1094
 msgid "Intermezzo: Coding Style"
 msgstr "Intermezzo: стиль кодування"
 
-#: ../../tutorial/controlflow.rst:1076
+#: ../../tutorial/controlflow.rst:1099
 msgid ""
 "Now that you are about to write longer, more complex pieces of Python, it is"
 " a good time to talk about *coding style*.  Most languages can be written "
@@ -1855,7 +1870,7 @@ msgstr ""
 "Полегшити читання вашого коду для інших – це завжди гарна ідея, і "
 "застосування гарного стилю кодування надзвичайно допомагає в цьому."
 
-#: ../../tutorial/controlflow.rst:1082
+#: ../../tutorial/controlflow.rst:1105
 msgid ""
 "For Python, :pep:`8` has emerged as the style guide that most projects "
 "adhere to; it promotes a very readable and eye-pleasing coding style.  Every"
@@ -1867,11 +1882,11 @@ msgstr ""
 "Кожен розробник Python повинен колись прочитати його; ось найважливіші "
 "моменти, виділені для вас:"
 
-#: ../../tutorial/controlflow.rst:1087
+#: ../../tutorial/controlflow.rst:1110
 msgid "Use 4-space indentation, and no tabs."
 msgstr "Використовуйте відступ із 4 пробілами без табуляції."
 
-#: ../../tutorial/controlflow.rst:1089
+#: ../../tutorial/controlflow.rst:1112
 msgid ""
 "4 spaces are a good compromise between small indentation (allows greater "
 "nesting depth) and large indentation (easier to read).  Tabs introduce "
@@ -1881,11 +1896,11 @@ msgstr ""
 " вкладення) та великим відступом (легше читати). Вкладки створюють "
 "плутанину, тому їх краще не використовувати."
 
-#: ../../tutorial/controlflow.rst:1093
+#: ../../tutorial/controlflow.rst:1116
 msgid "Wrap lines so that they don't exceed 79 characters."
 msgstr "Переносити рядки так, щоб вони не перевищували 79 символів."
 
-#: ../../tutorial/controlflow.rst:1095
+#: ../../tutorial/controlflow.rst:1118
 msgid ""
 "This helps users with small displays and makes it possible to have several "
 "code files side-by-side on larger displays."
@@ -1893,7 +1908,7 @@ msgstr ""
 "Це допомагає користувачам із невеликими дисплеями та дає змогу мати декілька"
 " файлів коду поруч на більших дисплеях."
 
-#: ../../tutorial/controlflow.rst:1098
+#: ../../tutorial/controlflow.rst:1121
 msgid ""
 "Use blank lines to separate functions and classes, and larger blocks of code"
 " inside functions."
@@ -1901,15 +1916,15 @@ msgstr ""
 "Використовуйте порожні рядки для розділення функцій і класів, а також більші"
 " блоки коду всередині функцій."
 
-#: ../../tutorial/controlflow.rst:1101
+#: ../../tutorial/controlflow.rst:1124
 msgid "When possible, put comments on a line of their own."
 msgstr "Якщо можливо, розмістіть коментарі в окремому рядку."
 
-#: ../../tutorial/controlflow.rst:1103
+#: ../../tutorial/controlflow.rst:1126
 msgid "Use docstrings."
 msgstr "Використовуйте рядки документів."
 
-#: ../../tutorial/controlflow.rst:1105
+#: ../../tutorial/controlflow.rst:1128
 msgid ""
 "Use spaces around operators and after commas, but not directly inside "
 "bracketing constructs: ``a = f(1, 2) + g(3, 4)``."
@@ -1917,7 +1932,7 @@ msgstr ""
 "Використовуйте пробіли навколо операторів і після ком, але не безпосередньо "
 "всередині конструкцій у дужках: ``a = f(1, 2) + g(3, 4)``."
 
-#: ../../tutorial/controlflow.rst:1108
+#: ../../tutorial/controlflow.rst:1131
 msgid ""
 "Name your classes and functions consistently; the convention is to use "
 "``UpperCamelCase`` for classes and ``lowercase_with_underscores`` for "
@@ -1930,7 +1945,7 @@ msgstr ""
 "методу (перегляньте :ref:`tut-firstclasses` для отримання додаткової "
 "інформації про класи та методи)."
 
-#: ../../tutorial/controlflow.rst:1113
+#: ../../tutorial/controlflow.rst:1136
 msgid ""
 "Don't use fancy encodings if your code is meant to be used in international "
 "environments.  Python's default, UTF-8, or even plain ASCII work best in any"
@@ -1940,7 +1955,7 @@ msgstr ""
 "використання в міжнародних середовищах. За замовчуванням Python, UTF-8 або "
 "навіть звичайний ASCII найкраще працюють у будь-якому випадку."
 
-#: ../../tutorial/controlflow.rst:1117
+#: ../../tutorial/controlflow.rst:1140
 msgid ""
 "Likewise, don't use non-ASCII characters in identifiers if there is only the"
 " slightest chance people speaking a different language will read or maintain"
@@ -1950,11 +1965,11 @@ msgstr ""
 "якщо є лише найменший шанс, що люди, які розмовляють іншою мовою, прочитають"
 " або збережуть код."
 
-#: ../../tutorial/controlflow.rst:1123
+#: ../../tutorial/controlflow.rst:1146
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/controlflow.rst:1124
+#: ../../tutorial/controlflow.rst:1147
 msgid ""
 "Actually, *call by object reference* would be a better description, since if"
 " a mutable object is passed, the caller will see any changes the callee "
@@ -1972,54 +1987,54 @@ msgstr "заява"
 msgid "for"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:451 ../../tutorial/controlflow.rst:988
+#: ../../tutorial/controlflow.rst:474 ../../tutorial/controlflow.rst:1011
 msgid "documentation strings"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:451 ../../tutorial/controlflow.rst:988
+#: ../../tutorial/controlflow.rst:474 ../../tutorial/controlflow.rst:1011
 msgid "docstrings"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:451 ../../tutorial/controlflow.rst:988
+#: ../../tutorial/controlflow.rst:474 ../../tutorial/controlflow.rst:1011
 msgid "strings, documentation"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:892
+#: ../../tutorial/controlflow.rst:915
 msgid "* (asterisk)"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:892 ../../tutorial/controlflow.rst:936
+#: ../../tutorial/controlflow.rst:915 ../../tutorial/controlflow.rst:959
 msgid "in function calls"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:936
+#: ../../tutorial/controlflow.rst:959
 msgid "**"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1040
+#: ../../tutorial/controlflow.rst:1063
 msgid "function"
 msgstr "функція"
 
-#: ../../tutorial/controlflow.rst:1040
+#: ../../tutorial/controlflow.rst:1063
 msgid "annotations"
 msgstr "анотації"
 
-#: ../../tutorial/controlflow.rst:1040
+#: ../../tutorial/controlflow.rst:1063
 msgid "->"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1040
+#: ../../tutorial/controlflow.rst:1063
 msgid "function annotations"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1040
+#: ../../tutorial/controlflow.rst:1063
 msgid ": (colon)"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1074
+#: ../../tutorial/controlflow.rst:1097
 msgid "coding"
 msgstr ""
 
-#: ../../tutorial/controlflow.rst:1074
+#: ../../tutorial/controlflow.rst:1097
 msgid "style"
 msgstr "стиль"
