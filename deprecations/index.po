@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-04 14:17+0000\n"
 "PO-Revision-Date: 2024-07-29 04:07+0000\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -112,44 +112,38 @@ msgid ""
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.14.rst:50
-msgid ""
-":mod:`importlib`: ``__package__`` and ``__cached__`` will cease to be set or"
-" taken into consideration by the import system (:gh:`97879`)."
-msgstr ""
-
-#: ../../deprecations/pending-removal-in-3.14.rst:53
 msgid ":mod:`importlib.abc` deprecated classes:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:55
+#: ../../deprecations/pending-removal-in-3.14.rst:52
 msgid ":class:`!importlib.abc.ResourceReader`"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:56
+#: ../../deprecations/pending-removal-in-3.14.rst:53
 msgid ":class:`!importlib.abc.Traversable`"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:57
+#: ../../deprecations/pending-removal-in-3.14.rst:54
 msgid ":class:`!importlib.abc.TraversableResources`"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:59
+#: ../../deprecations/pending-removal-in-3.14.rst:56
 msgid "Use :mod:`importlib.resources.abc` classes instead:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:61
+#: ../../deprecations/pending-removal-in-3.14.rst:58
 msgid ":class:`importlib.resources.abc.Traversable`"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:62
+#: ../../deprecations/pending-removal-in-3.14.rst:59
 msgid ":class:`importlib.resources.abc.TraversableResources`"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:64
+#: ../../deprecations/pending-removal-in-3.14.rst:61
 msgid "(Contributed by Jason R. Coombs and Hugo van Kemenade in :gh:`93963`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:66
+#: ../../deprecations/pending-removal-in-3.14.rst:63
 msgid ""
 ":mod:`itertools` had undocumented, inefficient, historically buggy, and "
 "inconsistent support for copy, deepcopy, and pickle operations. This will be"
@@ -157,7 +151,7 @@ msgid ""
 "burden. (Contributed by Raymond Hettinger in :gh:`101588`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:72
+#: ../../deprecations/pending-removal-in-3.14.rst:69
 msgid ""
 ":mod:`multiprocessing`: The default start method will change to a safer one "
 "on Linux, BSDs, and other non-macOS POSIX platforms where ``'fork'`` is "
@@ -168,54 +162,54 @@ msgid ""
 "your code *requires* ``'fork'``.  See :ref:`multiprocessing-start-methods`."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:80
+#: ../../deprecations/pending-removal-in-3.14.rst:77
 msgid ""
 ":mod:`pathlib`: :meth:`~pathlib.PurePath.is_relative_to` and "
 ":meth:`~pathlib.PurePath.relative_to`: passing additional arguments is "
 "deprecated."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:84
+#: ../../deprecations/pending-removal-in-3.14.rst:81
 msgid ""
 ":mod:`pkgutil`: :func:`~pkgutil.find_loader` and :func:`~pkgutil.get_loader`"
 " now raise :exc:`DeprecationWarning`; use :func:`importlib.util.find_spec` "
 "instead. (Contributed by Nikita Sobolev in :gh:`97850`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:89
+#: ../../deprecations/pending-removal-in-3.14.rst:86
 msgid ":mod:`pty`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:91
+#: ../../deprecations/pending-removal-in-3.14.rst:88
 msgid "``master_open()``: use :func:`pty.openpty`."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:92
+#: ../../deprecations/pending-removal-in-3.14.rst:89
 msgid "``slave_open()``: use :func:`pty.openpty`."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:94
+#: ../../deprecations/pending-removal-in-3.14.rst:91
 msgid ":mod:`sqlite3`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:96
+#: ../../deprecations/pending-removal-in-3.14.rst:93
 msgid ":data:`~sqlite3.version` and :data:`~sqlite3.version_info`."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:98
+#: ../../deprecations/pending-removal-in-3.14.rst:95
 msgid ""
 ":meth:`~sqlite3.Cursor.execute` and :meth:`~sqlite3.Cursor.executemany` if "
 ":ref:`named placeholders <sqlite3-placeholders>` are used and *parameters* "
 "is a sequence instead of a :class:`dict`."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:102
+#: ../../deprecations/pending-removal-in-3.14.rst:99
 msgid ""
 "date and datetime adapter, date and timestamp converter: see the "
 ":mod:`sqlite3` documentation for suggested replacement recipes."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:105
+#: ../../deprecations/pending-removal-in-3.14.rst:102
 msgid ""
 ":class:`types.CodeType`: Accessing :attr:`~codeobject.co_lnotab` was "
 "deprecated in :pep:`626` since 3.10 and was planned to be removed in 3.12, "
@@ -223,13 +217,13 @@ msgid ""
 "in 3.14. (Contributed by Nikita Sobolev in :gh:`101866`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:112
+#: ../../deprecations/pending-removal-in-3.14.rst:109
 msgid ""
 ":mod:`typing`: :class:`~typing.ByteString`, deprecated since Python 3.9, now"
 " causes a :exc:`DeprecationWarning` to be emitted when it is used."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.14.rst:115
+#: ../../deprecations/pending-removal-in-3.14.rst:112
 msgid ""
 ":mod:`urllib`: :class:`!urllib.parse.Quoter` is deprecated: it was not "
 "intended to be a public API. (Contributed by Gregory P. Smith in "
@@ -269,10 +263,16 @@ msgid ""
 msgstr ""
 
 #: ../../deprecations/pending-removal-in-3.15.rst:20
+msgid ""
+":mod:`importlib`: ``__package__`` and ``__cached__`` will cease to be set or"
+" taken into consideration by the import system (:gh:`97879`)."
+msgstr ""
+
+#: ../../deprecations/pending-removal-in-3.15.rst:23
 msgid ":class:`locale`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:22
+#: ../../deprecations/pending-removal-in-3.15.rst:25
 msgid ""
 "The :func:`~locale.getdefaultlocale` function has been deprecated since "
 "Python 3.11. Its removal was originally planned for Python 3.13 "
@@ -282,32 +282,32 @@ msgid ""
 ":gh:`111187`.)"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:30
+#: ../../deprecations/pending-removal-in-3.15.rst:33
 msgid ":mod:`pathlib`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:32
+#: ../../deprecations/pending-removal-in-3.15.rst:35
 msgid ""
 ":meth:`.PurePath.is_reserved` has been deprecated since Python 3.13. Use "
 ":func:`os.path.isreserved` to detect reserved paths on Windows."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:36
+#: ../../deprecations/pending-removal-in-3.15.rst:39
 msgid ":mod:`platform`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:38
+#: ../../deprecations/pending-removal-in-3.15.rst:41
 msgid ""
 ":func:`~platform.java_ver` has been deprecated since Python 3.13. This "
 "function is only useful for Jython support, has a confusing API, and is "
 "largely untested."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:42
+#: ../../deprecations/pending-removal-in-3.15.rst:45
 msgid ":mod:`threading`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:44
+#: ../../deprecations/pending-removal-in-3.15.rst:47
 msgid ""
 ":func:`~threading.RLock` will take no arguments in Python 3.15. Passing any "
 "arguments has been deprecated since Python 3.14, as the  Python version does"
@@ -315,11 +315,11 @@ msgid ""
 " or keyword arguments, ignoring every argument."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:50
+#: ../../deprecations/pending-removal-in-3.15.rst:53
 msgid ":mod:`typing`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:52
+#: ../../deprecations/pending-removal-in-3.15.rst:55
 msgid ""
 "The undocumented keyword argument syntax for creating "
 ":class:`~typing.NamedTuple` classes (e.g. ``Point = NamedTuple(\"Point\", "
@@ -327,18 +327,18 @@ msgid ""
 "syntax or the functional syntax instead."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:58
+#: ../../deprecations/pending-removal-in-3.15.rst:61
 msgid ""
 "The :func:`typing.no_type_check_decorator` decorator function has been "
 "deprecated since Python 3.13. After eight years in the :mod:`typing` module,"
 " it has yet to be supported by any major type checker."
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:63
+#: ../../deprecations/pending-removal-in-3.15.rst:66
 msgid ":mod:`wave`:"
 msgstr ""
 
-#: ../../deprecations/pending-removal-in-3.15.rst:65
+#: ../../deprecations/pending-removal-in-3.15.rst:68
 msgid ""
 "The :meth:`~wave.Wave_read.getmark`, :meth:`!setmark`, and "
 ":meth:`~wave.Wave_read.getmarkers` methods of the :class:`~wave.Wave_read` "
