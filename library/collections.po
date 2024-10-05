@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-04 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -1242,7 +1242,7 @@ msgstr ""
 "ініціалізується від першого аргументу до конструктора, якщо він присутній, "
 "або до ``None``, якщо його немає."
 
-#: ../../library/collections.rst:765 ../../library/collections.rst:1188
+#: ../../library/collections.rst:765 ../../library/collections.rst:1191
 msgid ""
 "Added merge (``|``) and update (``|=``) operators, specified in :pep:`584`."
 msgstr ""
@@ -1891,23 +1891,21 @@ msgstr ""
 "На додаток до звичайних методів відображення, упорядковані словники також "
 "підтримують зворотну ітерацію за допомогою :func:`reversed`."
 
-#: ../../library/collections.rst:1172
+#: ../../library/collections.rst:1174
 msgid ""
 "Equality tests between :class:`OrderedDict` objects are order-sensitive and "
-"are implemented as ``list(od1.items())==list(od2.items())``. Equality tests "
-"between :class:`OrderedDict` objects and other "
+"are roughly equivalent to ``list(od1.items())==list(od2.items())``."
+msgstr ""
+
+#: ../../library/collections.rst:1177
+msgid ""
+"Equality tests between :class:`OrderedDict` objects and other "
 ":class:`~collections.abc.Mapping` objects are order-insensitive like regular"
 " dictionaries.  This allows :class:`OrderedDict` objects to be substituted "
 "anywhere a regular dictionary is used."
 msgstr ""
-"Перевірки рівності між об’єктами :class:`OrderedDict` чутливі до порядку та "
-"реалізовані як ``list(od1.items())==list(od2.items())``. Перевірки рівності "
-"між об’єктами :class:`OrderedDict` та іншими об’єктами "
-":class:`~collections.abc.Mapping` не залежать від порядку, як і звичайні "
-"словники. Це дозволяє замінювати об’єкти :class:`OrderedDict` будь-де, де "
-"використовується звичайний словник."
 
-#: ../../library/collections.rst:1179
+#: ../../library/collections.rst:1182
 msgid ""
 "The items, keys, and values :term:`views <dictionary view>` of "
 ":class:`OrderedDict` now support reverse iteration using :func:`reversed`."
@@ -1916,7 +1914,7 @@ msgstr ""
 ":class:`OrderedDict` тепер підтримують зворотну ітерацію за допомогою "
 ":func:`reversed`."
 
-#: ../../library/collections.rst:1183
+#: ../../library/collections.rst:1186
 msgid ""
 "With the acceptance of :pep:`468`, order is retained for keyword arguments "
 "passed to the :class:`OrderedDict` constructor and its :meth:`update` "
@@ -1926,11 +1924,11 @@ msgstr ""
 "які передаються конструктору :class:`OrderedDict` і його методу "
 ":meth:`update`."
 
-#: ../../library/collections.rst:1193
+#: ../../library/collections.rst:1196
 msgid ":class:`OrderedDict` Examples and Recipes"
 msgstr ":class:`OrderedDict` Приклади та рецепти"
 
-#: ../../library/collections.rst:1195
+#: ../../library/collections.rst:1198
 msgid ""
 "It is straightforward to create an ordered dictionary variant that remembers"
 " the order the keys were *last* inserted. If a new entry overwrites an "
@@ -1941,7 +1939,7 @@ msgstr ""
 "*останнього* введення ключів. Якщо новий запис перезаписує існуючий запис, "
 "початкова позиція вставки змінюється та переміщується в кінець::"
 
-#: ../../library/collections.rst:1200
+#: ../../library/collections.rst:1203
 msgid ""
 "class LastUpdatedOrderedDict(OrderedDict):\n"
 "    'Store items in the order the keys were last added'\n"
@@ -1951,7 +1949,7 @@ msgid ""
 "        self.move_to_end(key)"
 msgstr ""
 
-#: ../../library/collections.rst:1207
+#: ../../library/collections.rst:1210
 msgid ""
 "An :class:`OrderedDict` would also be useful for implementing variants of "
 ":func:`functools.lru_cache`:"
@@ -1959,7 +1957,7 @@ msgstr ""
 ":class:`OrderedDict` також буде корисним для реалізації варіантів "
 ":func:`functools.lru_cache`:"
 
-#: ../../library/collections.rst:1210
+#: ../../library/collections.rst:1213
 msgid ""
 "from collections import OrderedDict\n"
 "from time import time\n"
@@ -1986,7 +1984,7 @@ msgid ""
 "        return result"
 msgstr ""
 
-#: ../../library/collections.rst:1237
+#: ../../library/collections.rst:1240
 msgid ""
 "class MultiHitLRUCache:\n"
 "    \"\"\" LRU cache that defers caching a result until\n"
@@ -2023,11 +2021,11 @@ msgid ""
 "        return result"
 msgstr ""
 
-#: ../../library/collections.rst:1306
+#: ../../library/collections.rst:1309
 msgid ":class:`UserDict` objects"
 msgstr ":class:`UserDict` об'єкти"
 
-#: ../../library/collections.rst:1308
+#: ../../library/collections.rst:1311
 msgid ""
 "The class, :class:`UserDict` acts as a wrapper around dictionary objects. "
 "The need for this class has been partially supplanted by the ability to "
@@ -2039,7 +2037,7 @@ msgstr ""
 "безпосередньо з :class:`dict`; однак з цим класом може бути легше працювати,"
 " оскільки базовий словник доступний як атрибут."
 
-#: ../../library/collections.rst:1316
+#: ../../library/collections.rst:1319
 msgid ""
 "Class that simulates a dictionary.  The instance's contents are kept in a "
 "regular dictionary, which is accessible via the :attr:`data` attribute of "
@@ -2053,7 +2051,7 @@ msgstr ""
 "його вмістом; зауважте, що посилання на *ініціальні дані* не буде збережено,"
 " що дозволить використовувати його для інших цілей."
 
-#: ../../library/collections.rst:1322
+#: ../../library/collections.rst:1325
 msgid ""
 "In addition to supporting the methods and operations of mappings, "
 ":class:`UserDict` instances provide the following attribute:"
@@ -2061,18 +2059,18 @@ msgstr ""
 "На додаток до підтримки методів і операцій зіставлення, екземпляри "
 ":class:`UserDict` забезпечують такий атрибут:"
 
-#: ../../library/collections.rst:1327
+#: ../../library/collections.rst:1330
 msgid ""
 "A real dictionary used to store the contents of the :class:`UserDict` class."
 msgstr ""
 "Справжній словник, який використовується для зберігання вмісту класу "
 ":class:`UserDict`."
 
-#: ../../library/collections.rst:1333
+#: ../../library/collections.rst:1336
 msgid ":class:`UserList` objects"
 msgstr ":class:`UserList` об’єкти"
 
-#: ../../library/collections.rst:1335
+#: ../../library/collections.rst:1338
 msgid ""
 "This class acts as a wrapper around list objects.  It is a useful base class"
 " for your own list-like classes which can inherit from them and override "
@@ -2084,7 +2082,7 @@ msgstr ""
 "перевизначати існуючі методи або додавати нові. Таким чином можна додавати "
 "нові моделі поведінки до списків."
 
-#: ../../library/collections.rst:1340
+#: ../../library/collections.rst:1343
 msgid ""
 "The need for this class has been partially supplanted by the ability to "
 "subclass directly from :class:`list`; however, this class can be easier to "
@@ -2094,7 +2092,7 @@ msgstr ""
 " безпосередньо з :class:`list`; однак з цим класом може бути легше "
 "працювати, оскільки базовий список доступний як атрибут."
 
-#: ../../library/collections.rst:1346
+#: ../../library/collections.rst:1349
 msgid ""
 "Class that simulates a list.  The instance's contents are kept in a regular "
 "list, which is accessible via the :attr:`data` attribute of "
@@ -2108,7 +2106,7 @@ msgstr ""
 "порожній список ``[]``. *list* може бути будь-яким ітерованим, наприклад "
 "справжнім списком Python або об’єктом :class:`UserList`."
 
-#: ../../library/collections.rst:1352
+#: ../../library/collections.rst:1355
 msgid ""
 "In addition to supporting the methods and operations of mutable sequences, "
 ":class:`UserList` instances provide the following attribute:"
@@ -2116,7 +2114,7 @@ msgstr ""
 "На додаток до підтримки методів і операцій змінних послідовностей, "
 "екземпляри :class:`UserList` забезпечують такий атрибут:"
 
-#: ../../library/collections.rst:1357
+#: ../../library/collections.rst:1360
 msgid ""
 "A real :class:`list` object used to store the contents of the "
 ":class:`UserList` class."
@@ -2124,7 +2122,7 @@ msgstr ""
 "Справжній об’єкт :class:`list`, який використовується для зберігання вмісту "
 "класу :class:`UserList`."
 
-#: ../../library/collections.rst:1360
+#: ../../library/collections.rst:1363
 msgid ""
 "**Subclassing requirements:** Subclasses of :class:`UserList` are expected "
 "to offer a constructor which can be called with either no arguments or one "
@@ -2140,7 +2138,7 @@ msgstr ""
 "що конструктор можна викликати за допомогою одного параметра, який є "
 "об’єктом послідовності, що використовується як джерело даних."
 
-#: ../../library/collections.rst:1367
+#: ../../library/collections.rst:1370
 msgid ""
 "If a derived class does not wish to comply with this requirement, all of the"
 " special methods supported by this class will need to be overridden; please "
@@ -2152,11 +2150,11 @@ msgstr ""
 "до джерел для отримання інформації про методи, які необхідно надати в такому"
 " випадку."
 
-#: ../../library/collections.rst:1373
+#: ../../library/collections.rst:1376
 msgid ":class:`UserString` objects"
 msgstr ":class:`UserString` об’єкти"
 
-#: ../../library/collections.rst:1375
+#: ../../library/collections.rst:1378
 msgid ""
 "The class, :class:`UserString` acts as a wrapper around string objects. The "
 "need for this class has been partially supplanted by the ability to subclass"
@@ -2168,7 +2166,7 @@ msgstr ""
 "безпосередньо з :class:`str`; однак з цим класом може бути легше працювати, "
 "оскільки базовий рядок доступний як атрибут."
 
-#: ../../library/collections.rst:1383
+#: ../../library/collections.rst:1386
 msgid ""
 "Class that simulates a string object.  The instance's content is kept in a "
 "regular string object, which is accessible via the :attr:`data` attribute of"
@@ -2182,7 +2180,7 @@ msgstr ""
 "копію *seq*. Аргументом *seq* може бути будь-який об’єкт, який можна "
 "перетворити на рядок за допомогою вбудованої функції :func:`str`."
 
-#: ../../library/collections.rst:1390
+#: ../../library/collections.rst:1393
 msgid ""
 "In addition to supporting the methods and operations of strings, "
 ":class:`UserString` instances provide the following attribute:"
@@ -2190,7 +2188,7 @@ msgstr ""
 "На додаток до підтримки методів і операцій із рядками, екземпляри "
 ":class:`UserString` надають такий атрибут:"
 
-#: ../../library/collections.rst:1395
+#: ../../library/collections.rst:1398
 msgid ""
 "A real :class:`str` object used to store the contents of the "
 ":class:`UserString` class."
@@ -2198,7 +2196,7 @@ msgstr ""
 "Справжній об’єкт :class:`str`, який використовується для зберігання вмісту "
 "класу :class:`UserString`."
 
-#: ../../library/collections.rst:1398
+#: ../../library/collections.rst:1401
 msgid ""
 "New methods ``__getnewargs__``, ``__rmod__``, ``casefold``, ``format_map``, "
 "``isprintable``, and ``maketrans``."
