@@ -9,15 +9,16 @@
 # Vadim Kashirny, 2022
 # Dmytro Kazanzhy, 2022
 # Ivan Prytula, 2023
+# Pavlo Slavynskyy, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-04 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
-"Last-Translator: Ivan Prytula, 2023\n"
+"Last-Translator: Pavlo Slavynskyy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,6 +39,9 @@ msgid ""
 "The default Python prompt of the :term:`interactive` shell.  Often seen for "
 "code examples which can be executed interactively in the interpreter."
 msgstr ""
+"Запрошення :term:`інтерактивної` оболонки Python за замовчуванням. Часто "
+"використовується у прикладах коду, які можна виконати інтерактивно у "
+"інтерпретаторі."
 
 #: ../../glossary.rst:15
 msgid "``...``"
@@ -54,6 +58,10 @@ msgid ""
 "right delimiters (parentheses, square brackets, curly braces or triple "
 "quotes), or after specifying a decorator."
 msgstr ""
+"Запрошення :term:`інтерактивної` оболонки Python при введенні блоку коду з "
+"відступами, між парою відповідних лівих і правих розділювачів (круглих, "
+"квадратних чи фігурних дужок або потрійних лапок), чи після зазначення "
+"декоратора."
 
 #: ../../glossary.rst:24
 msgid "The :const:`Ellipsis` built-in constant."
@@ -151,6 +159,8 @@ msgid ""
 "complex(real=3, imag=5)\n"
 "complex(**{'real': 3, 'imag': 5})"
 msgstr ""
+"complex(real=3, imag=5)\n"
+"complex(**{'real': 3, 'imag': 5})"
 
 #: ../../glossary.rst:67
 msgid ""
@@ -169,6 +179,8 @@ msgid ""
 "complex(3, 5)\n"
 "complex(*(3, 5))"
 msgstr ""
+"complex(3, 5)\n"
+"complex(*(3, 5))"
 
 #: ../../glossary.rst:76
 msgid ""
@@ -201,6 +213,9 @@ msgid ""
 "statement by defining :meth:`~object.__aenter__` and "
 ":meth:`~object.__aexit__` methods.  Introduced by :pep:`492`."
 msgstr ""
+"Об'єкт, що контролює оточення, вказаний у інструкції :keyword:`async with`  "
+"визначенням методів :meth:`~object.__aenter__` і :meth:`~object.__aexit__`. "
+"Запроваджено у :pep:`492`. "
 
 #: ../../glossary.rst:89
 msgid "asynchronous generator"
@@ -252,6 +267,9 @@ msgid ""
 "execute the body of the asynchronous generator function until the next "
 ":keyword:`yield` expression."
 msgstr ""
+"Це :term:`асинхронний ітератор`, який при виклику за допомогою методу "
+":meth:`~object.__anext__`  повертає очікуваний об'єкт, який виконає тіло "
+"функції асинхронного генератора до наступного виразу:keyword:`yield` ."
 
 #: ../../glossary.rst:112
 msgid ""
@@ -261,6 +279,12 @@ msgid ""
 " with another awaitable returned by :meth:`~object.__anext__`, it picks up "
 "where it left off.  See :pep:`492` and :pep:`525`."
 msgstr ""
+"Кожен :keyword:`yield` тимчасово призупиняє обчислення, запам'ятовує "
+"розташування стану виконання (включно з локальними змінними і необробленими "
+"інструкціями try). Коли *ітератор асинхронного генератора* відновить роботу "
+"за допомогою іншого очікуваного значення, повернутого методом "
+":meth:`~object.__anext__`, виконання продовжиться з місця зупинки. Дивіться "
+":pep:`492` і :pep:`525`."
 
 #: ../../glossary.rst:117
 msgid "asynchronous iterable"
@@ -272,6 +296,9 @@ msgid ""
 "return an :term:`asynchronous iterator` from its :meth:`~object.__aiter__` "
 "method.  Introduced by :pep:`492`."
 msgstr ""
+"Об'єкт, який можна використовувати в інструкції :keyword:`async for`. "
+"Повинен повертати an :term:`асинхронний ітератор` своїм методом "
+":meth:`~object.__aiter__` .  Запроваджено у  :pep:`492`."
 
 #: ../../glossary.rst:122
 msgid "asynchronous iterator"
@@ -286,6 +313,11 @@ msgid ""
 "until it raises a :exc:`StopAsyncIteration` exception.  Introduced by "
 ":pep:`492`."
 msgstr ""
+"Об'єкт, який реалізує методи :meth:`~object.__aiter__` та "
+":meth:`~object.__anext__`. :meth:`~object.__anext__` має повертати  "
+":term:`очікуваний`  об'єкт. :keyword:`async for` обчислює очікувані об'єкти,"
+" повернуті методом асинхронноо ітератора :meth:`~object.__anext__`, доки він"
+" не створює виняток :exc:`StopAsyncIteration`.  Запроваджено :pep:`492`."
 
 #: ../../glossary.rst:129
 msgid "attribute"
@@ -1990,6 +2022,8 @@ msgid ""
 "subpackages.  Technically, a package is a Python module with a ``__path__`` "
 "attribute."
 msgstr ""
+":term:`модуль` Python, що може містити підмодулі чи, рекурсивно, підпакети. "
+"З технічного боку, пакет є модулем Python з атрибутом ``__path__``."
 
 #: ../../glossary.rst:913
 msgid "See also :term:`regular package` and :term:`namespace package`."
@@ -2023,7 +2057,7 @@ msgstr ""
 
 #: ../../glossary.rst:925
 msgid "def func(foo, bar=None): ..."
-msgstr ""
+msgstr "def func(foo, bar=None): ..."
 
 #: ../../glossary.rst:929
 msgid ""
@@ -2039,7 +2073,7 @@ msgstr ""
 
 #: ../../glossary.rst:934
 msgid "def func(posonly1, posonly2, /, positional_or_keyword): ..."
-msgstr ""
+msgstr "def func(posonly1, posonly2, /, positional_or_keyword): ..."
 
 #: ../../glossary.rst:938
 msgid ""
@@ -2057,7 +2091,7 @@ msgstr ""
 
 #: ../../glossary.rst:944
 msgid "def func(arg, *, kw_only1, kw_only2): ..."
-msgstr ""
+msgstr "def func(arg, *, kw_only1, kw_only2): ..."
 
 #: ../../glossary.rst:946
 msgid ""
@@ -2074,7 +2108,7 @@ msgstr ""
 
 #: ../../glossary.rst:952
 msgid "def func(*args, **kwargs): ..."
-msgstr ""
+msgstr "def func(*args, **kwargs): ..."
 
 #: ../../glossary.rst:954
 msgid ""
@@ -2325,6 +2359,8 @@ msgid ""
 "for i in range(len(food)):\n"
 "    print(food[i])"
 msgstr ""
+"for i in range(len(food)):\n"
+"    print(food[i])"
 
 #: ../../glossary.rst:1058
 msgid "As opposed to the cleaner, Pythonic method::"
@@ -2335,6 +2371,8 @@ msgid ""
 "for piece in food:\n"
 "    print(piece)"
 msgstr ""
+"for piece in food:\n"
+"    print(piece)"
 
 #: ../../glossary.rst:1062
 msgid "qualified name"
@@ -2366,6 +2404,17 @@ msgid ""
 ">>> C.D.meth.__qualname__\n"
 "'C.D.meth'"
 msgstr ""
+">>> class C:\n"
+"...     class D:\n"
+"...         def meth(self):\n"
+"...             pass\n"
+"...\n"
+">>> C.__qualname__\n"
+"'C'\n"
+">>> C.D.__qualname__\n"
+"'C.D'\n"
+">>> C.D.meth.__qualname__\n"
+"'C.D.meth'"
 
 #: ../../glossary.rst:1081
 msgid ""
@@ -2383,6 +2432,9 @@ msgid ""
 ">>> email.mime.text.__name__\n"
 "'email.mime.text'"
 msgstr ""
+">>> import email.mime.text\n"
+">>> email.mime.text.__name__\n"
+"'email.mime.text'"
 
 #: ../../glossary.rst:1088
 msgid "reference count"
@@ -2416,13 +2468,15 @@ msgstr "Дивіться також :term:`namespace package`."
 
 #: ../../glossary.rst:1104
 msgid "REPL"
-msgstr ""
+msgstr "REPL"
 
 #: ../../glossary.rst:1106
 msgid ""
 "An acronym for the \"read–eval–print loop\", another name for the "
 ":term:`interactive` interpreter shell."
 msgstr ""
+"Акронім від \"read–eval–print loop\" (цикл читання-обчислення-вивід), інша "
+"назва для :term:`інтерактивної` оболонки інтерпретатора."
 
 #: ../../glossary.rst:1108
 msgid "__slots__"
@@ -2700,6 +2754,9 @@ msgid ""
 "object has a type.  An object's type is accessible as its "
 ":attr:`~object.__class__` attribute or can be retrieved with ``type(obj)``."
 msgstr ""
+"Тип об'єкта Python визначає, що це за об'єкт; кожен об'єкт має тип.  Тип "
+"об'єкта доступний як атрибут :attr:`~object.__class__`, або може бути "
+"отриманий за допомогою ``type(obj)``."
 
 #: ../../glossary.rst:1236
 msgid "type alias"
@@ -2723,6 +2780,9 @@ msgid ""
 "        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
 "    pass"
 msgstr ""
+"def remove_gray_shades(\n"
+"        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:\n"
+"    pass"
 
 #: ../../glossary.rst:1247
 msgid "could be made more readable like this::"
@@ -2735,6 +2795,10 @@ msgid ""
 "def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
 "    pass"
 msgstr ""
+"Color = tuple[int, int, int]\n"
+"\n"
+"def remove_gray_shades(colors: list[Color]) -> list[Color]:\n"
+"    pass"
 
 #: ../../glossary.rst:1254 ../../glossary.rst:1268
 msgid "See :mod:`typing` and :pep:`484`, which describe this functionality."
@@ -2758,6 +2822,9 @@ msgid ""
 "to :term:`static type checkers <static type checker>`. They can also aid "
 "IDEs with code completion and refactoring."
 msgstr ""
+"Підказки типу є необов'язковими і не вимагаються Python, але вони корисні "
+"для :term:`програм для статичної перевірки типів <static type checker>`. "
+"Вони також можуть допомогти IDE з завершенням коду та рефакторингом."
 
 #: ../../glossary.rst:1264
 msgid ""
@@ -2805,6 +2872,8 @@ msgid ""
 "class C:\n"
 "    field: 'annotation'"
 msgstr ""
+"class C:\n"
+"    field: 'annotation'"
 
 #: ../../glossary.rst:1285
 msgid ""
@@ -2817,7 +2886,7 @@ msgstr ""
 
 #: ../../glossary.rst:1289
 msgid "count: int = 0"
-msgstr ""
+msgstr "count: int = 0"
 
 #: ../../glossary.rst:1291
 msgid "Variable annotation syntax is explained in section :ref:`annassign`."
