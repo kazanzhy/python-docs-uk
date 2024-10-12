@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -103,11 +103,9 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:71
 msgid ""
-":attr:`side_effect` allows you to perform side effects, including raising an"
-" exception when a mock is called:"
+":attr:`~Mock.side_effect` allows you to perform side effects, including "
+"raising an exception when a mock is called:"
 msgstr ""
-":attr:`side_effect` дозволяє виконувати побічні ефекти, включно з викликом "
-"винятку під час виклику макету:"
 
 #: ../../library/unittest.mock.rst:92
 msgid ""
@@ -806,23 +804,17 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:740
 msgid ""
-"Normally the :attr:`__class__` attribute of an object will return its type. "
-"For a mock object with a :attr:`spec`, ``__class__`` returns the spec class "
-"instead. This allows mock objects to pass :func:`isinstance` tests for the "
-"object they are replacing / masquerading as:"
+"Normally the :attr:`!__class__` attribute of an object will return its type."
+" For a mock object with a :attr:`!spec`, :attr:`!__class__` returns the spec"
+" class instead. This allows mock objects to pass :func:`isinstance` tests "
+"for the object they are replacing / masquerading as:"
 msgstr ""
-"Зазвичай атрибут :attr:`__class__` об’єкта повертає його тип. Для фіктивного"
-" об’єкта зі специфікацією :attr:`spec` ``__class__`` замість цього повертає "
-"клас специфікації. Це дозволяє фіктивним об’єктам проходити тести "
-":func:`isinstance` для об’єкта, який вони замінюють/маскують під:"
 
 #: ../../library/unittest.mock.rst:749
 msgid ""
-":attr:`__class__` is assignable to, this allows a mock to pass an "
+":attr:`!__class__` is assignable to, this allows a mock to pass an "
 ":func:`isinstance` check without forcing you to use a spec:"
 msgstr ""
-":attr:`__class__` можна призначити, це дозволяє макету проходити перевірку "
-":func:`isinstance`, не змушуючи вас використовувати специфікацію:"
 
 #: ../../library/unittest.mock.rst:759
 msgid ""
@@ -836,11 +828,9 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:763
 msgid ""
-"Mock objects that use a class or an instance as a :attr:`spec` or "
-":attr:`spec_set` are able to pass :func:`isinstance` tests:"
+"Mock objects that use a class or an instance as a :attr:`!spec` or "
+":attr:`!spec_set` are able to pass :func:`isinstance` tests:"
 msgstr ""
-"Макетні об’єкти, які використовують клас або екземпляр як :attr:`spec` або "
-":attr:`spec_set`, можуть проходити :func:`isinstance` тести:"
 
 #: ../../library/unittest.mock.rst:773
 msgid ""
@@ -1233,12 +1223,9 @@ msgstr ""
 #: ../../library/unittest.mock.rst:1177
 msgid ""
 "If :attr:`~Mock.side_effect` is set then it will be called after the call "
-"has been recorded, so if :attr:`side_effect` raises an exception the call is"
-" still recorded."
+"has been recorded, so if :attr:`!side_effect` raises an exception the call "
+"is still recorded."
 msgstr ""
-"Якщо встановлено :attr:`~Mock.side_effect`, він буде викликаний після запису"
-" виклику, отже, якщо :attr:`side_effect` викликає виняток, виклик усе одно "
-"записується."
 
 #: ../../library/unittest.mock.rst:1181
 msgid ""
@@ -1250,45 +1237,32 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:1199
 msgid ""
-"If :attr:`side_effect` is a function then whatever that function returns is "
-"what calls to the mock return. The :attr:`side_effect` function is called "
-"with the same arguments as the mock. This allows you to vary the return "
-"value of the call dynamically, based on the input:"
+"If :attr:`~Mock.side_effect` is a function then whatever that function "
+"returns is what calls to the mock return. The :attr:`!side_effect` function "
+"is called with the same arguments as the mock. This allows you to vary the "
+"return value of the call dynamically, based on the input:"
 msgstr ""
-"Якщо :attr:`side_effect` є функцією, то те, що повертає ця функція, викликає"
-" імітацію повернення. Функція :attr:`side_effect` викликається з тими самими"
-" аргументами, що й макет. Це дозволяє динамічно змінювати значення, що "
-"повертається викликом, на основі вхідних даних:"
 
 #: ../../library/unittest.mock.rst:1215
 msgid ""
 "If you want the mock to still return the default return value (a new mock), "
 "or any set return value, then there are two ways of doing this. Either "
-"return :attr:`mock.return_value` from inside :attr:`side_effect`, or return "
-":data:`DEFAULT`:"
+"return :attr:`~Mock.return_value` from inside :attr:`~Mock.side_effect`, or "
+"return :data:`DEFAULT`:"
 msgstr ""
-"Якщо ви хочете, щоб макет усе ще повертав типове значення, що повертається "
-"(новий макет), або будь-яке встановлене повертається значення, то є два "
-"способи зробити це. Або поверніть :attr:`mock.return_value` зсередини "
-":attr:`side_effect`, або поверніть :data:`DEFAULT`:"
 
 #: ../../library/unittest.mock.rst:1234
 msgid ""
-"To remove a :attr:`side_effect`, and return to the default behaviour, set "
-"the :attr:`side_effect` to ``None``:"
+"To remove a :attr:`~Mock.side_effect`, and return to the default behaviour, "
+"set the :attr:`!side_effect` to ``None``:"
 msgstr ""
-"Щоб видалити :attr:`side_effect` і повернутися до типової поведінки, "
-"установіть :attr:`side_effect` значення ``None``:"
 
 #: ../../library/unittest.mock.rst:1248
 msgid ""
-"The :attr:`side_effect` can also be any iterable object. Repeated calls to "
-"the mock will return values from the iterable (until the iterable is "
-"exhausted and a :exc:`StopIteration` is raised):"
+"The :attr:`~Mock.side_effect` can also be any iterable object. Repeated "
+"calls to the mock will return values from the iterable (until the iterable "
+"is exhausted and a :exc:`StopIteration` is raised):"
 msgstr ""
-":attr:`side_effect` також може бути будь-яким ітерованим об’єктом. Повторні "
-"виклики mock повертатимуть значення з iterable (поки iterable не буде "
-"вичерпано та не буде викликано :exc:`StopIteration`):"
 
 #: ../../library/unittest.mock.rst:1264
 msgid ""
@@ -1328,13 +1302,9 @@ msgstr ""
 msgid ""
 "You may want a mock object to return ``False`` to a :func:`hasattr` call, or"
 " raise an :exc:`AttributeError` when an attribute is fetched. You can do "
-"this by providing an object as a :attr:`spec` for a mock, but that isn't "
+"this by providing an object as a :attr:`!spec` for a mock, but that isn't "
 "always convenient."
 msgstr ""
-"Ви можете захотіти, щоб імітаційний об’єкт повертав ``False`` виклику "
-":func:`hasattr` або викликав :exc:`AttributeError`, коли атрибут "
-"отримується. Ви можете зробити це, надавши об’єкт як :attr:`spec` для "
-"макету, але це не завжди зручно."
 
 #: ../../library/unittest.mock.rst:1291
 msgid ""
@@ -1609,21 +1579,14 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:1458
 msgid ""
-"Patch can be used as a :class:`TestCase` class decorator. It works by "
-"decorating each test method in the class. This reduces the boilerplate code "
-"when your test methods share a common patchings set. :func:`patch` finds "
-"tests by looking for method names that start with ``patch.TEST_PREFIX``. By "
-"default this is ``'test'``, which matches the way :mod:`unittest` finds "
-"tests. You can specify an alternative prefix by setting "
-"``patch.TEST_PREFIX``."
+"Patch can be used as a :class:`~unittest.TestCase` class decorator. It works"
+" by decorating each test method in the class. This reduces the boilerplate "
+"code when your test methods share a common patchings set. :func:`patch` "
+"finds tests by looking for method names that start with "
+"``patch.TEST_PREFIX``. By default this is ``'test'``, which matches the way "
+":mod:`unittest` finds tests. You can specify an alternative prefix by "
+"setting ``patch.TEST_PREFIX``."
 msgstr ""
-"Патч можна використовувати як декоратор класу :class:`TestCase`. Він працює,"
-" прикрашаючи кожен метод тестування в класі. Це зменшує шаблонний код, коли "
-"ваші методи тестування мають загальний набір виправлень. :func:`patch` "
-"знаходить тести, шукаючи назви методів, які починаються з "
-"``patch.TEST_PREFIX``. За замовчуванням це ``'test'``, що відповідає "
-"способу, яким :mod:`unittest` знаходить тести. Ви можете вказати "
-"альтернативний префікс, встановивши ``patch.TEST_PREFIX``."
 
 #: ../../library/unittest.mock.rst:1465
 msgid ""
@@ -1697,11 +1660,8 @@ msgstr ""
 #: ../../library/unittest.mock.rst:1495
 msgid ""
 "To configure return values on methods of *instances* on the patched class "
-"you must do this on the :attr:`return_value`. For example::"
+"you must do this on the :attr:`~Mock.return_value`. For example::"
 msgstr ""
-"Щоб налаштувати значення, що повертаються для методів *екземплярів* у "
-"виправленому класі, ви повинні зробити це в :attr:`return_value`. "
-"Наприклад::"
 
 #: ../../library/unittest.mock.rst:1498
 msgid ""
@@ -2181,25 +2141,18 @@ msgstr "методи латання: запуск і зупинка"
 
 #: ../../library/unittest.mock.rst:1817
 msgid ""
-"All the patchers have :meth:`start` and :meth:`stop` methods. These make it "
-"simpler to do patching in ``setUp`` methods or where you want to do multiple"
-" patches without nesting decorators or with statements."
+"All the patchers have :meth:`!start` and :meth:`!stop` methods. These make "
+"it simpler to do patching in ``setUp`` methods or where you want to do "
+"multiple patches without nesting decorators or with statements."
 msgstr ""
-"Усі патчери мають методи :meth:`start` і :meth:`stop`. Це спрощує виконання "
-"виправлень у методах ``setUp`` або там, де потрібно виконати кілька латок "
-"без декораторів вкладення або за допомогою операторів."
 
 #: ../../library/unittest.mock.rst:1821
 msgid ""
 "To use them call :func:`patch`, :func:`patch.object` or :func:`patch.dict` "
 "as normal and keep a reference to the returned ``patcher`` object. You can "
-"then call :meth:`start` to put the patch in place and :meth:`stop` to undo "
-"it."
+"then call :meth:`!start` to put the patch in place and :meth:`!stop` to undo"
+" it."
 msgstr ""
-"Щоб використати їх, викличте :func:`patch`, :func:`patch.object` або "
-":func:`patch.dict` як зазвичай і збережіть посилання на повернутий об’єкт "
-"``patcher``. Потім ви можете викликати :meth:`start`, щоб поставити патч на "
-"місце, і :meth:`stop`, щоб скасувати його."
 
 #: ../../library/unittest.mock.rst:1825
 msgid ""
@@ -2225,10 +2178,8 @@ msgstr ""
 #: ../../library/unittest.mock.rst:1839
 msgid ""
 "A typical use case for this might be for doing multiple patches in the "
-"``setUp`` method of a :class:`TestCase`::"
+"``setUp`` method of a :class:`~unittest.TestCase`::"
 msgstr ""
-"Типовим випадком використання для цього може бути виконання кількох патчів у"
-" методі ``setUp`` :class:`TestCase`::"
 
 #: ../../library/unittest.mock.rst:1842
 msgid ""
@@ -3279,7 +3230,7 @@ msgstr ""
 msgid ""
 "Alternatively you can just use ``vars(my_mock)`` (instance members) and "
 "``dir(type(my_mock))`` (type members) to bypass the filtering irrespective "
-"of :const:`mock.FILTER_DIR`."
+"of :const:`FILTER_DIR`."
 msgstr ""
 
 #: ../../library/unittest.mock.rst:2517
@@ -3308,7 +3259,7 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:2528
 msgid ""
-"*read_data* is a string for the :meth:`~io.IOBase.read`, "
+"*read_data* is a string for the :meth:`~io.RawIOBase.read`, "
 ":meth:`~io.IOBase.readline`, and :meth:`~io.IOBase.readlines` methods of the"
 " file handle to return.  Calls to those methods will take data from "
 "*read_data* until it is depleted.  The mock of these methods is pretty "
@@ -3318,25 +3269,13 @@ msgid ""
 "that is insufficient, one of the in-memory filesystem packages on `PyPI "
 "<https://pypi.org>`_ can offer a realistic filesystem for testing."
 msgstr ""
-"*read_data* — це рядок для методів :meth:`~io.IOBase.read`, "
-":meth:`~io.IOBase.readline` і :meth:`~io.IOBase.readlines` дескриптора файлу"
-" повернення. Виклики цих методів братимуть дані з *read_data*, доки вони не "
-"будуть вичерпані. Макет цих методів досить простий: щоразу, коли "
-"викликається *mock*, *read_data* перемотується на початок. Якщо вам потрібен"
-" більший контроль над даними, які ви подаєте до перевіреного коду, вам "
-"потрібно буде налаштувати цей макет під себе. Якщо цього недостатньо, один "
-"із пакетів файлової системи в пам’яті на `PyPI <https://pypi.org>`_ може "
-"запропонувати реалістичну файлову систему для тестування."
 
 #: ../../library/unittest.mock.rst:2538
 msgid ""
 "Added :meth:`~io.IOBase.readline` and :meth:`~io.IOBase.readlines` support. "
-"The mock of :meth:`~io.IOBase.read` changed to consume *read_data* rather "
-"than returning it on each call."
+"The mock of :meth:`~io.RawIOBase.read` changed to consume *read_data* rather"
+" than returning it on each call."
 msgstr ""
-"Додано підтримку :meth:`~io.IOBase.readline` і :meth:`~io.IOBase.readlines`."
-" Макет :meth:`~io.IOBase.read` змінено, щоб споживати *read_data*, а не "
-"повертати їх під час кожного виклику."
 
 #: ../../library/unittest.mock.rst:2543
 msgid "*read_data* is now reset on each call to the *mock*."
@@ -3415,19 +3354,13 @@ msgstr "Автоматична специфікація"
 
 #: ../../library/unittest.mock.rst:2592
 msgid ""
-"Autospeccing is based on the existing :attr:`spec` feature of mock. It "
+"Autospeccing is based on the existing :attr:`!spec` feature of mock. It "
 "limits the api of mocks to the api of an original object (the spec), but it "
 "is recursive (implemented lazily) so that attributes of mocks only have the "
 "same api as the attributes of the spec. In addition mocked functions / "
 "methods have the same call signature as the original so they raise a "
 ":exc:`TypeError` if they are called incorrectly."
 msgstr ""
-"Автоматична специфікація базується на існуючій функції :attr:`spec` mock. "
-"Він обмежує API mocks до API оригінального об’єкта (специфікації), але він є"
-" рекурсивним (реалізується ліниво), тому атрибути mocks мають лише той самий"
-" API, що й атрибути специфікації. Крім того, імітовані функції/методи мають "
-"таку саму сигнатуру виклику, як і оригінальні, тому вони викликають "
-":exc:`TypeError`, якщо їх викликають неправильно."
 
 #: ../../library/unittest.mock.rst:2599
 msgid "Before I explain how auto-speccing works, here's why it is needed."
@@ -3465,14 +3398,11 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:2617
 msgid ""
-":mod:`mock` already provides a feature to help with this, called speccing. "
-"If you use a class or instance as the :attr:`spec` for a mock then you can "
-"only access attributes on the mock that exist on the real class:"
+":mod:`unittest.mock` already provides a feature to help with this, called "
+"speccing. If you use a class or instance as the :attr:`!spec` for a mock "
+"then you can only access attributes on the mock that exist on the real "
+"class:"
 msgstr ""
-":mod:`mock` вже надає функцію, яка допоможе з цим, яка називається "
-"специфікація. Якщо ви використовуєте клас або екземпляр як :attr:`spec` для "
-"макету, ви зможете отримати доступ лише до тих атрибутів макета, які існують"
-" у реальному класі:"
 
 #: ../../library/unittest.mock.rst:2628
 msgid ""
@@ -3527,13 +3457,10 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:2656
 msgid ""
-"You can see that :class:`request.Request` has a spec. "
-":class:`request.Request` takes two arguments in the constructor (one of "
+"You can see that :class:`!request.Request` has a spec. "
+":class:`!request.Request` takes two arguments in the constructor (one of "
 "which is *self*). Here's what happens if we try to call it incorrectly::"
 msgstr ""
-"Ви бачите, що :class:`request.Request` має специфікацію. "
-":class:`request.Request` приймає два аргументи в конструкторі (один з яких "
-"*self*). Ось що станеться, якщо ми спробуємо викликати його неправильно:"
 
 #: ../../library/unittest.mock.rst:2660
 msgid ""
@@ -3560,15 +3487,11 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:2672
 msgid ""
-":class:`Request` objects are not callable, so the return value of "
-"instantiating our mocked out :class:`request.Request` is a non-callable "
+":class:`!Request` objects are not callable, so the return value of "
+"instantiating our mocked out :class:`!request.Request` is a non-callable "
 "mock. With the spec in place any typos in our asserts will raise the correct"
 " error::"
 msgstr ""
-"Об’єкти :class:`Request` не можна викликати, тому значення, що повертається "
-"при створенні екземпляра нашого :class:`request.Request` є макетом, який не "
-"можна викликати. Якщо специфікація на місці, будь-які друкарські помилки в "
-"наших твердженнях викличуть правильну помилку::"
 
 #: ../../library/unittest.mock.rst:2676
 msgid ""
@@ -3793,7 +3716,8 @@ msgstr ""
 
 #: ../../library/unittest.mock.rst:2826
 msgid ""
-"Order of precedence of :attr:`side_effect`, :attr:`return_value` and *wraps*"
+"Order of precedence of :attr:`!side_effect`, :attr:`!return_value` and "
+"*wraps*"
 msgstr ""
 
 #: ../../library/unittest.mock.rst:2828

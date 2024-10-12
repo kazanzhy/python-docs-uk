@@ -4,16 +4,16 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Dmytro Kazanzhy, 2023
+# Dmytro Kazanzhy, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2023\n"
+"Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,8 +23,8 @@ msgstr ""
 
 #: ../../library/argparse.rst:2
 msgid ""
-":mod:`!argparse` --- Parser for command-line options, arguments and sub-"
-"commands"
+":mod:`!argparse` --- Parser for command-line options, arguments and "
+"subcommands"
 msgstr ""
 
 #: ../../library/argparse.rst:12
@@ -47,27 +47,23 @@ msgstr ""
 
 #: ../../library/argparse.rst:22
 msgid ""
-"The :mod:`argparse` module makes it easy to write user-friendly command-line"
-" interfaces. The program defines what arguments it requires, and "
-":mod:`argparse` will figure out how to parse those out of :data:`sys.argv`."
-"  The :mod:`argparse` module also automatically generates help and usage "
+"The :mod:`!argparse` module makes it easy to write user-friendly command-"
+"line interfaces. The program defines what arguments it requires, and "
+":mod:`!argparse` will figure out how to parse those out of :data:`sys.argv`."
+"  The :mod:`!argparse` module also automatically generates help and usage "
 "messages.  The module will also issue errors when users give the program "
 "invalid arguments."
 msgstr ""
 
-#: ../../library/argparse.rst:30
-msgid "Core Functionality"
-msgstr ""
-
-#: ../../library/argparse.rst:32
+#: ../../library/argparse.rst:28
 msgid ""
-"The :mod:`argparse` module's support for command-line interfaces is built "
+"The :mod:`!argparse` module's support for command-line interfaces is built "
 "around an instance of :class:`argparse.ArgumentParser`.  It is a container "
 "for argument specifications and has options that apply to the parser as "
 "whole::"
 msgstr ""
 
-#: ../../library/argparse.rst:36
+#: ../../library/argparse.rst:32
 msgid ""
 "parser = argparse.ArgumentParser(\n"
 "                    prog='ProgramName',\n"
@@ -75,14 +71,14 @@ msgid ""
 "                    epilog='Text at the bottom of help')"
 msgstr ""
 
-#: ../../library/argparse.rst:41
+#: ../../library/argparse.rst:37
 msgid ""
 "The :meth:`ArgumentParser.add_argument` method attaches individual argument "
 "specifications to the parser.  It supports positional arguments, options "
 "that accept values, and on/off flags::"
 msgstr ""
 
-#: ../../library/argparse.rst:45
+#: ../../library/argparse.rst:41
 msgid ""
 "parser.add_argument('filename')           # positional argument\n"
 "parser.add_argument('-c', '--count')      # option that takes a value\n"
@@ -90,326 +86,29 @@ msgid ""
 "                    action='store_true')  # on/off flag"
 msgstr ""
 
-#: ../../library/argparse.rst:50
+#: ../../library/argparse.rst:46
 msgid ""
 "The :meth:`ArgumentParser.parse_args` method runs the parser and places the "
 "extracted data in a :class:`argparse.Namespace` object::"
 msgstr ""
 
-#: ../../library/argparse.rst:53
+#: ../../library/argparse.rst:49
 msgid ""
 "args = parser.parse_args()\n"
 "print(args.filename, args.count, args.verbose)"
 msgstr ""
 
-#: ../../library/argparse.rst:58
-msgid "Quick Links for add_argument()"
-msgstr ""
-
-#: ../../library/argparse.rst:61
-msgid "Name"
-msgstr "Ім'я"
-
-#: ../../library/argparse.rst:61
-msgid "Description"
-msgstr "Опис"
-
-#: ../../library/argparse.rst:61
-msgid "Values"
-msgstr "Цінності"
-
-#: ../../library/argparse.rst:63
-msgid "action_"
-msgstr ""
-
-#: ../../library/argparse.rst:63
-msgid "Specify how an argument should be handled"
-msgstr ""
-
-#: ../../library/argparse.rst:63
+#: ../../library/argparse.rst:53
 msgid ""
-"``'store'``, ``'store_const'``, ``'store_true'``, ``'append'``, "
-"``'append_const'``, ``'count'``, ``'help'``, ``'version'``"
+"If you're looking a guide about how to upgrade optparse code to argparse, "
+"see :ref:`Upgrading Optparse Code <upgrading-optparse-code>`."
 msgstr ""
 
-#: ../../library/argparse.rst:64
-msgid "choices_"
-msgstr ""
-
-#: ../../library/argparse.rst:64
-msgid "Limit values to a specific set of choices"
-msgstr ""
-
-#: ../../library/argparse.rst:64
-msgid ""
-"``['foo', 'bar']``, ``range(1, 10)``, or :class:`~collections.abc.Container`"
-" instance"
-msgstr ""
-
-#: ../../library/argparse.rst:65
-msgid "const_"
-msgstr ""
-
-#: ../../library/argparse.rst:65
-msgid "Store a constant value"
-msgstr ""
-
-#: ../../library/argparse.rst:66
-msgid "default_"
-msgstr ""
-
-#: ../../library/argparse.rst:66
-msgid "Default value used when an argument is not provided"
-msgstr ""
-
-#: ../../library/argparse.rst:66
-msgid "Defaults to ``None``"
-msgstr ""
-
-#: ../../library/argparse.rst:67
-msgid "dest_"
-msgstr ""
-
-#: ../../library/argparse.rst:67
-msgid "Specify the attribute name used in the result namespace"
-msgstr ""
-
-#: ../../library/argparse.rst:68
-msgid "help_"
-msgstr ""
-
-#: ../../library/argparse.rst:68
-msgid "Help message for an argument"
-msgstr ""
-
-#: ../../library/argparse.rst:69
-msgid "metavar_"
-msgstr ""
-
-#: ../../library/argparse.rst:69
-msgid "Alternate display name for the argument as shown in help"
-msgstr ""
-
-#: ../../library/argparse.rst:70
-msgid "nargs_"
-msgstr ""
-
-#: ../../library/argparse.rst:70
-msgid "Number of times the argument can be used"
-msgstr ""
-
-#: ../../library/argparse.rst:70
-msgid ":class:`int`, ``'?'``, ``'*'``, or ``'+'``"
-msgstr ""
-
-#: ../../library/argparse.rst:71
-msgid "required_"
-msgstr ""
-
-#: ../../library/argparse.rst:71
-msgid "Indicate whether an argument is required or optional"
-msgstr ""
-
-#: ../../library/argparse.rst:71
-msgid "``True`` or ``False``"
-msgstr ""
-
-#: ../../library/argparse.rst:72
-msgid ":ref:`type <argparse-type>`"
-msgstr ""
-
-#: ../../library/argparse.rst:72
-msgid "Automatically convert an argument to the given type"
-msgstr ""
-
-#: ../../library/argparse.rst:72
-msgid ""
-":class:`int`, :class:`float`, ``argparse.FileType('w')``, or callable "
-"function"
-msgstr ""
-
-#: ../../library/argparse.rst:77
-msgid "Example"
-msgstr "приклад"
-
-#: ../../library/argparse.rst:79
-msgid ""
-"The following code is a Python program that takes a list of integers and "
-"produces either the sum or the max::"
-msgstr ""
-"Наступний код є програмою на Python, яка отримує список цілих чисел і "
-"створює або суму, або максимум::"
-
-#: ../../library/argparse.rst:82
-msgid ""
-"import argparse\n"
-"\n"
-"parser = argparse.ArgumentParser(description='Process some integers.')\n"
-"parser.add_argument('integers', metavar='N', type=int, nargs='+',\n"
-"                    help='an integer for the accumulator')\n"
-"parser.add_argument('--sum', dest='accumulate', action='store_const',\n"
-"                    const=sum, default=max,\n"
-"                    help='sum the integers (default: find the max)')\n"
-"\n"
-"args = parser.parse_args()\n"
-"print(args.accumulate(args.integers))"
-msgstr ""
-
-#: ../../library/argparse.rst:94
-msgid ""
-"Assuming the above Python code is saved into a file called ``prog.py``, it "
-"can be run at the command line and it provides useful help messages:"
-msgstr ""
-
-#: ../../library/argparse.rst:97
-msgid ""
-"$ python prog.py -h\n"
-"usage: prog.py [-h] [--sum] N [N ...]\n"
-"\n"
-"Process some integers.\n"
-"\n"
-"positional arguments:\n"
-" N           an integer for the accumulator\n"
-"\n"
-"options:\n"
-" -h, --help  show this help message and exit\n"
-" --sum       sum the integers (default: find the max)"
-msgstr ""
-
-#: ../../library/argparse.rst:111
-msgid ""
-"When run with the appropriate arguments, it prints either the sum or the max"
-" of the command-line integers:"
-msgstr ""
-"При запуску з відповідними аргументами він друкує або суму, або максимальне "
-"значення цілих чисел командного рядка:"
-
-#: ../../library/argparse.rst:114
-msgid ""
-"$ python prog.py 1 2 3 4\n"
-"4\n"
-"\n"
-"$ python prog.py 1 2 3 4 --sum\n"
-"10"
-msgstr ""
-
-#: ../../library/argparse.rst:122
-msgid "If invalid arguments are passed in, an error will be displayed:"
-msgstr ""
-
-#: ../../library/argparse.rst:124
-msgid ""
-"$ python prog.py a b c\n"
-"usage: prog.py [-h] [--sum] N [N ...]\n"
-"prog.py: error: argument N: invalid int value: 'a'"
-msgstr ""
-
-#: ../../library/argparse.rst:130
-msgid "The following sections walk you through this example."
-msgstr "У наступних розділах ви ознайомитеся з цим прикладом."
-
-#: ../../library/argparse.rst:134
-msgid "Creating a parser"
-msgstr "Створення синтаксичного аналізатора"
-
-#: ../../library/argparse.rst:136
-msgid ""
-"The first step in using the :mod:`argparse` is creating an "
-":class:`ArgumentParser` object::"
-msgstr ""
-"Першим кроком у використанні :mod:`argparse` є створення об’єкта "
-":class:`ArgumentParser`::"
-
-#: ../../library/argparse.rst:139
-msgid ""
-">>> parser = argparse.ArgumentParser(description='Process some integers.')"
-msgstr ""
-
-#: ../../library/argparse.rst:141
-msgid ""
-"The :class:`ArgumentParser` object will hold all the information necessary "
-"to parse the command line into Python data types."
-msgstr ""
-"Об’єкт :class:`ArgumentParser` буде містити всю інформацію, необхідну для "
-"аналізу командного рядка на типи даних Python."
-
-#: ../../library/argparse.rst:146
-msgid "Adding arguments"
-msgstr "Додавання аргументів"
-
-#: ../../library/argparse.rst:148
-msgid ""
-"Filling an :class:`ArgumentParser` with information about program arguments "
-"is done by making calls to the :meth:`~ArgumentParser.add_argument` method. "
-"Generally, these calls tell the :class:`ArgumentParser` how to take the "
-"strings on the command line and turn them into objects.  This information is"
-" stored and used when :meth:`~ArgumentParser.parse_args` is called. For "
-"example::"
-msgstr ""
-"Заповнення :class:`ArgumentParser` інформацією про аргументи програми "
-"здійснюється шляхом виклику методу :meth:`~ArgumentParser.add_argument`. "
-"Зазвичай ці виклики повідомляють :class:`ArgumentParser`, як брати рядки в "
-"командному рядку та перетворювати їх на об’єкти. Ця інформація зберігається "
-"та використовується під час виклику :meth:`~ArgumentParser.parse_args`. "
-"Наприклад::"
-
-#: ../../library/argparse.rst:154
-msgid ""
-">>> parser.add_argument('integers', metavar='N', type=int, nargs='+',\n"
-"...                     help='an integer for the accumulator')\n"
-">>> parser.add_argument('--sum', dest='accumulate', action='store_const',\n"
-"...                     const=sum, default=max,\n"
-"...                     help='sum the integers (default: find the max)')"
-msgstr ""
-
-#: ../../library/argparse.rst:160
-msgid ""
-"Later, calling :meth:`~ArgumentParser.parse_args` will return an object with"
-" two attributes, ``integers`` and ``accumulate``.  The ``integers`` "
-"attribute will be a list of one or more integers, and the ``accumulate`` "
-"attribute will be either the :func:`sum` function, if ``--sum`` was "
-"specified at the command line, or the :func:`max` function if it was not."
-msgstr ""
-
-#: ../../library/argparse.rst:168
-msgid "Parsing arguments"
-msgstr "Розбір аргументів"
-
-#: ../../library/argparse.rst:170
-msgid ""
-":class:`ArgumentParser` parses arguments through the "
-":meth:`~ArgumentParser.parse_args` method.  This will inspect the command "
-"line, convert each argument to the appropriate type and then invoke the "
-"appropriate action. In most cases, this means a simple :class:`Namespace` "
-"object will be built up from attributes parsed out of the command line::"
-msgstr ""
-":class:`ArgumentParser` аналізує аргументи за допомогою методу "
-":meth:`~ArgumentParser.parse_args`. Це перевірить командний рядок, "
-"перетворить кожен аргумент у відповідний тип, а потім викличе відповідну "
-"дію. У більшості випадків це означає, що простий об’єкт :class:`Namespace` "
-"буде створено з атрибутів, проаналізованих із командного рядка::"
-
-#: ../../library/argparse.rst:176
-msgid ""
-">>> parser.parse_args(['--sum', '7', '-1', '42'])\n"
-"Namespace(accumulate=<built-in function sum>, integers=[7, -1, 42])"
-msgstr ""
-
-#: ../../library/argparse.rst:179
-msgid ""
-"In a script, :meth:`~ArgumentParser.parse_args` will typically be called "
-"with no arguments, and the :class:`ArgumentParser` will automatically "
-"determine the command-line arguments from :data:`sys.argv`."
-msgstr ""
-"У сценарії :meth:`~ArgumentParser.parse_args` зазвичай викликається без "
-"аргументів, а :class:`ArgumentParser` автоматично визначатиме аргументи "
-"командного рядка з :data:`sys.argv`."
-
-#: ../../library/argparse.rst:185
+#: ../../library/argparse.rst:57
 msgid "ArgumentParser objects"
 msgstr "Об’єкти ArgumentParser"
 
-#: ../../library/argparse.rst:194
+#: ../../library/argparse.rst:66
 msgid ""
 "Create a new :class:`ArgumentParser` object. All parameters should be passed"
 " as keyword arguments. Each parameter has its own more detailed description "
@@ -419,13 +118,13 @@ msgstr ""
 "як аргументи ключового слова. Кожен параметр має власний більш детальний "
 "опис нижче, але коротко вони:"
 
-#: ../../library/argparse.rst:198
+#: ../../library/argparse.rst:70
 msgid ""
 "prog_ - The name of the program (default: ``os.path.basename(sys.argv[0])``)"
 msgstr ""
 "prog_ - назва програми (за замовчуванням: ``os.path.basename(sys.argv[0])``)"
 
-#: ../../library/argparse.rst:201
+#: ../../library/argparse.rst:73
 msgid ""
 "usage_ - The string describing the program usage (default: generated from "
 "arguments added to parser)"
@@ -433,18 +132,18 @@ msgstr ""
 "usage_ - рядок, що описує використання програми (за замовчуванням: "
 "генерується з аргументів, доданих до аналізатора)"
 
-#: ../../library/argparse.rst:204
+#: ../../library/argparse.rst:76
 msgid ""
 "description_ - Text to display before the argument help (by default, no "
 "text)"
 msgstr ""
 
-#: ../../library/argparse.rst:207
+#: ../../library/argparse.rst:79
 msgid ""
 "epilog_ - Text to display after the argument help (by default, no text)"
 msgstr ""
 
-#: ../../library/argparse.rst:209
+#: ../../library/argparse.rst:81
 msgid ""
 "parents_ - A list of :class:`ArgumentParser` objects whose arguments should "
 "also be included"
@@ -452,11 +151,11 @@ msgstr ""
 "Parents_ - список об'єктів :class:`ArgumentParser`, аргументи яких також "
 "мають бути включені"
 
-#: ../../library/argparse.rst:212
+#: ../../library/argparse.rst:84
 msgid "formatter_class_ - A class for customizing the help output"
 msgstr "formatter_class_ - клас для налаштування виведення довідки"
 
-#: ../../library/argparse.rst:214
+#: ../../library/argparse.rst:86
 msgid ""
 "prefix_chars_ - The set of characters that prefix optional arguments "
 "(default: '-')"
@@ -464,7 +163,7 @@ msgstr ""
 "prefix_chars_ - набір символів, які є префіксом необов'язкових аргументів "
 "(за замовчуванням: '-')"
 
-#: ../../library/argparse.rst:217
+#: ../../library/argparse.rst:89
 msgid ""
 "fromfile_prefix_chars_ - The set of characters that prefix files from which "
 "additional arguments should be read (default: ``None``)"
@@ -472,7 +171,7 @@ msgstr ""
 "fromfile_prefix_chars_ - набір символів, які є префіксами файлів, з яких "
 "слід читати додаткові аргументи (за замовчуванням: ``None``)"
 
-#: ../../library/argparse.rst:220
+#: ../../library/argparse.rst:92
 msgid ""
 "argument_default_ - The global default value for arguments (default: "
 "``None``)"
@@ -480,7 +179,7 @@ msgstr ""
 "argument_default_ - глобальне значення за замовчуванням для аргументів (за "
 "замовчуванням: ``None``)"
 
-#: ../../library/argparse.rst:223
+#: ../../library/argparse.rst:95
 msgid ""
 "conflict_handler_ - The strategy for resolving conflicting optionals "
 "(usually unnecessary)"
@@ -488,14 +187,14 @@ msgstr ""
 "конфлікт_обробник_ - стратегія вирішення конфліктних опцій (зазвичай "
 "непотрібних)"
 
-#: ../../library/argparse.rst:226
+#: ../../library/argparse.rst:98
 msgid ""
 "add_help_ - Add a ``-h/--help`` option to the parser (default: ``True``)"
 msgstr ""
 "add_help_ - додає опцію ``-h/--help`` до аналізатора (за замовчуванням: "
 "``True``)"
 
-#: ../../library/argparse.rst:228
+#: ../../library/argparse.rst:100
 msgid ""
 "allow_abbrev_ - Allows long options to be abbreviated if the abbreviation is"
 " unambiguous. (default: ``True``)"
@@ -503,7 +202,7 @@ msgstr ""
 "allow_abbrev_ - Дозволяє скорочувати довгі параметри, якщо скорочення є "
 "однозначним. (за замовчуванням: ``True``)"
 
-#: ../../library/argparse.rst:231
+#: ../../library/argparse.rst:103
 msgid ""
 "exit_on_error_ - Determines whether or not ArgumentParser exits with error "
 "info when an error occurs. (default: ``True``)"
@@ -511,11 +210,11 @@ msgstr ""
 "exit_on_error_ – визначає, чи завершує роботу ArgumentParser з інформацією "
 "про помилку, коли виникає помилка. (за замовчуванням: ``True``)"
 
-#: ../../library/argparse.rst:234
+#: ../../library/argparse.rst:106
 msgid "*allow_abbrev* parameter was added."
 msgstr "Додано параметр *allow_abbrev*."
 
-#: ../../library/argparse.rst:237
+#: ../../library/argparse.rst:109
 msgid ""
 "In previous versions, *allow_abbrev* also disabled grouping of short flags "
 "such as ``-vv`` to mean ``-v -v``."
@@ -523,70 +222,52 @@ msgstr ""
 "У попередніх версіях *allow_abbrev* також вимикав групування коротких "
 "прапорців, таких як ``-vv``, щоб означати ``-v -v``."
 
-#: ../../library/argparse.rst:241
+#: ../../library/argparse.rst:113
 msgid "*exit_on_error* parameter was added."
 msgstr "Додано параметр *exit_on_error*."
 
-#: ../../library/argparse.rst:244 ../../library/argparse.rst:783
+#: ../../library/argparse.rst:116 ../../library/argparse.rst:598
 msgid "The following sections describe how each of these are used."
 msgstr "У наступних розділах описано, як використовується кожен із них."
 
-#: ../../library/argparse.rst:250
+#: ../../library/argparse.rst:122
 msgid "prog"
 msgstr "прог"
 
-#: ../../library/argparse.rst:252
+#: ../../library/argparse.rst:125
 msgid ""
-"By default, :class:`ArgumentParser` objects use the base name (see "
-":func:`os.path.basename`) of ``sys.argv[0]`` to determine how to display the"
-" name of the program in help messages.  This default is almost always "
-"desirable because it will make the help messages match the name that was "
-"used to invoke the program on the command line.  For example, consider a "
-"file named ``myprogram.py`` with the following code::"
+"By default, :class:`ArgumentParser` calculates the name of the program to "
+"display in help messages depending on the way the Python interpreter was "
+"run:"
 msgstr ""
 
-#: ../../library/argparse.rst:259 ../../library/argparse.rst:679
+#: ../../library/argparse.rst:128
 msgid ""
-"import argparse\n"
-"parser = argparse.ArgumentParser()\n"
-"parser.add_argument('--foo', help='foo help')\n"
-"args = parser.parse_args()"
+"The :func:`base name <os.path.basename>` of ``sys.argv[0]`` if a file was "
+"passed as argument."
 msgstr ""
 
-#: ../../library/argparse.rst:264
+#: ../../library/argparse.rst:130
 msgid ""
-"The help for this program will display ``myprogram.py`` as the program name "
-"(regardless of where the program was invoked from):"
-msgstr ""
-"Довідка для цієї програми відображатиме ``myprogram.py`` як назву програми "
-"(незалежно від того, звідки програму було викликано):"
-
-#: ../../library/argparse.rst:267
-msgid ""
-"$ python myprogram.py --help\n"
-"usage: myprogram.py [-h] [--foo FOO]\n"
-"\n"
-"options:\n"
-" -h, --help  show this help message and exit\n"
-" --foo FOO   foo help\n"
-"$ cd ..\n"
-"$ python subdir/myprogram.py --help\n"
-"usage: myprogram.py [-h] [--foo FOO]\n"
-"\n"
-"options:\n"
-" -h, --help  show this help message and exit\n"
-" --foo FOO   foo help"
+"The Python interpreter name followed by ``sys.argv[0]`` if a directory or a "
+"zipfile was passed as argument."
 msgstr ""
 
-#: ../../library/argparse.rst:283
+#: ../../library/argparse.rst:132
 msgid ""
-"To change this default behavior, another value can be supplied using the "
-"``prog=`` argument to :class:`ArgumentParser`::"
+"The Python interpreter name followed by ``-m`` followed by the module or "
+"package name if the :option:`-m` option was used."
 msgstr ""
-"Щоб змінити цю типову поведінку, можна надати інше значення за допомогою "
-"аргументу ``prog=`` до :class:`ArgumentParser`::"
 
-#: ../../library/argparse.rst:286
+#: ../../library/argparse.rst:135
+msgid ""
+"This default is almost always desirable because it will make the help "
+"messages match the string that was used to invoke the program on the command"
+" line. However, to change this default behavior, another value can be "
+"supplied using the ``prog=`` argument to :class:`ArgumentParser`::"
+msgstr ""
+
+#: ../../library/argparse.rst:140
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='myprogram')\n"
 ">>> parser.print_help()\n"
@@ -596,7 +277,7 @@ msgid ""
 " -h, --help  show this help message and exit"
 msgstr ""
 
-#: ../../library/argparse.rst:293
+#: ../../library/argparse.rst:147
 msgid ""
 "Note that the program name, whether determined from ``sys.argv[0]`` or from "
 "the ``prog=`` argument, is available to help messages using the ``%(prog)s``"
@@ -606,7 +287,7 @@ msgstr ""
 "``sys.argv[0]`` або з ``prog=`` аргументу, доступне для довідкових "
 "повідомлень за допомогою специфікатора формату ``%(prog)s``."
 
-#: ../../library/argparse.rst:299
+#: ../../library/argparse.rst:153
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='myprogram')\n"
 ">>> parser.add_argument('--foo', help='foo of the %(prog)s program')\n"
@@ -618,42 +299,18 @@ msgid ""
 " --foo FOO   foo of the myprogram program"
 msgstr ""
 
-#: ../../library/argparse.rst:310
+#: ../../library/argparse.rst:164
 msgid "usage"
 msgstr "використання"
 
-#: ../../library/argparse.rst:312
+#: ../../library/argparse.rst:166
 msgid ""
 "By default, :class:`ArgumentParser` calculates the usage message from the "
-"arguments it contains::"
-msgstr ""
-"За замовчуванням :class:`ArgumentParser` обчислює повідомлення про "
-"використання з аргументів, які він містить:"
-
-#: ../../library/argparse.rst:315
-msgid ""
-">>> parser = argparse.ArgumentParser(prog='PROG')\n"
-">>> parser.add_argument('--foo', nargs='?', help='foo help')\n"
-">>> parser.add_argument('bar', nargs='+', help='bar help')\n"
-">>> parser.print_help()\n"
-"usage: PROG [-h] [--foo [FOO]] bar [bar ...]\n"
-"\n"
-"positional arguments:\n"
-" bar          bar help\n"
-"\n"
-"options:\n"
-" -h, --help   show this help message and exit\n"
-" --foo [FOO]  foo help"
+"arguments it contains. The default message can be overridden with the "
+"``usage=`` keyword argument::"
 msgstr ""
 
-#: ../../library/argparse.rst:328
-msgid ""
-"The default message can be overridden with the ``usage=`` keyword argument::"
-msgstr ""
-"Повідомлення за замовчуванням можна замінити аргументом ключового слова "
-"``usage=``::"
-
-#: ../../library/argparse.rst:330
+#: ../../library/argparse.rst:170
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', usage='%(prog)s [options]')\n"
 ">>> parser.add_argument('--foo', nargs='?', help='foo help')\n"
@@ -669,7 +326,7 @@ msgid ""
 " --foo [FOO]  foo help"
 msgstr ""
 
-#: ../../library/argparse.rst:343
+#: ../../library/argparse.rst:183
 msgid ""
 "The ``%(prog)s`` format specifier is available to fill in the program name "
 "in your usage messages."
@@ -677,37 +334,20 @@ msgstr ""
 "Специфікатор формату ``%(prog)s`` доступний для заповнення назви програми у "
 "ваших повідомленнях про використання."
 
-#: ../../library/argparse.rst:350
+#: ../../library/argparse.rst:190
 msgid "description"
 msgstr "опис"
 
-#: ../../library/argparse.rst:352
+#: ../../library/argparse.rst:192
 msgid ""
 "Most calls to the :class:`ArgumentParser` constructor will use the "
 "``description=`` keyword argument.  This argument gives a brief description "
 "of what the program does and how it works.  In help messages, the "
 "description is displayed between the command-line usage string and the help "
-"messages for the various arguments::"
-msgstr ""
-"Більшість викликів конструктора :class:`ArgumentParser` використовуватимуть "
-"аргумент ключового слова ``description=``. Цей аргумент дає короткий опис "
-"того, що програма робить і як вона працює. У довідкових повідомленнях опис "
-"відображається між рядком використання командного рядка та довідковими "
-"повідомленнями для різних аргументів:"
-
-#: ../../library/argparse.rst:358
-msgid ""
-">>> parser = argparse.ArgumentParser(description='A foo that bars')\n"
-">>> parser.print_help()\n"
-"usage: argparse.py [-h]\n"
-"\n"
-"A foo that bars\n"
-"\n"
-"options:\n"
-" -h, --help  show this help message and exit"
+"messages for the various arguments."
 msgstr ""
 
-#: ../../library/argparse.rst:367
+#: ../../library/argparse.rst:198
 msgid ""
 "By default, the description will be line-wrapped so that it fits within the "
 "given space.  To change this behavior, see the formatter_class_ argument."
@@ -715,11 +355,11 @@ msgstr ""
 "За замовчуванням опис буде перенесено на рядок, щоб він поміщався в заданий "
 "простір. Щоб змінити цю поведінку, перегляньте аргумент formatter_class_."
 
-#: ../../library/argparse.rst:372
+#: ../../library/argparse.rst:203
 msgid "epilog"
 msgstr "епілог"
 
-#: ../../library/argparse.rst:374
+#: ../../library/argparse.rst:205
 msgid ""
 "Some programs like to display additional description of the program after "
 "the description of the arguments.  Such text can be specified using the "
@@ -729,7 +369,7 @@ msgstr ""
 "аргументів. Такий текст можна вказати за допомогою аргументу ``epilog=`` для"
 " :class:`ArgumentParser`::"
 
-#: ../../library/argparse.rst:378
+#: ../../library/argparse.rst:209
 msgid ""
 ">>> parser = argparse.ArgumentParser(\n"
 "...     description='A foo that bars',\n"
@@ -745,7 +385,7 @@ msgid ""
 "And that's how you'd foo a bar"
 msgstr ""
 
-#: ../../library/argparse.rst:391
+#: ../../library/argparse.rst:222
 msgid ""
 "As with the description_ argument, the ``epilog=`` text is by default line-"
 "wrapped, but this behavior can be adjusted with the formatter_class_ "
@@ -755,11 +395,11 @@ msgstr ""
 " переносить рядки, але цю поведінку можна налаштувати за допомогою аргументу"
 " formatter_class_ на :class:`ArgumentParser`."
 
-#: ../../library/argparse.rst:397
+#: ../../library/argparse.rst:228
 msgid "parents"
 msgstr "батьки"
 
-#: ../../library/argparse.rst:399
+#: ../../library/argparse.rst:230
 msgid ""
 "Sometimes, several parsers share a common set of arguments. Rather than "
 "repeating the definitions of these arguments, a single parser with all the "
@@ -777,7 +417,7 @@ msgstr ""
 "необов’язкові дії з них і додає ці дії до об’єкта :class:`ArgumentParser`, "
 "який створюється::"
 
-#: ../../library/argparse.rst:406
+#: ../../library/argparse.rst:237
 msgid ""
 ">>> parent_parser = argparse.ArgumentParser(add_help=False)\n"
 ">>> parent_parser.add_argument('--parent', type=int)\n"
@@ -793,7 +433,7 @@ msgid ""
 "Namespace(bar='YYY', parent=None)"
 msgstr ""
 
-#: ../../library/argparse.rst:419
+#: ../../library/argparse.rst:250
 msgid ""
 "Note that most parent parsers will specify ``add_help=False``.  Otherwise, "
 "the :class:`ArgumentParser` will see two ``-h/--help`` options (one in the "
@@ -803,7 +443,7 @@ msgstr ""
 "``add_help=False``. Інакше :class:`ArgumentParser` побачить два параметри "
 "``-h/--help`` (один у батьківському і один у дочірньому) і викличе помилку."
 
-#: ../../library/argparse.rst:424
+#: ../../library/argparse.rst:255
 msgid ""
 "You must fully initialize the parsers before passing them via ``parents=``. "
 "If you change the parent parsers after the child parser, those changes will "
@@ -813,11 +453,11 @@ msgstr ""
 "через ``parents=``. Якщо ви змінюєте батьківські аналізатори після "
 "дочірнього, ці зміни не відображатимуться в дочірньому."
 
-#: ../../library/argparse.rst:432
+#: ../../library/argparse.rst:263
 msgid "formatter_class"
 msgstr "formatter_class"
 
-#: ../../library/argparse.rst:434
+#: ../../library/argparse.rst:265
 msgid ""
 ":class:`ArgumentParser` objects allow the help formatting to be customized "
 "by specifying an alternate formatting class.  Currently, there are four such"
@@ -827,7 +467,7 @@ msgstr ""
 "шляхом визначення альтернативного класу форматування. На даний момент існує "
 "чотири таких класи:"
 
-#: ../../library/argparse.rst:443
+#: ../../library/argparse.rst:274
 msgid ""
 ":class:`RawDescriptionHelpFormatter` and :class:`RawTextHelpFormatter` give "
 "more control over how textual descriptions are displayed. By default, "
@@ -839,7 +479,7 @@ msgstr ""
 "об’єкти :class:`ArgumentParser` переносять тексти description_ і epilog_ у "
 "довідкові повідомлення командного рядка:"
 
-#: ../../library/argparse.rst:448
+#: ../../library/argparse.rst:279
 msgid ""
 ">>> parser = argparse.ArgumentParser(\n"
 "...     prog='PROG',\n"
@@ -862,7 +502,7 @@ msgid ""
 "will be wrapped across a couple lines"
 msgstr ""
 
-#: ../../library/argparse.rst:468
+#: ../../library/argparse.rst:299
 msgid ""
 "Passing :class:`RawDescriptionHelpFormatter` as ``formatter_class=`` "
 "indicates that description_ and epilog_ are already correctly formatted and "
@@ -872,7 +512,7 @@ msgstr ""
 " на те, що description_ і epilog_ вже правильно відформатовані і не повинні "
 "бути перенесені в рядок::"
 
-#: ../../library/argparse.rst:472
+#: ../../library/argparse.rst:303
 msgid ""
 ">>> parser = argparse.ArgumentParser(\n"
 "...     prog='PROG',\n"
@@ -897,19 +537,15 @@ msgid ""
 " -h, --help  show this help message and exit"
 msgstr ""
 
-#: ../../library/argparse.rst:494
+#: ../../library/argparse.rst:325
 msgid ""
 ":class:`RawTextHelpFormatter` maintains whitespace for all sorts of help "
-"text, including argument descriptions. However, multiple new lines are "
+"text, including argument descriptions. However, multiple newlines are "
 "replaced with one. If you wish to preserve multiple blank lines, add spaces "
 "between the newlines."
 msgstr ""
-":class:`RawTextHelpFormatter` зберігає пробіли для всіх видів довідкового "
-"тексту, включаючи описи аргументів. Однак кілька нових рядків замінено "
-"одним. Якщо ви бажаєте зберегти кілька порожніх рядків, додайте пробіли між "
-"новими рядками."
 
-#: ../../library/argparse.rst:499
+#: ../../library/argparse.rst:330
 msgid ""
 ":class:`ArgumentDefaultsHelpFormatter` automatically adds information about "
 "default values to each of the argument help messages::"
@@ -917,7 +553,7 @@ msgstr ""
 ":class:`ArgumentDefaultsHelpFormatter` автоматично додає інформацію про "
 "значення за замовчуванням до кожного довідкового повідомлення аргументу::"
 
-#: ../../library/argparse.rst:502
+#: ../../library/argparse.rst:333
 msgid ""
 ">>> parser = argparse.ArgumentParser(\n"
 "...     prog='PROG',\n"
@@ -935,7 +571,7 @@ msgid ""
 " --foo FOO   FOO! (default: 42)"
 msgstr ""
 
-#: ../../library/argparse.rst:517
+#: ../../library/argparse.rst:348
 msgid ""
 ":class:`MetavarTypeHelpFormatter` uses the name of the type_ argument for "
 "each argument as the display name for its values (rather than using the "
@@ -945,7 +581,7 @@ msgstr ""
 "кожного аргументу як відображуване ім’я для його значень (замість "
 "використання dest_, як це робить звичайний засіб форматування):"
 
-#: ../../library/argparse.rst:521
+#: ../../library/argparse.rst:352
 msgid ""
 ">>> parser = argparse.ArgumentParser(\n"
 "...     prog='PROG',\n"
@@ -963,11 +599,11 @@ msgid ""
 "  --foo int"
 msgstr ""
 
-#: ../../library/argparse.rst:538
+#: ../../library/argparse.rst:369
 msgid "prefix_chars"
 msgstr "prefix_chars"
 
-#: ../../library/argparse.rst:540
+#: ../../library/argparse.rst:371
 msgid ""
 "Most command-line options will use ``-`` as the prefix, e.g. ``-f/--foo``. "
 "Parsers that need to support different or additional prefix characters, e.g."
@@ -980,7 +616,7 @@ msgstr ""
 " вказати їх за допомогою аргументу ``prefix_chars=`` конструктора "
 "ArgumentParser::"
 
-#: ../../library/argparse.rst:546
+#: ../../library/argparse.rst:377
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', prefix_chars='-+')\n"
 ">>> parser.add_argument('+f')\n"
@@ -989,7 +625,7 @@ msgid ""
 "Namespace(bar='Y', f='X')"
 msgstr ""
 
-#: ../../library/argparse.rst:552
+#: ../../library/argparse.rst:383
 msgid ""
 "The ``prefix_chars=`` argument defaults to ``'-'``. Supplying a set of "
 "characters that does not include ``-`` will cause ``-f/--foo`` options to be"
@@ -999,11 +635,11 @@ msgstr ""
 "набір символів, який не містить ``-``, параметри ``-f/--foo`` будуть "
 "заборонені."
 
-#: ../../library/argparse.rst:558
+#: ../../library/argparse.rst:389
 msgid "fromfile_prefix_chars"
 msgstr "fromfile_prefix_chars"
 
-#: ../../library/argparse.rst:560
+#: ../../library/argparse.rst:391
 msgid ""
 "Sometimes, when dealing with a particularly long argument list, it may make "
 "sense to keep the list of arguments in a file rather than typing it out at "
@@ -1013,7 +649,7 @@ msgid ""
 "by the arguments they contain.  For example::"
 msgstr ""
 
-#: ../../library/argparse.rst:567
+#: ../../library/argparse.rst:398
 msgid ""
 ">>> with open('args.txt', 'w', encoding=sys.getfilesystemencoding()) as fp:\n"
 "...     fp.write('-f\\nbar')\n"
@@ -1024,7 +660,7 @@ msgid ""
 "Namespace(f='bar')"
 msgstr ""
 
-#: ../../library/argparse.rst:575
+#: ../../library/argparse.rst:406
 msgid ""
 "Arguments read from a file must by default be one per line (but see also "
 ":meth:`~ArgumentParser.convert_arg_line_to_args`) and are treated as if they"
@@ -1040,13 +676,13 @@ msgstr ""
 "прикладі вираз ``['-f', 'foo', '@args.txt']`` вважається еквівалентним "
 "виразу ``['-f', 'foo', '-f ', 'бар']``."
 
-#: ../../library/argparse.rst:581
+#: ../../library/argparse.rst:412
 msgid ""
 ":class:`ArgumentParser` uses :term:`filesystem encoding and error handler` "
 "to read the file containing arguments."
 msgstr ""
 
-#: ../../library/argparse.rst:584
+#: ../../library/argparse.rst:415
 msgid ""
 "The ``fromfile_prefix_chars=`` argument defaults to ``None``, meaning that "
 "arguments will never be treated as file references."
@@ -1054,20 +690,20 @@ msgstr ""
 "Аргумент ``fromfile_prefix_chars=`` за умовчанням має значення ``None``, що "
 "означає, що аргументи ніколи не розглядатимуться як посилання на файли."
 
-#: ../../library/argparse.rst:587
+#: ../../library/argparse.rst:418
 msgid ""
 ":class:`ArgumentParser` changed encoding and errors to read arguments files "
 "from default (e.g. :func:`locale.getpreferredencoding(False) "
-"<locale.getpreferredencoding>` and ``\"strict\"``) to :term:`filesystem "
+"<locale.getpreferredencoding>` and ``\"strict\"``) to the :term:`filesystem "
 "encoding and error handler`. Arguments file should be encoded in UTF-8 "
 "instead of ANSI Codepage on Windows."
 msgstr ""
 
-#: ../../library/argparse.rst:595
+#: ../../library/argparse.rst:426
 msgid "argument_default"
 msgstr "аргумент_за замовчуванням"
 
-#: ../../library/argparse.rst:597
+#: ../../library/argparse.rst:428
 msgid ""
 "Generally, argument defaults are specified either by passing a default to "
 ":meth:`~ArgumentParser.add_argument` or by calling the "
@@ -1089,7 +725,7 @@ msgstr ""
 ":meth:`~ArgumentParser.parse_args`, ми надаємо "
 "``argument_default=SUPPRESS``::"
 
-#: ../../library/argparse.rst:606
+#: ../../library/argparse.rst:437
 msgid ""
 ">>> parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)\n"
 ">>> parser.add_argument('--foo')\n"
@@ -1100,11 +736,11 @@ msgid ""
 "Namespace()"
 msgstr ""
 
-#: ../../library/argparse.rst:617
+#: ../../library/argparse.rst:448
 msgid "allow_abbrev"
 msgstr "дозволити_скорочене"
 
-#: ../../library/argparse.rst:619
+#: ../../library/argparse.rst:450
 msgid ""
 "Normally, when you pass an argument list to the "
 ":meth:`~ArgumentParser.parse_args` method of an :class:`ArgumentParser`, it "
@@ -1114,14 +750,14 @@ msgstr ""
 ":meth:`~ArgumentParser.parse_args` :class:`ArgumentParser`, він "
 ":ref:`розпізнає абревіатури <prefix-matching>` довгих параметрів."
 
-#: ../../library/argparse.rst:623
+#: ../../library/argparse.rst:454
 msgid ""
 "This feature can be disabled by setting ``allow_abbrev`` to ``False``::"
 msgstr ""
 "Цю функцію можна вимкнути, встановивши для параметра ``allow_abbrev`` "
 "значення ``False``::"
 
-#: ../../library/argparse.rst:625
+#: ../../library/argparse.rst:456
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', allow_abbrev=False)\n"
 ">>> parser.add_argument('--foobar', action='store_true')\n"
@@ -1131,11 +767,11 @@ msgid ""
 "PROG: error: unrecognized arguments: --foon"
 msgstr ""
 
-#: ../../library/argparse.rst:636
+#: ../../library/argparse.rst:467
 msgid "conflict_handler"
 msgstr "обробник_конфлікту"
 
-#: ../../library/argparse.rst:638
+#: ../../library/argparse.rst:469
 msgid ""
 ":class:`ArgumentParser` objects do not allow two actions with the same "
 "option string.  By default, :class:`ArgumentParser` objects raise an "
@@ -1147,7 +783,7 @@ msgstr ""
 "виняток, якщо робиться спроба створити аргумент із рядком параметрів, який "
 "уже використовується:"
 
-#: ../../library/argparse.rst:643
+#: ../../library/argparse.rst:474
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-f', '--foo', help='old foo help')\n"
@@ -1157,7 +793,7 @@ msgid ""
 "ArgumentError: argument --foo: conflicting option string(s): --foo"
 msgstr ""
 
-#: ../../library/argparse.rst:650
+#: ../../library/argparse.rst:481
 msgid ""
 "Sometimes (e.g. when using parents_) it may be useful to simply override any"
 " older arguments with the same option string.  To get this behavior, the "
@@ -1169,7 +805,7 @@ msgstr ""
 "отримати таку поведінку, значення ``'resolve'`` можна надати аргументу "
 "``conflict_handler=`` :class:`ArgumentParser`::"
 
-#: ../../library/argparse.rst:655
+#: ../../library/argparse.rst:486
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', conflict_handler='resolve')\n"
 ">>> parser.add_argument('-f', '--foo', help='old foo help')\n"
@@ -1183,7 +819,7 @@ msgid ""
 " --foo FOO   new foo help"
 msgstr ""
 
-#: ../../library/argparse.rst:666
+#: ../../library/argparse.rst:497
 msgid ""
 "Note that :class:`ArgumentParser` objects only remove an action if all of "
 "its option strings are overridden.  So, in the example above, the old "
@@ -1195,39 +831,18 @@ msgstr ""
 "прикладі стара дія ``-f/--foo`` зберігається як дія ``-f``, тому що було "
 "замінено лише рядок опції ``--foo``."
 
-#: ../../library/argparse.rst:673
+#: ../../library/argparse.rst:504
 msgid "add_help"
 msgstr "add_help"
 
-#: ../../library/argparse.rst:675
+#: ../../library/argparse.rst:506
 msgid ""
 "By default, ArgumentParser objects add an option which simply displays the "
-"parser's help message. For example, consider a file named ``myprogram.py`` "
-"containing the following code::"
-msgstr ""
-"За замовчуванням об’єкти ArgumentParser додають параметр, який просто "
-"відображає довідкове повідомлення аналізатора. Наприклад, розглянемо файл з "
-"назвою ``myprogram.py``, який містить наступний код:"
-
-#: ../../library/argparse.rst:684
-msgid ""
-"If ``-h`` or ``--help`` is supplied at the command line, the ArgumentParser "
-"help will be printed:"
-msgstr ""
-"Якщо в командному рядку вказано ``-h`` або ``--help``, буде надруковано "
-"довідку ArgumentParser:"
-
-#: ../../library/argparse.rst:687
-msgid ""
-"$ python myprogram.py --help\n"
-"usage: myprogram.py [-h] [--foo FOO]\n"
-"\n"
-"options:\n"
-" -h, --help  show this help message and exit\n"
-" --foo FOO   foo help"
+"parser's help message. If ``-h`` or ``--help`` is supplied at the command "
+"line, the ArgumentParser help will be printed."
 msgstr ""
 
-#: ../../library/argparse.rst:696
+#: ../../library/argparse.rst:510
 msgid ""
 "Occasionally, it may be useful to disable the addition of this help option. "
 "This can be achieved by passing ``False`` as the ``add_help=`` argument to "
@@ -1237,7 +852,7 @@ msgstr ""
 "досягти, передавши ``False`` як аргумент ``add_help=`` до "
 ":class:`ArgumentParser`::"
 
-#: ../../library/argparse.rst:700
+#: ../../library/argparse.rst:514
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', add_help=False)\n"
 ">>> parser.add_argument('--foo', help='foo help')\n"
@@ -1248,7 +863,7 @@ msgid ""
 " --foo FOO  foo help"
 msgstr ""
 
-#: ../../library/argparse.rst:708
+#: ../../library/argparse.rst:522
 msgid ""
 "The help option is typically ``-h/--help``. The exception to this is if the "
 "``prefix_chars=`` is specified and does not include ``-``, in which case "
@@ -1260,7 +875,7 @@ msgstr ""
 "``--help`` не є дійсними параметрами. У цьому випадку перший символ у "
 "``prefix_chars`` використовується для префіксу параметрів довідки::"
 
-#: ../../library/argparse.rst:714
+#: ../../library/argparse.rst:528
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', prefix_chars='+/')\n"
 ">>> parser.print_help()\n"
@@ -1270,21 +885,19 @@ msgid ""
 "  +h, ++help  show this help message and exit"
 msgstr ""
 
-#: ../../library/argparse.rst:723
+#: ../../library/argparse.rst:537
 msgid "exit_on_error"
 msgstr "exit_on_error"
 
-#: ../../library/argparse.rst:725
+#: ../../library/argparse.rst:539
 msgid ""
 "Normally, when you pass an invalid argument list to the "
 ":meth:`~ArgumentParser.parse_args` method of an :class:`ArgumentParser`, it "
-"will exit with error info."
+"will print a *message* to :data:`sys.stderr` and exit with a status code of "
+"2."
 msgstr ""
-"Зазвичай, коли ви передаєте недійсний список аргументів у метод "
-":meth:`~ArgumentParser.parse_args` :class:`ArgumentParser`, він завершить "
-"роботу з інформацією про помилку."
 
-#: ../../library/argparse.rst:728
+#: ../../library/argparse.rst:543
 msgid ""
 "If the user would like to catch errors manually, the feature can be enabled "
 "by setting ``exit_on_error`` to ``False``::"
@@ -1292,7 +905,7 @@ msgstr ""
 "Якщо користувач хоче виловлювати помилки вручну, цю функцію можна ввімкнути,"
 " встановивши для ``exit_on_error`` значення ``False``::"
 
-#: ../../library/argparse.rst:731
+#: ../../library/argparse.rst:546
 msgid ""
 ">>> parser = argparse.ArgumentParser(exit_on_error=False)\n"
 ">>> parser.add_argument('--integers', type=int)\n"
@@ -1305,11 +918,11 @@ msgid ""
 "Catching an argumentError"
 msgstr ""
 
-#: ../../library/argparse.rst:745
+#: ../../library/argparse.rst:560
 msgid "The add_argument() method"
 msgstr "Метод add_argument()."
 
-#: ../../library/argparse.rst:751
+#: ../../library/argparse.rst:566
 msgid ""
 "Define how a single command-line argument should be parsed.  Each parameter "
 "has its own more detailed description below, but in short they are:"
@@ -1317,7 +930,7 @@ msgstr ""
 "Визначте, як слід аналізувати один аргумент командного рядка. Кожен параметр"
 " має власний більш детальний опис нижче, але коротко вони:"
 
-#: ../../library/argparse.rst:754
+#: ../../library/argparse.rst:569
 msgid ""
 "`name or flags`_ - Either a name or a list of option strings, e.g. ``foo`` "
 "or ``-f, --foo``."
@@ -1325,7 +938,7 @@ msgstr ""
 "`name or flags`_ - або ім'я, або список рядків параметрів, напр. ``foo`` або"
 " ``-f, --foo``."
 
-#: ../../library/argparse.rst:757
+#: ../../library/argparse.rst:572
 msgid ""
 "action_ - The basic type of action to be taken when this argument is "
 "encountered at the command line."
@@ -1333,18 +946,18 @@ msgstr ""
 "action_ - основний тип дії, яку потрібно виконати, коли цей аргумент "
 "зустрічається в командному рядку."
 
-#: ../../library/argparse.rst:760
+#: ../../library/argparse.rst:575
 msgid "nargs_ - The number of command-line arguments that should be consumed."
 msgstr ""
 "nargs_ – кількість аргументів командного рядка, які мають бути використані."
 
-#: ../../library/argparse.rst:762
+#: ../../library/argparse.rst:577
 msgid ""
 "const_ - A constant value required by some action_ and nargs_ selections."
 msgstr ""
 "const_ – постійне значення, необхідне для вибору деяких action_ і nargs_."
 
-#: ../../library/argparse.rst:764
+#: ../../library/argparse.rst:579
 msgid ""
 "default_ - The value produced if the argument is absent from the command "
 "line and if it is absent from the namespace object."
@@ -1352,16 +965,16 @@ msgstr ""
 "default_ – значення, створене, якщо аргумент відсутній у командному рядку та"
 " якщо він відсутній в об’єкті простору імен."
 
-#: ../../library/argparse.rst:767
+#: ../../library/argparse.rst:582
 msgid ""
 "type_ - The type to which the command-line argument should be converted."
 msgstr "type_ – тип, до якого потрібно перетворити аргумент командного рядка."
 
-#: ../../library/argparse.rst:769
+#: ../../library/argparse.rst:584
 msgid "choices_ - A sequence of the allowable values for the argument."
 msgstr ""
 
-#: ../../library/argparse.rst:771
+#: ../../library/argparse.rst:586
 msgid ""
 "required_ - Whether or not the command-line option may be omitted (optionals"
 " only)."
@@ -1369,15 +982,15 @@ msgstr ""
 "required_ – чи можна пропустити параметр командного рядка (тільки "
 "необов’язковий)."
 
-#: ../../library/argparse.rst:774
+#: ../../library/argparse.rst:589
 msgid "help_ - A brief description of what the argument does."
 msgstr "help_ - короткий опис того, що робить аргумент."
 
-#: ../../library/argparse.rst:776
+#: ../../library/argparse.rst:591
 msgid "metavar_ - A name for the argument in usage messages."
 msgstr "metavar_ – назва аргументу в повідомленнях про використання."
 
-#: ../../library/argparse.rst:778
+#: ../../library/argparse.rst:593
 msgid ""
 "dest_ - The name of the attribute to be added to the object returned by "
 ":meth:`parse_args`."
@@ -1385,15 +998,15 @@ msgstr ""
 "dest_ – ім’я атрибута, який буде додано до об’єкта, повернутого "
 ":meth:`parse_args`."
 
-#: ../../library/argparse.rst:781
+#: ../../library/argparse.rst:596
 msgid "deprecated_ - Whether or not use of the argument is deprecated."
 msgstr ""
 
-#: ../../library/argparse.rst:789
+#: ../../library/argparse.rst:604
 msgid "name or flags"
 msgstr "назву чи прапори"
 
-#: ../../library/argparse.rst:791
+#: ../../library/argparse.rst:606
 msgid ""
 "The :meth:`~ArgumentParser.add_argument` method must know whether an "
 "optional argument, like ``-f`` or ``--foo``, or a positional argument, like "
@@ -1402,23 +1015,23 @@ msgid ""
 "flags, or a simple argument name."
 msgstr ""
 
-#: ../../library/argparse.rst:797
+#: ../../library/argparse.rst:612
 msgid "For example, an optional argument could be created like::"
 msgstr ""
 
-#: ../../library/argparse.rst:799
+#: ../../library/argparse.rst:614
 msgid ">>> parser.add_argument('-f', '--foo')"
 msgstr ""
 
-#: ../../library/argparse.rst:801
+#: ../../library/argparse.rst:616
 msgid "while a positional argument could be created like::"
 msgstr "тоді як позиційний аргумент може бути створений таким чином::"
 
-#: ../../library/argparse.rst:803
+#: ../../library/argparse.rst:618
 msgid ">>> parser.add_argument('bar')"
 msgstr ""
 
-#: ../../library/argparse.rst:805
+#: ../../library/argparse.rst:620
 msgid ""
 "When :meth:`~ArgumentParser.parse_args` is called, optional arguments will "
 "be identified by the ``-`` prefix, and the remaining arguments will be "
@@ -1428,7 +1041,7 @@ msgstr ""
 "ідентифікуються префіксом ``-``, а решта аргументів вважатиметься "
 "позиційними:"
 
-#: ../../library/argparse.rst:809
+#: ../../library/argparse.rst:624
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-f', '--foo')\n"
@@ -1442,11 +1055,11 @@ msgid ""
 "PROG: error: the following arguments are required: bar"
 msgstr ""
 
-#: ../../library/argparse.rst:824
+#: ../../library/argparse.rst:639
 msgid "action"
 msgstr "дію"
 
-#: ../../library/argparse.rst:826
+#: ../../library/argparse.rst:641
 msgid ""
 ":class:`ArgumentParser` objects associate command-line arguments with "
 "actions.  These actions can do just about anything with the command-line "
@@ -1462,23 +1075,13 @@ msgstr ""
 "``action`` визначає, як слід обробляти аргументи командного рядка. Надані "
 "дії:"
 
-#: ../../library/argparse.rst:832
+#: ../../library/argparse.rst:647
 msgid ""
 "``'store'`` - This just stores the argument's value.  This is the default "
-"action. For example::"
-msgstr ""
-"``'store'`` – тут лише зберігається значення аргументу. Це типова дія. "
-"Наприклад::"
-
-#: ../../library/argparse.rst:835
-msgid ""
-">>> parser = argparse.ArgumentParser()\n"
-">>> parser.add_argument('--foo')\n"
-">>> parser.parse_args('--foo 1'.split())\n"
-"Namespace(foo='1')"
+"action."
 msgstr ""
 
-#: ../../library/argparse.rst:840
+#: ../../library/argparse.rst:650
 msgid ""
 "``'store_const'`` - This stores the value specified by the const_ keyword "
 "argument; note that the const_ keyword argument defaults to ``None``.  The "
@@ -1486,7 +1089,7 @@ msgid ""
 "specify some sort of flag.  For example::"
 msgstr ""
 
-#: ../../library/argparse.rst:845
+#: ../../library/argparse.rst:655
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', action='store_const', const=42)\n"
@@ -1494,19 +1097,15 @@ msgid ""
 "Namespace(foo=42)"
 msgstr ""
 
-#: ../../library/argparse.rst:850
+#: ../../library/argparse.rst:660
 msgid ""
 "``'store_true'`` and ``'store_false'`` - These are special cases of "
 "``'store_const'`` used for storing the values ``True`` and ``False`` "
 "respectively.  In addition, they create default values of ``False`` and "
-"``True`` respectively.  For example::"
+"``True`` respectively::"
 msgstr ""
-"``'store_true'`` і ``'store_false'`` – це особливі випадки "
-"``'store_const'``, які використовуються для зберігання значень ``True`` і "
-"``False`` відповідно. Крім того, вони створюють значення за замовчуванням "
-"``False`` і ``True`` відповідно. Наприклад::"
 
-#: ../../library/argparse.rst:855
+#: ../../library/argparse.rst:665
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', action='store_true')\n"
@@ -1516,7 +1115,7 @@ msgid ""
 "Namespace(foo=True, bar=False, baz=True)"
 msgstr ""
 
-#: ../../library/argparse.rst:862
+#: ../../library/argparse.rst:672
 msgid ""
 "``'append'`` - This stores a list, and appends each argument value to the "
 "list. It is useful to allow an option to be specified multiple times. If the"
@@ -1525,7 +1124,7 @@ msgid ""
 "after those default values. Example usage::"
 msgstr ""
 
-#: ../../library/argparse.rst:868
+#: ../../library/argparse.rst:678
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', action='append')\n"
@@ -1533,7 +1132,7 @@ msgid ""
 "Namespace(foo=['1', '2'])"
 msgstr ""
 
-#: ../../library/argparse.rst:873
+#: ../../library/argparse.rst:683
 msgid ""
 "``'append_const'`` - This stores a list, and appends the value specified by "
 "the const_ keyword argument to the list; note that the const_ keyword "
@@ -1542,7 +1141,7 @@ msgid ""
 " example::"
 msgstr ""
 
-#: ../../library/argparse.rst:879
+#: ../../library/argparse.rst:689
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--str', dest='types', action='append_const', const=str)\n"
@@ -1551,7 +1150,7 @@ msgid ""
 "Namespace(types=[<class 'str'>, <class 'int'>])"
 msgstr ""
 
-#: ../../library/argparse.rst:885
+#: ../../library/argparse.rst:695
 msgid ""
 "``'count'`` - This counts the number of times a keyword argument occurs. For"
 " example, this is useful for increasing verbosity levels::"
@@ -1559,7 +1158,7 @@ msgstr ""
 "``'count'`` – підраховує кількість разів, коли виникає аргумент ключового "
 "слова. Наприклад, це корисно для збільшення рівнів докладності:"
 
-#: ../../library/argparse.rst:888
+#: ../../library/argparse.rst:698
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--verbose', '-v', action='count', default=0)\n"
@@ -1567,12 +1166,12 @@ msgid ""
 "Namespace(verbose=3)"
 msgstr ""
 
-#: ../../library/argparse.rst:893
+#: ../../library/argparse.rst:703
 msgid "Note, the *default* will be ``None`` unless explicitly set to *0*."
 msgstr ""
 "Зауважте, *за замовчуванням* буде ``None``, якщо явно не встановлено *0*."
 
-#: ../../library/argparse.rst:895
+#: ../../library/argparse.rst:705
 msgid ""
 "``'help'`` - This prints a complete help message for all the options in the "
 "current parser and then exits. By default a help action is automatically "
@@ -1584,7 +1183,7 @@ msgstr ""
 "автоматично додається до аналізатора. Дивіться :class:`ArgumentParser` для "
 "детальної інформації про те, як створюється вихід."
 
-#: ../../library/argparse.rst:900
+#: ../../library/argparse.rst:710
 msgid ""
 "``'version'`` - This expects a ``version=`` keyword argument in the "
 ":meth:`~ArgumentParser.add_argument` call, and prints version information "
@@ -1594,7 +1193,7 @@ msgstr ""
 ":meth:`~ArgumentParser.add_argument`, друкується інформація про версію та "
 "завершується після виклику::"
 
-#: ../../library/argparse.rst:904
+#: ../../library/argparse.rst:714
 msgid ""
 ">>> import argparse\n"
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
@@ -1603,7 +1202,7 @@ msgid ""
 "PROG 2.0"
 msgstr ""
 
-#: ../../library/argparse.rst:910
+#: ../../library/argparse.rst:720
 msgid ""
 "``'extend'`` - This stores a list, and extends each argument value to the "
 "list. Example usage::"
@@ -1611,7 +1210,7 @@ msgstr ""
 "``'extend'`` – це зберігає список і розширює кожне значення аргументу до "
 "списку. Приклад використання::"
 
-#: ../../library/argparse.rst:914
+#: ../../library/argparse.rst:724
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument(\"--foo\", action=\"extend\", nargs=\"+\", type=str)\n"
@@ -1619,7 +1218,7 @@ msgid ""
 "Namespace(foo=['f1', 'f2', 'f3', 'f4'])"
 msgstr ""
 
-#: ../../library/argparse.rst:921
+#: ../../library/argparse.rst:731
 msgid ""
 "You may also specify an arbitrary action by passing an Action subclass or "
 "other object that implements the same interface. The "
@@ -1631,7 +1230,7 @@ msgstr ""
 "доступна в ``argparse`` і додає підтримку логічних дій, таких як ``--foo`` і"
 " ``--no-foo``::"
 
-#: ../../library/argparse.rst:926
+#: ../../library/argparse.rst:736
 msgid ""
 ">>> import argparse\n"
 ">>> parser = argparse.ArgumentParser()\n"
@@ -1640,7 +1239,7 @@ msgid ""
 "Namespace(foo=False)"
 msgstr ""
 
-#: ../../library/argparse.rst:934
+#: ../../library/argparse.rst:744
 msgid ""
 "The recommended way to create a custom action is to extend :class:`Action`, "
 "overriding the ``__call__`` method and optionally the ``__init__`` and "
@@ -1650,11 +1249,11 @@ msgstr ""
 "замінивши метод ``__call__`` і, за бажанням, ``__init__`` та "
 "``format_usage``."
 
-#: ../../library/argparse.rst:938
+#: ../../library/argparse.rst:748
 msgid "An example of a custom action::"
 msgstr "Приклад спеціальної дії::"
 
-#: ../../library/argparse.rst:940
+#: ../../library/argparse.rst:750
 msgid ""
 ">>> class FooAction(argparse.Action):\n"
 "...     def __init__(self, option_strings, dest, nargs=None, **kwargs):\n"
@@ -1675,15 +1274,15 @@ msgid ""
 "Namespace(bar='1', foo='2')"
 msgstr ""
 
-#: ../../library/argparse.rst:958
+#: ../../library/argparse.rst:768
 msgid "For more details, see :class:`Action`."
 msgstr "Для отримання додаткової інформації див. :class:`Action`."
 
-#: ../../library/argparse.rst:964
+#: ../../library/argparse.rst:774
 msgid "nargs"
 msgstr "наргс"
 
-#: ../../library/argparse.rst:966
+#: ../../library/argparse.rst:776
 msgid ""
 "ArgumentParser objects usually associate a single command-line argument with"
 " a single action to be taken.  The ``nargs`` keyword argument associates a "
@@ -1691,7 +1290,7 @@ msgid ""
 ":ref:`specifying-ambiguous-arguments`. The supported values are:"
 msgstr ""
 
-#: ../../library/argparse.rst:971
+#: ../../library/argparse.rst:781
 msgid ""
 "``N`` (an integer).  ``N`` arguments from the command line will be gathered "
 "together into a list.  For example::"
@@ -1699,7 +1298,7 @@ msgstr ""
 "``N`` (ціле число). ``N`` аргументів з командного рядка буде зібрано разом у"
 " список. Наприклад::"
 
-#: ../../library/argparse.rst:974
+#: ../../library/argparse.rst:784
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', nargs=2)\n"
@@ -1708,7 +1307,7 @@ msgid ""
 "Namespace(bar=['c'], foo=['a', 'b'])"
 msgstr ""
 
-#: ../../library/argparse.rst:980
+#: ../../library/argparse.rst:790
 msgid ""
 "Note that ``nargs=1`` produces a list of one item.  This is different from "
 "the default, in which the item is produced by itself."
@@ -1716,7 +1315,7 @@ msgstr ""
 "Зауважте, що ``nargs=1`` створює список з одного елемента. Це відрізняється "
 "від типового, коли елемент створюється сам по собі."
 
-#: ../../library/argparse.rst:985
+#: ../../library/argparse.rst:795
 msgid ""
 "``'?'``. One argument will be consumed from the command line if possible, "
 "and produced as a single item.  If no command-line argument is present, the "
@@ -1732,7 +1331,7 @@ msgstr ""
 "слідує за аргументом командного рядка. У цьому випадку буде отримано "
 "значення з const_. Деякі приклади для ілюстрації:"
 
-#: ../../library/argparse.rst:992
+#: ../../library/argparse.rst:802
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', nargs='?', const='c', default='d')\n"
@@ -1745,7 +1344,7 @@ msgid ""
 "Namespace(bar='d', foo='d')"
 msgstr ""
 
-#: ../../library/argparse.rst:1002
+#: ../../library/argparse.rst:812
 msgid ""
 "One of the more common uses of ``nargs='?'`` is to allow optional input and "
 "output files::"
@@ -1753,7 +1352,7 @@ msgstr ""
 "Одне з найпоширеніших застосувань ``nargs='?''`` — дозволити додаткові файли"
 " введення та виведення:"
 
-#: ../../library/argparse.rst:1005
+#: ../../library/argparse.rst:815
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('infile', nargs='?', type=argparse.FileType('r'),\n"
@@ -1768,7 +1367,7 @@ msgid ""
 "          outfile=<_io.TextIOWrapper name='<stdout>' encoding='UTF-8'>)"
 msgstr ""
 
-#: ../../library/argparse.rst:1019
+#: ../../library/argparse.rst:829
 msgid ""
 "``'*'``.  All command-line arguments present are gathered into a list.  Note"
 " that it generally doesn't make much sense to have more than one positional "
@@ -1780,7 +1379,7 @@ msgstr ""
 "з ``nargs='*'``, але кілька необов'язкових аргументів з ``nargs='*'`` "
 "можливі. Наприклад::"
 
-#: ../../library/argparse.rst:1024
+#: ../../library/argparse.rst:834
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', nargs='*')\n"
@@ -1790,7 +1389,7 @@ msgid ""
 "Namespace(bar=['1', '2'], baz=['a', 'b'], foo=['x', 'y'])"
 msgstr ""
 
-#: ../../library/argparse.rst:1033
+#: ../../library/argparse.rst:843
 msgid ""
 "``'+'``. Just like ``'*'``, all command-line args present are gathered into "
 "a list.  Additionally, an error message will be generated if there wasn't at"
@@ -1800,7 +1399,7 @@ msgstr ""
 "збираються в список. Крім того, буде створено повідомлення про помилку, якщо"
 " не було принаймні одного аргументу командного рядка. Наприклад::"
 
-#: ../../library/argparse.rst:1037
+#: ../../library/argparse.rst:847
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('foo', nargs='+')\n"
@@ -1811,7 +1410,7 @@ msgid ""
 "PROG: error: the following arguments are required: foo"
 msgstr ""
 
-#: ../../library/argparse.rst:1045
+#: ../../library/argparse.rst:855
 msgid ""
 "If the ``nargs`` keyword argument is not provided, the number of arguments "
 "consumed is determined by the action_.  Generally this means a single "
@@ -1822,11 +1421,11 @@ msgstr ""
 "аргументів визначається дією_. Загалом це означає, що один аргумент "
 "командного рядка буде використано, і буде створено один елемент (не список)."
 
-#: ../../library/argparse.rst:1053
+#: ../../library/argparse.rst:863
 msgid "const"
 msgstr "конст"
 
-#: ../../library/argparse.rst:1055
+#: ../../library/argparse.rst:865
 msgid ""
 "The ``const`` argument of :meth:`~ArgumentParser.add_argument` is used to "
 "hold constant values that are not read from the command line but are "
@@ -1838,7 +1437,7 @@ msgstr ""
 "потрібні для різних дій :class:`ArgumentParser`. Два найпоширеніші його "
 "використання:"
 
-#: ../../library/argparse.rst:1059
+#: ../../library/argparse.rst:869
 msgid ""
 "When :meth:`~ArgumentParser.add_argument` is called with "
 "``action='store_const'`` or ``action='append_const'``.  These actions add "
@@ -1849,7 +1448,7 @@ msgid ""
 "``None``."
 msgstr ""
 
-#: ../../library/argparse.rst:1067
+#: ../../library/argparse.rst:877
 msgid ""
 "When :meth:`~ArgumentParser.add_argument` is called with option strings "
 "(like ``-f`` or ``--foo``) and ``nargs='?'``.  This creates an optional "
@@ -1859,17 +1458,17 @@ msgid ""
 "to be ``None`` instead.  See the nargs_ description for examples."
 msgstr ""
 
-#: ../../library/argparse.rst:1074
+#: ../../library/argparse.rst:884
 msgid ""
 "``const=None`` by default, including when ``action='append_const'`` or "
 "``action='store_const'``."
 msgstr ""
 
-#: ../../library/argparse.rst:1081
+#: ../../library/argparse.rst:891
 msgid "default"
 msgstr "за замовчуванням"
 
-#: ../../library/argparse.rst:1083
+#: ../../library/argparse.rst:893
 msgid ""
 "All optional arguments and some positional arguments may be omitted at the "
 "command line.  The ``default`` keyword argument of "
@@ -1886,7 +1485,7 @@ msgstr ""
 "значення ``за замовчуванням``, якщо рядок параметрів відсутній у командному "
 "рядку::"
 
-#: ../../library/argparse.rst:1090
+#: ../../library/argparse.rst:900
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', default=42)\n"
@@ -1896,15 +1495,13 @@ msgid ""
 "Namespace(foo=42)"
 msgstr ""
 
-#: ../../library/argparse.rst:1097
+#: ../../library/argparse.rst:907
 msgid ""
 "If the target namespace already has an attribute set, the action *default* "
-"will not over write it::"
+"will not overwrite it::"
 msgstr ""
-"Якщо цільовий простір імен уже має встановлений атрибут, дія *default* не "
-"перезаписує його:"
 
-#: ../../library/argparse.rst:1100
+#: ../../library/argparse.rst:910
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', default=42)\n"
@@ -1912,7 +1509,7 @@ msgid ""
 "Namespace(foo=101)"
 msgstr ""
 
-#: ../../library/argparse.rst:1105
+#: ../../library/argparse.rst:915
 msgid ""
 "If the ``default`` value is a string, the parser parses the value as if it "
 "were a command-line argument.  In particular, the parser applies any type_ "
@@ -1926,7 +1523,7 @@ msgstr ""
 "надається, перед встановленням атрибута для значення, що повертається "
 ":class:`Namespace`. В іншому випадку аналізатор використовує значення як є::"
 
-#: ../../library/argparse.rst:1110
+#: ../../library/argparse.rst:920
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--length', default='10', type=int)\n"
@@ -1935,7 +1532,7 @@ msgid ""
 "Namespace(length=10, width=10.5)"
 msgstr ""
 
-#: ../../library/argparse.rst:1116
+#: ../../library/argparse.rst:926
 msgid ""
 "For positional arguments with nargs_ equal to ``?`` or ``*``, the "
 "``default`` value is used when no command-line argument was present::"
@@ -1943,7 +1540,7 @@ msgstr ""
 "Для позиційних аргументів, у яких nargs_ дорівнює ``?`` або ``*``, значення "
 "``default`` використовується, якщо аргумент командного рядка відсутній:"
 
-#: ../../library/argparse.rst:1119
+#: ../../library/argparse.rst:929
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('foo', nargs='?', default=42)\n"
@@ -1953,14 +1550,14 @@ msgid ""
 "Namespace(foo=42)"
 msgstr ""
 
-#: ../../library/argparse.rst:1126
+#: ../../library/argparse.rst:936
 msgid ""
 "For required_ arguments, the ``default`` value is ignored. For example, this"
 " applies to positional arguments with nargs_ values other than ``?`` or "
 "``*``, or optional arguments marked as ``required=True``."
 msgstr ""
 
-#: ../../library/argparse.rst:1130
+#: ../../library/argparse.rst:940
 msgid ""
 "Providing ``default=argparse.SUPPRESS`` causes no attribute to be added if "
 "the command-line argument was not present::"
@@ -1968,7 +1565,7 @@ msgstr ""
 "Якщо вказати ``default=argparse.SUPPRESS``, атрибут не буде додано, якщо "
 "аргумент командного рядка відсутній:"
 
-#: ../../library/argparse.rst:1133
+#: ../../library/argparse.rst:943
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', default=argparse.SUPPRESS)\n"
@@ -1978,11 +1575,11 @@ msgid ""
 "Namespace(foo='1')"
 msgstr ""
 
-#: ../../library/argparse.rst:1144
+#: ../../library/argparse.rst:954
 msgid "type"
 msgstr "типу"
 
-#: ../../library/argparse.rst:1146
+#: ../../library/argparse.rst:956
 msgid ""
 "By default, the parser reads command-line arguments in as simple strings. "
 "However, quite often the command-line string should instead be interpreted "
@@ -1996,7 +1593,7 @@ msgstr ""
 " для :meth:`~ArgumentParser.add_argument` дозволяє виконувати будь-які "
 "необхідні перевірки типів і перетворення типів."
 
-#: ../../library/argparse.rst:1152
+#: ../../library/argparse.rst:962
 msgid ""
 "If the type_ keyword is used with the default_ keyword, the type converter "
 "is only applied if the default is a string."
@@ -2005,7 +1602,7 @@ msgstr ""
 "конвертер типів застосовується, лише якщо значенням за замовчуванням є "
 "рядок."
 
-#: ../../library/argparse.rst:1155
+#: ../../library/argparse.rst:965
 msgid ""
 "The argument to ``type`` can be any callable that accepts a single string. "
 "If the function raises :exc:`ArgumentTypeError`, :exc:`TypeError`, or "
@@ -2017,13 +1614,13 @@ msgstr ""
 ":exc:`ValueError`, виняток буде перехоплено, і відобразиться повідомлення "
 "про помилку в гарному форматі. Інші типи винятків не обробляються."
 
-#: ../../library/argparse.rst:1160
+#: ../../library/argparse.rst:970
 msgid "Common built-in types and functions can be used as type converters:"
 msgstr ""
 "Загальні вбудовані типи та функції можна використовувати як перетворювачі "
 "типів:"
 
-#: ../../library/argparse.rst:1162
+#: ../../library/argparse.rst:972
 msgid ""
 "import argparse\n"
 "import pathlib\n"
@@ -2033,16 +1630,15 @@ msgid ""
 "parser.add_argument('distance', type=float)\n"
 "parser.add_argument('street', type=ascii)\n"
 "parser.add_argument('code_point', type=ord)\n"
-"parser.add_argument('source_file', type=open)\n"
 "parser.add_argument('dest_file', type=argparse.FileType('w', encoding='latin-1'))\n"
 "parser.add_argument('datapath', type=pathlib.Path)"
 msgstr ""
 
-#: ../../library/argparse.rst:1176
+#: ../../library/argparse.rst:985
 msgid "User defined functions can be used as well:"
 msgstr "Також можна використовувати визначені користувачем функції:"
 
-#: ../../library/argparse.rst:1178
+#: ../../library/argparse.rst:987
 msgid ""
 ">>> def hyphenated(string):\n"
 "...     return '-'.join([word[:4] for word in string.casefold().split()])\n"
@@ -2053,7 +1649,7 @@ msgid ""
 "Namespace(short_title='\"the-tale-of-two-citi')"
 msgstr ""
 
-#: ../../library/argparse.rst:1188
+#: ../../library/argparse.rst:997
 msgid ""
 "The :func:`bool` function is not recommended as a type converter.  All it "
 "does is convert empty strings to ``False`` and non-empty strings to "
@@ -2063,7 +1659,7 @@ msgstr ""
 "типів. Усе, що він робить, це перетворює порожні рядки на ``False``, а "
 "непорожні рядки — на ``True``. Зазвичай це не те, чого хочеться."
 
-#: ../../library/argparse.rst:1192
+#: ../../library/argparse.rst:1001
 msgid ""
 "In general, the ``type`` keyword is a convenience that should only be used "
 "for simple conversions that can only raise one of the three supported "
@@ -2076,7 +1672,7 @@ msgstr ""
 "керування ресурсами, має бути зроблено нижче за течією після аналізу "
 "аргументів."
 
-#: ../../library/argparse.rst:1197
+#: ../../library/argparse.rst:1006
 msgid ""
 "For example, JSON or YAML conversions have complex error cases that require "
 "better reporting than can be given by the ``type`` keyword.  A "
@@ -2084,22 +1680,17 @@ msgid ""
 ":exc:`FileNotFoundError` exception would not be handled at all."
 msgstr ""
 
-#: ../../library/argparse.rst:1202
+#: ../../library/argparse.rst:1011
 msgid ""
 "Even :class:`~argparse.FileType` has its limitations for use with the "
-"``type`` keyword.  If one argument uses *FileType* and then a subsequent "
-"argument fails, an error is reported but the file is not automatically "
-"closed.  In this case, it would be better to wait until after the parser has"
-" run and then use the :keyword:`with`-statement to manage the files."
+"``type`` keyword.  If one argument uses :class:`~argparse.FileType` and then"
+" a subsequent argument fails, an error is reported but the file is not "
+"automatically closed.  In this case, it would be better to wait until after "
+"the parser has run and then use the :keyword:`with`-statement to manage the "
+"files."
 msgstr ""
-"Навіть :class:`~argparse.FileType` має свої обмеження щодо використання з "
-"ключовим словом ``type``. Якщо один аргумент використовує *FileType*, а "
-"наступний аргумент не виконується, повідомляється про помилку, але файл не "
-"закривається автоматично. У цьому випадку було б краще дочекатися завершення"
-" роботи синтаксичного аналізатора, а потім використовувати оператор "
-":keyword:`with` для керування файлами."
 
-#: ../../library/argparse.rst:1208
+#: ../../library/argparse.rst:1018
 msgid ""
 "For type checkers that simply check against a fixed set of values, consider "
 "using the choices_ keyword instead."
@@ -2107,11 +1698,11 @@ msgstr ""
 "Для засобів перевірки типів, які просто перевіряють фіксований набір "
 "значень, подумайте про використання ключового слова choices_."
 
-#: ../../library/argparse.rst:1215
+#: ../../library/argparse.rst:1025
 msgid "choices"
 msgstr "вибір"
 
-#: ../../library/argparse.rst:1217
+#: ../../library/argparse.rst:1027
 msgid ""
 "Some command-line arguments should be selected from a restricted set of "
 "values. These can be handled by passing a sequence object as the *choices* "
@@ -2120,7 +1711,7 @@ msgid ""
 "be displayed if the argument was not one of the acceptable values::"
 msgstr ""
 
-#: ../../library/argparse.rst:1223
+#: ../../library/argparse.rst:1033
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='game.py')\n"
 ">>> parser.add_argument('move', choices=['rock', 'paper', 'scissors'])\n"
@@ -2132,31 +1723,20 @@ msgid ""
 "'paper', 'scissors')"
 msgstr ""
 
-#: ../../library/argparse.rst:1232
+#: ../../library/argparse.rst:1042
 msgid ""
 "Note that inclusion in the *choices* sequence is checked after any type_ "
 "conversions have been performed, so the type of the objects in the *choices*"
-" sequence should match the type_ specified::"
+" sequence should match the type_ specified."
 msgstr ""
 
-#: ../../library/argparse.rst:1236
-msgid ""
-">>> parser = argparse.ArgumentParser(prog='doors.py')\n"
-">>> parser.add_argument('door', type=int, choices=range(1, 4))\n"
-">>> print(parser.parse_args(['3']))\n"
-"Namespace(door=3)\n"
-">>> parser.parse_args(['4'])\n"
-"usage: doors.py [-h] {1,2,3}\n"
-"doors.py: error: argument door: invalid choice: 4 (choose from 1, 2, 3)"
-msgstr ""
-
-#: ../../library/argparse.rst:1244
+#: ../../library/argparse.rst:1046
 msgid ""
 "Any sequence can be passed as the *choices* value, so :class:`list` objects,"
 " :class:`tuple` objects, and custom sequences are all supported."
 msgstr ""
 
-#: ../../library/argparse.rst:1247
+#: ../../library/argparse.rst:1049
 msgid ""
 "Use of :class:`enum.Enum` is not recommended because it is difficult to "
 "control its appearance in usage, help, and error messages."
@@ -2165,7 +1745,7 @@ msgstr ""
 "контролювати його появу в повідомленнях про використання, довідці та "
 "помилках."
 
-#: ../../library/argparse.rst:1250
+#: ../../library/argparse.rst:1052
 msgid ""
 "Formatted choices override the default *metavar* which is normally derived "
 "from *dest*.  This is usually what you want because the user never sees the "
@@ -2173,11 +1753,11 @@ msgid ""
 "are many choices), just specify an explicit metavar_."
 msgstr ""
 
-#: ../../library/argparse.rst:1259
+#: ../../library/argparse.rst:1061
 msgid "required"
 msgstr "вимагається"
 
-#: ../../library/argparse.rst:1261
+#: ../../library/argparse.rst:1063
 msgid ""
 "In general, the :mod:`argparse` module assumes that flags like ``-f`` and "
 "``--bar`` indicate *optional* arguments, which can always be omitted at the "
@@ -2190,7 +1770,7 @@ msgstr ""
 "вказати ``True`` для ключового аргументу ``required=`` для "
 ":meth:`~ArgumentParser.add_argument`::"
 
-#: ../../library/argparse.rst:1266
+#: ../../library/argparse.rst:1068
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', required=True)\n"
@@ -2201,7 +1781,7 @@ msgid ""
 ": error: the following arguments are required: --foo"
 msgstr ""
 
-#: ../../library/argparse.rst:1274
+#: ../../library/argparse.rst:1076
 msgid ""
 "As the example shows, if an option is marked as ``required``, "
 ":meth:`~ArgumentParser.parse_args` will report an error if that option is "
@@ -2211,7 +1791,7 @@ msgstr ""
 ":meth:`~ArgumentParser.parse_args` повідомить про помилку, якщо цей параметр"
 " відсутній у командному рядку."
 
-#: ../../library/argparse.rst:1280
+#: ../../library/argparse.rst:1082
 msgid ""
 "Required options are generally considered bad form because users expect "
 "*options* to be *optional*, and thus they should be avoided when possible."
@@ -2220,40 +1800,19 @@ msgstr ""
 "користувачі очікують, що *параметри* будуть *необов’язковими*, тому їх слід "
 "уникати, коли це можливо."
 
-#: ../../library/argparse.rst:1287
+#: ../../library/argparse.rst:1089
 msgid "help"
 msgstr "допомогти"
 
-#: ../../library/argparse.rst:1289
+#: ../../library/argparse.rst:1091
 msgid ""
 "The ``help`` value is a string containing a brief description of the "
 "argument. When a user requests help (usually by using ``-h`` or ``--help`` "
 "at the command line), these ``help`` descriptions will be displayed with "
-"each argument::"
-msgstr ""
-"Значення ``help`` - це рядок, що містить короткий опис аргументу. Коли "
-"користувач запитує довідку (зазвичай за допомогою ``-h`` або ``--help`` у "
-"командному рядку), ці описи ``help`` відображатимуться з кожним аргументом:"
-
-#: ../../library/argparse.rst:1294
-msgid ""
-">>> parser = argparse.ArgumentParser(prog='frobble')\n"
-">>> parser.add_argument('--foo', action='store_true',\n"
-"...                     help='foo the bars before frobbling')\n"
-">>> parser.add_argument('bar', nargs='+',\n"
-"...                     help='one of the bars to be frobbled')\n"
-">>> parser.parse_args(['-h'])\n"
-"usage: frobble [-h] [--foo] bar [bar ...]\n"
-"\n"
-"positional arguments:\n"
-" bar     one of the bars to be frobbled\n"
-"\n"
-"options:\n"
-" -h, --help  show this help message and exit\n"
-" --foo   foo the bars before frobbling"
+"each argument."
 msgstr ""
 
-#: ../../library/argparse.rst:1309
+#: ../../library/argparse.rst:1096
 msgid ""
 "The ``help`` strings can include various format specifiers to avoid "
 "repetition of things like the program name or the argument default_.  The "
@@ -2267,7 +1826,7 @@ msgstr ""
 "аргументів для :meth:`~ArgumentParser.add_argument`, напр. ``%(default)s``, "
 "``%(type)s`` тощо::"
 
-#: ../../library/argparse.rst:1314
+#: ../../library/argparse.rst:1101
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='frobble')\n"
 ">>> parser.add_argument('bar', nargs='?', type=int, default=42,\n"
@@ -2282,7 +1841,7 @@ msgid ""
 " -h, --help  show this help message and exit"
 msgstr ""
 
-#: ../../library/argparse.rst:1326
+#: ../../library/argparse.rst:1113
 msgid ""
 "As the help string supports %-formatting, if you want a literal ``%`` to "
 "appear in the help string, you must escape it as ``%%``."
@@ -2290,7 +1849,7 @@ msgstr ""
 "Оскільки рядок довідки підтримує %-formatting, якщо ви хочете, щоб літерал "
 "``%`` з’явився в рядку довідки, ви повинні екранувати його як ``%%``."
 
-#: ../../library/argparse.rst:1329
+#: ../../library/argparse.rst:1116
 msgid ""
 ":mod:`argparse` supports silencing the help entry for certain options, by "
 "setting the ``help`` value to ``argparse.SUPPRESS``::"
@@ -2298,7 +1857,7 @@ msgstr ""
 ":mod:`argparse` підтримує вимикання запису довідки для певних параметрів "
 "шляхом встановлення значення ``help`` на ``argparse.SUPPRESS``::"
 
-#: ../../library/argparse.rst:1332
+#: ../../library/argparse.rst:1119
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='frobble')\n"
 ">>> parser.add_argument('--foo', help=argparse.SUPPRESS)\n"
@@ -2309,11 +1868,11 @@ msgid ""
 "  -h, --help  show this help message and exit"
 msgstr ""
 
-#: ../../library/argparse.rst:1344
+#: ../../library/argparse.rst:1131
 msgid "metavar"
 msgstr "метавар"
 
-#: ../../library/argparse.rst:1346
+#: ../../library/argparse.rst:1133
 msgid ""
 "When :class:`ArgumentParser` generates help messages, it needs some way to "
 "refer to each expected argument.  By default, ArgumentParser objects use the"
@@ -2334,7 +1893,7 @@ msgstr ""
 "``--foo``, за яким має слідувати один аргумент командного рядка, буде "
 "називатися ``FOO``. Приклад::"
 
-#: ../../library/argparse.rst:1355
+#: ../../library/argparse.rst:1142
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo')\n"
@@ -2352,11 +1911,11 @@ msgid ""
 " --foo FOO"
 msgstr ""
 
-#: ../../library/argparse.rst:1370
+#: ../../library/argparse.rst:1157
 msgid "An alternative name can be specified with ``metavar``::"
 msgstr "Альтернативну назву можна вказати за допомогою ``metavar``::"
 
-#: ../../library/argparse.rst:1372
+#: ../../library/argparse.rst:1159
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', metavar='YYY')\n"
@@ -2374,7 +1933,7 @@ msgid ""
 " --foo YYY"
 msgstr ""
 
-#: ../../library/argparse.rst:1387
+#: ../../library/argparse.rst:1174
 msgid ""
 "Note that ``metavar`` only changes the *displayed* name - the name of the "
 "attribute on the :meth:`~ArgumentParser.parse_args` object is still "
@@ -2384,7 +1943,7 @@ msgstr ""
 "об’єкта :meth:`~ArgumentParser.parse_args` все ще визначається значенням "
 "dest_."
 
-#: ../../library/argparse.rst:1391
+#: ../../library/argparse.rst:1178
 msgid ""
 "Different values of ``nargs`` may cause the metavar to be used multiple "
 "times. Providing a tuple to ``metavar`` specifies a different display for "
@@ -2394,7 +1953,7 @@ msgstr ""
 "метаперемінної. Надання кортежу для ``metavar`` визначає інше відображення "
 "для кожного з аргументів::"
 
-#: ../../library/argparse.rst:1395
+#: ../../library/argparse.rst:1182
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-x', nargs=2)\n"
@@ -2408,11 +1967,11 @@ msgid ""
 " --foo bar baz"
 msgstr ""
 
-#: ../../library/argparse.rst:1410
+#: ../../library/argparse.rst:1197
 msgid "dest"
 msgstr "дест"
 
-#: ../../library/argparse.rst:1412
+#: ../../library/argparse.rst:1199
 msgid ""
 "Most :class:`ArgumentParser` actions add some value as an attribute of the "
 "object returned by :meth:`~ArgumentParser.parse_args`.  The name of this "
@@ -2428,7 +1987,7 @@ msgstr ""
 " зазвичай надається як перший аргумент "
 ":meth:`~ArgumentParser.add_argument`::"
 
-#: ../../library/argparse.rst:1419
+#: ../../library/argparse.rst:1206
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('bar')\n"
@@ -2436,7 +1995,7 @@ msgid ""
 "Namespace(bar='XXX')"
 msgstr ""
 
-#: ../../library/argparse.rst:1424
+#: ../../library/argparse.rst:1211
 msgid ""
 "For optional argument actions, the value of ``dest`` is normally inferred "
 "from the option strings.  :class:`ArgumentParser` generates the value of "
@@ -2456,7 +2015,7 @@ msgstr ""
 " що рядок є дійсною назвою атрибута. Наведені нижче приклади ілюструють цю "
 "поведінку:"
 
-#: ../../library/argparse.rst:1433
+#: ../../library/argparse.rst:1220
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('-f', '--foo-bar', '--foo')\n"
@@ -2467,11 +2026,11 @@ msgid ""
 "Namespace(foo_bar='1', x='2')"
 msgstr ""
 
-#: ../../library/argparse.rst:1441
+#: ../../library/argparse.rst:1228
 msgid "``dest`` allows a custom attribute name to be provided::"
 msgstr "``dest`` дозволяє надати ім'я спеціального атрибута:"
 
-#: ../../library/argparse.rst:1443
+#: ../../library/argparse.rst:1230
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', dest='bar')\n"
@@ -2479,11 +2038,11 @@ msgid ""
 "Namespace(bar='XXX')"
 msgstr ""
 
-#: ../../library/argparse.rst:1452
+#: ../../library/argparse.rst:1239
 msgid "deprecated"
 msgstr ""
 
-#: ../../library/argparse.rst:1454
+#: ../../library/argparse.rst:1241
 msgid ""
 "During a project's lifetime, some arguments may need to be removed from the "
 "command line. Before removing them, you should inform your users that the "
@@ -2494,7 +2053,7 @@ msgid ""
 "will be printed to :data:`sys.stderr` when the argument is used::"
 msgstr ""
 
-#: ../../library/argparse.rst:1464
+#: ../../library/argparse.rst:1251
 msgid ""
 ">>> import argparse\n"
 ">>> parser = argparse.ArgumentParser(prog='snake.py')\n"
@@ -2506,11 +2065,11 @@ msgid ""
 "Namespace(legs=4)"
 msgstr ""
 
-#: ../../library/argparse.rst:1477
+#: ../../library/argparse.rst:1264
 msgid "Action classes"
 msgstr "Класи дії"
 
-#: ../../library/argparse.rst:1479
+#: ../../library/argparse.rst:1266
 msgid ""
 "Action classes implement the Action API, a callable which returns a callable"
 " which processes arguments from the command-line. Any object which follows "
@@ -2518,7 +2077,7 @@ msgid ""
 ":meth:`~ArgumentParser.add_argument`."
 msgstr ""
 
-#: ../../library/argparse.rst:1488
+#: ../../library/argparse.rst:1275
 msgid ""
 "Action objects are used by an ArgumentParser to represent the information "
 "needed to parse a single argument from one or more strings from the command "
@@ -2532,7 +2091,7 @@ msgstr ""
 "будь-які ключові аргументи, передані в :meth:`ArgumentParser.add_argument`, "
 "крім самої ``action``."
 
-#: ../../library/argparse.rst:1494
+#: ../../library/argparse.rst:1281
 msgid ""
 "Instances of Action (or return value of any callable to the ``action`` "
 "parameter) should have attributes \"dest\", \"option_strings\", \"default\","
@@ -2545,7 +2104,7 @@ msgstr ""
 "Найпростіший спосіб переконатися, що ці атрибути визначені, це викликати "
 "``Action.__init__``."
 
-#: ../../library/argparse.rst:1499
+#: ../../library/argparse.rst:1286
 msgid ""
 "Action instances should be callable, so subclasses must override the "
 "``__call__`` method, which should accept four parameters:"
@@ -2553,41 +2112,43 @@ msgstr ""
 "Екземпляри дій мають бути викликаними, тому підкласи повинні перевизначати "
 "метод ``__call__``, який має приймати чотири параметри:"
 
-#: ../../library/argparse.rst:1502
-msgid "``parser`` - The ArgumentParser object which contains this action."
-msgstr "``parser`` – об’єкт ArgumentParser, який містить цю дію."
+#: ../../library/argparse.rst:1289
+msgid "*parser* - The ArgumentParser object which contains this action."
+msgstr ""
 
-#: ../../library/argparse.rst:1504
+#: ../../library/argparse.rst:1291
+msgid "*namespace* - The :class:`Namespace` object that will be returned by"
+msgstr ""
+
+#: ../../library/argparse.rst:1292
 msgid ""
-"``namespace`` - The :class:`Namespace` object that will be returned by "
 ":meth:`~ArgumentParser.parse_args`.  Most actions add an attribute to this "
 "object using :func:`setattr`."
 msgstr ""
-"``простір імен`` – об’єкт :class:`Namespace`, який повертатиме "
-":meth:`~ArgumentParser.parse_args`. Більшість дій додають атрибут до цього "
-"об’єкта за допомогою :func:`setattr`."
 
-#: ../../library/argparse.rst:1508
+#: ../../library/argparse.rst:1295
 msgid ""
-"``values`` - The associated command-line arguments, with any type "
-"conversions applied.  Type conversions are specified with the type_ keyword "
-"argument to :meth:`~ArgumentParser.add_argument`."
+"*values* - The associated command-line arguments, with any type conversions"
 msgstr ""
-"``значення`` – пов’язані аргументи командного рядка з будь-якими "
-"застосованими перетвореннями типів. Перетворення типів вказуються аргументом"
-" ключового слова type_ для :meth:`~ArgumentParser.add_argument`."
 
-#: ../../library/argparse.rst:1512
+#: ../../library/argparse.rst:1296
 msgid ""
-"``option_string`` - The option string that was used to invoke this action. "
+"applied.  Type conversions are specified with the type_ keyword argument to "
+":meth:`~ArgumentParser.add_argument`."
+msgstr ""
+
+#: ../../library/argparse.rst:1299
+msgid ""
+"*option_string* - The option string that was used to invoke this action."
+msgstr ""
+
+#: ../../library/argparse.rst:1300
+msgid ""
 "The ``option_string`` argument is optional, and will be absent if the action"
 " is associated with a positional argument."
 msgstr ""
-"``option_string`` - рядок параметра, який використовувався для виклику цієї "
-"дії. Аргумент ``option_string`` необов’язковий і буде відсутній, якщо дію "
-"пов’язано з позиційним аргументом."
 
-#: ../../library/argparse.rst:1516
+#: ../../library/argparse.rst:1303
 msgid ""
 "The ``__call__`` method may perform arbitrary actions, but will typically "
 "set attributes on the ``namespace`` based on ``dest`` and ``values``."
@@ -2595,7 +2156,7 @@ msgstr ""
 "Метод ``__call__`` може виконувати довільні дії, але зазвичай встановлює "
 "атрибути в ``простір імен`` на основі ``dest`` і ``values``."
 
-#: ../../library/argparse.rst:1519
+#: ../../library/argparse.rst:1306
 msgid ""
 "Action subclasses can define a ``format_usage`` method that takes no "
 "argument and return a string which will be used when printing the usage of "
@@ -2607,11 +2168,11 @@ msgstr ""
 "використання програми. Якщо такий метод не надано, буде використано розумне "
 "значення за умовчанням."
 
-#: ../../library/argparse.rst:1524
+#: ../../library/argparse.rst:1312
 msgid "The parse_args() method"
 msgstr "Метод parse_args()."
 
-#: ../../library/argparse.rst:1528
+#: ../../library/argparse.rst:1316
 msgid ""
 "Convert argument strings to objects and assign them as attributes of the "
 "namespace.  Return the populated namespace."
@@ -2619,7 +2180,7 @@ msgstr ""
 "Перетворіть рядки аргументів на об’єкти та призначте їх як атрибути простору"
 " імен. Повернути заповнений простір імен."
 
-#: ../../library/argparse.rst:1531
+#: ../../library/argparse.rst:1319
 msgid ""
 "Previous calls to :meth:`add_argument` determine exactly what objects are "
 "created and how they are assigned. See the documentation for "
@@ -2629,14 +2190,14 @@ msgstr ""
 "створюються та як вони призначаються. Перегляньте документацію для "
 ":meth:`add_argument` для деталей."
 
-#: ../../library/argparse.rst:1535
+#: ../../library/argparse.rst:1323
 msgid ""
 "args_ - List of strings to parse.  The default is taken from "
 ":data:`sys.argv`."
 msgstr ""
 "args_ - список рядків для аналізу. Типове значення взято з :data:`sys.argv`."
 
-#: ../../library/argparse.rst:1538
+#: ../../library/argparse.rst:1326
 msgid ""
 "namespace_ - An object to take the attributes.  The default is a new empty "
 ":class:`Namespace` object."
@@ -2644,11 +2205,11 @@ msgstr ""
 "namespace_ – об’єкт для отримання атрибутів. Типовим є новий порожній об’єкт"
 " :class:`Namespace`."
 
-#: ../../library/argparse.rst:1543
+#: ../../library/argparse.rst:1331
 msgid "Option value syntax"
 msgstr "Синтаксис значення опції"
 
-#: ../../library/argparse.rst:1545
+#: ../../library/argparse.rst:1333
 msgid ""
 "The :meth:`~ArgumentParser.parse_args` method supports several ways of "
 "specifying the value of an option (if it takes one).  In the simplest case, "
@@ -2658,7 +2219,7 @@ msgstr ""
 "визначення значення параметра (якщо воно приймається). У найпростішому "
 "випадку параметр і його значення передаються як два окремих аргументи:"
 
-#: ../../library/argparse.rst:1549
+#: ../../library/argparse.rst:1337
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-x')\n"
@@ -2669,7 +2230,7 @@ msgid ""
 "Namespace(foo='FOO', x=None)"
 msgstr ""
 
-#: ../../library/argparse.rst:1557
+#: ../../library/argparse.rst:1345
 msgid ""
 "For long options (options with names longer than a single character), the "
 "option and value can also be passed as a single command-line argument, using"
@@ -2679,13 +2240,13 @@ msgstr ""
 "параметр і значення також можна передати як один аргумент командного рядка, "
 "використовуючи ``=``, щоб розділити їх::"
 
-#: ../../library/argparse.rst:1561
+#: ../../library/argparse.rst:1349
 msgid ""
 ">>> parser.parse_args(['--foo=FOO'])\n"
 "Namespace(foo='FOO', x=None)"
 msgstr ""
 
-#: ../../library/argparse.rst:1564
+#: ../../library/argparse.rst:1352
 msgid ""
 "For short options (options only one character long), the option and its "
 "value can be concatenated::"
@@ -2693,13 +2254,13 @@ msgstr ""
 "Для коротких опцій (опції лише з одного символу) опцію та її значення можна "
 "об’єднати:"
 
-#: ../../library/argparse.rst:1567
+#: ../../library/argparse.rst:1355
 msgid ""
 ">>> parser.parse_args(['-xX'])\n"
 "Namespace(foo=None, x='X')"
 msgstr ""
 
-#: ../../library/argparse.rst:1570
+#: ../../library/argparse.rst:1358
 msgid ""
 "Several short options can be joined together, using only a single ``-`` "
 "prefix, as long as only the last option (or none of them) requires a value::"
@@ -2708,7 +2269,7 @@ msgstr ""
 "префікс ``-``, якщо тільки остання опція (або жодна з них) вимагає "
 "значення::"
 
-#: ../../library/argparse.rst:1573
+#: ../../library/argparse.rst:1361
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-x', action='store_true')\n"
@@ -2718,11 +2279,11 @@ msgid ""
 "Namespace(x=True, y=True, z='Z')"
 msgstr ""
 
-#: ../../library/argparse.rst:1582
+#: ../../library/argparse.rst:1370
 msgid "Invalid arguments"
 msgstr "Недійсні аргументи"
 
-#: ../../library/argparse.rst:1584
+#: ../../library/argparse.rst:1372
 msgid ""
 "While parsing the command line, :meth:`~ArgumentParser.parse_args` checks "
 "for a variety of errors, including ambiguous options, invalid types, invalid"
@@ -2735,7 +2296,7 @@ msgstr ""
 "аргументів тощо. Коли він стикається з такою помилкою, він виходить і друкує"
 " помилку разом із повідомленням про використання::"
 
-#: ../../library/argparse.rst:1589
+#: ../../library/argparse.rst:1377
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('--foo', type=int)\n"
@@ -2757,11 +2318,11 @@ msgid ""
 "PROG: error: extra arguments found: badger"
 msgstr ""
 
-#: ../../library/argparse.rst:1610
+#: ../../library/argparse.rst:1398
 msgid "Arguments containing ``-``"
 msgstr "Аргументи, що містять ``-``"
 
-#: ../../library/argparse.rst:1612
+#: ../../library/argparse.rst:1400
 msgid ""
 "The :meth:`~ArgumentParser.parse_args` method attempts to give errors "
 "whenever the user has clearly made a mistake, but some situations are "
@@ -2780,7 +2341,7 @@ msgstr ""
 " починатися лише з ``-``, якщо вони виглядають як від’ємні числа, і в "
 "аналізаторі немає параметрів, які виглядають як від’ємні числа:"
 
-#: ../../library/argparse.rst:1620
+#: ../../library/argparse.rst:1408
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-x')\n"
@@ -2813,7 +2374,7 @@ msgid ""
 "PROG: error: argument -1: expected one argument"
 msgstr ""
 
-#: ../../library/argparse.rst:1650
+#: ../../library/argparse.rst:1438
 msgid ""
 "If you have positional arguments that must begin with ``-`` and don't look "
 "like negative numbers, you can insert the pseudo-argument ``'--'`` which "
@@ -2825,23 +2386,23 @@ msgstr ""
 "який повідомляє :meth:`~ArgumentParser.parse_args`, що все після цього є "
 "позиційним аргументом::"
 
-#: ../../library/argparse.rst:1655
+#: ../../library/argparse.rst:1443
 msgid ""
 ">>> parser.parse_args(['--', '-f'])\n"
 "Namespace(foo='-f', one=None)"
 msgstr ""
 
-#: ../../library/argparse.rst:1658
+#: ../../library/argparse.rst:1446
 msgid ""
 "See also :ref:`the argparse howto on ambiguous arguments <specifying-"
 "ambiguous-arguments>` for more details."
 msgstr ""
 
-#: ../../library/argparse.rst:1664
+#: ../../library/argparse.rst:1452
 msgid "Argument abbreviations (prefix matching)"
 msgstr "Скорочення аргументів (відповідність префіксу)"
 
-#: ../../library/argparse.rst:1666
+#: ../../library/argparse.rst:1454
 msgid ""
 "The :meth:`~ArgumentParser.parse_args` method :ref:`by default "
 "<allow_abbrev>` allows long options to be abbreviated to a prefix, if the "
@@ -2851,7 +2412,7 @@ msgstr ""
 "<allow_abbrev>` дозволяє скорочувати довгі параметри до префікса, якщо "
 "скорочення є однозначним (префікс відповідає унікальному параметру)::"
 
-#: ../../library/argparse.rst:1670
+#: ../../library/argparse.rst:1458
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('-bacon')\n"
@@ -2865,7 +2426,7 @@ msgid ""
 "PROG: error: ambiguous option: -ba could match -badger, -bacon"
 msgstr ""
 
-#: ../../library/argparse.rst:1681
+#: ../../library/argparse.rst:1469
 msgid ""
 "An error is produced for arguments that could produce more than one options."
 " This feature can be disabled by setting :ref:`allow_abbrev` to ``False``."
@@ -2874,11 +2435,11 @@ msgstr ""
 "варіанту. Цю функцію можна вимкнути, встановивши для :ref:`allow_abbrev` "
 "значення ``False``."
 
-#: ../../library/argparse.rst:1687
+#: ../../library/argparse.rst:1475
 msgid "Beyond ``sys.argv``"
 msgstr "За межами ``sys.argv``"
 
-#: ../../library/argparse.rst:1689
+#: ../../library/argparse.rst:1477
 msgid ""
 "Sometimes it may be useful to have an ArgumentParser parse arguments other "
 "than those of :data:`sys.argv`.  This can be accomplished by passing a list "
@@ -2890,7 +2451,7 @@ msgstr ""
 "до :meth:`~ArgumentParser.parse_args`. Це корисно для тестування в "
 "інтерактивному запиті:"
 
-#: ../../library/argparse.rst:1694
+#: ../../library/argparse.rst:1482
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument(\n"
@@ -2905,11 +2466,11 @@ msgid ""
 "Namespace(accumulate=<built-in function sum>, integers=[1, 2, 3, 4])"
 msgstr ""
 
-#: ../../library/argparse.rst:1709
+#: ../../library/argparse.rst:1497
 msgid "The Namespace object"
 msgstr "Об'єкт простору імен"
 
-#: ../../library/argparse.rst:1713
+#: ../../library/argparse.rst:1501
 msgid ""
 "Simple class used by default by :meth:`~ArgumentParser.parse_args` to create"
 " an object holding attributes and return it."
@@ -2918,7 +2479,7 @@ msgstr ""
 ":meth:`~ArgumentParser.parse_args` для створення об’єкта з атрибутами та "
 "повернення його."
 
-#: ../../library/argparse.rst:1716
+#: ../../library/argparse.rst:1504
 msgid ""
 "This class is deliberately simple, just an :class:`object` subclass with a "
 "readable string representation. If you prefer to have dict-like view of the "
@@ -2929,7 +2490,7 @@ msgstr ""
 "форматі dict, ви можете використовувати стандартну ідіому Python "
 ":func:`vars`::"
 
-#: ../../library/argparse.rst:1720
+#: ../../library/argparse.rst:1508
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo')\n"
@@ -2938,7 +2499,7 @@ msgid ""
 "{'foo': 'BAR'}"
 msgstr ""
 
-#: ../../library/argparse.rst:1726
+#: ../../library/argparse.rst:1514
 msgid ""
 "It may also be useful to have an :class:`ArgumentParser` assign attributes "
 "to an already existing object, rather than a new :class:`Namespace` object."
@@ -2948,7 +2509,7 @@ msgstr ""
 " існуючому об’єкту, а не новому об’єкту :class:`Namespace`. Цього можна "
 "досягти, вказавши аргумент ключового слова ``namespace=``::"
 
-#: ../../library/argparse.rst:1730
+#: ../../library/argparse.rst:1518
 msgid ""
 ">>> class C:\n"
 "...     pass\n"
@@ -2961,71 +2522,60 @@ msgid ""
 "'BAR'"
 msgstr ""
 
-#: ../../library/argparse.rst:1742
+#: ../../library/argparse.rst:1530
 msgid "Other utilities"
 msgstr "Інші комунальні послуги"
 
-#: ../../library/argparse.rst:1745
+#: ../../library/argparse.rst:1533
 msgid "Sub-commands"
 msgstr "Підкоманди"
 
-#: ../../library/argparse.rst:1752
+#: ../../library/argparse.rst:1540
 msgid ""
-"Many programs split up their functionality into a number of sub-commands, "
-"for example, the ``svn`` program can invoke sub-commands like ``svn "
-"checkout``, ``svn update``, and ``svn commit``.  Splitting up functionality "
-"this way can be a particularly good idea when a program performs several "
-"different functions which require different kinds of command-line arguments."
-" :class:`ArgumentParser` supports the creation of such sub-commands with the"
-" :meth:`add_subparsers` method.  The :meth:`add_subparsers` method is "
+"Many programs split up their functionality into a number of subcommands, for"
+" example, the ``svn`` program can invoke subcommands like ``svn checkout``, "
+"``svn update``, and ``svn commit``.  Splitting up functionality this way can"
+" be a particularly good idea when a program performs several different "
+"functions which require different kinds of command-line arguments. "
+":class:`ArgumentParser` supports the creation of such subcommands with the "
+":meth:`add_subparsers` method.  The :meth:`add_subparsers` method is "
 "normally called with no arguments and returns a special action object.  This"
 " object has a single method, :meth:`~_SubParsersAction.add_parser`, which "
 "takes a command name and any :class:`ArgumentParser` constructor arguments, "
 "and returns an :class:`ArgumentParser` object that can be modified as usual."
 msgstr ""
 
-#: ../../library/argparse.rst:1764
+#: ../../library/argparse.rst:1552
 msgid "Description of parameters:"
 msgstr "Опис параметрів:"
 
-#: ../../library/argparse.rst:1766
+#: ../../library/argparse.rst:1554
 msgid ""
-"title - title for the sub-parser group in help output; by default "
+"*title* - title for the sub-parser group in help output; by default "
 "\"subcommands\" if description is provided, otherwise uses title for "
 "positional arguments"
 msgstr ""
-"title - заголовок для групи суб-парсера у виведенні довідки; за "
-"замовчуванням \"підкоманди\", якщо надається опис, інакше використовує "
-"заголовок для позиційних аргументів"
 
-#: ../../library/argparse.rst:1770
+#: ../../library/argparse.rst:1558
 msgid ""
-"description - description for the sub-parser group in help output, by "
+"*description* - description for the sub-parser group in help output, by "
 "default ``None``"
 msgstr ""
-"description - опис для групи суб-парсера у виведенні довідки, за "
-"замовчуванням ``None``"
 
-#: ../../library/argparse.rst:1773
+#: ../../library/argparse.rst:1561
 msgid ""
-"prog - usage information that will be displayed with sub-command help, by "
+"*prog* - usage information that will be displayed with sub-command help, by "
 "default the name of the program and any positional arguments before the "
 "subparser argument"
 msgstr ""
-"prog - інформація про використання, яка відображатиметься з довідкою "
-"підкоманд, за замовчуванням назва програми та будь-які позиційні аргументи "
-"перед аргументом subparser"
 
-#: ../../library/argparse.rst:1777
+#: ../../library/argparse.rst:1565
 msgid ""
-"parser_class - class which will be used to create sub-parser instances, by "
-"default the class of the current parser (e.g. ArgumentParser)"
+"*parser_class* - class which will be used to create sub-parser instances, by"
+" default the class of the current parser (e.g. ArgumentParser)"
 msgstr ""
-"parser_class - клас, який використовуватиметься для створення екземплярів "
-"суб-парсера, за замовчуванням клас поточного аналізатора (наприклад, "
-"ArgumentParser)"
 
-#: ../../library/argparse.rst:1780
+#: ../../library/argparse.rst:1568
 msgid ""
 "action_ - the basic type of action to be taken when this argument is "
 "encountered at the command line"
@@ -3033,7 +2583,7 @@ msgstr ""
 "action_ - основний тип дії, яка виконується, коли цей аргумент зустрічається"
 " в командному рядку"
 
-#: ../../library/argparse.rst:1783
+#: ../../library/argparse.rst:1571
 msgid ""
 "dest_ - name of the attribute under which sub-command name will be stored; "
 "by default ``None`` and no value is stored"
@@ -3041,7 +2591,7 @@ msgstr ""
 "dest_ - ім'я атрибута, під яким буде зберігатися ім'я підкоманди; за "
 "замовчуванням ``None`` і жодне значення не зберігається"
 
-#: ../../library/argparse.rst:1786
+#: ../../library/argparse.rst:1574
 msgid ""
 "required_ - Whether or not a subcommand must be provided, by default "
 "``False`` (added in 3.7)"
@@ -3049,30 +2599,28 @@ msgstr ""
 "required_ - чи потрібно надавати підкоманду, за замовчуванням ``False`` "
 "(додано в 3.7)"
 
-#: ../../library/argparse.rst:1789
+#: ../../library/argparse.rst:1577
 msgid "help_ - help for sub-parser group in help output, by default ``None``"
 msgstr ""
 "help_ - довідка для групи суб-парсера у виведенні довідки, за замовчуванням "
 "``None``"
 
-#: ../../library/argparse.rst:1791
+#: ../../library/argparse.rst:1579
 msgid ""
-"metavar_ - string presenting available sub-commands in help; by default it "
-"is ``None`` and presents sub-commands in form {cmd1, cmd2, ..}"
+"metavar_ - string presenting available subcommands in help; by default it is"
+" ``None`` and presents subcommands in form {cmd1, cmd2, ..}"
 msgstr ""
-"metavar_ - рядок, що представляє доступні підкоманди в довідці; за "
-"замовчуванням це ``None`` і представляє підкоманди у формі {cmd1, cmd2, ..}"
 
-#: ../../library/argparse.rst:1794
+#: ../../library/argparse.rst:1582
 msgid "Some example usage::"
 msgstr "Деякі приклади використання::"
 
-#: ../../library/argparse.rst:1796
+#: ../../library/argparse.rst:1584
 msgid ""
 ">>> # create the top-level parser\n"
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> parser.add_argument('--foo', action='store_true', help='foo help')\n"
-">>> subparsers = parser.add_subparsers(help='sub-command help')\n"
+">>> subparsers = parser.add_subparsers(help='subcommand help')\n"
 ">>>\n"
 ">>> # create the parser for the \"a\" command\n"
 ">>> parser_a = subparsers.add_parser('a', help='a help')\n"
@@ -3080,7 +2628,7 @@ msgid ""
 ">>>\n"
 ">>> # create the parser for the \"b\" command\n"
 ">>> parser_b = subparsers.add_parser('b', help='b help')\n"
-">>> parser_b.add_argument('--baz', choices='XYZ', help='baz help')\n"
+">>> parser_b.add_argument('--baz', choices=('X', 'Y', 'Z'), help='baz help')\n"
 ">>>\n"
 ">>> # parse some argument lists\n"
 ">>> parser.parse_args(['a', '12'])\n"
@@ -3089,7 +2637,7 @@ msgid ""
 "Namespace(baz='Z', foo=True)"
 msgstr ""
 
-#: ../../library/argparse.rst:1815
+#: ../../library/argparse.rst:1603
 msgid ""
 "Note that the object returned by :meth:`parse_args` will only contain "
 "attributes for the main parser and the subparser that was selected by the "
@@ -3104,7 +2652,7 @@ msgstr ""
 "коли вказано команду ``a``, присутні лише атрибути ``foo`` і ``bar``, а коли"
 " вказано команду ``b``, лише наявні атрибути ``foo`` і ``baz``."
 
-#: ../../library/argparse.rst:1822
+#: ../../library/argparse.rst:1610
 msgid ""
 "Similarly, when a help message is requested from a subparser, only the help "
 "for that particular parser will be printed.  The help message will not "
@@ -3113,13 +2661,13 @@ msgid ""
 " to :meth:`~_SubParsersAction.add_parser` as above.)"
 msgstr ""
 
-#: ../../library/argparse.rst:1830
+#: ../../library/argparse.rst:1618
 msgid ""
 ">>> parser.parse_args(['--help'])\n"
 "usage: PROG [-h] [--foo] {a,b} ...\n"
 "\n"
 "positional arguments:\n"
-"  {a,b}   sub-command help\n"
+"  {a,b}   subcommand help\n"
 "    a     a help\n"
 "    b     b help\n"
 "\n"
@@ -3144,7 +2692,7 @@ msgid ""
 "  --baz {X,Y,Z}  baz help"
 msgstr ""
 
-#: ../../library/argparse.rst:1858
+#: ../../library/argparse.rst:1646
 msgid ""
 "The :meth:`add_subparsers` method also supports ``title`` and "
 "``description`` keyword arguments.  When either is present, the subparser's "
@@ -3154,7 +2702,7 @@ msgstr ""
 "``description``. Якщо будь-який з них присутній, команди субпарсера "
 "відображатимуться у власній групі у виведенні довідки. Наприклад::"
 
-#: ../../library/argparse.rst:1862
+#: ../../library/argparse.rst:1650
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> subparsers = parser.add_subparsers(title='subcommands',\n"
@@ -3174,7 +2722,7 @@ msgid ""
 "  {foo,bar}   additional help"
 msgstr ""
 
-#: ../../library/argparse.rst:1879
+#: ../../library/argparse.rst:1667
 msgid ""
 "Furthermore, :meth:`~_SubParsersAction.add_parser` supports an additional "
 "*aliases* argument, which allows multiple strings to refer to the same "
@@ -3182,7 +2730,7 @@ msgid ""
 "``checkout``::"
 msgstr ""
 
-#: ../../library/argparse.rst:1884
+#: ../../library/argparse.rst:1672
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> subparsers = parser.add_subparsers()\n"
@@ -3192,27 +2740,23 @@ msgid ""
 "Namespace(foo='bar')"
 msgstr ""
 
-#: ../../library/argparse.rst:1891
+#: ../../library/argparse.rst:1679
 msgid ""
 ":meth:`~_SubParsersAction.add_parser` supports also an additional "
 "*deprecated* argument, which allows to deprecate the subparser."
 msgstr ""
 
-#: ../../library/argparse.rst:1905
+#: ../../library/argparse.rst:1693
 msgid ""
-"One particularly effective way of handling sub-commands is to combine the "
-"use of the :meth:`add_subparsers` method with calls to :meth:`set_defaults` "
-"so that each subparser knows which Python function it should execute.  For "
+"One particularly effective way of handling subcommands is to combine the use"
+" of the :meth:`add_subparsers` method with calls to :meth:`set_defaults` so "
+"that each subparser knows which Python function it should execute.  For "
 "example::"
 msgstr ""
-"Одним із особливо ефективних способів обробки підкоманд є поєднання "
-"використання методу :meth:`add_subparsers` із викликами "
-":meth:`set_defaults`, щоб кожен підрозмір знав, яку функцію Python він має "
-"виконати. Наприклад::"
 
-#: ../../library/argparse.rst:1910
+#: ../../library/argparse.rst:1698
 msgid ""
-">>> # sub-command functions\n"
+">>> # subcommand functions\n"
 ">>> def foo(args):\n"
 "...     print(args.x * args.y)\n"
 "...\n"
@@ -3245,7 +2789,7 @@ msgid ""
 "((XYZYX))"
 msgstr ""
 
-#: ../../library/argparse.rst:1942
+#: ../../library/argparse.rst:1730
 msgid ""
 "This way, you can let :meth:`parse_args` do the job of calling the "
 "appropriate function after argument parsing is complete.  Associating "
@@ -3261,7 +2805,7 @@ msgstr ""
 "викликаного субпарсера, аргумент ключового слова ``dest`` для виклику "
 ":meth:`add_subparsers` буде працювати:"
 
-#: ../../library/argparse.rst:1949
+#: ../../library/argparse.rst:1737
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> subparsers = parser.add_subparsers(dest='subparser_name')\n"
@@ -3273,15 +2817,15 @@ msgid ""
 "Namespace(subparser_name='2', y='frobble')"
 msgstr ""
 
-#: ../../library/argparse.rst:1958
+#: ../../library/argparse.rst:1746
 msgid "New *required* keyword argument."
 msgstr "Новий *обов’язковий* аргумент ключового слова."
 
-#: ../../library/argparse.rst:1963
+#: ../../library/argparse.rst:1751
 msgid "FileType objects"
 msgstr "Об'єкти FileType"
 
-#: ../../library/argparse.rst:1967
+#: ../../library/argparse.rst:1755
 msgid ""
 "The :class:`FileType` factory creates objects that can be passed to the type"
 " argument of :meth:`ArgumentParser.add_argument`.  Arguments that have "
@@ -3295,7 +2839,7 @@ msgstr ""
 "потрібними режимами, розмірами буфера, кодуванням і обробкою помилок "
 "(додаткову інформацію див. у функції :func:`open`)::"
 
-#: ../../library/argparse.rst:1973
+#: ../../library/argparse.rst:1761
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--raw', type=argparse.FileType('wb', 0))\n"
@@ -3304,14 +2848,14 @@ msgid ""
 "Namespace(out=<_io.TextIOWrapper name='file.txt' mode='w' encoding='UTF-8'>, raw=<_io.FileIO name='raw.dat' mode='wb'>)"
 msgstr ""
 
-#: ../../library/argparse.rst:1979
+#: ../../library/argparse.rst:1767
 msgid ""
 "FileType objects understand the pseudo-argument ``'-'`` and automatically "
 "convert this into :data:`sys.stdin` for readable :class:`FileType` objects "
 "and :data:`sys.stdout` for writable :class:`FileType` objects::"
 msgstr ""
 
-#: ../../library/argparse.rst:1983
+#: ../../library/argparse.rst:1771
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('infile', type=argparse.FileType('r'))\n"
@@ -3319,15 +2863,15 @@ msgid ""
 "Namespace(infile=<_io.TextIOWrapper name='<stdin>' encoding='UTF-8'>)"
 msgstr ""
 
-#: ../../library/argparse.rst:1988
+#: ../../library/argparse.rst:1776
 msgid "Added the *encodings* and *errors* parameters."
 msgstr ""
 
-#: ../../library/argparse.rst:1993
+#: ../../library/argparse.rst:1781
 msgid "Argument groups"
 msgstr "Групи аргументів"
 
-#: ../../library/argparse.rst:1997
+#: ../../library/argparse.rst:1785
 msgid ""
 "By default, :class:`ArgumentParser` groups command-line arguments into "
 "\"positional arguments\" and \"options\" when displaying help messages. When"
@@ -3336,7 +2880,7 @@ msgid ""
 "method::"
 msgstr ""
 
-#: ../../library/argparse.rst:2003
+#: ../../library/argparse.rst:1791
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', add_help=False)\n"
 ">>> group = parser.add_argument_group('group')\n"
@@ -3350,7 +2894,7 @@ msgid ""
 "  --foo FOO  foo help"
 msgstr ""
 
-#: ../../library/argparse.rst:2014
+#: ../../library/argparse.rst:1802
 msgid ""
 "The :meth:`add_argument_group` method returns an argument group object which"
 " has an :meth:`~ArgumentParser.add_argument` method just like a regular "
@@ -3368,7 +2912,7 @@ msgstr ""
 "аргументи *title* і *description*, які можна використовувати для "
 "налаштування цього відображення:"
 
-#: ../../library/argparse.rst:2022
+#: ../../library/argparse.rst:1810
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG', add_help=False)\n"
 ">>> group1 = parser.add_argument_group('group1', 'group1 description')\n"
@@ -3389,7 +2933,7 @@ msgid ""
 "  --bar BAR  bar help"
 msgstr ""
 
-#: ../../library/argparse.rst:2040
+#: ../../library/argparse.rst:1828
 msgid ""
 "Note that any arguments not in your user-defined groups will end up back in "
 "the usual \"positional arguments\" and \"optional arguments\" sections."
@@ -3398,7 +2942,7 @@ msgstr ""
 "користувачем груп, повертаються до звичайних розділів \"позиційні "
 "аргументи\" та \"необов’язкові аргументи\"."
 
-#: ../../library/argparse.rst:2043
+#: ../../library/argparse.rst:1831
 msgid ""
 "Calling :meth:`add_argument_group` on an argument group is deprecated. This "
 "feature was never supported and does not always work correctly. The function"
@@ -3406,11 +2950,11 @@ msgid ""
 "the future."
 msgstr ""
 
-#: ../../library/argparse.rst:2051
+#: ../../library/argparse.rst:1839
 msgid "Mutual exclusion"
 msgstr "Взаємне виключення"
 
-#: ../../library/argparse.rst:2055
+#: ../../library/argparse.rst:1843
 msgid ""
 "Create a mutually exclusive group. :mod:`argparse` will make sure that only "
 "one of the arguments in the mutually exclusive group was present on the "
@@ -3419,7 +2963,7 @@ msgstr ""
 "Створіть взаємовиключну групу. :mod:`argparse` переконається, що лише один "
 "із аргументів у взаємовиключній групі присутній у командному рядку::"
 
-#: ../../library/argparse.rst:2059
+#: ../../library/argparse.rst:1847
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> group = parser.add_mutually_exclusive_group()\n"
@@ -3434,7 +2978,7 @@ msgid ""
 "PROG: error: argument --bar: not allowed with argument --foo"
 msgstr ""
 
-#: ../../library/argparse.rst:2071
+#: ../../library/argparse.rst:1859
 msgid ""
 "The :meth:`add_mutually_exclusive_group` method also accepts a *required* "
 "argument, to indicate that at least one of the mutually exclusive arguments "
@@ -3444,7 +2988,7 @@ msgstr ""
 "аргумент, щоб вказати, що потрібен принаймні один із взаємовиключних "
 "аргументів:"
 
-#: ../../library/argparse.rst:2075
+#: ../../library/argparse.rst:1863
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> group = parser.add_mutually_exclusive_group(required=True)\n"
@@ -3455,7 +2999,7 @@ msgid ""
 "PROG: error: one of the arguments --foo --bar is required"
 msgstr ""
 
-#: ../../library/argparse.rst:2083
+#: ../../library/argparse.rst:1871
 msgid ""
 "Note that currently mutually exclusive argument groups do not support the "
 "*title* and *description* arguments of "
@@ -3464,7 +3008,7 @@ msgid ""
 "For example::"
 msgstr ""
 
-#: ../../library/argparse.rst:2089
+#: ../../library/argparse.rst:1877
 msgid ""
 ">>> parser = argparse.ArgumentParser(prog='PROG')\n"
 ">>> group = parser.add_argument_group('Group title', 'Group description')\n"
@@ -3484,7 +3028,7 @@ msgid ""
 "  --bar BAR   bar help"
 msgstr ""
 
-#: ../../library/argparse.rst:2106
+#: ../../library/argparse.rst:1894
 msgid ""
 "Calling :meth:`add_argument_group` or :meth:`add_mutually_exclusive_group` "
 "on a mutually exclusive group is deprecated. These features were never "
@@ -3492,11 +3036,11 @@ msgid ""
 "by accident through inheritance and will be removed in the future."
 msgstr ""
 
-#: ../../library/argparse.rst:2114
+#: ../../library/argparse.rst:1902
 msgid "Parser defaults"
 msgstr "Параметри аналізатора за замовчуванням"
 
-#: ../../library/argparse.rst:2118
+#: ../../library/argparse.rst:1906
 msgid ""
 "Most of the time, the attributes of the object returned by "
 ":meth:`parse_args` will be fully determined by inspecting the command-line "
@@ -3509,7 +3053,7 @@ msgstr ""
 "дій аргументів. :meth:`set_defaults` дозволяє додавати деякі додаткові "
 "атрибути, які визначаються без перевірки командного рядка:"
 
-#: ../../library/argparse.rst:2124
+#: ../../library/argparse.rst:1912
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('foo', type=int)\n"
@@ -3518,14 +3062,14 @@ msgid ""
 "Namespace(bar=42, baz='badger', foo=736)"
 msgstr ""
 
-#: ../../library/argparse.rst:2130
+#: ../../library/argparse.rst:1918
 msgid ""
 "Note that parser-level defaults always override argument-level defaults::"
 msgstr ""
 "Зверніть увагу, що значення за замовчуванням на рівні аналізатора завжди "
 "перекривають значення за замовчуванням на рівні аргументів::"
 
-#: ../../library/argparse.rst:2132
+#: ../../library/argparse.rst:1920
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', default='bar')\n"
@@ -3534,7 +3078,7 @@ msgid ""
 "Namespace(foo='spam')"
 msgstr ""
 
-#: ../../library/argparse.rst:2138
+#: ../../library/argparse.rst:1926
 msgid ""
 "Parser-level defaults can be particularly useful when working with multiple "
 "parsers.  See the :meth:`~ArgumentParser.add_subparsers` method for an "
@@ -3544,7 +3088,7 @@ msgstr ""
 "під час роботи з декількома парсерами. Перегляньте метод "
 ":meth:`~ArgumentParser.add_subparsers` для прикладу цього типу."
 
-#: ../../library/argparse.rst:2144
+#: ../../library/argparse.rst:1932
 msgid ""
 "Get the default value for a namespace attribute, as set by either "
 ":meth:`~ArgumentParser.add_argument` or by "
@@ -3554,7 +3098,7 @@ msgstr ""
 "або :meth:`~ArgumentParser.add_argument`, або "
 ":meth:`~ArgumentParser.set_defaults`::"
 
-#: ../../library/argparse.rst:2148
+#: ../../library/argparse.rst:1936
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', default='badger')\n"
@@ -3562,11 +3106,11 @@ msgid ""
 "'badger'"
 msgstr ""
 
-#: ../../library/argparse.rst:2155
+#: ../../library/argparse.rst:1943
 msgid "Printing help"
 msgstr "Друк довідки"
 
-#: ../../library/argparse.rst:2157
+#: ../../library/argparse.rst:1945
 msgid ""
 "In most typical applications, :meth:`~ArgumentParser.parse_args` will take "
 "care of formatting and printing any usage or error messages.  However, "
@@ -3576,7 +3120,7 @@ msgstr ""
 "форматування та друк будь-яких повідомлень про використання чи помилки. "
 "Однак доступно кілька методів форматування:"
 
-#: ../../library/argparse.rst:2163
+#: ../../library/argparse.rst:1951
 msgid ""
 "Print a brief description of how the :class:`ArgumentParser` should be "
 "invoked on the command line.  If *file* is ``None``, :data:`sys.stdout` is "
@@ -3586,7 +3130,7 @@ msgstr ""
 "командному рядку. Якщо *file* має значення ``None``, передбачається "
 ":data:`sys.stdout`."
 
-#: ../../library/argparse.rst:2169
+#: ../../library/argparse.rst:1957
 msgid ""
 "Print a help message, including the program usage and information about the "
 "arguments registered with the :class:`ArgumentParser`.  If *file* is "
@@ -3596,7 +3140,7 @@ msgstr ""
 "інформацією про аргументи, зареєстровані в :class:`ArgumentParser`. Якщо "
 "*file* має значення ``None``, передбачається :data:`sys.stdout`."
 
-#: ../../library/argparse.rst:2173
+#: ../../library/argparse.rst:1961
 msgid ""
 "There are also variants of these methods that simply return a string instead"
 " of printing it:"
@@ -3604,7 +3148,7 @@ msgstr ""
 "Існують також варіанти цих методів, які просто повертають рядок замість "
 "того, щоб друкувати його:"
 
-#: ../../library/argparse.rst:2178
+#: ../../library/argparse.rst:1966
 msgid ""
 "Return a string containing a brief description of how the "
 ":class:`ArgumentParser` should be invoked on the command line."
@@ -3612,7 +3156,7 @@ msgstr ""
 "Повертає рядок, що містить короткий опис того, як :class:`ArgumentParser` "
 "слід викликати в командному рядку."
 
-#: ../../library/argparse.rst:2183
+#: ../../library/argparse.rst:1971
 msgid ""
 "Return a string containing a help message, including the program usage and "
 "information about the arguments registered with the :class:`ArgumentParser`."
@@ -3621,11 +3165,11 @@ msgstr ""
 "програми та інформацію про аргументи, зареєстровані в "
 ":class:`ArgumentParser`."
 
-#: ../../library/argparse.rst:2188
+#: ../../library/argparse.rst:1976
 msgid "Partial parsing"
 msgstr "Частковий розбір"
 
-#: ../../library/argparse.rst:2192
+#: ../../library/argparse.rst:1980
 msgid ""
 "Sometimes a script may only parse a few of the command-line arguments, "
 "passing the remaining arguments on to another script or program. In these "
@@ -3643,7 +3187,7 @@ msgstr ""
 "повертає кортеж із двома елементами, що містить заповнений простір імен і "
 "список решти рядків аргументів."
 
-#: ../../library/argparse.rst:2201
+#: ../../library/argparse.rst:1989
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo', action='store_true')\n"
@@ -3652,7 +3196,7 @@ msgid ""
 "(Namespace(bar='BAR', foo=True), ['--badger', 'spam'])"
 msgstr ""
 
-#: ../../library/argparse.rst:2208
+#: ../../library/argparse.rst:1996
 msgid ""
 ":ref:`Prefix matching <prefix-matching>` rules apply to "
 ":meth:`~ArgumentParser.parse_known_args`. The parser may consume an option "
@@ -3660,11 +3204,11 @@ msgid ""
 "it in the remaining arguments list."
 msgstr ""
 
-#: ../../library/argparse.rst:2215
+#: ../../library/argparse.rst:2003
 msgid "Customizing file parsing"
 msgstr "Налаштування аналізу файлів"
 
-#: ../../library/argparse.rst:2219
+#: ../../library/argparse.rst:2007
 msgid ""
 "Arguments that are read from a file (see the *fromfile_prefix_chars* keyword"
 " argument to the :class:`ArgumentParser` constructor) are read one argument "
@@ -3676,7 +3220,7 @@ msgstr ""
 " одному аргументу на рядок. :meth:`convert_arg_line_to_args` можна замінити "
 "для кращого читання."
 
-#: ../../library/argparse.rst:2224
+#: ../../library/argparse.rst:2012
 msgid ""
 "This method takes a single argument *arg_line* which is a string read from "
 "the argument file.  It returns a list of arguments parsed from this string. "
@@ -3687,7 +3231,7 @@ msgstr ""
 " Метод викликається один раз на рядок, який читається з файлу аргументів, по"
 " порядку."
 
-#: ../../library/argparse.rst:2228
+#: ../../library/argparse.rst:2016
 msgid ""
 "A useful override of this method is one that treats each space-separated "
 "word as an argument.  The following example demonstrates how to do this::"
@@ -3695,25 +3239,25 @@ msgstr ""
 "Корисною заміною цього методу є те, що розглядає кожне розділене пробілом "
 "слово як аргумент. Наступний приклад демонструє, як це зробити:"
 
-#: ../../library/argparse.rst:2231
+#: ../../library/argparse.rst:2019
 msgid ""
 "class MyArgumentParser(argparse.ArgumentParser):\n"
 "    def convert_arg_line_to_args(self, arg_line):\n"
 "        return arg_line.split()"
 msgstr ""
 
-#: ../../library/argparse.rst:2237
+#: ../../library/argparse.rst:2025
 msgid "Exiting methods"
 msgstr "Методи виходу"
 
-#: ../../library/argparse.rst:2241
+#: ../../library/argparse.rst:2029
 msgid ""
 "This method terminates the program, exiting with the specified *status* and,"
 " if given, it prints a *message* to :data:`sys.stderr` before that. The user"
 " can override this method to handle these steps differently::"
 msgstr ""
 
-#: ../../library/argparse.rst:2245
+#: ../../library/argparse.rst:2033
 msgid ""
 "class ErrorCatchingArgumentParser(argparse.ArgumentParser):\n"
 "    def exit(self, status=0, message=None):\n"
@@ -3722,17 +3266,17 @@ msgid ""
 "        exit(status)"
 msgstr ""
 
-#: ../../library/argparse.rst:2253
+#: ../../library/argparse.rst:2041
 msgid ""
 "This method prints a usage message, including the *message*, to "
 ":data:`sys.stderr` and terminates the program with a status code of 2."
 msgstr ""
 
-#: ../../library/argparse.rst:2258
+#: ../../library/argparse.rst:2046
 msgid "Intermixed parsing"
 msgstr "Змішаний розбір"
 
-#: ../../library/argparse.rst:2263
+#: ../../library/argparse.rst:2051
 msgid ""
 "A number of Unix commands allow the user to intermix optional arguments with"
 " positional arguments.  The :meth:`~ArgumentParser.parse_intermixed_args` "
@@ -3744,7 +3288,7 @@ msgstr ""
 ":meth:`~ArgumentParser.parse_known_intermixed_args` підтримують цей стиль "
 "аналізу."
 
-#: ../../library/argparse.rst:2268
+#: ../../library/argparse.rst:2056
 msgid ""
 "These parsers do not support all the argparse features, and will raise "
 "exceptions if unsupported features are used.  In particular, subparsers, and"
@@ -3752,7 +3296,7 @@ msgid ""
 "not supported."
 msgstr ""
 
-#: ../../library/argparse.rst:2273
+#: ../../library/argparse.rst:2061
 msgid ""
 "The following example shows the difference between "
 ":meth:`~ArgumentParser.parse_known_args` and "
@@ -3766,7 +3310,7 @@ msgstr ""
 "'3']`` як нерозібрані аргументи, а другий збирає всі позиційні елементи в "
 "``rest``. ::"
 
-#: ../../library/argparse.rst:2279
+#: ../../library/argparse.rst:2067
 msgid ""
 ">>> parser = argparse.ArgumentParser()\n"
 ">>> parser.add_argument('--foo')\n"
@@ -3778,7 +3322,7 @@ msgid ""
 "Namespace(cmd='doit', foo='bar', rest=[1, 2, 3])"
 msgstr ""
 
-#: ../../library/argparse.rst:2288
+#: ../../library/argparse.rst:2076
 msgid ""
 ":meth:`~ArgumentParser.parse_known_intermixed_args` returns a two item tuple"
 " containing the populated namespace and the list of remaining argument "
@@ -3790,174 +3334,42 @@ msgstr ""
 "аргументів. :meth:`~ArgumentParser.parse_intermixed_args` викликає помилку, "
 "якщо залишилися нерозібрані рядки аргументів."
 
-#: ../../library/argparse.rst:2298
-msgid "Upgrading optparse code"
-msgstr "Оновлення коду optparse"
-
-#: ../../library/argparse.rst:2300
-msgid ""
-"Originally, the :mod:`argparse` module had attempted to maintain "
-"compatibility with :mod:`optparse`.  However, :mod:`optparse` was difficult "
-"to extend transparently, particularly with the changes required to support "
-"the new ``nargs=`` specifiers and better usage messages.  When most "
-"everything in :mod:`optparse` had either been copy-pasted over or monkey-"
-"patched, it no longer seemed practical to try to maintain the backwards "
-"compatibility."
-msgstr ""
-"Спочатку модуль :mod:`argparse` намагався підтримувати сумісність із "
-":mod:`optparse`. Однак :mod:`optparse` було важко розширити прозоро, "
-"особливо зі змінами, необхідними для підтримки нових специфікаторів "
-"``nargs=`` і кращих повідомлень про використання. Коли майже все в "
-":mod:`optparse` було або скопійовано, або виправлено мавпами, більше не "
-"здавалося практичним намагатися підтримувати зворотну сумісність."
-
-#: ../../library/argparse.rst:2307
-msgid ""
-"The :mod:`argparse` module improves on the standard library :mod:`optparse` "
-"module in a number of ways including:"
-msgstr ""
-"Модуль :mod:`argparse` покращує модуль стандартної бібліотеки "
-":mod:`optparse` кількома способами, зокрема:"
-
-#: ../../library/argparse.rst:2310
-msgid "Handling positional arguments."
-msgstr "Обробка позиційних аргументів."
-
-#: ../../library/argparse.rst:2311
-msgid "Supporting sub-commands."
-msgstr "Допоміжні підкоманди."
-
-#: ../../library/argparse.rst:2312
-msgid "Allowing alternative option prefixes like ``+`` and ``/``."
-msgstr "Дозволяє альтернативні префікси параметрів, наприклад ``+`` і ``/``."
-
-#: ../../library/argparse.rst:2313
-msgid "Handling zero-or-more and one-or-more style arguments."
-msgstr "Обробка нуля або більше та одного або кількох аргументів стилю."
-
-#: ../../library/argparse.rst:2314
-msgid "Producing more informative usage messages."
-msgstr "Створення більш інформативних повідомлень про використання."
-
-#: ../../library/argparse.rst:2315
-msgid "Providing a much simpler interface for custom ``type`` and ``action``."
-msgstr ""
-"Забезпечення набагато простішого інтерфейсу для користувацького ``типу`` і "
-"``дії``."
-
-#: ../../library/argparse.rst:2317
-msgid "A partial upgrade path from :mod:`optparse` to :mod:`argparse`:"
-msgstr "Шлях часткового оновлення з :mod:`optparse` до :mod:`argparse`:"
-
-#: ../../library/argparse.rst:2319
-msgid ""
-"Replace all :meth:`optparse.OptionParser.add_option` calls with "
-":meth:`ArgumentParser.add_argument` calls."
-msgstr ""
-"Замініть усі виклики :meth:`optparse.OptionParser.add_option` на виклики "
-":meth:`ArgumentParser.add_argument`."
-
-#: ../../library/argparse.rst:2322
-msgid ""
-"Replace ``(options, args) = parser.parse_args()`` with ``args = "
-"parser.parse_args()`` and add additional :meth:`ArgumentParser.add_argument`"
-" calls for the positional arguments. Keep in mind that what was previously "
-"called ``options``, now in the :mod:`argparse` context is called ``args``."
-msgstr ""
-"Замініть ``(options, args) = parser.parse_args()`` на ``args = "
-"parser.parse_args()`` і додайте додаткові виклики "
-":meth:`ArgumentParser.add_argument` для позиційних аргументів. Майте на "
-"увазі, що те, що раніше називалося ``options``, тепер у контексті "
-":mod:`argparse` називається ``args``."
-
-#: ../../library/argparse.rst:2327
-msgid ""
-"Replace :meth:`optparse.OptionParser.disable_interspersed_args` by using "
-":meth:`~ArgumentParser.parse_intermixed_args` instead of "
-":meth:`~ArgumentParser.parse_args`."
-msgstr ""
-"Замініть :meth:`optparse.OptionParser.disable_interspersed_args` на "
-"використання :meth:`~ArgumentParser.parse_intermixed_args` замість "
-":meth:`~ArgumentParser.parse_args`."
-
-#: ../../library/argparse.rst:2331
-msgid ""
-"Replace callback actions and the ``callback_*`` keyword arguments with "
-"``type`` or ``action`` arguments."
-msgstr ""
-"Замініть дії зворотного виклику та аргументи ключового слова ``callback_*`` "
-"на аргументи ``type`` або ``action``."
-
-#: ../../library/argparse.rst:2334
-msgid ""
-"Replace string names for ``type`` keyword arguments with the corresponding "
-"type objects (e.g. int, float, complex, etc)."
-msgstr ""
-"Замініть назви рядків для ключових аргументів ``type`` відповідними "
-"об’єктами типу (наприклад, int, float, complex тощо)."
-
-#: ../../library/argparse.rst:2337
-msgid ""
-"Replace :class:`optparse.Values` with :class:`Namespace` and "
-":exc:`optparse.OptionError` and :exc:`optparse.OptionValueError` with "
-":exc:`ArgumentError`."
-msgstr ""
-"Замініть :class:`optparse.Values` на :class:`Namespace` і "
-":exc:`optparse.OptionError` і :exc:`optparse.OptionValueError` на "
-":exc:`ArgumentError`."
-
-#: ../../library/argparse.rst:2341
-msgid ""
-"Replace strings with implicit arguments such as ``%default`` or ``%prog`` "
-"with the standard Python syntax to use dictionaries to format strings, that "
-"is, ``%(default)s`` and ``%(prog)s``."
-msgstr ""
-"Замініть рядки неявними аргументами, такими як ``%default`` або ``%prog`` "
-"стандартним синтаксисом Python, щоб використовувати словники для "
-"форматування рядків, тобто ``%(default)s`` і ``%(prog)s``."
-
-#: ../../library/argparse.rst:2345
-msgid ""
-"Replace the OptionParser constructor ``version`` argument with a call to "
-"``parser.add_argument('--version', action='version', version='<the "
-"version>')``."
-msgstr ""
-"Замініть аргумент ``version`` конструктора OptionParser на виклик "
-"``parser.add_argument('--version', action='version', version=' <the version>"
-" ')``."
-
-#: ../../library/argparse.rst:2349
+#: ../../library/argparse.rst:2085
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../library/argparse.rst:2353
+#: ../../library/argparse.rst:2089
 msgid "An error from creating or using an argument (optional or positional)."
 msgstr ""
 
-#: ../../library/argparse.rst:2355
+#: ../../library/argparse.rst:2091
 msgid ""
 "The string value of this exception is the message, augmented with "
 "information about the argument that caused it."
 msgstr ""
 
-#: ../../library/argparse.rst:2360
+#: ../../library/argparse.rst:2096
 msgid ""
 "Raised when something goes wrong converting a command line string to a type."
 msgstr ""
 
-#: ../../library/argparse.rst:983
+#: ../../library/argparse.rst:2100
+msgid "Guides and Tutorials"
+msgstr "Посібники та підручники"
+
+#: ../../library/argparse.rst:793
 msgid "? (question mark)"
 msgstr ""
 
-#: ../../library/argparse.rst:983 ../../library/argparse.rst:1017
-#: ../../library/argparse.rst:1031
+#: ../../library/argparse.rst:793 ../../library/argparse.rst:827
+#: ../../library/argparse.rst:841
 msgid "in argparse module"
 msgstr ""
 
-#: ../../library/argparse.rst:1017
+#: ../../library/argparse.rst:827
 msgid "* (asterisk)"
 msgstr ""
 
-#: ../../library/argparse.rst:1031
+#: ../../library/argparse.rst:841
 msgid "+ (plus)"
 msgstr ""
