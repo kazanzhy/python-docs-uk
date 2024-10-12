@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:16+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -324,10 +324,8 @@ msgstr ""
 #: ../../library/types.rst:201
 msgid ""
 "The type for cell objects: such objects are used as containers for a "
-"function's free variables."
+"function's :term:`closure variables <closure variable>`."
 msgstr ""
-"Тип для об’єктів комірки: такі об’єкти використовуються як контейнери для "
-"вільних змінних функції."
 
 #: ../../library/types.rst:209
 msgid "The type of methods of user-defined class instances."
@@ -383,97 +381,34 @@ msgstr ""
 "Тип :term:`modules <module>`. Конструктор приймає назву модуля, який буде "
 "створено, і, за бажанням, його :term:`docstring`."
 
-#: ../../library/types.rst:264
-msgid ""
-"Use :func:`importlib.util.module_from_spec` to create a new module if you "
-"wish to set the various import-controlled attributes."
+#: ../../library/types.rst:265
+msgid ":ref:`Documentation on module objects <module-objects>`"
 msgstr ""
-"Використовуйте :func:`importlib.util.module_from_spec`, щоб створити новий "
-"модуль, якщо ви бажаєте встановити різні атрибути, керовані імпортом."
+
+#: ../../library/types.rst:266
+msgid ""
+"Provides details on the special attributes that can be found on instances of"
+" :class:`!ModuleType`."
+msgstr ""
 
 #: ../../library/types.rst:269
-msgid "The :term:`docstring` of the module. Defaults to ``None``."
-msgstr ":term:`docstring` модуля. За замовчуванням ``None``."
-
-#: ../../library/types.rst:273
-msgid "The :term:`loader` which loaded the module. Defaults to ``None``."
-msgstr ":term:`loader`, який завантажив модуль. За замовчуванням ``None``."
-
-#: ../../library/types.rst:275
-msgid ""
-"This attribute is to match :attr:`importlib.machinery.ModuleSpec.loader` as "
-"stored in the :attr:`__spec__` object."
+msgid ":func:`importlib.util.module_from_spec`"
 msgstr ""
 
-#: ../../library/types.rst:279
+#: ../../library/types.rst:270
 msgid ""
-"A future version of Python may stop setting this attribute by default. To "
-"guard against this potential change, preferably read from the "
-":attr:`__spec__` attribute instead or use ``getattr(module, \"__loader__\", "
-"None)`` if you explicitly need to use this attribute."
-msgstr ""
-"Майбутня версія Python може припинити встановлення цього атрибута за "
-"замовчуванням. Щоб захиститися від цієї потенційної зміни, бажано читати з "
-"атрибута :attr:`__spec__` або використовувати ``getattr(module, "
-"\"__loader__\", None)``, якщо вам явно потрібно використовувати цей атрибут."
-
-#: ../../library/types.rst:285 ../../library/types.rst:310
-msgid "Defaults to ``None``. Previously the attribute was optional."
-msgstr "За замовчуванням ``None``. Раніше атрибут був необов’язковим."
-
-#: ../../library/types.rst:290
-msgid ""
-"The name of the module. Expected to match "
-":attr:`importlib.machinery.ModuleSpec.name`."
-msgstr ""
-"Назва модуля. Очікується відповідність "
-":attr:`importlib.machinery.ModuleSpec.name`."
-
-#: ../../library/types.rst:295
-msgid ""
-"Which :term:`package` a module belongs to. If the module is top-level (i.e. "
-"not a part of any specific package) then the attribute should be set to "
-"``''``, else it should be set to the name of the package (which can be "
-":attr:`__name__` if the module is a package itself). Defaults to ``None``."
-msgstr ""
-"До якого :term:`package` належить модуль. Якщо модуль верхнього рівня (тобто"
-" не є частиною будь-якого конкретного пакета), тоді для атрибута має бути "
-"встановлено значення ``''``, інакше для нього має бути встановлено назву "
-"пакета (яке може бути :attr:`__name__`, якщо модуль сам є пакетом). За "
-"замовчуванням ``None``."
-
-#: ../../library/types.rst:300
-msgid ""
-"This attribute is to match :attr:`importlib.machinery.ModuleSpec.parent` as "
-"stored in the :attr:`__spec__` object."
+"Modules created using the :class:`!ModuleType` constructor are created with "
+"many of their special attributes unset or set to default values. "
+":func:`!module_from_spec` provides a more robust way of creating "
+":class:`!ModuleType` instances which ensures the various attributes are set "
+"appropriately."
 msgstr ""
 
-#: ../../library/types.rst:304
-msgid ""
-"A future version of Python may stop setting this attribute by default. To "
-"guard against this potential change, preferably read from the "
-":attr:`__spec__` attribute instead or use ``getattr(module, \"__package__\","
-" None)`` if you explicitly need to use this attribute."
-msgstr ""
-"Майбутня версія Python може припинити встановлення цього атрибута за "
-"замовчуванням. Щоб захиститися від цієї потенційної зміни, бажано читати з "
-"атрибута :attr:`__spec__` або використовувати ``getattr(module, "
-"\"__package__\", None)``, якщо вам явно потрібно використовувати цей "
-"атрибут."
-
-#: ../../library/types.rst:315
-msgid ""
-"A record of the module's import-system-related state. Expected to be an "
-"instance of :class:`importlib.machinery.ModuleSpec`."
-msgstr ""
-"Запис стану модуля, пов’язаного з системою імпорту. Очікується, що це буде "
-"екземпляр :class:`importlib.machinery.ModuleSpec`."
-
-#: ../../library/types.rst:323
+#: ../../library/types.rst:278
 msgid "The type of :data:`Ellipsis`."
 msgstr "Тип :data:`Ellipsis`."
 
-#: ../../library/types.rst:329
+#: ../../library/types.rst:284
 msgid ""
 "The type of :ref:`parameterized generics <types-genericalias>` such as "
 "``list[int]``."
@@ -481,7 +416,7 @@ msgstr ""
 "Тип :ref:`параметризованих генериків <types-genericalias>`, наприклад "
 "``list[int]``."
 
-#: ../../library/types.rst:332
+#: ../../library/types.rst:287
 msgid ""
 "``t_origin`` should be a non-parameterized generic class, such as ``list``, "
 "``tuple`` or ``dict``.  ``t_args`` should be a :class:`tuple` (possibly of "
@@ -491,7 +426,7 @@ msgstr ""
 "``list``, ``tuple`` або ``dict``. ``t_args`` має бути :class:`tuple` "
 "(можливо, довжиною 1) типів, які параметризують ``t_origin``::"
 
-#: ../../library/types.rst:336
+#: ../../library/types.rst:291
 msgid ""
 ">>> from types import GenericAlias\n"
 "\n"
@@ -501,37 +436,37 @@ msgid ""
 "True"
 msgstr ""
 
-#: ../../library/types.rst:345
+#: ../../library/types.rst:300
 msgid "This type can now be subclassed."
 msgstr "Цей тип тепер може бути підкласом."
 
-#: ../../library/types.rst:350
+#: ../../library/types.rst:305
 msgid ":ref:`Generic Alias Types<types-genericalias>`"
 msgstr ":ref:`Загальні типи псевдонімів <types-genericalias>`"
 
-#: ../../library/types.rst:351
+#: ../../library/types.rst:306
 msgid "In-depth documentation on instances of :class:`!types.GenericAlias`"
 msgstr ""
 
-#: ../../library/types.rst:353
+#: ../../library/types.rst:308
 msgid ":pep:`585` - Type Hinting Generics In Standard Collections"
 msgstr ":pep:`585` - Універсальні підказки типів у стандартних колекціях"
 
-#: ../../library/types.rst:354
+#: ../../library/types.rst:309
 msgid "Introducing the :class:`!types.GenericAlias` class"
 msgstr ""
 
-#: ../../library/types.rst:358
+#: ../../library/types.rst:313
 msgid "The type of :ref:`union type expressions<types-union>`."
 msgstr "Тип :ref:`виразів типу union <types-union>`."
 
-#: ../../library/types.rst:364
+#: ../../library/types.rst:319
 msgid ""
 "The type of traceback objects such as found in "
 "``sys.exception().__traceback__``."
 msgstr ""
 
-#: ../../library/types.rst:366
+#: ../../library/types.rst:321
 msgid ""
 "See :ref:`the language reference <traceback-objects>` for details of the "
 "available attributes and operations, and guidance on creating tracebacks "
@@ -541,13 +476,13 @@ msgstr ""
 "інформацію про доступні атрибути та операції, а також вказівки щодо "
 "динамічного створення трасування."
 
-#: ../../library/types.rst:373
+#: ../../library/types.rst:328
 msgid ""
 "The type of :ref:`frame objects <frame-objects>` such as found in "
 ":attr:`tb.tb_frame <traceback.tb_frame>` if ``tb`` is a traceback object."
 msgstr ""
 
-#: ../../library/types.rst:379
+#: ../../library/types.rst:334
 msgid ""
 "The type of objects defined in extension modules with ``PyGetSetDef``, such "
 "as :attr:`FrameType.f_locals <frame.f_locals>` or ``array.array.typecode``. "
@@ -556,7 +491,7 @@ msgid ""
 "modules."
 msgstr ""
 
-#: ../../library/types.rst:388
+#: ../../library/types.rst:343
 msgid ""
 "The type of objects defined in extension modules with ``PyMemberDef``, such "
 "as ``datetime.timedelta.days``.  This type is used as descriptor for simple "
@@ -570,7 +505,7 @@ msgstr ""
 "функції перетворення; він має те саме призначення, що й тип "
 ":class:`property`, але для класів, визначених у модулях розширення."
 
-#: ../../library/types.rst:393
+#: ../../library/types.rst:348
 msgid ""
 "In addition, when a class is defined with a :attr:`~object.__slots__` "
 "attribute, then for each slot, an instance of :class:`!MemberDescriptorType`"
@@ -578,7 +513,7 @@ msgid ""
 "in the class's :attr:`~type.__dict__`."
 msgstr ""
 
-#: ../../library/types.rst:399
+#: ../../library/types.rst:354
 msgid ""
 "In other implementations of Python, this type may be identical to "
 "``GetSetDescriptorType``."
@@ -586,7 +521,7 @@ msgstr ""
 "В інших реалізаціях Python цей тип може бути ідентичним "
 "``GetSetDescriptorType``."
 
-#: ../../library/types.rst:404
+#: ../../library/types.rst:359
 msgid ""
 "Read-only proxy of a mapping. It provides a dynamic view on the mapping's "
 "entries, which means that when the mapping changes, the view reflects these "
@@ -596,7 +531,7 @@ msgstr ""
 "записів відображення, що означає, що коли відображення змінюється, подання "
 "відображає ці зміни."
 
-#: ../../library/types.rst:412
+#: ../../library/types.rst:367
 msgid ""
 "Updated to support the new union (``|``) operator from :pep:`584`, which "
 "simply delegates to the underlying mapping."
@@ -604,13 +539,13 @@ msgstr ""
 "Оновлено для підтримки нового оператора об’єднання (``|``) з :pep:`584`, "
 "який просто делегує базове відображення."
 
-#: ../../library/types.rst:417
+#: ../../library/types.rst:372
 msgid ""
 "Return ``True`` if the underlying mapping has a key *key*, else ``False``."
 msgstr ""
 "Повертає ``True``, якщо базове зіставлення має ключ *key*, інакше ``False``."
 
-#: ../../library/types.rst:422
+#: ../../library/types.rst:377
 msgid ""
 "Return the item of the underlying mapping with key *key*.  Raises a "
 ":exc:`KeyError` if *key* is not in the underlying mapping."
@@ -618,7 +553,7 @@ msgstr ""
 "Поверніть елемент основного відображення за допомогою ключа *key*. Викликає "
 ":exc:`KeyError`, якщо *key* не в базовому відображенні."
 
-#: ../../library/types.rst:427
+#: ../../library/types.rst:382
 msgid ""
 "Return an iterator over the keys of the underlying mapping.  This is a "
 "shortcut for ``iter(proxy.keys())``."
@@ -626,15 +561,15 @@ msgstr ""
 "Повертає ітератор над ключами основного відображення. Це ярлик для "
 "``iter(proxy.keys())``."
 
-#: ../../library/types.rst:432
+#: ../../library/types.rst:387
 msgid "Return the number of items in the underlying mapping."
 msgstr "Повертає кількість елементів у базовому відображенні."
 
-#: ../../library/types.rst:436
+#: ../../library/types.rst:391
 msgid "Return a shallow copy of the underlying mapping."
 msgstr "Повернути поверхневу копію основного відображення."
 
-#: ../../library/types.rst:440
+#: ../../library/types.rst:395
 msgid ""
 "Return the value for *key* if *key* is in the underlying mapping, else "
 "*default*.  If *default* is not given, it defaults to ``None``, so that this"
@@ -644,7 +579,7 @@ msgstr ""
 "*за замовчуванням*. Якщо *default* не вказано, за замовчуванням буде "
 "``None``, тому цей метод ніколи не викликає :exc:`KeyError`."
 
-#: ../../library/types.rst:446
+#: ../../library/types.rst:401
 msgid ""
 "Return a new view of the underlying mapping's items (``(key, value)`` "
 "pairs)."
@@ -652,31 +587,31 @@ msgstr ""
 "Повертає нове подання базових елементів зіставлення (пар \"(ключ, "
 "значення)\")."
 
-#: ../../library/types.rst:451
+#: ../../library/types.rst:406
 msgid "Return a new view of the underlying mapping's keys."
 msgstr "Повернути нове подання ключів основного зіставлення."
 
-#: ../../library/types.rst:455
+#: ../../library/types.rst:410
 msgid "Return a new view of the underlying mapping's values."
 msgstr "Повернути нове подання значень основного зіставлення."
 
-#: ../../library/types.rst:459
+#: ../../library/types.rst:414
 msgid "Return a reverse iterator over the keys of the underlying mapping."
 msgstr "Повертає зворотний ітератор над ключами основного відображення."
 
-#: ../../library/types.rst:465
+#: ../../library/types.rst:420
 msgid "Return a hash of the underlying mapping."
 msgstr ""
 
-#: ../../library/types.rst:471
+#: ../../library/types.rst:426
 msgid "The type of :ref:`capsule objects <capsules>`."
 msgstr ""
 
-#: ../../library/types.rst:477
+#: ../../library/types.rst:432
 msgid "Additional Utility Classes and Functions"
 msgstr "Додаткові корисні класи та функції"
 
-#: ../../library/types.rst:481
+#: ../../library/types.rst:436
 msgid ""
 "A simple :class:`object` subclass that provides attribute access to its "
 "namespace, as well as a meaningful repr."
@@ -684,13 +619,13 @@ msgstr ""
 "Простий підклас :class:`object`, який забезпечує доступ атрибутів до свого "
 "простору імен, а також значуще відображення."
 
-#: ../../library/types.rst:484
+#: ../../library/types.rst:439
 msgid ""
 "Unlike :class:`object`, with :class:`!SimpleNamespace` you can add and "
 "remove attributes."
 msgstr ""
 
-#: ../../library/types.rst:487
+#: ../../library/types.rst:442
 msgid ""
 ":py:class:`SimpleNamespace` objects may be initialized in the same way as "
 ":class:`dict`: either with keyword arguments, with a single positional "
@@ -702,11 +637,11 @@ msgid ""
 "strings."
 msgstr ""
 
-#: ../../library/types.rst:498
+#: ../../library/types.rst:453
 msgid "The type is roughly equivalent to the following code::"
 msgstr "Тип приблизно еквівалентний такому коду::"
 
-#: ../../library/types.rst:500
+#: ../../library/types.rst:455
 msgid ""
 "class SimpleNamespace:\n"
 "    def __init__(self, mapping_or_iterable=(), /, **kwargs):\n"
@@ -723,7 +658,7 @@ msgid ""
 "        return NotImplemented"
 msgstr ""
 
-#: ../../library/types.rst:514
+#: ../../library/types.rst:469
 msgid ""
 "``SimpleNamespace`` may be useful as a replacement for ``class NS: pass``. "
 "However, for a structured record type use :func:`~collections.namedtuple` "
@@ -733,12 +668,12 @@ msgstr ""
 "для структурованого типу запису замість цього використовуйте "
 ":func:`~collections.namedtuple`."
 
-#: ../../library/types.rst:518
+#: ../../library/types.rst:473
 msgid ""
 ":class:`!SimpleNamespace` objects are supported by :func:`copy.replace`."
 msgstr ""
 
-#: ../../library/types.rst:522
+#: ../../library/types.rst:477
 msgid ""
 "Attribute order in the repr changed from alphabetical to insertion (like "
 "``dict``)."
@@ -746,15 +681,15 @@ msgstr ""
 "Порядок атрибутів у відображенні змінено з алфавітного на вставлення "
 "(наприклад, ``dict``)."
 
-#: ../../library/types.rst:526
+#: ../../library/types.rst:481
 msgid "Added support for an optional positional argument."
 msgstr ""
 
-#: ../../library/types.rst:531
+#: ../../library/types.rst:486
 msgid "Route attribute access on a class to __getattr__."
 msgstr "Направте доступ до атрибутів класу до __getattr__."
 
-#: ../../library/types.rst:533
+#: ../../library/types.rst:488
 msgid ""
 "This is a descriptor, used to define attributes that act differently when "
 "accessed through an instance and through a class.  Instance access remains "
@@ -766,7 +701,7 @@ msgstr ""
 "залишається звичайним, але доступ до атрибута через клас буде направлено до "
 "методу __getattr__ класу; це робиться шляхом виклику AttributeError."
 
-#: ../../library/types.rst:538
+#: ../../library/types.rst:493
 msgid ""
 "This allows one to have properties active on an instance, and have virtual "
 "attributes on the class with the same name (see :class:`enum.Enum` for an "
@@ -775,11 +710,11 @@ msgstr ""
 "Це дозволяє мати активні властивості в екземплярі та мати віртуальні "
 "атрибути в класі з таким же іменем (див. :class:`enum.Enum` для прикладу)."
 
-#: ../../library/types.rst:545
+#: ../../library/types.rst:500
 msgid "Coroutine Utility Functions"
 msgstr "Корисні функції співпрограми"
 
-#: ../../library/types.rst:549
+#: ../../library/types.rst:504
 msgid ""
 "This function transforms a :term:`generator` function into a "
 ":term:`coroutine function` which returns a generator-based coroutine. The "
@@ -789,11 +724,11 @@ msgid ""
 "method."
 msgstr ""
 
-#: ../../library/types.rst:556
+#: ../../library/types.rst:511
 msgid "If *gen_func* is a generator function, it will be modified in-place."
 msgstr "Якщо *gen_func* є функцією генератора, її буде змінено на місці."
 
-#: ../../library/types.rst:558
+#: ../../library/types.rst:513
 msgid ""
 "If *gen_func* is not a generator function, it will be wrapped. If it returns"
 " an instance of :class:`collections.abc.Generator`, the instance will be "
