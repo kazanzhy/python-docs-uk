@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -33,8 +33,13 @@ msgstr ""
 "Цей модуль надає базові механізми для вимірювання та контролю системних "
 "ресурсів, що використовуються програмою."
 
-#: ../../library/resource.rst:16
-msgid ":ref:`Availability <availability>`: Unix, not WASI."
+#: ../../library/resource.rst:16 ../../library/resource.rst:104
+#: ../../library/resource.rst:180 ../../library/resource.rst:192
+#: ../../library/resource.rst:201 ../../library/resource.rst:210
+#: ../../library/resource.rst:220 ../../library/resource.rst:229
+#: ../../library/resource.rst:239 ../../library/resource.rst:252
+#: ../../library/resource.rst:260 ../../library/resource.rst:268
+msgid "Availability"
 msgstr ""
 
 #: ../../library/resource.rst:18
@@ -205,11 +210,6 @@ msgstr ""
 "Викликає :ref:`подію аудиту <auditing>` ``resource.prlimit`` з аргументами "
 "``pid``, ``resource``, ``limits``."
 
-#: ../../library/resource.rst:104
-msgid ""
-":ref:`Availability <availability>`: Linux >= 2.6.36 with glibc >= 2.13."
-msgstr ""
-
 #: ../../library/resource.rst:109
 msgid ""
 "These symbols define resources whose consumption can be controlled using the"
@@ -302,10 +302,6 @@ msgstr "Максимальний адресний простір, який мо�
 msgid "The largest area of mapped memory which the process may occupy."
 msgstr "Найбільша область відображеної пам'яті, яку може зайняти процес."
 
-#: ../../library/resource.rst:180 ../../library/resource.rst:268
-msgid ":ref:`Availability <availability>`: FreeBSD >= 11."
-msgstr ""
-
 #: ../../library/resource.rst:185
 msgid ""
 "The maximum area (in bytes) of address space which may be taken by the "
@@ -317,18 +313,10 @@ msgstr ""
 msgid "The number of bytes that can be allocated for POSIX message queues."
 msgstr "Кількість байтів, які можна виділити для черг повідомлень POSIX."
 
-#: ../../library/resource.rst:192 ../../library/resource.rst:229
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.8."
-msgstr ""
-
 #: ../../library/resource.rst:199
 msgid ""
 "The ceiling for the process's nice level (calculated as 20 - rlim_cur)."
 msgstr "Стеля для хорошого рівня процесу (розраховується як 20 - rlim_cur)."
-
-#: ../../library/resource.rst:201 ../../library/resource.rst:210
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.12."
-msgstr ""
 
 #: ../../library/resource.rst:208
 msgid "The ceiling of the real-time priority."
@@ -343,10 +331,6 @@ msgstr ""
 "витрачати в режимі планування в реальному часі без виконання блокуючого "
 "системного виклику."
 
-#: ../../library/resource.rst:220
-msgid ":ref:`Availability <availability>`: Linux >= 2.6.25."
-msgstr ":ref:`Доступність <availability>`: Linux >= 2.6.25."
-
 #: ../../library/resource.rst:227
 msgid "The number of signals which the process may queue."
 msgstr "Кількість сигналів, які процес може поставити в чергу."
@@ -360,11 +344,6 @@ msgstr ""
 "Максимальний розмір (у байтах) використання буфера сокета для цього "
 "користувача. Це обмежує обсяг мережевої пам’яті, а отже, і кількість mbuf, "
 "які цей користувач може зберігати в будь-який час."
-
-#: ../../library/resource.rst:239 ../../library/resource.rst:252
-#: ../../library/resource.rst:260
-msgid ":ref:`Availability <availability>`: FreeBSD."
-msgstr ""
 
 #: ../../library/resource.rst:245
 msgid ""

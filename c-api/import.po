@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:48+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -189,17 +189,17 @@ msgstr ""
 
 #: ../../c-api/import.rst:139
 msgid ""
-"The module's :attr:`__spec__` and :attr:`__loader__` will be set, if not set"
-" already, with the appropriate values.  The spec's loader will be set to the"
-" module's ``__loader__`` (if set) and to an instance of "
-":class:`~importlib.machinery.SourceFileLoader` otherwise."
+"The module's :attr:`~module.__spec__` and :attr:`~module.__loader__` will be"
+" set, if not set already, with the appropriate values.  The spec's loader "
+"will be set to the module's :attr:`!__loader__` (if set) and to an instance "
+"of :class:`~importlib.machinery.SourceFileLoader` otherwise."
 msgstr ""
 
 #: ../../c-api/import.rst:144
 msgid ""
-"The module's :attr:`__file__` attribute will be set to the code object's "
-":attr:`~codeobject.co_filename`.  If applicable, :attr:`__cached__` will "
-"also be set."
+"The module's :attr:`~module.__file__` attribute will be set to the code "
+"object's :attr:`~codeobject.co_filename`.  If applicable, "
+":attr:`~module.__cached__` will also be set."
 msgstr ""
 
 #: ../../c-api/import.rst:148
@@ -229,17 +229,15 @@ msgstr ""
 
 #: ../../c-api/import.rst:157
 msgid ""
-"The setting of :attr:`__cached__` and :attr:`__loader__` is deprecated. See "
-":class:`~importlib.machinery.ModuleSpec` for alternatives."
+"The setting of :attr:`~module.__cached__` and :attr:`~module.__loader__` is "
+"deprecated. See :class:`~importlib.machinery.ModuleSpec` for alternatives."
 msgstr ""
 
 #: ../../c-api/import.rst:165
 msgid ""
-"Like :c:func:`PyImport_ExecCodeModule`, but the :attr:`__file__` attribute "
-"of the module object is set to *pathname* if it is non-``NULL``."
+"Like :c:func:`PyImport_ExecCodeModule`, but the :attr:`~module.__file__` "
+"attribute of the module object is set to *pathname* if it is non-``NULL``."
 msgstr ""
-"Подібно до :c:func:`PyImport_ExecCodeModule`, але атрибут :attr:`__file__` "
-"об’єкта модуля встановлюється на *pathname*, якщо він не є ``NULL``."
 
 #: ../../c-api/import.rst:168
 msgid "See also :c:func:`PyImport_ExecCodeModuleWithPathnames`."
@@ -247,17 +245,14 @@ msgstr "Дивіться також :c:func:`PyImport_ExecCodeModuleWithPathname
 
 #: ../../c-api/import.rst:173
 msgid ""
-"Like :c:func:`PyImport_ExecCodeModuleEx`, but the :attr:`__cached__` "
-"attribute of the module object is set to *cpathname* if it is non-``NULL``."
+"Like :c:func:`PyImport_ExecCodeModuleEx`, but the :attr:`~module.__cached__`"
+" attribute of the module object is set to *cpathname* if it is non-``NULL``."
 "  Of the three functions, this is the preferred one to use."
 msgstr ""
-"Подібно до :c:func:`PyImport_ExecCodeModuleEx`, але атрибут "
-":attr:`__cached__` об’єкта модуля встановлюється на *cpathname*, якщо він не"
-" ``NULL``. З усіх трьох функцій найкраще використовувати цю."
 
 #: ../../c-api/import.rst:179
 msgid ""
-"Setting :attr:`__cached__` is deprecated. See "
+"Setting :attr:`~module.__cached__` is deprecated. See "
 ":class:`~importlib.machinery.ModuleSpec` for alternatives."
 msgstr ""
 

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 00:54+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -189,10 +189,8 @@ msgstr ""
 "системі (до завершення роботи потоку, після чого значення може бути повторно"
 " використано ОС)."
 
-#: ../../library/_thread.rst:123
-msgid ""
-":ref:`Availability <availability>`: Windows, FreeBSD, Linux, macOS, OpenBSD,"
-" NetBSD, AIX, DragonFlyBSD, GNU/kFreeBSD."
+#: ../../library/_thread.rst:123 ../../library/_thread.rst:148
+msgid "Availability"
 msgstr ""
 
 #: ../../library/_thread.rst:127
@@ -233,10 +231,6 @@ msgstr ""
 "звернутися до документації платформи (сторінки 4 КБ є поширеними; "
 "використання кратних 4096 для розміру стека є запропонованим підходом за "
 "відсутності більш конкретної інформації)."
-
-#: ../../library/_thread.rst:148
-msgid ":ref:`Availability <availability>`: Windows, pthreads."
-msgstr ""
 
 #: ../../library/_thread.rst:150
 msgid "Unix platforms with POSIX threads support."
@@ -337,15 +331,11 @@ msgstr "**Застереження:**"
 
 #: ../../library/_thread.rst:216
 msgid ""
-"Threads interact strangely with interrupts: the :exc:`KeyboardInterrupt` "
-"exception will be received by an arbitrary thread.  (When the :mod:`signal` "
-"module is available, interrupts always go to the main thread.)"
+"Interrupts always go to the main thread (the :exc:`KeyboardInterrupt` "
+"exception will be received by that thread.)"
 msgstr ""
-"Потоки дивно взаємодіють із перериваннями: виняткова ситуація "
-":exc:`KeyboardInterrupt` буде отримана довільним потоком. (Коли доступний "
-"модуль :mod:`signal`, переривання завжди спрямовуються до основного потоку.)"
 
-#: ../../library/_thread.rst:220
+#: ../../library/_thread.rst:219
 msgid ""
 "Calling :func:`sys.exit` or raising the :exc:`SystemExit` exception is "
 "equivalent to calling :func:`_thread.exit`."
@@ -353,14 +343,16 @@ msgstr ""
 "Виклик :func:`sys.exit` або підвищення винятку :exc:`SystemExit` "
 "еквівалентний виклику :func:`_thread.exit`."
 
-#: ../../library/_thread.rst:223
+#: ../../library/_thread.rst:222
 msgid ""
-"It is not possible to interrupt the :meth:`~threading.Lock.acquire` method "
-"on a lock --- the :exc:`KeyboardInterrupt` exception will happen after the "
-"lock has been acquired."
+"It is platform-dependent whether the :meth:`~threading.Lock.acquire` method "
+"on a lock can be interrupted (so that the :exc:`KeyboardInterrupt` exception"
+" will happen immediately, rather than only after the lock has been acquired "
+"or the operation has timed out). It can be interrupted on POSIX, but not on "
+"Windows."
 msgstr ""
 
-#: ../../library/_thread.rst:227
+#: ../../library/_thread.rst:228
 msgid ""
 "When the main thread exits, it is system defined whether the other threads "
 "survive.  On most systems, they are killed without executing :keyword:`try` "
@@ -369,16 +361,6 @@ msgstr ""
 "Коли основний потік виходить, система визначає, чи виживуть інші потоки. У "
 "більшості систем вони припиняються без виконання пропозицій :keyword:`try` "
 "... :keyword:`finally` або виконання деструкторів об’єктів."
-
-#: ../../library/_thread.rst:232
-msgid ""
-"When the main thread exits, it does not do any of its usual cleanup (except "
-"that :keyword:`try` ... :keyword:`finally` clauses are honored), and the "
-"standard I/O files are not flushed."
-msgstr ""
-"Коли основний потік завершується, він не виконує жодного звичайного очищення"
-" (окрім того, що враховуються пропозиції :keyword:`try` ... "
-":keyword:`finally`), а стандартні файли вводу/виводу не очищуються."
 
 #: ../../library/_thread.rst:7
 msgid "light-weight processes"

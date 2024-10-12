@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 14:17+0000\n"
+"POT-Creation-Date: 2024-10-11 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -340,37 +340,25 @@ msgid ""
 "String literals can span multiple lines.  One way is using triple-quotes: "
 "``\"\"\"...\"\"\"`` or ``'''...'''``.  End of lines are automatically "
 "included in the string, but it's possible to prevent this by adding a ``\\``"
-" at the end of the line.  The following example::"
+" at the end of the line.  In the following example, the initial newline is "
+"not included::"
 msgstr ""
-"Рядкові літерали можуть займати кілька рядків. Одним із способів є "
-"використання потрійних лапок: ``\"\"\"...\"\"\"`` або ``'''...'''``. Кінець "
-"рядків автоматично включається в рядок, але можна запобігти цьому, додавши "
-"``\\`` в кінці рядка. Наступний приклад::"
 
-#: ../../tutorial/introduction.rst:202
+#: ../../tutorial/introduction.rst:203
 msgid ""
-"print(\"\"\"\\\n"
+">>> print(\"\"\"\\\n"
+"... Usage: thingy [OPTIONS]\n"
+"...      -h                        Display this usage message\n"
+"...      -H hostname               Hostname to connect to\n"
+"... \"\"\")\n"
 "Usage: thingy [OPTIONS]\n"
 "     -h                        Display this usage message\n"
 "     -H hostname               Hostname to connect to\n"
-"\"\"\")"
+"\n"
+">>>"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:208
-msgid ""
-"produces the following output (note that the initial newline is not "
-"included):"
-msgstr ""
-"створює наступний вихід (зауважте, що початковий новий рядок не включено):"
-
-#: ../../tutorial/introduction.rst:210
-msgid ""
-"Usage: thingy [OPTIONS]\n"
-"     -h                        Display this usage message\n"
-"     -H hostname               Hostname to connect to"
-msgstr ""
-
-#: ../../tutorial/introduction.rst:216
+#: ../../tutorial/introduction.rst:214
 msgid ""
 "Strings can be concatenated (glued together) with the ``+`` operator, and "
 "repeated with ``*``::"
@@ -378,14 +366,14 @@ msgstr ""
 "Рядки можна об’єднати (склеїти) за допомогою оператора ``+`` і повторити за "
 "допомогою ``*``::"
 
-#: ../../tutorial/introduction.rst:219
+#: ../../tutorial/introduction.rst:217
 msgid ""
 ">>> # 3 times 'un', followed by 'ium'\n"
 ">>> 3 * 'un' + 'ium'\n"
 "'unununium'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:223
+#: ../../tutorial/introduction.rst:221
 msgid ""
 "Two or more *string literals* (i.e. the ones enclosed between quotes) next "
 "to each other are automatically concatenated. ::"
@@ -393,18 +381,18 @@ msgstr ""
 "Два або більше *рядкових літералів* (тобто ті, що взяті в лапки) поруч один "
 "з одним автоматично об’єднуються. ::"
 
-#: ../../tutorial/introduction.rst:226
+#: ../../tutorial/introduction.rst:224
 msgid ""
 ">>> 'Py' 'thon'\n"
 "'Python'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:229
+#: ../../tutorial/introduction.rst:227
 msgid ""
 "This feature is particularly useful when you want to break long strings::"
 msgstr "Ця функція особливо корисна, коли ви хочете розірвати довгі рядки::"
 
-#: ../../tutorial/introduction.rst:231
+#: ../../tutorial/introduction.rst:229
 msgid ""
 ">>> text = ('Put several strings within parentheses '\n"
 "...         'to have them joined together.')\n"
@@ -412,13 +400,13 @@ msgid ""
 "'Put several strings within parentheses to have them joined together.'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:236
+#: ../../tutorial/introduction.rst:234
 msgid ""
 "This only works with two literals though, not with variables or "
 "expressions::"
 msgstr "Це працює лише з двома літералами, але не зі змінними чи виразами:"
 
-#: ../../tutorial/introduction.rst:238
+#: ../../tutorial/introduction.rst:236
 msgid ""
 ">>> prefix = 'Py'\n"
 ">>> prefix 'thon'  # can't concatenate a variable and a string literal\n"
@@ -433,7 +421,7 @@ msgid ""
 "SyntaxError: invalid syntax"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:250
+#: ../../tutorial/introduction.rst:248
 msgid ""
 "If you want to concatenate variables or a variable and a literal, use "
 "``+``::"
@@ -441,13 +429,13 @@ msgstr ""
 "Якщо ви хочете об’єднати змінні або змінну та літерал, використовуйте "
 "``+``::"
 
-#: ../../tutorial/introduction.rst:252
+#: ../../tutorial/introduction.rst:250
 msgid ""
 ">>> prefix + 'thon'\n"
 "'Python'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:255
+#: ../../tutorial/introduction.rst:253
 msgid ""
 "Strings can be *indexed* (subscripted), with the first character having "
 "index 0. There is no separate character type; a character is simply a string"
@@ -457,7 +445,7 @@ msgstr ""
 "індекс 0. Немає окремого типу символу; символ - це просто рядок розміру "
 "один::"
 
-#: ../../tutorial/introduction.rst:259
+#: ../../tutorial/introduction.rst:257
 msgid ""
 ">>> word = 'Python'\n"
 ">>> word[0]  # character in position 0\n"
@@ -466,13 +454,13 @@ msgid ""
 "'n'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:265
+#: ../../tutorial/introduction.rst:263
 msgid ""
 "Indices may also be negative numbers, to start counting from the right::"
 msgstr ""
 "Індекси також можуть бути від’ємними числами, щоб почати відлік справа:"
 
-#: ../../tutorial/introduction.rst:267
+#: ../../tutorial/introduction.rst:265
 msgid ""
 ">>> word[-1]  # last character\n"
 "'n'\n"
@@ -482,19 +470,19 @@ msgid ""
 "'P'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:274
+#: ../../tutorial/introduction.rst:272
 msgid "Note that since -0 is the same as 0, negative indices start from -1."
 msgstr ""
 "Зауважте, що оскільки -0 дорівнює 0, від'ємні індекси починаються з -1."
 
-#: ../../tutorial/introduction.rst:276
+#: ../../tutorial/introduction.rst:274
 msgid ""
 "In addition to indexing, *slicing* is also supported.  While indexing is "
 "used to obtain individual characters, *slicing* allows you to obtain a "
 "substring::"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:279
+#: ../../tutorial/introduction.rst:277
 msgid ""
 ">>> word[0:2]  # characters from position 0 (included) to 2 (excluded)\n"
 "'Py'\n"
@@ -502,7 +490,7 @@ msgid ""
 "'tho'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:284
+#: ../../tutorial/introduction.rst:282
 msgid ""
 "Slice indices have useful defaults; an omitted first index defaults to zero,"
 " an omitted second index defaults to the size of the string being sliced. ::"
@@ -511,7 +499,7 @@ msgstr ""
 "індекс за замовчуванням дорівнює нулю, пропущений другий індекс за "
 "замовчуванням відповідає розміру рядка, що нарізається. ::"
 
-#: ../../tutorial/introduction.rst:287
+#: ../../tutorial/introduction.rst:285
 msgid ""
 ">>> word[:2]   # character from the beginning to position 2 (excluded)\n"
 "'Py'\n"
@@ -521,7 +509,7 @@ msgid ""
 "'on'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:294
+#: ../../tutorial/introduction.rst:292
 msgid ""
 "Note how the start is always included, and the end always excluded.  This "
 "makes sure that ``s[:i] + s[i:]`` is always equal to ``s``::"
@@ -529,7 +517,7 @@ msgstr ""
 "Зверніть увагу, що початок завжди включається, а кінець завжди виключається."
 " Це гарантує, що ``s[:i] + s[i:]`` завжди дорівнює ``s``::"
 
-#: ../../tutorial/introduction.rst:297
+#: ../../tutorial/introduction.rst:295
 msgid ""
 ">>> word[:2] + word[2:]\n"
 "'Python'\n"
@@ -537,7 +525,7 @@ msgid ""
 "'Python'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:302
+#: ../../tutorial/introduction.rst:300
 msgid ""
 "One way to remember how slices work is to think of the indices as pointing "
 "*between* characters, with the left edge of the first character numbered 0. "
@@ -549,7 +537,7 @@ msgstr ""
 "номер 0. Тоді правий край останнього символу рядка з *n* символів має індекс"
 " *n*, наприклад::"
 
-#: ../../tutorial/introduction.rst:307
+#: ../../tutorial/introduction.rst:305
 msgid ""
 " +---+---+---+---+---+---+\n"
 " | P | y | t | h | o | n |\n"
@@ -558,7 +546,7 @@ msgid ""
 "-6  -5  -4  -3  -2  -1"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:313
+#: ../../tutorial/introduction.rst:311
 msgid ""
 "The first row of numbers gives the position of the indices 0...6 in the "
 "string; the second row gives the corresponding negative indices. The slice "
@@ -569,7 +557,7 @@ msgstr ""
 "відповідні від’ємні індекси. Фрагмент від *i* до *j* складається з усіх "
 "символів між краями, позначених *i* та *j* відповідно."
 
-#: ../../tutorial/introduction.rst:318
+#: ../../tutorial/introduction.rst:316
 msgid ""
 "For non-negative indices, the length of a slice is the difference of the "
 "indices, if both are within bounds.  For example, the length of "
@@ -578,11 +566,11 @@ msgstr ""
 "Для невід’ємних індексів довжина зрізу є різницею індексів, якщо обидва "
 "знаходяться в межах. Наприклад, довжина ``word[1:3]`` дорівнює 2."
 
-#: ../../tutorial/introduction.rst:322
+#: ../../tutorial/introduction.rst:320
 msgid "Attempting to use an index that is too large will result in an error::"
 msgstr "Спроба використати занадто великий індекс призведе до помилки::"
 
-#: ../../tutorial/introduction.rst:324
+#: ../../tutorial/introduction.rst:322
 msgid ""
 ">>> word[42]  # the word only has 6 characters\n"
 "Traceback (most recent call last):\n"
@@ -590,7 +578,7 @@ msgid ""
 "IndexError: string index out of range"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:329
+#: ../../tutorial/introduction.rst:327
 msgid ""
 "However, out of range slice indexes are handled gracefully when used for "
 "slicing::"
@@ -598,7 +586,7 @@ msgstr ""
 "Однак індекси зрізів поза діапазоном обробляються витончено, коли "
 "використовуються для зрізу::"
 
-#: ../../tutorial/introduction.rst:332
+#: ../../tutorial/introduction.rst:330
 msgid ""
 ">>> word[4:42]\n"
 "'on'\n"
@@ -606,7 +594,7 @@ msgid ""
 "''"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:337
+#: ../../tutorial/introduction.rst:335
 msgid ""
 "Python strings cannot be changed --- they are :term:`immutable`. Therefore, "
 "assigning to an indexed position in the string results in an error::"
@@ -614,7 +602,7 @@ msgstr ""
 "Рядки Python не можна змінити --- вони :term:`immutable`. Таким чином, "
 "призначення індексованої позиції в рядку призводить до помилки::"
 
-#: ../../tutorial/introduction.rst:340
+#: ../../tutorial/introduction.rst:338
 msgid ""
 ">>> word[0] = 'J'\n"
 "Traceback (most recent call last):\n"
@@ -626,11 +614,11 @@ msgid ""
 "TypeError: 'str' object does not support item assignment"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:349
+#: ../../tutorial/introduction.rst:347
 msgid "If you need a different string, you should create a new one::"
 msgstr "Якщо вам потрібен інший рядок, вам слід створити новий:"
 
-#: ../../tutorial/introduction.rst:351
+#: ../../tutorial/introduction.rst:349
 msgid ""
 ">>> 'J' + word[1:]\n"
 "'Jython'\n"
@@ -638,22 +626,22 @@ msgid ""
 "'Pypy'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:356
+#: ../../tutorial/introduction.rst:354
 msgid "The built-in function :func:`len` returns the length of a string::"
 msgstr "Вбудована функція :func:`len` повертає довжину рядка::"
 
-#: ../../tutorial/introduction.rst:358
+#: ../../tutorial/introduction.rst:356
 msgid ""
 ">>> s = 'supercalifragilisticexpialidocious'\n"
 ">>> len(s)\n"
 "34"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:365
+#: ../../tutorial/introduction.rst:363
 msgid ":ref:`textseq`"
 msgstr ":ref:`textseq`"
 
-#: ../../tutorial/introduction.rst:366
+#: ../../tutorial/introduction.rst:364
 msgid ""
 "Strings are examples of *sequence types*, and support the common operations "
 "supported by such types."
@@ -661,11 +649,11 @@ msgstr ""
 "Рядки є прикладами *типів послідовностей* і підтримують загальні операції, "
 "які підтримують такі типи."
 
-#: ../../tutorial/introduction.rst:369
+#: ../../tutorial/introduction.rst:367
 msgid ":ref:`string-methods`"
 msgstr ":ref:`string-methods`"
 
-#: ../../tutorial/introduction.rst:370
+#: ../../tutorial/introduction.rst:368
 msgid ""
 "Strings support a large number of methods for basic transformations and "
 "searching."
@@ -673,27 +661,27 @@ msgstr ""
 "Рядки підтримують велику кількість методів для основних перетворень і "
 "пошуку."
 
-#: ../../tutorial/introduction.rst:373
+#: ../../tutorial/introduction.rst:371
 msgid ":ref:`f-strings`"
 msgstr ":ref:`f-strings`"
 
-#: ../../tutorial/introduction.rst:374
+#: ../../tutorial/introduction.rst:372
 msgid "String literals that have embedded expressions."
 msgstr "Рядкові літерали, які мають вбудовані вирази."
 
-#: ../../tutorial/introduction.rst:376
+#: ../../tutorial/introduction.rst:374
 msgid ":ref:`formatstrings`"
 msgstr ":ref:`formatstrings`"
 
-#: ../../tutorial/introduction.rst:377
+#: ../../tutorial/introduction.rst:375
 msgid "Information about string formatting with :meth:`str.format`."
 msgstr "Інформація про форматування рядка за допомогою :meth:`str.format`."
 
-#: ../../tutorial/introduction.rst:379
+#: ../../tutorial/introduction.rst:377
 msgid ":ref:`old-string-formatting`"
 msgstr ":ref:`old-string-formatting`"
 
-#: ../../tutorial/introduction.rst:380
+#: ../../tutorial/introduction.rst:378
 msgid ""
 "The old formatting operations invoked when strings are the left operand of "
 "the ``%`` operator are described in more detail here."
@@ -701,11 +689,11 @@ msgstr ""
 "Старі операції форматування, що викликані, коли рядки є лівим операндом "
 "оператора ``%``, описані більш детально тут."
 
-#: ../../tutorial/introduction.rst:387
+#: ../../tutorial/introduction.rst:385
 msgid "Lists"
 msgstr "списки"
 
-#: ../../tutorial/introduction.rst:389
+#: ../../tutorial/introduction.rst:387
 msgid ""
 "Python knows a number of *compound* data types, used to group together other"
 " values.  The most versatile is the *list*, which can be written as a list "
@@ -719,14 +707,14 @@ msgstr ""
 "дужках. Списки можуть містити елементи різних типів, але зазвичай усі "
 "елементи мають однаковий тип. ::"
 
-#: ../../tutorial/introduction.rst:394
+#: ../../tutorial/introduction.rst:392
 msgid ""
 ">>> squares = [1, 4, 9, 16, 25]\n"
 ">>> squares\n"
 "[1, 4, 9, 16, 25]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:398
+#: ../../tutorial/introduction.rst:396
 msgid ""
 "Like strings (and all other built-in :term:`sequence` types), lists can be "
 "indexed and sliced::"
@@ -734,7 +722,7 @@ msgstr ""
 "Як і рядки (та всі інші вбудовані типи :term:`sequence`), списки можна "
 "індексувати та нарізати:"
 
-#: ../../tutorial/introduction.rst:401
+#: ../../tutorial/introduction.rst:399
 msgid ""
 ">>> squares[0]  # indexing returns the item\n"
 "1\n"
@@ -744,17 +732,17 @@ msgid ""
 "[9, 16, 25]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:408
+#: ../../tutorial/introduction.rst:406
 msgid "Lists also support operations like concatenation::"
 msgstr "Списки також підтримують такі операції, як конкатенація::"
 
-#: ../../tutorial/introduction.rst:410
+#: ../../tutorial/introduction.rst:408
 msgid ""
 ">>> squares + [36, 49, 64, 81, 100]\n"
 "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:413
+#: ../../tutorial/introduction.rst:411
 msgid ""
 "Unlike strings, which are :term:`immutable`, lists are a :term:`mutable` "
 "type, i.e. it is possible to change their content::"
@@ -762,7 +750,7 @@ msgstr ""
 "На відміну від рядків, які є :term:`immutable`, списки мають тип "
 ":term:`mutable`, тобто їх вміст можна змінювати:"
 
-#: ../../tutorial/introduction.rst:416
+#: ../../tutorial/introduction.rst:414
 msgid ""
 ">>> cubes = [1, 8, 27, 65, 125]  # something's wrong here\n"
 ">>> 4 ** 3  # the cube of 4 is 64, not 65!\n"
@@ -772,13 +760,13 @@ msgid ""
 "[1, 8, 27, 64, 125]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:423
+#: ../../tutorial/introduction.rst:421
 msgid ""
 "You can also add new items at the end of the list, by using the "
 ":meth:`!list.append` *method* (we will see more about methods later)::"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:426
+#: ../../tutorial/introduction.rst:424
 msgid ""
 ">>> cubes.append(216)  # add the cube of 6\n"
 ">>> cubes.append(7 ** 3)  # and the cube of 7\n"
@@ -786,7 +774,7 @@ msgid ""
 "[1, 8, 27, 64, 125, 216, 343]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:431
+#: ../../tutorial/introduction.rst:429
 msgid ""
 "Simple assignment in Python never copies data. When you assign a list to a "
 "variable, the variable refers to the *existing list*. Any changes you make "
@@ -794,7 +782,7 @@ msgid ""
 "that refer to it.::"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:436
+#: ../../tutorial/introduction.rst:434
 msgid ""
 ">>> rgb = [\"Red\", \"Green\", \"Blue\"]\n"
 ">>> rgba = rgb\n"
@@ -805,7 +793,7 @@ msgid ""
 "[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:444
+#: ../../tutorial/introduction.rst:442
 msgid ""
 "All slice operations return a new list containing the requested elements.  "
 "This means that the following slice returns a :ref:`shallow copy "
@@ -815,7 +803,7 @@ msgstr ""
 "означає, що наступний фрагмент повертає :ref:`неглибоку копію "
 "<shallow_vs_deep_copy>` списку::"
 
-#: ../../tutorial/introduction.rst:448
+#: ../../tutorial/introduction.rst:446
 msgid ""
 ">>> correct_rgba = rgba[:]\n"
 ">>> correct_rgba[-1] = \"Alpha\"\n"
@@ -825,7 +813,7 @@ msgid ""
 "[\"Red\", \"Green\", \"Blue\", \"Alph\"]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:455
+#: ../../tutorial/introduction.rst:453
 msgid ""
 "Assignment to slices is also possible, and this can even change the size of "
 "the list or clear it entirely::"
@@ -833,7 +821,7 @@ msgstr ""
 "Також можливе призначення фрагментам, і це навіть може змінити розмір списку"
 " або повністю його очистити::"
 
-#: ../../tutorial/introduction.rst:458
+#: ../../tutorial/introduction.rst:456
 msgid ""
 ">>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n"
 ">>> letters\n"
@@ -852,18 +840,18 @@ msgid ""
 "[]"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:474
+#: ../../tutorial/introduction.rst:472
 msgid "The built-in function :func:`len` also applies to lists::"
 msgstr "Вбудована функція :func:`len` також застосовується до списків::"
 
-#: ../../tutorial/introduction.rst:476
+#: ../../tutorial/introduction.rst:474
 msgid ""
 ">>> letters = ['a', 'b', 'c', 'd']\n"
 ">>> len(letters)\n"
 "4"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:480
+#: ../../tutorial/introduction.rst:478
 msgid ""
 "It is possible to nest lists (create lists containing other lists), for "
 "example::"
@@ -871,7 +859,7 @@ msgstr ""
 "Можна вкладати списки (створювати списки, що містять інші списки), "
 "наприклад:"
 
-#: ../../tutorial/introduction.rst:483
+#: ../../tutorial/introduction.rst:481
 msgid ""
 ">>> a = ['a', 'b', 'c']\n"
 ">>> n = [1, 2, 3]\n"
@@ -884,11 +872,11 @@ msgid ""
 "'b'"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:496
+#: ../../tutorial/introduction.rst:494
 msgid "First Steps Towards Programming"
 msgstr "Перші кроки до програмування"
 
-#: ../../tutorial/introduction.rst:498
+#: ../../tutorial/introduction.rst:496
 msgid ""
 "Of course, we can use Python for more complicated tasks than adding two and "
 "two together.  For instance, we can write an initial sub-sequence of the "
@@ -896,7 +884,7 @@ msgid ""
 "follows::"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:503
+#: ../../tutorial/introduction.rst:501
 msgid ""
 ">>> # Fibonacci series:\n"
 ">>> # the sum of two elements defines the next\n"
@@ -914,11 +902,11 @@ msgid ""
 "8"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:518
+#: ../../tutorial/introduction.rst:516
 msgid "This example introduces several new features."
 msgstr "Цей приклад представляє кілька нових функцій."
 
-#: ../../tutorial/introduction.rst:520
+#: ../../tutorial/introduction.rst:518
 msgid ""
 "The first line contains a *multiple assignment*: the variables ``a`` and "
 "``b`` simultaneously get the new values 0 and 1.  On the last line this is "
@@ -931,7 +919,7 @@ msgstr ""
 " демонструючи, що вирази праворуч усі сторони оцінюються перш ніж виконати "
 "будь-яке завдання. Вирази правої частини обчислюються зліва направо."
 
-#: ../../tutorial/introduction.rst:526
+#: ../../tutorial/introduction.rst:524
 msgid ""
 "The :keyword:`while` loop executes as long as the condition (here: ``a < "
 "10``) remains true.  In Python, like in C, any non-zero integer value is "
@@ -951,7 +939,7 @@ msgstr ""
 "(більше), ``==`` (дорівнює), ``<=`` (less than or equal to), ``> =`` (більше"
 " або дорівнює to) і ``!=`` (не дорівнює)."
 
-#: ../../tutorial/introduction.rst:535
+#: ../../tutorial/introduction.rst:533
 msgid ""
 "The *body* of the loop is *indented*: indentation is Python's way of "
 "grouping statements.  At the interactive prompt, you have to type a tab or "
@@ -972,7 +960,7 @@ msgstr ""
 "рядок). Зауважте, що кожен рядок у базовому блоці має мати однаковий "
 "відступ."
 
-#: ../../tutorial/introduction.rst:544
+#: ../../tutorial/introduction.rst:542
 msgid ""
 "The :func:`print` function writes the value of the argument(s) it is given. "
 "It differs from just writing the expression you want to write (as we did "
@@ -982,14 +970,14 @@ msgid ""
 "things nicely, like this::"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:551
+#: ../../tutorial/introduction.rst:549
 msgid ""
 ">>> i = 256*256\n"
 ">>> print('The value of i is', i)\n"
 "The value of i is 65536"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:555
+#: ../../tutorial/introduction.rst:553
 msgid ""
 "The keyword argument *end* can be used to avoid the newline after the "
 "output, or end the output with a different string::"
@@ -997,7 +985,7 @@ msgstr ""
 "Аргумент ключового слова *end* можна використовувати, щоб уникнути нового "
 "рядка після виводу або завершити вивід іншим рядком::"
 
-#: ../../tutorial/introduction.rst:558
+#: ../../tutorial/introduction.rst:556
 msgid ""
 ">>> a, b = 0, 1\n"
 ">>> while a < 1000:\n"
@@ -1007,11 +995,11 @@ msgid ""
 "0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987,"
 msgstr ""
 
-#: ../../tutorial/introduction.rst:567
+#: ../../tutorial/introduction.rst:565
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../tutorial/introduction.rst:568
+#: ../../tutorial/introduction.rst:566
 msgid ""
 "Since ``**`` has higher precedence than ``-``, ``-3**2`` will be interpreted"
 " as ``-(3**2)`` and thus result in ``-9``.  To avoid this and get ``9``, you"
@@ -1021,7 +1009,7 @@ msgstr ""
 "інтерпретовано як ``-(3**2)`` і, таким чином, призведе до ``-9``. Щоб "
 "уникнути цього та отримати ``9``, ви можете використовувати ``(-3)**2``."
 
-#: ../../tutorial/introduction.rst:572
+#: ../../tutorial/introduction.rst:570
 msgid ""
 "Unlike other languages, special characters such as ``\\n`` have the same "
 "meaning with both single (``'...'``) and double (``\"...\"``) quotes. The "
