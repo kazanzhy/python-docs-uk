@@ -7,6 +7,7 @@
 # Taras Kuzyo <kuzyo.taras@gmail.com>, 2023
 # Ivan Prytula, 2023
 # Dmytro Kazanzhy, 2024
+# Yuliia Shevchenko, 2024
 # 
 #, fuzzy
 msgid ""
@@ -15,7 +16,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-18 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:06+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Last-Translator: Yuliia Shevchenko, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -527,7 +528,7 @@ msgstr ""
 
 #: ../../library/functions.rst:156 ../../library/functions.rst:797
 msgid "The parameter is now positional-only."
-msgstr ""
+msgstr "Тепер параметр є лише позиційним."
 
 #: ../../library/functions.rst:161
 msgid ""
@@ -939,6 +940,8 @@ msgid ""
 "Convert a single string or number to a complex number, or create a complex "
 "number from real and imaginary parts."
 msgstr ""
+"Перетворює окремий рядок або число на комплексне число, або створює "
+"комплексне число з дійсної та уявної частин."
 
 #: ../../library/functions.rst:384 ../../library/functions.rst:742
 #: ../../library/functions.rst:988
@@ -1171,7 +1174,7 @@ msgstr "Параметри"
 
 #: ../../library/functions.rst:576
 msgid "A Python expression."
-msgstr ""
+msgstr "Вираз Python."
 
 #: ../../library/functions.rst:580
 msgid "The global namespace (default: ``None``)."
@@ -1187,7 +1190,7 @@ msgstr "Повернення"
 
 #: ../../library/functions.rst:588
 msgid "The result of the evaluated expression."
-msgstr ""
+msgstr "Результат обчисленого виразу."
 
 #: ../../library/functions.rst:0
 msgid "raises"
@@ -1195,7 +1198,7 @@ msgstr ""
 
 #: ../../library/functions.rst:589
 msgid "Syntax errors are reported as exceptions."
-msgstr ""
+msgstr "Синтаксичні помилки повідомляються як винятки."
 
 #: ../../library/functions.rst:591
 msgid ""
@@ -1272,6 +1275,7 @@ msgstr ""
 #: ../../library/functions.rst:636 ../../library/functions.rst:708
 msgid "The *globals* and *locals* arguments can now be passed as keywords."
 msgstr ""
+"Аргументи *globals* і *locals* тепер можуть передаватися як ключові слова."
 
 #: ../../library/functions.rst:640 ../../library/functions.rst:712
 msgid ""
@@ -1302,6 +1306,14 @@ msgid ""
 " any mapping object.  Remember that at the module level, globals and locals "
 "are the same dictionary."
 msgstr ""
+"У всіх випадках, якщо опціональні частини пропущені, код виконується в "
+"поточній області видимості. Якщо передано тільки *globals*, це має бути "
+"словником (а не підкласом словника), який використовуватиметься як для "
+"глобальних, так і для локальних змінних. Якщо передано *globals* і *locals*,"
+" вони використовуються для глобальних і локальних змінних відповідно. Якщо "
+"передано *locals*, це може бути будь-яким об'єктом зіставлення. Пам'ятайте, "
+"що на рівні модуля глобальні й локальні змінні є одним і тим самим "
+"словником."
 
 #: ../../library/functions.rst:668
 msgid ""
@@ -1351,7 +1363,7 @@ msgstr ""
 
 #: ../../library/functions.rst:703
 msgid "Added the *closure* parameter."
-msgstr ""
+msgstr "Додано параметр *closure*."
 
 #: ../../library/functions.rst:718
 msgid ""
@@ -1380,7 +1392,7 @@ msgstr ""
 
 #: ../../library/functions.rst:740
 msgid "Return a floating-point number constructed from a number or a string."
-msgstr ""
+msgstr "Повертає число з рухомою комою, створене з числа або рядка."
 
 #: ../../library/functions.rst:744
 msgid ""
@@ -1412,6 +1424,8 @@ msgid ""
 "Case is not significant, so, for example, \"inf\", \"Inf\", \"INFINITY\", "
 "and \"iNfINity\" are all acceptable spellings for positive infinity."
 msgstr ""
+"Регістр не має значення, тому, наприклад, \"inf\", \"Inf\", \"INFINITY\" і "
+"\"iNfINity\" є прийнятними формами запису для позитивної нескінченності."
 
 #: ../../library/functions.rst:781
 msgid ""
@@ -1655,7 +1669,7 @@ msgstr ""
 
 #: ../../library/functions.rst:950
 msgid "This is the address of the object in memory."
-msgstr ""
+msgstr "Це адреса об'єкта в пам'яті."
 
 #: ../../library/functions.rst:952
 msgid ""
@@ -1782,7 +1796,7 @@ msgstr ""
 
 #: ../../library/functions.rst:1040
 msgid "The first parameter is now positional-only."
-msgstr ""
+msgstr "Перший параметр тепер є лише позиційним."
 
 #: ../../library/functions.rst:1043
 msgid ""
@@ -1908,6 +1922,8 @@ msgid ""
 "variable names as the keys, and their currently bound references as the "
 "values."
 msgstr ""
+" \n"
+"Повертає об'єкт зіставлення, що представляє поточну локальну таблицю символів, де імена змінних є ключами, а їх поточні прив'язані посилання — значеннями."
 
 #: ../../library/functions.rst:1144
 msgid ""
@@ -1921,6 +1937,8 @@ msgid ""
 "At class scope, it returns the namespace that will be passed to the "
 "metaclass constructor."
 msgstr ""
+"У класовій області видимості він повертає простір імен, який буде передано "
+"конструктору метакласу."
 
 #: ../../library/functions.rst:1151
 msgid ""
@@ -2036,7 +2054,7 @@ msgstr ""
 
 #: ../../library/functions.rst:1224 ../../library/functions.rst:1262
 msgid "Added the *default* keyword-only parameter."
-msgstr ""
+msgstr "Додано параметр *default*, який можна передавати тільки за ключем."
 
 #: ../../library/functions.rst:1227 ../../library/functions.rst:1265
 msgid "The *key* can be ``None``."
@@ -2704,6 +2722,8 @@ msgid ""
 "Output buffering is usually determined by *file*. However, if *flush* is "
 "true, the stream is forcibly flushed."
 msgstr ""
+" Буферизація виходу зазвичай визначається параметром *file*. Однак, якщо "
+"*flush* дорівнює true, потік примусово очищується. "
 
 #: ../../library/functions.rst:1613
 msgid "Added the *flush* keyword argument."
@@ -2838,6 +2858,8 @@ msgid ""
 "Attribute holding the name of the property. The name of the property can be "
 "changed at runtime."
 msgstr ""
+"Атрибут, що містить ім'я властивості. Ім'я властивості можна змінити під час"
+" виконання програми."
 
 #: ../../library/functions.rst:1713
 msgid ""
@@ -2862,7 +2884,7 @@ msgstr ""
 
 #: ../../library/functions.rst:1730
 msgid "This class has a custom representation that can be evaluated::"
-msgstr ""
+msgstr "Цей клас має власне представлення, яке можна оцінити::"
 
 #: ../../library/functions.rst:1732
 msgid ""
@@ -3219,6 +3241,8 @@ msgid ""
 "Summation of floats switched to an algorithm that gives higher accuracy and "
 "better commutativity on most builds."
 msgstr ""
+"Сумування чисел з рухомою комою перейшло на алгоритм, який забезпечує вищу "
+"точність і кращу комутативність на більшості збірок."
 
 #: ../../library/functions.rst:1950
 msgid ""
@@ -3235,6 +3259,8 @@ msgid ""
 "The *object_or_type* determines the :term:`method resolution order` to be "
 "searched.  The search starts from the class right after the *type*."
 msgstr ""
+"*object_or_type* визначає :term:`method resolution order`, який потрібно "
+"шукати. Пошук починається з класу, що йде безпосередньо після *type*."
 
 #: ../../library/functions.rst:1958
 msgid ""
@@ -3405,7 +3431,7 @@ msgstr ""
 
 #: ../../library/functions.rst:2061
 msgid "See also:"
-msgstr ""
+msgstr "Дивіться також:"
 
 #: ../../library/functions.rst:2063
 msgid ""
@@ -3803,7 +3829,7 @@ msgstr ""
 
 #: ../../library/functions.rst:154
 msgid "Boolean"
-msgstr ""
+msgstr "Булевий"
 
 #: ../../library/functions.rst:154 ../../library/functions.rst:2037
 msgid "type"
@@ -3811,7 +3837,7 @@ msgstr "тип"
 
 #: ../../library/functions.rst:643
 msgid "built-in function"
-msgstr ""
+msgstr "вбудована функція"
 
 #: ../../library/functions.rst:643
 msgid "exec"

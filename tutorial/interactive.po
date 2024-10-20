@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Dmytro Kazanzhy, 2022
+# Yuliia Shevchenko, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-09-27 14:17+0000\n"
+"POT-Creation-Date: 2024-10-18 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:50+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2022\n"
+"Last-Translator: Yuliia Shevchenko, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,6 +58,17 @@ msgid ""
 ":file:`.python_history` in your user directory. The history will be "
 "available again during the next interactive interpreter session."
 msgstr ""
+"Завершення імен змінних та модулів :ref:автоматично вмикається<rlcompleter-"
+"config>` під час запуску інтерпретатора, так що клавіша :kbd:`Tab` викликає "
+"функцію завершення; вона перевіряє імена операторів Python, поточні локальні"
+" змінні та доступні імена модулів. Для крапкових виразів, таких як "
+"``string.a``, вона обчислить вираз до останньої ``'.'`` та потім запропонує "
+"завершення з атрибутів отриманого об'єкта. Зверніть увагу, що це може "
+"виконати код, визначений у програмі, якщо об'єкт з методом "
+":meth:`~object.__getattr__` є частиною виразу. За замовчуванням конфігурація"
+" також зберігає вашу історію у файл з ім'ям :file:`.python_history` у вашому"
+" користувацькому каталозі. Історія буде доступна знову під час наступної "
+"сесії інтерактивного інтерпретатора."
 
 #: ../../tutorial/interactive.rst:36
 msgid "Alternatives to the Interactive Interpreter"
