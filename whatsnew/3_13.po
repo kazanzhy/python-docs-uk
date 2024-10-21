@@ -6,6 +6,7 @@
 # Translators:
 # Rafael Fontenelle <rffontenelle@gmail.com>, 2024
 # Dmytro Kazanzhy, 2024
+# Yuliia Shevchenko, 2024
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-18 14:17+0000\n"
 "PO-Revision-Date: 2024-05-11 01:09+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Last-Translator: Yuliia Shevchenko, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 
 #: ../../whatsnew/3.13.rst:4
 msgid "What's New In Python 3.13"
-msgstr ""
+msgstr "Що нового у Python 3.13"
 
 #: ../../whatsnew/3.13.rst:0
 msgid "Editors"
@@ -32,7 +33,7 @@ msgstr "Редактори"
 
 #: ../../whatsnew/3.13.rst:6
 msgid "Adam Turner and Thomas Wouters"
-msgstr ""
+msgstr "Адам Тернер (Adam Turner) і Томас Вутерс (Thomas Wouters)"
 
 #: ../../whatsnew/3.13.rst:48
 msgid ""
@@ -40,10 +41,13 @@ msgid ""
 "Python 3.13 was released on October 7, 2024. For full details, see the "
 ":ref:`changelog <changelog>`."
 msgstr ""
+"Ця стаття пояснює нові функції у Python 3.13 порівняно з версією 3.12. "
+"Python 3.13 був випущений 7 жовтня 2024 року. Щою отримати повну інформацію,"
+" перегляньте : :ref:`журнал змін <changelog>`."
 
 #: ../../whatsnew/3.13.rst:54
 msgid ":pep:`719` -- Python 3.13 Release Schedule"
-msgstr ""
+msgstr ":pep:`719` -- Графік випуску Python 3.13"
 
 #: ../../whatsnew/3.13.rst:58
 msgid "Summary -- Release Highlights"
@@ -59,6 +63,13 @@ msgid ""
 "(:pep:`703`), and a `Just-In-Time compiler <whatsnew313-jit-compiler_>`_ "
 "(:pep:`744`)."
 msgstr ""
+"Python 3.13 – це останній стабільний випуск мови програмування Python, який "
+"містить різноманітні зміни в самій мові, реалізації та стандартній "
+"бібліотеці. Серед найбільших змін — новий `інтерактивний інтерпретатор "
+"<whatsnew313-better-interactive-interpreter_>`_, експериментальна підтримка "
+"виконання в `режимі без глобальної блокування потоків "
+"(GIL)<whatsnew313-free-threaded-cpython_>`_ (:pep:`703`), та `Just-In-Time "
+"компілятор <whatsnew313-jit-compiler_>`_ (:pep:`744`)."
 
 #: ../../whatsnew/3.13.rst:72
 msgid ""
@@ -76,6 +87,10 @@ msgid ""
 "<whatsnew313-pep594_>`_ following their deprecation in Python 3.11 "
 "(:pep:`594`)."
 msgstr ""
+"Зміни в бібліотеці містять видалення застарілих API та модулів, а також "
+"звичайні покращення в зручності використання та коректності. Декілька "
+"застарілих модулів стандартної бібліотеки тепер `були видалені "
+"<whatsnew313-pep594_>`_ після їхнього застаріння в Python 3.11 (:pep:`594`)."
 
 #: ../../whatsnew/3.13.rst:82
 msgid ""
@@ -99,6 +114,9 @@ msgid ""
 "interactive-interpreter>` and :ref:`improved error messages "
 "<whatsnew313-improved-error-messages>`."
 msgstr ""
+"Сильно покращений :ref:`інтерактивний інтерпретатор <whatsnew313-better-"
+"interactive-interpreter>` та :ref:`покращені повідомлення про помилки "
+"<whatsnew313-improved-error-messages>`."
 
 #: ../../whatsnew/3.13.rst:103
 msgid ""
@@ -131,6 +149,11 @@ msgid ""
 "<whatsnew313-doctest>` output. This can be disabled through the "
 ":envvar:`PYTHON_COLORS` and |NO_COLOR|_ environment variables."
 msgstr ""
+"Підтримка кольорів у новому :ref:`інтерактивному інтерпретаторі "
+"<whatsnew313-better-interactive-interpreter>`, а також у :ref:`трасуванні "
+"<whatsnew313-improved-error-messages>` і :ref:`doctest "
+"<whatsnew313-doctest>` виводі. Це можна відключити за допомогою змінних "
+"середовища :envvar:`PYTHON_COLORS` і |NO_COLOR|_."
 
 #: ../../whatsnew/3.13.rst:122
 msgid "Python data model improvements:"
@@ -141,12 +164,15 @@ msgid ""
 ":attr:`~type.__static_attributes__` stores the names of attributes accessed "
 "through ``self.X`` in any function in a class body."
 msgstr ""
+":attr:`~type.__static_attributes__` зберігає імена атрибутів, до яких "
+"звертаються через ``self.X``, в будь-якій функції в тілі класу."
 
 #: ../../whatsnew/3.13.rst:126
 msgid ""
 ":attr:`~type.__firstlineno__` records the first line number of a class "
 "definition."
 msgstr ""
+":attr:`~type.__firstlineno__` записує номер першого рядка визначення класу."
 
 #: ../../whatsnew/3.13.rst:129
 msgid "Significant improvements in the standard library:"
@@ -163,6 +189,8 @@ msgid ""
 "The :mod:`argparse` module now supports deprecating command-line options, "
 "positional arguments, and subcommands."
 msgstr ""
+"Модуль :mod:`argparse` тепер підтримує застарівання командних параметрів, "
+"позиційних аргументів і підкоманд."
 
 #: ../../whatsnew/3.13.rst:135
 msgid ""
@@ -181,12 +209,15 @@ msgstr ""
 msgid ""
 "The new :mod:`dbm.sqlite3` module is now the default :mod:`dbm` backend."
 msgstr ""
+"Новий модуль :mod:`dbm.sqlite3` тепер є стандартним бекендом :mod:`dbm`."
 
 #: ../../whatsnew/3.13.rst:141
 msgid ""
 "The :mod:`os` module has a :ref:`suite of new functions <os-timerfd>` for "
 "working with Linux's timer notification file descriptors."
 msgstr ""
+"Модуль :mod:`os` має :ref:`набір нових функцій <os-timerfd>` для роботи з "
+"файловими дескрипторами сповіщення таймера Linux."
 
 #: ../../whatsnew/3.13.rst:143
 msgid ""
@@ -214,17 +245,22 @@ msgid ""
 "The :c:data:`Py_mod_gil` slot is now used to indicate that an extension "
 "module supports running with the :term:`GIL` disabled."
 msgstr ""
+"Слот :c:data:`Py_mod_gil` тепер використовується для вказівки на те, що "
+"розширювальний модуль підтримує виконання з вимкненим :term:`GIL`."
 
 #: ../../whatsnew/3.13.rst:154
 msgid ""
 "The :doc:`PyTime C API </c-api/time>` has been added, providing access to "
 "system clocks."
 msgstr ""
+"Додано :doc:`PyTime C API </c-api/time>`, що надає доступ до системних "
+"годинників."
 
 #: ../../whatsnew/3.13.rst:156
 msgid ""
 ":c:type:`PyMutex` is a new lightweight mutex that occupies a single byte."
 msgstr ""
+":c:type:`PyMutex` — це новий легкий мьютекс, який займає лише один байт."
 
 #: ../../whatsnew/3.13.rst:157
 msgid ""
@@ -263,7 +299,7 @@ msgstr ""
 
 #: ../../whatsnew/3.13.rst:171
 msgid "Platform support:"
-msgstr ""
+msgstr "Підтримка платформ:"
 
 #: ../../whatsnew/3.13.rst:173
 msgid ""
@@ -284,11 +320,11 @@ msgstr ""
 
 #: ../../whatsnew/3.13.rst:178
 msgid "``wasm32-emscripten`` is no longer an officially supported platform."
-msgstr ""
+msgstr "``wasm32-emscripten`` більше не є офіційно підтримуваною платформою."
 
 #: ../../whatsnew/3.13.rst:180
 msgid "Important removals:"
-msgstr ""
+msgstr "Важливі видалення:"
 
 #: ../../whatsnew/3.13.rst:182
 msgid ""
@@ -325,7 +361,7 @@ msgstr ""
 
 #: ../../whatsnew/3.13.rst:195
 msgid "Release schedule changes:"
-msgstr ""
+msgstr "Зміни в графіку випуску:"
 
 #: ../../whatsnew/3.13.rst:197
 msgid ""
@@ -333,18 +369,25 @@ msgid ""
 "the full support ('bugfix') period for new releases to two years. This "
 "updated policy means that:"
 msgstr ""
+":pep:`602` (\"Щорічний цикл випусків для Python\") було оновлено, щоб "
+"продовжити період повної підтримки ('виправлення помилок') для нових "
+"випусків до двох років. Це оновлене правило означає, що:"
 
 #: ../../whatsnew/3.13.rst:201
 msgid ""
 "Python 3.9--3.12 have one and a half years of full support, followed by "
 "three and a half years of security fixes."
 msgstr ""
+"Python 3.9--3.12 мають півтора роки повної підтримки, за якими слідують три "
+"з половиною роки виправлень безпеки."
 
 #: ../../whatsnew/3.13.rst:203
 msgid ""
 "Python 3.13 and later have two years of full support, followed by three "
 "years of security fixes."
 msgstr ""
+"Python 3.13 і пізніші версії мають два роки повної підтримки, за якими "
+"слідують три роки виправлень безпеки."
 
 #: ../../whatsnew/3.13.rst:208 ../../whatsnew/3.13.rst:1968
 msgid "New Features"
@@ -352,7 +395,7 @@ msgstr "Нові можливості"
 
 #: ../../whatsnew/3.13.rst:214
 msgid "A better interactive interpreter"
-msgstr ""
+msgstr "Кращий інтерактивний інтерпретатор"
 
 #: ../../whatsnew/3.13.rst:216
 msgid ""
@@ -360,10 +403,14 @@ msgid ""
 "from the `PyPy project`_. When the user starts the :term:`REPL` from an "
 "interactive terminal, the following new features are now supported:"
 msgstr ""
+"Python тепер за замовчуванням використовує нову :term:`інтерактивну` "
+"оболонку, засновану на коді з проекту `PyPy`_. Коли користувач запускає "
+":term:`REPL` з інтерактивного терміналу, тепер підтримуються такі нові "
+"функції:"
 
 #: ../../whatsnew/3.13.rst:221
 msgid "Multiline editing with history preservation."
-msgstr ""
+msgstr "Редагування кількох рядків з збереженням історії."
 
 #: ../../whatsnew/3.13.rst:222
 msgid ""
@@ -426,6 +473,9 @@ msgid ""
 "library module. When this results in errors, we now display a more helpful "
 "error message:"
 msgstr ""
+"Звичайною помилкою є написання скрипту з тією ж назвою, що й модуль "
+"стандартної бібліотеки. Коли це призводить до помилок, тепер ми відображаємо"
+" більш корисне повідомлення про помилку:"
 
 #: ../../whatsnew/3.13.rst:268
 msgid ""
@@ -445,6 +495,9 @@ msgid ""
 "attempts to import and this results in errors, we also display a more "
 "helpful error message:"
 msgstr ""
+"Аналогічно, якщо скрипт має таку ж назву, як модуль стороннього виробника, "
+"який він намагається імпортувати, і це призводить до помилок, ми також "
+"відображаємо більш корисне повідомлення про помилку:"
 
 #: ../../whatsnew/3.13.rst:283
 msgid ""
@@ -727,7 +780,7 @@ msgstr ""
 
 #: ../../whatsnew/3.13.rst:479
 msgid "Support for mobile platforms"
-msgstr ""
+msgstr "Підтримка мобільних платформ"
 
 #: ../../whatsnew/3.13.rst:481
 msgid ""
