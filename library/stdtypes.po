@@ -9,15 +9,16 @@
 # Dmytro Kazanzhy, 2023
 # CrispCrow, 2023
 # Yuliia Shevchenko, 2024
+# Pavlo Slavynskyy, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-18 14:17+0000\n"
+"POT-Creation-Date: 2024-10-26 20:15+0000\n"
 "PO-Revision-Date: 2021-06-28 01:13+0000\n"
-"Last-Translator: Yuliia Shevchenko, 2024\n"
+"Last-Translator: Pavlo Slavynskyy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,9 +51,10 @@ msgid ""
 "rearrange their members in place, and don't return a specific item, never "
 "return the collection instance itself but ``None``."
 msgstr ""
-"Деякі класи колекцій є змінними. Методи, які додають, віднімають або "
+"Деякі класи колекцій є мутабельними. Методи, які додають, віднімають або "
 "переставляють свої члени на місці, і не повертають конкретний елемент, "
-"ніколи не повертають сам екземпляр колекції, але ``Жодного``."
+"ніколи не повертають сам екземпляр колекції, а натомість повертають "
+"``None``."
 
 #: ../../library/stdtypes.rst:22
 msgid ""
@@ -70,16 +72,16 @@ msgstr ""
 
 #: ../../library/stdtypes.rst:32
 msgid "Truth Value Testing"
-msgstr "Перевірка правдивості"
+msgstr "Перевірка значення на істинність"
 
 #: ../../library/stdtypes.rst:41
 msgid ""
 "Any object can be tested for truth value, for use in an :keyword:`if` or "
 ":keyword:`while` condition or as operand of the Boolean operations below."
 msgstr ""
-"Будь-який об’єкт можна перевірити на значення істинності, для використання в"
-" умовах :keyword:`if` або :keyword:`while` або як операнд логічних операцій,"
-" наведених нижче."
+"Будь-який об’єкт можна перевірити на значення істинності для використання як"
+" умову в конструкціях :keyword:`if` або :keyword:`while` або як операнд "
+"булевих операцій, наведених нижче."
 
 #: ../../library/stdtypes.rst:46
 msgid ""
@@ -88,10 +90,15 @@ msgid ""
 ":meth:`~object.__len__` method that returns zero, when called with the "
 "object. [1]_  Here are most of the built-in objects considered false:"
 msgstr ""
+"За замовчуванням об'єкт вважається істинним, якщо його клас не визначає або "
+"метод :meth:`~object.__bool__`, що повертає ``False``, або метод "
+":meth:`~object.__len__`, що повертає нуль, коли викликати його для цього "
+"об'єкта. [1]_ Тут наведена більшість вбудованих об'єктів, що вважаються "
+"хибними:"
 
 #: ../../library/stdtypes.rst:56
 msgid "constants defined to be false: ``None`` and ``False``"
-msgstr ""
+msgstr "константи, визначені як хибні: ``None`` і ``False``"
 
 #: ../../library/stdtypes.rst:58
 msgid ""
@@ -116,19 +123,19 @@ msgid ""
 "otherwise stated. (Important exception: the Boolean operations ``or`` and "
 "``and`` always return one of their operands.)"
 msgstr ""
-"Операції та вбудовані функції, які мають логічний результат, завжди "
-"повертають ``0`` або ``False`` для false і ``1`` або ``True`` для true, якщо"
-" не вказано інше. (Важливий виняток: логічні операції \"або\" та \"і\" "
-"завжди повертають один із своїх операндів.)"
+"Операції та вбудовані функції, які мають булевий результат, завжди "
+"повертають ``0`` або ``False`` для хибного значення і ``1`` або ``True`` для"
+" істинного, якщо не вказано інше. (Важливий виняток: логічні операції ``or``"
+" та ``and`` завжди повертають один зі своїх операндів.)"
 
 #: ../../library/stdtypes.rst:79
 msgid ""
 "Boolean Operations --- :keyword:`!and`, :keyword:`!or`, :keyword:`!not`"
-msgstr "Логічні операції --- :keyword:`!and`, :keyword:`!or`, :keyword:`!not`"
+msgstr "Булеві операції --- :keyword:`!and`, :keyword:`!or`, :keyword:`!not`"
 
 #: ../../library/stdtypes.rst:83
 msgid "These are the Boolean operations, ordered by ascending priority:"
-msgstr "Це логічні операції, упорядковані за зростанням пріоритету:"
+msgstr "Ось булеві операції, впорядковані за зростанням пріоритету:"
 
 #: ../../library/stdtypes.rst:86 ../../library/stdtypes.rst:144
 #: ../../library/stdtypes.rst:276 ../../library/stdtypes.rst:366
@@ -152,11 +159,11 @@ msgstr "Примітки"
 
 #: ../../library/stdtypes.rst:88
 msgid "``x or y``"
-msgstr "``x або y``"
+msgstr "``x or y``"
 
 #: ../../library/stdtypes.rst:88
 msgid "if *x* is true, then *x*, else *y*"
-msgstr ""
+msgstr "якщо *x* є істинним, то *x*, інакше *y*"
 
 #: ../../library/stdtypes.rst:88 ../../library/stdtypes.rst:967
 #: ../../library/stdtypes.rst:970 ../../library/stdtypes.rst:1181
@@ -166,11 +173,11 @@ msgstr "\\(1)"
 
 #: ../../library/stdtypes.rst:91
 msgid "``x and y``"
-msgstr "``x і y``"
+msgstr "``x and y``"
 
 #: ../../library/stdtypes.rst:91
 msgid "if *x* is false, then *x*, else *y*"
-msgstr "якщо *x* false, тоді *x*, інакше *y*"
+msgstr "якщо *x* є хибним, тоді *x*, інакше *y*"
 
 #: ../../library/stdtypes.rst:91 ../../library/stdtypes.rst:289
 #: ../../library/stdtypes.rst:309 ../../library/stdtypes.rst:1209
@@ -181,11 +188,11 @@ msgstr "\\(2)"
 
 #: ../../library/stdtypes.rst:94
 msgid "``not x``"
-msgstr "``не x``"
+msgstr "``not x``"
 
 #: ../../library/stdtypes.rst:94
 msgid "if *x* is false, then ``True``, else ``False``"
-msgstr "якщо *x* false, тоді ``True``, інакше ``False``"
+msgstr "якщо *x* є хибним, тоді ``True``, інакше ``False``"
 
 #: ../../library/stdtypes.rst:94 ../../library/stdtypes.rst:979
 #: ../../library/stdtypes.rst:1212 ../../library/stdtypes.rst:2446
@@ -208,8 +215,8 @@ msgid ""
 "This is a short-circuit operator, so it only evaluates the second argument "
 "if the first one is false."
 msgstr ""
-"Це оператор короткого замикання, тому він обчислює лише другий аргумент, "
-"якщо перший невірний."
+"Це оператор зі скороченим обчисленням, тому він обчислює другий аргумент "
+"лише якщо перший є хибним."
 
 #: ../../library/stdtypes.rst:110
 msgid ""
@@ -241,10 +248,10 @@ msgid ""
 "cases *z* is not evaluated at all when ``x < y`` is found to be false)."
 msgstr ""
 "У Python є вісім операцій порівняння. Усі вони мають однаковий пріоритет "
-"(вищий, ніж у логічних операцій). Порівняння можна зв'язувати довільно; "
-"наприклад, ``x < y <= z`` еквівалентно ``x < y і y <= z``, за винятком того,"
-" що *y* обчислюється лише один раз (але в обох випадках *z* не обчислюється "
-"в все, коли ``x < y`` виявляється хибним)."
+"(вищий, ніж у булевих операцій). Порівняння можна довільно додавати у "
+"ланцюжки; наприклад, ``x < y <= z`` еквівалентно ``x < y and y <= z``, за "
+"винятком того, що *y* обчислюється лише один раз (але в обох випадках *z* "
+"узагалі не обчислюється, коли ``x < y`` виявляється хибним)."
 
 #: ../../library/stdtypes.rst:141
 msgid "This table summarizes the comparison operations:"
@@ -294,7 +301,7 @@ msgstr "``==``"
 
 #: ../../library/stdtypes.rst:154
 msgid "equal"
-msgstr "рівні"
+msgstr "дорівнює"
 
 #: ../../library/stdtypes.rst:156
 msgid "``!=``"
@@ -302,23 +309,23 @@ msgstr "``!=``"
 
 #: ../../library/stdtypes.rst:156
 msgid "not equal"
-msgstr "не рівні"
+msgstr "не дорівнює"
 
 #: ../../library/stdtypes.rst:158
 msgid "``is``"
-msgstr "``є``"
+msgstr "``is``"
 
 #: ../../library/stdtypes.rst:158
 msgid "object identity"
-msgstr "ідентичність об'єкта"
+msgstr "ідентичність об'єктів"
 
 #: ../../library/stdtypes.rst:160
 msgid "``is not``"
-msgstr "``не``"
+msgstr "``is not``"
 
 #: ../../library/stdtypes.rst:160
 msgid "negated object identity"
-msgstr "заперечена ідентичність об'єкта"
+msgstr "заперечення ідентичності об'єктів"
 
 #: ../../library/stdtypes.rst:167
 msgid ""
@@ -330,19 +337,19 @@ msgid ""
 "is a complex number."
 msgstr ""
 "Об’єкти різних типів, за винятком різних числових типів, ніколи не "
-"порівнюються. Оператор ``==`` завжди визначений, але для деяких типів "
-"об’єктів (наприклад, об’єктів класу) еквівалентний :keyword:`is`. Оператори "
-"``<``, ``<=``, ``>`` і ``>=`` визначені лише там, де вони мають сенс; "
-"наприклад, вони викликають виняток :exc:`TypeError`, коли один із аргументів"
-" є комплексним числом."
+"дорівнюють одне одному. Оператор ``==`` завжди визначений, але для деяких "
+"типів об’єктів (наприклад, об’єктів класу) еквівалентний :keyword:`is`. "
+"Оператори ``<``, ``<=``, ``>`` і ``>=`` визначені лише там, де вони мають "
+"сенс; наприклад, вони викликають виняток :exc:`TypeError`, коли один із "
+"аргументів є комплексним числом."
 
 #: ../../library/stdtypes.rst:181
 msgid ""
 "Non-identical instances of a class normally compare as non-equal unless the "
 "class defines the :meth:`~object.__eq__` method."
 msgstr ""
-"Неідентичні екземпляри класу зазвичай порівнюються як нерівні, якщо клас не "
-"визначає метод :meth:`~object.__eq__`."
+"Порівняння неідентичних екземплярів класу зазвичай дає хибний результат, "
+"якщо лише у класі не визначений метод :meth:`~object.__eq__`."
 
 #: ../../library/stdtypes.rst:184
 msgid ""
@@ -355,10 +362,10 @@ msgid ""
 msgstr ""
 "Екземпляри класу не можуть бути впорядковані відносно інших екземплярів того"
 " самого класу або інших типів об’єктів, якщо клас не визначає достатньо "
-"методів :meth:`~object.__lt__`, :meth:`~object.__le__` , "
-":meth:`~object.__gt__` і :meth:`~object.__ge__` (загалом, "
-":meth:`~object.__lt__` і :meth:`~object.__eq__` достатньо, якщо ви хочете "
-"звичайні значення операторів порівняння)."
+"методів :meth:`~object.__lt__`, "
+":meth:`~object.__le__`,:meth:`~object.__gt__` і :meth:`~object.__ge__` "
+"(зазвичай, методів :meth:`~object.__lt__` і :meth:`~object.__eq__` "
+"достатньо, якщо вас влаштовує звичайна поведінка операторів порівняння)."
 
 #: ../../library/stdtypes.rst:191
 msgid ""
@@ -376,6 +383,9 @@ msgid ""
 ":keyword:`not in`, are supported by types that are :term:`iterable` or "
 "implement the :meth:`~object.__contains__` method."
 msgstr ""
+"Ще дві операції з тим же синтаксичним пріоритетом, :keyword:`in` і "
+":keyword:`not in`, підтримуються типами, що є :term:`ітерабельними` чи "
+"реалізують метод :meth:`~object.__contains__`"
 
 #: ../../library/stdtypes.rst:206
 msgid "Numeric Types --- :class:`int`, :class:`float`, :class:`complex`"
@@ -396,6 +406,18 @@ msgid ""
 "rationals, and :mod:`decimal.Decimal`, for floating-point numbers with user-"
 "definable precision.)"
 msgstr ""
+"Існує три різних числових типи: :dfn:`цілі`, :dfn:`числа з рухомою комою` та"
+" :dfn:`комплексні числа`.  На додачу, булеві числа є підтипом цілих чисел.  "
+"Цілі числа мають необмежену точність.  Числа з рухомою комою зазвичай "
+"реалізуються за допомогою :c:expr:`double` у C; інформацію про точність та "
+"внутрішнє представлення чисел з рухомою комою для машини, на якій "
+"виконується ваша програма, можна знайти у :data:`sys.float_info`. Комплексні"
+" числа мають дійсну та уявну частини, кожна з яких є числом з рухомою комою."
+"  Щоб отримати ці частини з комплексного числа *z*, використовуйте "
+"``z.real`` та ``z.imag``. (Стандартна бібліотека включає додаткові числові "
+"типи :mod:`fractions.Fraction` для раціональних чисел та "
+":mod:`decimal.Decimal` для чисел з рухомою комою з точністю, визначеною "
+"користувачем)."
 
 #: ../../library/stdtypes.rst:238
 msgid ""
@@ -407,6 +429,14 @@ msgid ""
 " with a zero real part) which you can add to an integer or float to get a "
 "complex number with real and imaginary parts."
 msgstr ""
+"Числа створюються за допомогою числового літерала або як результат "
+"вбудованих функцій та операторів.  Неприкрашені цілочисельні літерали "
+"(включаючи шістнадцяткові, вісімкові та двійкові числа) дають цілі числа.  "
+"Числові літерали, що містять десяткову крапку або знак експоненти, дають "
+"числа з рухомою комою.  Додавання ``'j'`` або ``'J'`` до числового літерала "
+"дає уявне число (комплексне число з нульовою дійсною частиною), яке ви "
+"можете додати до цілого числа або до числа з рухомою комою, щоб отримати "
+"комплексне число з дійсною та уявною частинами."
 
 #: ../../library/stdtypes.rst:263
 msgid ""
@@ -419,10 +449,9 @@ msgid ""
 msgstr ""
 "Python повністю підтримує змішану арифметику: коли двійковий арифметичний "
 "оператор має операнди різних числових типів, операнд із \"вужчим\" типом "
-"розширюється до операнда іншого типу, де ціле число вужче за число з "
-"плаваючою крапкою, яке є вужчим за комплексний. Порівняння між числами "
-"різних типів поводиться так, ніби порівнюються точні значення цих чисел. "
-"[2]_"
+"розширюється до операнда іншого типу, де ціле число вужче за число з рухомою"
+" комою, яке є вужчим за комплексне. Порівняння між числами різних типів "
+"поводиться так, ніби порівнюються точні значення цих чисел. [2]_"
 
 #: ../../library/stdtypes.rst:269
 msgid ""
@@ -482,11 +511,11 @@ msgstr "``x // y``"
 
 #: ../../library/stdtypes.rst:286
 msgid "floored quotient of *x* and *y*"
-msgstr "частка *x* і *y*"
+msgstr "округлена донизу частка *x* і *y*"
 
 #: ../../library/stdtypes.rst:286
 msgid "\\(1)\\(2)"
-msgstr ""
+msgstr "\\(1)\\(2)"
 
 #: ../../library/stdtypes.rst:289
 msgid "``x % y``"
@@ -494,7 +523,7 @@ msgstr "``x % y``"
 
 #: ../../library/stdtypes.rst:289
 msgid "remainder of ``x / y``"
-msgstr "залишок ``x / y``"
+msgstr "остача від ``x / y``"
 
 #: ../../library/stdtypes.rst:291
 msgid "``-x``"
@@ -502,7 +531,7 @@ msgstr "``-x``"
 
 #: ../../library/stdtypes.rst:291
 msgid "*x* negated"
-msgstr "*x* заперечено"
+msgstr "протилежне *x*"
 
 #: ../../library/stdtypes.rst:293
 msgid "``+x``"
@@ -530,7 +559,7 @@ msgstr "``int(x)``"
 
 #: ../../library/stdtypes.rst:298
 msgid "*x* converted to integer"
-msgstr "*x* перетворено на ціле число"
+msgstr "*x*, перетворене на ціле число"
 
 #: ../../library/stdtypes.rst:298
 msgid "\\(3)\\(6)"
@@ -546,7 +575,7 @@ msgstr "``float(x)``"
 
 #: ../../library/stdtypes.rst:300
 msgid "*x* converted to floating point"
-msgstr "*x* перетворено на число з плаваючою комою"
+msgstr "*x*, перетворене на число з рухомою комою"
 
 #: ../../library/stdtypes.rst:300
 msgid "\\(4)\\(6)"
