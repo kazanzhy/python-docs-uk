@@ -384,8 +384,8 @@ msgid ""
 "implement the :meth:`~object.__contains__` method."
 msgstr ""
 "Ще дві операції з тим же синтаксичним пріоритетом, :keyword:`in` і "
-":keyword:`not in`, підтримуються типами, що є :term:`ітерабельними` чи "
-"реалізують метод :meth:`~object.__contains__`"
+":keyword:`not in`, підтримуються типами, що є :term:`ітерабельними "
+"<iterable>` чи реалізують метод :meth:`~object.__contains__`"
 
 #: ../../library/stdtypes.rst:206
 msgid "Numeric Types --- :class:`int`, :class:`float`, :class:`complex`"
@@ -659,14 +659,21 @@ msgid ""
 "always rounded towards minus infinity: ``1//2`` is ``0``, ``(-1)//2`` is "
 "``-1``, ``1//(-2)`` is ``-1``, and ``(-1)//(-2)`` is ``0``."
 msgstr ""
+"Інша назва - цілочисельне ділення.  Для операндів типу :class:`int` "
+"результат має тип :class:`int`.  Для операндів типу :class:`float` результат"
+" має тип :class:`float`.  У загальному випадку результатом є ціле число, "
+"хоча тип результату не обов'язково :class:`int`.  Результат завжди "
+"округлюється в бік мінус нескінченності: ``1//2`` дорівнює ``0``, "
+"``(-1)//2`` дорівнює ``-1``, ``1//(-2)`` дорівнює ``-1``, а ``(-1)//(-2)`` "
+"дорівнює ``0``."
 
 #: ../../library/stdtypes.rst:331
 msgid ""
 "Not for complex numbers.  Instead convert to floats using :func:`abs` if "
 "appropriate."
 msgstr ""
-"Не для комплексних чисел. Натомість конвертуйте у числа з плаваючою точкою "
-"за допомогою :func:`abs`, якщо це доречно."
+"Не для комплексних чисел. Натомість конвертуйте у числа з рухомою комою за "
+"допомогою :func:`abs`, якщо це доречно."
 
 #: ../../library/stdtypes.rst:342
 msgid ""
@@ -674,6 +681,9 @@ msgid ""
 "fractional part. See functions :func:`math.floor` and :func:`math.ceil` for "
 "alternative conversions."
 msgstr ""
+"При перетворенні :class:`float` в :class:`int` відбувається усічення, "
+"дробова частина відкидається. Дивіться функції :func:`math.floor` та "
+":func:`math.ceil` для альтернативних перетворень."
 
 #: ../../library/stdtypes.rst:347
 msgid ""
@@ -681,7 +691,8 @@ msgid ""
 "\"+\" or \"-\" for Not a Number (NaN) and positive or negative infinity."
 msgstr ""
 "float також приймає рядки \"nan\" і \"inf\" з необов'язковим префіксом \"+\""
-" або \"-\" для Not a Number (NaN) і додатною або від'ємною нескінченністю."
+" або \"-\" на позначення Not a Number (NaN, Не Число) і додатною або "
+"від'ємною нескінченністю."
 
 #: ../../library/stdtypes.rst:351
 msgid ""
@@ -697,7 +708,7 @@ msgid ""
 "Unicode equivalent (code points with the ``Nd`` property)."
 msgstr ""
 "Прийнятні числові літерали включають цифри від ``0`` до ``9`` або будь-який "
-"еквівалент Unicode (кодові точки з властивістю ``Nd``)."
+"еквівалент Unicode (кодові пункти з властивістю ``Nd``)."
 
 #: ../../library/stdtypes.rst:358
 msgid ""
@@ -705,6 +716,8 @@ msgid ""
 "<https://unicode.org/Public/UNIDATA/extracted/DerivedNumericType.txt>`_ for "
 "a complete list of code points with the ``Nd`` property."
 msgstr ""
+"Повний список кодових пунктів з властивістю ``Nd`` див. у `Стандарті Юнікоду"
+" <https://unicode.org/Public/UNIDATA/extracted/DerivedNumericType.txt>`_."
 
 #: ../../library/stdtypes.rst:362
 msgid ""
@@ -720,7 +733,7 @@ msgstr ":func:`math.trunc(\\ x) <math.trunc>`"
 
 #: ../../library/stdtypes.rst:368
 msgid "*x* truncated to :class:`~numbers.Integral`"
-msgstr "*x* скорочено до :class:`~numbers.Integral`"
+msgstr "*x*, усічене до :class:`~numbers.Integral`"
 
 #: ../../library/stdtypes.rst:371
 msgid ":func:`round(x[, n]) <round>`"
@@ -731,8 +744,8 @@ msgid ""
 "*x* rounded to *n* digits, rounding half to even. If *n* is omitted, it "
 "defaults to 0."
 msgstr ""
-"*x* округлено до *n* цифр, округлення половини до парного числа. Якщо *n* "
-"опущено, за умовчанням дорівнює 0."
+"*x*, округлене до *n* цифр, з округленням половини до парного числа. Якщо "
+"*n* опущено, за замовчанням дорівнює 0."
 
 #: ../../library/stdtypes.rst:375
 msgid ":func:`math.floor(\\ x) <math.floor>`"
@@ -768,7 +781,7 @@ msgid ""
 "operations is calculated as though carried out in two's complement with an "
 "infinite number of sign bits."
 msgstr ""
-"Побітові операції мають сенс лише для цілих чисел. Результат порозрядних "
+"Побітові операції мають сенс лише для цілих чисел. Результат побітових "
 "операцій обчислюється так, ніби виконується в доповненні до двох із "
 "нескінченною кількістю знакових бітів."
 
@@ -779,7 +792,7 @@ msgid ""
 "``~`` has the same priority as the other unary numeric operations (``+`` and"
 " ``-``)."
 msgstr ""
-"Пріоритети двійкових порозрядних операцій нижчі, ніж числових операцій, і "
+"Пріоритети двійкових побітових операцій нижчі, ніж числових операцій, і "
 "вищі, ніж порівняння; унарна операція ``~`` має той самий пріоритет, що й "
 "інші унарні числові операції (``+`` і ``-``)."
 
@@ -795,7 +808,7 @@ msgstr "``x | y``"
 
 #: ../../library/stdtypes.rst:418
 msgid "bitwise :dfn:`or` of *x* and *y*"
-msgstr "порозрядно :dfn:`or` *x* і *y*"
+msgstr "побітове :dfn:`або` *x* і *y*"
 
 #: ../../library/stdtypes.rst:418 ../../library/stdtypes.rst:421
 #: ../../library/stdtypes.rst:424 ../../library/stdtypes.rst:1216
@@ -810,7 +823,7 @@ msgstr "``x ^ y``"
 
 #: ../../library/stdtypes.rst:421
 msgid "bitwise :dfn:`exclusive or` of *x* and *y*"
-msgstr "порозрядно :dfn:`exclusive or` *x* та *y*"
+msgstr "побітове :dfn:`виключне або` *x* і *y*"
 
 #: ../../library/stdtypes.rst:424
 msgid "``x & y``"
@@ -818,7 +831,7 @@ msgstr "``x & y``"
 
 #: ../../library/stdtypes.rst:424
 msgid "bitwise :dfn:`and` of *x* and *y*"
-msgstr "порозрядно :dfn:`and` *x* і *y*"
+msgstr "побітове :dfn:`і` *x* і *y*"
 
 #: ../../library/stdtypes.rst:427
 msgid "``x << n``"
@@ -826,7 +839,7 @@ msgstr "``x << n``"
 
 #: ../../library/stdtypes.rst:427
 msgid "*x* shifted left by *n* bits"
-msgstr "*x* зміщено вліво на *n* бітів"
+msgstr "*x*, зсунуте ліворуч на *n* бітів"
 
 #: ../../library/stdtypes.rst:427
 msgid "(1)(2)"
@@ -838,7 +851,7 @@ msgstr "``x >> n``"
 
 #: ../../library/stdtypes.rst:429
 msgid "*x* shifted right by *n* bits"
-msgstr "*x* зміщено праворуч на *n* бітів"
+msgstr "*x*, зсунуте праворуч на *n* бітів"
 
 #: ../../library/stdtypes.rst:429
 msgid "(1)(3)"
@@ -850,25 +863,24 @@ msgstr "``~x``"
 
 #: ../../library/stdtypes.rst:431
 msgid "the bits of *x* inverted"
-msgstr "біти *x* інвертовані"
+msgstr "інвертовані біти *x* "
 
 #: ../../library/stdtypes.rst:437
 msgid ""
 "Negative shift counts are illegal and cause a :exc:`ValueError` to be "
 "raised."
-msgstr ""
-"Підрахунок від’ємного зсуву є незаконним і викликає :exc:`ValueError`."
+msgstr "Зсуви на від'ємне число є неприпустимим і викликає :exc:`ValueError`."
 
 #: ../../library/stdtypes.rst:440
 msgid ""
 "A left shift by *n* bits is equivalent to multiplication by ``pow(2, n)``."
-msgstr "Зсув вліво на *n* бітів еквівалентний множенню на ``pow(2, n)``."
+msgstr "Зсув ліворуч на *n* бітів еквівалентний множенню на ``pow(2, n)``."
 
 #: ../../library/stdtypes.rst:443
 msgid ""
 "A right shift by *n* bits is equivalent to floor division by ``pow(2, n)``."
 msgstr ""
-"Зсув праворуч на *n* бітів еквівалентний діленню підлоги за допомогою "
+"Зсув праворуч на *n* бітів еквівалентний діленню з округленням донизу на "
 "``pow(2, n)``."
 
 #: ../../library/stdtypes.rst:446
@@ -879,9 +891,9 @@ msgid ""
 " result as if there were an infinite number of sign bits."
 msgstr ""
 "Виконання цих обчислень із принаймні одним додатковим бітом розширення знака"
-" в поданні скінченних двох доповнень (робоча бітова ширина ``1 + "
-"max(x.bit_length(), y.bit_length())`` або більше) є достатньою для отримати "
-"той самий результат, ніби існує нескінченна кількість знакових бітів."
+" в скінченному поданні доповнення до двох (робоча бітова ширина ``1 + "
+"max(x.bit_length(), y.bit_length())`` або більше) є достатньою для отримання"
+" того самого результату, що й для нескінченної кількості знакових бітів."
 
 #: ../../library/stdtypes.rst:453
 msgid "Additional Methods on Integer Types"
@@ -892,8 +904,8 @@ msgid ""
 "The int type implements the :class:`numbers.Integral` :term:`abstract base "
 "class`. In addition, it provides a few more methods:"
 msgstr ""
-"Тип int реалізує :class:`numbers.Integral` :term:`abstract base class`. Крім"
-" того, він надає ще кілька методів:"
+"Тип int реалізує :term:`абстрактний базовий клас <abstract base class>` "
+":class:`numbers.Integral`. Крім того, він надає ще кілька методів:"
 
 #: ../../library/stdtypes.rst:460
 msgid ""
@@ -911,6 +923,11 @@ msgid ""
 ">>> n.bit_length()\n"
 "6"
 msgstr ""
+">>> n = -37\n"
+">>> bin(n)\n"
+"'-0b100101'\n"
+">>> n.bit_length()\n"
+"6"
 
 #: ../../library/stdtypes.rst:469
 msgid ""
@@ -929,7 +946,7 @@ msgstr ""
 #: ../../library/stdtypes.rst:475 ../../library/stdtypes.rst:498
 #: ../../library/stdtypes.rst:543 ../../library/stdtypes.rst:587
 msgid "Equivalent to::"
-msgstr "Дорівнює::"
+msgstr "Еквівалентне::"
 
 #: ../../library/stdtypes.rst:477
 msgid ""
@@ -938,6 +955,10 @@ msgid ""
 "    s = s.lstrip('-0b') # remove leading zeros and minus sign\n"
 "    return len(s)       # len('100101') --> 6"
 msgstr ""
+"def bit_length(self):\n"
+"    s = bin(self)       # binary representation:  bin(-37) --> '-0b100101'\n"
+"    s = s.lstrip('-0b') # remove leading zeros and minus sign\n"
+"    return len(s)       # len('100101') --> 6"
 
 #: ../../library/stdtypes.rst:486
 msgid ""
@@ -945,7 +966,7 @@ msgid ""
 " of the integer. This is also known as the population count. Example::"
 msgstr ""
 "Повертає кількість одиниць у двійковому представленні абсолютного значення "
-"цілого числа. Це також відомо як підрахунок населення. Приклад::"
+"цілого числа. Приклад::"
 
 #: ../../library/stdtypes.rst:490
 msgid ""
@@ -957,12 +978,21 @@ msgid ""
 ">>> (-n).bit_count()\n"
 "3"
 msgstr ""
+">>> n = 19\n"
+">>> bin(n)\n"
+"'0b10011'\n"
+">>> n.bit_count()\n"
+"3\n"
+">>> (-n).bit_count()\n"
+"3"
 
 #: ../../library/stdtypes.rst:500
 msgid ""
 "def bit_count(self):\n"
 "    return bin(self).count(\"1\")"
 msgstr ""
+"def bit_count(self):\n"
+"    return bin(self).count(\"1\")"
 
 #: ../../library/stdtypes.rst:507
 msgid "Return an array of bytes representing an integer."
@@ -974,6 +1004,9 @@ msgid ""
 ":exc:`OverflowError` is raised if the integer is not representable with the "
 "given number of bytes."
 msgstr ""
+"Ціле число представляється за допомогою *length* байтів і за замовчуванням "
+"дорівнює 1.  Якщо ціле число не може бути представлено заданою кількістю "
+"байтів, генерується виняток :exc:`OverflowError`"
 
 #: ../../library/stdtypes.rst:523
 msgid ""
@@ -983,6 +1016,11 @@ msgid ""
 " is ``\"little\"``, the most significant byte is at the end of the byte "
 "array."
 msgstr ""
+"Аргумент *byteorder* визначає порядок байтів, що використовується для "
+"представлення цілого числа, і за замовчуванням дорівнює ``\"big\"``.  Якщо "
+"*byteorder* дорівнює ``\"big\"``, найзначущий байт знаходиться на початку "
+"масиву байтів. Якщо *byteorder* дорівнює ``\"little\"``, найзначущий байт "
+"знаходиться в кінці масиву байтів"
 
 #: ../../library/stdtypes.rst:529
 msgid ""
@@ -992,8 +1030,8 @@ msgid ""
 "``False``."
 msgstr ""
 "Аргумент *signed* визначає, чи використовується доповнення до двох для "
-"представлення цілого числа. Якщо *signed* має значення ``False`` і вказано "
-"від’ємне ціле число, виникає :exc:`OverflowError`. Значенням за "
+"представлення цілого числа. Якщо *signed* дорівнює ``False`` і вказане "
+"від’ємне ціле число, генерується виняток :exc:`OverflowError`. Значенням за "
 "замовчуванням для *signed* є ``False``."
 
 #: ../../library/stdtypes.rst:534
@@ -1001,18 +1039,24 @@ msgid ""
 "The default values can be used to conveniently turn an integer into a single"
 " byte object::"
 msgstr ""
+"Значення за замовчуванням зручно застосовувати для перетворення цілого числа"
+" в однобайтовий об'єкт::"
 
 #: ../../library/stdtypes.rst:537
 msgid ""
 ">>> (65).to_bytes()\n"
 "b'A'"
 msgstr ""
+">>> (65).to_bytes()\n"
+"b'A'"
 
 #: ../../library/stdtypes.rst:540
 msgid ""
 "However, when using the default arguments, don't try to convert a value "
 "greater than 255 or you'll get an :exc:`OverflowError`."
 msgstr ""
+"Однак, використовуючи аргумент за замовчуванням, не намагайтеся перетворити "
+"значення, більші за 255, інакше ви отримаєте :exc:`OverflowError`."
 
 #: ../../library/stdtypes.rst:545
 msgid ""
@@ -1026,10 +1070,20 @@ msgid ""
 "\n"
 "    return bytes((n >> i*8) & 0xff for i in order)"
 msgstr ""
+"def to_bytes(n, довжина=1, byteorder='big', signed=False):\n"
+"    if byteorder == 'little':\n"
+"        order = range(довжина)\n"
+"    elif byteorder == 'big':\n"
+"        order = reversed(range(довжина))\n"
+"    else:\n"
+"        raise ValueError(\"порядок байт повинен бути або 'little' або 'big'\")\n"
+"\n"
+"    повертати bytes((n >> i*8) & 0xff для i в порядку)"
 
 #: ../../library/stdtypes.rst:556
 msgid "Added default argument values for ``length`` and ``byteorder``."
 msgstr ""
+"Додано значення аргументів за замовчуванням для ``length`` та ``byteorder``."
 
 #: ../../library/stdtypes.rst:561
 msgid "Return the integer represented by the given array of bytes."
@@ -1040,8 +1094,8 @@ msgid ""
 "The argument *bytes* must either be a :term:`bytes-like object` or an "
 "iterable producing bytes."
 msgstr ""
-"Аргумент *bytes* має бути або :term:`bytes-like object`, або ітерованим, що "
-"створює байти."
+"Аргумент *bytes* має бути або :term:`байт-подібним об'єктом <bytes-like "
+"object>`, або ітерабельним об'єктом, що створює байти."
 
 #: ../../library/stdtypes.rst:577
 msgid ""
@@ -1052,6 +1106,11 @@ msgid ""
 "array.  To request the native byte order of the host system, use "
 ":data:`sys.byteorder` as the byte order value."
 msgstr ""
+"Аргумент *byteorder* визначає порядок байтів, що використовується для "
+"представлення цілого числа, і за замовчуванням дорівнює ``\"big\"``. Якщо "
+"*byteorder* дорівнює ``\"big\"``, найзначущий байт знаходиться на початку "
+"масиву байтів. Якщо *byteorder* дорівнює ``\"little\"``, найзначущий байт "
+"знаходиться в кінці масиву байтів"
 
 #: ../../library/stdtypes.rst:584
 msgid ""
@@ -1077,10 +1136,23 @@ msgid ""
 "\n"
 "    return n"
 msgstr ""
+"def from_bytes(bytes, byteorder='big', signed=False):\n"
+"    if byteorder == 'little':\n"
+"        little_ordered = list(bytes)\n"
+"    elif byteorder == 'big':\n"
+"        little_ordered = list(reversed(bytes))\n"
+"    else:\n"
+"        raise ValueError(\"byteorder must be either 'little' or 'big'\")\n"
+"\n"
+"    n = sum(b << i*8 for i, b in enumerate(little_ordered))\n"
+"    if signed and little_ordered and (little_ordered[-1] & 0x80):\n"
+"        n -= 1 << 8*len(little_ordered)\n"
+"\n"
+"    return n"
 
 #: ../../library/stdtypes.rst:604
 msgid "Added default argument value for ``byteorder``."
-msgstr ""
+msgstr "Додано значення аргументу за замовчуванням ``byteorder``."
 
 #: ../../library/stdtypes.rst:609
 msgid ""
@@ -1088,12 +1160,17 @@ msgid ""
 "has a positive denominator.  The integer ratio of integers (whole numbers) "
 "is always the integer as the numerator and ``1`` as the denominator."
 msgstr ""
+"Повертає пару цілих чисел, відношення яких дорівнює вихідному цілому числу і"
+" має додатний знаменник.  Цілочисельне відношення цілих чисел завжди має "
+"ціле число у чисельнику та ``1`` у знаменнику."
 
 #: ../../library/stdtypes.rst:618
 msgid ""
 "Returns ``True``. Exists for duck type compatibility with "
 ":meth:`float.is_integer`."
 msgstr ""
+"Повертає ``True``. Існує для сумісності за \"качиною типізацією\" з "
+":meth:`float.is_integer`."
 
 #: ../../library/stdtypes.rst:623
 msgid "Additional Methods on Float"
@@ -1104,8 +1181,8 @@ msgid ""
 "The float type implements the :class:`numbers.Real` :term:`abstract base "
 "class`. float also has the following additional methods."
 msgstr ""
-"Тип float реалізує :class:`numbers.Real` :term:`abstract base class`. float "
-"також має такі додаткові методи."
+"Тип float реалізує :class:`numbers.Real` :term:`абстрактний базовий клас "
+"<abstract base class>`. float також має такі додаткові методи."
 
 #: ../../library/stdtypes.rst:630
 msgid ""
@@ -1113,6 +1190,9 @@ msgid ""
 "float. The ratio is in lowest terms and has a positive denominator.  Raises "
 ":exc:`OverflowError` on infinities and a :exc:`ValueError` on NaNs."
 msgstr ""
+"Повертає пару цілих чисел, чиє співвідношення точно дорівнює вихідному числу"
+" з рухомою комою. Відношення спрощене і має додатний знаменник.  Генерує "
+":exc:`OverflowError` на нескінченностях та :exc:`ValueError` на NaN."
 
 #: ../../library/stdtypes.rst:637
 msgid ""
@@ -1129,6 +1209,10 @@ msgid ""
 ">>> (3.2).is_integer()\n"
 "False"
 msgstr ""
+">>> (-2.0).is_integer()\n"
+"True\n"
+">>> (3.2).is_integer()\n"
+"False"
 
 #: ../../library/stdtypes.rst:645
 msgid ""
