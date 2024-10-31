@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Dmytro Kazanzhy, 2024
+# Pavlo Slavynskyy, 2024
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-04 14:17+0000\n"
+"POT-Creation-Date: 2024-10-26 20:15+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
-"Last-Translator: Dmytro Kazanzhy, 2024\n"
+"Last-Translator: Pavlo Slavynskyy, 2024\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -83,6 +84,10 @@ msgid ""
 "formats (``s#``, ``y#``, etc.) explained below. This is not necessary on "
 "Python 3.13 and later."
 msgstr ""
+"Для Python 3.12 і старших версій, макрос :c:macro:`!PY_SSIZE_T_CLEAN`має "
+"бути визначено перед включенням :file:`Python.h`, щоб скористатися усіма "
+"варіантами форматів ``#``  (``s#``, ``y#`` і т.п.), про які йдеться нижче. "
+"Його можна не визначати для Python 3.13 і пізніших версій."
 
 #: ../../c-api/arg.rst:42
 msgid ""
@@ -99,7 +104,7 @@ msgstr "Якщо не зазначено інше, буфери не завер�
 
 #: ../../c-api/arg.rst:48
 msgid "There are three ways strings and buffers can be converted to C:"
-msgstr ""
+msgstr "Є три способи конвертування рядків і буферів для використання в C:"
 
 #: ../../c-api/arg.rst:50
 msgid ""
@@ -110,6 +115,13 @@ msgid ""
 "call** :c:func:`PyBuffer_Release` after you have finished processing the "
 "data (or in any early abort case)."
 msgstr ""
+"Такі формати, як ``y*`` і ``s*``, заповнюють структуру :c:type:`Py_buffer`. "
+"Це блокує буфер, що лежить в основі, щоб функція, що викликала, могла згодом"
+" використовувати буфер навіть всередині блоку "
+":c:type:`Py_BEGIN_ALLOW_THREADS` без ризику, що мутабельні дані будуть "
+"змінені або знищені. В результаті, **ви маєте викликати** "
+":c:func:`PyBuffer_Release` після того, як ви закінчите обробку даних (або в "
+"будь-якому випадку дострокового переривання)."
 
 #: ../../c-api/arg.rst:57
 msgid ""
