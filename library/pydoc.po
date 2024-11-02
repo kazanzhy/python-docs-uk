@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-11 14:17+0000\n"
+"POT-Creation-Date: 2024-11-01 14:17+0000\n"
 "PO-Revision-Date: 2021-06-28 01:12+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -91,15 +91,13 @@ msgstr ""
 #: ../../library/pydoc.rst:54
 msgid ""
 "When printing output to the console, :program:`pydoc` attempts to paginate "
-"the output for easier reading.  If the :envvar:`PAGER` environment variable "
-"is set, :program:`pydoc` will use its value as a pagination program."
+"the output for easier reading.  If either the :envvar:`MANPAGER` or the "
+":envvar:`PAGER` environment variable is set, :program:`pydoc` will use its "
+"value as a pagination program. When both are set, :envvar:`MANPAGER` is "
+"used."
 msgstr ""
-"Під час друку виведення на консоль :program:`pydoc` намагається розбити "
-"вивід на сторінки для легшого читання. Якщо встановлено змінну середовища "
-":envvar:`PAGER`, :program:`pydoc` використовуватиме її значення як програму "
-"розбиття на сторінки."
 
-#: ../../library/pydoc.rst:58
+#: ../../library/pydoc.rst:59
 msgid ""
 "Specifying a ``-w`` flag before the argument will cause HTML documentation "
 "to be written out to a file in the current directory, instead of displaying "
@@ -108,7 +106,7 @@ msgstr ""
 "Якщо вказати прапорець ``-w`` перед аргументом, документація HTML буде "
 "записана у файл у поточному каталозі замість відображення тексту на консолі."
 
-#: ../../library/pydoc.rst:62
+#: ../../library/pydoc.rst:63
 msgid ""
 "Specifying a ``-k`` flag before the argument will search the synopsis lines "
 "of all available modules for the keyword given as the argument, again in a "
@@ -120,7 +118,7 @@ msgstr ""
 " модулів, знову ж таки, як у команді Unix :program:`man`. Рядок короткого "
 "опису модуля є першим рядком рядка документації."
 
-#: ../../library/pydoc.rst:67
+#: ../../library/pydoc.rst:68
 msgid ""
 "You can also use :program:`pydoc` to start an HTTP server on the local "
 "machine that will serve documentation to visiting web browsers.  "
@@ -130,7 +128,7 @@ msgid ""
 "an arbitrary unused port."
 msgstr ""
 
-#: ../../library/pydoc.rst:73
+#: ../../library/pydoc.rst:74
 msgid ""
 ":program:`python -m pydoc -n <hostname>` will start the server listening at "
 "the given hostname.  By default the hostname is 'localhost' but if you want "
@@ -139,7 +137,7 @@ msgid ""
 "especially useful if you want to run pydoc from within a container."
 msgstr ""
 
-#: ../../library/pydoc.rst:79
+#: ../../library/pydoc.rst:80
 msgid ""
 ":program:`python -m pydoc -b` will start the server and additionally open a "
 "web browser to a module index page.  Each served page has a navigation bar "
@@ -148,7 +146,7 @@ msgid ""
 " *Topics* and *Keywords* pages."
 msgstr ""
 
-#: ../../library/pydoc.rst:85
+#: ../../library/pydoc.rst:86
 msgid ""
 "When :program:`pydoc` generates documentation, it uses the current "
 "environment and path to locate modules.  Thus, invoking :program:`pydoc "
@@ -160,7 +158,7 @@ msgstr ""
 "spam` документує саме ту версію модуля, яку ви отримаєте, якщо запустите "
 "інтерпретатор Python і введете ``import spam``."
 
-#: ../../library/pydoc.rst:90
+#: ../../library/pydoc.rst:91
 msgid ""
 "Module docs for core modules are assumed to reside in "
 "``https://docs.python.org/X.Y/library/`` where ``X`` and ``Y`` are the major"
@@ -170,22 +168,22 @@ msgid ""
 "Manual pages."
 msgstr ""
 
-#: ../../library/pydoc.rst:97
+#: ../../library/pydoc.rst:98
 msgid "Added the ``-b`` option."
 msgstr "Додано опцію ``-b``."
 
-#: ../../library/pydoc.rst:100
+#: ../../library/pydoc.rst:101
 msgid "The ``-g`` command line option was removed."
 msgstr "Параметр командного рядка ``-g`` видалено."
 
-#: ../../library/pydoc.rst:103
+#: ../../library/pydoc.rst:104
 msgid ""
 ":mod:`!pydoc` now uses :func:`inspect.signature` rather than "
 ":func:`inspect.getfullargspec` to extract signature information from "
 "callables."
 msgstr ""
 
-#: ../../library/pydoc.rst:108
+#: ../../library/pydoc.rst:109
 msgid "Added the ``-n`` option."
 msgstr "Додано опцію ``-n``."
 
