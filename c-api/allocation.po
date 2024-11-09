@@ -5,7 +5,6 @@
 # 
 # Translators:
 # Dmytro Kazanzhy, 2022
-# Anastasiia Derevianko <anastasiia1010@gmail.com>, 2023
 # Ivan Prytula, 2023
 # 
 #, fuzzy
@@ -13,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-01 14:17+0000\n"
+"POT-Creation-Date: 2024-11-08 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 00:47+0000\n"
 "Last-Translator: Ivan Prytula, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -30,17 +29,11 @@ msgstr "Розміщення об'єктів у купі"
 #: ../../c-api/allocation.rst:17
 msgid ""
 "Initialize a newly allocated object *op* with its type and initial "
-"reference.  Returns the initialized object.  If *type* indicates that the "
-"object participates in the cyclic garbage detector, it is added to the "
-"detector's set of observed objects. Other fields of the object are not "
-"affected."
+"reference.  Returns the initialized object.  Other fields of the object are "
+"not affected."
 msgstr ""
-"Ініціалізуйте щойно зарезервований об’єкт *op* з його типом і початковим "
-"посиланням. Повертає ініціалізований об'єкт. Якщо *type* вказує на те, що "
-"об’єкт бере участь у циклічному детекторі сміття, він додається до набору "
-"спостережуваних об’єктів детектора. Інші поля об'єкта не зачіпаються."
 
-#: ../../c-api/allocation.rst:26
+#: ../../c-api/allocation.rst:24
 msgid ""
 "This does everything :c:func:`PyObject_Init` does, and also initializes the "
 "length information for a variable-size object."
@@ -48,7 +41,7 @@ msgstr ""
 "Це робить все, що робить :c:func:`PyObject_Init`, а також ініціалізує "
 "інформацію про довжину для об’єкта змінного розміру."
 
-#: ../../c-api/allocation.rst:32
+#: ../../c-api/allocation.rst:30
 msgid ""
 "Allocate a new Python object using the C structure type *TYPE* and the "
 "Python type object *typeobj* (``PyTypeObject*``). Fields not defined by the "
@@ -58,7 +51,7 @@ msgid ""
 ":c:member:`~PyTypeObject.tp_basicsize` field of the type object."
 msgstr ""
 
-#: ../../c-api/allocation.rst:43
+#: ../../c-api/allocation.rst:41
 msgid ""
 "Allocate a new Python object using the C structure type *TYPE* and the "
 "Python type object *typeobj* (``PyTypeObject*``). Fields not defined by the "
@@ -79,7 +72,7 @@ msgstr ""
 "розмір під час конструювання.  Вбудовування масиву полів в один розподіл "
 "зменшує кількість розподілів, покращуючи ефективність управління пам'яттю."
 
-#: ../../c-api/allocation.rst:57
+#: ../../c-api/allocation.rst:55
 msgid ""
 "Releases memory allocated to an object using :c:macro:`PyObject_New` or "
 ":c:macro:`PyObject_NewVar`.  This is normally called from the "
@@ -93,7 +86,7 @@ msgstr ""
 " виклику не слід звертатися до полів об'єкта, оскільки пам'ять більше не є "
 "дійсним об'єктом Python."
 
-#: ../../c-api/allocation.rst:66
+#: ../../c-api/allocation.rst:64
 msgid ""
 "Object which is visible in Python as ``None``.  This should only be accessed"
 " using the :c:macro:`Py_None` macro, which evaluates to a pointer to this "
@@ -103,10 +96,10 @@ msgstr ""
 " допомогою макросу :c:macro:`Py_None`, який обчислює вказівник на цей "
 "об’єкт."
 
-#: ../../c-api/allocation.rst:73
+#: ../../c-api/allocation.rst:71
 msgid ":c:func:`PyModule_Create`"
 msgstr ":c:func:`PyModule_Create`"
 
-#: ../../c-api/allocation.rst:74
+#: ../../c-api/allocation.rst:72
 msgid "To allocate and create extension modules."
 msgstr "Для розміщення та створення модулів розширення."
