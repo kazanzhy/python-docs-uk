@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-26 20:15+0000\n"
+"POT-Creation-Date: 2024-11-08 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 00:57+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2022\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -200,7 +200,7 @@ msgstr ""
 " Зауважте також, що ключі в розділах нечутливі до регістру та зберігаються в"
 " нижньому регістрі [1]_."
 
-#: ../../library/configparser.rst:148 ../../library/configparser.rst:993
+#: ../../library/configparser.rst:148 ../../library/configparser.rst:1003
 msgid ""
 "It is possible to read several configurations into a single "
 ":class:`ConfigParser`, where the most recently added configuration has the "
@@ -210,13 +210,13 @@ msgid ""
 " keys from the ``example.ini`` file."
 msgstr ""
 
-#: ../../library/configparser.rst:155 ../../library/configparser.rst:1000
+#: ../../library/configparser.rst:155 ../../library/configparser.rst:1010
 msgid ""
 "[DEFAULT]\n"
 "ServerAliveInterval = -1"
 msgstr ""
 
-#: ../../library/configparser.rst:160 ../../library/configparser.rst:1005
+#: ../../library/configparser.rst:160 ../../library/configparser.rst:1015
 msgid ""
 ">>> config_override = configparser.ConfigParser()\n"
 ">>> config_override['DEFAULT'] = {'ServerAliveInterval': '-1'}\n"
@@ -1434,7 +1434,7 @@ msgstr ""
 msgid "ConfigParser Objects"
 msgstr "Об’єкти ConfigParser"
 
-#: ../../library/configparser.rst:947
+#: ../../library/configparser.rst:953
 msgid ""
 "The main configuration parser.  When *defaults* is given, it is initialized "
 "into the dictionary of intrinsic defaults.  When *dict_type* is given, it "
@@ -1446,7 +1446,7 @@ msgstr ""
 "*dict_type*, він використовуватиметься для створення об’єктів словника для "
 "списку розділів, параметрів у розділі та значень за замовчуванням."
 
-#: ../../library/configparser.rst:952
+#: ../../library/configparser.rst:958
 msgid ""
 "When *delimiters* is given, it is used as the set of substrings that divide "
 "keys from values.  When *comment_prefixes* is given, it will be used as the "
@@ -1461,7 +1461,7 @@ msgstr ""
 "*inline_comment_prefixes*, воно використовуватиметься як набір підрядків, "
 "які додають коментарі до непорожніх рядків."
 
-#: ../../library/configparser.rst:958
+#: ../../library/configparser.rst:964
 msgid ""
 "When *strict* is ``True`` (the default), the parser won't allow for any "
 "section or option duplicates while reading from a single source (file, "
@@ -1484,7 +1484,7 @@ msgstr ""
 "параметри без значень приймаються; значенням, яке зберігається для них, є "
 "``None``, і вони серіалізуються без кінцевого розділювача."
 
-#: ../../library/configparser.rst:968
+#: ../../library/configparser.rst:974
 msgid ""
 "When *default_section* is given, it specifies the name for the special "
 "section holding default values for other sections and interpolation purposes"
@@ -1494,7 +1494,7 @@ msgid ""
 " settings to a new config file."
 msgstr ""
 
-#: ../../library/configparser.rst:975
+#: ../../library/configparser.rst:981
 msgid ""
 "Interpolation behaviour may be customized by providing a custom handler "
 "through the *interpolation* argument. ``None`` can be used to turn off "
@@ -1508,7 +1508,7 @@ msgstr ""
 "варіант, натхненний ``zc.buildout``. Більше про цю тему див. у розділі "
 "`спеціальної документації <#interpolation-of-values>`_."
 
-#: ../../library/configparser.rst:981
+#: ../../library/configparser.rst:987
 msgid ""
 "All option names used in interpolation will be passed through the "
 ":meth:`optionxform` method just like any other option name reference.  For "
@@ -1522,7 +1522,7 @@ msgstr ""
 "(яка перетворює назви опцій у нижній регістр), значення ``foo %(bar)s`` і "
 "``foo %(BAR)s`` є еквівалентними."
 
-#: ../../library/configparser.rst:987
+#: ../../library/configparser.rst:993
 msgid ""
 "When *converters* is given, it should be a dictionary where each key "
 "represents the name of a type converter and each value is a callable "
@@ -1531,11 +1531,18 @@ msgid ""
 "object and section proxies."
 msgstr ""
 
-#: ../../library/configparser.rst:1018
+#: ../../library/configparser.rst:999
+msgid ""
+"When *allow_unnamed_section* is ``True`` (default: ``False``), the first "
+"section name can be omitted. See the `\"Unnamed Sections\" section "
+"<#unnamed-sections>`_."
+msgstr ""
+
+#: ../../library/configparser.rst:1028
 msgid "The default *dict_type* is :class:`collections.OrderedDict`."
 msgstr "Типом *dict_type* є :class:`collections.OrderedDict`."
 
-#: ../../library/configparser.rst:1021
+#: ../../library/configparser.rst:1031 ../../library/configparser.rst:1320
 msgid ""
 "*allow_no_value*, *delimiters*, *comment_prefixes*, *strict*, "
 "*empty_lines_in_values*, *default_section* and *interpolation* were added."
@@ -1543,18 +1550,18 @@ msgstr ""
 "Додано *allow_no_value*, *delimiters*, *comment_prefixes*, *strict*, "
 "*empty_lines_in_values*, *default_section* та *interpolation*."
 
-#: ../../library/configparser.rst:1026
+#: ../../library/configparser.rst:1036 ../../library/configparser.rst:1325
 msgid "The *converters* argument was added."
 msgstr "Додано аргумент *конвертери*."
 
-#: ../../library/configparser.rst:1029
+#: ../../library/configparser.rst:1039
 msgid ""
 "The *defaults* argument is read with :meth:`read_dict`, providing consistent"
 " behavior across the parser: non-string keys and values are implicitly "
 "converted to strings."
 msgstr ""
 
-#: ../../library/configparser.rst:1034 ../../library/configparser.rst:1306
+#: ../../library/configparser.rst:1044 ../../library/configparser.rst:1328
 msgid ""
 "The default *dict_type* is :class:`dict`, since it now preserves insertion "
 "order."
@@ -1562,19 +1569,23 @@ msgstr ""
 "Типом *dict_type* є :class:`dict`, оскільки тепер зберігається порядок "
 "вставки."
 
-#: ../../library/configparser.rst:1038
+#: ../../library/configparser.rst:1048
 msgid ""
 "Raise a :exc:`MultilineContinuationError` when *allow_no_value* is ``True``,"
 " and a key without a value is continued with an indented line."
 msgstr ""
 
-#: ../../library/configparser.rst:1044
+#: ../../library/configparser.rst:1052 ../../library/configparser.rst:1332
+msgid "The *allow_unnamed_section* argument was added."
+msgstr ""
+
+#: ../../library/configparser.rst:1057
 msgid "Return a dictionary containing the instance-wide defaults."
 msgstr ""
 "Повертає словник, що містить значення за замовчуванням для всього "
 "екземпляра."
 
-#: ../../library/configparser.rst:1049
+#: ../../library/configparser.rst:1062
 msgid ""
 "Return a list of the sections available; the *default section* is not "
 "included in the list."
@@ -1582,7 +1593,7 @@ msgstr ""
 "Повернути список доступних розділів; *розділ за замовчуванням* не включено "
 "до списку."
 
-#: ../../library/configparser.rst:1055
+#: ../../library/configparser.rst:1068
 msgid ""
 "Add a section named *section* to the instance.  If a section by the given "
 "name already exists, :exc:`DuplicateSectionError` is raised.  If the "
@@ -1594,11 +1605,11 @@ msgstr ""
 "*розділу за замовчуванням*, виникає помилка :exc:`ValueError`. Назва розділу"
 " має бути рядком; якщо ні, виникає :exc:`TypeError`."
 
-#: ../../library/configparser.rst:1060
+#: ../../library/configparser.rst:1073
 msgid "Non-string section names raise :exc:`TypeError`."
 msgstr "Нерядкові назви розділів викликають :exc:`TypeError`."
 
-#: ../../library/configparser.rst:1066
+#: ../../library/configparser.rst:1079
 msgid ""
 "Indicates whether the named *section* is present in the configuration. The "
 "*default section* is not acknowledged."
@@ -1606,11 +1617,11 @@ msgstr ""
 "Вказує, чи присутній названий *розділ* у конфігурації. Розділ *за "
 "замовчуванням* не підтверджується."
 
-#: ../../library/configparser.rst:1072
+#: ../../library/configparser.rst:1085
 msgid "Return a list of options available in the specified *section*."
 msgstr "Повернути список опцій, доступних у вказаному *розділі*."
 
-#: ../../library/configparser.rst:1077
+#: ../../library/configparser.rst:1090
 msgid ""
 "If the given *section* exists, and contains the given *option*, return "
 ":const:`True`; otherwise return :const:`False`.  If the specified *section* "
@@ -1620,7 +1631,7 @@ msgstr ""
 ":const:`True`; інакше повертає :const:`False`. Якщо вказаний *розділ* має "
 "значення :const:`None` або порожній рядок, передбачається DEFAULT."
 
-#: ../../library/configparser.rst:1084
+#: ../../library/configparser.rst:1097
 msgid ""
 "Attempt to read and parse an iterable of filenames, returning a list of "
 "filenames which were successfully parsed."
@@ -1628,7 +1639,7 @@ msgstr ""
 "Спроба прочитати та розібрати ітерацію імен файлів, повертаючи список імен "
 "файлів, які були успішно розібрані."
 
-#: ../../library/configparser.rst:1087
+#: ../../library/configparser.rst:1100
 msgid ""
 "If *filenames* is a string, a :class:`bytes` object or a :term:`path-like "
 "object`, it is treated as a single filename.  If a file named in *filenames*"
@@ -1646,7 +1657,7 @@ msgstr ""
 "деякий загальносистемний каталог), і всі існуючі файли конфігурації в "
 "ітерації будуть прочитані."
 
-#: ../../library/configparser.rst:1096
+#: ../../library/configparser.rst:1109
 msgid ""
 "If none of the named files exist, the :class:`ConfigParser` instance will "
 "contain an empty dataset.  An application which requires initial values to "
@@ -1659,7 +1670,7 @@ msgstr ""
 "допомогою :meth:`read_file` перед викликом :meth:`read` для будь-яких "
 "додаткових файлів::"
 
-#: ../../library/configparser.rst:1102
+#: ../../library/configparser.rst:1115
 msgid ""
 "import configparser, os\n"
 "\n"
@@ -1669,21 +1680,21 @@ msgid ""
 "            encoding='cp1250')"
 msgstr ""
 
-#: ../../library/configparser.rst:1109
+#: ../../library/configparser.rst:1122
 msgid ""
 "Added the *encoding* parameter. Previously, all files were read using the "
 "default encoding for :func:`open`."
 msgstr ""
 
-#: ../../library/configparser.rst:1113
+#: ../../library/configparser.rst:1126
 msgid "The *filenames* parameter accepts a :term:`path-like object`."
 msgstr "Параметр *filenames* приймає :term:`path-like object`."
 
-#: ../../library/configparser.rst:1116
+#: ../../library/configparser.rst:1129
 msgid "The *filenames* parameter accepts a :class:`bytes` object."
 msgstr "Параметр *filenames* приймає об’єкт :class:`bytes`."
 
-#: ../../library/configparser.rst:1122
+#: ../../library/configparser.rst:1135
 msgid ""
 "Read and parse configuration data from *f* which must be an iterable "
 "yielding Unicode strings (for example files opened in text mode)."
@@ -1692,22 +1703,22 @@ msgstr ""
 "повторюваними рядками Unicode (наприклад, файли, відкриті в текстовому "
 "режимі)."
 
-#: ../../library/configparser.rst:1125
+#: ../../library/configparser.rst:1138
 msgid ""
 "Optional argument *source* specifies the name of the file being read.  If "
 "not given and *f* has a :attr:`!name` attribute, that is used for *source*; "
 "the default is ``'<???>'``."
 msgstr ""
 
-#: ../../library/configparser.rst:1129
+#: ../../library/configparser.rst:1142
 msgid "Replaces :meth:`!readfp`."
 msgstr ""
 
-#: ../../library/configparser.rst:1134
+#: ../../library/configparser.rst:1147
 msgid "Parse configuration data from a string."
 msgstr "Аналіз даних конфігурації з рядка."
 
-#: ../../library/configparser.rst:1136
+#: ../../library/configparser.rst:1149
 msgid ""
 "Optional argument *source* specifies a context-specific name of the string "
 "passed.  If not given, ``'<string>'`` is used.  This should commonly be a "
@@ -1717,7 +1728,7 @@ msgstr ""
 " рядка. Якщо не вказано, використовується ``' <string>'``. Зазвичай це має "
 "бути шлях до файлової системи або URL-адреса."
 
-#: ../../library/configparser.rst:1145
+#: ../../library/configparser.rst:1158
 msgid ""
 "Load configuration from any object that provides a dict-like ``items()`` "
 "method.  Keys are section names, values are dictionaries with keys and "
@@ -1731,7 +1742,7 @@ msgstr ""
 "тип словника зберігає порядок, розділи та їхні ключі будуть додані в "
 "порядку. Значення автоматично перетворюються на рядки."
 
-#: ../../library/configparser.rst:1151
+#: ../../library/configparser.rst:1164
 msgid ""
 "Optional argument *source* specifies a context-specific name of the "
 "dictionary passed.  If not given, ``<dict>`` is used."
@@ -1739,11 +1750,11 @@ msgstr ""
 "Необов'язковий аргумент *джерело* вказує контекстно-залежну назву переданого"
 " словника. Якщо не вказано, використовується ``<dict>``."
 
-#: ../../library/configparser.rst:1154
+#: ../../library/configparser.rst:1167
 msgid "This method can be used to copy state between parsers."
 msgstr "Цей метод можна використовувати для копіювання стану між парсерами."
 
-#: ../../library/configparser.rst:1161
+#: ../../library/configparser.rst:1174
 msgid ""
 "Get an *option* value for the named *section*.  If *vars* is provided, it "
 "must be a dictionary.  The *option* is looked up in *vars* (if provided), "
@@ -1757,7 +1768,7 @@ msgstr ""
 "*резервний*, він використовується як резервне значення. ``None`` можна "
 "надати як *резервне* значення."
 
-#: ../../library/configparser.rst:1167
+#: ../../library/configparser.rst:1180
 msgid ""
 "All the ``'%'`` interpolations are expanded in the return values, unless the"
 " *raw* argument is true.  Values for interpolation keys are looked up in the"
@@ -1767,7 +1778,7 @@ msgstr ""
 "аргумент *raw* не має значення true. Значення для ключів інтерполяції "
 "шукаються так само, як і параметр."
 
-#: ../../library/configparser.rst:1171
+#: ../../library/configparser.rst:1184
 msgid ""
 "Arguments *raw*, *vars* and *fallback* are keyword only to protect users "
 "from trying to use the third argument as the *fallback* fallback (especially"
@@ -1777,7 +1788,7 @@ msgstr ""
 " користувачів від спроб використовувати третій аргумент як *резервний* "
 "резерв (особливо під час використання протоколу відображення)."
 
-#: ../../library/configparser.rst:1179
+#: ../../library/configparser.rst:1192
 msgid ""
 "A convenience method which coerces the *option* in the specified *section* "
 "to an integer.  See :meth:`get` for explanation of *raw*, *vars* and "
@@ -1786,14 +1797,14 @@ msgstr ""
 "Зручний метод, який приводить *опцію* у вказаному *розділі* до цілого числа."
 " Перегляньте :meth:`get` для пояснення *raw*, *vars* і *fallback*."
 
-#: ../../library/configparser.rst:1186
+#: ../../library/configparser.rst:1199
 msgid ""
 "A convenience method which coerces the *option* in the specified *section* "
 "to a floating-point number.  See :meth:`get` for explanation of *raw*, "
 "*vars* and *fallback*."
 msgstr ""
 
-#: ../../library/configparser.rst:1193
+#: ../../library/configparser.rst:1206
 msgid ""
 "A convenience method which coerces the *option* in the specified *section* "
 "to a Boolean value.  Note that the accepted values for the option are "
@@ -1812,7 +1823,7 @@ msgstr ""
 "значення призведе до виникнення :exc:`ValueError`. Перегляньте :meth:`get` "
 "для пояснення *raw*, *vars* і *fallback*."
 
-#: ../../library/configparser.rst:1206
+#: ../../library/configparser.rst:1219
 msgid ""
 "When *section* is not given, return a list of *section_name*, "
 "*section_proxy* pairs, including DEFAULTSECT."
@@ -1820,7 +1831,7 @@ msgstr ""
 "Якщо *section* не вказано, повертає список пар *section_name*, "
 "*section_proxy*, включаючи DEFAULTSECT."
 
-#: ../../library/configparser.rst:1209
+#: ../../library/configparser.rst:1222
 msgid ""
 "Otherwise, return a list of *name*, *value* pairs for the options in the "
 "given *section*.  Optional arguments have the same meaning as for the "
@@ -1830,7 +1841,7 @@ msgstr ""
 "вказаному *розділі*. Необов’язкові аргументи мають те саме значення, що й "
 "для методу :meth:`get`."
 
-#: ../../library/configparser.rst:1213
+#: ../../library/configparser.rst:1226
 msgid ""
 "Items present in *vars* no longer appear in the result.  The previous "
 "behaviour mixed actual parser options with variables provided for "
@@ -1840,7 +1851,7 @@ msgstr ""
 "Попередня поведінка змішувала фактичні параметри аналізатора зі змінними, "
 "наданими для інтерполяції."
 
-#: ../../library/configparser.rst:1221
+#: ../../library/configparser.rst:1234
 msgid ""
 "If the given section exists, set the given option to the specified value; "
 "otherwise raise :exc:`NoSectionError`.  *option* and *value* must be "
@@ -1850,7 +1861,7 @@ msgstr ""
 "інакше підняти :exc:`NoSectionError`. *option* і *value* мають бути рядками;"
 " якщо ні, виникає :exc:`TypeError`."
 
-#: ../../library/configparser.rst:1228
+#: ../../library/configparser.rst:1241
 msgid ""
 "Write a representation of the configuration to the specified :term:`file "
 "object`, which must be opened in text mode (accepting strings).  This "
@@ -1864,7 +1875,7 @@ msgstr ""
 "*space_around_delimiters* має значення true, роздільники між ключами та "
 "значеннями оточуються пробілами."
 
-#: ../../library/configparser.rst:1236
+#: ../../library/configparser.rst:1249
 msgid ""
 "Comments in the original configuration file are not preserved when writing "
 "the configuration back. What is considered a comment, depends on the given "
@@ -1874,7 +1885,7 @@ msgstr ""
 "запису конфігурації. Те, що вважається коментарем, залежить від заданих "
 "значень для *comment_prefix* і *inline_comment_prefix*."
 
-#: ../../library/configparser.rst:1244
+#: ../../library/configparser.rst:1257
 msgid ""
 "Remove the specified *option* from the specified *section*.  If the section "
 "does not exist, raise :exc:`NoSectionError`.  If the option existed to be "
@@ -1884,7 +1895,7 @@ msgstr ""
 " підніміть :exc:`NoSectionError`. Якщо існувала опція для видалення, "
 "поверніть :const:`True`; інакше повертає :const:`False`."
 
-#: ../../library/configparser.rst:1252
+#: ../../library/configparser.rst:1265
 msgid ""
 "Remove the specified *section* from the configuration.  If the section in "
 "fact existed, return ``True``.  Otherwise return ``False``."
@@ -1892,7 +1903,7 @@ msgstr ""
 "Видалити вказаний *розділ* із конфігурації. Якщо розділ дійсно існував, "
 "поверніть ``True``. Інакше поверніть ``False``."
 
-#: ../../library/configparser.rst:1258
+#: ../../library/configparser.rst:1271
 msgid ""
 "Transforms the option name *option* as found in an input file or as passed "
 "in by client code to the form that should be used in the internal "
@@ -1906,7 +1917,7 @@ msgstr ""
 "підкласи можуть замінити це, або код клієнта може встановити атрибут цього "
 "імені в екземплярах, щоб вплинути на цю поведінку."
 
-#: ../../library/configparser.rst:1264
+#: ../../library/configparser.rst:1277
 msgid ""
 "You don't need to subclass the parser to use this method, you can also set "
 "it on an instance, to a function that takes a string argument and returns a "
@@ -1918,13 +1929,13 @@ msgstr ""
 "функцію, яка приймає рядковий аргумент і повертає рядок. Наприклад, якщо "
 "встановити значення ``str``, назви опцій будуть чутливими до регістру:"
 
-#: ../../library/configparser.rst:1269
+#: ../../library/configparser.rst:1282
 msgid ""
 "cfgparser = ConfigParser()\n"
 "cfgparser.optionxform = str"
 msgstr ""
 
-#: ../../library/configparser.rst:1272
+#: ../../library/configparser.rst:1285
 msgid ""
 "Note that when reading configuration files, whitespace around the option "
 "names is stripped before :meth:`optionxform` is called."
@@ -1932,24 +1943,24 @@ msgstr ""
 "Зауважте, що під час читання конфігураційних файлів пробіли навколо назв "
 "параметрів видаляються перед викликом :meth:`optionxform`."
 
-#: ../../library/configparser.rst:1278
+#: ../../library/configparser.rst:1291
 msgid ""
 "A special object representing a section name used to reference the unnamed "
 "section (see :ref:`unnamed-sections`)."
 msgstr ""
 
-#: ../../library/configparser.rst:1283
+#: ../../library/configparser.rst:1296
 msgid ""
 "The maximum depth for recursive interpolation for "
 ":meth:`~configparser.ConfigParser.get` when the *raw* parameter is false.  "
 "This is relevant only when the default *interpolation* is used."
 msgstr ""
 
-#: ../../library/configparser.rst:1291
+#: ../../library/configparser.rst:1304
 msgid "RawConfigParser Objects"
 msgstr "Об’єкти RawConfigParser"
 
-#: ../../library/configparser.rst:1301
+#: ../../library/configparser.rst:1315
 msgid ""
 "Legacy variant of the :class:`ConfigParser`.  It has interpolation disabled "
 "by default and allows for non-string section names, option names, and values"
@@ -1962,7 +1973,7 @@ msgstr ""
 "``set``, а також застарілої обробки аргументів ключового слова "
 "``defaults=``. ."
 
-#: ../../library/configparser.rst:1311
+#: ../../library/configparser.rst:1336
 msgid ""
 "Consider using :class:`ConfigParser` instead which checks types of the "
 "values to be stored internally.  If you don't want interpolation, you can "
@@ -1972,7 +1983,7 @@ msgstr ""
 "перевіряє типи значень, які зберігатимуться всередині. Якщо вам не потрібна "
 "інтерполяція, ви можете використати ``ConfigParser(interpolation=None)``."
 
-#: ../../library/configparser.rst:1318
+#: ../../library/configparser.rst:1343
 msgid ""
 "Add a section named *section* to the instance.  If a section by the given "
 "name already exists, :exc:`DuplicateSectionError` is raised.  If the "
@@ -1982,7 +1993,7 @@ msgstr ""
 "назвою вже існує, виникає :exc:`DuplicateSectionError`. Якщо передано назву "
 "*розділу за замовчуванням*, виникає помилка :exc:`ValueError`."
 
-#: ../../library/configparser.rst:1322
+#: ../../library/configparser.rst:1347
 msgid ""
 "Type of *section* is not checked which lets users create non-string named "
 "sections.  This behaviour is unsupported and may cause internal errors."
@@ -1991,7 +2002,7 @@ msgstr ""
 "рядкових імен. Така поведінка не підтримується та може викликати внутрішні "
 "помилки."
 
-#: ../../library/configparser.rst:1328
+#: ../../library/configparser.rst:1353
 msgid ""
 "If the given section exists, set the given option to the specified value; "
 "otherwise raise :exc:`NoSectionError`.  While it is possible to use "
@@ -2007,7 +2018,7 @@ msgstr ""
 "повна функціональність (включно з інтерполяцією та виведенням у файли) можна"
 " досягти лише за допомогою рядкових значень."
 
-#: ../../library/configparser.rst:1335
+#: ../../library/configparser.rst:1360
 msgid ""
 "This method lets users assign non-string values to keys internally.  This "
 "behaviour is unsupported and will cause errors when attempting to write to a"
@@ -2019,19 +2030,19 @@ msgstr ""
 " запису у файл або отримання його в режимі без обробки. **Використовуйте API"
 " протоколу зіставлення**, який не дозволяє виконувати такі призначення."
 
-#: ../../library/configparser.rst:1342
+#: ../../library/configparser.rst:1367
 msgid "Exceptions"
 msgstr "Винятки"
 
-#: ../../library/configparser.rst:1346
+#: ../../library/configparser.rst:1371
 msgid "Base class for all other :mod:`configparser` exceptions."
 msgstr "Базовий клас для всіх інших винятків :mod:`configparser`."
 
-#: ../../library/configparser.rst:1351
+#: ../../library/configparser.rst:1376
 msgid "Exception raised when a specified section is not found."
 msgstr "Виняток виникає, коли вказаний розділ не знайдено."
 
-#: ../../library/configparser.rst:1356
+#: ../../library/configparser.rst:1381
 msgid ""
 "Exception raised if :meth:`~ConfigParser.add_section` is called with the "
 "name of a section that is already present or in strict parsers when a "
@@ -2039,13 +2050,13 @@ msgid ""
 "dictionary."
 msgstr ""
 
-#: ../../library/configparser.rst:1360
+#: ../../library/configparser.rst:1385
 msgid ""
 "Added the optional *source* and *lineno* attributes and parameters to "
 ":meth:`!__init__`."
 msgstr ""
 
-#: ../../library/configparser.rst:1367
+#: ../../library/configparser.rst:1392
 msgid ""
 "Exception raised by strict parsers if a single option appears twice during "
 "reading from a single file, string or dictionary. This catches misspellings "
@@ -2058,14 +2069,14 @@ msgstr ""
 "ключі, що представляють один і той же ключ конфігурації без урахування "
 "регістру."
 
-#: ../../library/configparser.rst:1375
+#: ../../library/configparser.rst:1400
 msgid ""
 "Exception raised when a specified option is not found in the specified "
 "section."
 msgstr ""
 "Виняток виникає, коли вказаний параметр не знайдено у вказаному розділі."
 
-#: ../../library/configparser.rst:1381
+#: ../../library/configparser.rst:1406
 msgid ""
 "Base class for exceptions raised when problems occur performing string "
 "interpolation."
@@ -2073,7 +2084,7 @@ msgstr ""
 "Базовий клас для винятків, які виникають, коли виникають проблеми з "
 "виконанням інтерполяції рядків."
 
-#: ../../library/configparser.rst:1387
+#: ../../library/configparser.rst:1412
 msgid ""
 "Exception raised when string interpolation cannot be completed because the "
 "number of iterations exceeds :const:`MAX_INTERPOLATION_DEPTH`.  Subclass of "
@@ -2083,7 +2094,7 @@ msgstr ""
 "кількість ітерацій перевищує :const:`MAX_INTERPOLATION_DEPTH`. Підклас "
 ":exc:`InterpolationError`."
 
-#: ../../library/configparser.rst:1394
+#: ../../library/configparser.rst:1419
 msgid ""
 "Exception raised when an option referenced from a value does not exist. "
 "Subclass of :exc:`InterpolationError`."
@@ -2091,7 +2102,7 @@ msgstr ""
 "Виняток виникає, коли параметр, на який посилається значення, не існує. "
 "Підклас :exc:`InterpolationError`."
 
-#: ../../library/configparser.rst:1400
+#: ../../library/configparser.rst:1425
 msgid ""
 "Exception raised when the source text into which substitutions are made does"
 " not conform to the required syntax.  Subclass of :exc:`InterpolationError`."
@@ -2099,7 +2110,7 @@ msgstr ""
 "Виняток виникає, коли вихідний текст, у якому зроблено заміни, не відповідає"
 " необхідному синтаксису. Підклас :exc:`InterpolationError`."
 
-#: ../../library/configparser.rst:1406
+#: ../../library/configparser.rst:1431
 msgid ""
 "Exception raised when attempting to parse a file which has no section "
 "headers."
@@ -2107,27 +2118,27 @@ msgstr ""
 "Під час спроби проаналізувати файл, який не має заголовків розділів, виникає"
 " виняток."
 
-#: ../../library/configparser.rst:1412
+#: ../../library/configparser.rst:1437
 msgid "Exception raised when errors occur attempting to parse a file."
 msgstr "Виняток виникає, коли виникають помилки під час спроби аналізу файлу."
 
-#: ../../library/configparser.rst:1414
+#: ../../library/configparser.rst:1439
 msgid ""
 "The ``filename`` attribute and :meth:`!__init__` constructor argument were "
 "removed.  They have been available using the name ``source`` since 3.2."
 msgstr ""
 
-#: ../../library/configparser.rst:1420
+#: ../../library/configparser.rst:1445
 msgid ""
 "Exception raised when a key without a corresponding value is continued with "
 "an indented line."
 msgstr ""
 
-#: ../../library/configparser.rst:1426
+#: ../../library/configparser.rst:1451
 msgid "Footnotes"
 msgstr "Виноски"
 
-#: ../../library/configparser.rst:1427
+#: ../../library/configparser.rst:1452
 msgid ""
 "Config parsers allow for heavy customization.  If you are interested in "
 "changing the behaviour outlined by the footnote reference, consult the "
