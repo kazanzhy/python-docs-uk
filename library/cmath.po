@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Python 3.13\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-26 20:15+0000\n"
+"POT-Creation-Date: 2024-11-08 14:16+0000\n"
 "PO-Revision-Date: 2021-06-28 00:56+0000\n"
 "Last-Translator: Dmytro Kazanzhy, 2023\n"
 "Language-Team: Ukrainian (https://app.transifex.com/python-doc/teams/5390/uk/)\n"
@@ -294,42 +294,30 @@ msgstr ""
 #: ../../library/cmath.rst:223
 msgid ""
 "Whether or not two values are considered close is determined according to "
-"given absolute and relative tolerances."
+"given absolute and relative tolerances.  If no errors occur, the result will"
+" be: ``abs(a-b) <= max(rel_tol * max(abs(a), abs(b)), abs_tol)``."
 msgstr ""
-"Чи вважаються два значення близькими чи ні, визначається відповідно до "
-"заданих абсолютних і відносних допусків."
 
-#: ../../library/cmath.rst:226
+#: ../../library/cmath.rst:227
 msgid ""
 "*rel_tol* is the relative tolerance -- it is the maximum allowed difference "
 "between *a* and *b*, relative to the larger absolute value of *a* or *b*. "
 "For example, to set a tolerance of 5%, pass ``rel_tol=0.05``.  The default "
 "tolerance is ``1e-09``, which assures that the two values are the same "
-"within about 9 decimal digits.  *rel_tol* must be greater than zero."
+"within about 9 decimal digits.  *rel_tol* must be nonnegative and less than "
+"``1.0``."
 msgstr ""
-"*rel_tol* — це відносний допуск — це максимально допустима різниця між *a* і"
-" *b* відносно більшого абсолютного значення *a* або *b*. Наприклад, щоб "
-"встановити допуск 5%, передайте ``rel_tol=0,05``. Допуск за замовчуванням — "
-"``1e-09``, який гарантує, що два значення збігаються в межах приблизно 9 "
-"десяткових цифр. *rel_tol* має бути більше нуля."
 
-#: ../../library/cmath.rst:232
+#: ../../library/cmath.rst:234
 msgid ""
-"*abs_tol* is the minimum absolute tolerance -- useful for comparisons near "
-"zero. *abs_tol* must be at least zero."
+"*abs_tol* is the absolute tolerance; it defaults to ``0.0`` and it must be "
+"nonnegative.  When comparing ``x`` to ``0.0``, ``isclose(x, 0)`` is computed"
+" as ``abs(x) <= rel_tol  * abs(x)``, which is ``False`` for any ``x`` and "
+"rel_tol less than ``1.0``.  So add an appropriate positive abs_tol argument "
+"to the call."
 msgstr ""
-"*abs_tol* — це мінімальний абсолютний допуск — корисний для порівнянь біля "
-"нуля. *abs_tol* має бути не менше нуля."
 
-#: ../../library/cmath.rst:235
-msgid ""
-"If no errors occur, the result will be: ``abs(a-b) <= max(rel_tol * "
-"max(abs(a), abs(b)), abs_tol)``."
-msgstr ""
-"Якщо помилок не буде, результатом буде: ``abs(a-b) <= max(rel_tol * "
-"max(abs(a), abs(b)), abs_tol)``."
-
-#: ../../library/cmath.rst:238
+#: ../../library/cmath.rst:240
 msgid ""
 "The IEEE 754 special values of ``NaN``, ``inf``, and ``-inf`` will be "
 "handled according to IEEE rules.  Specifically, ``NaN`` is not considered "
@@ -341,32 +329,32 @@ msgstr ""
 "якого іншого значення, включаючи ``NaN``. ``inf`` і ``-inf`` вважаються лише"
 " близькими до самих себе."
 
-#: ../../library/cmath.rst:247
+#: ../../library/cmath.rst:249
 msgid ":pep:`485` -- A function for testing approximate equality"
 msgstr ":pep:`485` -- Функція для перевірки приблизної рівності"
 
-#: ../../library/cmath.rst:251
+#: ../../library/cmath.rst:253
 msgid "Constants"
 msgstr "Константи"
 
-#: ../../library/cmath.rst:255
+#: ../../library/cmath.rst:257
 msgid "The mathematical constant *π*, as a float."
 msgstr "Математична константа *π* у вигляді числа з плаваючою точкою."
 
-#: ../../library/cmath.rst:260
+#: ../../library/cmath.rst:262
 msgid "The mathematical constant *e*, as a float."
 msgstr "Математична константа *e* як число з плаваючою точкою."
 
-#: ../../library/cmath.rst:265
+#: ../../library/cmath.rst:267
 msgid "The mathematical constant *τ*, as a float."
 msgstr "Математична константа *τ* як число з плаваючою точкою."
 
-#: ../../library/cmath.rst:272
+#: ../../library/cmath.rst:274
 msgid "Floating-point positive infinity. Equivalent to ``float('inf')``."
 msgstr ""
 "Додатна нескінченність із плаваючою комою. Еквівалент ``float('inf')``."
 
-#: ../../library/cmath.rst:279
+#: ../../library/cmath.rst:281
 msgid ""
 "Complex number with zero real part and positive infinity imaginary part. "
 "Equivalent to ``complex(0.0, float('inf'))``."
@@ -374,14 +362,14 @@ msgstr ""
 "Комплексне число з нульовою дійсною частиною та додатною нескінченною уявною"
 " частиною. Еквівалент ``complex(0.0, float('inf'))``."
 
-#: ../../library/cmath.rst:287
+#: ../../library/cmath.rst:289
 msgid ""
 "A floating-point \"not a number\" (NaN) value.  Equivalent to "
 "``float('nan')``."
 msgstr ""
 "Значення з плаваючою комою \"не число\" (NaN). Еквівалент ``float('nan')``."
 
-#: ../../library/cmath.rst:295
+#: ../../library/cmath.rst:297
 msgid ""
 "Complex number with zero real part and NaN imaginary part. Equivalent to "
 "``complex(0.0, float('nan'))``."
@@ -389,7 +377,7 @@ msgstr ""
 "Комплексне число з нульовою дійсною частиною та NaN уявною частиною. "
 "Еквівалент ``complex(0.0, float('nan'))``."
 
-#: ../../library/cmath.rst:303
+#: ../../library/cmath.rst:305
 msgid ""
 "Note that the selection of functions is similar, but not identical, to that "
 "in module :mod:`math`.  The reason for having two modules is that some users"
@@ -409,7 +397,7 @@ msgstr ""
 " бути виражена як дійсне число (у цьому випадку комплексне число має уявну "
 "частину нуля)."
 
-#: ../../library/cmath.rst:311
+#: ../../library/cmath.rst:313
 msgid ""
 "A note on branch cuts: They are curves along which the given function fails "
 "to be continuous.  They are a necessary feature of many complex functions.  "
@@ -427,7 +415,7 @@ msgstr ""
 "інформацію щодо правильного вибору обрізків гілок для чисельних цілей, "
 "гарною довідкою має бути наступне:"
 
-#: ../../library/cmath.rst:321
+#: ../../library/cmath.rst:323
 msgid ""
 "Kahan, W:  Branch cuts for complex elementary functions; or, Much ado about "
 "nothing's sign bit.  In Iserles, A., and Powell, M. (eds.), The state of the"
@@ -437,10 +425,10 @@ msgstr ""
 " з нічого\". У Ізерлес, А. та Пауелл, М. (ред.), Сучасний стан числового "
 "аналізу. Clarendon Press (1987) pp165--211."
 
-#: ../../library/cmath.rst:301
+#: ../../library/cmath.rst:303
 msgid "module"
 msgstr "модуль"
 
-#: ../../library/cmath.rst:301
+#: ../../library/cmath.rst:303
 msgid "math"
 msgstr "математика"
